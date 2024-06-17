@@ -8,7 +8,7 @@
 
 # testing
 /coverage
-
+.contenlayer
 # next.js
 /.next/
 /out/
