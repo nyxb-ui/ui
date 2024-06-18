@@ -1,0 +1,55 @@
+---
+title: Animated Shiny Text
+date: 2024-01-16
+description: A light glare effect which pans across text making it appear as if it is shimmering.
+author: dillionverma
+published: true
+video: https://cdn.nyxbui.design/animated-shiny-text.mp4
+---
+
+<ComponentPreview name="animated-shiny-text-demo" />
+
+<Steps>
+
+### Installation
+
+Copy and paste the following code into your project.
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        shimmer: "shimmer 8s infinite",
+      },
+      keyframes: {
+        shimmer: {
+          "0%, 90%, 100%": {
+            "background-position": "calc(-100% - var(--shimmer-width)) 0",
+          },
+          "30%, 60%": {
+            "background-position": "calc(100% + var(--shimmer-width)) 0",
+          },
+        },
+      },
+    },
+  },
+};
+```
+
+```text
+components/special/animated-shiny-text.tsx
+```
+
+<ComponentSource name="animated-shiny-text" />
+
+</Steps>
+
+## Props
+
+| Prop         | Type   | Description                                  | Default |
+| ------------ | ------ | -------------------------------------------- | ------- |
+| children     |        | The text to be shimmered.                    |         |
+| className    | string | The class name to be applied to the shimmer. |         |
+| shimmerWidth | number | The width of the shimmer in pixels.          | 100     |
