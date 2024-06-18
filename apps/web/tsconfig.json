@@ -1,6 +1,25 @@
 {
-  "extends": "@repo/typescript-config/nextjs.json",
   "compilerOptions": {
+    "incremental": true,
+    "target": "esnext",
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": ".",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "paths": {
+      "~/*": ["./*"],
+      "contentlayer/generated": ["./.contentlayer/generated"]
+    },
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "allowJs": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
     "plugins": [
       {
         "name": "next"
@@ -9,10 +28,10 @@
   },
   "include": [
     "next-env.d.ts",
-    "next.config.js",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".contentlayer/generated"
   ],
   "exclude": ["node_modules"]
 }
