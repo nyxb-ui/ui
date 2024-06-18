@@ -38,7 +38,7 @@ export default function HeroClient({ post }: { post: Doc }) {
                            {' '}
                            <Separator className="mx-2 h-4" orientation="vertical" />
                            <span
-                              className={cn(`animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,`inline`,)}
+                              className={cn(`animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`, `inline`)}
                            >
                               Introducing
                               {' '}
@@ -86,7 +86,9 @@ export default function HeroClient({ post }: { post: Doc }) {
                            <Link
                               href="/components"
                               className={cn(
-                                 buttonVariants({variant: 'default', size: 'lg',}), 'gap-2 whitespace-pre md:flex', 'group relative w-full gap-1 rounded-full text-sm font-semibold tracking-tighter ring-offset-inherit transition-all duration-150 ease-in-out hover:ring-2 hover:ring-black hover:ring-offset-2 hover:ring-offset-current dark:hover:ring-neutral-50',
+                                 buttonVariants({ variant: 'default', size: 'lg' }),
+                                 'gap-2 whitespace-pre md:flex',
+                                 'group relative w-full gap-1 rounded-full text-sm font-semibold tracking-tighter ring-offset-inherit transition-all duration-150 ease-in-out hover:ring-2 hover:ring-black hover:ring-offset-2 hover:ring-offset-current dark:hover:ring-neutral-50',
                               )}
                            >
                               Browse Components

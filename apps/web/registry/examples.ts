@@ -1,4 +1,3 @@
-import React from 'react'
 import type { Registry } from '~/registry/schema'
 
 export const examples: Registry = [

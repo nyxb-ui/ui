@@ -549,6 +549,9 @@
   },
   {
     "name": "bento-grid",
+    "dependencies": [
+      "@radix-ui/react-icons"
+    ],
     "files": [
       "ui/bento-grid.tsx"
     ],

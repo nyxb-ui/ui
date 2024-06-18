@@ -1,5 +1,8 @@
 {
   "name": "bento-grid",
+  "dependencies": [
+    "@radix-ui/react-icons"
+  ],
   "files": [
     {
       "name": "bento-grid.tsx",
