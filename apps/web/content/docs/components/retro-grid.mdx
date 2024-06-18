@@ -1,0 +1,49 @@
+---
+title: Retro Grid
+date: 2023-11-23
+description: An animated scrolling retro grid effect
+author: dillionverma
+published: true
+video: https://cdn.nyxbui.design/retro-grid.mp4
+---
+
+<ComponentPreview name="retro-grid-demo" />
+
+<Steps>
+
+### Installation
+
+Copy and paste the following code into your project.
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        grid: "grid 15s linear infinite",
+      },
+      keyframes: {
+        grid: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0)" },
+        },
+      },
+    },
+  },
+};
+```
+
+```text
+components/special/retro-grid.tsx
+```
+
+<ComponentSource name="retro-grid" />
+
+</Steps>
+
+## Props
+
+| Prop      | Type   | Description                      | Default |
+| --------- | ------ | -------------------------------- | ------- |
+| className | string | The class name for the component | ""      |
