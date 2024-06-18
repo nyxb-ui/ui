@@ -1,279 +1,170 @@
-import fs from 'node:fs'
-import path from 'node:path'
-import type { UnistNode, UnistTree } from 'types/unist'
-import { u } from 'unist-builder'
-import { visit } from 'unist-util-visit'
-
-import { Index } from '../__registry__'
-import { styles } from '../registry/styles'
+import fs from 'node:fs';
+import path from 'node:path';
+import type { UnistNode, UnistTree } from 'types/unist';
+import { u } from 'unist-builder';
+import { visit } from 'unist-util-visit';
+import { Index } from '../__registry__';
+import { styles } from '../registry/styles';
 
 export function rehypeComponent() {
-   return async (tree: UnistTree) => {
-      visit(tree, (node: UnistNode) => {
-      // src prop overrides both name and fileName.
-         const { value: srcPath }
-        = (getNodeAttributeByName(node, 'src') as {
-           name: string
-           value?: string
-           type?: string
-        }) || {}
+  return async (tree: UnistTree) => {
+    visit(tree, (node: UnistNode) => {
+      const { value: srcPath } = (getNodeAttributeByName(node, 'src') as {
+        name: string;
+        value?: string;
+        type?: string;
+      }) || {};
 
-         if (node.name === 'ComponentSource') {
-            const name = getNodeAttributeByName(node, 'name')?.value as string
-            const fileName = getNodeAttributeByName(node, 'fileName')?.value as
-               | string
-               | undefined
+      if (node.name === 'ComponentSource') {
+        const name = getNodeAttributeByName(node, 'name')?.value as string;
+        const fileName = getNodeAttributeByName(node, 'fileName')?.value as string | undefined;
 
-            if (!name && !srcPath)
-               return null
+        if (!name && !srcPath) return null;
 
-            try {
-               for (const style of styles) {
-                  let src: string
+        try {
+          const handledStyles = new Set<string>();
+          const isSpecial = Object.keys(Index.special || {}).includes(name);
+          const styleNames = isSpecial ? ['special'] : styles.map(style => style.name);
 
-                  if (srcPath) {
-                     src = srcPath
-                  }
-                  else {
-                     const component = Index[style.name][name]
-                     src = fileName
-                        ? component.files.find((file: string) => {
-                           return (
-                              file.endsWith(`${fileName}.tsx`)
-                              || file.endsWith(`${fileName}.ts`)
-                           )
-                        }) || component.files[0]
-                        : component.files[0]
-                  }
+          console.log(`Processing ComponentSource: ${name}, isSpecial: ${isSpecial}, styleNames: ${styleNames}`);
 
-                  // Read the source file.
-                  const filePath = path.join(process.cwd(), src)
-                  let source = fs.readFileSync(filePath, 'utf8')
+          for (const styleName of styleNames) {
+            if (handledStyles.has(styleName)) continue;
+            handledStyles.add(styleName);
 
-                  // Replace imports.
-                  // TODO: Use @swc/core and a visitor to replace this.
-                  // For now a simple regex should do.
-                  source = source.replaceAll(
-              `@/registry/${style.name}/`,
-              '@/components/',
-                  )
-                  source = source.replaceAll('export default', 'export')
+            let src: string;
 
-                  // Add code as children so that rehype can take over at build time.
-                  node.children?.push(
-                     u('element', {
-                        tagName: 'pre',
-                        properties: {
-                           __src__: src,
-                           __style__: style.name,
-                        },
-                        attributes: [
-                           {
-                              name: 'styleName',
-                              type: 'mdxJsxAttribute',
-                              value: style.name,
-                           },
-                        ],
-                        children: [
-                           u('element', {
-                              tagName: 'code',
-                              properties: {
-                                 className: ['language-tsx'],
-                              },
-                              children: [
-                                 {
-                                    type: 'text',
-                                    value: source,
-                                 },
-                              ],
-                           }),
-                        ],
-                     }),
-                  )
-               }
+            if (srcPath) {
+              src = srcPath;
+            } else {
+              if (!Index[styleName][name]) {
+                console.error(`Component ${name} not found in registry for style ${styleName}`);
+                continue;
+              }
+
+              const component = Index[styleName][name];
+              src = fileName
+                ? component.files.find((file: string) => file.endsWith(`${fileName}.tsx`) || file.endsWith(`${fileName}.ts`)) || component.files[0]
+                : component.files[0];
             }
-            catch (error) {
-               console.error(error)
+
+            const filePath = path.join(process.cwd(), src);
+            console.log(`Trying to read file: ${filePath}`);
+
+            if (!fs.existsSync(filePath)) {
+              console.error(`File not found: ${filePath}`);
+              continue;
             }
-         }
 
-         if (node.name === 'ComponentPreview') {
-            const name = getNodeAttributeByName(node, 'name')?.value as string
+            let source = fs.readFileSync(filePath, 'utf8');
 
-            if (!name)
-               return null
+            source = source.replaceAll(`~/registry/${styleName}/`, '~/components/');
+            source = source.replaceAll('export default', 'export');
 
-            try {
-               for (const style of styles) {
-                  const component = Index[style.name][name]
-                  const src = component.files[0]
+            node.children?.push(
+              u('element', {
+                tagName: 'pre',
+                properties: {
+                  __src__: src,
+                  __style__: styleName,
+                },
+                attributes: [
+                  {
+                    name: 'styleName',
+                    type: 'mdxJsxAttribute',
+                    value: styleName,
+                  },
+                ],
+                children: [
+                  u('element', {
+                    tagName: 'code',
+                    properties: {
+                      className: ['language-tsx'],
+                    },
+                    children: [
+                      {
+                        type: 'text',
+                        value: source,
+                      },
+                    ],
+                  }),
+                ],
+              }),
+            );
+          }
+        } catch (error) {
+          console.error(`Error processing ComponentSource for ${name}:`, error);
+        }
+      }
 
-                  // Read the source file.
-                  const filePath = path.join(process.cwd(), src)
-                  let source = fs.readFileSync(filePath, 'utf8')
+      if (node.name === "ComponentPreview" || node.name === "BlockPreview") {
+        const name = getNodeAttributeByName(node, 'name')?.value as string;
 
-                  // Replace imports.
-                  // TODO: Use @swc/core and a visitor to replace this.
-                  // For now a simple regex should do.
-                  source = source.replaceAll(
-              `@/registry/${style.name}/`,
-              '@/components/',
-                  )
-                  source = source.replaceAll('export default', 'export')
+        if (!name) return null;
 
-                  // Add code as children so that rehype can take over at build time.
-                  node.children?.push(
-                     u('element', {
-                        tagName: 'pre',
-                        properties: {
-                           __src__: src,
-                        },
-                        children: [
-                           u('element', {
-                              tagName: 'code',
-                              properties: {
-                                 className: ['language-tsx'],
-                              },
-                              children: [
-                                 {
-                                    type: 'text',
-                                    value: source,
-                                 },
-                              ],
-                           }),
-                        ],
-                     }),
-                  )
-               }
+        try {
+          const handledStyles = new Set<string>();
+          const isSpecial = Object.keys(Index.special || {}).includes(name);
+          const styleNames = isSpecial ? ['special'] : styles.map(style => style.name);
+
+          console.log(`Processing ComponentPreview: ${name}, isSpecial: ${isSpecial}, styleNames: ${styleNames}`);
+
+          for (const styleName of styleNames) {
+            if (handledStyles.has(styleName)) continue;
+            handledStyles.add(styleName);
+
+            if (!Index[styleName][name]) {
+              console.error(`Component ${name} not found in registry for style ${styleName}`);
+              continue;
             }
-            catch (error) {
-               console.error(error)
+
+            const component = Index[styleName][name];
+            const src = component.files[0];
+
+            const filePath = path.join(process.cwd(), src);
+            console.log(`Trying to read file: ${filePath}`);
+
+            if (!fs.existsSync(filePath)) {
+              console.error(`File not found: ${filePath}`);
+              continue;
             }
-         }
 
-         // if (node.name === "ComponentExample") {
-         //   const source = getComponentSourceFileContent(node)
-         //   if (!source) {
-         //     return
-         //   }
+            let source = fs.readFileSync(filePath, 'utf8');
 
-         //   // Replace the Example component with a pre element.
-         //   node.children?.push(
-         //     u("element", {
-         //       tagName: "pre",
-         //       properties: {
-         //         __src__: src,
-         //       },
-         //       children: [
-         //         u("element", {
-         //           tagName: "code",
-         //           properties: {
-         //             className: ["language-tsx"],
-         //           },
-         //           children: [
-         //             {
-         //               type: "text",
-         //               value: source,
-         //             },
-         //           ],
-         //         }),
-         //       ],
-         //     })
-         //   )
+            source = source.replaceAll(`~/registry/${styleName}/`, '~/components/');
+            source = source.replaceAll('export default', 'export');
 
-         //   const extractClassname = getNodeAttributeByName(
-         //     node,
-         //     "extractClassname"
-         //   )
-         //   if (
-         //     extractClassname &&
-         //     typeof extractClassname.value !== "undefined" &&
-         //     extractClassname.value !== "false"
-         //   ) {
-         //     // Extract className from string
-         //     // TODO: Use @swc/core and a visitor to extract this.
-         //     // For now, a simple regex should do.
-         //     const values = source.match(/className="(.*)"/)
-         //     const className = values ? values[1] : ""
-
-         //     // Add the className as a jsx prop so we can pass it to the copy button.
-         //     node.attributes?.push({
-         //       name: "extractedClassNames",
-         //       type: "mdxJsxAttribute",
-         //       value: className,
-         //     })
-
-         //     // Add a pre element with the className only.
-         //     node.children?.push(
-         //       u("element", {
-         //         tagName: "pre",
-         //         properties: {},
-         //         children: [
-         //           u("element", {
-         //             tagName: "code",
-         //             properties: {
-         //               className: ["language-tsx"],
-         //             },
-         //             children: [
-         //               {
-         //                 type: "text",
-         //                 value: className,
-         //               },
-         //             ],
-         //           }),
-         //         ],
-         //       })
-         //     )
-         //   }
-         // }
-
-         // if (node.name === "ComponentSource") {
-         //   const source = getComponentSourceFileContent(node)
-         //   if (!source) {
-         //     return
-         //   }
-
-      //   // Replace the Source component with a pre element.
-      //   node.children?.push(
-      //     u("element", {
-      //       tagName: "pre",
-      //       properties: {
-      //         __src__: src,
-      //       },
-      //       children: [
-      //         u("element", {
-      //           tagName: "code",
-      //           properties: {
-      //             className: ["language-tsx"],
-      //           },
-      //           children: [
-      //             {
-      //               type: "text",
-      //               value: source,
-      //             },
-      //           ],
-      //         }),
-      //       ],
-      //     })
-      //   )
-      // }
-      })
-   }
+            node.children?.push(
+              u('element', {
+                tagName: 'pre',
+                properties: {
+                  __src__: src,
+                },
+                children: [
+                  u('element', {
+                    tagName: 'code',
+                    properties: {
+                      className: ['language-tsx'],
+                    },
+                    children: [
+                      {
+                        type: 'text',
+                        value: source,
+                      },
+                    ],
+                  }),
+                ],
+              }),
+            );
+          }
+        } catch (error) {
+          console.error(`Error processing ComponentPreview for ${name}:`, error);
+        }
+      }
+    });
+  };
 }
 
 function getNodeAttributeByName(node: UnistNode, name: string) {
-   return node.attributes?.find(attribute => attribute.name === name)
-}
-
-function getComponentSourceFileContent(node: UnistNode) {
-   const src = getNodeAttributeByName(node, 'src')?.value as string
-
-   if (!src)
-      return null
-
-   // Read the source file.
-   const filePath = path.join(process.cwd(), src)
-   const source = fs.readFileSync(filePath, 'utf8')
-
-   return source
+  return node.attributes?.find((attribute) => attribute.name === name);
 }

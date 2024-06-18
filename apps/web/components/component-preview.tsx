@@ -1,16 +1,17 @@
-'use client'
-import { RotateCcw } from 'lucide-react'
-import * as React from 'react'
-import { Button } from './ui/button'
-import ComponentWrapper from '~/components/component-wrapper'
-import { Icons } from '~/components/icons'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '~/components/ui/tabs'
-import { cn } from '~/lib/utils'
-import { Index } from '~/__registry__/index'
+'use client';
+import { RotateCcw } from 'lucide-react';
+import * as React from 'react';
+import { Button } from './ui/button';
+import ComponentWrapper from '~/components/component-wrapper';
+import { Icons } from '~/components/icons';
+import { ThemeWrapper } from "~/components/theme-wrapper"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '~/components/ui/tabs';
+import { cn } from '~/lib/utils';
+import { Index } from '~/__registry__'; // Achte darauf, dass dieser Pfad korrekt ist und das Modul existiert.
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
-   name: string
-   align?: 'center' | 'start' | 'end'
+   name: string;
+   align?: 'center' | 'start' | 'end';
 }
 
 export function ComponentPreview({
@@ -20,30 +21,31 @@ export function ComponentPreview({
    align = 'center',
    ...props
 }: ComponentPreviewProps) {
-   const [key, setKey] = React.useState(0) // State to trigger re-render of preview
-   const Codes = React.Children.toArray(children) as React.ReactElement[]
-   const Code = Codes[0] // first child
+   const [key, setKey] = React.useState(0); // State to trigger re-render of preview
+   const Codes = React.Children.toArray(children) as React.ReactElement[];
+   const Code = Codes[0]; // first child
 
    const Preview = React.useMemo(() => {
-      const Component = Index[name]?.component
+      const Component = Index[name]?.component;
+      console.log('Index:', Index);
+      console.log('Component name:', name); 
+      console.log('Component found:', !!Component); 
 
       if (!Component) {
-         console.error(`Component with name "${name}" not found in registry.`)
+         console.error(`Component with name "${name}" not found in registry.`);
          return (
             <p className="text-sm text-muted-foreground">
-               Component
-               {' '}
+               Component{' '}
                <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm">
                   {name}
-               </code>
-               {' '}
+               </code>{' '}
                not found in registry.
             </p>
-         )
+         );
       }
 
-      return <Component />
-   }, [name, key])
+      return <Component />;
+   }, [name, key]);
 
    return (
       <div
@@ -72,23 +74,25 @@ export function ComponentPreview({
             </div>
             <TabsContent value="preview" className="relative rounded-md" key={key}>
                <ComponentWrapper>
+               <ThemeWrapper>
                   <Button
-                     onClick={() => setKey(prev => prev + 1)}
+                     onClick={() => setKey((prev) => prev + 1)}
                      className="absolute right-0 top-0 z-10 ml-4 flex items-center rounded-lg px-3 py-1"
                      variant="ghost"
                   >
                      <RotateCcw size={16} />
                   </Button>
                   <React.Suspense
-                     fallback={(
+                     fallback={
                         <div className="flex items-center text-sm text-muted-foreground">
                            <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
                            Loading...
                         </div>
-                     )}
+                     }
                   >
                      {Preview}
                   </React.Suspense>
+               </ThemeWrapper>
                </ComponentWrapper>
             </TabsContent>
             <TabsContent value="code">
@@ -100,5 +104,5 @@ export function ComponentPreview({
             </TabsContent>
          </Tabs>
       </div>
-   )
+   );
 }
