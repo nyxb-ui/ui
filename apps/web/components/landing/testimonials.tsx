@@ -1,6 +1,6 @@
-import FadeIn from '~/registry/special/fade-in'
-import Marquee from '~/registry/special/marquee'
-import TweetCard from '~/registry/special/tweet-card'
+import FadeIn from '~/registry/default/ui/fade-in'
+import Marquee from '~/registry/default/ui/marquee'
+import TweetCard from '~/registry/default/ui/tweet-card'
 
 const tweets = [
    'https://x.com/chronark_/status/1754781648262967323',

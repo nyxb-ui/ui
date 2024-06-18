@@ -2,8 +2,8 @@
 
 import { ChevronRight } from 'lucide-react'
 import { Link } from 'next-view-transitions'
-import AnimatedShinyText from '~/registry/special/animated-shiny-text'
-import WordPullUp from '~/registry/special/word-pull-up'
+import AnimatedShinyText from '~/registry/default/ui/animated-shiny-text'
+import WordPullUp from '~/registry/default/ui/word-pull-up'
 import '~/styles/mdx.css'
 
 export default function SidebarCTA() {

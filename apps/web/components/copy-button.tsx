@@ -7,7 +7,7 @@ import { NpmCommands } from "types/unist";
 
 import { Event, trackEvent } from "~/lib/events";
 import { cn } from "~/lib/utils";
-import { Button } from "~/components/ui/button";
+import { Button, ButtonProps } from "~/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -15,10 +15,11 @@ import {
   DropdownMenuTrigger,
 } from "~/components/ui/dropdown-menu";
 
-interface CopyButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+interface CopyButtonProps extends ButtonProps {
   value: string;
   src?: string;
   event?: Event["name"];
+  variant?: "ghost" | "outline"; // Ensuring variant includes "outline"
 }
 
 async function copyToClipboardWithMeta(value: string, event?: Event) {
@@ -32,6 +33,7 @@ export function CopyButton({
   value,
   className,
   src,
+  variant = "ghost", // Default value set to "ghost"
   event,
   ...props
 }: CopyButtonProps) {
@@ -46,7 +48,7 @@ export function CopyButton({
   return (
     <Button
       size="icon"
-      variant="ghost"
+      variant={variant}
       className={cn(
         "relative z-10 h-6 w-6 text-zinc-50 hover:bg-background/70 hover:text-zinc-50",
         className,

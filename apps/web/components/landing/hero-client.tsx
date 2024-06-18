@@ -8,16 +8,16 @@ import TechStack from '~/components/tech-stack'
 import { buttonVariants } from '~/components/ui/button'
 import { Separator } from '~/components/ui/separator'
 import { cn } from '~/lib/utils'
-import AnimatedBeamMultipleInputDemo from '~/registry/special/example/animated-beam-multiple-inputs'
-import AnimatedListDemo from '~/registry/special/example/animated-list-demo'
-import BentoDemo from '~/registry/special/example/bento-demo'
-import DockDemo from '~/registry/special/example/dock-demo'
-import OrbitingCirclesDemo from '~/registry/special/example/orbiting-circles-demo'
-import RetroGridDemo from '~/registry/special/example/retro-grid-demo'
-import AnimatedGradientText from '~/registry/special/animated-gradient-text'
-import { VelocityScroll } from '~/registry/special/scroll-based-velocity'
-import TypingAnimation from '~/registry/special/typing-animation'
-import WordRotate from '~/registry/special/word-rotate'
+import AnimatedBeamMultipleInputDemo from '~/registry/default/example/animated-beam-multiple-inputs'
+import AnimatedListDemo from '~/registry/default/example/animated-list-demo'
+import BentoDemo from '~/registry/default/example/bento-demo'
+import DockDemo from '~/registry/default/example/dock-demo'
+import OrbitingCirclesDemo from '~/registry/default/example/orbiting-circles-demo'
+import RetroGridDemo from '~/registry/default/example/retro-grid-demo'
+import AnimatedGradientText from '~/registry/default/ui/animated-gradient-text'
+import { VelocityScroll } from '~/registry/default/ui/scroll-based-velocity'
+import TypingAnimation from '~/registry/default/ui/typing-animation'
+import WordRotate from '~/registry/default/ui/word-rotate'
 
 export default function HeroClient({ post }: { post: Doc }) {
    return (
@@ -38,10 +38,7 @@ export default function HeroClient({ post }: { post: Doc }) {
                            {' '}
                            <Separator className="mx-2 h-4" orientation="vertical" />
                            <span
-                              className={cn(
-                      `animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
-                      `inline`,
-                              )}
+                              className={cn(`animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,`inline`,)}
                            >
                               Introducing
                               {' '}
@@ -89,12 +86,7 @@ export default function HeroClient({ post }: { post: Doc }) {
                            <Link
                               href="/components"
                               className={cn(
-                                 buttonVariants({
-                                    variant: 'default',
-                                    size: 'lg',
-                                 }),
-                                 'gap-2 whitespace-pre md:flex',
-                                 'group relative w-full gap-1 rounded-full text-sm font-semibold tracking-tighter ring-offset-inherit transition-all duration-150 ease-in-out hover:ring-2 hover:ring-black hover:ring-offset-2 hover:ring-offset-current dark:hover:ring-neutral-50',
+                                 buttonVariants({variant: 'default', size: 'lg',}), 'gap-2 whitespace-pre md:flex', 'group relative w-full gap-1 rounded-full text-sm font-semibold tracking-tighter ring-offset-inherit transition-all duration-150 ease-in-out hover:ring-2 hover:ring-black hover:ring-offset-2 hover:ring-offset-current dark:hover:ring-neutral-50',
                               )}
                            >
                               Browse Components

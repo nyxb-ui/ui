@@ -459,358 +459,358 @@
   {
     "name": "magic-card",
     "files": [
-      "special/magic-card.tsx"
+      "ui/magic-card.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "neon-gradient-card",
     "files": [
-      "special/neon-gradient-card.tsx"
+      "ui/neon-gradient-card.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "linear-gradient",
     "files": [
-      "special/linear-gradient.tsx"
+      "ui/linear-gradient.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "radial-gradient",
     "files": [
-      "special/radial-gradient.tsx"
+      "ui/radial-gradient.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "meteors",
     "files": [
-      "special/meteors.tsx"
+      "ui/meteors.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "grid-pattern",
     "files": [
-      "special/grid-pattern.tsx"
+      "ui/grid-pattern.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "dot-pattern",
     "files": [
-      "special/dot-pattern.tsx"
+      "ui/dot-pattern.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "marquee",
     "files": [
-      "special/marquee.tsx"
+      "ui/marquee.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "globe",
     "files": [
-      "special/globe.tsx"
+      "ui/globe.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "shimmer-button",
     "files": [
-      "special/shimmer-button.tsx"
+      "ui/shimmer-button.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "hero-video",
     "files": [
-      "special/hero-video.tsx"
+      "ui/hero-video.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "tweet-card",
     "files": [
-      "special/tweet-card.tsx"
+      "ui/tweet-card.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "client-tweet-card",
     "files": [
-      "special/client-tweet-card.tsx"
+      "ui/client-tweet-card.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "bento-grid",
     "files": [
-      "special/bento-grid.tsx"
+      "ui/bento-grid.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "particles",
     "files": [
-      "special/particles.tsx"
+      "ui/particles.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "number-ticker",
     "files": [
-      "special/number-ticker.tsx"
+      "ui/number-ticker.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "ripple",
     "files": [
-      "special/ripple.tsx"
+      "ui/ripple.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "retro-grid",
     "files": [
-      "special/retro-grid.tsx"
+      "ui/retro-grid.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "animated-list",
     "files": [
-      "special/animated-list.tsx"
+      "ui/animated-list.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "animated-lines",
     "files": [
-      "special/animated-lines.tsx"
+      "ui/animated-lines.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "animated-shiny-text",
     "files": [
-      "special/animated-shiny-text.tsx"
+      "ui/animated-shiny-text.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "animated-grid-pattern",
     "files": [
-      "special/animated-grid-pattern.tsx"
+      "ui/animated-grid-pattern.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "border-beam",
     "files": [
-      "special/border-beam.tsx"
+      "ui/border-beam.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "animated-beam",
     "files": [
-      "special/animated-beam.tsx"
+      "ui/animated-beam.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "text-reveal",
     "files": [
-      "special/text-reveal.tsx"
+      "ui/text-reveal.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "animated-gradient-text",
     "files": [
-      "special/animated-gradient-text.tsx"
+      "ui/animated-gradient-text.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "orbiting-circles",
     "files": [
-      "special/orbiting-circles.tsx"
+      "ui/orbiting-circles.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "dock",
     "files": [
-      "special/dock.tsx"
+      "ui/dock.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "word-rotate",
     "files": [
-      "special/word-rotate.tsx"
+      "ui/word-rotate.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "avatar-circles",
     "files": [
-      "special/avatar-circles.tsx"
+      "ui/avatar-circles.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "word-pull-up",
     "files": [
-      "special/word-pull-up.tsx"
+      "ui/word-pull-up.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "typing-animation",
     "files": [
-      "special/typing-animation.tsx"
+      "ui/typing-animation.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "wavy-text",
     "files": [
-      "special/wavy-text.tsx"
+      "ui/wavy-text.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "blur-in",
     "files": [
-      "special/blur-in.tsx"
+      "ui/blur-in.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "separate-away",
     "files": [
-      "special/separate-away.tsx"
+      "ui/separate-away.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "letter-pullup",
     "files": [
-      "special/letter-pullup.tsx"
+      "ui/letter-pullup.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "sparkles-text",
     "files": [
-      "special/sparkles-text.tsx"
+      "ui/sparkles-text.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "flip-text",
     "files": [
-      "special/flip-text.tsx"
+      "ui/flip-text.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "icon-cloud",
     "files": [
-      "special/icon-cloud.tsx"
+      "ui/icon-cloud.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "wavy-dot-pattern",
     "files": [
-      "special/wavy-dot-pattern.tsx"
+      "ui/wavy-dot-pattern.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "gradual-spacing",
     "files": [
-      "special/gradual-spacing.tsx"
+      "ui/gradual-spacing.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "word-fade-in",
     "files": [
-      "special/word-fade-in.tsx"
+      "ui/word-fade-in.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "scroll-based-velocity",
     "files": [
-      "special/scroll-based-velocity.tsx"
+      "ui/scroll-based-velocity.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "fade-text",
     "files": [
-      "special/fade-text.tsx"
+      "ui/fade-text.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "shiny-button",
     "files": [
-      "special/shiny-button.tsx"
+      "ui/shiny-button.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "box-reveal",
     "files": [
-      "special/box-reveal.tsx"
+      "ui/box-reveal.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "shine-border",
     "files": [
-      "special/shine-border.tsx"
+      "ui/shine-border.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "gauge-circle",
     "files": [
-      "special/gauge-circle.tsx"
+      "ui/gauge-circle.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "confetti",
     "files": [
-      "special/confetti.tsx"
+      "ui/confetti.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "animated-subscribe-button",
     "files": [
-      "special/animated-subscribe-button.tsx"
+      "ui/animated-subscribe-button.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   },
   {
     "name": "cool-mode",
     "files": [
-      "special/cool-mode.tsx"
+      "ui/cool-mode.tsx"
     ],
-    "type": "components:special"
+    "type": "components:ui"
   }
 ]

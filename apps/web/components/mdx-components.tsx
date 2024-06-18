@@ -19,7 +19,7 @@ import { CopyButton, CopyNpmCommandButton } from "~/components/copy-button";
 import { FrameworkDocs } from "~/components/framework-docs";
 import { StyleWrapper } from "~/components/style-wrapper";
 import TechStack from "~/components/tech-stack";
-import TweetCard from "~/registry/special/tweet-card";
+import TweetCard from "~/registry/default/ui/tweet-card";
 import {
   Accordion,
   AccordionContent,
