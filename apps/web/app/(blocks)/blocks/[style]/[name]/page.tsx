@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { AnimatePresence } from 'framer-motion'
 import { siteConfig } from '~/config/site'
 import { getAllBlockIds, getBlock } from '~/lib/blocks'
 import { absoluteUrl, cn } from '~/lib/utils'

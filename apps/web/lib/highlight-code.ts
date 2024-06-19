@@ -2,7 +2,7 @@
 
 import { promises as fs } from 'node:fs'
 import path from 'node:path'
-import { getHighlighter } from 'shiki'
+import { getHighlighter } from 'shiki-v1'
 
 // Highlighting is failing in server components.
 // Disabling this in development.

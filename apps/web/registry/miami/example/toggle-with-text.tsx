@@ -1,12 +1,12 @@
-import { FontItalicIcon } from '@radix-ui/react-icons'
+import { FontItalicIcon } from "@radix-ui/react-icons";
 
-import { Toggle } from '~/registry/miami/ui/toggle'
+import { Toggle } from "~/registry/miami/ui/toggle";
 
 export default function ToggleWithText() {
-   return (
-      <Toggle aria-label="Toggle italic">
-         <FontItalicIcon className="mr-2 h-4 w-4" />
-         Italic
-      </Toggle>
-   )
+  return (
+    <Toggle aria-label="Toggle italic">
+      <FontItalicIcon className="mr-2 h-4 w-4" />
+      Italic
+    </Toggle>
+  );
 }
