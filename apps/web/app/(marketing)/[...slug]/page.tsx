@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { Mdx } from '~/components/mdx-components'
 import { siteConfig } from '~/config/site'
-import { env } from '~/env.mjs'
+import { env } from '~/scripts/env.mjs'
 import { absoluteUrl } from '~/lib/utils'
 import '~/styles/mdx.css'
 
