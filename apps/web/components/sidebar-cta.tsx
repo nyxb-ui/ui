@@ -12,7 +12,7 @@ export default function SidebarCTA() {
          href="https://nyxb.gives"
          target="_blank"
          rel="noreferrer"
-         className="group my-20 flex w-full flex-col items-center justify-center gap-2 rounded-xl bg-[#342B25] p-4 text-center text-lg font-medium leading-tight text-white"
+         className="group my-20 flex w-full flex-col items-center justify-center gap-2 rounded-xl bg-primary p-4 text-center text-lg font-medium leading-tight text-white"
       >
          <WordPullUp words="Enjoying my work?" className="text-4xl" />
          <AnimatedShinyText className="group inline-flex items-center justify-center whitespace-pre via-white/80 text-white dark:text-white">

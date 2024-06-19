@@ -5,7 +5,7 @@ import { Link } from 'next-view-transitions'
 
 export function SiteBanner() {
    return (
-      <div className="group relative top-0 bg-emerald-600 py-3 text-white transition-all duration-300 md:py-0">
+      <div className="group relative top-0 bg-primary py-3 text-white transition-all duration-300 md:py-0">
          <div className="container flex flex-col items-center justify-center gap-4 md:h-12 md:flex-row">
             <Link
                href="#"

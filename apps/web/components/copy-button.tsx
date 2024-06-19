@@ -24,7 +24,7 @@ interface CopyButtonProps extends ButtonProps {
    variant?: 'ghost' | 'outline' // Ensuring variant includes "outline"
 }
 
-async function copyToClipboardWithMeta(value: string, event?: Event) {
+export async function copyToClipboardWithMeta(value: string, event?: Event) {
    navigator.clipboard.writeText(value)
    if (event)
       trackEvent(event)

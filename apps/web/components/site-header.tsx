@@ -59,15 +59,15 @@ export async function SiteHeader() {
                >
                   <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40" />
                   <div className="flex items-center">
-                     <Icons.gitHub className="h-4 w-4" />
-                     <span className="ml-1">Star on GitHub</span>
+                     <Icons.gitHub className="h-4 w-4 text-white" />
+                     <span className="ml-1 text-white">Star on GitHub</span>
                      {' '}
                   </div>
                   <div className="ml-2 flex items-center gap-1 text-sm md:flex">
-                     <StarIcon className="h-4 w-4 text-gray-500 transition-all duration-300 group-hover:text-yellow-300" />
+                     <StarIcon className="h-4 w-4 text-white transition-all duration-300 group-hover:text-yellow-300" />
                      <NumberTicker
                         value={stars}
-                        className="font-display font-medium text-white dark:text-black"
+                        className="font-display font-medium text-white dark:text-white"
                      />
                   </div>
                </Link>
