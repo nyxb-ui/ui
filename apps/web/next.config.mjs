@@ -8,13 +8,23 @@ const nextConfig = {
    experimental: {
       optimizeCss: true,
    },
+   images: {
+      remotePatterns: [
+         {
+            protocol: 'https',
+            hostname: 'avatars.githubusercontent.com',
+         },
+         {
+            protocol: 'https',
+            hostname: 'images.unsplash.com',
+         },
+      ],
+      domains: ['localhost', 'cdn.nyxui.design'],
+   },
    compiler: {
       // Remove console.log from production except for error logs
       removeConsole:
-       process.env.NODE_ENV === 'production' ? { exclude: ['error'] } : false,
-   },
-   images: {
-      domains: ['localhost', 'cdn.nyxui.design'],
+         process.env.NODE_ENV === 'production' ? { exclude: ['error'] } : false,
    },
    async redirects() {
       return [
