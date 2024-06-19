@@ -21,7 +21,11 @@ export const docsConfig: DocsConfig = {
       },
       {
          title: 'Examples',
-         href: '/examples/mail',
+         href: '/examples',
+      },
+      {
+         title: 'Blocks',
+         href: '/blocks',
       },
    ],
    sidebarNav: [
