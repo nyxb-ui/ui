@@ -552,6 +552,9 @@
     "dependencies": [
       "@radix-ui/react-icons"
     ],
+    "registryDependencies": [
+      "button"
+    ],
     "files": [
       "ui/bento-grid.tsx"
     ],

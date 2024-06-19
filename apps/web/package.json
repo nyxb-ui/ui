@@ -7,7 +7,7 @@
     "start": "next start",
     "build": "next build",
     "build:env": "node ./scripts/env.mjs",
-    "build:registry": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-registry.mts && prettier --loglevel silent --write \"registry/**/*.{ts,tsx,mdx}\" --cache",
+    "build:registry": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-registry.mts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },

@@ -7,14 +7,14 @@
     "rgb": "rgb(0,0,0)",
     "hsl": "hsl(0,0%,0%)",
     "rgbChannel": "0 0 0",
-    "hslChannel": "hsl(0,0%,0%)"
+    "hslChannel": "0 0% 0%"
   },
   "white": {
     "hex": "#ffffff",
     "rgb": "rgb(255,255,255)",
     "hsl": "hsl(0,0%,100%)",
     "rgbChannel": "255 255 255",
-    "hslChannel": "hsl(0,0%,100%)"
+    "hslChannel": "0 0% 100%"
   },
   "slate": [
     {

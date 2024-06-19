@@ -13,9 +13,25 @@ video: https://cdn.nyxbui.design/globe.mp4
 
 <ComponentPreview name="globe-demo" />
 
-<Steps>
-
 ### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add globe
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
 
 Copy and paste the following code into your project.
 
@@ -30,6 +46,11 @@ components/ui/globe.tsx
 <ComponentSource name="globe" />
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>
+
 
 ## Props
 

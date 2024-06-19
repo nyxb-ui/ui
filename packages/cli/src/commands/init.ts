@@ -36,6 +36,8 @@ const PROJECT_DEPENDENCIES = [
    'clsx',
    'tailwind-merge',
    'framer-motion',
+   'react-spring',
+   'cobe',
 ]
 
 const initOptionsSchema = z.object({

@@ -198,7 +198,7 @@ export const Index: Record<string, any> = {
                   return {
                      name: chunkName,
                      description,
-                     component: `React.lazy(() => import("@/registry/${style.name}/${type}/${chunkName}")),`,
+                     component: `React.lazy(() => import("~/registry/${style.name}/${type}/${chunkName}")),`,
                      file: targetFile,
                      container: {
                         className: containerClassName,
@@ -222,7 +222,7 @@ export const Index: Record<string, any> = {
       name: "${item.name}",
       type: "${item.type}",
       registryDependencies: ${JSON.stringify(item.registryDependencies)},
-      component: React.lazy(() => import("@/registry/${style.name}/${type}/${
+      component: React.lazy(() => import("~/registry/${style.name}/${type}/${
         item.name
       }")),
       source: "${sourceFilename}",

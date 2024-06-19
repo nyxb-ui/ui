@@ -320,6 +320,7 @@ export const ui: Registry = [
    {
       name: 'globe',
       type: 'components:ui',
+      dependencies: ['react-spring'],
       files: ['ui/globe.tsx'],
    },
    {
