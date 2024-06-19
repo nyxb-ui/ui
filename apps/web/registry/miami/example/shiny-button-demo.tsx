@@ -1,5 +1,5 @@
-import ShinyButton from "~/registry/miami/ui/shiny-button";
+import ShinyButton from '~/registry/miami/ui/shiny-button'
 
 export default function ShinyButtonDemo() {
-  return <ShinyButton text="Shiny Button" />;
+   return <ShinyButton text="Shiny Button" />
 }

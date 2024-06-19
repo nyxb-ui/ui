@@ -1,11 +1,11 @@
-import NumberTicker from "~/registry/default/ui/number-ticker";
+import NumberTicker from '~/registry/default/ui/number-ticker'
 
 function NumberTickerDemo() {
-  return (
-    <p className="whitespace-pre-wrap text-8xl font-medium tracking-tighter text-black dark:text-white">
-      <NumberTicker value={100} />
-    </p>
-  );
+   return (
+      <p className="whitespace-pre-wrap text-8xl font-medium tracking-tighter text-black dark:text-white">
+         <NumberTicker value={100} />
+      </p>
+   )
 }
 
-export default NumberTickerDemo;
+export default NumberTickerDemo

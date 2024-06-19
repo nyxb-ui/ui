@@ -6,7 +6,7 @@ import path, { basename } from 'node:path'
 import { cwd } from 'node:process'
 import template from 'lodash.template'
 import { rimraf } from 'rimraf'
-import { Project, ScriptKind, SourceFile, SyntaxKind } from 'ts-morph'
+import { Project, ScriptKind, SyntaxKind } from 'ts-morph'
 
 import { colorMapping, colors } from '../registry/colors'
 import { registry } from '../registry/registry'
