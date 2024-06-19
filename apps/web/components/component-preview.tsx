@@ -26,6 +26,7 @@ interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
    description?: string
    button?: 'copy' | 'refresh'
    styleSwitch?: boolean
+   dots?: boolean
 }
 
 export function ComponentPreview({
@@ -38,6 +39,7 @@ export function ComponentPreview({
    description,
    button = 'refresh',
    styleSwitch = false,
+   dots = true,
    ...props
 }: ComponentPreviewProps) {
    const [config] = useConfig()
@@ -88,7 +90,7 @@ export function ComponentPreview({
       >
          <Tabs defaultValue="preview" className="relative mr-auto w-full">
             <div className="flex items-center justify-between pb-3">
-               <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0">
+               <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0 ml-33">
                   <TabsTrigger
                      value="preview"
                      className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
@@ -104,9 +106,9 @@ export function ComponentPreview({
                </TabsList>
             </div>
             <TabsContent value="preview" className="relative rounded-md" key={key}>
-               <ComponentWrapper>
+               <ComponentWrapper dots={dots}>
                   {styleSwitch && (
-                     <StyleSwitcher className="absolute top-4 left-2" />
+                     <StyleSwitcher className="absolute top-4 left-4" />
                   )}
                   {button === 'refresh'
                      ? (
@@ -130,7 +132,7 @@ export function ComponentPreview({
                         <div className="flex items-center text-sm text-muted-foreground">
                            <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
                            Loading...
-                       </div>
+                        </div>
                      )}
                   >
                      {Preview}

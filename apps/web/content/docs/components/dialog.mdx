@@ -11,6 +11,9 @@ links:
 <ComponentPreview
   name="dialog-demo"
   description="A dialog for editing profile details."
+  styleSwitch={true}
+  button="copy"
+  dots={false}
 />
 
 ## Installation
@@ -24,7 +27,7 @@ links:
 <TabsContent value="cli">
 
 ```bash
-npx shadcn-ui@latest add dialog
+npx nyxbui@latest add dialog
 ```
 
 </TabsContent>
@@ -61,7 +64,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
+} from "~components/ui/dialog"
 ```
 
 ```tsx
@@ -83,7 +86,12 @@ import {
 
 ### Custom close button
 
-<ComponentPreview name="dialog-close-button" />
+<ComponentPreview 
+   name="dialog-close-button"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
 
 ## Notes
 

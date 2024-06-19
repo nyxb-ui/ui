@@ -29,7 +29,7 @@ export function DemoGithub() {
       <Card>
          <CardHeader className="grid grid-cols-[1fr_110px] items-start gap-4 space-y-0">
             <div className="space-y-1">
-               <CardTitle>shadcn/ui</CardTitle>
+               <CardTitle>nyxb/ui</CardTitle>
                <CardDescription>
                   Beautifully designed components that you can copy and paste into
                   your apps. Accessible. Customizable. Open Source.

@@ -11,6 +11,9 @@ links:
 <ComponentPreview
   name="alert-dialog-demo"
   description="An alert dialog with cancel and continue buttons."
+  styleSwitch={true}
+  button="copy"
+  dots={false}
 />
 
 ## Installation
@@ -24,7 +27,7 @@ links:
 <TabsContent value="cli">
 
 ```bash
-npx shadcn-ui@latest add alert-dialog
+npx nyxbui@latest add alert-dialog
 ```
 
 </TabsContent>
@@ -64,7 +67,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
+} from "~/components/ui/alert-dialog"
 ```
 
 ```tsx

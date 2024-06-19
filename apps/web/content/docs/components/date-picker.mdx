@@ -4,7 +4,12 @@ description: A date picker component with range and presets.
 component: true
 ---
 
-<ComponentPreview name="date-picker-demo" />
+<ComponentPreview 
+   name="date-picker-demo"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
 
 ## Installation
 
@@ -21,14 +26,14 @@ import * as React from "react"
 import { format } from "date-fns"
 import { Calendar as CalendarIcon } from "lucide-react"
 
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { Calendar } from "@/components/ui/calendar"
+import { cn } from "~lib/utils"
+import { Button } from "~components/ui/button"
+import { Calendar } from "~components/ui/calendar"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
+} from "~components/ui/popover"
 
 export function DatePickerDemo() {
   const [date, setDate] = React.useState<Date>()
@@ -66,16 +71,36 @@ See the [React DayPicker](https://react-day-picker.js.org) documentation for mor
 
 ### Date Picker
 
-<ComponentPreview name="date-picker-demo" />
+<ComponentPreview 
+   name="date-picker-demo"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
 
 ### Date Range Picker
 
-<ComponentPreview name="date-picker-with-range" />
+<ComponentPreview 
+   name="date-picker-with-range"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
 
 ### With Presets
 
-<ComponentPreview name="date-picker-with-presets" />
+<ComponentPreview 
+   name="date-picker-with-presets"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
 
 ### Form
 
-<ComponentPreview name="date-picker-form" />
+<ComponentPreview 
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+   name="date-picker-form"
+ />

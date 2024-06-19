@@ -24,13 +24,13 @@ links:
 <Step>Run the following command:</Step>
 
 ```bash
-npx shadcn-ui@latest add toast
+npx nyxbui@latest add toast
 ```
 
 <Step>Add the Toaster component</Step>
 
 ```tsx title="app/layout.tsx" {1,9}
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from "~components/ui/toaster"
 
 export default function RootLayout({ children }) {
   return (
@@ -78,7 +78,7 @@ npm install @radix-ui/react-toast
 <Step>Add the Toaster component</Step>
 
 ```tsx title="app/layout.tsx" {1,9}
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from "~components/ui/toaster"
 
 export default function RootLayout({ children }) {
   return (
@@ -104,7 +104,7 @@ export default function RootLayout({ children }) {
 The `useToast` hook returns a `toast` function that you can use to display a toast.
 
 ```tsx
-import { useToast } from "@/components/ui/use-toast"
+import { useToast } from "~components/ui/use-toast"
 ```
 
 ```tsx {2,7-10}

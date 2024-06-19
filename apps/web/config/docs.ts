@@ -65,63 +65,295 @@ export const docsConfig: DocsConfig = {
          items: [
             {
                title: 'Accordion',
-               href: `/docs/components/accordion`,
+               href: '/docs/components/accordion',
                items: [],
             },
             {
-               title: 'Bento Grid',
-               href: `/docs/components/bento-grid`,
+               title: 'Alert',
+               href: '/docs/components/alert',
+               items: [],
+            },
+            {
+               title: 'Alert Dialog',
+               href: '/docs/components/alert-dialog',
                items: [],
             },
             {
                title: 'Animated List',
-               href: `/docs/components/animated-list`,
+               href: '/docs/components/animated-list',
                items: [],
             },
             {
-               title: 'Tweet Card',
-               href: `/docs/components/tweet-card`,
+               title: 'Aspect Ratio',
+               href: '/docs/components/aspect-ratio',
+               items: [],
+            },
+            {
+               title: 'Avatar',
+               href: '/docs/components/avatar',
+               items: [],
+            },
+            {
+               title: 'Avatar Circles',
+               href: '/docs/components/avatar-circles',
+               items: [],
+               label: '',
+            },
+            {
+               title: 'Badge',
+               href: '/docs/components/badge',
+               items: [],
+            },
+            {
+               title: 'Bento Grid',
+               href: '/docs/components/bento-grid',
+               items: [],
+            },
+            {
+               title: 'Breadcrumb',
+               href: '/docs/components/breadcrumb',
+               items: [],
+               // label: 'New'
+            },
+            {
+               title: 'Calendar',
+               href: '/docs/components/calendar',
+               items: [],
+            },
+            {
+               title: 'Card',
+               href: '/docs/components/card',
+               items: [],
+            },
+            {
+               title: 'Carousel',
+               href: '/docs/components/carousel',
+               items: [],
+            },
+            {
+               title: 'Checkbox',
+               href: '/docs/components/checkbox',
+               items: [],
+            },
+            {
+               title: 'Collapsible',
+               href: '/docs/components/collapsible',
+               items: [],
+            },
+            {
+               title: 'Combobox',
+               href: '/docs/components/combobox',
+               items: [],
+            },
+            {
+               title: 'Command',
+               href: '/docs/components/command',
+               items: [],
+            },
+            {
+               title: 'Context Menu',
+               href: '/docs/components/context-menu',
+               items: [],
+            },
+            {
+               title: 'Data Table',
+               href: '/docs/components/data-table',
+               items: [],
+            },
+            {
+               title: 'Date Picker',
+               href: '/docs/components/date-picker',
+               items: [],
+            },
+            {
+               title: 'Dialog',
+               href: '/docs/components/dialog',
+               items: [],
+            },
+            {
+               title: 'Dock',
+               href: '/docs/components/dock',
+               items: [],
+               label: '',
+            },
+            {
+               title: 'Drawer',
+               href: '/docs/components/drawer',
+               items: [],
+            },
+            {
+               title: 'Dropdown Menu',
+               href: '/docs/components/dropdown-menu',
+               items: [],
+            },
+            {
+               title: 'Form',
+               href: '/docs/components/form',
+               items: [],
+            },
+            {
+               title: 'Gauge Circle',
+               href: '/docs/components/gauge-circle',
+               items: [],
+               label: '',
+            },
+            {
+               title: 'Globe',
+               href: '/docs/components/globe',
+               items: [],
+            },
+            {
+               title: 'Hover Card',
+               href: '/docs/components/hover-card',
+               items: [],
+            },
+            {
+               title: 'Input',
+               href: '/docs/components/input',
+               items: [],
+            },
+            {
+               title: 'Input OTP',
+               href: '/docs/components/input-otp',
+               items: [],
+               // label: 'New'
+            },
+            {
+               title: 'Interactive Icon Cloud',
+               href: '/docs/components/icon-cloud',
+               items: [],
+               label: '',
+            },
+            {
+               title: 'Label',
+               href: '/docs/components/label',
                items: [],
             },
             {
                title: 'Marquee',
-               href: `/docs/components/marquee`,
+               href: '/docs/components/marquee',
                items: [],
             },
             {
-               title: 'Globe',
-               href: `/docs/components/globe`,
+               title: 'Menubar',
+               href: '/docs/components/menubar',
+               items: [],
+            },
+            {
+               title: 'Navigation Menu',
+               href: '/docs/components/navigation-menu',
                items: [],
             },
             {
                title: 'Orbiting Circles',
-               href: `/docs/components/orbiting-circles`,
+               href: '/docs/components/orbiting-circles',
                items: [],
                label: '',
             },
             {
-               title: 'Dock',
-               href: `/docs/components/dock`,
+               title: 'Pagination',
+               href: '/docs/components/pagination',
                items: [],
-               label: '',
             },
             {
-               title: 'Avatar Circles',
-               href: `/docs/components/avatar-circles`,
+               title: 'Popover',
+               href: '/docs/components/popover',
                items: [],
-               label: '',
             },
             {
-               title: 'Interactive Icon Cloud',
-               href: `/docs/components/icon-cloud`,
+               title: 'Progress',
+               href: '/docs/components/progress',
                items: [],
-               label: '',
             },
             {
-               title: 'Gauge Circle',
-               href: `/docs/components/gauge-circle`,
+               title: 'Radio Group',
+               href: '/docs/components/radio-group',
                items: [],
-               label: '',
+            },
+            {
+               title: 'Resizable',
+               href: '/docs/components/resizable',
+               items: [],
+            },
+            {
+               title: 'Scroll Area',
+               href: '/docs/components/scroll-area',
+               items: [],
+            },
+            {
+               title: 'Select',
+               href: '/docs/components/select',
+               items: [],
+            },
+            {
+               title: 'Separator',
+               href: '/docs/components/separator',
+               items: [],
+            },
+            {
+               title: 'Sheet',
+               href: '/docs/components/sheet',
+               items: [],
+            },
+            {
+               title: 'Skeleton',
+               href: '/docs/components/skeleton',
+               items: [],
+            },
+            {
+               title: 'Slider',
+               href: '/docs/components/slider',
+               items: [],
+            },
+            {
+               title: 'Sonner',
+               href: '/docs/components/sonner',
+               items: [],
+            },
+            {
+               title: 'Switch',
+               href: '/docs/components/switch',
+               items: [],
+            },
+            {
+               title: 'Table',
+               href: '/docs/components/table',
+               items: [],
+            },
+            {
+               title: 'Tabs',
+               href: '/docs/components/tabs',
+               items: [],
+            },
+            {
+               title: 'Textarea',
+               href: '/docs/components/textarea',
+               items: [],
+            },
+            {
+               title: 'Toast',
+               href: '/docs/components/toast',
+               items: [],
+            },
+            {
+               title: 'Toggle',
+               href: '/docs/components/toggle',
+               items: [],
+            },
+            {
+               title: 'Toggle Group',
+               href: '/docs/components/toggle-group',
+               items: [],
+            },
+            {
+               title: 'Tooltip',
+               href: '/docs/components/tooltip',
+               items: [],
+            },
+            {
+               title: 'Tweet Card',
+               href: '/docs/components/tweet-card',
+               items: [],
             },
          ],
       },
@@ -133,11 +365,11 @@ export const docsConfig: DocsConfig = {
                href: `/docs/components/animated-beam`,
                items: [],
             },
-            // {
-            //   title: "Animated Lines",
-            //   href: `/docs/components/animated-lines`,
-            //   items: [],
-            // },
+            {
+               title: 'Animated Lines',
+               href: `/docs/components/animated-lines`,
+               items: [],
+            },
             {
                title: 'Border Beam',
                href: `/docs/components/border-beam`,
@@ -299,6 +531,11 @@ export const docsConfig: DocsConfig = {
       {
          title: 'Buttons',
          items: [
+            {
+               title: 'Standard Button',
+               href: '/docs/components/button',
+               items: [],
+            },
             {
                title: 'Shimmer Button',
                href: `/docs/components/shimmer-button`,

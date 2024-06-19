@@ -6,7 +6,12 @@ links:
   doc: https://react-day-picker.js.org
 ---
 
-<ComponentPreview name="calendar-demo" />
+<ComponentPreview 
+   name="calendar-demo"
+   dots={false}
+   button="copy"
+   styleSwitch
+ />
 
 ## About
 
@@ -23,7 +28,7 @@ The `Calendar` component is built on top of [React DayPicker](https://react-day-
 <TabsContent value="cli">
 
 ```bash
-npx shadcn-ui@latest add calendar
+npx nyxbui@latest add calendar
 ```
 
 </TabsContent>
@@ -57,7 +62,7 @@ The `Calendar` component uses the `Button` component. Make sure you have it inst
 ## Usage
 
 ```tsx
-import { Calendar } from "@/components/ui/calendar"
+import { Calendar } from "~components/ui/calendar"
 ```
 
 ```tsx
@@ -83,4 +88,9 @@ You can use the `<Calendar>` component to build a date picker. See the [Date Pic
 
 ### Form
 
-<ComponentPreview name="calendar-form" />
+<ComponentPreview 
+   name="calendar-form" 
+   dots={false}
+   button="copy"
+   styleSwitch
+   />

@@ -8,6 +8,9 @@ component: true
   name="breadcrumb-demo"
   className="[&_.preview]:p-2"
   description="A breadcrumb with a collapsible dropdown."
+  dots={false}
+  button="copy"
+  styleSwitch
 />
 
 ## Installation
@@ -21,7 +24,7 @@ component: true
 <TabsContent value="cli">
 
 ```bash
-npx shadcn-ui@latest add breadcrumb
+npx nyxbui@latest add breadcrumb
 ```
 
 </TabsContent>
@@ -52,7 +55,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
+} from "~/components/ui/breadcrumb"
 ```
 
 ```tsx
@@ -82,6 +85,9 @@ Use a custom component as `children` for `<BreadcrumbSeparator />` to create a c
 <ComponentPreview
   name="breadcrumb-separator"
   description="A breadcrumb with a custom separator"
+  dots={false}
+  button="copy"
+  styleSwitch
 />
 
 ```tsx showLineNumbers {1,10-12}
@@ -114,6 +120,9 @@ You can compose `<BreadcrumbItem />` with a `<DropdownMenu />` to create a dropd
   name="breadcrumb-dropdown"
   className="[&_.preview]:p-2"
   description="A breadcrumb with a dropdown."
+  dots={false}
+  button="copy"
+  styleSwitch
 />
 
 ```tsx showLineNumbers {1-6,11-21}
@@ -122,7 +131,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "~components/ui/dropdown-menu"
 
 ...
 
@@ -151,10 +160,13 @@ We provide a `<BreadcrumbEllipsis />` component to show a collapsed state when t
   name="breadcrumb-ellipsis"
   className="[&_.preview]:p-2"
   description="A breadcrumb showing a collapsed state."
+  dots={false}
+  button="copy"
+  styleSwitch
 />
 
 ```tsx showLineNumbers {1,9}
-import { BreadcrumbEllipsis } from "@/components/ui/breadcrumb"
+import { BreadcrumbEllipsis } from "~components/ui/breadcrumb"
 
 ...
 
@@ -173,11 +185,14 @@ import { BreadcrumbEllipsis } from "@/components/ui/breadcrumb"
 
 ### Link component
 
-To use a custom link component from your routing library, you can use the `asChild` prop on `<BreadcrumbLink />`.
+To use a custom link component from your routing library, you can use the `asChild` prop <br /> on `<BreadcrumbLink />`.
 
 <ComponentPreview
   name="breadcrumb-link"
   description="A breadcrumb with a custom Link component"
+  dots={false}
+  button="copy"
+  styleSwitch
 />
 
 ```tsx showLineNumbers {1,8-10}
@@ -201,7 +216,7 @@ import { Link } from "next/link"
 
 ### Responsive
 
-Here's an example of a responsive breadcrumb that composes `<BreadcrumbItem />` with `<BreadcrumbEllipsis />`, `<DropdownMenu />`, and `<Drawer />`.
+Here's an example of a responsive breadcrumb that composes `<BreadcrumbItem />` <br /> with `<BreadcrumbEllipsis />`, `<DropdownMenu />`, and `<Drawer />`.
 
 It displays a dropdown on desktop and a drawer on mobile.
 
@@ -209,4 +224,7 @@ It displays a dropdown on desktop and a drawer on mobile.
   name="breadcrumb-responsive"
   className="[&_.preview]:p-2"
   description="A responsive breadcrumb. It displays a dropdown on desktop and a drawer on mobile."
+  dots={false}
+  button="copy"
+  styleSwitch
 />

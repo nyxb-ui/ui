@@ -4,7 +4,7 @@ description: Displays a badge or a component that looks like a badge.
 component: true
 ---
 
-<ComponentPreview name="badge-demo" description="A badge" />
+<ComponentPreview name="badge-demo" description="A badge" styleSwitch={true} button="copy" />
 
 ## Installation
 
@@ -17,7 +17,7 @@ component: true
 <TabsContent value="cli">
 
 ```bash
-npx shadcn-ui@latest add badge
+npx nyxbui@latest add badge
 ```
 
 </TabsContent>
@@ -41,7 +41,7 @@ npx shadcn-ui@latest add badge
 ## Usage
 
 ```tsx
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "~/components/ui/badge"
 ```
 
 ```tsx
@@ -53,7 +53,7 @@ import { Badge } from "@/components/ui/badge"
 You can use the `badgeVariants` helper to create a link that looks like a badge.
 
 ```tsx
-import { badgeVariants } from "@/components/ui/badge"
+import { badgeVariants } from "~/components/ui/badge"
 ```
 
 ```tsx
@@ -64,7 +64,7 @@ import { badgeVariants } from "@/components/ui/badge"
 
 ### Default
 
-<ComponentPreview name="badge-demo" description="A badge" />
+<ComponentPreview name="badge-demo" description="A badge" styleSwitch={true} button="copy" />
 
 ---
 
@@ -73,6 +73,8 @@ import { badgeVariants } from "@/components/ui/badge"
 <ComponentPreview
   name="badge-secondary"
   description="A badge using secondary as variant."
+  styleSwitch={true} 
+  button="copy"
 />
 
 ---
@@ -82,10 +84,12 @@ import { badgeVariants } from "@/components/ui/badge"
 <ComponentPreview
   name="badge-outline"
   description="A badge using outline as variant."
+  styleSwitch={true} 
+  button="copy"
 />
 
 ---
 
 ### Destructive
 
-<ComponentPreview name="badge-destructive" description="A destructive badge." />
+<ComponentPreview name="badge-destructive" description="A destructive badge." styleSwitch={true} button="copy" />

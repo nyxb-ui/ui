@@ -7,10 +7,13 @@ links:
 ---
 
 <ComponentPreview
-  name="command-demo"
-  align="start"
-  className="[&_.preview>div]:max-w-[450px]"
-  description="A command menu"
+   name="command-demo"
+   align="start"
+   className="[&_.preview>div]:max-w-[450px]"
+   description="A command menu"
+   button="copy"
+   dots={false}
+   styleSwitch
 />
 
 ## About
@@ -28,7 +31,7 @@ The `<Command />` component uses the [`cmdk`](https://cmdk.paco.me) component by
 <TabsContent value="cli">
 
 ```bash
-npx shadcn-ui@latest add command
+npx nyxbui@latest add command
 ```
 
 </TabsContent>
@@ -45,7 +48,12 @@ npm install cmdk
 
 <Step>Copy and paste the following code into your project.</Step>
 
-<ComponentSource name="command" />
+<ComponentSource 
+   name="command"
+   button="copy"
+   dots={false}
+   styleSwitch
+ />
 
 <Step>Update the import paths to match your project setup.</Step>
 
@@ -68,7 +76,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/components/ui/command"
+} from "~components/ui/command"
 ```
 
 ```tsx
@@ -95,7 +103,12 @@ import {
 
 ### Dialog
 
-<ComponentPreview name="command-dialog" />
+<ComponentPreview 
+   name="command-dialog"
+   button="copy"
+   dots={false}
+   styleSwitch
+ />
 
 To show the command menu in a dialog, use the `<CommandDialog />` component.
 

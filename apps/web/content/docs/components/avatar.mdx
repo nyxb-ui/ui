@@ -7,7 +7,7 @@ links:
   api: https://www.radix-ui.com/docs/primitives/components/avatar#api-reference
 ---
 
-<ComponentPreview name="avatar-demo" description="An avatar with a fallback." />
+<ComponentPreview name="avatar-demo" description="An avatar with a fallback." button="copy" styleSwitch />
 
 ## Installation
 
@@ -20,7 +20,7 @@ links:
 <TabsContent value="cli">
 
 ```bash
-npx shadcn-ui@latest add avatar
+npx nyxbui@latest add avatar
 ```
 
 </TabsContent>
@@ -50,12 +50,12 @@ npm install @radix-ui/react-avatar
 ## Usage
 
 ```tsx
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar"
 ```
 
 ```tsx
 <Avatar>
-  <AvatarImage src="https://github.com/shadcn.png" />
+  <AvatarImage src="https://github.com/nyxb.png" />
   <AvatarFallback>CN</AvatarFallback>
 </Avatar>
 ```

@@ -9,8 +9,11 @@ links:
 ---
 
 <ComponentPreview
-  name="collapsible-demo"
-  description="A collapsible component."
+   name="collapsible-demo"
+   description="A collapsible component."
+   button="copy"
+   dots={false}
+   styleSwitch
 />
 
 ## Installation
@@ -24,7 +27,7 @@ links:
 <TabsContent value="cli">
 
 ```bash
-npx shadcn-ui@latest add collapsible
+npx nyxbui@latest add collapsible
 ```
 
 </TabsContent>
@@ -58,7 +61,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible"
+} from "~components/ui/collapsible"
 ```
 
 ```tsx

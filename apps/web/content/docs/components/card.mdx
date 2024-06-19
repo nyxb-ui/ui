@@ -4,7 +4,13 @@ description: Displays a card with header, content, and footer.
 component: true
 ---
 
-<ComponentPreview name="card-with-form" description="A card with a form" />
+<ComponentPreview 
+   name="card-with-form" 
+   description="A card with a form"
+   dots={false}
+   button="copy"
+   styleSwitch 
+  />
 
 ## Installation
 
@@ -17,7 +23,7 @@ component: true
 <TabsContent value="cli">
 
 ```bash
-npx shadcn-ui@latest add card
+npx nyxbui@latest add card
 ```
 
 </TabsContent>
@@ -48,7 +54,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "~components/ui/card"
 ```
 
 ```tsx
@@ -71,4 +77,7 @@ import {
 <ComponentPreview
   name="card-demo"
   description="A card showing notifications settings."
+  dots={false}
+  button="copy"
+  styleSwitch
 />

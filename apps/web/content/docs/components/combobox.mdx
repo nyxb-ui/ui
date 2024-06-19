@@ -4,7 +4,12 @@ description: Autocomplete input and command palette with a list of suggestions.
 component: true
 ---
 
-<ComponentPreview name="combobox-demo" />
+<ComponentPreview 
+   name="combobox-demo"
+   button="copy"
+   dots={false}
+   styleSwitch
+ />
 
 ## Installation
 
@@ -20,20 +25,20 @@ See installation instructions for the [Popover](/docs/components/popover#install
 import * as React from "react"
 import { Check, ChevronsUpDown } from "lucide-react"
 
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { cn } from "~lib/utils"
+import { Button } from "~components/ui/button"
 import {
   Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
-} from "@/components/ui/command"
+} from "~components/ui/command"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
+} from "~components/ui/popover"
 
 const frameworks = [
   {
@@ -112,22 +117,47 @@ export function ComboboxDemo() {
 
 ### Combobox
 
-<ComponentPreview name="combobox-demo" />
+<ComponentPreview 
+   name="combobox-demo"
+   button="copy"
+   dots={false}
+   styleSwitch
+ />
 
 ### Popover
 
-<ComponentPreview name="combobox-popover" />
+<ComponentPreview 
+   name="combobox-popover"
+   button="copy"
+   dots={false}
+   styleSwitch
+ />
 
 ### Dropdown menu
 
-<ComponentPreview name="combobox-dropdown-menu" />
+<ComponentPreview 
+   name="combobox-dropdown-menu"
+   button="copy"
+   dots={false}
+   styleSwitch
+ />
 
 ### Responsive
 
 You can create a responsive combobox by using the `<Popover />` on desktop and the `<Drawer />` components on mobile.
 
-<ComponentPreview name="combobox-responsive" />
+<ComponentPreview 
+   name="combobox-responsive"
+   button="copy"
+   dots={false}
+   styleSwitch
+ />
 
 ### Form
 
-<ComponentPreview name="combobox-form" />
+<ComponentPreview 
+   name="combobox-form"
+   button="copy"
+   dots={false}
+   styleSwitch
+ />

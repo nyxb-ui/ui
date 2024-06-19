@@ -10,6 +10,9 @@ links:
 <ComponentPreview
   name="context-menu-demo"
   description="A context menu with sub menu items."
+  styleSwitch={true}
+  button="copy"
+  dots={false}
 />
 
 ## Installation
@@ -23,7 +26,7 @@ links:
 <TabsContent value="cli">
 
 ```bash
-npx shadcn-ui@latest add context-menu
+npx nyxbui@latest add context-menu
 ```
 
 </TabsContent>
@@ -58,7 +61,7 @@ import {
   ContextMenuContent,
   ContextMenuItem,
   ContextMenuTrigger,
-} from "@/components/ui/context-menu"
+} from "~components/ui/context-menu"
 ```
 
 ```tsx

@@ -7,7 +7,13 @@ links:
   api: https://www.radix-ui.com/docs/primitives/components/checkbox#api-reference
 ---
 
-<ComponentPreview name="checkbox-demo" description="A checkbox" />
+<ComponentPreview 
+name="checkbox-demo" 
+description="A checkbox"
+button="copy"
+dots={false}
+styleSwitch
+ />
 
 ## Installation
 
@@ -20,7 +26,7 @@ links:
 <TabsContent value="cli">
 
 ```bash
-npx shadcn-ui@latest add checkbox
+npx nyxbui@latest add checkbox
 ```
 
 </TabsContent>
@@ -50,7 +56,7 @@ npm install @radix-ui/react-checkbox
 ## Usage
 
 ```tsx
-import { Checkbox } from "@/components/ui/checkbox"
+import { Checkbox } from "~components/ui/checkbox"
 ```
 
 ```tsx
@@ -64,14 +70,33 @@ import { Checkbox } from "@/components/ui/checkbox"
 <ComponentPreview
   name="checkbox-with-text"
   description="A checkbox with label and description."
+  button="copy"
+  dots={false}
+  styleSwitch
 />
 
 ### Disabled
 
-<ComponentPreview name="checkbox-disabled" description="A disabled checkbox" />
+<ComponentPreview 
+   name="checkbox-disabled" 
+   description="A disabled checkbox"
+   button="copy"
+   dots={false}
+   styleSwitch
+ />
 
 ### Form
 
-<ComponentPreview name="checkbox-form-single" />
+<ComponentPreview 
+   name="checkbox-form-single"
+   button="copy"
+   dots={false}
+   styleSwitch
+ />
 
-<ComponentPreview name="checkbox-form-multiple" />
+<ComponentPreview 
+   name="checkbox-form-multiple"
+   button="copy"
+   dots={false}
+   styleSwitch
+ />

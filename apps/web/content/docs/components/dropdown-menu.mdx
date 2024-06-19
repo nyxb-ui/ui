@@ -11,6 +11,9 @@ links:
 <ComponentPreview
   name="dropdown-menu-demo"
   description="A dropdown menu with icons, shortcuts and sub menu items."
+  styleSwitch={true}
+  button="copy"
+  dots={false}
 />
 
 ## Installation
@@ -24,7 +27,7 @@ links:
 <TabsContent value="cli">
 
 ```bash
-npx shadcn-ui@latest add dropdown-menu
+npx nyxbui@latest add dropdown-menu
 ```
 
 </TabsContent>
@@ -41,7 +44,12 @@ npm install @radix-ui/react-dropdown-menu
 
 <Step>Copy and paste the following code into your project.</Step>
 
-<ComponentSource name="dropdown-menu" />
+<ComponentSource 
+   name="dropdown-menu"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
 
 <Step>Update the import paths to match your project setup.</Step>
 
@@ -61,7 +69,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "~components/ui/dropdown-menu"
 ```
 
 ```tsx
@@ -85,6 +93,9 @@ import {
 <ComponentPreview
   name="dropdown-menu-checkboxes"
   description="A dropdown menu with checkboxes."
+  styleSwitch={true}
+  button="copy"
+  dots={false}
 />
 
 ### Radio Group
@@ -92,4 +103,7 @@ import {
 <ComponentPreview
   name="dropdown-menu-radio-group"
   description="A dropdown menu with radio items."
+  styleSwitch={true}
+  button="copy"
+  dots={false}
 />

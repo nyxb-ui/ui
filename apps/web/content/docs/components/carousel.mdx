@@ -7,7 +7,11 @@ links:
   api: https://www.embla-carousel.com/api
 ---
 
-<ComponentPreview name="carousel-demo" />
+<ComponentPreview 
+   name="carousel-demo"
+   button="copy"
+   styleSwitch
+ />
 
 ## About
 
@@ -25,7 +29,7 @@ The carousel component is built using the [Embla Carousel](https://www.embla-car
 <TabsContent value="cli">
 
 ```bash
-npx shadcn-ui@latest add carousel
+npx nyxbui@latest add carousel
 ```
 
 </TabsContent>
@@ -61,7 +65,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel"
+} from "~components/ui/carousel"
 ```
 
 ```tsx
@@ -82,7 +86,11 @@ import {
 
 To set the size of the items, you can use the `basis` utility class on the `<CarouselItem />`.
 
-<ComponentPreview name="carousel-size" />
+<ComponentPreview 
+   name="carousel-size"
+   button="copy"
+   styleSwitch
+ />
 
 ```tsx title="Example" showLineNumbers {4-6}
 // 33% of the carousel width.
@@ -120,7 +128,11 @@ You can always adjust this in your own project if you need to.
 
 </Callout>
 
-<ComponentPreview name="carousel-spacing" />
+<ComponentPreview 
+   name="carousel-spacing"
+   button="copy"
+   styleSwitch
+ />
 
 ```tsx title="Example" showLineNumbers /-ml-4/ /pl-4/
 <Carousel>
@@ -146,7 +158,11 @@ You can always adjust this in your own project if you need to.
 
 Use the `orientation` prop to set the orientation of the carousel.
 
-<ComponentPreview name="carousel-orientation" />
+<ComponentPreview 
+   name="carousel-orientation"
+   button="copy"
+   styleSwitch
+ />
 
 ```tsx showLineNumbers /vertical | horizontal/
 <Carousel orientation="vertical | horizontal">
@@ -181,10 +197,14 @@ You can pass options to the carousel using the `opts` prop. See the [Embla Carou
 
 Use a state and the `setApi` props to get an instance of the carousel API.
 
-<ComponentPreview name="carousel-api" />
+<ComponentPreview 
+   name="carousel-api"
+   button="copy"
+   styleSwitch
+ />
 
 ```tsx showLineNumbers {1,4,22}
-import { type CarouselApi } from "@/components/ui/carousel"
+import { type CarouselApi } from "~components/ui/carousel"
 
 export function Example() {
   const [api, setApi] = React.useState<CarouselApi>()
@@ -221,7 +241,7 @@ export function Example() {
 You can listen to events using the api instance from `setApi`.
 
 ```tsx showLineNumbers {1,4-14,16}
-import { type CarouselApi } from "@/components/ui/carousel"
+import { type CarouselApi } from "~components/ui/carousel"
 
 export function Example() {
   const [api, setApi] = React.useState<CarouselApi>()
@@ -272,6 +292,9 @@ export function Example() {
 }
 ```
 
-<ComponentPreview name="carousel-plugin" />
+<ComponentPreview 
+   name="carousel-plugin" 
+   styleSwitch
+   />
 
 See the [Embla Carousel docs](https://www.embla-carousel.com/api/plugins/) for more information on using plugins.

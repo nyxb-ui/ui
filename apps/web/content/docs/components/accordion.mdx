@@ -11,6 +11,9 @@ links:
   name="accordion-demo"
   className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[70%]"
   description="An accordion with items"
+  styleSwitch={true}
+  button="copy"
+  dots={false}
 />
 
 ## Installation
@@ -29,7 +32,7 @@ links:
 <Step>Run the following command:</Step>
 
 ```bash
-npx shadcn-ui@latest add accordion
+npx nyxbui@latest add accordion
 ```
 
 <Step>Update `tailwind.config.js`</Step>
@@ -123,7 +126,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "~/components/ui/accordion"
 ```
 
 ```tsx

@@ -7,6 +7,8 @@ component: true
 <ComponentPreview
   name="alert-demo"
   description="An alert with an icon, title and description. The title says 'Heads up!' and the description is 'You can add components to your app using the cli.'."
+  styleSwitch={true}
+  button="copy"
 />
 
 ## Installation
@@ -20,7 +22,7 @@ component: true
 <TabsContent value="cli">
 
 ```bash
-npx shadcn-ui@latest add alert
+npx nyxbui@latest add alert
 ```
 
 </TabsContent>
@@ -29,7 +31,11 @@ npx shadcn-ui@latest add alert
 
 <Steps>
 
-<Step>Copy and paste the following code into your project.</Step>
+Copy and paste the following code into your project.
+
+```text
+components/ui/alert.tsx
+```
 
 <ComponentSource name="alert" />
 
@@ -44,7 +50,7 @@ npx shadcn-ui@latest add alert
 ## Usage
 
 ```tsx
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { Alert, AlertDescription, AlertTitle } from "~/components/ui/alert"
 ```
 
 ```tsx
@@ -64,6 +70,8 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 <ComponentPreview
   name="alert-demo"
   description="An alert with an icon, title and description. The title says 'Heads up!' and the description is 'You can add components to your app using the cli.'."
+  styleSwitch={true} 
+  button="copy"
 />
 
 ### Destructive
@@ -71,4 +79,6 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 <ComponentPreview
   name="alert-destructive"
   description="An alert with a destructive variant. The title says 'Delete this item?' and the description is 'This action cannot be undone.'."
+  styleSwitch={true} 
+  button="copy"
 />

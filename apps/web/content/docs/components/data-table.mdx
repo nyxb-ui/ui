@@ -6,7 +6,12 @@ links:
   doc: https://tanstack.com/table/v8/docs/guide/introduction
 ---
 
-<ComponentPreview name="data-table-demo" />
+<ComponentPreview 
+   name="data-table-demo"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
 
 ## Introduction
 
@@ -42,13 +47,13 @@ This guide will show you how to use [TanStack Table](https://tanstack.com/table)
 1. Add the `<Table />` component to your project:
 
 ```bash
-npx shadcn-ui@latest add table
+npx nyxbui@latest add table
 ```
 
 2. Add `tanstack/react-table` dependency:
 
 ```bash
-npm install @tanstack/react-table
+pnpm install @tanstack/react-table
 ```
 
 ## Prerequisites
@@ -167,7 +172,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table"
+} from "~components/ui/table"
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -315,7 +320,7 @@ Let's add row actions to our table. We'll use a `<Dropdown />` component for thi
 
 ### Update columns definition
 
-Update our columns definition to add a new `actions` column. The `actions` cell returns a `<Dropdown />` component.
+Update our columns definition to add a new `actions` column. <br /> The `actions` cell returns a `<Dropdown />` component.
 
 ```tsx showLineNumbers title="app/payments/columns.tsx" {4,6-14,18-45}
 "use client"
@@ -323,7 +328,7 @@ Update our columns definition to add a new `actions` column. The `actions` cell 
 import { ColumnDef } from "@tanstack/react-table"
 import { MoreHorizontal } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
+import { Button } from "~components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -331,7 +336,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "~components/ui/dropdown-menu"
 
 export const columns: ColumnDef<Payment>[] = [
   // ...
@@ -410,7 +415,7 @@ This will automatically paginate your rows into pages of 10. See the [pagination
 We can add pagination controls to our table using the `<Button />` component and the `table.previousPage()`, `table.nextPage()` API methods.
 
 ```tsx showLineNumbers title="app/payments/data-table.tsx" {1,15,21-39}
-import { Button } from "@/components/ui/button"
+import { Button } from "~components/ui/button"
 
 export function DataTable<TData, TValue>({
   columns,
@@ -563,8 +568,8 @@ import {
   useReactTable,
 } from "@tanstack/react-table"
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import { Button } from "~components/ui/button"
+import { Input } from "~components/ui/input"
 
 export function DataTable<TData, TValue>({
   columns,
@@ -639,13 +644,13 @@ import {
   useReactTable,
 } from "@tanstack/react-table"
 
-import { Button } from "@/components/ui/button"
+import { Button } from "~components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "~components/ui/dropdown-menu"
 
 export function DataTable<TData, TValue>({
   columns,
@@ -740,8 +745,8 @@ Next, we're going to add row selection to our table.
 
 import { ColumnDef } from "@tanstack/react-table"
 
-import { Badge } from "@/components/ui/badge"
-import { Checkbox } from "@/components/ui/checkbox"
+import { Badge } from "~components/ui/badge"
+import { Checkbox } from "~components/ui/checkbox"
 
 export const columns: ColumnDef<Payment>[] = [
   {

@@ -3,8 +3,10 @@ import { cn } from '~/lib/utils'
 interface ComponentWrapperProps {
    className?: string
    children: any
+   dots?: boolean
 }
-function ComponentWrapper({ className, children }: ComponentWrapperProps) {
+
+function ComponentWrapper({ className, children, dots = true }: ComponentWrapperProps) {
    return (
       <div
          className={cn(
@@ -12,13 +14,15 @@ function ComponentWrapper({ className, children }: ComponentWrapperProps) {
             className,
          )}
       >
-         <div
-            className={cn(
-          `absolute inset-0 h-full w-full`,
-          `bg-[radial-gradient(#00000055_1px,transparent_1px)] dark:bg-[radial-gradient(#ffffff22_1px,transparent_1px)]`,
-          'lab-bg [background-size:16px_16px]',
-            )}
-         />
+         {dots && (
+            <div
+               className={cn(
+                  'absolute inset-0 h-full w-full',
+                  'bg-[radial-gradient(#00000055_1px,transparent_1px)] dark:bg-[radial-gradient(#ffffff22_1px,transparent_1px)]',
+                  'lab-bg [background-size:16px_16px]',
+               )}
+            />
+         )}
          {children}
       </div>
    )
