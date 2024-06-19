@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import { cn } from '~/lib/utils'
-import { Announcement } from '~/components/announcement'
+import { SuperAnnouncement } from '~/components/super-announcement'
 import { ExamplesNav } from '~/components/examples-nav'
 import {
    PageActions,
@@ -25,7 +25,7 @@ export default function ExamplesLayout({ children }: ExamplesLayoutProps) {
    return (
       <div className="container relative">
          <PageHeader>
-            <Announcement />
+            <SuperAnnouncement href="/docs/changelog" text="Introducing Lift Mode" />
             <PageHeaderHeading className="hidden md:block">
                Check out some examples
             </PageHeaderHeading>

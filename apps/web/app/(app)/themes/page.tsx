@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 import 'public/registry/themes.css'
-import { Announcement } from '~/components/announcement'
+import { SuperAnnouncement } from '~/components/super-announcement'
 import {
    PageActions,
    PageHeader,
@@ -25,7 +25,7 @@ export default function ThemesPage() {
             className="relative flex flex-col items-start md:flex-row md:items-center"
          >
             <PageHeader>
-               <Announcement />
+               <SuperAnnouncement href="/docs/changelog" text="Introducing Lift Mode" />
                <PageHeaderHeading className="hidden md:block">
                   Add colors. Make it yours.
                </PageHeaderHeading>

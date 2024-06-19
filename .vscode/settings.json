@@ -44,8 +44,16 @@
     "gql",
     "graphql",
     "astro"
-],
-"cSpell.words": [
-   "pullup"
-]
+  ],
+  "workbench.editor.customLabels.patterns": {
+    "**/app/**/page.tsx": "${dirname(1)}/${dirname} <page />",
+    "**/app/**/layout.tsx": "${dirname(1)}/${dirname} <layout />",
+    "**/app/**/route.ts": "${dirname(1)}/${dirname} <route />",
+    "**/components/**/*.tsx": "${dirname(1)}/${filename} <component />",
+    "**/components/**/*.ts": "${dirname(1)}/${filename} <component />"
+  },
+  "search.useIgnoreFiles": true,
+  "cSpell.words": [
+    "pullup"
+  ]
 }

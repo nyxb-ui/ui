@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import { Announcement } from '~/components/announcement'
+import { SuperAnnouncement } from '~/components/super-announcement'
 import {
    PageActions,
    PageHeader,
@@ -23,7 +23,7 @@ export default function BlocksLayout({
    return (
       <div className="container relative">
          <PageHeader className="max-w-3xl">
-            <Announcement />
+            <SuperAnnouncement href="/docs/changelog" text="Introducing Lift Mode" />
             <PageHeaderHeading className="text-balance">
                Building Blocks for the Web
             </PageHeaderHeading>
