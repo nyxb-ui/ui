@@ -456,6 +456,12 @@ export const examples: Registry = [
       files: ['example/input-otp-form.tsx'],
    },
    {
+      name: 'input-otp-disabled',
+      type: 'components:example',
+      registryDependencies: ['input-otp', 'form'],
+      files: ['example/input-otp-disabled.tsx'],
+   },
+   {
       name: 'label-demo',
       type: 'components:example',
       registryDependencies: ['label'],
