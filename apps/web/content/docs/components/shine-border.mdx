@@ -8,14 +8,56 @@ published: true
 
 <ComponentPreview name="shine-border-demo" />
 
-<Steps>
 
 ### Installation
 
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add shine-border
+```
+
+Add the following animations to your tailwind.config.ts file:
+
+```ts
+// tailwind.config.ts
+module.exports = {
+  theme: {
+    extend: {
+      keyframes: {
+        "shine-pulse": {
+          "0%": {
+            "background-position": "0% 0%",
+          },
+          "50%": {
+            "background-position": "100% 100%",
+          },
+          to: {
+            "background-position": "0% 0%",
+          },
+        },
+      },
+    },
+  },
+};
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
 Copy and paste the following code into your project.
 
-```js
-// tailwind.config.js
+```ts
+// tailwind.config.ts
 module.exports = {
   theme: {
     extend: {
@@ -45,6 +87,10 @@ components/ui/shine-border.tsx
 
 </Steps>
 
+</TabsContent>
+
+</Tabs>
+
 ## Examples
 
 ### Silver
@@ -62,7 +108,3 @@ components/ui/shine-border.tsx
 | borderWidth  | number                         | Defines the width of the border.                    | 1px        |
 | children     | ReactNode                | Contains react node elements.                       | {}         |
 
-## Credits
-
-- Credits to [Matthew Goshman](https://codepen.io/matthewgoshman/pen/bGMpKZy) for this fantastic component.
-- Credits to [Anu Adebayo](https://twitter.com/unnamedcodes) for improving and customizing the component.

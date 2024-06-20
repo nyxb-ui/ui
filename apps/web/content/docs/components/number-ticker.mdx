@@ -2,16 +2,33 @@
 title: Number Ticker
 date: 2023-11-18
 description: Animate numbers to count up or down to a target number
-author: dillionverma
+author: nyxb
 published: true
 video: https://cdn.nyxbui.design/number-ticker.mp4
 ---
 
 <ComponentPreview name="number-ticker-demo" />
 
-<Steps>
 
 ### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add number-ticker
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
 
 Copy and paste the following code into your project.
 
@@ -22,6 +39,11 @@ components/ui/number-ticker.tsx
 <ComponentSource name="number-ticker" />
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>
+
 
 ## Props
 

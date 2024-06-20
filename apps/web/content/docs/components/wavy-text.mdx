@@ -8,9 +8,26 @@ published: true
 
 <ComponentPreview name="wavy-text-demo" />
 
-<Steps>
 
 ### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add wavy-text
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
 
 Copy and paste the following code into your project.
 
@@ -21,6 +38,10 @@ components/ui/wavy-text.tsx
 <ComponentSource name="wavy-text" />
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>
 
 ## Props
 

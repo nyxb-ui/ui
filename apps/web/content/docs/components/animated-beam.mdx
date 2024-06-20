@@ -2,16 +2,33 @@
 title: Animated Beam
 date: 2024-02-11
 description: An animated beam of light which travels along a path. Useful for showcasing the "integration" features of a website.
-author: dillionverma
+author: nyxb
 published: true
 video: https://cdn.nyxbui.design/animated-beam.mp4
 ---
 
 <ComponentPreview name="animated-beam-demo" />
 
-<Steps>
 
 ### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add animated-beam
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
 
 Copy and paste the following code into your project.
 
@@ -22,6 +39,10 @@ components/ui/animated-beam.tsx
 <ComponentSource name="animated-beam" />
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>
 
 ## Usage
 
@@ -102,6 +123,3 @@ export default function AnimatedBeamDemo() {
 | endXOffset         | number  | The end x offset of the beam.                            | 0         |
 | endYOffset         | number  | The end y offset of the beam.                            | 0         |
 
-## Credits
-
-- Credit to [@itsarghyadas](https://twitter.com/itsarghyadas) for figuring out the foundation of this!

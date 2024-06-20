@@ -365,11 +365,11 @@ export const docsConfig: DocsConfig = {
                href: `/docs/components/animated-beam`,
                items: [],
             },
-            {
-               title: 'Animated Lines',
-               href: `/docs/components/animated-lines`,
-               items: [],
-            },
+            // {
+            //    title: 'Animated Lines',
+            //    href: `/docs/components/animated-lines`,
+            //    items: [],
+            // },
             {
                title: 'Border Beam',
                href: `/docs/components/border-beam`,

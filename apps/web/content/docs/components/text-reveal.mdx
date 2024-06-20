@@ -2,16 +2,33 @@
 title: Text Reveal 
 date: 2024-04-08
 description: Fade in text as you scroll down the page.
-author: dillionverma
+author: nyxb
 published: true
 video: https://cdn.nyxbui.design/text-reveal.mp4
 ---
 
 <ComponentPreview name="text-reveal-demo" />
 
-<Steps>
 
 ### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add text-reveal
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
 
 Copy and paste the following code into your project.
 
@@ -23,6 +40,10 @@ components/ui/text-reveal.tsx
 
 </Steps>
 
+</TabsContent>
+
+</Tabs>
+
 ## Props
 
 | Prop         | Type   | Description                                  | Default |
@@ -31,7 +52,3 @@ components/ui/text-reveal.tsx
 | className    | string | The class name to be applied to the shimmer. |         |
 | text         | string | The text to do the animation for             | ""      |
 
-
-## Credits
-
-- Credit to [@itsarghyadas](https://twitter.com/itsarghyadas) for figuring out the foundation of this!

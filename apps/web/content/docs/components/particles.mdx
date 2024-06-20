@@ -2,15 +2,32 @@
 title: Particles
 date: 2024-06-04
 description: Particles are a fun way to add some visual flair to your website. They can be used to create a sense of depth, movement, and interactivity.
-author: dillionverma
+author: nyxb
 published: true
 ---
 
 <ComponentPreview name="particles-demo" />
 
-<Steps>
 
 ### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add particles
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
 
 Copy and paste the following code into your project.
 
@@ -21,6 +38,10 @@ components/ui/particles.tsx
 <ComponentSource name="particles" />
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>
 
 ## Props
 

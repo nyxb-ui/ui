@@ -5,6 +5,11 @@ import { Toaster } from '~/components/ui/sonner'
 import { TooltipProvider } from '~/components/ui/tooltip'
 import { fontSans } from '~/lib/fonts'
 import { absoluteUrl, cn, constructMetadata } from '~/lib/utils'
+import { Toaster as DefaultToaster } from '~/registry/default/ui/toaster'
+import { Toaster as NewYorkSonner } from '~/registry/miami/ui/sonner'
+import { Toaster as NewYorkToaster } from '~/registry/miami/ui/toaster'
+import { TailwindIndicator } from '~/components/tailwind-indicator'
+import { ThemeSwitcher } from '~/components/theme-switcher'
 import '~/styles/globals.css'
 import '~/styles/mdx.css'
 
@@ -35,6 +40,11 @@ export default function RootLayout({
                      {children}
                      <Toaster />
                   </TooltipProvider>
+                  <TailwindIndicator />
+                  <ThemeSwitcher />
+                  <NewYorkToaster />
+                  <DefaultToaster />
+                  <NewYorkSonner />
                </ThemeProvider>
             </body>
          </html>

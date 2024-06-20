@@ -4,7 +4,13 @@ description: Displays a form textarea or a component that looks like a textarea.
 component: true
 ---
 
-<ComponentPreview name="textarea-demo" description="A textarea" />
+<ComponentPreview 
+   name="textarea-demo" 
+   description="A textarea"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
 
 ## Installation
 
@@ -52,11 +58,23 @@ import { Textarea } from "~components/ui/textarea"
 
 ### Default
 
-<ComponentPreview name="textarea-demo" description="A textarea" />
+<ComponentPreview 
+   name="textarea-demo" 
+   description="A textarea"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
 
 ### Disabled
 
-<ComponentPreview name="textarea-disabled" description="A disabled textarea" />
+<ComponentPreview 
+   name="textarea-disabled" 
+   description="A disabled textarea"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
 
 ### With Label
 
@@ -64,6 +82,9 @@ import { Textarea } from "~components/ui/textarea"
   name="textarea-with-label"
   className="[&_div.grid]:w-full"
   description="A textarea with a label"
+  styleSwitch={true}
+  button="copy"
+  dots={false}
 />
 
 ### With Text
@@ -71,6 +92,9 @@ import { Textarea } from "~components/ui/textarea"
 <ComponentPreview
   name="textarea-with-text"
   description="A textarea with text"
+  styleSwitch={true}
+  button="copy"
+  dots={false}
 />
 
 ### With Button
@@ -78,8 +102,16 @@ import { Textarea } from "~components/ui/textarea"
 <ComponentPreview
   name="textarea-with-button"
   description="A textarea with a button"
+  styleSwitch={true}
+  button="copy"
+  dots={false}
 />
 
 ### Form
 
-<ComponentPreview name="textarea-form" />
+<ComponentPreview 
+   name="textarea-form"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />

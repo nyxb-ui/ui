@@ -8,9 +8,26 @@ published: true
 
 <ComponentPreview name="separate-away-demo" />
 
-<Steps>
 
 ### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add separate-away
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
 
 Copy and paste the following code into your project.
 
@@ -21,6 +38,10 @@ components/ui/separate-away.tsx
 <ComponentSource name="separate-away" />
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>
 
 ## Props
 

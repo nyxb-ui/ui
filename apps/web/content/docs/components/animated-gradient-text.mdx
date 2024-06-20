@@ -2,21 +2,60 @@
 title: Animated Gradient Text
 date: 2024-04-09
 description: An animated gradient background which transitions between colors for text.
-author: dillionverma
+author: nyxb
 published: true
 video: https://cdn.nyxbui.design/animated-gradient-text.mp4
 ---
 
 <ComponentPreview name="animated-gradient-text-demo" />
 
-<Steps>
 
 ### Installation
 
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add toggle-group
+```
+
+Add the following animations to your tailwind.config.ts file:
+
+```ts
+// tailwind.config.ts
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        gradient: "gradient 8s linear infinite",
+      },
+      keyframes: {
+        gradient: {
+          to: {
+            backgroundPosition: "var(--bg-size) 0",
+          },
+        },
+      },
+    },
+  },
+};
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
 Copy and paste the following code into your project.
 
-```js
-// tailwind.config.js
+```ts
+// tailwind.config.ts
 module.exports = {
   theme: {
     extend: {
@@ -42,6 +81,10 @@ components/ui/animated-gradient-text.tsx
 <ComponentSource name="animated-gradient-text" />
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>
 
 ## Props
 

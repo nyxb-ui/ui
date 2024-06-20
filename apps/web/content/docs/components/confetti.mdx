@@ -8,14 +8,32 @@ published: true
 
 <ComponentPreview name="confetti-hover" />
 
-<Steps>
 
 ### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add confetti
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
 
 The confetti is built on canvas confetti.
 
 ```bash
-npm install --save canvas-confetti
+pnpm add canvas-confetti
 ```
 
 Copy and paste the following code into your project.
@@ -27,6 +45,10 @@ components/ui/confetti.tsx
 <ComponentSource name="confetti" />
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>
 
 ## Examples
 
@@ -92,5 +114,4 @@ components/ui/confetti.tsx
 
 ## Credits
 
-- Credit to [Bankk](https://www.x.com/bankkroll_eth)
 - Inspired by [canvas-confetti](https://www.npmjs.com/package/canvas-confetti)

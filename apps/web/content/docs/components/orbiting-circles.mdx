@@ -2,21 +2,63 @@
 title: Orbiting Circles
 date: 2024-04-24
 description: A collection of circles which move in orbit along a circular path
-author: dillionverma
+author: nyxb
 published: true
 video: https://cdn.nyxbui.design/orbiting-circles.mp4
 ---
 
 <ComponentPreview name="orbiting-circles-demo" />
 
-<Steps>
 
 ### Installation
 
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add orbiting-circles
+```
+
+Add the following animations to your tailwind.config.ts file:
+
+```ts
+// tailwind.config.ts
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        orbit: "orbit calc(var(--duration)*1s) linear infinite",
+      },
+      keyframes: {
+        orbit: {
+            "0%": {
+                transform: "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
+            },
+            "100%": {
+                transform: "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+            },
+        },
+      },
+    },
+  },
+};
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
 Copy and paste the following code into your project.
 
-```js
-// tailwind.config.js
+```ts
+// tailwind.config.ts
 module.exports = {
   theme: {
     extend: {
@@ -45,6 +87,10 @@ components/ui/orbiting-circles.tsx
 <ComponentSource name="orbiting-circles" />
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>
 
 ## Props
 

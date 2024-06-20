@@ -2,21 +2,63 @@
 title: Meteors
 date: 2023-07-13
 description: A meteor shower effect.
-author: dillionverma
+author: nyxb
 published: true
 video: https://cdn.nyxbui.design/meteors.mp4
 ---
 
 <ComponentPreview name="meteors-demo" />
 
-<Steps>
 
 ### Installation
 
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add meteors
+```
+
+Add the following animations to your tailwind.config.ts file:
+
+```ts
+// tailwind.config.ts
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        meteor: "meteor 5s linear infinite",
+      },
+      keyframes: {
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: 1 },
+          "70%": { opacity: 1 },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: 0,
+          },
+        },
+      },
+    },
+  },
+};
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
 Copy and paste the following code into your project.
 
-```js
-// tailwind.config.js
+```ts
+// tailwind.config.ts
 module.exports = {
   theme: {
     extend: {
@@ -45,6 +87,10 @@ components/ui/meteors.tsx
 <ComponentSource name="meteors" />
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>
 
 ## Props
 

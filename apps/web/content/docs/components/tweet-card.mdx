@@ -2,19 +2,36 @@
 title: Tweet Card
 date: 2023-10-15
 description: A card that displays a tweet with the author's name, handle, and profile picture.
-author: dillionverma
+author: nyxb
 published: true
 video: https://cdn.nyxbui.design/tweet-card.mp4
 ---
 
 <ComponentPreview name="tweet-card-demo" />
 
-<Steps>
 
 ### Installation
 
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
 ```bash
-npm install react-tweet
+npx nyxbui@latest add tweet-card
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+```bash
+ react-tweet
 ```
 
 ### Installation React Server Component (Next.js 13+):
@@ -31,6 +48,10 @@ Copy and paste the following code into your project.
 
 </Steps>
 
+</TabsContent>
+
+</Tabs>
+
 ## Usage
 
 To render on server side using RSC (Next.js 13):
@@ -39,7 +60,7 @@ To render on server side using RSC (Next.js 13):
 import { TweetCard } from "~/components/ui/tweet-card.tsx";
 
 export default async function App() {
-  return <TweetCard id="1441032681968212480" />;
+  return <TweetCard id="1703861725534011484" />;
 }
 ```
 
@@ -50,7 +71,7 @@ To render on client side:
 import { ClientTweetCard } from "~/components/ui/client-tweet-card.tsx";
 
 export default function App() {
-  return <ClientTweetCard id="1441032681968212480" />;
+  return <ClientTweetCard id="1703861725534011484" />;
 }
 ```
 

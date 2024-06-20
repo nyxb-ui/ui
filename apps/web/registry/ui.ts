@@ -473,6 +473,7 @@ export const ui: Registry = [
    {
       name: 'icon-cloud',
       type: 'components:ui',
+      dependencies: ['react-icon-cloud'],
       files: ['ui/icon-cloud.tsx'],
    },
    {
@@ -492,6 +493,7 @@ export const ui: Registry = [
    },
    {
       name: 'scroll-based-velocity',
+      dependencies: ['@motionone/utils'],
       type: 'components:ui',
       files: ['ui/scroll-based-velocity.tsx'],
    },
@@ -523,6 +525,7 @@ export const ui: Registry = [
    {
       name: 'confetti',
       type: 'components:ui',
+      dependencies: ['canvas-confetti'],
       files: ['ui/confetti.tsx'],
    },
    {

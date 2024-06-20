@@ -7,7 +7,12 @@ links:
   api: https://www.radix-ui.com/docs/primitives/components/toast#api-reference
 ---
 
-<ComponentPreview name="toast-demo" />
+<ComponentPreview 
+   name="toast-demo"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
 
 ## Installation
 
@@ -56,7 +61,7 @@ export default function RootLayout({ children }) {
 <Step>Install the following dependencies:</Step>
 
 ```bash
-npm install @radix-ui/react-toast
+ @radix-ui/react-toast
 ```
 
 <Step>Copy and paste the following code into your project.</Step>
@@ -136,18 +141,38 @@ To display multiple toasts at the same time, you can update the `TOAST_LIMIT` in
 
 ### Simple
 
-<ComponentPreview name="toast-simple" />
+<ComponentPreview 
+   name="toast-simple"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
 
 ### With title
 
-<ComponentPreview name="toast-with-title" />
+<ComponentPreview 
+   name="toast-with-title"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
 
 ### With Action
 
-<ComponentPreview name="toast-with-action" />
+<ComponentPreview 
+   name="toast-with-action"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />
 
 ### Destructive
 
 Use `toast({ variant: "destructive" })` to display a destructive toast.
 
-<ComponentPreview name="toast-destructive" />
+<ComponentPreview 
+   name="toast-destructive"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />

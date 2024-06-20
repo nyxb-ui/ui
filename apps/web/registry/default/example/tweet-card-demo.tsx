@@ -5,5 +5,5 @@ import ClientTweetCard from '~/registry/default/ui/client-tweet-card'
  * <ClientTweetCard /> (Client Side Only)
  */
 export default async function TweetDemo() {
-   return <ClientTweetCard id="1668408059125702661" className="shadow-2xl" />
+   return <ClientTweetCard id="1703861725534011484" className="shadow-2xl" />
 }

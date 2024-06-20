@@ -2,21 +2,64 @@
 title: Marquee
 date: 2023-07-26
 description: An infinite scrolling component that can be used to display text, images, or videos.
-author: dillionverma
+author: nyxb
 published: true
 video: https://cdn.nyxbui.design/marquee.mp4
 ---
 
 <ComponentPreview name="marquee-demo" />
 
-<Steps>
 
 ### Installation
 
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add toggle-group
+```
+
+Add the following animations to your tailwind.config.ts file:
+
+```ts
+// tailwind.config.ts
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+      },
+    },
+  },
+};
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
 Copy and paste the following code into your project.
 
-```js
-// tailwind.config.js
+```ts
+// tailwind.config.ts
 module.exports = {
   theme: {
     extend: {
@@ -46,6 +89,10 @@ components/ui/marquee.tsx
 <ComponentSource name="marquee" />
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>
 
 ## Examples
 

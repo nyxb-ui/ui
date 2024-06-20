@@ -23,7 +23,9 @@ function ComponentWrapper({ className, children, dots = true }: ComponentWrapper
                )}
             />
          )}
-         {children}
+         <div className={cn('mt-12 mb-12 w-full flex flex-col items-center justify-center')}>
+            {children}
+         </div>
       </div>
    )
 }

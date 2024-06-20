@@ -8,9 +8,26 @@ published: true
 
 <ComponentPreview name="scroll-based-velocity-demo" />
 
-<Steps>
 
 ### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add scroll-based-velocity
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
 
 ```bash
 pnpm i @motionone/utils
@@ -25,6 +42,11 @@ components/ui/scroll-based-velocity.tsx
 <ComponentSource name="scroll-based-velocity" />
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>
+
 
 ## Props
 

@@ -2,21 +2,63 @@
 title: Animated Shiny Text
 date: 2024-01-16
 description: A light glare effect which pans across text making it appear as if it is shimmering.
-author: dillionverma
+author: nyxb
 published: true
 video: https://cdn.nyxbui.design/animated-shiny-text.mp4
 ---
 
 <ComponentPreview name="animated-shiny-text-demo" />
 
-<Steps>
 
 ### Installation
 
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add animated-shiny-text
+```
+
+Add the following animations to your tailwind.config.ts file:
+
+```ts
+// tailwind.config.ts
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        shimmer: "shimmer 8s infinite",
+      },
+      keyframes: {
+        shimmer: {
+          "0%, 90%, 100%": {
+            "background-position": "calc(-100% - var(--shimmer-width)) 0",
+          },
+          "30%, 60%": {
+            "background-position": "calc(100% + var(--shimmer-width)) 0",
+          },
+        },
+      },
+    },
+  },
+};
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
 Copy and paste the following code into your project.
 
-```js
-// tailwind.config.js
+```ts
+// tailwind.config.ts
 module.exports = {
   theme: {
     extend: {
@@ -45,6 +87,10 @@ components/ui/animated-shiny-text.tsx
 <ComponentSource name="animated-shiny-text" />
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>
 
 ## Props
 

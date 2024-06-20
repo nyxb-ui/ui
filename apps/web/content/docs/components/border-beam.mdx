@@ -2,21 +2,60 @@
 title: Border Beam
 date: 2024-02-06
 description: An animated beam of light which travels along the border of its container.
-author: dillionverma
+author: nyxb
 published: true
 video: https://cdn.nyxbui.design/border-beam.mp4
 ---
 
 <ComponentPreview name="border-beam-demo" />
 
-<Steps>
 
 ### Installation
 
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add border-beam
+```
+
+Add the following animations to your tailwind.config.ts file:
+
+```ts
+// tailwind.config.ts
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+      },
+      keyframes: {
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
+      },
+    },
+  },
+};
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
 Copy and paste the following code into your project.
 
-```js
-// tailwind.config.js
+```ts
+// tailwind.config.ts
 module.exports = {
   theme: {
     extend: {
@@ -42,6 +81,10 @@ components/ui/border-beam.tsx
 <ComponentSource name="border-beam" />
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>
 
 ## Usage
 
@@ -74,7 +117,3 @@ export default async function App() {
 | colorTo     | string | End color of the beam                  | #9c40ff |
 | delay       | number | Delay before the animation starts      | 0       |
 
-## Credits
-
-- Credit to [@linear](https://linear.app/) where I first saw this effect.
-- Credit to [@jh3yy](https://twitter.com/jh3yy) for sharing his implementation of this effect.
