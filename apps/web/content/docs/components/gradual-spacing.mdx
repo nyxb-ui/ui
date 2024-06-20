@@ -2,15 +2,32 @@
 title: Gradual Spacing
 date: 2024-05-25
 description: Word animation for gradual spacing between letters
-author: wellitsabhi
+author: nyxb
 published: true
 ---
 
 <ComponentPreview name="gradual-spacing-demo" />
 
-<Steps>
 
 ### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add gradual-spacing
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
 
 Copy and paste the following code into your project.
 
@@ -21,6 +38,10 @@ components/ui/gradual-spacing.tsx
 <ComponentSource name="gradual-spacing" />
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>
 
 ## Props
 

@@ -9,9 +9,47 @@ video: https://cdn.nyxbui.design/retro-grid.mp4
 
 <ComponentPreview name="retro-grid-demo" />
 
-<Steps>
 
 ### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add retro-grid
+```
+
+Add the following animations to your tailwind.config.ts file:
+
+```ts
+// tailwind.config.ts
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        grid: "grid 15s linear infinite",
+      },
+      keyframes: {
+        grid: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0)" },
+        },
+      },
+    },
+  },
+};
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
 
 Copy and paste the following code into your project.
 
@@ -41,6 +79,10 @@ components/ui/retro-grid.tsx
 <ComponentSource name="retro-grid" />
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>
 
 ## Props
 

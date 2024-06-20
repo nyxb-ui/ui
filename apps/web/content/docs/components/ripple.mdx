@@ -9,9 +9,51 @@ video: https://cdn.nyxbui.design/ripple.mp4
 
 <ComponentPreview name="ripple-demo" />
 
-<Steps>
 
 ### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add ripple
+```
+
+Add the following animations to your tailwind.config.ts file:
+
+```ts
+// tailwind.config.ts
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        ripple: "ripple 3400ms ease infinite",
+      },
+      keyframes: {
+        ripple: {
+          "0%, 100%": {
+            transform: "translate(-50%, -50%) scale(1)",
+          },
+          "50%": {
+            transform: "translate(-50%, -50%) scale(0.9)",
+          },
+        },
+      },
+    },
+  },
+};
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
 
 Copy and paste the following code into your project.
 
@@ -45,3 +87,7 @@ components/ui/ripple.tsx
 <ComponentSource name="ripple" />
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>

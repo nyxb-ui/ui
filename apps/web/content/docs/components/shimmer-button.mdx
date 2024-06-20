@@ -9,9 +9,62 @@ video: https://cdn.nyxbui.design/shimmer-button.mp4
 
 <ComponentPreview name="shimmer-button-demo" />
 
-<Steps>
 
 ### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add shimmer-button
+```
+
+Add the following animations to your tailwind.config.ts file:
+```ts
+// tailwind.config.ts
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
+        slide: "slide var(--speed) ease-in-out infinite alternate",
+      },
+      keyframes: {
+        "spin-around": {
+          "0%": {
+            transform: "translateZ(0) rotate(0)",
+          },
+          "15%, 35%": {
+            transform: "translateZ(0) rotate(90deg)",
+          },
+          "65%, 85%": {
+            transform: "translateZ(0) rotate(270deg)",
+          },
+          "100%": {
+            transform: "translateZ(0) rotate(360deg)",
+          },
+        },
+        slide: {
+          to: {
+            transform: "translate(calc(100cqw - 100%), 0)",
+          },
+        },
+      },
+    },
+  },
+};
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
 
 Copy and paste the following code into your project.
 
@@ -57,6 +110,10 @@ components/ui/shimmer-button.tsx
 <ComponentSource name="shimmer-button" />
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>
 
 ## Props
 

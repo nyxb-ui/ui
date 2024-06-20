@@ -479,6 +479,7 @@ export const ui: Registry = [
    {
       name: 'wavy-dot-pattern',
       type: 'components:ui',
+      dependencies: ['react-anime'],
       files: ['ui/wavy-dot-pattern.tsx'],
    },
    {
