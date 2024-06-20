@@ -1,27 +1,26 @@
 ---
-title: Svelte
-description: Install and configure Nyxb UI for Svelte
-published: true
+title: Vite
+description: Install and configure Vite.
 ---
 
 <Steps>
 
-### Information
-
-This project and all components are written in **TypeScript**. We recommend using TypeScript for your project as well.
-
 ### Create project
 
+Start by creating a new React project using `vite`:
+
 ```bash
-npx @svelte-add/tailwindcss@latest
+npm create vite@latest
 ```
 
-### Prerequisites
+### Add Tailwind and its configuration
 
-These are the main dependencies you will need to get started.
+Install `tailwindcss` and its peer dependencies, then generate your `tailwind.config.js` and `postcss.config.js` files:
 
 ```bash
-pnpm add svelte-inview
+npm install -D tailwindcss postcss autoprefixer
+
+npx tailwindcss init -p
 ```
 
 ### Edit tsconfig.json file
@@ -34,7 +33,7 @@ Add the following code to the `tsconfig.json` file to resolve paths:
     // ...
     "baseUrl": ".",
     "paths": {
-      "~/*": [
+      "@/*": [
         "./src/*"
       ]
     }
@@ -43,6 +42,29 @@ Add the following code to the `tsconfig.json` file to resolve paths:
 }
 ```
 
+### Update vite.config.ts
+
+Add the following code to the vite.config.ts so your app can resolve paths without error
+
+```bash
+# (so you can import "path" without error)
+npm i -D @types/node
+```
+
+```typescript
+import path from "path"
+import react from "@vitejs/plugin-react"
+import { defineConfig } from "vite"
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+})
+```
 
 ### Run the CLI
 
@@ -79,7 +101,7 @@ npx nyxbui@latest add button
 The command above will add the `Button` component to your project. You can then import it like this:
 
 ```tsx {1,6} showLineNumbers
-import { Button } from "~/components/ui/button"
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
