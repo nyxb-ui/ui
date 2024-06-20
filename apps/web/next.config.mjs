@@ -35,7 +35,12 @@ const nextConfig = {
          },
          {
             source: '/components',
-            destination: '/docs/components/marquee',
+            destination: '/docs/components/accordion',
+            permanent: true,
+         },
+         {
+            source: '/docs/components',
+            destination: '/docs/components/accordion',
             permanent: true,
          },
          {
@@ -46,11 +51,6 @@ const nextConfig = {
          {
             source: '/components/:path*',
             destination: '/docs/components/:path*',
-            permanent: true,
-         },
-         {
-            source: '/docs/components',
-            destination: '/docs/components/marquee',
             permanent: true,
          },
          {
