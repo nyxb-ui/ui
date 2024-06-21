@@ -158,6 +158,11 @@ export const examples: Registry = [
       files: ['example/button-as-child.tsx'],
    },
    {
+      name: 'pulsating-button-demo',
+      type: 'components:example',
+      files: ['example/pulsating-button-demo.tsx'],
+   },
+   {
       name: 'calendar-demo',
       type: 'components:example',
       registryDependencies: ['calendar'],
@@ -460,6 +465,42 @@ export const examples: Registry = [
       type: 'components:example',
       registryDependencies: ['input-otp', 'form'],
       files: ['example/input-otp-disabled.tsx'],
+   },
+   {
+      name: 'input-phone-default',
+      type: 'components:example',
+      registryDependencies: ['button', 'input', 'popover'],
+      files: ['example/input-phone-default.tsx'],
+   },
+   {
+      name: 'input-phone-demo',
+      type: 'components:example',
+      registryDependencies: ['button', 'input', 'popover'],
+      files: ['example/input-phone-demo.tsx'],
+   },
+   {
+      name: 'input-phone-form',
+      type: 'components:example',
+      registryDependencies: ['button', 'input', 'popover'],
+      files: ['example/input-phone-form.tsx'],
+   },
+   {
+      name: 'input-phone-initial',
+      type: 'components:example',
+      registryDependencies: ['button', 'input', 'popover'],
+      files: ['example/input-phone-initial.tsx'],
+   },
+   {
+      name: 'input-phone-international',
+      type: 'components:example',
+      registryDependencies: ['button', 'input', 'popover'],
+      files: ['example/input-phone-international.tsx'],
+   },
+   {
+      name: 'input-phone-national',
+      type: 'components:example',
+      registryDependencies: ['button', 'input', 'popover'],
+      files: ['example/input-phone-national.tsx'],
    },
    {
       name: 'label-demo',
