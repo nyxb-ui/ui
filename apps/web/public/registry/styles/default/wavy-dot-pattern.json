@@ -1,5 +1,8 @@
 {
   "name": "wavy-dot-pattern",
+  "dependencies": [
+    "react-anime"
+  ],
   "files": [
     {
       "name": "wavy-dot-pattern.tsx",
