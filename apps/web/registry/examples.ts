@@ -26,120 +26,10 @@ export const examples: Registry = [
       files: ['example/alert-dialog-demo.tsx'],
    },
    {
-      name: 'animated-beam-bidirectional',
-      type: 'components:example',
-      files: ['example/animated-beam-bidirectional.tsx'],
-   },
-   {
-      name: 'animated-beam-demo',
-      type: 'components:example',
-      files: ['example/animated-beam-demo.tsx'],
-   },
-   {
-      name: 'animated-beam-multiple-inputs',
-      type: 'components:example',
-      files: ['example/animated-beam-multiple-inputs.tsx'],
-   },
-   {
-      name: 'animated-beam-multiple-outputs',
-      type: 'components:example',
-      files: ['example/animated-beam-multiple-outputs.tsx'],
-   },
-   {
-      name: 'animated-beam-unidirectional',
-      type: 'components:example',
-      files: ['example/animated-beam-unidirectional.tsx'],
-   },
-   {
-      name: 'animated-feature-card-1',
-      type: 'components:example',
-      files: ['example/animated-feature-card-1.tsx'],
-   },
-   {
-      name: 'animated-feature-card-10',
-      type: 'components:example',
-      files: ['example/animated-feature-card-10.tsx'],
-   },
-   {
-      name: 'animated-feature-card-2',
-      type: 'components:example',
-      files: ['example/animated-feature-card-2.tsx'],
-   },
-   {
-      name: 'animated-feature-card-3',
-      type: 'components:example',
-      files: ['example/animated-feature-card-3.tsx'],
-   },
-   {
-      name: 'animated-feature-card-4',
-      type: 'components:example',
-      files: ['example/animated-feature-card-4.tsx'],
-   },
-   {
-      name: 'animated-feature-card-5',
-      type: 'components:example',
-      files: ['example/animated-feature-card-5.tsx'],
-   },
-   {
-      name: 'animated-feature-card-6',
-      type: 'components:example',
-      files: ['example/animated-feature-card-6.tsx'],
-   },
-   {
-      name: 'animated-feature-card-7',
-      type: 'components:example',
-      files: ['example/animated-feature-card-7.tsx'],
-   },
-   {
-      name: 'animated-feature-card-8',
-      type: 'components:example',
-      files: ['example/animated-feature-card-8.tsx'],
-   },
-   {
-      name: 'animated-feature-card-9',
-      type: 'components:example',
-      files: ['example/animated-feature-card-9.tsx'],
-   },
-   {
-      name: 'animated-gradient-text-demo',
-      type: 'components:example',
-      files: ['example/animated-gradient-text-demo.tsx'],
-   },
-   {
-      name: 'animated-grid-pattern-demo',
-      type: 'components:example',
-      files: ['example/animated-grid-pattern-demo.tsx'],
-   },
-   {
-      name: 'animated-lines-demo',
-      type: 'components:example',
-      files: ['example/animated-lines-demo.tsx'],
-   },
-   {
-      name: 'animated-list-demo',
-      type: 'components:example',
-      files: ['example/animated-list-demo.tsx'],
-   },
-   {
-      name: 'animated-shiny-text-demo',
-      type: 'components:example',
-      files: ['example/animated-shiny-text-demo.tsx'],
-   },
-   {
-      name: 'animated-subscribe-button-demo',
-      type: 'components:example',
-      files: ['example/animated-subscribe-button-demo.tsx'],
-   },
-   {
       name: 'aspect-ratio-demo',
       type: 'components:example',
       registryDependencies: ['aspect-ratio'],
       files: ['example/aspect-ratio-demo.tsx'],
-   },
-   {
-      name: 'avatar-circles-demo',
-      type: 'components:example',
-      files: ['example/avatar-circles-demo.tsx'],
    },
    {
       name: 'avatar-demo',
@@ -172,35 +62,16 @@ export const examples: Registry = [
       files: ['example/badge-secondary.tsx'],
    },
    {
-      name: 'bento-demo',
-      type: 'components:example',
-      files: ['example/bento-demo.tsx'],
-   },
-   {
-      name: 'bento-demo-vertical',
-      type: 'components:example',
-      files: ['example/bento-demo-vertical.tsx'],
-   },
-   {
-      name: 'blur-in-demo',
-      type: 'components:example',
-      files: ['example/blur-in-demo.tsx'],
-   },
-   {
-      name: 'border-beam-demo',
-      type: 'components:example',
-      files: ['example/border-beam-demo.tsx'],
-   },
-   {
-      name: 'box-reveal-demo',
-      type: 'components:example',
-      files: ['example/box-reveal-demo.tsx'],
-   },
-   {
       name: 'breadcrumb-demo',
       type: 'components:example',
       registryDependencies: ['breadcrumb'],
       files: ['example/breadcrumb-demo.tsx'],
+   },
+   {
+      name: 'breadcrumb-separator',
+      type: 'components:example',
+      registryDependencies: ['breadcrumb'],
+      files: ['example/breadcrumb-separator.tsx'],
    },
    {
       name: 'breadcrumb-dropdown',
@@ -227,58 +98,10 @@ export const examples: Registry = [
       files: ['example/breadcrumb-responsive.tsx'],
    },
    {
-      name: 'breadcrumb-separator',
-      type: 'components:example',
-      registryDependencies: ['breadcrumb'],
-      files: ['example/breadcrumb-separator.tsx'],
-   },
-   {
-      name: 'button-as-child',
-      type: 'components:example',
-      registryDependencies: ['button'],
-      files: ['example/button-as-child.tsx'],
-   },
-   {
       name: 'button-demo',
       type: 'components:example',
       registryDependencies: ['button'],
       files: ['example/button-demo.tsx'],
-   },
-   {
-      name: 'button-destructive',
-      type: 'components:example',
-      registryDependencies: ['button'],
-      files: ['example/button-destructive.tsx'],
-   },
-   {
-      name: 'button-ghost',
-      type: 'components:example',
-      registryDependencies: ['button'],
-      files: ['example/button-ghost.tsx'],
-   },
-   {
-      name: 'button-icon',
-      type: 'components:example',
-      registryDependencies: ['button'],
-      files: ['example/button-icon.tsx'],
-   },
-   {
-      name: 'button-link',
-      type: 'components:example',
-      registryDependencies: ['button'],
-      files: ['example/button-link.tsx'],
-   },
-   {
-      name: 'button-loading',
-      type: 'components:example',
-      registryDependencies: ['button'],
-      files: ['example/button-loading.tsx'],
-   },
-   {
-      name: 'button-outline',
-      type: 'components:example',
-      registryDependencies: ['button'],
-      files: ['example/button-outline.tsx'],
    },
    {
       name: 'button-secondary',
@@ -287,10 +110,57 @@ export const examples: Registry = [
       files: ['example/button-secondary.tsx'],
    },
    {
+      name: 'button-destructive',
+      type: 'components:example',
+      registryDependencies: ['button'],
+      files: ['example/button-destructive.tsx'],
+   },
+   {
+      name: 'button-outline',
+      type: 'components:example',
+      registryDependencies: ['button'],
+      files: ['example/button-outline.tsx'],
+   },
+   {
+      name: 'button-ghost',
+      type: 'components:example',
+      registryDependencies: ['button'],
+      files: ['example/button-ghost.tsx'],
+   },
+   {
+      name: 'button-link',
+      type: 'components:example',
+      registryDependencies: ['button'],
+      files: ['example/button-link.tsx'],
+   },
+   {
       name: 'button-with-icon',
       type: 'components:example',
       registryDependencies: ['button'],
       files: ['example/button-with-icon.tsx'],
+   },
+   {
+      name: 'button-loading',
+      type: 'components:example',
+      registryDependencies: ['button'],
+      files: ['example/button-loading.tsx'],
+   },
+   {
+      name: 'button-icon',
+      type: 'components:example',
+      registryDependencies: ['button'],
+      files: ['example/button-icon.tsx'],
+   },
+   {
+      name: 'button-as-child',
+      type: 'components:example',
+      registryDependencies: ['button'],
+      files: ['example/button-as-child.tsx'],
+   },
+   {
+      name: 'pulsating-button-demo',
+      type: 'components:example',
+      files: ['example/pulsating-button-demo.tsx'],
    },
    {
       name: 'calendar-demo',
@@ -317,27 +187,10 @@ export const examples: Registry = [
       files: ['example/card-with-form.tsx'],
    },
    {
-      name: 'cards',
-      type: 'components:example',
-      files: ['example/cards/cards.tsx'],
-   },
-   {
       name: 'carousel-demo',
       type: 'components:example',
       registryDependencies: ['carousel'],
       files: ['example/carousel-demo.tsx'],
-   },
-   {
-      name: 'carousel-orientation',
-      type: 'components:example',
-      registryDependencies: ['carousel'],
-      files: ['example/carousel-orientation.tsx'],
-   },
-   {
-      name: 'carousel-plugin',
-      type: 'components:example',
-      registryDependencies: ['carousel'],
-      files: ['example/carousel-plugin.tsx'],
    },
    {
       name: 'carousel-size',
@@ -350,6 +203,24 @@ export const examples: Registry = [
       type: 'components:example',
       registryDependencies: ['carousel'],
       files: ['example/carousel-spacing.tsx'],
+   },
+   {
+      name: 'carousel-orientation',
+      type: 'components:example',
+      registryDependencies: ['carousel'],
+      files: ['example/carousel-orientation.tsx'],
+   },
+   {
+      name: 'carousel-api',
+      type: 'components:example',
+      registryDependencies: ['carousel'],
+      files: ['example/carousel-api.tsx'],
+   },
+   {
+      name: 'carousel-plugin',
+      type: 'components:example',
+      registryDependencies: ['carousel'],
+      files: ['example/carousel-plugin.tsx'],
    },
    {
       name: 'checkbox-demo',
@@ -430,60 +301,10 @@ export const examples: Registry = [
       files: ['example/command-dialog.tsx'],
    },
    {
-      name: 'confetti-basic-cannon',
-      type: 'components:example',
-      files: ['example/confetti-basic-cannon.tsx'],
-   },
-   {
-      name: 'confetti-custom-shapes',
-      type: 'components:example',
-      files: ['example/confetti-custom-shapes.tsx'],
-   },
-   {
-      name: 'confetti-emoji',
-      type: 'components:example',
-      files: ['example/confetti-emoji.tsx'],
-   },
-   {
-      name: 'confetti-fireworks',
-      type: 'components:example',
-      files: ['example/confetti-fireworks.tsx'],
-   },
-   {
-      name: 'confetti-hover',
-      type: 'components:example',
-      files: ['example/confetti-hover.tsx'],
-   },
-   {
-      name: 'confetti-random-direction',
-      type: 'components:example',
-      files: ['example/confetti-random-direction.tsx'],
-   },
-   {
-      name: 'confetti-side-cannons',
-      type: 'components:example',
-      files: ['example/confetti-side-cannons.tsx'],
-   },
-   {
-      name: 'confetti-stars',
-      type: 'components:example',
-      files: ['example/confetti-stars.tsx'],
-   },
-   {
       name: 'context-menu-demo',
       type: 'components:example',
       registryDependencies: ['context-menu'],
       files: ['example/context-menu-demo.tsx'],
-   },
-   {
-      name: 'cool-mode-custom',
-      type: 'components:example',
-      files: ['example/cool-mode-custom.tsx'],
-   },
-   {
-      name: 'cool-mode-demo',
-      type: 'components:example',
-      files: ['example/cool-mode-demo.tsx'],
    },
    {
       name: 'data-table-demo',
@@ -520,31 +341,16 @@ export const examples: Registry = [
       dependencies: ['date-fns'],
    },
    {
-      name: 'dialog-close-button',
-      type: 'components:example',
-      registryDependencies: ['dialog', 'button'],
-      files: ['example/dialog-close-button.tsx'],
-   },
-   {
       name: 'dialog-demo',
       type: 'components:example',
       registryDependencies: ['dialog'],
       files: ['example/dialog-demo.tsx'],
    },
    {
-      name: 'dock-demo',
+      name: 'dialog-close-button',
       type: 'components:example',
-      files: ['example/dock-demo.tsx'],
-   },
-   {
-      name: 'dot-pattern-demo',
-      type: 'components:example',
-      files: ['example/dot-pattern-demo.tsx'],
-   },
-   {
-      name: 'dot-pattern-linear-gradient',
-      type: 'components:example',
-      files: ['example/dot-pattern-linear-gradient.tsx'],
+      registryDependencies: ['dialog', 'button'],
+      files: ['example/dialog-close-button.tsx'],
    },
    {
       name: 'drawer-demo',
@@ -559,16 +365,16 @@ export const examples: Registry = [
       files: ['example/drawer-dialog.tsx'],
    },
    {
-      name: 'dropdown-menu-checkboxes',
-      type: 'components:example',
-      registryDependencies: ['dropdown-menu', 'checkbox'],
-      files: ['example/dropdown-menu-checkboxes.tsx'],
-   },
-   {
       name: 'dropdown-menu-demo',
       type: 'components:example',
       registryDependencies: ['dropdown-menu'],
       files: ['example/dropdown-menu-demo.tsx'],
+   },
+   {
+      name: 'dropdown-menu-checkboxes',
+      type: 'components:example',
+      registryDependencies: ['dropdown-menu', 'checkbox'],
+      files: ['example/dropdown-menu-checkboxes.tsx'],
    },
    {
       name: 'dropdown-menu-radio-group',
@@ -577,60 +383,10 @@ export const examples: Registry = [
       files: ['example/dropdown-menu-radio-group.tsx'],
    },
    {
-      name: 'fade-text-demo',
-      type: 'components:example',
-      files: ['example/fade-text-demo.tsx'],
-   },
-   {
-      name: 'flip-text-demo',
-      type: 'components:example',
-      files: ['example/flip-text-demo.tsx'],
-   },
-   {
-      name: 'globe-demo',
-      type: 'components:example',
-      files: ['example/globe-demo.tsx'],
-   },
-   {
-      name: 'gradual-spacing-demo',
-      type: 'components:example',
-      files: ['example/gradual-spacing-demo.tsx'],
-   },
-   {
-      name: 'grid-pattern-dashed',
-      type: 'components:example',
-      files: ['example/grid-pattern-dashed.tsx'],
-   },
-   {
-      name: 'grid-pattern-demo',
-      type: 'components:example',
-      files: ['example/grid-pattern-demo.tsx'],
-   },
-   {
-      name: 'grid-pattern-linear-gradient',
-      type: 'components:example',
-      files: ['example/grid-pattern-linear-gradient.tsx'],
-   },
-   {
-      name: 'hero-video-demo',
-      type: 'components:example',
-      files: ['example/hero-video-demo.tsx'],
-   },
-   {
-      name: 'hero-video-youtube',
-      type: 'components:example',
-      files: ['example/hero-video-youtube.tsx'],
-   },
-   {
       name: 'hover-card-demo',
       type: 'components:example',
       registryDependencies: ['hover-card'],
       files: ['example/hover-card-demo.tsx'],
-   },
-   {
-      name: 'icon-cloud-demo',
-      type: 'components:example',
-      files: ['example/icon-cloud-demo.tsx'],
    },
    {
       name: 'input-demo',
@@ -657,28 +413,28 @@ export const examples: Registry = [
       files: ['example/input-form.tsx'],
    },
    {
-      name: 'input-otp-controlled',
+      name: 'input-with-button',
       type: 'components:example',
-      registryDependencies: ['input-otp'],
-      files: ['example/input-otp-controlled.tsx'],
+      registryDependencies: ['input', 'button'],
+      files: ['example/input-with-button.tsx'],
+   },
+   {
+      name: 'input-with-label',
+      type: 'components:example',
+      registryDependencies: ['input', 'button', 'label'],
+      files: ['example/input-with-label.tsx'],
+   },
+   {
+      name: 'input-with-text',
+      type: 'components:example',
+      registryDependencies: ['input', 'button', 'label'],
+      files: ['example/input-with-text.tsx'],
    },
    {
       name: 'input-otp-demo',
       type: 'components:example',
       registryDependencies: ['input-otp'],
       files: ['example/input-otp-demo.tsx'],
-   },
-   {
-      name: 'input-otp-disabled',
-      type: 'components:example',
-      registryDependencies: ['input-otp', 'form'],
-      files: ['example/input-otp-disabled.tsx'],
-   },
-   {
-      name: 'input-otp-form',
-      type: 'components:example',
-      registryDependencies: ['input-otp', 'form'],
-      files: ['example/input-otp-form.tsx'],
    },
    {
       name: 'input-otp-pattern',
@@ -693,13 +449,13 @@ export const examples: Registry = [
       files: ['example/input-otp-separator.tsx'],
    },
    {
-      name: 'input-phone-default',
+      name: 'input-otp-controlled',
       type: 'components:example',
-      registryDependencies: ['button', 'input', 'popover'],
-      files: ['example/input-phone-default.tsx'],
+      registryDependencies: ['input-otp'],
+      files: ['example/input-otp-controlled.tsx'],
    },
    {
-      name: 'input-phone-demo',
+      name: 'input-otp-form',
       type: 'components:example',
       registryDependencies: ['input-otp', 'form'],
       files: ['example/input-otp-form.tsx'],
