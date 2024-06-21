@@ -1,0 +1,124 @@
+---
+title: Input Phone
+description: This component provides phone number input based on the selected country.
+component: true
+links:
+  doc: https://catamphetamine.gitlab.io/react-phone-number-input
+---
+
+<ComponentPreview
+  name="input-phone-demo"
+  className="[&_input-phone]:max-w-xs"
+  styleSwitch={true}
+  button="copy"
+  dots={false}
+/>
+
+## About
+
+The `InputPhone` component is built on top of [React Phone Number Input](https://catamphetamine.gitlab.io/react-phone-number-input).
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add input-phone
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="input-phone" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { InputPhone } from "~/components/ui/input-phone"
+```
+
+```tsx
+const [value, setValue] = React.useState("")
+
+return <InputPhone value={value} onChange={setValue} />
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview
+  name="input-phone-demo"
+  className="[&_input-phone]:max-w-xs"
+  styleSwitch={true}
+  button="copy"
+  dots={false}
+/>
+
+### Setting default country
+
+<ComponentPreview
+  name="input-phone-default"
+  className="[&_input-phone]:max-w-xs"
+  styleSwitch={true}
+  button="copy"
+  dots={false}
+/>
+
+### Setting force international format
+
+<ComponentPreview
+  name="input-phone-international"
+  className="[&_input-phone]:max-w-xs"
+  styleSwitch={true}
+  button="copy"
+  dots={false}
+/>
+
+### Setting force national format
+
+<ComponentPreview
+  name="input-phone-national"
+  className="[&_input-phone]:max-w-xs"
+  styleSwitch={true}
+  button="copy"
+  dots={false}
+/>
+
+### Setting initial value format
+
+<ComponentPreview
+  name="input-phone-initial"
+  className="[&_input-phone]:max-w-xs"
+  styleSwitch={true}
+  button="copy"
+  dots={false}
+/>
+
+### Form
+
+<ComponentPreview 
+   name="input-phone-form"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+ />

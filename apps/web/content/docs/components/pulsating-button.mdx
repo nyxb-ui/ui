@@ -1,0 +1,56 @@
+---
+title: Pulsating Button
+date: 2024-06-20
+description: An animated pulsating button useful for capturing attention of users. 
+author: nyxb
+published: true
+---
+
+<ComponentPreview name="pulsating-button-demo" />
+
+
+### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add pulsating-button
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+Copy and paste the following code into your project.
+
+```text
+components/ui/pulsating-button.tsx
+```
+
+<ComponentSource name="pulsating-button" />
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Props
+
+| Prop              | Type    | Description                                               |
+|-------------------|---------|-----------------------------------------------------------|
+| text              | string  | The text displayed on the button.                         |
+| backgroundColor   | string  | The hex color for the color of the button.                |
+| pulseColor        | string  | The rbg numbers only for the color of the pulsing waves.  |
+| textColor         | string  | The color of the text displayed on the button.            |
+| animationDuration | string  | The time span of one pulse.                               |
+| buttonWidth       | string  | The width of the button.                                  |
+| buttonHeight      | string  | The height of the button.                                 |
