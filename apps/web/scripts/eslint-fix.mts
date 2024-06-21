@@ -3,11 +3,14 @@ import { exec } from 'node:child_process'
 import path from 'node:path'
 import cliProgress from 'cli-progress'
 
-const REGISTRY_PATH = path.join(process.cwd(), 'registry')
+const REGISTRY_PATHS = [
+   path.join(process.cwd(), 'public/registry'),
+   path.join(process.cwd(), '__registry__'),
+]
 
 function runEslintFix() {
    return new Promise<void>((resolve, reject) => {
-      exec(`eslint ${REGISTRY_PATH} --fix`, (error) => {
+      exec(`eslint ${REGISTRY_PATHS.join(' ')} --fix`, (error) => {
          if (error) {
             // need empty
          }
