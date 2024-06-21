@@ -1,5 +1,8 @@
 {
   "name": "confetti",
+  "dependencies": [
+    "canvas-confetti"
+  ],
   "files": [
     {
       "name": "confetti.tsx",

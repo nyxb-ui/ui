@@ -77,6 +77,13 @@
     "type": "components:ui"
   },
   {
+    "name": "pulsating-button",
+    "files": [
+      "ui/pulsating-button.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "calendar",
     "dependencies": [
       "react-day-picker",
@@ -226,6 +233,21 @@
     ],
     "files": [
       "ui/input-otp.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "input-phone",
+    "dependencies": [
+      "react-phone-number-input"
+    ],
+    "registryDependencies": [
+      "button",
+      "input",
+      "popover"
+    ],
+    "files": [
+      "ui/input-phone.tsx"
     ],
     "type": "components:ui"
   },
@@ -733,6 +755,9 @@
   },
   {
     "name": "icon-cloud",
+    "dependencies": [
+      "react-icon-cloud"
+    ],
     "files": [
       "ui/icon-cloud.tsx"
     ],
@@ -740,6 +765,9 @@
   },
   {
     "name": "wavy-dot-pattern",
+    "dependencies": [
+      "react-anime"
+    ],
     "files": [
       "ui/wavy-dot-pattern.tsx"
     ],
@@ -761,6 +789,9 @@
   },
   {
     "name": "scroll-based-velocity",
+    "dependencies": [
+      "@motionone/utils"
+    ],
     "files": [
       "ui/scroll-based-velocity.tsx"
     ],
@@ -803,6 +834,9 @@
   },
   {
     "name": "confetti",
+    "dependencies": [
+      "canvas-confetti"
+    ],
     "files": [
       "ui/confetti.tsx"
     ],

@@ -1,5 +1,8 @@
 {
   "name": "icon-cloud",
+  "dependencies": [
+    "react-icon-cloud"
+  ],
   "files": [
     {
       "name": "icon-cloud.tsx",
