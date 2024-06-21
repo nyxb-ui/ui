@@ -43,7 +43,7 @@ Add the following code to the `tsconfig.json` file to resolve paths:
     // ...
     "baseUrl": ".",
     "paths": {
-      "@/*": [
+      "~/*": [
         "./src/*"
       ]
     }
@@ -63,8 +63,8 @@ export const onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
-        "@/components": path.resolve(__dirname, "src/components"),
-        "@/lib/utils": path.resolve(__dirname, "src/lib/utils"),
+        "~/components": path.resolve(__dirname, "src/components"),
+        "~/lib/utils": path.resolve(__dirname, "src/lib/utils"),
       },
     },
   })
@@ -90,8 +90,8 @@ Which color would you like to use as base color? › Slate
 Where is your global CSS file? › › ./src/styles/globals.css
 Do you want to use CSS variables for colors? › no / yes
 Where is your tailwind.config.js located? › tailwind.config.js
-Configure the import alias for components: › @/components
-Configure the import alias for utils: › @/lib/utils
+Configure the import alias for components: › ~/components
+Configure the import alias for utils: › ~/lib/utils
 Are you using React Server Components? › no
 ```
 
@@ -106,7 +106,7 @@ npx nyxbui@latest add button
 The command above will add the `Button` component to your project. You can then import it like this:
 
 ```tsx {1,6} showLineNumbers
-import { Button } from "@/components/ui/button"
+import { Button } from "~/components/ui/button"
 
 export default function Home() {
   return (

@@ -22,12 +22,15 @@ const SelectTrigger = React.forwardRef<
          'flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-left text-sm ring-offset-background placeholder:data-[placeholder]:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1',
          className,
       )}
-      onPointerDown={e => e.preventDefault()}
+      onPointerDown={(e) => {
+         if (e.pointerType === 'touch')
+            e.preventDefault()
+      }}
       {...props}
    >
       {children}
       <SelectPrimitive.Icon asChild>
-         <ChevronDown className="h-4 w-4 opacity-50" />
+         <ChevronDown className="h-4 w-4 shrink-0 opacity-50" />
       </SelectPrimitive.Icon>
    </SelectPrimitive.Trigger>
 ))

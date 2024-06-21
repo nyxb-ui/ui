@@ -106,7 +106,7 @@ function BreadcrumbEllipsis({
       </span>
    )
 }
-BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis'
+BreadcrumbEllipsis.displayName = 'BreadcrumbEllipsis'
 
 export {
    Breadcrumb,
