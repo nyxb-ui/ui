@@ -20,6 +20,41 @@ export const ui: Registry = [
       files: ['ui/alert-dialog.tsx'],
    },
    {
+      name: 'animated-beam',
+      type: 'components:ui',
+      files: ['ui/animated-beam.tsx'],
+   },
+   {
+      name: 'animated-grid-pattern',
+      type: 'components:ui',
+      files: ['ui/animated-grid-pattern.tsx'],
+   },
+   {
+      name: 'animated-lines',
+      type: 'components:ui',
+      files: ['ui/animated-lines.tsx'],
+   },
+   {
+      name: 'animated-list',
+      type: 'components:ui',
+      files: ['ui/animated-list.tsx'],
+   },
+   {
+      name: 'animated-shiny-text',
+      type: 'components:ui',
+      files: ['ui/animated-shiny-text.tsx'],
+   },
+   {
+      name: 'animated-subscribe-button',
+      type: 'components:ui',
+      files: ['ui/animated-subscribe-button.tsx'],
+   },
+   {
+      name: 'animated-gradient-text',
+      type: 'components:ui',
+      files: ['ui/animated-gradient-text.tsx'],
+   },
+   {
       name: 'aspect-ratio',
       type: 'components:ui',
       dependencies: ['@radix-ui/react-aspect-ratio'],
@@ -32,9 +67,36 @@ export const ui: Registry = [
       files: ['ui/avatar.tsx'],
    },
    {
+      name: 'avatar-circles',
+      type: 'components:ui',
+      files: ['ui/avatar-circles.tsx'],
+   },
+   {
       name: 'badge',
       type: 'components:ui',
       files: ['ui/badge.tsx'],
+   },
+   {
+      name: 'bento-grid',
+      type: 'components:ui',
+      dependencies: ['@radix-ui/react-icons'],
+      registryDependencies: ['button'],
+      files: ['ui/bento-grid.tsx'],
+   },
+   {
+      name: 'blur-in',
+      type: 'components:ui',
+      files: ['ui/blur-in.tsx'],
+   },
+   {
+      name: 'border-beam',
+      type: 'components:ui',
+      files: ['ui/border-beam.tsx'],
+   },
+   {
+      name: 'box-reveal',
+      type: 'components:ui',
+      files: ['ui/box-reveal.tsx'],
    },
    {
       name: 'breadcrumb',
@@ -47,11 +109,6 @@ export const ui: Registry = [
       type: 'components:ui',
       dependencies: ['@radix-ui/react-slot'],
       files: ['ui/button.tsx'],
-   },
-   {
-      name: 'pulsating-button',
-      type: 'components:ui',
-      files: ['ui/pulsating-button.tsx'],
    },
    {
       name: 'calendar',
@@ -79,6 +136,11 @@ export const ui: Registry = [
       files: ['ui/checkbox.tsx'],
    },
    {
+      name: 'client-tweet-card',
+      type: 'components:ui',
+      files: ['ui/client-tweet-card.tsx'],
+   },
+   {
       name: 'collapsible',
       type: 'components:ui',
       dependencies: ['@radix-ui/react-collapsible'],
@@ -92,16 +154,37 @@ export const ui: Registry = [
       files: ['ui/command.tsx'],
    },
    {
+      name: 'confetti',
+      type: 'components:ui',
+      dependencies: ['canvas-confetti'],
+      files: ['ui/confetti.tsx'],
+   },
+   {
       name: 'context-menu',
       type: 'components:ui',
       dependencies: ['@radix-ui/react-context-menu'],
       files: ['ui/context-menu.tsx'],
    },
    {
+      name: 'cool-mode',
+      type: 'components:ui',
+      files: ['ui/cool-mode.tsx'],
+   },
+   {
       name: 'dialog',
       type: 'components:ui',
       dependencies: ['@radix-ui/react-dialog'],
       files: ['ui/dialog.tsx'],
+   },
+   {
+      name: 'dock',
+      type: 'components:ui',
+      files: ['ui/dock.tsx'],
+   },
+   {
+      name: 'dot-pattern',
+      type: 'components:ui',
+      files: ['ui/dot-pattern.tsx'],
    },
    {
       name: 'drawer',
@@ -114,6 +197,16 @@ export const ui: Registry = [
       type: 'components:ui',
       dependencies: ['@radix-ui/react-dropdown-menu'],
       files: ['ui/dropdown-menu.tsx'],
+   },
+   {
+      name: 'fade-text',
+      type: 'components:ui',
+      files: ['ui/fade-text.tsx'],
+   },
+   {
+      name: 'flip-text',
+      type: 'components:ui',
+      files: ['ui/flip-text.tsx'],
    },
    {
       name: 'form',
@@ -129,10 +222,42 @@ export const ui: Registry = [
       files: ['ui/form.tsx'],
    },
    {
+      name: 'globe',
+      type: 'components:ui',
+      dependencies: ['react-spring'],
+      files: ['ui/globe.tsx'],
+   },
+   {
+      name: 'gradual-spacing',
+      type: 'components:ui',
+      files: ['ui/gradual-spacing.tsx'],
+   },
+   {
+      name: 'grid-pattern',
+      type: 'components:ui',
+      files: ['ui/grid-pattern.tsx'],
+   },
+   {
+      name: 'gauge-circle',
+      type: 'components:ui',
+      files: ['ui/gauge-circle.tsx'],
+   },
+   {
+      name: 'hero-video',
+      type: 'components:ui',
+      files: ['ui/hero-video.tsx'],
+   },
+   {
       name: 'hover-card',
       type: 'components:ui',
       dependencies: ['@radix-ui/react-hover-card'],
       files: ['ui/hover-card.tsx'],
+   },
+   {
+      name: 'icon-cloud',
+      type: 'components:ui',
+      dependencies: ['react-icon-cloud'],
+      files: ['ui/icon-cloud.tsx'],
    },
    {
       name: 'input',
@@ -159,10 +284,35 @@ export const ui: Registry = [
       files: ['ui/label.tsx'],
    },
    {
+      name: 'letter-pullup',
+      type: 'components:ui',
+      files: ['ui/letter-pullup.tsx'],
+   },
+   {
+      name: 'linear-gradient',
+      type: 'components:ui',
+      files: ['ui/linear-gradient.tsx'],
+   },
+   {
+      name: 'magic-card',
+      type: 'components:ui',
+      files: ['ui/magic-card.tsx'],
+   },
+   {
+      name: 'marquee',
+      type: 'components:ui',
+      files: ['ui/marquee.tsx'],
+   },
+   {
       name: 'menubar',
       type: 'components:ui',
       dependencies: ['@radix-ui/react-menubar'],
       files: ['ui/menubar.tsx'],
+   },
+   {
+      name: 'meteors',
+      type: 'components:ui',
+      files: ['ui/meteors.tsx'],
    },
    {
       name: 'navigation-menu',
@@ -171,10 +321,30 @@ export const ui: Registry = [
       files: ['ui/navigation-menu.tsx'],
    },
    {
+      name: 'neon-gradient-card',
+      type: 'components:ui',
+      files: ['ui/neon-gradient-card.tsx'],
+   },
+   {
+      name: 'number-ticker',
+      type: 'components:ui',
+      files: ['ui/number-ticker.tsx'],
+   },
+   {
+      name: 'orbiting-circles',
+      type: 'components:ui',
+      files: ['ui/orbiting-circles.tsx'],
+   },
+   {
       name: 'pagination',
       type: 'components:ui',
       registryDependencies: ['button'],
       files: ['ui/pagination.tsx'],
+   },
+   {
+      name: 'particles',
+      type: 'components:ui',
+      files: ['ui/particles.tsx'],
    },
    {
       name: 'popover',
@@ -189,10 +359,26 @@ export const ui: Registry = [
       files: ['ui/progress.tsx'],
    },
    {
+      name: 'pulsating-button',
+      type: 'components:ui',
+      files: ['ui/pulsating-button.tsx'],
+   },
+   {
       name: 'radio-group',
       type: 'components:ui',
       dependencies: ['@radix-ui/react-radio-group'],
       files: ['ui/radio-group.tsx'],
+   },
+   {
+      name: 'radial-gradient',
+      type: 'components:ui',
+      files: ['ui/radial-gradient.tsx'],
+   },
+   {
+      name: 'ratings',
+      type: 'components:ui',
+      dependencies: [],
+      files: ['ui/ratings.tsx'],
    },
    {
       name: 'resizable',
@@ -201,16 +387,37 @@ export const ui: Registry = [
       files: ['ui/resizable.tsx'],
    },
    {
+      name: 'retro-grid',
+      type: 'components:ui',
+      files: ['ui/retro-grid.tsx'],
+   },
+   {
+      name: 'ripple',
+      type: 'components:ui',
+      files: ['ui/ripple.tsx'],
+   },
+   {
       name: 'scroll-area',
       type: 'components:ui',
       dependencies: ['@radix-ui/react-scroll-area'],
       files: ['ui/scroll-area.tsx'],
    },
    {
+      name: 'scroll-based-velocity',
+      dependencies: ['@motionone/utils'],
+      type: 'components:ui',
+      files: ['ui/scroll-based-velocity.tsx'],
+   },
+   {
       name: 'select',
       type: 'components:ui',
       dependencies: ['@radix-ui/react-select'],
       files: ['ui/select.tsx'],
+   },
+   {
+      name: 'separate-away',
+      type: 'components:ui',
+      files: ['ui/separate-away.tsx'],
    },
    {
       name: 'separator',
@@ -223,6 +430,21 @@ export const ui: Registry = [
       type: 'components:ui',
       dependencies: ['@radix-ui/react-dialog'],
       files: ['ui/sheet.tsx'],
+   },
+   {
+      name: 'shimmer-button',
+      type: 'components:ui',
+      files: ['ui/shimmer-button.tsx'],
+   },
+   {
+      name: 'shine-border',
+      type: 'components:ui',
+      files: ['ui/shine-border.tsx'],
+   },
+   {
+      name: 'shiny-button',
+      type: 'components:ui',
+      files: ['ui/shiny-button.tsx'],
    },
    {
       name: 'skeleton',
@@ -240,6 +462,11 @@ export const ui: Registry = [
       type: 'components:ui',
       dependencies: ['sonner', 'next-themes'],
       files: ['ui/sonner.tsx'],
+   },
+   {
+      name: 'sparkles-text',
+      type: 'components:ui',
+      files: ['ui/sparkles-text.tsx'],
    },
    {
       name: 'switch',
@@ -262,6 +489,16 @@ export const ui: Registry = [
       name: 'textarea',
       type: 'components:ui',
       files: ['ui/textarea.tsx'],
+   },
+   {
+      name: 'text-reveal',
+      type: 'components:ui',
+      files: ['ui/text-reveal.tsx'],
+   },
+   {
+      name: 'timeline',
+      type: 'components:ui',
+      files: ['ui/timeline.tsx'],
    },
    {
       name: 'toast',
@@ -288,205 +525,15 @@ export const ui: Registry = [
       dependencies: ['@radix-ui/react-tooltip'],
       files: ['ui/tooltip.tsx'],
    },
-   /* new */
-   {
-      name: 'magic-card',
-      type: 'components:ui',
-      files: ['ui/magic-card.tsx'],
-   },
-   {
-      name: 'neon-gradient-card',
-      type: 'components:ui',
-      files: ['ui/neon-gradient-card.tsx'],
-   },
-   {
-      name: 'linear-gradient',
-      type: 'components:ui',
-      files: ['ui/linear-gradient.tsx'],
-   },
-   {
-      name: 'radial-gradient',
-      type: 'components:ui',
-      files: ['ui/radial-gradient.tsx'],
-   },
-   {
-      name: 'meteors',
-      type: 'components:ui',
-      files: ['ui/meteors.tsx'],
-   },
-   {
-      name: 'grid-pattern',
-      type: 'components:ui',
-      files: ['ui/grid-pattern.tsx'],
-   },
-   {
-      name: 'dot-pattern',
-      type: 'components:ui',
-      files: ['ui/dot-pattern.tsx'],
-   },
-   {
-      name: 'marquee',
-      type: 'components:ui',
-      files: ['ui/marquee.tsx'],
-   },
-   {
-      name: 'globe',
-      type: 'components:ui',
-      dependencies: ['react-spring'],
-      files: ['ui/globe.tsx'],
-   },
-   {
-      name: 'shimmer-button',
-      type: 'components:ui',
-      files: ['ui/shimmer-button.tsx'],
-   },
-   {
-      name: 'hero-video',
-      type: 'components:ui',
-      files: ['ui/hero-video.tsx'],
-   },
-   {
-      name: 'tweet-card',
-      type: 'components:ui',
-      files: ['ui/tweet-card.tsx'],
-   },
-   {
-      name: 'client-tweet-card',
-      type: 'components:ui',
-      files: ['ui/client-tweet-card.tsx'],
-   },
-   {
-      name: 'bento-grid',
-      type: 'components:ui',
-      dependencies: ['@radix-ui/react-icons'],
-      registryDependencies: ['button'],
-      files: ['ui/bento-grid.tsx'],
-   },
-   {
-      name: 'particles',
-      type: 'components:ui',
-      files: ['ui/particles.tsx'],
-   },
-   {
-      name: 'number-ticker',
-      type: 'components:ui',
-      files: ['ui/number-ticker.tsx'],
-   },
-   {
-      name: 'ripple',
-      type: 'components:ui',
-      files: ['ui/ripple.tsx'],
-   },
-   {
-      name: 'retro-grid',
-      type: 'components:ui',
-      files: ['ui/retro-grid.tsx'],
-   },
-   {
-      name: 'animated-list',
-      type: 'components:ui',
-      files: ['ui/animated-list.tsx'],
-   },
-   {
-      name: 'animated-lines',
-      type: 'components:ui',
-      files: ['ui/animated-lines.tsx'],
-   },
-   {
-      name: 'animated-shiny-text',
-      type: 'components:ui',
-      files: ['ui/animated-shiny-text.tsx'],
-   },
-   {
-      name: 'animated-grid-pattern',
-      type: 'components:ui',
-      files: ['ui/animated-grid-pattern.tsx'],
-   },
-   {
-      name: 'border-beam',
-      type: 'components:ui',
-      files: ['ui/border-beam.tsx'],
-   },
-   {
-      name: 'animated-beam',
-      type: 'components:ui',
-      files: ['ui/animated-beam.tsx'],
-   },
-   {
-      name: 'text-reveal',
-      type: 'components:ui',
-      files: ['ui/text-reveal.tsx'],
-   },
-   {
-      name: 'animated-gradient-text',
-      type: 'components:ui',
-      files: ['ui/animated-gradient-text.tsx'],
-   },
-   {
-      name: 'orbiting-circles',
-      type: 'components:ui',
-      files: ['ui/orbiting-circles.tsx'],
-   },
-   {
-      name: 'dock',
-      type: 'components:ui',
-      files: ['ui/dock.tsx'],
-   },
-   {
-      name: 'word-rotate',
-      type: 'components:ui',
-      files: ['ui/word-rotate.tsx'],
-   },
-   {
-      name: 'avatar-circles',
-      type: 'components:ui',
-      files: ['ui/avatar-circles.tsx'],
-   },
-   {
-      name: 'word-pull-up',
-      type: 'components:ui',
-      files: ['ui/word-pull-up.tsx'],
-   },
    {
       name: 'typing-animation',
       type: 'components:ui',
       files: ['ui/typing-animation.tsx'],
    },
    {
-      name: 'wavy-text',
+      name: 'tweet-card',
       type: 'components:ui',
-      files: ['ui/wavy-text.tsx'],
-   },
-   {
-      name: 'blur-in',
-      type: 'components:ui',
-      files: ['ui/blur-in.tsx'],
-   },
-   {
-      name: 'separate-away',
-      type: 'components:ui',
-      files: ['ui/separate-away.tsx'],
-   },
-   {
-      name: 'letter-pullup',
-      type: 'components:ui',
-      files: ['ui/letter-pullup.tsx'],
-   },
-   {
-      name: 'sparkles-text',
-      type: 'components:ui',
-      files: ['ui/sparkles-text.tsx'],
-   },
-   {
-      name: 'flip-text',
-      type: 'components:ui',
-      files: ['ui/flip-text.tsx'],
-   },
-   {
-      name: 'icon-cloud',
-      type: 'components:ui',
-      dependencies: ['react-icon-cloud'],
-      files: ['ui/icon-cloud.tsx'],
+      files: ['ui/tweet-card.tsx'],
    },
    {
       name: 'wavy-dot-pattern',
@@ -495,9 +542,9 @@ export const ui: Registry = [
       files: ['ui/wavy-dot-pattern.tsx'],
    },
    {
-      name: 'gradual-spacing',
+      name: 'wavy-text',
       type: 'components:ui',
-      files: ['ui/gradual-spacing.tsx'],
+      files: ['ui/wavy-text.tsx'],
    },
    {
       name: 'word-fade-in',
@@ -505,56 +552,13 @@ export const ui: Registry = [
       files: ['ui/word-fade-in.tsx'],
    },
    {
-      name: 'scroll-based-velocity',
-      dependencies: ['@motionone/utils'],
+      name: 'word-pull-up',
       type: 'components:ui',
-      files: ['ui/scroll-based-velocity.tsx'],
+      files: ['ui/word-pull-up.tsx'],
    },
    {
-      name: 'fade-text',
+      name: 'word-rotate',
       type: 'components:ui',
-      files: ['ui/fade-text.tsx'],
-   },
-   {
-      name: 'shiny-button',
-      type: 'components:ui',
-      files: ['ui/shiny-button.tsx'],
-   },
-   {
-      name: 'box-reveal',
-      type: 'components:ui',
-      files: ['ui/box-reveal.tsx'],
-   },
-   {
-      name: 'shine-border',
-      type: 'components:ui',
-      files: ['ui/shine-border.tsx'],
-   },
-   {
-      name: 'gauge-circle',
-      type: 'components:ui',
-      files: ['ui/gauge-circle.tsx'],
-   },
-   {
-      name: 'confetti',
-      type: 'components:ui',
-      dependencies: ['canvas-confetti'],
-      files: ['ui/confetti.tsx'],
-   },
-   {
-      name: 'animated-subscribe-button',
-      type: 'components:ui',
-      files: ['ui/animated-subscribe-button.tsx'],
-   },
-   {
-      name: 'cool-mode',
-      type: 'components:ui',
-      files: ['ui/cool-mode.tsx'],
-   },
-   {
-      name: 'ratings',
-      type: 'components:ui',
-      dependencies: [],
-      files: ['ui/ratings.tsx'],
+      files: ['ui/word-rotate.tsx'],
    },
 ]

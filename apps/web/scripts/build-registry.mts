@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-// @sts-nocheck
+// @ts-nocheck
 import { existsSync, promises as fs, readFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import path, { basename } from 'node:path'
@@ -26,7 +26,7 @@ async function buildRegistry(registry: Registry) {
    })
 
    async function createTempSourceFile(filename: string) {
-      const dir = await fs.mkdtemp(path.join(tmpdir(), 'shadcn-'))
+      const dir = await fs.mkdtemp(path.join(tmpdir(), 'nyxb-'))
       return path.join(dir, filename)
    }
 
@@ -630,7 +630,7 @@ try {
    await buildStyles(result.data)
    await buildThemes()
 
-   console.log('✅ Done!')
+   console.log('✔︎ Registry built finished! Start running eslint . --fix two times!')
 }
 catch (error) {
    console.error(error)
