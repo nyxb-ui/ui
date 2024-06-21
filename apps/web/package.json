@@ -7,7 +7,7 @@
     "start": "next start",
     "build": "next build",
     "build:env": "node ./scripts/env.mjs",
-    "build:registry": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-registry.mts && eslint . --fix && eslint . --fix",
+    "build:registry": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-registry.mts && tsx ./scripts/eslint-fix.mts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },

@@ -346,6 +346,12 @@ export const docsConfig: DocsConfig = {
                items: [],
             },
             {
+               title: 'Timeline',
+               href: '/docs/components/timeline',
+               items: [],
+               label: 'New',
+            },
+            {
                title: 'Toggle',
                href: '/docs/components/toggle',
                items: [],
