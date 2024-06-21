@@ -30,6 +30,55 @@
     "type": "components:ui"
   },
   {
+    "name": "animated-beam",
+    "files": [
+      "ui/animated-beam.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "animated-grid-pattern",
+    "files": [
+      "ui/animated-grid-pattern.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "animated-lines",
+    "files": [
+      "ui/animated-lines.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "animated-list",
+    "files": [
+      "ui/animated-list.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "animated-shiny-text",
+    "files": [
+      "ui/animated-shiny-text.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "animated-subscribe-button",
+    "files": [
+      "ui/animated-subscribe-button.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "animated-gradient-text",
+    "files": [
+      "ui/animated-gradient-text.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "aspect-ratio",
     "dependencies": [
       "@radix-ui/react-aspect-ratio"
@@ -50,9 +99,50 @@
     "type": "components:ui"
   },
   {
+    "name": "avatar-circles",
+    "files": [
+      "ui/avatar-circles.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "badge",
     "files": [
       "ui/badge.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "bento-grid",
+    "dependencies": [
+      "@radix-ui/react-icons"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      "ui/bento-grid.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "blur-in",
+    "files": [
+      "ui/blur-in.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "border-beam",
+    "files": [
+      "ui/border-beam.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "box-reveal",
+    "files": [
+      "ui/box-reveal.tsx"
     ],
     "type": "components:ui"
   },
@@ -73,13 +163,6 @@
     ],
     "files": [
       "ui/button.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "pulsating-button",
-    "files": [
-      "ui/pulsating-button.tsx"
     ],
     "type": "components:ui"
   },
@@ -128,6 +211,13 @@
     "type": "components:ui"
   },
   {
+    "name": "client-tweet-card",
+    "files": [
+      "ui/client-tweet-card.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "collapsible",
     "dependencies": [
       "@radix-ui/react-collapsible"
@@ -151,6 +241,16 @@
     "type": "components:ui"
   },
   {
+    "name": "confetti",
+    "dependencies": [
+      "canvas-confetti"
+    ],
+    "files": [
+      "ui/confetti.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "context-menu",
     "dependencies": [
       "@radix-ui/react-context-menu"
@@ -161,12 +261,33 @@
     "type": "components:ui"
   },
   {
+    "name": "cool-mode",
+    "files": [
+      "ui/cool-mode.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "dialog",
     "dependencies": [
       "@radix-ui/react-dialog"
     ],
     "files": [
       "ui/dialog.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "dock",
+    "files": [
+      "ui/dock.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "dot-pattern",
+    "files": [
+      "ui/dot-pattern.tsx"
     ],
     "type": "components:ui"
   },
@@ -192,6 +313,20 @@
     "type": "components:ui"
   },
   {
+    "name": "fade-text",
+    "files": [
+      "ui/fade-text.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "flip-text",
+    "files": [
+      "ui/flip-text.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "form",
     "dependencies": [
       "@radix-ui/react-label",
@@ -210,12 +345,60 @@
     "type": "components:ui"
   },
   {
+    "name": "globe",
+    "dependencies": [
+      "react-spring"
+    ],
+    "files": [
+      "ui/globe.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "gradual-spacing",
+    "files": [
+      "ui/gradual-spacing.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "grid-pattern",
+    "files": [
+      "ui/grid-pattern.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "gauge-circle",
+    "files": [
+      "ui/gauge-circle.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "hero-video",
+    "files": [
+      "ui/hero-video.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "hover-card",
     "dependencies": [
       "@radix-ui/react-hover-card"
     ],
     "files": [
       "ui/hover-card.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "icon-cloud",
+    "dependencies": [
+      "react-icon-cloud"
+    ],
+    "files": [
+      "ui/icon-cloud.tsx"
     ],
     "type": "components:ui"
   },
@@ -262,12 +445,47 @@
     "type": "components:ui"
   },
   {
+    "name": "letter-pullup",
+    "files": [
+      "ui/letter-pullup.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "linear-gradient",
+    "files": [
+      "ui/linear-gradient.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "magic-card",
+    "files": [
+      "ui/magic-card.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "marquee",
+    "files": [
+      "ui/marquee.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "menubar",
     "dependencies": [
       "@radix-ui/react-menubar"
     ],
     "files": [
       "ui/menubar.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "meteors",
+    "files": [
+      "ui/meteors.tsx"
     ],
     "type": "components:ui"
   },
@@ -282,12 +500,40 @@
     "type": "components:ui"
   },
   {
+    "name": "neon-gradient-card",
+    "files": [
+      "ui/neon-gradient-card.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "number-ticker",
+    "files": [
+      "ui/number-ticker.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "orbiting-circles",
+    "files": [
+      "ui/orbiting-circles.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "pagination",
     "registryDependencies": [
       "button"
     ],
     "files": [
       "ui/pagination.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "particles",
+    "files": [
+      "ui/particles.tsx"
     ],
     "type": "components:ui"
   },
@@ -312,12 +558,34 @@
     "type": "components:ui"
   },
   {
+    "name": "pulsating-button",
+    "files": [
+      "ui/pulsating-button.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "radio-group",
     "dependencies": [
       "@radix-ui/react-radio-group"
     ],
     "files": [
       "ui/radio-group.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "radial-gradient",
+    "files": [
+      "ui/radial-gradient.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "ratings",
+    "dependencies": [],
+    "files": [
+      "ui/ratings.tsx"
     ],
     "type": "components:ui"
   },
@@ -332,6 +600,20 @@
     "type": "components:ui"
   },
   {
+    "name": "retro-grid",
+    "files": [
+      "ui/retro-grid.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "ripple",
+    "files": [
+      "ui/ripple.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "scroll-area",
     "dependencies": [
       "@radix-ui/react-scroll-area"
@@ -342,12 +624,29 @@
     "type": "components:ui"
   },
   {
+    "name": "scroll-based-velocity",
+    "dependencies": [
+      "@motionone/utils"
+    ],
+    "files": [
+      "ui/scroll-based-velocity.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "select",
     "dependencies": [
       "@radix-ui/react-select"
     ],
     "files": [
       "ui/select.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "separate-away",
+    "files": [
+      "ui/separate-away.tsx"
     ],
     "type": "components:ui"
   },
@@ -368,6 +667,27 @@
     ],
     "files": [
       "ui/sheet.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "shimmer-button",
+    "files": [
+      "ui/shimmer-button.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "shine-border",
+    "files": [
+      "ui/shine-border.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "shiny-button",
+    "files": [
+      "ui/shiny-button.tsx"
     ],
     "type": "components:ui"
   },
@@ -396,6 +716,13 @@
     ],
     "files": [
       "ui/sonner.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "sparkles-text",
+    "files": [
+      "ui/sparkles-text.tsx"
     ],
     "type": "components:ui"
   },
@@ -430,6 +757,20 @@
     "name": "textarea",
     "files": [
       "ui/textarea.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "text-reveal",
+    "files": [
+      "ui/text-reveal.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "timeline",
+    "files": [
+      "ui/timeline.tsx"
     ],
     "type": "components:ui"
   },
@@ -479,232 +820,6 @@
     "type": "components:ui"
   },
   {
-    "name": "magic-card",
-    "files": [
-      "ui/magic-card.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "neon-gradient-card",
-    "files": [
-      "ui/neon-gradient-card.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "linear-gradient",
-    "files": [
-      "ui/linear-gradient.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "radial-gradient",
-    "files": [
-      "ui/radial-gradient.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "meteors",
-    "files": [
-      "ui/meteors.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "grid-pattern",
-    "files": [
-      "ui/grid-pattern.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "dot-pattern",
-    "files": [
-      "ui/dot-pattern.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "marquee",
-    "files": [
-      "ui/marquee.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "globe",
-    "dependencies": [
-      "react-spring"
-    ],
-    "files": [
-      "ui/globe.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "shimmer-button",
-    "files": [
-      "ui/shimmer-button.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "hero-video",
-    "files": [
-      "ui/hero-video.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "tweet-card",
-    "files": [
-      "ui/tweet-card.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "client-tweet-card",
-    "files": [
-      "ui/client-tweet-card.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "bento-grid",
-    "dependencies": [
-      "@radix-ui/react-icons"
-    ],
-    "registryDependencies": [
-      "button"
-    ],
-    "files": [
-      "ui/bento-grid.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "particles",
-    "files": [
-      "ui/particles.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "number-ticker",
-    "files": [
-      "ui/number-ticker.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "ripple",
-    "files": [
-      "ui/ripple.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "retro-grid",
-    "files": [
-      "ui/retro-grid.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "animated-list",
-    "files": [
-      "ui/animated-list.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "animated-lines",
-    "files": [
-      "ui/animated-lines.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "animated-shiny-text",
-    "files": [
-      "ui/animated-shiny-text.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "animated-grid-pattern",
-    "files": [
-      "ui/animated-grid-pattern.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "border-beam",
-    "files": [
-      "ui/border-beam.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "animated-beam",
-    "files": [
-      "ui/animated-beam.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "text-reveal",
-    "files": [
-      "ui/text-reveal.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "animated-gradient-text",
-    "files": [
-      "ui/animated-gradient-text.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "orbiting-circles",
-    "files": [
-      "ui/orbiting-circles.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "dock",
-    "files": [
-      "ui/dock.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "word-rotate",
-    "files": [
-      "ui/word-rotate.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "avatar-circles",
-    "files": [
-      "ui/avatar-circles.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "word-pull-up",
-    "files": [
-      "ui/word-pull-up.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
     "name": "typing-animation",
     "files": [
       "ui/typing-animation.tsx"
@@ -712,54 +827,9 @@
     "type": "components:ui"
   },
   {
-    "name": "wavy-text",
+    "name": "tweet-card",
     "files": [
-      "ui/wavy-text.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "blur-in",
-    "files": [
-      "ui/blur-in.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "separate-away",
-    "files": [
-      "ui/separate-away.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "letter-pullup",
-    "files": [
-      "ui/letter-pullup.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "sparkles-text",
-    "files": [
-      "ui/sparkles-text.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "flip-text",
-    "files": [
-      "ui/flip-text.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "icon-cloud",
-    "dependencies": [
-      "react-icon-cloud"
-    ],
-    "files": [
-      "ui/icon-cloud.tsx"
+      "ui/tweet-card.tsx"
     ],
     "type": "components:ui"
   },
@@ -774,9 +844,9 @@
     "type": "components:ui"
   },
   {
-    "name": "gradual-spacing",
+    "name": "wavy-text",
     "files": [
-      "ui/gradual-spacing.tsx"
+      "ui/wavy-text.tsx"
     ],
     "type": "components:ui"
   },
@@ -788,79 +858,16 @@
     "type": "components:ui"
   },
   {
-    "name": "scroll-based-velocity",
-    "dependencies": [
-      "@motionone/utils"
-    ],
+    "name": "word-pull-up",
     "files": [
-      "ui/scroll-based-velocity.tsx"
+      "ui/word-pull-up.tsx"
     ],
     "type": "components:ui"
   },
   {
-    "name": "fade-text",
+    "name": "word-rotate",
     "files": [
-      "ui/fade-text.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "shiny-button",
-    "files": [
-      "ui/shiny-button.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "box-reveal",
-    "files": [
-      "ui/box-reveal.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "shine-border",
-    "files": [
-      "ui/shine-border.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "gauge-circle",
-    "files": [
-      "ui/gauge-circle.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "confetti",
-    "dependencies": [
-      "canvas-confetti"
-    ],
-    "files": [
-      "ui/confetti.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "animated-subscribe-button",
-    "files": [
-      "ui/animated-subscribe-button.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "cool-mode",
-    "files": [
-      "ui/cool-mode.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
-    "name": "ratings",
-    "dependencies": [],
-    "files": [
-      "ui/ratings.tsx"
+      "ui/word-rotate.tsx"
     ],
     "type": "components:ui"
   }
