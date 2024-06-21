@@ -1,5 +1,8 @@
 {
   "name": "scroll-based-velocity",
+  "dependencies": [
+    "@motionone/utils"
+  ],
   "files": [
     {
       "name": "scroll-based-velocity.tsx",
