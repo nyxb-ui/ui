@@ -275,12 +275,6 @@ export const docsConfig: DocsConfig = {
                items: [],
             },
             {
-               title: 'Ratings',
-               href: '/docs/components/ratings',
-               items: [],
-               label: 'New',
-            },
-            {
                title: 'Resizable',
                href: '/docs/components/resizable',
                items: [],
