@@ -49,6 +49,11 @@ export const ui: Registry = [
       files: ['ui/button.tsx'],
    },
    {
+      name: 'pulsating-button',
+      type: 'components:ui',
+      files: ['ui/pulsating-button.tsx'],
+   },
+   {
       name: 'calendar',
       type: 'components:ui',
       dependencies: ['react-day-picker', 'date-fns'],
@@ -139,6 +144,13 @@ export const ui: Registry = [
       type: 'components:ui',
       dependencies: ['input-otp'],
       files: ['ui/input-otp.tsx'],
+   },
+   {
+      name: 'input-phone',
+      type: 'components:ui',
+      dependencies: ['react-phone-number-input'],
+      registryDependencies: ['button', 'input', 'popover'],
+      files: ['ui/input-phone.tsx'],
    },
    {
       name: 'label',
