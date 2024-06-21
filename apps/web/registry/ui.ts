@@ -551,4 +551,10 @@ export const ui: Registry = [
       type: 'components:ui',
       files: ['ui/cool-mode.tsx'],
    },
+   {
+      name: 'ratings',
+      type: 'components:ui',
+      dependencies: [],
+      files: ['ui/ratings.tsx'],
+   },
 ]

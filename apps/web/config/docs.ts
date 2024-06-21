@@ -113,7 +113,6 @@ export const docsConfig: DocsConfig = {
                title: 'Breadcrumb',
                href: '/docs/components/breadcrumb',
                items: [],
-               // label: 'New'
             },
             {
                title: 'Calendar',
@@ -216,13 +215,12 @@ export const docsConfig: DocsConfig = {
                title: 'Input OTP',
                href: '/docs/components/input-otp',
                items: [],
-               // label: 'New'
             },
             {
                title: 'Input Phone',
                href: '/docs/components/input-phone',
                items: [],
-               // label: 'New'
+               label: 'New',
             },
             {
                title: 'Interactive Icon Cloud',
@@ -275,6 +273,12 @@ export const docsConfig: DocsConfig = {
                title: 'Radio Group',
                href: '/docs/components/radio-group',
                items: [],
+            },
+            {
+               title: 'Ratings',
+               href: '/docs/components/ratings',
+               items: [],
+               label: 'New',
             },
             {
                title: 'Resizable',
@@ -407,13 +411,11 @@ export const docsConfig: DocsConfig = {
                title: 'Confetti',
                href: `/docs/components/confetti`,
                items: [],
-               // label: 'New',
             },
             {
                title: 'Particles',
                href: `/docs/components/particles`,
                items: [],
-               // label: 'New',
             },
          ],
       },
@@ -524,13 +526,11 @@ export const docsConfig: DocsConfig = {
                title: 'Sparkles Text',
                href: `/docs/components/sparkles-text`,
                items: [],
-               // label: 'New',
             },
             {
                title: 'Cool Mode',
                href: `/docs/components/cool-mode`,
                items: [],
-               // label: 'New',
             },
          ],
       },
@@ -557,13 +557,12 @@ export const docsConfig: DocsConfig = {
                title: 'Animated Subscribe Button',
                href: `/docs/components/animated-subscribe-button`,
                items: [],
-               // label: 'New',
             },
             {
                title: 'Pulsating Button',
                href: `/docs/components/pulsating-button`,
                items: [],
-               // label: 'New',
+               label: 'New',
             },
          ],
       },
@@ -610,7 +609,6 @@ export const docsConfig: DocsConfig = {
                title: 'Wavy Dot Pattern',
                href: `/docs/components/wavy-dot-pattern`,
                items: [],
-               // label: 'New',
             },
          ],
       },

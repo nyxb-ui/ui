@@ -1314,4 +1314,16 @@ export const examples: Registry = [
       type: 'components:example',
       files: ['example/cool-mode-custom.tsx'],
    },
+   {
+      name: 'ratings-demo',
+      type: 'components:example',
+      registryDependencies: ['ratings'],
+      files: ['example/ratings-demo.tsx'],
+   },
+   {
+      name: 'ratings-variants',
+      type: 'components:example',
+      registryDependencies: ['ratings'],
+      files: ['example/ratings-variants.tsx'],
+   },
 ]
