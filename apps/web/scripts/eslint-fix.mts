@@ -1,0 +1,42 @@
+/* eslint-disable no-console */
+import { exec } from 'node:child_process'
+import path from 'node:path'
+import cliProgress from 'cli-progress'
+
+const REGISTRY_PATH = path.join(process.cwd(), 'registry')
+
+function runEslintFix() {
+   return new Promise<void>((resolve, reject) => {
+      exec(`eslint ${REGISTRY_PATH} --fix`, (error) => {
+         if (error) {
+            // need empty
+         }
+         else {
+            // need empty
+         }
+         resolve()
+      })
+   })
+}
+
+async function main() {
+   const progressBar = new cliProgress.SingleBar({
+      format: 'progress [{bar}] {percentage}% | {value}/{total}',
+   })
+
+   progressBar.start(2, 0)
+
+   await runEslintFix()
+   progressBar.update(1)
+
+   await runEslintFix()
+   progressBar.update(2)
+
+   progressBar.stop()
+   console.log('\n ✔︎ All runs completed')
+}
+
+main().catch((error) => {
+   console.error(`Script error: ${error}`)
+   process.exit(1)
+})
