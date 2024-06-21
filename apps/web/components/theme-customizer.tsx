@@ -183,21 +183,28 @@ function Customizer() {
                   Pick a style and color for your components.
                </div>
             </div>
-            <Button
-               variant="ghost"
-               size="icon"
-               className="ml-auto rounded-[0.5rem]"
-               onClick={() => {
-                  setConfig({
-                     ...config,
-                     theme: 'zinc',
-                     radius: 0.5,
-                  })
-               }}
-            >
-               <ResetIcon />
-               <span className="sr-only">Reset</span>
-            </Button>
+            <Tooltip>
+               <Button
+                  variant="ghost"
+                  size="icon"
+                  className="ml-auto rounded-[0.5rem]"
+                  onClick={() => {
+                     setConfig({
+                        ...config,
+                        theme: 'zinc',
+                        radius: 0.5,
+                     })
+                  }}
+               >
+                  <TooltipTrigger>
+                     <ResetIcon />
+                     <span className="sr-only">Reset</span>
+                  </TooltipTrigger>
+                  <TooltipContent align="center" className="rounded-[0.5rem] bg-zinc-900 text-zinc-50">
+                     Reset to default
+                  </TooltipContent>
+               </Button>
+            </Tooltip>
          </div>
          <div className="flex flex-1 flex-col space-y-4 md:space-y-6">
             <div className="space-y-1.5">

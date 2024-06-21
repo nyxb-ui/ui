@@ -219,6 +219,12 @@ export const docsConfig: DocsConfig = {
                // label: 'New'
             },
             {
+               title: 'Input Phone',
+               href: '/docs/components/input-phone',
+               items: [],
+               // label: 'New'
+            },
+            {
                title: 'Interactive Icon Cloud',
                href: '/docs/components/icon-cloud',
                items: [],
@@ -550,6 +556,12 @@ export const docsConfig: DocsConfig = {
             {
                title: 'Animated Subscribe Button',
                href: `/docs/components/animated-subscribe-button`,
+               items: [],
+               // label: 'New',
+            },
+            {
+               title: 'Pulsating Button',
+               href: `/docs/components/pulsating-button`,
                items: [],
                // label: 'New',
             },
