@@ -7,7 +7,13 @@ links:
   api: https://www.radix-ui.com/docs/primitives/components/slider#api-reference
 ---
 
-<ComponentPreview name="slider-demo" description="A slider component." />
+<ComponentPreview 
+   name="slider-demo" 
+   description="A slider component." 
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+/>
 
 ## Installation
 
@@ -57,14 +63,95 @@ import { Slider } from "~components/ui/slider"
 <Slider defaultValue={[33]} max={100} step={1} />
 ```
 
+
 ## Examples
 
-### Ranges
+### Default
 
-<ComponentPreview
-  name="slider-ranges"
-  description="A Slider with ranges"
-  styleSwitch={true}
-  button="copy"
-  dots={false}
+<ComponentPreview 
+   name="slider-demo" 
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+/>
+
+### Disabled
+
+<ComponentPreview 
+   name="slider-disabled"
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+/>
+
+### Inverted
+
+<ComponentPreview 
+   name="slider-inverted" 
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+/>
+
+### Vertical
+
+<ComponentPreview 
+   name="slider-vertical" 
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+/>
+
+### Range
+
+<ComponentPreview 
+   name="slider-range" 
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+/>
+
+### Tick Marks
+
+Use the `showSteps` prop to define tick marks' style.
+NOTE: The tick marks' positions are not 100% accurate!
+
+#### Half Tick Marks
+
+<ComponentPreview 
+   name="slider-tick-marks-half" 
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+/>
+
+#### Full Tick Marks
+
+<ComponentPreview 
+   name="slider-tick-marks-full" 
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+/>
+
+### Format Label
+
+Use the `formatLabel` prop to define how the value is shown on popover.
+
+<ComponentPreview 
+   name="slider-format-label" 
+   styleSwitch={true}
+   button="copy"
+   dots={false}
+/>
+
+### Format Label Side
+
+Use the `formatLabelSide` prop to indicate where the popover will appear.
+
+<ComponentPreview 
+   name="slider-format-label-side" 
+   styleSwitch={true}
+   button="copy"
+   dots={false}
 />

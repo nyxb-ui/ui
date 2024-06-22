@@ -38,7 +38,6 @@ import SeparatorDemo from '~/registry/miami/example/separator-demo'
 import SheetDemo from '~/registry/miami/example/sheet-demo'
 import SkeletonDemo from '~/registry/miami/example/skeleton-demo'
 import SliderDemo from '~/registry/miami/example/slider-demo'
-import SliderRanges from '~/registry/miami/example/slider-ranges'
 import SwitchDemo from '~/registry/miami/example/switch-demo'
 import TabsDemo from '~/registry/miami/example/tabs-demo'
 import ToastDemo from '~/registry/miami/example/toast-demo'
@@ -60,9 +59,6 @@ export default function KitchenSinkPage() {
                   </ComponentWrapper>
                   <ComponentWrapper>
                      <SliderDemo className="w-full" />
-                  </ComponentWrapper>
-                  <ComponentWrapper>
-                     <SliderRanges className="w-full" />
                   </ComponentWrapper>
                   <ComponentWrapper
                      className="spa flex-col items-start space-x-0 space-y-2"

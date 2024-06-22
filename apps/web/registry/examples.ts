@@ -647,10 +647,52 @@ export const examples: Registry = [
       files: ['example/slider-demo.tsx'],
    },
    {
-      name: 'slider-ranges',
+      name: 'slider-disabled',
       type: 'components:example',
       registryDependencies: ['slider'],
-      files: ['example/slider-ranges.tsx'],
+      files: ['example/slider-disabled.tsx'],
+   },
+   {
+      name: 'slider-inverted',
+      type: 'components:example',
+      registryDependencies: ['slider'],
+      files: ['example/slider-inverted.tsx'],
+   },
+   {
+      name: 'slider-vertical',
+      type: 'components:example',
+      registryDependencies: ['slider'],
+      files: ['example/slider-vertical.tsx'],
+   },
+   {
+      name: 'slider-range',
+      type: 'components:example',
+      registryDependencies: ['slider'],
+      files: ['example/slider-range.tsx'],
+   },
+   {
+      name: 'slider-tick-marks-half',
+      type: 'components:example',
+      registryDependencies: ['slider'],
+      files: ['example/slider-tick-marks-half.tsx'],
+   },
+   {
+      name: 'slider-tick-marks-full',
+      type: 'components:example',
+      registryDependencies: ['slider'],
+      files: ['example/slider-tick-marks-full.tsx'],
+   },
+   {
+      name: 'slider-format-label',
+      type: 'components:example',
+      registryDependencies: ['slider'],
+      files: ['example/slider-format-label.tsx'],
+   },
+   {
+      name: 'slider-format-label-side',
+      type: 'components:example',
+      registryDependencies: ['slider'],
+      files: ['example/slider-format-label-side.tsx'],
    },
    {
       name: 'sonner-demo',
@@ -825,6 +867,18 @@ export const examples: Registry = [
       type: 'components:example',
       registryDependencies: ['tooltip'],
       files: ['example/tooltip-demo.tsx'],
+   },
+   {
+      name: 'tooltip-outline',
+      type: 'components:example',
+      registryDependencies: ['tooltip'],
+      files: ['example/tooltip-outline.tsx'],
+   },
+   {
+      name: 'tooltip-secondary',
+      type: 'components:example',
+      registryDependencies: ['tooltip'],
+      files: ['example/tooltip-secondary.tsx'],
    },
    {
       name: 'typography-blockquote',
