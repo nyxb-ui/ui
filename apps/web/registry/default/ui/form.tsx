@@ -2,7 +2,7 @@ import * as React from 'react'
 import type * as LabelPrimitive from '@radix-ui/react-label'
 import { Slot } from '@radix-ui/react-slot'
 import type { ControllerProps, FieldPath, FieldValues } from 'react-hook-form'
-import { Controller, FormProvider, useFormContext } from 'react-hook-form'
+import { Controller, FormProvider, useFormContext, useFormState } from 'react-hook-form'
 
 import { cn } from '~/lib/utils'
 import { Label } from '~/registry/default/ui/label'
@@ -155,6 +155,27 @@ const FormMessage = React.forwardRef<
 })
 FormMessage.displayName = 'FormMessage'
 
+const FormGlobalError = React.forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLParagraphElement>
+>(({ className, ...props }, ref) => {
+   const { errors } = useFormState()
+   const rootError = errors.root
+   if (!rootError)
+      return null
+
+   return (
+      <p
+         ref={ref}
+         className={cn('text-sm font-medium text-destructive', className)}
+         {...props}
+      >
+         {rootError.message}
+      </p>
+   )
+})
+FormGlobalError.displayName = 'FormGlobalError'
+
 export {
    useFormField,
    Form,
@@ -163,5 +184,6 @@ export {
    FormControl,
    FormDescription,
    FormMessage,
+   FormGlobalError,
    FormField,
 }
