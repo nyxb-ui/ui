@@ -736,6 +736,13 @@
     "type": "components:ui"
   },
   {
+    "name": "stepper",
+    "files": [
+      "ui/stepper.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "table",
     "files": [
       "ui/table.tsx"

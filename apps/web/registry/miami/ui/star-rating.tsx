@@ -44,13 +44,15 @@ function StarRating({
                ...restIconProps,
             }
             return (
-               IconComponent
-                  ? (
-                     <IconComponent {...styledIconProps} />
-                     )
-                  : (
-                     <StarIcon {...styledIconProps} />
-                     )
+               <div key={i}>
+                  {IconComponent
+                     ? (
+                        <IconComponent {...styledIconProps} />
+                        )
+                     : (
+                        <StarIcon {...styledIconProps} />
+                        )}
+               </div>
             )
          })}
       </div>

@@ -177,6 +177,14 @@ module.exports = {
                   'background-position': '0% 0%',
                },
             },
+            'collapsible-down': {
+               from: { height: '0' },
+               to: { height: 'var(--radix-collapsible-content-height)' },
+            },
+            'collapsible-up': {
+               from: { height: 'var(--radix-collapsible-content-height)' },
+               to: { height: '0' },
+            },
          },
          animation: {
             'accordion-down': 'accordion-down 0.2s ease-out',
@@ -197,7 +205,9 @@ module.exports = {
             'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
             'orbit': 'orbit calc(var(--duration)*1s) linear infinite',
             'backgroundPositionSpin':
-          'background-position-spin 3000ms infinite alternate',
+            'background-position-spin 3000ms infinite alternate',
+            'collapsible-down': 'collapsible-down 0.2s ease-out',
+            'collapsible-up': 'collapsible-up 0.2s ease-out',
          },
       },
    },

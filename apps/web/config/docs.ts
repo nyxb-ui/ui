@@ -310,15 +310,21 @@ export const docsConfig: DocsConfig = {
                items: [],
             },
             {
+               title: 'Sonner',
+               href: '/docs/components/sonner',
+               items: [],
+            },
+            {
                title: 'Star Rating',
                href: '/docs/components/star-rating',
                items: [],
                label: 'New',
             },
             {
-               title: 'Sonner',
-               href: '/docs/components/sonner',
+               title: 'Stepper',
+               href: '/docs/components/stepper',
                items: [],
+               label: 'New',
             },
             {
                title: 'Switch',

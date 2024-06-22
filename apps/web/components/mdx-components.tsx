@@ -40,6 +40,7 @@ import {
 } from '~/registry/miami/ui/tabs'
 import type { Style } from '~/registry/styles'
 import { ComponentInstallation } from '~/components/component-installation'
+import { PropsTable } from '~/components/props-table'
 
 function CustomLink(props: any) {
    const href = props.href
@@ -69,6 +70,7 @@ const components = {
    AlertDescription,
    TechStack,
    Callout,
+   PropsTable,
    ComponentExample,
    ComponentPreview,
    ComponentSource,

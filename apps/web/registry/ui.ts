@@ -474,6 +474,11 @@ export const ui: Registry = [
       files: ['ui/switch.tsx'],
    },
    {
+      name: 'stepper',
+      type: 'components:ui',
+      files: ['ui/stepper.tsx'],
+   },
+   {
       name: 'table',
       type: 'components:ui',
       files: ['ui/table.tsx'],
