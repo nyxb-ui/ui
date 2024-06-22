@@ -505,6 +505,11 @@ export const ui: Registry = [
       files: ['ui/timeline.tsx'],
    },
    {
+      name: 'toc',
+      type: 'components:ui',
+      files: ['ui/toc.tsx'],
+   },
+   {
       name: 'toast',
       type: 'components:ui',
       dependencies: ['@radix-ui/react-toast'],

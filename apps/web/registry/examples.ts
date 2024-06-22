@@ -1502,4 +1502,19 @@ export const examples: Registry = [
       type: 'components:example',
       files: ['example/tour-demo.tsx'],
    },
+   {
+      name: 'toc-demo',
+      type: 'components:example',
+      files: ['example/toc-demo.tsx'],
+   },
+   {
+      name: 'toc-nested',
+      type: 'components:example',
+      files: ['example/toc-nested.tsx'],
+   },
+   {
+      name: 'toc-active',
+      type: 'components:example',
+      files: ['example/toc-active.tsx'],
+   },
 ]
