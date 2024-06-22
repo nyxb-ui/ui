@@ -1338,4 +1338,19 @@ export const examples: Registry = [
       registryDependencies: ['timeline'],
       files: ['example/timeline-labels.tsx'],
    },
+   {
+      name: 'star-rating-demo',
+      type: 'components:example',
+      files: ['example/star-rating-demo.tsx'],
+   },
+   {
+      name: 'star-rating-colored',
+      type: 'components:example',
+      files: ['example/star-rating-colored.tsx'],
+   },
+   {
+      name: 'star-rating-icon',
+      type: 'components:example',
+      files: ['example/star-rating-icon.tsx'],
+   },
 ]

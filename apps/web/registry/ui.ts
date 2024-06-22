@@ -463,6 +463,11 @@ export const ui: Registry = [
       files: ['ui/sparkles-text.tsx'],
    },
    {
+      name: 'star-rating',
+      type: 'components:ui',
+      files: ['ui/star-rating.tsx'],
+   },
+   {
       name: 'switch',
       type: 'components:ui',
       dependencies: ['@radix-ui/react-switch'],

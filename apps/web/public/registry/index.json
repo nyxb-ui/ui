@@ -719,6 +719,13 @@
     "type": "components:ui"
   },
   {
+    "name": "star-rating",
+    "files": [
+      "ui/star-rating.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "switch",
     "dependencies": [
       "@radix-ui/react-switch"
