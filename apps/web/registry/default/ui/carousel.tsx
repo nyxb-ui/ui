@@ -1,6 +1,8 @@
 'use client'
 
 import * as React from 'react'
+import type { VariantProps } from 'class-variance-authority'
+import { cva } from 'class-variance-authority'
 import useEmblaCarousel, { type UseEmblaCarouselType } from 'embla-carousel-react'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 
@@ -15,8 +17,9 @@ type CarouselPlugin = UseCarouselParameters[1]
 interface CarouselProps {
    opts?: CarouselOptions
    plugins?: CarouselPlugin
-   orientation?: 'horizontal' | 'vertical'
    setApi?: (api: CarouselApi) => void
+   orientation?: 'horizontal' | 'vertical'
+   dotsPosition?: 'top' | 'bottom' | 'left' | 'right'
 }
 
 type CarouselContextProps = {
@@ -24,8 +27,11 @@ type CarouselContextProps = {
    api: ReturnType<typeof useEmblaCarousel>[1]
    scrollPrev: () => void
    scrollNext: () => void
+   scrollTo: (index: number) => void
    canScrollPrev: boolean
    canScrollNext: boolean
+   totalSlides: number
+   currentIndex: number
 } & CarouselProps
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null)
@@ -45,10 +51,11 @@ const Carousel = React.forwardRef<
 >(
    (
       {
-         orientation = 'horizontal',
          opts,
-         setApi,
          plugins,
+         setApi,
+         orientation = 'horizontal',
+         dotsPosition = 'bottom',
          className,
          children,
          ...props
@@ -65,13 +72,25 @@ const Carousel = React.forwardRef<
       const [canScrollPrev, setCanScrollPrev] = React.useState(false)
       const [canScrollNext, setCanScrollNext] = React.useState(false)
 
+      const [currentIndex, setCurrentIndex] = React.useState(0)
+      const [totalSlides, setTotalSlides] = React.useState(0)
+
       const onSelect = React.useCallback((api: CarouselApi) => {
          if (!api)
             return
 
          setCanScrollPrev(api.canScrollPrev())
          setCanScrollNext(api.canScrollNext())
+         setCurrentIndex(api.selectedScrollSnap())
+         setTotalSlides(api.scrollSnapList().length)
       }, [])
+
+      const scrollTo = React.useCallback(
+         (index: number) => {
+            api?.scrollTo(index)
+         },
+         [api],
+      )
 
       const scrollPrev = React.useCallback(() => {
          api?.scrollPrev()
@@ -115,6 +134,26 @@ const Carousel = React.forwardRef<
          }
       }, [api, onSelect])
 
+      let effectiveDotsPosition = dotsPosition
+      if (
+         orientation === 'horizontal'
+         && (dotsPosition === 'left' || dotsPosition === 'right')
+      ) {
+         console.warn(
+        `Invalid dotsPosition "${dotsPosition}" for horizontal orientation, defaulting to "bottom".`,
+         )
+         effectiveDotsPosition = 'bottom'
+      }
+      else if (
+         orientation === 'vertical'
+         && (dotsPosition === 'top' || dotsPosition === 'bottom')
+      ) {
+         console.warn(
+        `Invalid dotsPosition "${dotsPosition}" for vertical orientation, defaulting to "left".`,
+         )
+         effectiveDotsPosition = 'left'
+      }
+
       return (
          <CarouselContext.Provider
             value={{
@@ -123,10 +162,14 @@ const Carousel = React.forwardRef<
                opts,
                orientation:
             orientation || (opts?.axis === 'y' ? 'vertical' : 'horizontal'),
+               dotsPosition: effectiveDotsPosition,
                scrollPrev,
                scrollNext,
+               scrollTo,
                canScrollPrev,
                canScrollNext,
+               totalSlides,
+               currentIndex,
             }}
          >
             <div
@@ -247,6 +290,103 @@ const CarouselNext = React.forwardRef<
 })
 CarouselNext.displayName = 'CarouselNext'
 
+const dotsContainerVariants = cva('absolute flex justify-center', {
+   variants: {
+      orientation: {
+         horizontal: 'inset-x-0 flex-row',
+         vertical: 'inset-y-0 flex-col',
+      },
+      size: {
+         default: 'p-4',
+         sm: 'p-4',
+         md: 'p-1',
+         lg: 'p-0',
+      },
+      position: {
+         top: '-top-10',
+         right: '-right-10',
+         bottom: '-bottom-10',
+         left: '-left-10',
+      },
+      gap: {
+         default: 'gap-2',
+         sm: 'gap-2',
+         md: 'gap-4',
+         lg: 'gap-6',
+      },
+   },
+   defaultVariants: {
+      orientation: 'horizontal',
+      size: 'default',
+      position: 'bottom',
+      gap: 'default',
+   },
+})
+
+const dotsVariants = cva(
+   'rounded-full ring-1 ring-muted ring-offset-1 ring-offset-background transition-all duration-300',
+   {
+      variants: {
+         size: {
+            default: 'size-3',
+            sm: 'size-3',
+            md: 'size-4',
+            lg: 'size-6',
+         },
+      },
+      defaultVariants: {
+         size: 'default',
+      },
+   },
+)
+
+interface CarouselDotsProps
+   extends React.HTMLAttributes<HTMLDivElement>,
+   VariantProps<typeof dotsContainerVariants>,
+   VariantProps<typeof dotsVariants> {}
+
+const CarouselDots = React.forwardRef<HTMLDivElement, CarouselDotsProps>(
+   ({ className, size, gap, ...props }, ref) => {
+      const { orientation, dotsPosition, totalSlides, currentIndex, scrollTo }
+      = useCarousel()
+
+      if (totalSlides <= 1)
+         return null
+
+      return (
+         <div
+            ref={ref}
+            role="tablist"
+            className={cn(
+               dotsContainerVariants({
+                  orientation,
+                  size,
+                  position: dotsPosition,
+                  gap,
+               }),
+               className,
+            )}
+            {...props}
+         >
+            {Array.from({ length: totalSlides }).map((_, index) => (
+               <button
+                  key={index}
+                  role="tab"
+                  aria-selected={currentIndex === index}
+                  aria-label={`Go to slide ${index + 1}`}
+                  onClick={() => scrollTo(index)}
+                  className={cn(
+                     dotsVariants({ size }),
+                     currentIndex === index ? 'bg-card-foreground' : 'bg-muted',
+                  )}
+               />
+            ))}
+         </div>
+      )
+   },
+)
+CarouselDots.displayName = 'CarouselDots'
+
 export {
    type CarouselApi,
    Carousel,
@@ -254,4 +394,5 @@ export {
    CarouselItem,
    CarouselPrevious,
    CarouselNext,
+   CarouselDots,
 }
