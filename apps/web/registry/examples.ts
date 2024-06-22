@@ -1437,4 +1437,9 @@ export const examples: Registry = [
       registryDependencies: ['stepper'],
       files: ['example/stepper-state.tsx'],
    },
+   {
+      name: 'tour-demo',
+      type: 'components:example',
+      files: ['example/tour-demo.tsx'],
+   },
 ]

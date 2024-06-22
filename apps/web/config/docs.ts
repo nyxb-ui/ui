@@ -373,6 +373,12 @@ export const docsConfig: DocsConfig = {
                items: [],
             },
             {
+               title: 'Tour',
+               href: '/docs/components/tour',
+               items: [],
+               label: 'New',
+            },
+            {
                title: 'Tweet Card',
                href: '/docs/components/tweet-card',
                items: [],

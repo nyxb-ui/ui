@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { exec } from 'node:child_process'
 import path from 'node:path'
 import cliProgress from 'cli-progress'

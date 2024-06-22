@@ -530,6 +530,11 @@ export const ui: Registry = [
       files: ['ui/tooltip.tsx'],
    },
    {
+      name: 'tour',
+      type: 'components:ui',
+      files: ['ui/tour.tsx'],
+   },
+   {
       name: 'typing-animation',
       type: 'components:ui',
       files: ['ui/typing-animation.tsx'],

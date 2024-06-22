@@ -34,6 +34,8 @@ export default nyxb(
          'ts/ban-ts-comment': 0,
          'react-dom/no-missing-button-type': 0,
          'eslint-comments/no-unlimited-disable': 0,
+         'no-console': 0,
+         'react/no-useless-fragment': 0,
       },
    },
    {

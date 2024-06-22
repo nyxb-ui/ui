@@ -826,6 +826,13 @@
     "type": "components:ui"
   },
   {
+    "name": "tour",
+    "files": [
+      "ui/tour.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "typing-animation",
     "files": [
       "ui/typing-animation.tsx"
