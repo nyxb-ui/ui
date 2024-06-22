@@ -39,7 +39,7 @@ interface MultiSelectContextValue {
 
    onDeselect: (value: string, item: MultiSelectOptionItem) => void
 
-   onSearch?: (keyword: string | undefined) => void
+   onSearch?: (keyword?: string) => void
 
    filter?: boolean | ((keyword: string, current: string) => boolean)
 

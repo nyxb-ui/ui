@@ -39,7 +39,7 @@ interface MultiSelectContextValue {
 
    onDeselect: (value: string, item: MultiSelectOptionItem) => void
 
-   onSearch?: (keyword: string | undefined) => void
+   onSearch?: (keyword?: string | undefined) => void
 
    filter?: boolean | ((keyword: string, current: string) => boolean)
 
@@ -71,7 +71,7 @@ type MultiSelectProps = React.ComponentPropsWithoutRef<
    onSelect?: (value: string, item: MultiSelectOptionItem) => void
    onDeselect?: (value: string, item: MultiSelectOptionItem) => void
    defaultValue?: string[]
-   onSearch?: (keyword: string | undefined) => void
+   onSearch?: (keyword?: string | undefined) => void
    filter?: boolean | ((keyword: string, current: string) => boolean)
    disabled?: boolean
    maxCount?: number

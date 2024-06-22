@@ -315,6 +315,11 @@ export const ui: Registry = [
       files: ['ui/meteors.tsx'],
    },
    {
+      name: 'multi-select',
+      type: 'components:ui',
+      files: ['ui/multi-select.tsx'],
+   },
+   {
       name: 'navigation-menu',
       type: 'components:ui',
       dependencies: ['@radix-ui/react-navigation-menu'],
