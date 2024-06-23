@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3003",
-    "start": "next start",
+    "start": "next start -p 3001",
     "build": "next build",
     "build:env": "node ./scripts/env.mjs",
     "build:registry": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-registry.mts && tsx ./scripts/eslint-fix.mts",
+    "seed:tasks": "tsx --tsconfig ./tsconfig.scripts.json ./app/(app)/examples/tasks/data/seed.ts",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "preview": "next build && next start -p 3001"
   },
   "dependencies": {
     "@faker-js/faker": "^8.2.0",

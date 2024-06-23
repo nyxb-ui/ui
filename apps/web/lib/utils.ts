@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { twMerge } from 'tailwind-merge'
 
 // Funktion zum Kombinieren von Klassennamen
-export function cn(...inputs: ClassValue[]) {
+export function ny(...inputs: ClassValue[]) {
    return twMerge(clsx(inputs))
 }
 

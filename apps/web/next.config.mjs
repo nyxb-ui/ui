@@ -19,7 +19,7 @@ const nextConfig = {
             hostname: 'images.unsplash.com',
          },
       ],
-      domains: ['localhost', 'cdn.nyxui.design'],
+      domains: ['localhost', 'cdn.nyxbui.design'],
    },
    compiler: {
       // Remove console.log from production except for error logs
