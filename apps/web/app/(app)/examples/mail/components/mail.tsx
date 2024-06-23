@@ -15,7 +15,7 @@ import {
    Users2,
 } from 'lucide-react'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Input } from '~/registry/miami/ui/input'
 import {
    ResizableHandle,
@@ -82,13 +82,13 @@ export function Mail({
               collapsed,
             )}`
                }}
-               className={cn(
+               className={ny(
                   isCollapsed
                   && 'min-w-[50px] transition-all duration-300 ease-in-out',
                )}
             >
                <div
-                  className={cn(
+                  className={ny(
                      'flex h-[52px] items-center justify-center',
                      isCollapsed ? 'h-[52px]' : 'px-2',
                   )}

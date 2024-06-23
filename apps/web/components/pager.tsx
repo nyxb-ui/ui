@@ -3,7 +3,7 @@ import Link from 'next/link'
 import type { Doc } from '~/.contentlayer/generated'
 import { buttonVariants } from '~/components/ui/button'
 import { docsConfig } from '~/config/docs'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import type { NavItem, NavItemWithChildren } from '~/types'
 
 interface DocsPagerProps {
@@ -30,7 +30,7 @@ export function DocPager({ doc }: DocsPagerProps) {
          {pager?.next?.href && (
             <Link
                href={pager.next.href}
-               className={cn(buttonVariants({ variant: 'outline' }), 'ml-auto')}
+               className={ny(buttonVariants({ variant: 'outline' }), 'ml-auto')}
             >
                {pager.next.title}
                <ChevronRightIcon className="ml-2 h-4 w-4" />

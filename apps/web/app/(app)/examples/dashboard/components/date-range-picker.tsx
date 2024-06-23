@@ -5,7 +5,7 @@ import { CalendarIcon } from '@radix-ui/react-icons'
 import { addDays, format } from 'date-fns'
 import type { DateRange } from 'react-day-picker'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Button } from '~/registry/miami/ui/button'
 import { Calendar } from '~/registry/miami/ui/calendar'
 import {
@@ -23,13 +23,13 @@ export function CalendarDateRangePicker({
    })
 
    return (
-      <div className={cn('grid gap-2', className)}>
+      <div className={ny('grid gap-2', className)}>
          <Popover>
             <PopoverTrigger asChild>
                <Button
                   id="date"
                   variant="outline"
-                  className={cn(
+                  className={ny(
                      'w-[260px] justify-start text-left font-normal',
                      !date && 'text-muted-foreground',
                   )}

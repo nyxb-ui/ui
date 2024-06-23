@@ -48,7 +48,7 @@ Here's how I configure Inter for Next.js:
 import "~styles/globals.css"
 import { Inter as FontSans } from "next/font/google"
 
-import { cn } from "~lib/utils"
+import { ny } from "~lib/utils"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -60,7 +60,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
-        className={cn(
+        className={ny(
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
         )}
@@ -122,7 +122,7 @@ Here's how I structure my Next.js apps. You can use this as a reference:
 
 - I place the UI components in the `components/ui` folder.
 - The rest of the components such as `<PageHeader />` and `<MainNav />` are placed in the `components` folder.
-- The `lib` folder contains all the utility functions. I have a `utils.ts` where I define the `cn` helper.
+- The `lib` folder contains all the utility functions. I have a `utils.ts` where I define the `ny` helper.
 - The `styles` folder contains the global CSS.
 
 ### That's it

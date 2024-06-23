@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { SuperAnnouncement } from '~/components/super-announcement'
 import { ExamplesNav } from '~/components/examples-nav'
 import {
@@ -35,12 +35,12 @@ export default function ExamplesLayout({ children }: ExamplesLayoutProps) {
                components. Use this as a guide to build your own.
             </PageHeaderDescription>
             <PageActions>
-               <Link href="/docs" className={cn(buttonVariants(), 'rounded-[6px]')}>
+               <Link href="/docs" className={ny(buttonVariants(), 'rounded-[6px]')}>
                   Get Started
                </Link>
                <Link
                   href="/components"
-                  className={cn(
+                  className={ny(
                      buttonVariants({ variant: 'outline' }),
                      'rounded-[6px]',
                   )}

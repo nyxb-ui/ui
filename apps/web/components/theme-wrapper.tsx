@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { useConfig } from '~/hooks/use-config'
 
 interface ThemeWrapperProps extends React.ComponentProps<'div'> {
@@ -16,7 +16,7 @@ export function ThemeWrapper({
 
    return (
       <div
-         className={cn(
+         className={ny(
         `theme-${defaultTheme || config.theme}`,
         'w-full',
         className,

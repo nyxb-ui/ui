@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { CalendarIcon, CaretSortIcon, CheckIcon } from '@radix-ui/react-icons'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Button } from '~/registry/miami/ui/button'
 import { Calendar } from '~/registry/miami/ui/calendar'
 import {
@@ -118,7 +118,7 @@ export function AccountForm() {
                            <FormControl>
                               <Button
                                  variant="outline"
-                                 className={cn(
+                                 className={ny(
                                     'w-[240px] pl-3 text-left font-normal',
                                     !field.value && 'text-muted-foreground',
                                  )}
@@ -164,7 +164,7 @@ export function AccountForm() {
                               <Button
                                  variant="outline"
                                  role="combobox"
-                                 className={cn(
+                                 className={ny(
                                     'w-[200px] justify-between',
                                     !field.value && 'text-muted-foreground',
                                  )}
@@ -192,7 +192,7 @@ export function AccountForm() {
                                        }}
                                     >
                                        <CheckIcon
-                                          className={cn(
+                                          className={ny(
                                              'mr-2 h-4 w-4',
                                              language.value === field.value
                                                 ? 'opacity-100'

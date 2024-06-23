@@ -7,7 +7,7 @@ import {
    PlusCircledIcon,
 } from '@radix-ui/react-icons'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import {
    Avatar,
    AvatarFallback,
@@ -94,7 +94,7 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
                   role="combobox"
                   aria-expanded={open}
                   aria-label="Select a team"
-                  className={cn('w-[200px] justify-between', className)}
+                  className={ny('w-[200px] justify-between', className)}
                >
                   <Avatar className="mr-2 h-5 w-5">
                      <AvatarImage
@@ -134,7 +134,7 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
                                  </Avatar>
                                  {team.label}
                                  <CheckIcon
-                                    className={cn(
+                                    className={ny(
                                        'ml-auto h-4 w-4',
                                        selectedTeam.value === team.value
                                           ? 'opacity-100'

@@ -3,7 +3,7 @@
 import * as React from 'react'
 import type { SelectTriggerProps } from '@radix-ui/react-select'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { useConfig } from '~/hooks/use-config'
 import {
    Select,
@@ -28,7 +28,7 @@ export function StyleSwitcher({ className, ...props }: SelectTriggerProps) {
             })}
       >
          <SelectTrigger
-            className={cn(
+            className={ny(
                'h-7 w-[145px] text-xs [&_svg]:h-4 [&_svg]:w-4',
                className,
             )}

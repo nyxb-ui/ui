@@ -10,7 +10,7 @@ import { DemoPaymentMethod } from './components/payment-method'
 import { DemoReportAnIssue } from './components/report-an-issue'
 import { DemoShareDocument } from './components/share-document'
 import { DemoTeamMembers } from './components/team-members'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 export const metadata: Metadata = {
    title: 'Cards',
@@ -23,7 +23,7 @@ function DemoContainer({
 }: React.HTMLAttributes<HTMLDivElement>) {
    return (
       <div
-         className={cn(
+         className={ny(
             'flex items-center justify-center [&>div]:w-full',
             className,
          )}

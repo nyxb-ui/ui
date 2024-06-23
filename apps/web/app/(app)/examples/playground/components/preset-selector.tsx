@@ -6,7 +6,7 @@ import { CaretSortIcon, CheckIcon } from '@radix-ui/react-icons'
 import type { PopoverProps } from '@radix-ui/react-popover'
 import type { Preset } from '../data/presets'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Button } from '~/registry/miami/ui/button'
 import {
    Command,
@@ -59,7 +59,7 @@ export function PresetSelector({ presets, ...props }: PresetSelectorProps) {
                      >
                         {preset.name}
                         <CheckIcon
-                           className={cn(
+                           className={ny(
                               'ml-auto h-4 w-4',
                               selectedPreset?.id === preset.id
                                  ? 'opacity-100'

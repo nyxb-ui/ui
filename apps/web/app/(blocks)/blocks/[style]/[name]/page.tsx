@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { siteConfig } from '~/config/site'
 import { getAllBlockIds, getBlock } from '~/lib/blocks'
-import { absoluteUrl, cn } from '~/lib/utils'
+import { absoluteUrl, ny } from '~/lib/utils'
 import type { Style } from '~/registry/styles'
 import { styles } from '~/registry/styles'
 
@@ -86,7 +86,7 @@ export default async function BlockPage({
    block.chunks?.map(chunk => delete chunk.component)
 
    return (
-      <div className={cn(block.container?.className || '', 'theme-zinc')}>
+      <div className={ny(block.container?.className || '', 'theme-zinc')}>
          <BlockWrapper block={block}>
             <Component />
             {chunks?.map((chunk, index) => (

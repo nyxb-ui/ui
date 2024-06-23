@@ -4,7 +4,7 @@ import { ThemeProvider } from '~/components/theme-provider'
 import { Toaster } from '~/components/ui/sonner'
 import { TooltipProvider } from '~/components/ui/tooltip'
 import { fontSans } from '~/lib/fonts'
-import { absoluteUrl, cn, constructMetadata } from '~/lib/utils'
+import { absoluteUrl, constructMetadata, ny } from '~/lib/utils'
 import { Toaster as DefaultToaster } from '~/registry/default/ui/toaster'
 import { Toaster as NewYorkSonner } from '~/registry/miami/ui/sonner'
 import { Toaster as NewYorkToaster } from '~/registry/miami/ui/toaster'
@@ -30,7 +30,7 @@ export default function RootLayout({
          <html lang="en" suppressHydrationWarning>
             <head />
             <body
-               className={cn(
+               className={ny(
                   'relative flex min-h-screen w-full flex-col justify-center overflow-x-hidden scroll-smooth bg-background font-sans antialiased',
                   fontSans.variable,
                )}

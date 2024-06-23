@@ -3,7 +3,7 @@
 import * as React from 'react'
 import type { ImperativePanelHandle } from 'react-resizable-panels'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { useConfig } from '~/hooks/use-config'
 import { useLiftMode } from '~/hooks/use-lift-mode'
 import { BlockToolbar } from '~/components/block-toolbar'
@@ -48,7 +48,7 @@ export function BlockPreview({
             <ResizablePanelGroup direction="horizontal" className="relative z-10">
                <ResizablePanel
                   ref={ref}
-                  className={cn(
+                  className={ny(
                      'relative rounded-lg border bg-background',
                      isLiftMode ? 'border-border/50' : 'border-border',
                   )}
@@ -73,7 +73,7 @@ export function BlockPreview({
                   />
                </ResizablePanel>
                <ResizableHandle
-                  className={cn(
+                  className={ny(
                      'relative hidden w-3 bg-transparent p-0 after:absolute after:right-0 after:top-1/2 after:h-8 after:w-[6px] after:-translate-y-1/2 after:translate-x-[-1px] after:rounded-full after:bg-border after:transition-all after:hover:h-10 sm:block',
                      isLiftMode && 'invisible',
                   )}

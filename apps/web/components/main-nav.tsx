@@ -7,7 +7,7 @@ import { Icons } from '~/components/icons'
 import { Badge } from '~/components/ui/badge'
 import { docsConfig } from '~/config/docs'
 import { siteConfig } from '~/config/site'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 export function MainNav() {
    const pathname = usePathname()
@@ -27,7 +27,7 @@ export function MainNav() {
                   key={item.href}
                   href={item.href!}
                   target={item.external ? '_blank' : undefined}
-                  className={cn(
+                  className={ny(
                      'flex items-center justify-center transition-colors hover:text-foreground/80',
                      pathname?.startsWith(item.href!)
                         ? 'text-foreground'

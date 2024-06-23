@@ -3,7 +3,7 @@ import {
    TooltipContent,
    TooltipTrigger,
 } from '~/components/ui/tooltip'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 interface TechComponentType {
    name: string
@@ -140,7 +140,7 @@ export default function TechStack({
    className?: string
 }) {
    return (
-      <div className={cn('not-prose flex flex-row gap-2', className)}>
+      <div className={ny('not-prose flex flex-row gap-2', className)}>
          {technologies.map(tech => (
             <Tooltip key={tech}>
                <TooltipTrigger>{techComponents[tech].icon}</TooltipTrigger>

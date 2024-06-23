@@ -5,7 +5,7 @@ import { ChevronDownIcon } from '@radix-ui/react-icons'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Button, buttonVariants } from '~/registry/miami/ui/button'
 import {
    Form,
@@ -65,7 +65,7 @@ export function AppearanceForm() {
                      <div className="relative w-max">
                         <FormControl>
                            <select
-                              className={cn(
+                              className={ny(
                                  buttonVariants({ variant: 'outline' }),
                                  'w-[200px] appearance-none font-normal',
                               )}

@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import type { LucideIcon } from 'lucide-react'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { buttonVariants } from '~/registry/default/ui/button'
 import {
    Tooltip,
@@ -35,7 +35,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
                         <TooltipTrigger asChild>
                            <Link
                               href="#"
-                              className={cn(
+                              className={ny(
                                  buttonVariants({ variant: link.variant, size: 'icon' }),
                                  'h-9 w-9',
                                  link.variant === 'default'
@@ -60,7 +60,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
                      <Link
                         key={index}
                         href="#"
-                        className={cn(
+                        className={ny(
                            buttonVariants({ variant: link.variant, size: 'sm' }),
                            link.variant === 'default'
                            && 'dark:bg-muted dark:text-white dark:hover:bg-muted dark:hover:text-white',
@@ -71,7 +71,7 @@ export function Nav({ links, isCollapsed }: NavProps) {
                         {link.title}
                         {link.label && (
                            <span
-                              className={cn(
+                              className={ny(
                                  'ml-auto',
                                  link.variant === 'default'
                                  && 'text-background dark:text-white',

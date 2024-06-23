@@ -6,7 +6,7 @@ import {
 } from '@radix-ui/react-icons'
 import type { Column } from '@tanstack/react-table'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Button } from '~/registry/miami/ui/button'
 import {
    DropdownMenu,
@@ -28,10 +28,10 @@ export function DataTableColumnHeader<TData, TValue>({
    className,
 }: DataTableColumnHeaderProps<TData, TValue>) {
    if (!column.getCanSort())
-      return <div className={cn(className)}>{title}</div>
+      return <div className={ny(className)}>{title}</div>
 
    return (
-      <div className={cn('flex items-center space-x-2', className)}>
+      <div className={ny('flex items-center space-x-2', className)}>
          <DropdownMenu>
             <DropdownMenuTrigger asChild>
                <Button

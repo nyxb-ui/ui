@@ -4,7 +4,7 @@ import * as AccordionPrimitive from '@radix-ui/react-accordion'
 import { ChevronDownIcon } from '@radix-ui/react-icons'
 import * as React from 'react'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 const Accordion = AccordionPrimitive.Root
 
@@ -14,7 +14,7 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
    <AccordionPrimitive.Item
       ref={ref}
-      className={cn('border-b', className)}
+      className={ny('border-b', className)}
       {...props}
    />
 ))
@@ -27,7 +27,7 @@ const AccordionTrigger = React.forwardRef<
    <AccordionPrimitive.Header className="flex">
       <AccordionPrimitive.Trigger
          ref={ref}
-         className={cn(
+         className={ny(
             'flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180',
             className,
          )}
@@ -49,7 +49,7 @@ const AccordionContent = React.forwardRef<
       className="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
       {...props}
    >
-      <div className={cn('pb-4 pt-0', className)}>{children}</div>
+      <div className={ny('pb-4 pt-0', className)}>{children}</div>
    </AccordionPrimitive.Content>
 ))
 AccordionContent.displayName = AccordionPrimitive.Content.displayName

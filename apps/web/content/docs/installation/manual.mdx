@@ -223,15 +223,15 @@ Add the following to your styles/globals.css file. You can learn more about usin
 }
 ```
 
-### Add a cn helper
+### Add a ny helper
 
-I use a `cn` helper to make it easier to conditionally add Tailwind CSS classes. Here's how I define it in `lib/utils.ts`:
+I use a `ny` helper to make it easier to conditionally add Tailwind CSS classes. Here's how I define it in `lib/utils.ts`:
 
 ```ts title="lib/utils.ts"
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
-export function cn(...inputs: ClassValue[]) {
+export function ny(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 ```

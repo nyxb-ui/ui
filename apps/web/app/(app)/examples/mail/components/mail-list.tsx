@@ -1,7 +1,7 @@
 import type { ComponentProps } from 'react'
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Badge } from '~/registry/miami/ui/badge'
 import { ScrollArea } from '~/registry/miami/ui/scroll-area'
 import type { Mail } from '~/app/(app)/examples/mail/data'
@@ -20,7 +20,7 @@ export function MailList({ items }: MailListProps) {
             {items.map(item => (
                <button
                   key={item.id}
-                  className={cn(
+                  className={ny(
                      'flex flex-col items-start gap-2 rounded-lg border p-3 text-left text-sm transition-all hover:bg-accent',
                      mail.selected === item.id && 'bg-muted',
                   )}
@@ -39,7 +39,7 @@ export function MailList({ items }: MailListProps) {
                            )}
                         </div>
                         <div
-                           className={cn(
+                           className={ny(
                               'ml-auto text-xs',
                               mail.selected === item.id
                                  ? 'text-foreground'

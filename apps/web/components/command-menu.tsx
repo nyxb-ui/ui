@@ -5,7 +5,7 @@ import { Circle, File, Laptop, Moon, SunMedium } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useRouter } from 'next/navigation'
 import * as React from 'react'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import {
    CommandDialog,
    CommandEmpty,
@@ -44,7 +44,7 @@ export function CommandMenu({ ...props }: DialogProps) {
       <>
          <Button
             variant="outline"
-            className={cn(
+            className={ny(
                'relative w-full justify-start text-sm text-muted-foreground sm:pr-12 md:w-40 lg:w-64',
             )}
             onClick={() => setOpen(true)}

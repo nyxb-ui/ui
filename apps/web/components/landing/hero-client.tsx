@@ -7,7 +7,7 @@ import type { Doc } from '~/.contentlayer/generated'
 import TechStack from '~/components/tech-stack'
 import { buttonVariants } from '~/components/ui/button'
 import { Separator } from '~/components/ui/separator'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import AnimatedBeamMultipleInputDemo from '~/registry/default/example/animated-beam-multiple-inputs'
 import AnimatedListDemo from '~/registry/default/example/animated-list-demo'
 import BentoDemo from '~/registry/default/example/bento-demo'
@@ -29,7 +29,7 @@ export default function HeroClient({ post }: { post: Doc }) {
                      <Link href={post.slug}>
                         <AnimatedGradientText>
                            <div
-                              className={cn(
+                              className={ny(
                       `absolute inset-0 block h-full w-full animate-gradient bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:var(--bg-size)_100%] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]`,
                       `p-[1px] ![mask-composite:subtract]`,
                               )}
@@ -38,7 +38,7 @@ export default function HeroClient({ post }: { post: Doc }) {
                            {' '}
                            <Separator className="mx-2 h-4" orientation="vertical" />
                            <span
-                              className={cn(`animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`, `inline`)}
+                              className={ny(`animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`, `inline`)}
                            >
                               Introducing
                               {' '}
@@ -57,7 +57,7 @@ export default function HeroClient({ post }: { post: Doc }) {
                      </div>
 
                      <p className="max-w-xl text-balance text-left text-base tracking-tight text-black dark:font-medium dark:text-white md:text-center md:text-lg ">
-                        20+ free and open-source animated components built with
+                        150+ free and open-source UI components built with
                         {' '}
                         <span className="font-bold text-black dark:text-white">
                            React
@@ -85,7 +85,7 @@ export default function HeroClient({ post }: { post: Doc }) {
                         <div className="flex w-full flex-col gap-2 sm:flex-row sm:gap-4">
                            <Link
                               href="/components"
-                              className={cn(
+                              className={ny(
                                  buttonVariants({ variant: 'default', size: 'lg' }),
                                  'gap-2 whitespace-pre md:flex',
                                  'group relative w-full gap-1 rounded-full text-sm font-semibold tracking-tighter ring-offset-inherit transition-all duration-150 ease-in-out hover:ring-2 hover:ring-black hover:ring-offset-2 hover:ring-offset-current dark:hover:ring-neutral-50',
@@ -96,7 +96,7 @@ export default function HeroClient({ post }: { post: Doc }) {
                            </Link>
                            <Link
                               href="/docs"
-                              className={cn(
+                              className={ny(
                                  buttonVariants({
                                     size: 'lg',
                                     variant: 'outline',

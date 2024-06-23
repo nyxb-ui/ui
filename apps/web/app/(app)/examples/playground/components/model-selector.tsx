@@ -5,7 +5,7 @@ import { CaretSortIcon, CheckIcon } from '@radix-ui/react-icons'
 import type { PopoverProps } from '@radix-ui/react-popover'
 
 import type { Model, ModelType } from '../data/models'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { useMutationObserver } from '~/hooks/use-mutation-observer'
 import { Button } from '~/registry/miami/ui/button'
 import {
@@ -153,7 +153,7 @@ function ModelItem({ model, isSelected, onSelect, onPeek }: ModelItemProps) {
       >
          {model.name}
          <CheckIcon
-            className={cn(
+            className={ny(
                'ml-auto h-4 w-4',
                isSelected ? 'opacity-100' : 'opacity-0',
             )}

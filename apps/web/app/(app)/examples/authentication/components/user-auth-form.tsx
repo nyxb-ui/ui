@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Icons } from '~/components/icons'
 import { Button } from '~/registry/miami/ui/button'
 import { Input } from '~/registry/miami/ui/input'
@@ -23,7 +23,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
    }
 
    return (
-      <div className={cn('grid gap-6', className)} {...props}>
+      <div className={ny('grid gap-6', className)} {...props}>
          <form onSubmit={onSubmit}>
             <div className="grid gap-2">
                <div className="grid gap-1">

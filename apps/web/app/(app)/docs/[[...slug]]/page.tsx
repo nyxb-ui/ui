@@ -12,7 +12,7 @@ import { badgeVariants } from '~/components/ui/badge'
 import { ScrollArea } from '~/components/ui/scroll-area'
 import { siteConfig } from '~/config/site'
 import { getTableOfContents } from '~/lib/toc'
-import { absoluteUrl, cn } from '~/lib/utils'
+import { absoluteUrl, ny } from '~/lib/utils'
 import '~/styles/mdx.css'
 
 interface DocPageProps {
@@ -84,7 +84,7 @@ export default async function DocPage({ params }: DocPageProps) {
 
    return (
       <main
-         className={cn('relative py-6 lg:gap-10 lg:py-8 xl:grid ', {
+         className={ny('relative py-6 lg:gap-10 lg:py-8 xl:grid ', {
             'xl:grid-cols-[1fr_300px]': doc.toc,
          })}
       >
@@ -97,7 +97,7 @@ export default async function DocPage({ params }: DocPageProps) {
                <div className="font-medium text-foreground">{doc.title}</div>
             </div>
             <div className="space-y-2">
-               <h1 className={cn('scroll-m-20 text-4xl font-bold tracking-tight')}>
+               <h1 className={ny('scroll-m-20 text-4xl font-bold tracking-tight')}>
                   {doc.title}
                </h1>
                {doc.description && (
@@ -114,7 +114,7 @@ export default async function DocPage({ params }: DocPageProps) {
                            href={doc.links.doc}
                            target="_blank"
                            rel="noreferrer"
-                           className={cn(badgeVariants({ variant: 'secondary' }), 'gap-1')}
+                           className={ny(badgeVariants({ variant: 'secondary' }), 'gap-1')}
                         >
                            Docs
                            <ExternalLinkIcon className="h-3 w-3" />
@@ -125,7 +125,7 @@ export default async function DocPage({ params }: DocPageProps) {
                            href={doc.links.api}
                            target="_blank"
                            rel="noreferrer"
-                           className={cn(badgeVariants({ variant: 'secondary' }), 'gap-1')}
+                           className={ny(badgeVariants({ variant: 'secondary' }), 'gap-1')}
                         >
                            API Reference
                            <ExternalLinkIcon className="h-3 w-3" />

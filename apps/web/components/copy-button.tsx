@@ -7,7 +7,7 @@ import type { NpmCommands } from 'types/unist'
 
 import type { Event } from '~/lib/events'
 import { trackEvent } from '~/lib/events'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import type { ButtonProps } from '~/components/ui/button'
 import { Button } from '~/components/ui/button'
 import {
@@ -50,7 +50,7 @@ export function CopyButton({
       <Button
          size="icon"
          variant={variant}
-         className={cn(
+         className={ny(
             'relative z-10 h-6 w-6 text-zinc-50 hover:bg-background/70 hover:text-zinc-50',
             className,
          )}
@@ -114,7 +114,7 @@ export function CopyWithClassNames({
             <Button
                size="icon"
                variant="ghost"
-               className={cn(
+               className={ny(
                   'relative z-10 h-6 w-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50',
                   className,
                )}
@@ -178,7 +178,7 @@ export function CopyNpmCommandButton({
             <Button
                size="icon"
                variant="ghost"
-               className={cn(
+               className={ny(
                   'relative z-10 h-6 w-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50',
                   className,
                )}

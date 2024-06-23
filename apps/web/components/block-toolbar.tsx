@@ -5,7 +5,7 @@ import { CircleHelp, Monitor, Smartphone, Tablet } from 'lucide-react'
 import type { ImperativePanelHandle } from 'react-resizable-panels'
 
 import { trackEvent } from '~/lib/events'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { useLiftMode } from '~/hooks/use-lift-mode'
 import { BlockCopyButton } from '~/components/block-copy-button'
 import { StyleSwitcher } from '~/components/style-switcher'
@@ -107,7 +107,7 @@ export function BlockToolbar({
                   <a href={`#${block.name}`}>
                      <Badge
                         variant="secondary"
-                        className={cn('bg-transparent', isLiftMode && 'opacity-50')}
+                        className={ny('bg-transparent', isLiftMode && 'opacity-50')}
                      >
                         {block.name}
                      </Badge>

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { buttonVariants } from '~/registry/miami/ui/button'
 import { UserAuthForm } from '~/app/(app)/examples/authentication/components/user-auth-form'
 
@@ -33,7 +33,7 @@ export default function AuthenticationPage() {
          <div className="container relative hidden h-[800px] flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
             <Link
                href="/examples/authentication"
-               className={cn(
+               className={ny(
                   buttonVariants({ variant: 'ghost' }),
                   'absolute right-4 top-4 md:right-8 md:top-8',
                )}

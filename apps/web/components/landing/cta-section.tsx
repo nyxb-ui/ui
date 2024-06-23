@@ -1,6 +1,6 @@
 import { ChevronRight, HeartHandshake } from 'lucide-react'
 import { buttonVariants } from '~/components/ui/button'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 export default function CTASection() {
    return (
@@ -19,7 +19,7 @@ export default function CTASection() {
                      href="https://nyxb.gives"
                      target="_blank"
                      rel="noreferrer"
-                     className={cn(
+                     className={ny(
                         buttonVariants({
                            size: 'lg',
                            variant: 'outline',

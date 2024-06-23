@@ -5,7 +5,7 @@ import { useFieldArray, useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Button } from '~/registry/miami/ui/button'
 import {
    Form,
@@ -166,10 +166,10 @@ export function ProfileForm() {
                      name={`urls.${index}.value`}
                      render={({ field }) => (
                         <FormItem>
-                           <FormLabel className={cn(index !== 0 && 'sr-only')}>
+                           <FormLabel className={ny(index !== 0 && 'sr-only')}>
                               URLs
                            </FormLabel>
-                           <FormDescription className={cn(index !== 0 && 'sr-only')}>
+                           <FormDescription className={ny(index !== 0 && 'sr-only')}>
                               Add links to your website, blog, or social media profiles.
                            </FormDescription>
                            <FormControl>

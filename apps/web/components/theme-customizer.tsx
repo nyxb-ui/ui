@@ -13,7 +13,7 @@ import template from 'lodash.template'
 import { Paintbrush } from 'lucide-react'
 import { useTheme } from 'next-themes'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { useConfig } from '~/hooks/use-config'
 import { copyToClipboardWithMeta } from '~/components/copy-button'
 import { ThemeWrapper } from '~/components/theme-wrapper'
@@ -91,7 +91,7 @@ export function ThemeCustomizer() {
                                              ...config,
                                              theme: theme.name,
                                           })}
-                                       className={cn(
+                                       className={ny(
                                           'flex h-9 w-9 items-center justify-center rounded-full border-2 text-xs',
                                           isActive
                                              ? 'border-[--theme-primary]'
@@ -108,7 +108,7 @@ export function ThemeCustomizer() {
                         }
                                     >
                                        <span
-                                          className={cn(
+                                          className={ny(
                                              'flex h-6 w-6 items-center justify-center rounded-full bg-[--theme-primary]',
                                           )}
                                        >
@@ -254,7 +254,7 @@ function Customizer() {
                      variant="outline"
                      size="sm"
                      onClick={() => setConfig({ ...config, style: 'default' })}
-                     className={cn(
+                     className={ny(
                         config.style === 'default' && 'border-2 border-primary',
                      )}
                   >
@@ -264,7 +264,7 @@ function Customizer() {
                      variant="outline"
                      size="sm"
                      onClick={() => setConfig({ ...config, style: 'miami' })}
-                     className={cn(
+                     className={ny(
                         config.style === 'miami' && 'border-2 border-primary',
                      )}
                   >
@@ -290,7 +290,7 @@ function Customizer() {
                                     theme: theme.name,
                                  })
                               }}
-                              className={cn(
+                              className={ny(
                                  'justify-start',
                                  isActive && 'border-2 border-primary',
                               )}
@@ -303,7 +303,7 @@ function Customizer() {
                   }
                            >
                               <span
-                                 className={cn(
+                                 className={ny(
                                     'mr-1 flex h-5 w-5 shrink-0 -translate-x-1 items-center justify-center rounded-full bg-[--theme-primary]',
                                  )}
                               >
@@ -333,7 +333,7 @@ function Customizer() {
                                  radius: Number.parseFloat(value),
                               })
                            }}
-                           className={cn(
+                           className={ny(
                               config.radius === Number.parseFloat(value)
                               && 'border-2 border-primary',
                            )}
@@ -354,7 +354,7 @@ function Customizer() {
                               variant="outline"
                               size="sm"
                               onClick={() => setMode('light')}
-                              className={cn(mode === 'light' && 'border-2 border-primary')}
+                              className={ny(mode === 'light' && 'border-2 border-primary')}
                            >
                               <SunIcon className="mr-1 -translate-x-1" />
                               Light
@@ -363,7 +363,7 @@ function Customizer() {
                               variant="outline"
                               size="sm"
                               onClick={() => setMode('dark')}
-                              className={cn(mode === 'dark' && 'border-2 border-primary')}
+                              className={ny(mode === 'dark' && 'border-2 border-primary')}
                            >
                               <MoonIcon className="mr-1 -translate-x-1" />
                               Dark

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import type { SidebarNavItem } from '~/types'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 export interface DocsSidebarNavProps {
    items: SidebarNavItem[]
@@ -17,7 +17,7 @@ export function DocsSidebarNav({ items }: DocsSidebarNavProps) {
       ? (
          <div className="w-full">
             {items.map((item, index) => (
-               <div key={index} className={cn('pb-4')}>
+               <div key={index} className={ny('pb-4')}>
                   <h4 className="mb-1 rounded-md px-2 py-1 text-sm font-semibold">
                      {item.title}
                   </h4>
@@ -49,7 +49,7 @@ export function DocsSidebarNavItems({
                      <Link
                         key={index}
                         href={item.href}
-                        className={cn(
+                        className={ny(
                            'group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline',
                            item.disabled && 'cursor-not-allowed opacity-60',
                            pathname === item.href
@@ -70,7 +70,7 @@ export function DocsSidebarNavItems({
                   : (
                      <span
                         key={index}
-                        className={cn(
+                        className={ny(
                            'flex w-full cursor-not-allowed items-center rounded-md p-2 text-muted-foreground hover:underline',
                            item.disabled && 'cursor-not-allowed opacity-60',
                         )}

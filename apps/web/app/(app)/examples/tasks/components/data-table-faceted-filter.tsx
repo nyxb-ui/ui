@@ -2,7 +2,7 @@ import * as React from 'react'
 import { CheckIcon, PlusCircledIcon } from '@radix-ui/react-icons'
 import type { Column } from '@tanstack/react-table'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Badge } from '~/registry/miami/ui/badge'
 import { Button } from '~/registry/miami/ui/button'
 import {
@@ -108,14 +108,14 @@ export function DataTableFacetedFilter<TData, TValue>({
                               }}
                            >
                               <div
-                                 className={cn(
+                                 className={ny(
                                     'mr-2 flex h-4 w-4 items-center justify-center rounded-sm border border-primary',
                                     isSelected
                                        ? 'bg-primary text-primary-foreground'
                                        : 'opacity-50 [&_svg]:invisible',
                                  )}
                               >
-                                 <CheckIcon className={cn('h-4 w-4')} />
+                                 <CheckIcon className={ny('h-4 w-4')} />
                               </div>
                               {option.icon && (
                                  <option.icon className="mr-2 h-4 w-4 text-muted-foreground" />

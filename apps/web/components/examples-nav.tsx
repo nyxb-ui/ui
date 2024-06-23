@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ArrowRightIcon } from '@radix-ui/react-icons'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { ScrollArea, ScrollBar } from '~/registry/miami/ui/scroll-area'
 
 const examples = [
@@ -58,12 +58,12 @@ export function ExamplesNav({ className, ...props }: ExamplesNavProps) {
    return (
       <div className="relative">
          <ScrollArea className="max-w-[600px] lg:max-w-none">
-            <div className={cn('mb-4 flex items-center', className)} {...props}>
+            <div className={ny('mb-4 flex items-center', className)} {...props}>
                {examples.map((example, index) => (
                   <Link
                      href={example.href}
                      key={example.href}
-                     className={cn(
+                     className={ny(
                         'flex h-7 items-center justify-center rounded-full px-4 text-center text-sm transition-colors hover:text-primary',
                         pathname?.startsWith(example.href)
                         || (index === 0 && pathname === '/')

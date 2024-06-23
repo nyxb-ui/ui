@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import {
    Select,
    SelectContent,
@@ -31,7 +31,7 @@ export function AccountSwitcher({
    return (
       <Select defaultValue={selectedAccount} onValueChange={setSelectedAccount}>
          <SelectTrigger
-            className={cn(
+            className={ny(
                'flex items-center gap-2 [&>span]:line-clamp-1 [&>span]:flex [&>span]:w-full [&>span]:items-center [&>span]:gap-1 [&>span]:truncate [&_svg]:h-4 [&_svg]:w-4 [&_svg]:shrink-0',
                isCollapsed
                && 'flex h-9 w-9 shrink-0 items-center justify-center p-0 [&>span]:w-auto [&>svg]:hidden',
@@ -40,7 +40,7 @@ export function AccountSwitcher({
          >
             <SelectValue placeholder="Select an account">
                {accounts.find(account => account.email === selectedAccount)?.icon}
-               <span className={cn('ml-2', isCollapsed && 'hidden')}>
+               <span className={ny('ml-2', isCollapsed && 'hidden')}>
                   {
               accounts.find(account => account.email === selectedAccount)
                  ?.label

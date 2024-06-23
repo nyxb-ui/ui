@@ -3,7 +3,7 @@ import { PlusCircledIcon } from '@radix-ui/react-icons'
 
 import type { Album } from '../data/albums'
 import { playlists } from '../data/playlists'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import {
    ContextMenu,
    ContextMenuContent,
@@ -31,7 +31,7 @@ export function AlbumArtwork({
    ...props
 }: AlbumArtworkProps) {
    return (
-      <div className={cn('space-y-3', className)} {...props}>
+      <div className={ny('space-y-3', className)} {...props}>
          <ContextMenu>
             <ContextMenuTrigger>
                <div className="overflow-hidden rounded-md">
@@ -40,7 +40,7 @@ export function AlbumArtwork({
                      alt={album.name}
                      width={width}
                      height={height}
-                     className={cn(
+                     className={ny(
                         'h-auto w-auto object-cover transition-all hover:scale-105',
                         aspectRatio === 'portrait' ? 'aspect-[3/4]' : 'aspect-square',
                      )}

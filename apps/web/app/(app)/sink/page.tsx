@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Link from 'next/link'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import AccordionDemo from '~/registry/default/example/accordion-demo'
 import AlertDialogDemo from '~/registry/default/example/alert-dialog-demo'
 import AspectRatioDemo from '~/registry/default/example/aspect-ratio-demo'
@@ -201,7 +201,7 @@ function ComponentWrapper({
 }: React.HTMLAttributes<HTMLDivElement>) {
    return (
       <div
-         className={cn(
+         className={ny(
             'flex items-center justify-between space-x-4 rounded-md p-4',
             className,
          )}

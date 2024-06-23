@@ -8,7 +8,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 import type { NpmCommands } from 'types/unist'
 
 import type { Event } from '~/lib/events'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { useConfig } from '~/hooks/use-config'
 import { Callout } from '~/components/callout'
 import { CodeBlockWrapper } from '~/components/code-block-wrapper'
@@ -84,7 +84,7 @@ const components = {
    ComponentSource: (props: any) => <ComponentSource {...props} />,
    h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
       <h1
-         className={cn(
+         className={ny(
             'font-heading mt-2 scroll-m-20 text-4xl font-bold',
             className,
          )}
@@ -93,7 +93,7 @@ const components = {
    ),
    h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
       <h2
-         className={cn(
+         className={ny(
             'font-heading mt-12 scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0',
             className,
          )}
@@ -102,7 +102,7 @@ const components = {
    ),
    h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
       <h3
-         className={cn(
+         className={ny(
             'font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight',
             className,
          )}
@@ -111,7 +111,7 @@ const components = {
    ),
    h4: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
       <h4
-         className={cn(
+         className={ny(
             'font-heading mt-8 scroll-m-20 text-lg font-semibold tracking-tight',
             className,
          )}
@@ -120,7 +120,7 @@ const components = {
    ),
    h5: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
       <h5
-         className={cn(
+         className={ny(
             'mt-8 scroll-m-20 text-lg font-semibold tracking-tight',
             className,
          )}
@@ -129,7 +129,7 @@ const components = {
    ),
    h6: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
       <h6
-         className={cn(
+         className={ny(
             'mt-8 scroll-m-20 text-base font-semibold tracking-tight',
             className,
          )}
@@ -144,36 +144,36 @@ const components = {
    ),
    p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
       <p
-         className={cn('leading-7 [&:not(:first-child)]:mt-6', className)}
+         className={ny('leading-7 [&:not(:first-child)]:mt-6', className)}
          {...props}
       />
    ),
    ul: ({ className, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
-      <ul className={cn('my-6 list-disc', className)} {...props} />
+      <ul className={ny('my-6 list-disc', className)} {...props} />
    ),
    ol: ({ className, ...props }: React.HTMLAttributes<HTMLOListElement>) => (
-      <ol className={cn('my-6 list-decimal', className)} {...props} />
+      <ol className={ny('my-6 list-decimal', className)} {...props} />
    ),
    li: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
-      <li className={cn('mt-2', className)} {...props} />
+      <li className={ny('mt-2', className)} {...props} />
    ),
    blockquote: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
       <blockquote
-         className={cn('mt-6 border-l-2 pl-6 italic', className)}
+         className={ny('mt-6 border-l-2 pl-6 italic', className)}
          {...props}
       />
    ),
    table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
       <div className="w-full overflow-y-auto">
-         <table className={cn('w-full', className)} {...props} />
+         <table className={ny('w-full', className)} {...props} />
       </div>
    ),
    tr: ({ className, ...props }: React.HTMLAttributes<HTMLTableRowElement>) => (
-      <tr className={cn('m-0 border-t p-0', className)} {...props} />
+      <tr className={ny('m-0 border-t p-0', className)} {...props} />
    ),
    th: ({ className, ...props }: React.HTMLAttributes<HTMLTableCellElement>) => (
       <th
-         className={cn(
+         className={ny(
             'border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right',
             className,
          )}
@@ -182,7 +182,7 @@ const components = {
    ),
    td: ({ className, ...props }: React.HTMLAttributes<HTMLTableCellElement>) => (
       <td
-         className={cn(
+         className={ny(
             'whitespace-pre border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right',
             className,
          )}
@@ -211,7 +211,7 @@ const components = {
       return (
          <StyleWrapper styleName={__style__}>
             <pre
-               className={cn(
+               className={ny(
                   'mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border bg-zinc-950 py-4 dark:bg-zinc-900',
                   className,
                )}
@@ -222,7 +222,7 @@ const components = {
                   value={__rawString__}
                   src={__src__}
                   event={__event__}
-                  className={cn('absolute right-4 top-4', __withMeta__ && 'top-16')}
+                  className={ny('absolute right-4 top-4', __withMeta__ && 'top-16')}
                />
             )}
             {__npmCommand__
@@ -236,7 +236,7 @@ const components = {
                      __pnpmCommand__,
                      __bunCommand__,
                   }}
-                  className={cn('absolute right-4 top-4', __withMeta__ && 'top-16')}
+                  className={ny('absolute right-4 top-4', __withMeta__ && 'top-16')}
                />
             )}
          </StyleWrapper>
@@ -244,7 +244,7 @@ const components = {
    },
    code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
       <code
-         className={cn(
+         className={ny(
             'relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm',
             className,
          )}
@@ -257,7 +257,7 @@ const components = {
    ),
    Step: ({ className, ...props }: React.ComponentProps<'h3'>) => (
       <div
-         className={cn(
+         className={ny(
             'font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight',
             className,
          )}
@@ -271,14 +271,14 @@ const components = {
       />
    ),
    Tabs: ({ className, ...props }: React.ComponentProps<typeof Tabs>) => (
-      <Tabs className={cn('relative mt-6 w-full', className)} {...props} />
+      <Tabs className={ny('relative mt-6 w-full', className)} {...props} />
    ),
    TabsList: ({
       className,
       ...props
    }: React.ComponentProps<typeof TabsList>) => (
       <TabsList
-         className={cn(
+         className={ny(
             'w-full justify-start rounded-none border-b bg-transparent p-0',
             className,
          )}
@@ -290,7 +290,7 @@ const components = {
       ...props
    }: React.ComponentProps<typeof TabsTrigger>) => (
       <TabsTrigger
-         className={cn(
+         className={ny(
             'relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none',
             className,
          )}
@@ -302,7 +302,7 @@ const components = {
       ...props
    }: React.ComponentProps<typeof TabsContent>) => (
       <TabsContent
-         className={cn(
+         className={ny(
             'relative [&_h3.font-heading]:text-base [&_h3.font-heading]:font-semibold',
             className,
          )}
@@ -313,17 +313,17 @@ const components = {
       className,
       ...props
    }: React.ComponentProps<typeof FrameworkDocs>) => (
-      <FrameworkDocs className={cn(className)} {...props} />
+      <FrameworkDocs className={ny(className)} {...props} />
    ),
    Link: ({ className, ...props }: React.ComponentProps<typeof Link>) => (
       <Link
-         className={cn('font-medium underline underline-offset-4', className)}
+         className={ny('font-medium underline underline-offset-4', className)}
          {...props}
       />
    ),
    LinkedCard: ({ className, ...props }: React.ComponentProps<typeof Link>) => (
       <Link
-         className={cn(
+         className={ny(
             'flex w-full flex-col items-center rounded-xl border bg-card p-6 text-card-foreground shadow transition-colors hover:bg-muted/50 sm:p-10',
             className,
          )}
@@ -344,7 +344,7 @@ export function Mdx({ code }: MDXProps) {
 
    return (
       <article
-         className={cn(
+         className={ny(
             'max-w-[120ch]',
             'leading-tighter prose prose-gray tracking-tighter dark:prose-invert',
             'prose-pre:mb-4 prose-pre:mt-6 prose-pre:max-h-[650px] prose-pre:overflow-x-auto prose-pre:rounded-lg prose-pre:border prose-pre:px-0 prose-pre:py-4 prose-pre:text-xs prose-pre:tracking-tighter md:prose-pre:text-sm',

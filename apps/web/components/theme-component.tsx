@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { Index } from '~/__registry__'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { useConfig } from '~/hooks/use-config'
 import { Icons } from '~/components/icons'
 
@@ -38,7 +38,7 @@ export function ThemeComponent({ name, ...props }: ThemeComponentProps) {
    }, [name, config.style])
 
    return (
-      <div className={cn('relative')} {...props}>
+      <div className={ny('relative')} {...props}>
          <React.Suspense
             fallback={(
                <div className="flex items-center text-sm text-muted-foreground">

@@ -11,7 +11,7 @@ import { ScrollArea } from '~/components/ui/scroll-area'
 import { Sheet, SheetContent, SheetTrigger } from '~/components/ui/sheet'
 import { docsConfig } from '~/config/docs'
 import { siteConfig } from '~/config/site'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 export function MobileNav() {
    const [open, setOpen] = React.useState(false)
@@ -108,7 +108,7 @@ function MobileLink({
             router.push(href.toString())
             onOpenChange?.(false)
          }}
-         className={cn(className)}
+         className={ny(className)}
          {...props}
       >
          {children}

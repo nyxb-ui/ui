@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { CopyButton, CopyWithClassNames } from '~/components/copy-button'
 import {
    Tabs,
@@ -44,7 +44,7 @@ export function ComponentExample({
 
    return (
       <div
-         className={cn('group relative my-4 flex flex-col space-y-2', className)}
+         className={ny('group relative my-4 flex flex-col space-y-2', className)}
          {...props}
       >
          <Tabs defaultValue="preview" className="relative mr-auto w-full">
@@ -82,7 +82,7 @@ export function ComponentExample({
             </div>
             <TabsContent value="preview" className="rounded-md border">
                <div
-                  className={cn('flex min-h-[350px] justify-center p-10', {
+                  className={ny('flex min-h-[350px] justify-center p-10', {
                      'items-center': align === 'center',
                      'items-start': align === 'start',
                      'items-end': align === 'end',

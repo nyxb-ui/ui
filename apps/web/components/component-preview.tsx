@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { RotateCcw } from 'lucide-react'
 import { Index } from '~/__registry__'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { useConfig } from '~/hooks/use-config'
 import { CopyButton } from '~/components/copy-button'
 import { Icons } from '~/components/icons'
@@ -82,7 +82,7 @@ export function ComponentPreview({
 
    return (
       <div
-         className={cn(
+         className={ny(
             'relative my-4 flex flex-col space-y-2 lg:max-w-[120ch]',
             className,
          )}

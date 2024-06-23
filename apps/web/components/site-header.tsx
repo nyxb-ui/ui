@@ -7,7 +7,7 @@ import { MobileNav } from '~/components/mobile-nav'
 import { ModeToggle } from '~/components/mode-toggle'
 import { buttonVariants } from '~/components/ui/button'
 import { siteConfig } from '~/config/site'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import NumberTicker from '~/registry/miami/ui/number-ticker'
 
 export async function SiteHeader() {
@@ -40,7 +40,7 @@ export async function SiteHeader() {
 
    return (
       <header
-         className={cn(
+         className={ny(
             'supports-backdrop-blur:bg-background/90 sticky top-0 z-40 w-full bg-background/40 backdrop-blur-lg',
          )}
       >
@@ -49,7 +49,7 @@ export async function SiteHeader() {
             <MobileNav />
             <div className="flex flex-1 items-center justify-between gap-2 md:justify-end">
                <Link
-                  className={cn(
+                  className={ny(
                      buttonVariants(),
                      'hidden max-w-52 gap-2 overflow-hidden whitespace-pre md:flex',
                      'group relative w-full justify-center gap-2 rounded-md transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2',
@@ -82,7 +82,7 @@ export async function SiteHeader() {
                      rel="noreferrer"
                   >
                      <div
-                        className={cn(
+                        className={ny(
                            buttonVariants({
                               variant: 'ghost',
                            }),
@@ -99,7 +99,7 @@ export async function SiteHeader() {
                      rel="noreferrer"
                   >
                      <div
-                        className={cn(
+                        className={ny(
                            buttonVariants({
                               variant: 'ghost',
                            }),
@@ -116,7 +116,7 @@ export async function SiteHeader() {
                      rel="noreferrer"
                   >
                      <div
-                        className={cn(
+                        className={ny(
                            buttonVariants({
                               variant: 'ghost',
                            }),
@@ -133,7 +133,7 @@ export async function SiteHeader() {
                      rel="noreferrer"
                   >
                      <div
-                        className={cn(
+                        className={ny(
                            buttonVariants({
                               variant: 'ghost',
                            }),
