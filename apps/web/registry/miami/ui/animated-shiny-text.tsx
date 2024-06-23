@@ -1,5 +1,5 @@
 import type { CSSProperties, FC, ReactNode } from 'react'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 interface AnimatedShinyTextProps {
    children: ReactNode
@@ -19,7 +19,7 @@ const AnimatedShinyText: FC<AnimatedShinyTextProps> = ({
            '--shimmer-width': `${shimmerWidth}px`,
         } as CSSProperties
       }
-         className={cn(
+         className={ny(
             'mx-auto max-w-md text-neutral-600/50 dark:text-neutral-400/50 ',
 
             // Shimmer effect

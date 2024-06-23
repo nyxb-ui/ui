@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 interface LetterPullupProps {
    className?: string
@@ -36,7 +36,7 @@ export default function LetterPullup({
                initial="initial"
                animate="animate"
                custom={i}
-               className={cn(
+               className={ny(
                   'font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-4xl md:leading-[5rem]',
                   className,
                )}

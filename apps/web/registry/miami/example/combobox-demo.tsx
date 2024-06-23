@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { CaretSortIcon, CheckIcon } from '@radix-ui/react-icons'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Button } from '~/registry/miami/ui/button'
 import {
    Command,
@@ -78,7 +78,7 @@ export default function ComboboxDemo() {
                         >
                            {framework.label}
                            <CheckIcon
-                              className={cn(
+                              className={ny(
                                  'ml-auto h-4 w-4',
                                  value === framework.value ? 'opacity-100' : 'opacity-0',
                               )}

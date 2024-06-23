@@ -1,4 +1,4 @@
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import Marquee from '~/registry/miami/ui/marquee'
 
 const reviews = [
@@ -56,7 +56,7 @@ function ReviewCard({
 }) {
    return (
       <figure
-         className={cn(
+         className={ny(
             'relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4',
             // light styles
             'border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]',

@@ -9,7 +9,7 @@ import {
    CommandItem,
    CommandList,
 } from '~/components/ui/command'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import AnimatedBeamMultipleOutputDemo from '~/registry/miami/example/animated-beam-multiple-outputs'
 import { BentoCard, BentoGrid } from '~/registry/miami/ui/bento-grid'
 import Marquee from '~/registry/miami/ui/marquee'
@@ -82,7 +82,7 @@ notifications = Array.from({ length: 10 }, () => notifications).flat()
 function Notification({ name, description, icon, color, time }: Item) {
    return (
       <figure
-         className={cn(
+         className={ny(
             'relative mx-auto min-h-fit w-full max-w-[400px] transform cursor-pointer overflow-hidden rounded-2xl p-4',
             // animation styles
             'transition-all duration-200 ease-in-out hover:scale-[103%]',
@@ -132,7 +132,7 @@ const features = [
             {files.map((f, idx) => (
                <figure
                   key={idx}
-                  className={cn(
+                  className={ny(
                      'relative w-32 cursor-pointer overflow-hidden rounded-xl border p-4',
                      'border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]',
                      'dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]',

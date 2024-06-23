@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useEffect, useId, useRef, useState } from 'react'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 interface GridPatternProps {
    width?: number
@@ -94,7 +94,7 @@ export function GridPattern({
       <svg
          ref={containerRef}
          aria-hidden="true"
-         className={cn(
+         className={ny(
             'pointer-events-none absolute inset-0 h-full w-full fill-gray-400/30 stroke-gray-400/30',
             className,
          )}

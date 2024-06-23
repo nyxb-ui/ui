@@ -11,7 +11,7 @@ import {
 } from 'lucide-react'
 import { useEffect, useId, useRef, useState } from 'react'
 import Marquee from '~/registry/miami/ui/marquee'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 const tiles = [
    {
@@ -90,7 +90,7 @@ function Card(card: { icon: JSX.Element, bg: JSX.Element }) {
          ref={ref}
          initial={{ opacity: 0 }}
          animate={controls}
-         className={cn(
+         className={ny(
             'relative size-20 cursor-pointer overflow-hidden rounded-2xl border p-4',
             // light styles
             'bg-white',

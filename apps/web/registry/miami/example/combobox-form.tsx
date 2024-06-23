@@ -6,7 +6,7 @@ import { CaretSortIcon, CheckIcon } from '@radix-ui/react-icons'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Button } from '~/registry/miami/ui/button'
 import {
    Command,
@@ -83,7 +83,7 @@ export default function ComboboxForm() {
                               <Button
                                  variant="outline"
                                  role="combobox"
-                                 className={cn(
+                                 className={ny(
                                     'w-[200px] justify-between',
                                     !field.value && 'text-muted-foreground',
                                  )}
@@ -117,7 +117,7 @@ export default function ComboboxForm() {
                                        >
                                           {language.label}
                                           <CheckIcon
-                                             className={cn(
+                                             className={ny(
                                                 'ml-auto h-4 w-4',
                                                 language.value === field.value
                                                    ? 'opacity-100'

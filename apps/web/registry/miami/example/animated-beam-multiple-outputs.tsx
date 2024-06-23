@@ -1,7 +1,7 @@
 'use client'
 
 import React, { forwardRef, useRef } from 'react'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { AnimatedBeam } from '~/registry/miami/ui/animated-beam'
 
 const Circle = forwardRef<
@@ -11,7 +11,7 @@ const Circle = forwardRef<
    return (
       <div
          ref={ref}
-         className={cn(
+         className={ny(
             'z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]',
             className,
          )}
@@ -37,7 +37,7 @@ export default function AnimatedBeamMultipleOutputDemo({
 
    return (
       <div
-         className={cn(
+         className={ny(
             'relative flex w-full max-w-[500px] items-center justify-center overflow-hidden rounded-lg border bg-background p-10 md:shadow-xl',
             className,
          )}

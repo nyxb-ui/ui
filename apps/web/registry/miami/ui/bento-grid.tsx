@@ -1,7 +1,7 @@
 import { ArrowRightIcon } from '@radix-ui/react-icons'
 import type { ReactNode } from 'react'
 import { Button } from '~/components/ui/button'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 function BentoGrid({
    children,
@@ -12,7 +12,7 @@ function BentoGrid({
 }) {
    return (
       <div
-         className={cn(
+         className={ny(
             'grid w-full auto-rows-[22rem] grid-cols-3 gap-4',
             className,
          )}
@@ -42,7 +42,7 @@ function BentoCard({
    return (
       <div
          key={name}
-         className={cn(
+         className={ny(
             'group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl',
             // light styles
             'bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]',
@@ -61,7 +61,7 @@ function BentoCard({
          </div>
 
          <div
-            className={cn(
+            className={ny(
                'pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100',
             )}
          >

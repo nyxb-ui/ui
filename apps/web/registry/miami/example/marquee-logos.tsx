@@ -1,4 +1,4 @@
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import Marquee from '~/registry/miami/ui/marquee'
 
 const logos = [
@@ -30,7 +30,7 @@ const logos = [
 
 function Logo({ name, img }: { name: string, img: string }) {
    return (
-      <div className={cn('h-12 w-12 cursor-pointer')}>
+      <div className={ny('h-12 w-12 cursor-pointer')}>
          <img src={img} alt={name} />
       </div>
    )
