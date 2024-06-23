@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import type { ReactElement } from 'react'
 import React, { useEffect, useMemo, useState } from 'react'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 export const AnimatedList = React.memo(
    ({
@@ -107,7 +107,7 @@ notifications = Array.from({ length: 10 }, () => notifications).flat()
 function Notification({ name, description, icon, color, time }: Item) {
    return (
       <figure
-         className={cn(
+         className={ny(
             'relative mx-auto min-h-fit w-full max-w-[400px] transform cursor-pointer overflow-hidden rounded-lg p-4',
             // animation styles
             'transition-all duration-200 ease-in-out hover:scale-[103%]',

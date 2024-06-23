@@ -4,7 +4,7 @@ import type { COBEOptions } from 'cobe'
 import createGlobe from 'cobe'
 import { useCallback, useEffect, useRef } from 'react'
 import { useSpring } from 'react-spring'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 const GLOBE_CONFIG: COBEOptions = {
    width: 800,
@@ -102,13 +102,13 @@ export default function Globe({
 
    return (
       <div
-         className={cn(
+         className={ny(
             'absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]',
             className,
          )}
       >
          <canvas
-            className={cn(
+            className={ny(
                'h-full w-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]',
             )}
             ref={canvasRef}

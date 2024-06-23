@@ -3,7 +3,7 @@
 import * as React from 'react'
 import { Check, ChevronsUpDown } from 'lucide-react'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Button } from '~/registry/default/ui/button'
 import {
    Command,
@@ -77,7 +77,7 @@ export default function ComboboxDemo() {
                            }}
                         >
                            <Check
-                              className={cn(
+                              className={ny(
                                  'mr-2 h-4 w-4',
                                  value === framework.value ? 'opacity-100' : 'opacity-0',
                               )}

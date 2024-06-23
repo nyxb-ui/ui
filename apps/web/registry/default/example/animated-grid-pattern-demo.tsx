@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import AnimatedGridPattern from '~/registry/default/ui/animated-grid-pattern'
 
 function AnimatedGridPatternDemo() {
@@ -14,7 +14,7 @@ function AnimatedGridPatternDemo() {
             maxOpacity={0.5}
             duration={3}
             repeatDelay={1}
-            className={cn(
+            className={ny(
                '[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]',
                'inset-x-0 inset-y-[-30%] h-[200%] skew-y-12',
             )}

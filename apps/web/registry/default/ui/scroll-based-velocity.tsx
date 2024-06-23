@@ -11,7 +11,7 @@ import {
    useVelocity,
 } from 'framer-motion'
 import React, { useEffect, useRef, useState } from 'react'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 interface VelocityScrollProps {
    text: string
@@ -88,7 +88,7 @@ export function VelocityScroll({
             className="w-full overflow-hidden whitespace-nowrap"
             ref={containerRef}
          >
-            <motion.div className={cn('inline-block', className)} style={{ x }}>
+            <motion.div className={ny('inline-block', className)} style={{ x }}>
                {Array.from({ length: repetitions }).map((_, i) => (
                   <span key={i} ref={i === 0 ? textRef : null}>
                      {children}

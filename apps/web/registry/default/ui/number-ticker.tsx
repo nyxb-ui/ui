@@ -2,7 +2,7 @@
 
 import { useInView, useMotionValue, useSpring } from 'framer-motion'
 import { useEffect, useRef } from 'react'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 export default function NumberTicker({
    value,
@@ -44,7 +44,7 @@ export default function NumberTicker({
 
    return (
       <span
-         className={cn(
+         className={ny(
             'inline-block tabular-nums text-black dark:text-white tracking-wider',
             className,
          )}

@@ -3,7 +3,7 @@ import React from 'react'
 import type { LucideIcon, LucideProps } from 'lucide-react'
 import { StarIcon } from 'lucide-react'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 interface StarWrapperProps {
    value?: number
@@ -31,12 +31,12 @@ function StarRating({
    const IconComponent = icon
 
    return (
-      <div className={cn('flex items-center gap-1', wrapperClassName)} {...restWrapperProps}>
+      <div className={ny('flex items-center gap-1', wrapperClassName)} {...restWrapperProps}>
          {Array.from({ length: numStars }, (_, i) => {
             const isRated = i < value!
             const styledIconProps: LucideProps = {
                onMouseEnter: () => !showcase && !disabled && setValue!(i + 1),
-               className: cn('size-6 fill-primary stroke-primary', {
+               className: ny('size-6 fill-primary stroke-primary', {
                   'opacity-50 pointer-events-none': disabled,
                   'transition-transform duration-300 hover:scale-110': !disabled && !showcase,
                   '!fill-muted !stroke-muted': !isRated,

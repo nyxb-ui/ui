@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { useMediaQuery } from '~/hooks/use-media-query'
 import { Button } from '~/registry/default/ui/button'
 import {
@@ -72,7 +72,7 @@ export default function DrawerDialogDemo() {
 
 function ProfileForm({ className }: React.ComponentProps<'form'>) {
    return (
-      <form className={cn('grid items-start gap-4', className)}>
+      <form className={ny('grid items-start gap-4', className)}>
          <div className="grid gap-2">
             <Label htmlFor="email">Email</Label>
             <Input type="email" id="email" defaultValue="nyxb~example.com" />

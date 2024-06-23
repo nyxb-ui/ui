@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 interface SeparateAwayProps {
    upper_text: string
@@ -36,7 +36,7 @@ export function SeparateAway({
             variants={separate}
             initial="hidden"
             animate="visible"
-            className={cn(className)}
+            className={ny(className)}
          >
             {upper_text}
          </motion.h1>
@@ -45,7 +45,7 @@ export function SeparateAway({
             variants={separate}
             initial="hidden"
             animate="visible"
-            className={cn(className)}
+            className={ny(className)}
          >
             {lower_text}
          </motion.h1>

@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import GridPattern from '~/registry/default/ui/grid-pattern'
 
 function GridPatternDemo() {
@@ -18,7 +18,7 @@ function GridPatternDemo() {
                [10, 5],
                [13, 3],
             ]}
-            className={cn(
+            className={ny(
                '[mask-image:radial-gradient(200px_circle_at_center,white,transparent)]',
                'inset-x-0 inset-y-[-30%] h-[200%] skew-y-12',
             )}

@@ -5,7 +5,7 @@ import { addDays, format } from 'date-fns'
 import { Calendar as CalendarIcon } from 'lucide-react'
 import type { DateRange } from 'react-day-picker'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Button } from '~/registry/default/ui/button'
 import { Calendar } from '~/registry/default/ui/calendar'
 import {
@@ -23,13 +23,13 @@ export default function DatePickerWithRange({
    })
 
    return (
-      <div className={cn('grid gap-2', className)}>
+      <div className={ny('grid gap-2', className)}>
          <Popover>
             <PopoverTrigger asChild>
                <Button
                   id="date"
                   variant="outline"
-                  className={cn(
+                  className={ny(
                      'w-[300px] justify-start text-left font-normal',
                      !date && 'text-muted-foreground',
                   )}

@@ -10,7 +10,7 @@ import {
    XCircle,
 } from 'lucide-react'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Button } from '~/registry/default/ui/button'
 import {
    Command,
@@ -107,7 +107,7 @@ export default function ComboboxPopover() {
                               }}
                            >
                               <status.icon
-                                 className={cn(
+                                 className={ny(
                                     'mr-2 h-4 w-4',
                                     status.value === selectedStatus?.value
                                        ? 'opacity-100'

@@ -1,9 +1,9 @@
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 export default function RetroGrid({ className }: { className?: string }) {
    return (
       <div
-         className={cn(
+         className={ny(
             'pointer-events-none absolute h-full w-full overflow-hidden opacity-50 [perspective:200px]',
             className,
          )}
@@ -11,7 +11,7 @@ export default function RetroGrid({ className }: { className?: string }) {
          {/* Grid */}
          <div className="absolute inset-0 [transform:rotateX(35deg)]">
             <div
-               className={cn(
+               className={ny(
                   'animate-grid',
 
                   '[background-repeat:repeat] [background-size:60px_60px] [height:300vh] [inset:0%_0px] [margin-left:-50%] [transform-origin:100%_0_0] [width:600vw]',

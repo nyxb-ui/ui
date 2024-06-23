@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import type { RefObject } from 'react'
 import { useEffect, useId, useState } from 'react'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 export interface AnimatedBeamProps {
    className?: string
@@ -125,7 +125,7 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
          width={svgDimensions.width}
          height={svgDimensions.height}
          xmlns="http://www.w3.org/2000/svg"
-         className={cn(
+         className={ny(
             'pointer-events-none absolute left-0 top-0 transform-gpu stroke-2',
             className,
          )}

@@ -1,7 +1,7 @@
 'use client'
 
 import DotPattern from '~/registry/default/ui/dot-pattern'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 function DotPatternDemo2() {
    return (
@@ -15,7 +15,7 @@ function DotPatternDemo2() {
             cx={1}
             cy={1}
             cr={1}
-            className={cn(
+            className={ny(
                '[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] ',
             )}
          />

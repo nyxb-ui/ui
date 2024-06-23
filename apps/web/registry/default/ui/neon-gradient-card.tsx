@@ -2,7 +2,7 @@
 
 import type { CSSProperties, ReactElement, ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 interface NeonColorsProps {
    firstColor: string
@@ -115,14 +115,14 @@ const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
            '--after-blur': `${dimensions.width / 3}px`,
         } as CSSProperties
       }
-         className={cn(
+         className={ny(
             'relative z-10 h-full w-full rounded-[var(--border-radius)]',
             className,
          )}
          {...props}
       >
          <div
-            className={cn(
+            className={ny(
                'relative h-full min-h-[inherit] w-full rounded-[var(--card-content-radius)] bg-gray-100 p-6',
                'before:absolute before:-left-[var(--border-size)] before:-top-[var(--border-size)] before:-z-10 before:block',
                'before:h-[var(--pseudo-element-height)] before:w-[var(--pseudo-element-width)] before:rounded-[var(--border-radius)] before:content-[\'\']',

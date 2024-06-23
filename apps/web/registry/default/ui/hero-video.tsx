@@ -3,7 +3,7 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { X } from 'lucide-react'
 import React, { Fragment, useContext, useState } from 'react'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 interface HeroVideoProps {
    children?: React.ReactNode
@@ -71,7 +71,7 @@ function HeroVideo({ children, image, title = 'Demo' }: HeroVideoProps) {
    return (
       <HeroVideoContext.Provider value={{ openModal, closeModal }}>
          <div
-            className={cn('absolute inset-[1px] flex overflow-hidden rounded-2xl')}
+            className={ny('absolute inset-[1px] flex overflow-hidden rounded-2xl')}
          >
             {actionChild}
             <img

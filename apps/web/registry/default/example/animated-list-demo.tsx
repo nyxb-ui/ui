@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { AnimatedList } from '~/registry/default/ui/animated-list'
 
 interface Item {
@@ -48,7 +48,7 @@ notifications = Array.from({ length: 10 }, () => notifications).flat()
 function Notification({ name, description, icon, color, time }: Item) {
    return (
       <figure
-         className={cn(
+         className={ny(
             'relative mx-auto min-h-fit w-full max-w-[400px] transform cursor-pointer overflow-hidden rounded-2xl p-4',
             // animation styles
             'transition-all duration-200 ease-in-out hover:scale-[103%]',

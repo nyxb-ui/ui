@@ -3,7 +3,7 @@ import { CaretSortIcon, CheckIcon } from '@radix-ui/react-icons'
 import * as RPNInput from 'react-phone-number-input'
 import flags from 'react-phone-number-input/flags'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Button } from '~/registry/miami/ui/button'
 import {
    Command,
@@ -34,7 +34,7 @@ const InputPhone: React.ForwardRefExoticComponent<InputPhoneProps>
      ({ className, onChange, ...props }, ref) => (
         <RPNInput.default
            ref={ref}
-           className={cn('flex', className)}
+           className={ny('flex', className)}
            flagComponent={FlagComponent}
            countrySelectComponent={CountrySelect}
            inputComponent={InputComponent}
@@ -57,7 +57,7 @@ InputPhone.displayName = 'InputPhone'
 const InputComponent = React.forwardRef<HTMLInputElement, InputProps>(
    ({ className, ...props }, ref) => (
       <Input
-         className={cn('rounded-s-none rounded-e-lg', className)}
+         className={ny('rounded-s-none rounded-e-lg', className)}
          {...props}
          ref={ref}
       />
@@ -91,12 +91,12 @@ function CountrySelect({
             <Button
                type="button"
                variant="outline"
-               className={cn('flex gap-1 rounded-e-none rounded-s-lg px-3')}
+               className={ny('flex gap-1 rounded-e-none rounded-s-lg px-3')}
                disabled={disabled}
             >
                <FlagComponent country={value} countryName={value} />
                <CaretSortIcon
-                  className={cn(
+                  className={ny(
                      'h-4 w-4 opacity-50 -mr-2',
                      disabled ? 'hidden' : 'opacity-100',
                   )}
@@ -126,7 +126,7 @@ function CountrySelect({
                               </span>
                            )}
                            <CheckIcon
-                              className={cn(
+                              className={ny(
                                  'ml-auto h-4 w-4',
                                  option.value === value ? 'opacity-100' : 'opacity-0',
                               )}

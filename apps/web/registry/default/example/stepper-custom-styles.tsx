@@ -1,4 +1,4 @@
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Button } from '~/registry/default/ui/button'
 import type {
    StepItem,
@@ -22,7 +22,7 @@ export default function StepperDemo() {
             initialStep={0}
             steps={steps}
             styles={{
-               'step-button-container': cn(
+               'step-button-container': ny(
                   'text-purple-700 rounded-none',
                   'data-[current=true]:border-purple-500 data-[current=true]:bg-purple-50',
                   'data-[active=true]:bg-purple-500 data-[active=true]:border-purple-500',

@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import GridPattern from '~/registry/default/ui/grid-pattern'
 
 function GridPatternDashed() {
@@ -15,7 +15,7 @@ function GridPatternDashed() {
             x={-1}
             y={-1}
             strokeDasharray="4 2"
-            className={cn(
+            className={ny(
                '[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]',
             )}
          />

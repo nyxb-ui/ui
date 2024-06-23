@@ -4,7 +4,7 @@ import * as React from 'react'
 import { addDays, format } from 'date-fns'
 import { Calendar as CalendarIcon } from 'lucide-react'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Button } from '~/registry/default/ui/button'
 import { Calendar } from '~/registry/default/ui/calendar'
 import {
@@ -28,7 +28,7 @@ export default function DatePickerWithPresets() {
          <PopoverTrigger asChild>
             <Button
                variant="outline"
-               className={cn(
+               className={ny(
                   'w-[280px] justify-start text-left font-normal',
                   !date && 'text-muted-foreground',
                )}

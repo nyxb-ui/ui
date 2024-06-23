@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import DotPattern from '~/registry/default/ui/dot-pattern'
 
 function DotPatternDemo() {
@@ -10,7 +10,7 @@ function DotPatternDemo() {
             Dot Pattern
          </p>
          <DotPattern
-            className={cn(
+            className={ny(
                '[mask-image:radial-gradient(200px_circle_at_center,white,transparent)]',
             )}
          />

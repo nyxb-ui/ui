@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 type TColorProp = `#${string}` | `#${string}`[]
 interface ShineBorderProps {
@@ -37,7 +37,7 @@ export default function ShineBorder({
            '--border-radius': `${borderRadius}px`,
         } as React.CSSProperties
       }
-         className={cn(
+         className={ny(
             'relative grid min-h-[60px] w-fit min-w-[300px] place-items-center rounded-[--border-radius]  bg-white p-3 text-black dark:bg-black dark:text-white',
             className,
          )}

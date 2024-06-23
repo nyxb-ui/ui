@@ -4,7 +4,7 @@ import { Slot } from '@radix-ui/react-slot'
 import type { ControllerProps, FieldPath, FieldValues } from 'react-hook-form'
 import { Controller, FormProvider, useFormContext, useFormState } from 'react-hook-form'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Label } from '~/registry/default/ui/label'
 
 const Form = FormProvider
@@ -69,7 +69,7 @@ const FormItem = React.forwardRef<
 
    return (
       <FormItemContext.Provider value={{ id }}>
-         <div ref={ref} className={cn('space-y-2', className)} {...props} />
+         <div ref={ref} className={ny('space-y-2', className)} {...props} />
       </FormItemContext.Provider>
    )
 })
@@ -84,7 +84,7 @@ const FormLabel = React.forwardRef<
    return (
       <Label
          ref={ref}
-         className={cn(error && 'text-destructive', className)}
+         className={ny(error && 'text-destructive', className)}
          htmlFor={formItemId}
          {...props}
       />
@@ -125,7 +125,7 @@ const FormDescription = React.forwardRef<
       <p
          ref={ref}
          id={formDescriptionId}
-         className={cn('text-sm text-muted-foreground', className)}
+         className={ny('text-sm text-muted-foreground', className)}
          {...props}
       />
    )
@@ -146,7 +146,7 @@ const FormMessage = React.forwardRef<
       <p
          ref={ref}
          id={formMessageId}
-         className={cn('text-sm font-medium text-destructive', className)}
+         className={ny('text-sm font-medium text-destructive', className)}
          {...props}
       >
          {body}
@@ -167,7 +167,7 @@ const FormGlobalError = React.forwardRef<
    return (
       <p
          ref={ref}
-         className={cn('text-sm font-medium text-destructive', className)}
+         className={ny('text-sm font-medium text-destructive', className)}
          {...props}
       >
          {rootError.message}

@@ -5,7 +5,7 @@ import { cva } from 'class-variance-authority'
 import type { LucideIcon } from 'lucide-react'
 import { CheckIcon, Loader2, X } from 'lucide-react'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Button } from '~/registry/default/ui/button'
 import {
    Collapsible,
@@ -282,7 +282,7 @@ const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
          >
             <div
                ref={ref}
-               className={cn(
+               className={ny(
                   'stepper__main-container',
                   'flex w-full flex-wrap',
                   stepCount === 1 ? 'justify-end' : 'justify-between',
@@ -475,7 +475,7 @@ const verticalStepVariants = cva(
    {
       variants: {
          variant: {
-            circle: cn(
+            circle: ny(
                '[&:not(:last-child)]:pb-[var(--step-gap)] [&:not(:last-child)]:gap-[var(--step-gap)]',
                '[&:not(:last-child)]:after:content-[\'\'] [&:not(:last-child)]:after:w-[2px] [&:not(:last-child)]:after:bg-border',
                '[&:not(:last-child)]:after:inset-x-[calc(var(--step-icon-size)/2)]',
@@ -572,7 +572,7 @@ const VerticalStep = React.forwardRef<HTMLDivElement, VerticalStepProps>(
       return (
          <div
             ref={ref}
-            className={cn(
+            className={ny(
                'stepper__vertical-step',
                verticalStepVariants({
                   variant: variant?.includes('circle') ? 'circle' : 'line',
@@ -595,7 +595,7 @@ const VerticalStep = React.forwardRef<HTMLDivElement, VerticalStepProps>(
             <div
                data-vertical
                data-active={active}
-               className={cn(
+               className={ny(
                   'stepper__vertical-step-container',
                   'flex items-center',
                   variant === 'line'
@@ -626,7 +626,7 @@ const VerticalStep = React.forwardRef<HTMLDivElement, VerticalStepProps>(
                />
             </div>
             <div
-               className={cn(
+               className={ny(
                   'stepper__vertical-step-content',
                   !isLastStep && 'min-h-4',
                   variant !== 'line' && 'ps-[--step-icon-size]',
@@ -686,7 +686,7 @@ const HorizontalStep = React.forwardRef<HTMLDivElement, StepSharedProps>(
       return (
          <div
             aria-disabled={!hasVisited}
-            className={cn(
+            className={ny(
                'stepper__horizontal-step',
                'flex items-center relative transition-all duration-200',
                '[&:not(:last-child)]:flex-1',
@@ -711,7 +711,7 @@ const HorizontalStep = React.forwardRef<HTMLDivElement, StepSharedProps>(
             ref={ref}
          >
             <div
-               className={cn(
+               className={ny(
                   'stepper__horizontal-step-container',
                   'flex items-center',
                   variant === 'circle-alt' && 'flex-col justify-center gap-1',
@@ -779,7 +779,7 @@ function StepButtonContainer({
       <Button
          variant="ghost"
          tabIndex={currentStepClickable ? 0 : -1}
-         className={cn(
+         className={ny(
             'stepper__step-button-container',
             'rounded-full p-0 pointer-events-none',
             'w-[var(--step-icon-size)] h-[var(--step-icon-size)]',
@@ -867,13 +867,13 @@ const StepIcon = React.forwardRef<HTMLDivElement, StepIconProps>(
             if (isError && isKeepError) {
                return (
                   <div key="icon">
-                     <X className={cn(iconVariants({ size }))} />
+                     <X className={ny(iconVariants({ size }))} />
                   </div>
                )
             }
             return (
                <div key="check-icon">
-                  <Check className={cn(iconVariants({ size }))} />
+                  <Check className={ny(iconVariants({ size }))} />
                </div>
             )
          }
@@ -881,27 +881,27 @@ const StepIcon = React.forwardRef<HTMLDivElement, StepIconProps>(
             if (isError && ErrorIcon) {
                return (
                   <div key="error-icon">
-                     <ErrorIcon className={cn(iconVariants({ size }))} />
+                     <ErrorIcon className={ny(iconVariants({ size }))} />
                   </div>
                )
             }
             if (isError) {
                return (
                   <div key="icon">
-                     <X className={cn(iconVariants({ size }))} />
+                     <X className={ny(iconVariants({ size }))} />
                   </div>
                )
             }
             if (isLoading) {
                return (
-                  <Loader2 className={cn(iconVariants({ size }), 'animate-spin')} />
+                  <Loader2 className={ny(iconVariants({ size }), 'animate-spin')} />
                )
             }
          }
          if (Icon) {
             return (
                <div key="step-icon">
-                  <Icon className={cn(iconVariants({ size }))} />
+                  <Icon className={ny(iconVariants({ size }))} />
                </div>
             )
          }
@@ -909,7 +909,7 @@ const StepIcon = React.forwardRef<HTMLDivElement, StepIconProps>(
             <span
                ref={ref}
                key="label"
-               className={cn('font-medium text-center text-md')}
+               className={ny('font-medium text-center text-md')}
             >
                {(index || 0) + 1}
             </span>
@@ -978,7 +978,7 @@ function StepLabel({
       ? (
          <div
             aria-current={isCurrentStep ? 'step' : undefined}
-            className={cn(
+            className={ny(
                'stepper__step-label-container',
                'flex-col flex',
                variant !== 'line' ? 'ms-2' : orientation === 'horizontal' && 'my-2',
@@ -993,7 +993,7 @@ function StepLabel({
          >
             {!!label && (
                <span
-                  className={cn(
+                  className={ny(
                      'stepper__step-label',
                      labelVariants({ size }),
                      styles?.['step-label'],
@@ -1004,7 +1004,7 @@ function StepLabel({
             )}
             {!!description && (
                <span
-                  className={cn(
+                  className={ny(
                      'stepper__step-description',
                      'text-muted-foreground',
                      descriptionVariants({ size }),

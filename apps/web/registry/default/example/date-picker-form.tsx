@@ -6,7 +6,7 @@ import { CalendarIcon } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Button } from '~/registry/default/ui/button'
 import { Calendar } from '~/registry/default/ui/calendar'
 import {
@@ -61,7 +61,7 @@ export default function DatePickerForm() {
                            <FormControl>
                               <Button
                                  variant="outline"
-                                 className={cn(
+                                 className={ny(
                                     'w-[240px] pl-3 text-left font-normal',
                                     !field.value && 'text-muted-foreground',
                                  )}

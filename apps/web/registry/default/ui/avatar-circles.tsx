@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 interface AvatarCirclesProps {
    className?: string
@@ -15,7 +15,7 @@ function AvatarCircles({
    avatarUrls,
 }: AvatarCirclesProps) {
    return (
-      <div className={cn('z-10 flex -space-x-4 rtl:space-x-reverse', className)}>
+      <div className={ny('z-10 flex -space-x-4 rtl:space-x-reverse', className)}>
          {avatarUrls.map((url, index) => (
             <img
                key={index}
