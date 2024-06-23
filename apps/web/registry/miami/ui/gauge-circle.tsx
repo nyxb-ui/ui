@@ -1,4 +1,4 @@
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 interface Props {
    max: number
@@ -23,7 +23,7 @@ export default function GaugeCircle({
 
    return (
       <div
-         className={cn('relative h-40 w-40 text-2xl font-semibold', className)}
+         className={ny('relative h-40 w-40 text-2xl font-semibold', className)}
          style={
         {
            '--circle-size': '100px',

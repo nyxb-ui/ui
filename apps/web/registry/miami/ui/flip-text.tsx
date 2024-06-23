@@ -2,7 +2,7 @@
 
 import type { Variants } from 'framer-motion'
 import { AnimatePresence, motion } from 'framer-motion'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 interface SlightFlipProps {
    word: string
@@ -33,7 +33,7 @@ export default function SlightFlip({
                   exit="hidden"
                   variants={framerProps}
                   transition={{ duration, delay: i * delayMultiple }}
-                  className={cn('origin-center drop-shadow-sm', className)}
+                  className={ny('origin-center drop-shadow-sm', className)}
                >
                   {char}
                </motion.span>
