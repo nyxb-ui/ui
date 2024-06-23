@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 export interface TourContext<T extends string> {
    nodes: Map<
@@ -125,14 +125,14 @@ export function TourFactory<T extends string>(order: T[]) {
       return createPortal(
          <div
             id="tour"
-            className={cn(
+            className={ny(
                'pointer-events-auto fixed left-0 top-0 h-screen w-screen transition-none',
                !ctx.show ? 'invisible' : 'visible',
             )}
          >
             <div
                ref={ref}
-               className={cn(
+               className={ny(
              `absolute z-50 transition-all duration-500 ease-in-out`,
                )}
                style={{

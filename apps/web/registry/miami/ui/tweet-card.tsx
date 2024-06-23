@@ -6,7 +6,7 @@ import {
    enrichTweet,
 } from 'react-tweet'
 import { type Tweet, getTweet } from 'react-tweet/api'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 interface TwitterIconProps {
    className?: string
@@ -60,7 +60,7 @@ function Skeleton({
 }: React.HTMLAttributes<HTMLDivElement>) {
    return (
       <div
-         className={cn('animate-pulse rounded-md bg-primary/10', className)}
+         className={ny('animate-pulse rounded-md bg-primary/10', className)}
          {...props}
       />
    )
@@ -75,7 +75,7 @@ export function TweetSkeleton({
 }) {
    return (
       <div
-         className={cn(
+         className={ny(
             'flex h-full max-h-max w-full min-w-[18rem] flex-col gap-2 rounded-lg border p-4',
             className,
          )}
@@ -99,7 +99,7 @@ export function TweetNotFound({
 }) {
    return (
       <div
-         className={cn(
+         className={ny(
             'flex h-full w-full flex-col items-center justify-center gap-2 rounded-lg border p-4',
             className,
          )}
@@ -252,7 +252,7 @@ export function MagicTweet({
    const enrichedTweet = enrichTweet(tweet)
    return (
       <div
-         className={cn(
+         className={ny(
             'relative flex h-full w-full max-w-[32rem] flex-col gap-2 overflow-hidden rounded-lg border p-4 backdrop-blur-md',
             className,
          )}

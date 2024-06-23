@@ -2,7 +2,7 @@
 
 import type { Variants } from 'framer-motion'
 import { motion } from 'framer-motion'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 interface WordFadeInProps {
    words: string
@@ -31,7 +31,7 @@ export default function WordFadeIn({
          variants={variants}
          initial="hidden"
          animate="visible"
-         className={cn(
+         className={ny(
             'font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]',
             className,
          )}

@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 interface TableOfContentsListProps
    extends React.ComponentPropsWithoutRef<'ul'> {
@@ -13,7 +13,7 @@ const TableOfContentsList = React.forwardRef<
 >(({ className, indent, ...props }, ref) => (
    <ul
       ref={ref}
-      className={cn('m-0 list-none', indent && 'pl-4', className)}
+      className={ny('m-0 list-none', indent && 'pl-4', className)}
       {...props}
    />
 ))
@@ -28,7 +28,7 @@ const TableOfContentsTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
    <li
       ref={ref}
-      className={cn('mb-2 text-sm font-medium', className)}
+      className={ny('mb-2 text-sm font-medium', className)}
       {...props}
    />
 ))
@@ -45,7 +45,7 @@ const TableOfContentsItem = React.forwardRef<
 >(({ className, indent, ...props }, ref) => (
    <li
       ref={ref}
-      className={cn('mt-0 pt-2', indent && 'ml-4', className)}
+      className={ny('mt-0 pt-2', indent && 'ml-4', className)}
       {...props}
    />
 ))
@@ -61,7 +61,7 @@ const TableOfContentsLink = React.forwardRef<
 >(({ className, isActive, ...props }, ref) => (
    <a
       ref={ref}
-      className={cn(
+      className={ny(
          'text-sm font-medium text-foreground transition-colors hover:text-primary',
          isActive ? 'font-medium text-foreground' : 'text-muted-foreground',
          className,

@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { anime } from 'react-anime'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 interface WavyDotPatternProps {
    className?: string
@@ -68,7 +68,7 @@ export function WavyDotPattern({
                disabled={dotClickDisabled}
             >
                <div
-                  className={cn(
+                  className={ny(
                      'dot-point',
                      'rounded-xl bg-gradient-to-r from-[#d9cab3] to-black opacity-35 hover:from-black hover:to-black hover:opacity-100',
                      DOT_WIDTH,
@@ -85,7 +85,7 @@ export function WavyDotPattern({
    return (
       <div
          style={{ gridTemplateColumns: `repeat(${GRID_WIDTH}, 1fr)` }}
-         className={cn('max-w-3/4 absolute z-0 grid', className)}
+         className={ny('max-w-3/4 absolute z-0 grid', className)}
       >
          {dots.map(dot => dot)}
       </div>

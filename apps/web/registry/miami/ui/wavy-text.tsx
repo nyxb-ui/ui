@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from 'framer-motion'
 import { useMemo } from 'react'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 interface WavyTextProps {
    word: string
@@ -42,7 +42,7 @@ function WavyText({
                      duration,
                      delay: i * delay,
                   }}
-                  className={cn(
+                  className={ny(
                      className,
                      'font-display text-center text-4xl font-bold tracking-[-0.15em] md:text-7xl',
                   )}

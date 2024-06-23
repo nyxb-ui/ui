@@ -3,7 +3,7 @@ import { CheckIcon, Cross1Icon } from '@radix-ui/react-icons'
 import type { VariantProps } from 'class-variance-authority'
 import { cva } from 'class-variance-authority'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 const timelineVariants = cva('grid', {
    variants: {
@@ -26,7 +26,7 @@ const Timeline = React.forwardRef<HTMLUListElement, TimelineProps>(
    ({ children, className, positions, ...props }, ref) => {
       return (
          <ul
-            className={cn(timelineVariants({ positions }), className)}
+            className={ny(timelineVariants({ positions }), className)}
             ref={ref}
             {...props}
          >
@@ -56,7 +56,7 @@ interface TimelineItemProps
 const TimelineItem = React.forwardRef<HTMLLIElement, TimelineItemProps>(
    ({ className, status, ...props }, ref) => (
       <li
-         className={cn(timelineItemVariants({ status }), className)}
+         className={ny(timelineItemVariants({ status }), className)}
          ref={ref}
          {...props}
       />
@@ -94,7 +94,7 @@ const TimelineDot = React.forwardRef<HTMLDivElement, TimelineDotProps>(
    ({ className, status, customIcon, ...props }, ref) => (
       <div
          role="status"
-         className={cn('timeline-dot', timelineDotVariants({ status }), className)}
+         className={ny('timeline-dot', timelineDotVariants({ status }), className)}
          ref={ref}
          {...props}
       >
@@ -129,7 +129,7 @@ interface TimelineConentProps
 const TimelineContent = React.forwardRef<HTMLDivElement, TimelineConentProps>(
    ({ className, side, ...props }, ref) => (
       <div
-         className={cn(timelineContentVariants({ side }), className)}
+         className={ny(timelineContentVariants({ side }), className)}
          ref={ref}
          {...props}
       />
@@ -168,7 +168,7 @@ const TimelineHeading = React.forwardRef<
    <p
       role="heading"
       aria-level={variant === 'primary' ? 2 : 3}
-      className={cn(timelineHeadingVariants({ side, variant }), className)}
+      className={ny(timelineHeadingVariants({ side, variant }), className)}
       ref={ref}
       {...props}
    />
@@ -185,7 +185,7 @@ const TimelineLine = React.forwardRef<HTMLHRElement, TimelineLineProps>(
          <hr
             role="separator"
             aria-orientation="vertical"
-            className={cn(
+            className={ny(
                'col-start-2 col-end-3 row-start-2 row-end-2 mx-auto flex h-full min-h-16 w-0.5 justify-center rounded-full',
                done ? 'bg-primary' : 'bg-muted',
                className,
