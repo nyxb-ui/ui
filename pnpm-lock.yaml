@@ -329,8 +329,8 @@ importers:
         version: 3.23.8
     devDependencies:
       '@tailwindcss/typography':
-        specifier: github:tailwindcss/typography
-        version: git+https://git@github.com:tailwindcss/typography.git#2745585cda4518b347c407dfcc4cc1a8a9f2c2d4(tailwindcss@3.4.1(ts-node@10.9.1(@types/node@20.11.24)(typescript@5.4.5)))
+        specifier: ^0.5.9
+        version: 0.5.13(tailwindcss@3.4.1(ts-node@10.9.1(@types/node@20.11.24)(typescript@5.4.5)))
       '@types/canvas-confetti':
         specifier: ^1.6.4
         version: 1.6.4
@@ -3416,9 +3416,8 @@ packages:
       typescript:
         optional: true
 
-  '@tailwindcss/typography@git+https://git@github.com:tailwindcss/typography.git#2745585cda4518b347c407dfcc4cc1a8a9f2c2d4':
-    resolution: {commit: 2745585cda4518b347c407dfcc4cc1a8a9f2c2d4, repo: git@github.com:tailwindcss/typography.git, type: git}
-    version: 0.5.13
+  '@tailwindcss/typography@0.5.13':
+    resolution: {integrity: sha512-ADGcJ8dX21dVVHIwTRgzrcunY6YY9uSlAHHGVKvkA+vLc5qLwEszvKts40lx7z0qc4clpjclwLeK5rVCV2P/uw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
 
@@ -11695,7 +11694,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.4.5
 
-  '@tailwindcss/typography@git+https://git@github.com:tailwindcss/typography.git#2745585cda4518b347c407dfcc4cc1a8a9f2c2d4(tailwindcss@3.4.1(ts-node@10.9.1(@types/node@20.11.24)(typescript@5.4.5)))':
+  '@tailwindcss/typography@0.5.13(tailwindcss@3.4.1(ts-node@10.9.1(@types/node@20.11.24)(typescript@5.4.5)))':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6

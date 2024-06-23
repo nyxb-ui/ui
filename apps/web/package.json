@@ -97,7 +97,7 @@
     "zod": "^3.20.2"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "github:tailwindcss/typography",
+    "@tailwindcss/typography": "^0.5.9",
     "@types/canvas-confetti": "^1.6.4",
     "@types/lodash.template": "^4.5.1",
     "@types/node": "^20",
