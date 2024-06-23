@@ -9,7 +9,6 @@ import {
 } from '~/registry/miami/ui/popover'
 import { ScrollArea } from '~/registry/miami/ui/scroll-area'
 import {
-   Table,
    TableBody,
    TableCell,
    TableHead,

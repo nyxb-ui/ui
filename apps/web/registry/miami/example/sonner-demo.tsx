@@ -11,7 +11,7 @@ export default function SonnerDemo() {
                description: 'Sunday, December 03, 2023 at 9:00 AM',
                action: {
                   label: 'Undo',
-                  // eslint-disable-next-line no-console
+
                   onClick: () => console.log('Undo'),
                },
             })}

@@ -143,7 +143,6 @@ export async function GET(req: Request) {
       )
    }
    catch (e: any) {
-      // eslint-disable-next-line no-console
       console.log(`${e.message}`)
       return new Response(`Failed to generate the image`, {
          status: 500,

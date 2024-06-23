@@ -5,6 +5,8 @@ import cliProgress from 'cli-progress'
 const REGISTRY_PATHS = [
    path.join(process.cwd(), 'public/registry'),
    path.join(process.cwd(), '__registry__'),
+   path.join(process.cwd(), 'registry/miami/block'),
+   path.join(process.cwd(), 'registry/default/block'),
 ]
 
 function runEslintFix() {

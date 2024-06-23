@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import type { NavItem } from '~/types/nav'
 import { siteConfig } from '~/config/site'
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 import { Icons } from '~/components/icons'
 
 interface MainNavProps {
@@ -26,7 +26,7 @@ export function MainNav({ items }: MainNavProps) {
                            <Link
                               key={index}
                               href={item.href}
-                              className={cn(
+                              className={ny(
                                  'flex items-center text-sm font-medium text-muted-foreground',
                                  item.disabled && 'cursor-not-allowed opacity-80',
                               )}

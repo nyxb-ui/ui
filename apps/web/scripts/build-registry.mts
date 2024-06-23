@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 // @ts-nocheck
 import { existsSync, promises as fs, readFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
