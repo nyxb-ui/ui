@@ -40,23 +40,45 @@ export const docsConfig: DocsConfig = {
             {
                title: 'Installation',
                href: '/docs/installation',
-               items: [
-                  {
-                     title: 'Next.js',
-                     href: `/docs/installation/next`,
-                     items: [],
-                  },
-                  {
-                     title: 'Vue.js',
-                     href: `/docs/installation/vue`,
-                     items: [],
-                  },
-                  {
-                     title: 'Svelte',
-                     href: `/docs/installation/svelte`,
-                     items: [],
-                  },
-               ],
+            },
+            {
+               title: 'Story',
+               href: '/docs/story',
+            },
+            {
+               title: 'nyxbui.json',
+               href: '/docs/nyxbui-json',
+               items: [],
+            },
+            {
+               title: 'Theming',
+               href: '/docs/theming',
+               items: [],
+            },
+            {
+               title: 'Dark mode',
+               href: '/docs/dark-mode',
+               items: [],
+            },
+            {
+               title: 'CLI',
+               href: '/docs/cli',
+               items: [],
+            },
+            {
+               title: 'Typography',
+               href: '/docs/components/typography',
+               items: [],
+            },
+            {
+               title: 'Figma',
+               href: '/docs/figma',
+               items: [],
+            },
+            {
+               title: 'Changelog',
+               href: '/docs/changelog',
+               items: [],
             },
          ],
       },
