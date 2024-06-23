@@ -3,7 +3,7 @@
 import * as React from 'react'
 import * as SliderPrimitive from '@radix-ui/react-slider'
 
-import { cn } from '~/lib/utils'
+import { ny } from '~/lib/utils'
 
 interface SliderProps extends React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root> {
    showSteps?: 'none' | 'half' | 'full'
@@ -52,7 +52,7 @@ const Slider = React.forwardRef<
    return (
       <SliderPrimitive.Root
          ref={ref}
-         className={cn(
+         className={ny(
             'relative flex touch-none select-none cursor-pointer data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
             orientation === 'horizontal' ? 'w-full items-center' : 'h-full justify-center',
             className,
@@ -66,12 +66,12 @@ const Slider = React.forwardRef<
          onFocus={() => setHoveredThumbIndex(true)}
          onBlur={() => setHoveredThumbIndex(false)}
       >
-         <SliderPrimitive.Track className={cn(
+         <SliderPrimitive.Track className={ny(
             'relative grow overflow-hidden rounded-full bg-primary/20',
             orientation === 'horizontal' ? 'h-1.5 w-full' : 'h-full w-1.5',
          )}
          >
-            <SliderPrimitive.Range className={cn(
+            <SliderPrimitive.Range className={ny(
                'absolute bg-primary',
                orientation === 'horizontal' ? 'h-full' : 'w-full',
             )}
@@ -85,7 +85,7 @@ const Slider = React.forwardRef<
                return (
                   <div
                      key={index}
-                     className={cn(
+                     className={ny(
                         { 'w-0.5 h-2': orientation !== 'vertical', 'w-2 h-0.5': orientation === 'vertical' },
                         'absolute bg-muted-foreground',
                         {
@@ -108,13 +108,13 @@ const Slider = React.forwardRef<
          {localValues.map((numberStep, index) => (
             <SliderPrimitive.Thumb
                key={index}
-               className={cn(
+               className={ny(
                   'block h-4 w-4 rounded-full border border-primary/50 bg-background shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring',
                )}
             >
                {hoveredThumbIndex && formatLabel && (
                   <div
-                     className={cn(
+                     className={ny(
                         { 'bottom-8 left-1/2 transform -translate-x-1/2': formatLabelSide === 'top' },
                         { 'top-8 left-1/2 transform -translate-x-1/2': formatLabelSide === 'bottom' },
                         { 'right-8 transform -translate-y-1/4': formatLabelSide === 'left' },
