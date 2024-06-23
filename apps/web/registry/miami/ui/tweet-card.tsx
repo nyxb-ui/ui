@@ -228,10 +228,10 @@ export function TweetMedia({ tweet }: { tweet: EnrichedTweet }) {
          // @ts-expect-error is fine
          && tweet?.card?.binding_values?.thumbnail_image_large?.image_value.url && (
             <img
-            // @ts-expect-error is fine
                src={
-              tweet.card.binding_values.thumbnail_image_large.image_value.url
-            }
+                  // @ts-expect-error is fine
+                  tweet.card.binding_values.thumbnail_image_large.image_value.url
+               }
                className="h-64 rounded-xl border object-cover shadow-sm"
             />
          )}
