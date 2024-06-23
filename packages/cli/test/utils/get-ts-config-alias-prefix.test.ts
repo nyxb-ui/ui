@@ -1,5 +1,5 @@
 import path from 'node:path'
-import { describe, expect } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 import { getTsConfigAliasPrefix } from '../../src/utils/get-project-info'
 
@@ -7,7 +7,7 @@ describe('get ts config alias prefix', async () => {
    it.each([
       {
          name: 'next-app',
-         prefix: '@',
+         prefix: '~',
       },
       {
          name: 'next-app-src',
@@ -19,7 +19,7 @@ describe('get ts config alias prefix', async () => {
       },
       {
          name: 'next-pages-src',
-         prefix: '@',
+         prefix: '~',
       },
       {
          name: 't3-app',

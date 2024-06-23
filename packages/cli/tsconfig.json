@@ -6,8 +6,9 @@
     "paths": {
       "~/*": ["./*"]
     },
+    "types": ["vitest"],
     "isolatedModules": false
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "vitest/globals", "global.d.ts"],
   "exclude": ["node_modules"]
 }

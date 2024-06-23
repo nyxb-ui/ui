@@ -74,6 +74,9 @@ it('init config-full', async () => {
          'class-variance-authority',
          'clsx',
          'tailwind-merge',
+         'framer-motion',
+         'react-spring',
+         'cobe',
          '@radix-ui/react-icons',
       ],
       {
@@ -144,6 +147,9 @@ it('init config-partial', async () => {
          'class-variance-authority',
          'clsx',
          'tailwind-merge',
+         'framer-motion',
+         'react-spring',
+         'cobe',
          'lucide-react',
       ],
       {

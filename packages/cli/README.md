@@ -6,7 +6,7 @@ A CLI for adding components to your project.
 
 Use the `init` command to initialize dependencies for a new project.
 
-The `init` command installs dependencies, adds the `cn` util, configures `tailwind.config.js`, and CSS variables for the project.
+The `init` command installs dependencies, adds the `ny` util, configures `tailwind.config.ts`, and CSS variables for the project.
 
 ```bash
 npx nyxbui init

@@ -1,5 +1,5 @@
 import path from 'node:path'
-import { describe, expect } from 'vitest'
+import { describe, expect, it } from 'vitest'
 
 import { isTypeScriptProject } from '../../src/utils/get-project-info'
 

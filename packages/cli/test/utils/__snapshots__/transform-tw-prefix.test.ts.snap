@@ -14,10 +14,10 @@ exports[`transform tailwind prefix 1`] = `
 exports[`transform tailwind prefix 2`] = `
 "import * as React from \\"react\\"
 export function Foo() {
-	return (
-        <div
-            className=\\"tw-bg-white hover:tw-bg-stone-100 tw-text-stone-50 sm:focus:tw-text-stone-900 dark:tw-bg-stone-950 dark:hover:tw-bg-stone-800 dark:tw-text-stone-900 dark:sm:focus:tw-text-stone-50\\">foo</div>
-    );
+   return (
+      <div
+         className=\\"tw-bg-white hover:tw-bg-stone-100 tw-text-stone-50 sm:focus:tw-text-stone-900 dark:tw-bg-stone-950 dark:hover:tw-bg-stone-800 dark:tw-text-stone-900 dark:sm:focus:tw-text-stone-50\\">foo</div>
+   );
 }
     "
 `;
@@ -25,23 +25,23 @@ export function Foo() {
 exports[`transform tailwind prefix 3`] = `
 "import * as React from \\"react\\"
 export function Foo() {
-	return (
-        <div
-            className={cn(
-                \\"tw-bg-white hover:tw-bg-stone-100 dark:tw-bg-stone-950 dark:hover:tw-bg-stone-800\\",
-                true && \\"tw-text-stone-50 sm:focus:tw-text-stone-900 dark:tw-text-stone-900 dark:sm:focus:tw-text-stone-50\\"
-            )}>foo</div>
-    );
+   return (
+      <div
+         className={ny(
+            \\"tw-bg-white hover:tw-bg-stone-100 dark:tw-bg-stone-950 dark:hover:tw-bg-stone-800\\",
+            true && \\"tw-text-stone-50 sm:focus:tw-text-stone-900 dark:tw-text-stone-900 dark:sm:focus:tw-text-stone-50\\"
+         )}>foo</div>
+   );
 }
     "
 `;
 
 exports[`transform tailwind prefix 4`] = `
-"@tailwind base;
-@tailwind components;
-@tailwind utilities;
+"~tailwind base;
+~tailwind components;
+~tailwind utilities;
  
-@layer base {
+~layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 224 71.4% 4.1%;
@@ -107,12 +107,12 @@ exports[`transform tailwind prefix 4`] = `
   }
 }
  
-@layer base {
+~layer base {
   * {
-    @apply tw-border-border;
+    ~apply border-border;
   }
   body {
-    @apply tw-bg-background tw-text-foreground;
+    ~apply bg-background text-foreground;
   }
 }"
 `;

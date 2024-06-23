@@ -67,7 +67,7 @@ export const transformCssVars: Transformer = async ({
 //           node.value.expression.type === "CallExpression"
 //         ) {
 //           const callee = node.value.expression.callee
-//           if (callee.type === "Identifier" && callee.name === "cn") {
+//           if (callee.type === "Identifier" && callee.name === "ny") {
 //             node.value.expression.arguments.forEach((arg) => {
 //               if (arg.type === "StringLiteral") {
 //                 arg.value = applyColorMapping(arg.value)
