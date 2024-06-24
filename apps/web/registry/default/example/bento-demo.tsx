@@ -121,7 +121,7 @@ const features = [
       Icon: FileTextIcon,
       name: 'Save your files',
       description: 'We automatically save your files as you type.',
-      href: '/',
+      href: '/docs',
       cta: 'Learn more',
       className: 'col-span-3 lg:col-span-1',
       background: (
@@ -156,7 +156,7 @@ const features = [
       Icon: InputIcon,
       name: 'Full text search',
       description: 'Search through all your files in one place.',
-      href: '/',
+      href: '/docs',
       cta: 'Learn more',
       className: 'col-span-3 lg:col-span-2',
       background: (
@@ -180,7 +180,7 @@ const features = [
       Icon: Share2Icon,
       name: 'Integrations',
       description: 'Supports 100+ integrations and counting.',
-      href: '/',
+      href: '/docs',
       cta: 'Learn more',
       className: 'col-span-3 lg:col-span-2',
       background: (
@@ -192,7 +192,7 @@ const features = [
       name: 'Calendar',
       description: 'Use the calendar to filter your files by date.',
       className: 'col-span-3 lg:col-span-1',
-      href: '/',
+      href: '/docs',
       cta: 'Learn more',
       background: (
          <Calendar

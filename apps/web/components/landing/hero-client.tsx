@@ -118,12 +118,10 @@ export default function HeroClient({ post }: { post: Doc }) {
                   <TechStack
                      className="mx-auto flex w-full items-center justify-between"
                      technologies={[
-                        // "nextjs",
                         'react',
                         'typescript',
                         'tailwindcss',
                         'framermotion',
-                        // "nyxb",
                      ]}
                   />
                </div>
