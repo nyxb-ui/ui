@@ -4,6 +4,7 @@ import { getPackageInfo } from './utils/get-package-info'
 import { add } from '~/src/commands/add'
 import { diff } from '~/src/commands/diff'
 import { init } from '~/src/commands/init'
+import { createRemoveCommand } from '~/src/commands/remove'
 
 process.on('SIGINT', () => process.exit(0))
 process.on('SIGTERM', () => process.exit(0))
@@ -13,14 +14,18 @@ async function main() {
 
    const program = new Command()
       .name('nyxbui')
-      .description('add components and dependencies to your project')
+      .description('Manage nyxbui components and dependencies to your project')
       .version(
          packageInfo.version || '1.0.0',
          '-v, --version',
          'display the version number',
       )
 
-   program.addCommand(init).addCommand(add).addCommand(diff)
+   program
+      .addCommand(init)
+      .addCommand(add)
+      .addCommand(diff)
+      .addCommand(createRemoveCommand())
 
    program.parse()
 }
