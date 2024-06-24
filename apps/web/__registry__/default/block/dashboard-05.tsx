@@ -400,7 +400,7 @@ export default function Dashboard() {
                                        <TableCell>
                                           <div className="font-medium">Liam Johnson</div>
                                           <div className="hidden text-sm text-muted-foreground md:inline">
-                                             liam~example.com
+                                             liam@example.com
                                           </div>
                                        </TableCell>
                                        <TableCell className="hidden sm:table-cell">
@@ -420,7 +420,7 @@ export default function Dashboard() {
                                        <TableCell>
                                           <div className="font-medium">Olivia Smith</div>
                                           <div className="hidden text-sm text-muted-foreground md:inline">
-                                             olivia~example.com
+                                             olivia@example.com
                                           </div>
                                        </TableCell>
                                        <TableCell className="hidden sm:table-cell">
@@ -440,7 +440,7 @@ export default function Dashboard() {
                                        <TableCell>
                                           <div className="font-medium">Noah Williams</div>
                                           <div className="hidden text-sm text-muted-foreground md:inline">
-                                             noah~example.com
+                                             noah@example.com
                                           </div>
                                        </TableCell>
                                        <TableCell className="hidden sm:table-cell">
@@ -460,7 +460,7 @@ export default function Dashboard() {
                                        <TableCell>
                                           <div className="font-medium">Emma Brown</div>
                                           <div className="hidden text-sm text-muted-foreground md:inline">
-                                             emma~example.com
+                                             emma@example.com
                                           </div>
                                        </TableCell>
                                        <TableCell className="hidden sm:table-cell">
@@ -480,7 +480,7 @@ export default function Dashboard() {
                                        <TableCell>
                                           <div className="font-medium">Liam Johnson</div>
                                           <div className="hidden text-sm text-muted-foreground md:inline">
-                                             liam~example.com
+                                             liam@example.com
                                           </div>
                                        </TableCell>
                                        <TableCell className="hidden sm:table-cell">
@@ -500,7 +500,7 @@ export default function Dashboard() {
                                        <TableCell>
                                           <div className="font-medium">Liam Johnson</div>
                                           <div className="hidden text-sm text-muted-foreground md:inline">
-                                             liam~example.com
+                                             liam@example.com
                                           </div>
                                        </TableCell>
                                        <TableCell className="hidden sm:table-cell">
@@ -520,7 +520,7 @@ export default function Dashboard() {
                                        <TableCell>
                                           <div className="font-medium">Olivia Smith</div>
                                           <div className="hidden text-sm text-muted-foreground md:inline">
-                                             olivia~example.com
+                                             olivia@example.com
                                           </div>
                                        </TableCell>
                                        <TableCell className="hidden sm:table-cell">
@@ -540,7 +540,7 @@ export default function Dashboard() {
                                        <TableCell>
                                           <div className="font-medium">Emma Brown</div>
                                           <div className="hidden text-sm text-muted-foreground md:inline">
-                                             emma~example.com
+                                             emma@example.com
                                           </div>
                                        </TableCell>
                                        <TableCell className="hidden sm:table-cell">

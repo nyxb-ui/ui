@@ -42,26 +42,18 @@ export async function getRegistryStyles() {
 
 export async function getRegistryBaseColors() {
    return [
-      {
-         name: 'slate',
-         label: 'Slate',
-      },
-      {
-         name: 'gray',
-         label: 'Gray',
-      },
-      {
-         name: 'zinc',
-         label: 'Zinc',
-      },
-      {
-         name: 'neutral',
-         label: 'Neutral',
-      },
-      {
-         name: 'stone',
-         label: 'Stone',
-      },
+      { name: 'blue', label: 'Blue' },
+      { name: 'gray', label: 'Gray' },
+      { name: 'green', label: 'Green' },
+      { name: 'neutral', label: 'Neutral' },
+      { name: 'orange', label: 'Orange' },
+      { name: 'red', label: 'Red' },
+      { name: 'rose', label: 'Rose' },
+      { name: 'slate', label: 'Slate' },
+      { name: 'stone', label: 'Stone' },
+      { name: 'violet', label: 'Violet' },
+      { name: 'yellow', label: 'Yellow' },
+      { name: 'zinc', label: 'Zinc' },
    ]
 }
 

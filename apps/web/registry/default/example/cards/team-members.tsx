@@ -47,7 +47,7 @@ export function CardsTeamMembers() {
                   </Avatar>
                   <div>
                      <p className="text-sm font-medium leading-none">Sofia Davis</p>
-                     <p className="text-sm text-muted-foreground">m~example.com</p>
+                     <p className="text-sm text-muted-foreground">m@example.com</p>
                   </div>
                </div>
                <Popover>
@@ -102,7 +102,7 @@ export function CardsTeamMembers() {
                   </Avatar>
                   <div>
                      <p className="text-sm font-medium leading-none">Jackson Lee</p>
-                     <p className="text-sm text-muted-foreground">p~example.com</p>
+                     <p className="text-sm text-muted-foreground">p@example.com</p>
                   </div>
                </div>
                <Popover>
@@ -159,7 +159,7 @@ export function CardsTeamMembers() {
                      <p className="text-sm font-medium leading-none">
                         Isabella Nguyen
                      </p>
-                     <p className="text-sm text-muted-foreground">i~example.com</p>
+                     <p className="text-sm text-muted-foreground">i@example.com</p>
                   </div>
                </div>
                <Popover>

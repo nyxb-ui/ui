@@ -29,7 +29,7 @@ export default function Dashboard() {
                      <Input
                         id="email"
                         type="email"
-                        placeholder="m~example.com"
+                        placeholder="m@example.com"
                         required
                      />
                   </div>

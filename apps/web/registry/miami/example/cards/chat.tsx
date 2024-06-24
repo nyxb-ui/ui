@@ -41,7 +41,7 @@ import {
 const users = [
    {
       name: 'Olivia Martin',
-      email: 'm~example.com',
+      email: 'm@example.com',
       avatar: '/avatars/01.png',
    },
    {
@@ -51,12 +51,12 @@ const users = [
    },
    {
       name: 'Emma Wilson',
-      email: 'emma~example.com',
+      email: 'emma@example.com',
       avatar: '/avatars/05.png',
    },
    {
       name: 'Jackson Lee',
-      email: 'lee~example.com',
+      email: 'lee@example.com',
       avatar: '/avatars/02.png',
    },
    {
@@ -104,7 +104,7 @@ export function CardsChat() {
                   </Avatar>
                   <div>
                      <p className="text-sm font-medium leading-none">Sofia Davis</p>
-                     <p className="text-sm text-muted-foreground">m~example.com</p>
+                     <p className="text-sm text-muted-foreground">m@example.com</p>
                   </div>
                </div>
                <TooltipProvider delayDuration={0}>

@@ -75,7 +75,7 @@ export function ThemeCustomizer() {
                {mounted
                   ? (
                      <>
-                        {['zinc', 'rose', 'blue', 'green', 'orange'].map((color) => {
+                        {['violet', 'red', 'rose', 'orange', 'green', 'blue', 'yellow', 'zinc'].map((color) => {
                            const theme = themes.find(theme => theme.name === color)
                            const isActive = config.theme === color
 
