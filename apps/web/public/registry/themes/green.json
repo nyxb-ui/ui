@@ -1,0 +1,48 @@
+{
+  "name": "green",
+  "label": "Green",
+  "cssVars": {
+    "light": {
+      "background": "0 0% 100%",
+      "foreground": "144.9 80.4% 10%",
+      "card": "0 0% 100%",
+      "card-foreground": "144.9 80.4% 10%",
+      "popover": "0 0% 100%",
+      "popover-foreground": "144.9 80.4% 10%",
+      "primary": "143.8 61.2% 20.2%",
+      "primary-foreground": "138.5 76.5% 96.7%",
+      "secondary": "140.6 84.2% 92.5%",
+      "secondary-foreground": "143.8 61.2% 20.2%",
+      "muted": "140.6 84.2% 92.5%",
+      "muted-foreground": "142.1 70.6% 45.3%",
+      "accent": "140.6 84.2% 92.5%",
+      "accent-foreground": "143.8 61.2% 20.2%",
+      "destructive": "0 84.2% 60.2%",
+      "destructive-foreground": "138.5 76.5% 96.7%",
+      "border": "141 78.9% 85.1%",
+      "input": "141 78.9% 85.1%",
+      "ring": "144.9 80.4% 10%"
+    },
+    "dark": {
+      "background": "144.9 80.4% 10%",
+      "foreground": "138.5 76.5% 96.7%",
+      "card": "144.9 80.4% 10%",
+      "card-foreground": "138.5 76.5% 96.7%",
+      "popover": "144.9 80.4% 10%",
+      "popover-foreground": "138.5 76.5% 96.7%",
+      "primary": "138.5 76.5% 96.7%",
+      "primary-foreground": "143.8 61.2% 20.2%",
+      "secondary": "142.8 64.2% 24.1%",
+      "secondary-foreground": "138.5 76.5% 96.7%",
+      "muted": "142.8 64.2% 24.1%",
+      "muted-foreground": "141.9 69.2% 58%",
+      "accent": "142.8 64.2% 24.1%",
+      "accent-foreground": "138.5 76.5% 96.7%",
+      "destructive": "0 62.8% 30.6%",
+      "destructive-foreground": "138.5 76.5% 96.7%",
+      "border": "142.8 64.2% 24.1%",
+      "input": "142.8 64.2% 24.1%",
+      "ring": "141.7 76.6% 73.1%"
+    }
+  }
+}
