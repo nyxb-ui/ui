@@ -34,7 +34,6 @@ export const Icons = {
    spinner: Loader2,
    chevronLeft: ChevronLeft,
    discord: DiscordLogoIcon,
-   instagram: InstagramLogoIcon,
    chevronRight: (props: IconProps) => (
       <svg
          fill="none"
