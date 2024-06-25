@@ -1,0 +1,74 @@
+---
+title: Video Modal
+date: 2024-06-23
+description: Example component for demonstrating Video Modal component
+author: nyxb
+published: true
+---
+
+<ComponentPreview name="video-modal-demo" styleSwitch button="copy" dots />
+
+
+### Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx nyxbui@latest add video-modal
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+Copy and paste the following code into your project.
+
+```ts
+// tailwind.config.ts
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        "modal-fade-in": "modal-fade-in 500ms ease-out",
+        "modal-fade-out": "modal-fade-out 500ms ease-in",
+      },
+      keyframes: {
+        "modal-fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        "modal-fade-out": {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0" },
+        },
+      },
+    },
+  },
+};
+```
+
+```text
+components/ui/video-modal.tsx
+```
+
+<ComponentSource name="video-modal" />
+
+Install @radix-ui/react-dialog.
+
+```text
+npm install @radix-ui/react-dialog
+```
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>

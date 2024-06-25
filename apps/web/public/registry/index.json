@@ -633,6 +633,13 @@
     "type": "components:ui"
   },
   {
+    "name": "scroll-progress",
+    "files": [
+      "ui/scroll-progress.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "select",
     "dependencies": [
       "@radix-ui/react-select"
@@ -857,6 +864,16 @@
     "name": "tweet-card",
     "files": [
       "ui/tweet-card.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "video-modal",
+    "dependencies": [
+      "@radix-ui/react-dialog"
+    ],
+    "files": [
+      "ui/video-modal.tsx"
     ],
     "type": "components:ui"
   },

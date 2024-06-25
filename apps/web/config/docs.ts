@@ -308,6 +308,12 @@ export const docsConfig: DocsConfig = {
                items: [],
             },
             {
+               title: 'Scroll Progress',
+               href: `/docs/components/scroll-progress`,
+               items: [],
+               label: 'New',
+            },
+            {
                title: 'Select',
                href: '/docs/components/select',
                items: [],
@@ -412,6 +418,12 @@ export const docsConfig: DocsConfig = {
                title: 'Tweet Card',
                href: '/docs/components/tweet-card',
                items: [],
+            },
+            {
+               title: 'Video Modal',
+               href: `/docs/components/video-modal`,
+               items: [],
+               label: 'New',
             },
          ],
       },

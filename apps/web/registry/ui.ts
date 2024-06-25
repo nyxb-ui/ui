@@ -408,6 +408,11 @@ export const ui: Registry = [
       files: ['ui/scroll-based-velocity.tsx'],
    },
    {
+      name: 'scroll-progress',
+      type: 'components:ui',
+      files: ['ui/scroll-progress.tsx'],
+   },
+   {
       name: 'select',
       type: 'components:ui',
       dependencies: ['@radix-ui/react-select'],
@@ -553,6 +558,12 @@ export const ui: Registry = [
       name: 'tweet-card',
       type: 'components:ui',
       files: ['ui/tweet-card.tsx'],
+   },
+   {
+      name: 'video-modal',
+      type: 'components:ui',
+      dependencies: ['@radix-ui/react-dialog'],
+      files: ['ui/video-modal.tsx'],
    },
    {
       name: 'wavy-dot-pattern',

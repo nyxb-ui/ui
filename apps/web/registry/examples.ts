@@ -1559,4 +1559,14 @@ export const examples: Registry = [
       registryDependencies: ['multi-select'],
       files: ['example/multi-select-form.tsx'],
    },
+   {
+      name: 'scroll-progress-demo',
+      type: 'components:example',
+      files: ['example/scroll-progress-demo.tsx'],
+   },
+   {
+      name: 'video-modal-demo',
+      type: 'components:example',
+      files: ['example/video-modal-demo.tsx'],
+   },
 ]
