@@ -1569,4 +1569,9 @@ export const examples: Registry = [
       type: 'components:example',
       files: ['example/video-modal-demo.tsx'],
    },
+   {
+      name: 'scratch-to-reveal-demo',
+      type: 'components:example',
+      files: ['example/scratch-to-reveal-demo.tsx'],
+   },
 ]

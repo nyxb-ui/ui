@@ -314,6 +314,12 @@ export const docsConfig: DocsConfig = {
                label: 'New',
             },
             {
+               title: 'Scratch To Reveal',
+               href: `/docs/components/scratch-to-reveal`,
+               items: [],
+               label: 'New',
+            },
+            {
                title: 'Select',
                href: '/docs/components/select',
                items: [],

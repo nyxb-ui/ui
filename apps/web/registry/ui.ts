@@ -489,6 +489,11 @@ export const ui: Registry = [
       files: ['ui/stepper.tsx'],
    },
    {
+      name: 'scratch-to-reveal',
+      type: 'components:ui',
+      files: ['ui/scratch-to-reveal.tsx'],
+   },
+   {
       name: 'table',
       type: 'components:ui',
       files: ['ui/table.tsx'],

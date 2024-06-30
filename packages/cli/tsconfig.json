@@ -6,6 +6,7 @@
     "paths": {
       "~/*": ["./*"]
     },
+    "resolveJsonModule": true,
     "types": ["vitest"],
     "isolatedModules": false
   },

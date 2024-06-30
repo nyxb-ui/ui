@@ -757,6 +757,13 @@
     "type": "components:ui"
   },
   {
+    "name": "scratch-to-reveal",
+    "files": [
+      "ui/scratch-to-reveal.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "table",
     "files": [
       "ui/table.tsx"
