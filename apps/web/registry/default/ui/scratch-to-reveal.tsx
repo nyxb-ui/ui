@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { ny } from '~/lib/utils'
