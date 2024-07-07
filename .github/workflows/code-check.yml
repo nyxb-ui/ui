@@ -18,10 +18,11 @@ jobs:
         with:
           node-version: 18
 
-      - uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v4
         name: Install pnpm
         id: pnpm-install
         with:
+          version: 9.0.6
           run_install: false
 
       - name: Get pnpm store directory
@@ -35,18 +36,14 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
-
-      - name: Create .env file
-        run: echo "${{ secrets.ENV_FILE }}" > .env
-
       - name: Install dependencies
         run: pnpm install
 
-      - run: pnpm lint:fix
+      - run: pnpm lint
 
-  eslint_fix:
+  format:
     runs-on: ubuntu-latest
-    name: pnpm lint:fix
+    name: pnpm format:check
     steps:
       - uses: actions/checkout@v3
         with:
@@ -61,6 +58,7 @@ jobs:
         name: Install pnpm
         id: pnpm-install
         with:
+          version: 9.0.6
           run_install: false
 
       - name: Get pnpm store directory
@@ -76,17 +74,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Create .env file
-        run: echo "${{ secrets.ENV_FILE }}" > .env
-
       - name: Install dependencies
         run: pnpm install
 
-      - run: pnpm lint:fix
+      - run: pnpm format:check
 
   tsc:
     runs-on: ubuntu-latest
-    name: pnpm check
+    name: pnpm typecheck
     steps:
       - uses: actions/checkout@v3
         with:
@@ -101,6 +96,7 @@ jobs:
         name: Install pnpm
         id: pnpm-install
         with:
+          version: 9.0.6
           run_install: false
 
       - name: Get pnpm store directory
@@ -114,11 +110,7 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
-
-      - name: Create .env file
-        run: echo "${{ secrets.ENV_FILE }}" > .env
-
       - name: Install dependencies
         run: pnpm install
 
-      - run: pnpm check
+      - run: pnpm typecheck
