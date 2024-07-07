@@ -16,13 +16,13 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 18
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v3
         name: Install pnpm
         id: pnpm-install
         with:
-          version: 9.4.0
+          version: 8.11.0
           run_install: false
 
       - name: Get pnpm store directory
@@ -56,13 +56,13 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 18
 
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         id: pnpm-install
         with:
-          version: 9.4.0
+          version: 8.11.0
           run_install: false
 
       - name: Get pnpm store directory
@@ -97,13 +97,13 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 18
 
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         id: pnpm-install
         with:
-          version: 9.4.0
+          version: 8.11.0
           run_install: false
 
       - name: Get pnpm store directory
