@@ -1,10 +1,7 @@
 {
   "name": "nyxb-ui",
   "private": true,
-  "packageManager": "pnpm@9.4.0",
-  "engines": {
-    "node": ">=20"
-  },
+  "packageManager": "pnpm@9.0.6",
   "scripts": {
     "build": "turbo build",
     "build:cli": "turbo --filter=nyxbui build",
