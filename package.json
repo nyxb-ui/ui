@@ -15,7 +15,7 @@
     "cli:start": "pnpm --filter=nyxbui start:dev",
     "preview": "turbo run preview",
     "sync:templates": "./scripts/sync-templates.sh \"templates/*\"",
-    "check": "turbo lint typecheck format:check",
+    "check": "turbo lint typecheck",
     "pub:beta": "cd packages/cli && pnpm pub:beta",
     "pub:release": "cd packages/cli && pnpm pub:release",
     "lint": "turbo run lint",

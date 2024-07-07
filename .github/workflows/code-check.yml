@@ -81,7 +81,7 @@ jobs:
 
   tsc:
     runs-on: ubuntu-latest
-    name: pnpm typecheck
+    name: pnpm check
     steps:
       - uses: actions/checkout@v3
         with:
