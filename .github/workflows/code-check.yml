@@ -77,7 +77,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - run: pnpm eslint:fix
+      - run: pnpm lint:fix
 
   tsc:
     runs-on: ubuntu-latest
