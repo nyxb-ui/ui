@@ -9,7 +9,7 @@ import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 import type { BlogPosting, WithContext } from 'schema-dts'
 import { visit } from 'unist-util-visit'
-import { env } from './scripts/env.mjs'
+import { env } from './scripts/env.mts'
 import { rehypeComponent } from './lib/rehype-component'
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
