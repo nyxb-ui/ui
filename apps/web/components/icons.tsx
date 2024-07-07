@@ -1,4 +1,4 @@
-import { DiscordLogoIcon, InstagramLogoIcon } from '@radix-ui/react-icons'
+import { DiscordLogoIcon } from '@radix-ui/react-icons'
 import {
    AlertTriangle,
    ArrowRight,
