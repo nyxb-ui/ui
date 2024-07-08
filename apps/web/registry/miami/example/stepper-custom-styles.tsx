@@ -23,9 +23,9 @@ export default function StepperDemo() {
             steps={steps}
             styles={{
                'step-button-container': ny(
-                  'text-purple-700 rounded-none',
+                  'rounded-none text-purple-700',
                   'data-[current=true]:border-purple-500 data-[current=true]:bg-purple-50',
-                  'data-[active=true]:bg-purple-500 data-[active=true]:border-purple-500',
+                  'data-[active=true]:border-purple-500 data-[active=true]:bg-purple-500',
                ),
                'horizontal-step':
             'data-[completed=true]:[&:not(:last-child)]:after:bg-purple-500',
@@ -38,7 +38,7 @@ export default function StepperDemo() {
             {steps.map((stepProps, index) => {
                return (
                   <Step key={stepProps.label} {...stepProps}>
-                     <div className="h-40 flex items-center justify-center my-2 border bg-secondary text-primary rounded-md">
+                     <div className="bg-secondary text-primary my-2 flex h-40 items-center justify-center rounded-md border">
                         <h1 className="text-xl">
                            Step
                            {index + 1}
@@ -66,31 +66,31 @@ function Footer() {
    return (
       <>
          {hasCompletedAllSteps && (
-            <div className="h-40 flex items-center justify-center my-2 border bg-secondary text-primary rounded-md">
+            <div className="bg-secondary text-primary my-2 flex h-40 items-center justify-center rounded-md border">
                <h1 className="text-xl">Woohoo! All steps completed! 🎉</h1>
             </div>
          )}
-         <div className="w-full flex justify-end gap-2">
+         <div className="flex w-full justify-end gap-2">
             {hasCompletedAllSteps
                ? (
-                  <Button size="sm" onClick={resetSteps}>
-                     Reset
-                  </Button>
+                     <Button size="sm" onClick={resetSteps}>
+                        Reset
+                     </Button>
                   )
                : (
-                  <>
-                     <Button
-                        disabled={isDisabledStep}
-                        onClick={prevStep}
-                        size="sm"
-                        variant="secondary"
-                     >
-                        Prev
-                     </Button>
-                     <Button size="sm" onClick={nextStep}>
-                        {isLastStep ? 'Finish' : isOptionalStep ? 'Skip' : 'Next'}
-                     </Button>
-                  </>
+                     <>
+                        <Button
+                           disabled={isDisabledStep}
+                           onClick={prevStep}
+                           size="sm"
+                           variant="secondary"
+                        >
+                           Prev
+                        </Button>
+                        <Button size="sm" onClick={nextStep}>
+                           {isLastStep ? 'Finish' : isOptionalStep ? 'Skip' : 'Next'}
+                        </Button>
+                     </>
                   )}
          </div>
       </>

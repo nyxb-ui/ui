@@ -21,7 +21,7 @@ export default function StepperDemo() {
             {steps.map((stepProps, index) => {
                return (
                   <Step key={stepProps.label} {...stepProps}>
-                     <div className="h-40 flex items-center justify-center my-4 border bg-secondary text-primary rounded-md">
+                     <div className="bg-secondary text-primary my-4 flex h-40 items-center justify-center rounded-md border">
                         <h1 className="text-xl">
                            Step
                            {index + 1}
@@ -41,7 +41,7 @@ function StepButtons() {
    const { nextStep, prevStep, isLastStep, isOptionalStep, isDisabledStep }
     = useStepper()
    return (
-      <div className="w-full flex gap-2 mb-4">
+      <div className="mb-4 flex w-full gap-2">
          <Button
             disabled={isDisabledStep}
             onClick={prevStep}
@@ -65,10 +65,10 @@ function FinalStep() {
 
    return (
       <>
-         <div className="h-40 flex items-center justify-center border bg-secondary text-primary rounded-md">
+         <div className="bg-secondary text-primary flex h-40 items-center justify-center rounded-md border">
             <h1 className="text-xl">Woohoo! All steps completed! 🎉</h1>
          </div>
-         <div className="w-full flex justify-end gap-2">
+         <div className="flex w-full justify-end gap-2">
             <Button size="sm" onClick={resetSteps}>
                Reset
             </Button>
