@@ -3,13 +3,13 @@ import * as React from 'react'
 import { ny } from '~/lib/utils'
 
 const Card = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
+   HTMLDivElement,
+   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
    <div
       ref={ref}
       className={ny(
-         'rounded-lg border bg-card text-card-foreground shadow-sm',
+         'bg-card text-card-foreground rounded-lg border shadow-sm',
          className,
       )}
       {...props}
@@ -18,8 +18,8 @@ const Card = React.forwardRef<
 Card.displayName = 'Card'
 
 const CardHeader = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
+   HTMLDivElement,
+   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
    <div
       ref={ref}
@@ -30,8 +30,8 @@ const CardHeader = React.forwardRef<
 CardHeader.displayName = 'CardHeader'
 
 const CardTitle = React.forwardRef<
-  HTMLParagraphElement,
-  React.HTMLAttributes<HTMLHeadingElement>
+   HTMLParagraphElement,
+   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
    <h3
       ref={ref}
@@ -45,28 +45,28 @@ const CardTitle = React.forwardRef<
 CardTitle.displayName = 'CardTitle'
 
 const CardDescription = React.forwardRef<
-  HTMLParagraphElement,
-  React.HTMLAttributes<HTMLParagraphElement>
+   HTMLParagraphElement,
+   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
    <p
       ref={ref}
-      className={ny('text-sm text-muted-foreground', className)}
+      className={ny('text-muted-foreground text-sm', className)}
       {...props}
    />
 ))
 CardDescription.displayName = 'CardDescription'
 
 const CardContent = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
+   HTMLDivElement,
+   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
    <div ref={ref} className={ny('p-6 pt-0', className)} {...props} />
 ))
 CardContent.displayName = 'CardContent'
 
 const CardFooter = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
+   HTMLDivElement,
+   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
    <div
       ref={ref}

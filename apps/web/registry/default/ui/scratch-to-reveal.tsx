@@ -160,7 +160,7 @@ const ScratchToReveal: React.FC<ScratchToRevealProps> = ({
             ref={canvasRef}
             width={width}
             height={height}
-            className="absolute top-0 left-0"
+            className="absolute left-0 top-0"
             onMouseDown={handleMouseDown}
             onTouchStart={handleTouchStart}
          >

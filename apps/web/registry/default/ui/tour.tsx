@@ -6,12 +6,12 @@ import { ny } from '~/lib/utils'
 
 export interface TourContext<T extends string> {
    nodes: Map<
-     string,
-     {
-        ref: HTMLElement
-        render: React.ReactNode
-        name: T
-     }
+      string,
+      {
+         ref: HTMLElement
+         render: React.ReactNode
+         name: T
+      }
    >
    show: boolean
    current: number

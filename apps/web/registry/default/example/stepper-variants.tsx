@@ -32,14 +32,14 @@ export default function StepperDemo() {
          >
             <Label
                htmlFor="circle"
-               className="flex w-fit flex-col gap-3 rounded-md border bg-background px-2 py-1 hover:bg-gray-3 [&:has([data-state=checked])]:border-primary"
+               className="bg-background hover:bg-gray-3 [&:has([data-state=checked])]:border-primary flex w-fit flex-col gap-3 rounded-md border px-2 py-1"
             >
                <RadioGroupItem value="circle" id="circle" className="sr-only" />
                <h2 className="font-medium">circle</h2>
             </Label>
             <Label
                htmlFor="circle-alt"
-               className="flex w-fit flex-col gap-3 rounded-md border bg-background px-2 py-1 hover:bg-gray-3 [&:has([data-state=checked])]:border-primary"
+               className="bg-background hover:bg-gray-3 [&:has([data-state=checked])]:border-primary flex w-fit flex-col gap-3 rounded-md border px-2 py-1"
             >
                <RadioGroupItem
                   value="circle-alt"
@@ -50,7 +50,7 @@ export default function StepperDemo() {
             </Label>
             <Label
                htmlFor="line"
-               className="flex w-fit flex-col gap-3 rounded-md border bg-background px-2 py-1 hover:bg-gray-3 [&:has([data-state=checked])]:border-primary"
+               className="bg-background hover:bg-gray-3 [&:has([data-state=checked])]:border-primary flex w-fit flex-col gap-3 rounded-md border px-2 py-1"
             >
                <RadioGroupItem value="line" id="line" className="sr-only" />
                <h2 className="font-medium">line</h2>
@@ -60,7 +60,7 @@ export default function StepperDemo() {
             {steps.map((stepProps, index) => {
                return (
                   <Step key={stepProps.label} {...stepProps}>
-                     <div className="h-40 flex items-center justify-center my-2 border bg-secondary text-primary rounded-md">
+                     <div className="bg-secondary text-primary my-2 flex h-40 items-center justify-center rounded-md border">
                         <h1 className="text-xl">
                            Step
                            {index + 1}
@@ -88,31 +88,31 @@ function Footer() {
    return (
       <>
          {hasCompletedAllSteps && (
-            <div className="h-40 flex items-center justify-center my-2 border bg-secondary text-primary rounded-md">
+            <div className="bg-secondary text-primary my-2 flex h-40 items-center justify-center rounded-md border">
                <h1 className="text-xl">Woohoo! All steps completed! 🎉</h1>
             </div>
          )}
-         <div className="w-full flex justify-end gap-2">
+         <div className="flex w-full justify-end gap-2">
             {hasCompletedAllSteps
                ? (
-                  <Button size="sm" onClick={resetSteps}>
-                     Reset
-                  </Button>
+                     <Button size="sm" onClick={resetSteps}>
+                        Reset
+                     </Button>
                   )
                : (
-                  <>
-                     <Button
-                        disabled={isDisabledStep}
-                        onClick={prevStep}
-                        size="sm"
-                        variant="secondary"
-                     >
-                        Prev
-                     </Button>
-                     <Button size="sm" onClick={nextStep}>
-                        {isLastStep ? 'Finish' : isOptionalStep ? 'Skip' : 'Next'}
-                     </Button>
-                  </>
+                     <>
+                        <Button
+                           disabled={isDisabledStep}
+                           onClick={prevStep}
+                           size="sm"
+                           variant="secondary"
+                        >
+                           Prev
+                        </Button>
+                        <Button size="sm" onClick={nextStep}>
+                           {isLastStep ? 'Finish' : isOptionalStep ? 'Skip' : 'Next'}
+                        </Button>
+                     </>
                   )}
          </div>
       </>
