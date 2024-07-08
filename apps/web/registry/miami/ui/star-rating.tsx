@@ -36,7 +36,7 @@ function StarRating({
             const isRated = i < value!
             const styledIconProps: LucideProps = {
                onMouseEnter: () => !showcase && !disabled && setValue!(i + 1),
-               className: ny('size-5 fill-primary stroke-primary', {
+               className: ny('fill-primary stroke-primary size-5', {
                   'opacity-50 pointer-events-none': disabled,
                   'transition-transform duration-300 hover:scale-110': !disabled && !showcase,
                   '!fill-muted !stroke-muted': !isRated,
@@ -47,10 +47,10 @@ function StarRating({
                <div key={i}>
                   {IconComponent
                      ? (
-                        <IconComponent {...styledIconProps} />
+                           <IconComponent {...styledIconProps} />
                         )
                      : (
-                        <StarIcon {...styledIconProps} />
+                           <StarIcon {...styledIconProps} />
                         )}
                </div>
             )

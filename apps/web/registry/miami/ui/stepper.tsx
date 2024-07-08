@@ -32,7 +32,7 @@ const StepperContext = React.createContext<
       resetSteps: () => void
       setStep: (step: number) => void
    }
-         >({
+>({
             steps: [],
             activeStep: 0,
             initialStep: 0,
@@ -292,13 +292,13 @@ const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
                   styles?.['main-container'],
                )}
                style={
-            {
-               '--step-icon-size':
+                  {
+                     '--step-icon-size':
                 variables?.['--step-icon-size']
                 || `${VARIABLE_SIZES[size || 'md']}`,
-               '--step-gap': variables?.['--step-gap'] || '8px',
-            } as React.CSSProperties
-          }
+                     '--step-gap': variables?.['--step-gap'] || '8px',
+                  } as React.CSSProperties
+               }
                {...rest}
             >
                <VerticalContent>{items}</VerticalContent>
@@ -476,8 +476,8 @@ const verticalStepVariants = cva(
       variants: {
          variant: {
             circle: ny(
-               '[&:not(:last-child)]:pb-[var(--step-gap)] [&:not(:last-child)]:gap-[var(--step-gap)]',
-               '[&:not(:last-child)]:after:content-[\'\'] [&:not(:last-child)]:after:w-[2px] [&:not(:last-child)]:after:bg-border',
+               '[&:not(:last-child)]:gap-[var(--step-gap)] [&:not(:last-child)]:pb-[var(--step-gap)]',
+               '[&:not(:last-child)]:after:bg-border [&:not(:last-child)]:after:w-[2px] [&:not(:last-child)]:after:content-[\'\']',
                '[&:not(:last-child)]:after:inset-x-[calc(var(--step-icon-size)/2)]',
                '[&:not(:last-child)]:after:absolute',
                '[&:not(:last-child)]:after:top-[calc(var(--step-icon-size)+var(--step-gap))]',
@@ -559,7 +559,7 @@ const VerticalStep = React.forwardRef<HTMLDivElement, VerticalStepProps>(
                            })
                         }
                      }}
-                     className="overflow-hidden data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up"
+                     className="data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up overflow-hidden"
                   >
                      {children}
                   </CollapsibleContent>
@@ -599,7 +599,7 @@ const VerticalStep = React.forwardRef<HTMLDivElement, VerticalStepProps>(
                   'stepper__vertical-step-container',
                   'flex items-center',
                   variant === 'line'
-                  && 'border-s-[3px] data-[active=true]:border-primary py-2 ps-3',
+                  && 'data-[active=true]:border-primary border-s-[3px] py-2 ps-3',
                   styles?.['vertical-step-container'],
                )}
             >
@@ -688,18 +688,18 @@ const HorizontalStep = React.forwardRef<HTMLDivElement, StepSharedProps>(
             aria-disabled={!hasVisited}
             className={ny(
                'stepper__horizontal-step',
-               'flex items-center relative transition-all duration-200',
+               'relative flex items-center transition-all duration-200',
                '[&:not(:last-child)]:flex-1',
                '[&:not(:last-child)]:after:transition-all [&:not(:last-child)]:after:duration-200',
-               '[&:not(:last-child)]:after:content-[\'\'] [&:not(:last-child)]:after:h-[2px] [&:not(:last-child)]:after:bg-border',
+               '[&:not(:last-child)]:after:bg-border [&:not(:last-child)]:after:h-[2px] [&:not(:last-child)]:after:content-[\'\']',
                'data-[completed=true]:[&:not(:last-child)]:after:bg-primary',
                'data-[invalid=true]:[&:not(:last-child)]:after:bg-destructive',
                variant === 'circle-alt'
-               && 'justify-start flex-col flex-1 [&:not(:last-child)]:after:relative [&:not(:last-child)]:after:order-[-1] [&:not(:last-child)]:after:start-[50%] [&:not(:last-child)]:after:end-[50%] [&:not(:last-child)]:after:top-[calc(var(--step-icon-size)/2)] [&:not(:last-child)]:after:w-[calc((100%-var(--step-icon-size))-(var(--step-gap)))]',
+               && 'flex-1 flex-col justify-start [&:not(:last-child)]:after:relative [&:not(:last-child)]:after:end-[50%] [&:not(:last-child)]:after:start-[50%] [&:not(:last-child)]:after:top-[calc(var(--step-icon-size)/2)] [&:not(:last-child)]:after:-order-1 [&:not(:last-child)]:after:w-[calc((100%-var(--step-icon-size))-(var(--step-gap)))]',
                variant === 'circle'
-               && '[&:not(:last-child)]:after:flex-1 [&:not(:last-child)]:after:ms-[var(--step-gap)] [&:not(:last-child)]:after:me-[var(--step-gap)]',
+               && '[&:not(:last-child)]:after:me-[var(--step-gap)] [&:not(:last-child)]:after:ms-[var(--step-gap)] [&:not(:last-child)]:after:flex-1',
                variant === 'line'
-               && 'flex-col flex-1 border-t-[3px] data-[active=true]:border-primary',
+               && 'data-[active=true]:border-primary flex-1 flex-col border-t-[3px]',
                styles?.['horizontal-step'],
             )}
             data-optional={steps[index || 0]?.optional}
@@ -781,9 +781,9 @@ function StepButtonContainer({
          tabIndex={currentStepClickable ? 0 : -1}
          className={ny(
             'stepper__step-button-container',
-            'rounded-full p-0 pointer-events-none',
-            'w-[var(--step-icon-size)] h-[var(--step-icon-size)]',
-            'border-2 flex rounded-full justify-center items-center',
+            'pointer-events-none rounded-full p-0',
+            'size-[var(--step-icon-size)]',
+            'flex items-center justify-center rounded-full border-2',
             'data-[clickable=true]:pointer-events-auto',
             'data-[active=true]:bg-primary data-[active=true]:border-primary data-[active=true]:text-primary-foreground',
             'data-[current=true]:border-primary data-[current=true]:bg-secondary',
@@ -909,7 +909,7 @@ const StepIcon = React.forwardRef<HTMLDivElement, StepIconProps>(
             <span
                ref={ref}
                key="label"
-               className={ny('font-medium text-center text-md')}
+               className={ny('text-md text-center font-medium')}
             >
                {(index || 0) + 1}
             </span>
@@ -976,45 +976,45 @@ function StepLabel({
 
    return shouldRender
       ? (
-         <div
-            aria-current={isCurrentStep ? 'step' : undefined}
-            className={ny(
-               'stepper__step-label-container',
-               'flex-col flex',
-               variant !== 'line' ? 'ms-2' : orientation === 'horizontal' && 'my-2',
-               variant === 'circle-alt' && 'text-center',
-               variant === 'circle-alt' && orientation === 'horizontal' && 'ms-0',
-               variant === 'circle-alt' && orientation === 'vertical' && 'text-start',
-               styles?.['step-label-container'],
-            )}
-            style={{
-               opacity,
-            }}
-         >
-            {!!label && (
-               <span
-                  className={ny(
-                     'stepper__step-label',
-                     labelVariants({ size }),
-                     styles?.['step-label'],
-                  )}
-               >
-                  {label}
-               </span>
-            )}
-            {!!description && (
-               <span
-                  className={ny(
-                     'stepper__step-description',
-                     'text-muted-foreground',
-                     descriptionVariants({ size }),
-                     styles?.['step-description'],
-                  )}
-               >
-                  {description}
-               </span>
-            )}
-         </div>
+            <div
+               aria-current={isCurrentStep ? 'step' : undefined}
+               className={ny(
+                  'stepper__step-label-container',
+                  'flex flex-col',
+                  variant !== 'line' ? 'ms-2' : orientation === 'horizontal' && 'my-2',
+                  variant === 'circle-alt' && 'text-center',
+                  variant === 'circle-alt' && orientation === 'horizontal' && 'ms-0',
+                  variant === 'circle-alt' && orientation === 'vertical' && 'text-start',
+                  styles?.['step-label-container'],
+               )}
+               style={{
+                  opacity,
+               }}
+            >
+               {!!label && (
+                  <span
+                     className={ny(
+                        'stepper__step-label',
+                        labelVariants({ size }),
+                        styles?.['step-label'],
+                     )}
+                  >
+                     {label}
+                  </span>
+               )}
+               {!!description && (
+                  <span
+                     className={ny(
+                        'stepper__step-description',
+                        'text-muted-foreground',
+                        descriptionVariants({ size }),
+                        styles?.['step-description'],
+                     )}
+                  >
+                     {description}
+                  </span>
+               )}
+            </div>
          )
       : null
 }

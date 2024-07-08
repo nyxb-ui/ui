@@ -78,7 +78,7 @@
 }
 
 [data-rehype-pretty-code-title] {
-   @apply mt-2 px-4 pt-6 text-sm font-medium;
+   @apply mt-2 px-4 pt-6 text-sm font-medium text-foreground;
 }
 
 [data-rehype-pretty-code-title] + pre {

@@ -162,8 +162,8 @@ interface TimelineHeadingProps
    VariantProps<typeof timelineHeadingVariants> {}
 
 const TimelineHeading = React.forwardRef<
-  HTMLParagraphElement,
-  TimelineHeadingProps
+   HTMLParagraphElement,
+   TimelineHeadingProps
 >(({ className, side, variant, ...props }, ref) => (
    <p
       role="heading"
