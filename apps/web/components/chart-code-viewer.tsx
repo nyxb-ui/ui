@@ -85,7 +85,6 @@ ${Object.entries(chartConfig.theme.cssVars.dark)
                {tab === 'code' && (
                   <div className="ml-auto flex items-center justify-center gap-2">
                      <BlockCopyButton
-                        // @ts-expect-error is fine
                         event="copy_chart_code"
                         name={chart.name}
                         code={chart.code}
@@ -94,7 +93,6 @@ ${Object.entries(chartConfig.theme.cssVars.dark)
                )}
                {tab === 'theme' && (
                   <BlockCopyButton
-                     // @ts-expect-error is fine
                      event="copy_chart_theme"
                      name={chart.name}
                      code={themeCode}
