@@ -36,7 +36,6 @@ export function ChartToolbar({
          </div>
          <div className="ml-auto flex items-center gap-2 [&>form]:flex">
             <BlockCopyButton
-               // @ts-expect-error is fine
                event="copy_chart_code"
                name={chart.name}
                code={chart.code}
