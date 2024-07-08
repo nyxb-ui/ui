@@ -43,12 +43,15 @@ jobs:
         run: echo "${{ secrets.ENV_FILE }}" > .env
 
       - name: Load environment variables
+        id: load-env
         run: |
           set -a
           source .env
           set +a
 
       - run: pnpm lint
+        env:
+          NEXT_PUBLIC_APP_URL: ${{ steps.load-env.outputs.NEXT_PUBLIC_APP_URL }}
 
   format:
     runs-on: ubuntu-latest
@@ -90,12 +93,15 @@ jobs:
         run: echo "${{ secrets.ENV_FILE }}" > .env
 
       - name: Load environment variables
+        id: load-env
         run: |
           set -a
           source .env
           set +a
 
       - run: pnpm lint:fix
+        env:
+          NEXT_PUBLIC_APP_URL: ${{ steps.load-env.outputs.NEXT_PUBLIC_APP_URL }}
 
   tsc:
     runs-on: ubuntu-latest
@@ -135,9 +141,12 @@ jobs:
         run: echo "${{ secrets.ENV_FILE }}" > .env
 
       - name: Load environment variables
+        id: load-env
         run: |
           set -a
           source .env
           set +a
 
       - run: pnpm typecheck
+        env:
+          NEXT_PUBLIC_APP_URL: ${{ steps.load-env.outputs.NEXT_PUBLIC_APP_URL }}

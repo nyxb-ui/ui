@@ -9,7 +9,7 @@
     "build:env": "tsx ./scripts/env.mts",
     "build:registry": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-registry.mts && tsx ./scripts/eslint-fix.mts",
     "seed:tasks": "tsx --tsconfig ./tsconfig.scripts.json ./app/(app)/examples/tasks/data/seed.ts",
-    "typecheck": "contentlayer build && tsc --noEmit",
+    "typecheck": "pnpm build:env && contentlayer build && tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "preview": "next build && next start -p 3001"
