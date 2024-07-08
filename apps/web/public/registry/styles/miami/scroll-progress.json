@@ -3,7 +3,7 @@
   "files": [
     {
       "name": "scroll-progress.tsx",
-      "content": "import { motion, useScroll, useSpring } from 'framer-motion'\nimport { ny } from '~/lib/utils'\n\ninterface ScrollProgressProps {\n   className?: string\n}\n\nexport default function ScrollProgress({\n   className,\n}: ScrollProgressProps) {\n   const { scrollYProgress } = useScroll()\n\n   const scaleX = useSpring(scrollYProgress, {\n      stiffness: 200,\n      damping: 50,\n      restDelta: 0.001,\n   })\n\n   return (\n      <motion.div\n         className={ny('fixed left-0 right-0 top-0 h-1 origin-left bg-gradient-to-r from-[#A97CF8] via-[#F38CB8] to-[#FDCC92] z-[1000]', className)}\n         style={{\n            scaleX,\n         }}\n      />\n   )\n}\n"
+      "content": "import { motion, useScroll, useSpring } from 'framer-motion'\nimport { ny } from '~/lib/utils'\n\ninterface ScrollProgressProps {\n   className?: string\n}\n\nexport default function ScrollProgress({\n   className,\n}: ScrollProgressProps) {\n   const { scrollYProgress } = useScroll()\n\n   const scaleX = useSpring(scrollYProgress, {\n      stiffness: 200,\n      damping: 50,\n      restDelta: 0.001,\n   })\n\n   return (\n      <motion.div\n         className={ny('fixed inset-x-0 top-0 z-[1000] h-1 origin-left bg-gradient-to-r from-[#A97CF8] via-[#F38CB8] to-[#FDCC92]', className)}\n         style={{\n            scaleX,\n         }}\n      />\n   )\n}\n"
     }
   ],
   "type": "components:ui"
