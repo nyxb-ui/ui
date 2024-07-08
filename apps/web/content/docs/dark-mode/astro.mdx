@@ -47,13 +47,13 @@ import '../styles/globals.css'
 import * as React from "react"
 import { Moon, Sun } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
+import { Button } from "~/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "~/components/ui/dropdown-menu"
 
 export function ModeToggle() {
   const [theme, setThemeState] = React.useState<
@@ -120,7 +120,7 @@ import { Sun, Moon, Laptop } from "lucide-react"
 import { 
   ToggleGroup, 
   ToggleGroupItem 
-} from "@/components/ui/toggle-group"
+} from "~/components/ui/toggle-group"
 
 export function ModeToggle() {
   const [theme, setThemeState] = React.useState<
@@ -175,7 +175,7 @@ Place a mode toggle on your site to toggle between light and dark mode.
 ```astro title="src/pages/index.astro"
 ---
 import '../styles/globals.css'
-import { ModeToggle } from '@/components/ModeToggle';
+import { ModeToggle } from '~/components/ModeToggle';
 ---
 
 <!-- Inline script -->

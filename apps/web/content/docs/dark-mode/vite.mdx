@@ -90,7 +90,7 @@ export const useTheme = () => {
 Add the `ThemeProvider` to your root layout.
 
 ```tsx {1,5-7} title="App.tsx"
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "~/components/theme-provider"
 
 function App() {
   return (
@@ -115,8 +115,8 @@ import { Sun, Moon, Laptop } from "lucide-react"
 import { 
   ToggleGroup, 
   ToggleGroupItem 
-} from "@/components/ui/toggle-group"
-import { useTheme } from "@/components/theme-provider"
+} from "~/components/ui/toggle-group"
+import { useTheme } from "~/components/theme-provider"
 
 export function ModeToggle() {
   const { setTheme } = useTheme()
@@ -154,14 +154,14 @@ Place a mode toggle on your site to toggle between light and dark mode.
 ```tsx title="components/mode-toggle.tsx"
 import { Moon, Sun } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
+import { Button } from "~/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { useTheme } from "@/components/theme-provider"
+} from "~/components/ui/dropdown-menu"
+import { useTheme } from "~/components/theme-provider"
 
 export function ModeToggle() {
   const { setTheme } = useTheme()

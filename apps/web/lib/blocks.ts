@@ -59,7 +59,7 @@ export async function getBlock(
             ...chunk,
             code: sourceFile
                .getText()
-               .replaceAll(`@/registry/${style}/`, '@/components/'),
+               .replaceAll(`~/registry/${style}/`, '~/components/'),
          }
       }),
    )
@@ -126,7 +126,7 @@ async function _getBlockContent(name: string, style: Style['name']) {
 
    // Format the code.
    let code = sourceFile.getText()
-   code = code.replaceAll(`@/registry/${style}/`, '@/components/')
+   code = code.replaceAll(`~/registry/${style}/`, '~/components/')
    code = code.replaceAll('export default', 'export')
 
    return {
