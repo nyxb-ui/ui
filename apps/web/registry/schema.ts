@@ -26,6 +26,7 @@ export const registryEntrySchema = z.object({
       'components:component',
       'components:example',
       'components:block',
+      'components:chart',
    ]),
    category: z.string().optional(),
    subcategory: z.string().optional(),
@@ -40,11 +41,11 @@ export type Registry = z.infer<typeof registrySchema>
 
 export const blockSchema = registryEntrySchema.extend({
    type: z.literal('components:block'),
-   style: z.enum(['default', 'miami']),
+   style: z.enum(['default', 'new-york']),
    component: z.any(),
    container: z
       .object({
-         height: z.string().optional(),
+         height: z.string().nullish(),
          className: z.string().nullish(),
       })
       .optional(),
