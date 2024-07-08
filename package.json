@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@eslint-react/eslint-plugin": "^1.5.12",
-    "@nyxb/eslint-config": "^3.0.1",
+    "@nyxb/eslint-config": "^3.0.7",
     "@types/cli-progress": "^3.11.5",
     "autoprefixer": "^10.4.19",
     "cli-progress": "^3.12.0",
@@ -31,6 +31,7 @@
     "eslint-plugin-format": "^0.1.1",
     "eslint-plugin-react-hooks": "5.1.0-rc-3f1436cca1-20240516",
     "eslint-plugin-react-refresh": "^0.4.7",
+    "eslint-plugin-tailwindcss": "^3.17.4",
     "postcss": "^8",
     "prettier": "^2.8.8",
     "pretty-quick": "^4.0.0",

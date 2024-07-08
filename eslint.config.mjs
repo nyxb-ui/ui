@@ -4,6 +4,12 @@ export default nyxb(
    {
       formatters: true,
       react: true,
+      tailwindcss: {
+         settings: {
+            callees: ['classnames', 'ny', 'cn'],
+            config: './apps/web/tailwind.config.ts',
+         },
+      },
    },
    {
       rules: {
@@ -36,6 +42,13 @@ export default nyxb(
          'eslint-comments/no-unlimited-disable': 0,
          'no-console': 0,
          'react/no-useless-fragment': 0,
+         'ts/no-unused-expressions': 0,
+         'tailwindcss/no-arbitrary-value': 0,
+         'tailwindcss/no-contradicting-classname': 0,
+         'tailwindcss/no-custom-classname': 0,
+         'ts/no-empty-object-type': 0,
+         'tailwindcss/enforces-negative-arbitrary-values': 0,
+         'unicorn/prefer-node-protocol': 0,
       },
    },
    {
