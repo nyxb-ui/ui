@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev -p 3003",
     "start": "next start -p 3001",
-    "build": "contentlayer build && next build",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=8192\" pnpm build:registry && next build",
     "build:env": "tsx ./scripts/env.mts",
     "build:registry": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-registry.mts && tsx ./scripts/eslint-fix.mts",
     "seed:tasks": "tsx --tsconfig ./tsconfig.scripts.json ./app/(app)/examples/tasks/data/seed.ts",
