@@ -5,21 +5,21 @@ import { Slot } from '@radix-ui/react-slot'
 import { ny } from '~/lib/utils'
 
 const Breadcrumb = React.forwardRef<
-  HTMLElement,
-  React.ComponentPropsWithoutRef<'nav'> & {
-     separator?: React.ReactNode
-  }
+   HTMLElement,
+   React.ComponentPropsWithoutRef<'nav'> & {
+      separator?: React.ReactNode
+   }
 >(({ ...props }, ref) => <nav ref={ref} aria-label="breadcrumb" {...props} />)
 Breadcrumb.displayName = 'Breadcrumb'
 
 const BreadcrumbList = React.forwardRef<
-  HTMLOListElement,
-  React.ComponentPropsWithoutRef<'ol'>
+   HTMLOListElement,
+   React.ComponentPropsWithoutRef<'ol'>
 >(({ className, ...props }, ref) => (
    <ol
       ref={ref}
       className={ny(
-         'flex flex-wrap items-center gap-1.5 break-words text-sm text-muted-foreground sm:gap-2.5',
+         'text-muted-foreground flex flex-wrap items-center gap-1.5 break-words text-sm sm:gap-2.5',
          className,
       )}
       {...props}
@@ -28,8 +28,8 @@ const BreadcrumbList = React.forwardRef<
 BreadcrumbList.displayName = 'BreadcrumbList'
 
 const BreadcrumbItem = React.forwardRef<
-  HTMLLIElement,
-  React.ComponentPropsWithoutRef<'li'>
+   HTMLLIElement,
+   React.ComponentPropsWithoutRef<'li'>
 >(({ className, ...props }, ref) => (
    <li
       ref={ref}
@@ -40,17 +40,17 @@ const BreadcrumbItem = React.forwardRef<
 BreadcrumbItem.displayName = 'BreadcrumbItem'
 
 const BreadcrumbLink = React.forwardRef<
-  HTMLAnchorElement,
-  React.ComponentPropsWithoutRef<'a'> & {
-     asChild?: boolean
-  }
+   HTMLAnchorElement,
+   React.ComponentPropsWithoutRef<'a'> & {
+      asChild?: boolean
+   }
 >(({ asChild, className, ...props }, ref) => {
    const Comp = asChild ? Slot : 'a'
 
    return (
       <Comp
          ref={ref}
-         className={ny('transition-colors hover:text-foreground', className)}
+         className={ny('hover:text-foreground transition-colors', className)}
          {...props}
       />
    )
@@ -58,15 +58,15 @@ const BreadcrumbLink = React.forwardRef<
 BreadcrumbLink.displayName = 'BreadcrumbLink'
 
 const BreadcrumbPage = React.forwardRef<
-  HTMLSpanElement,
-  React.ComponentPropsWithoutRef<'span'>
+   HTMLSpanElement,
+   React.ComponentPropsWithoutRef<'span'>
 >(({ className, ...props }, ref) => (
    <span
       ref={ref}
       role="link"
       aria-disabled="true"
       aria-current="page"
-      className={ny('font-normal text-foreground', className)}
+      className={ny('text-foreground font-normal', className)}
       {...props}
    />
 ))
@@ -98,10 +98,10 @@ function BreadcrumbEllipsis({
       <span
          role="presentation"
          aria-hidden="true"
-         className={ny('flex h-9 w-9 items-center justify-center', className)}
+         className={ny('flex size-9 items-center justify-center', className)}
          {...props}
       >
-         <DotsHorizontalIcon className="h-4 w-4" />
+         <DotsHorizontalIcon className="size-4" />
          <span className="sr-only">More</span>
       </span>
    )

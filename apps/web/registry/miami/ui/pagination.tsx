@@ -22,8 +22,8 @@ function Pagination({ className, ...props }: React.ComponentProps<'nav'>) {
 Pagination.displayName = 'Pagination'
 
 const PaginationContent = React.forwardRef<
-  HTMLUListElement,
-  React.ComponentProps<'ul'>
+   HTMLUListElement,
+   React.ComponentProps<'ul'>
 >(({ className, ...props }, ref) => (
    <ul
       ref={ref}
@@ -34,8 +34,8 @@ const PaginationContent = React.forwardRef<
 PaginationContent.displayName = 'PaginationContent'
 
 const PaginationItem = React.forwardRef<
-  HTMLLIElement,
-  React.ComponentProps<'li'>
+   HTMLLIElement,
+   React.ComponentProps<'li'>
 >(({ className, ...props }, ref) => (
    <li ref={ref} className={ny('', className)} {...props} />
 ))
@@ -79,7 +79,7 @@ function PaginationPrevious({
          className={ny('gap-1 pl-2.5', className)}
          {...props}
       >
-         <ChevronLeftIcon className="h-4 w-4" />
+         <ChevronLeftIcon className="size-4" />
          <span>Previous</span>
       </PaginationLink>
    )
@@ -98,7 +98,7 @@ function PaginationNext({
          {...props}
       >
          <span>Next</span>
-         <ChevronRightIcon className="h-4 w-4" />
+         <ChevronRightIcon className="size-4" />
       </PaginationLink>
    )
 }
@@ -111,10 +111,10 @@ function PaginationEllipsis({
    return (
       <span
          aria-hidden
-         className={ny('flex h-9 w-9 items-center justify-center', className)}
+         className={ny('flex size-9 items-center justify-center', className)}
          {...props}
       >
-         <DotsHorizontalIcon className="h-4 w-4" />
+         <DotsHorizontalIcon className="size-4" />
          <span className="sr-only">More pages</span>
       </span>
    )
