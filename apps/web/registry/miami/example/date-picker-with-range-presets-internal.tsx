@@ -65,30 +65,30 @@ export default function DatePickerWithRange({
                      !date && 'text-muted-foreground',
                   )}
                >
-                  <CalendarIcon className="mr-2 h-4 w-4" />
+                  <CalendarIcon className="mr-2 size-4" />
                   {date?.from
                      ? (
                            date.to
                               ? (
-                                 <>
-                                    {format(date.from, 'LLL dd, y')}
-                                    {' '}
-                                    -
-                                    {' '}
-                                    {format(date.to, 'LLL dd, y')}
-                                 </>
+                                    <>
+                                       {format(date.from, 'LLL dd, y')}
+                                       {' '}
+                                       -
+                                       {' '}
+                                       {format(date.to, 'LLL dd, y')}
+                                    </>
                                  )
                               : (
                                     format(date.from, 'LLL dd, y')
                                  )
                         )
                      : (
-                        <span>Pick a date</span>
+                           <span>Pick a date</span>
                         )}
                </Button>
             </PopoverTrigger>
             <PopoverContent className="w-auto p-0" align="start">
-               <div className="w-full flex justify-evenly p-2">
+               <div className="flex w-full justify-evenly p-2">
                   <Button
                      variant="outline"
                      onClick={() => handlePresetSelect('last7Days')}

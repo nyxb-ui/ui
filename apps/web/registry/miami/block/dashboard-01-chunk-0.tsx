@@ -8,11 +8,11 @@ export default function Component() {
             <CardTitle className="text-sm font-medium">
                Total Revenue
             </CardTitle>
-            <DollarSign className="h-4 w-4 text-muted-foreground" />
+            <DollarSign className="text-muted-foreground size-4" />
          </CardHeader>
          <CardContent>
             <div className="text-2xl font-bold">$45,231.89</div>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-muted-foreground text-xs">
                +20.1% from last month
             </p>
          </CardContent>

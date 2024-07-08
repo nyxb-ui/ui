@@ -30,13 +30,13 @@ export default function InputOTPControlled() {
          <div className="text-center text-sm">
             {value === ''
                ? (
-                  <>Enter your one-time password.</>
+                     <>Enter your one-time password.</>
                   )
                : (
-                  <>
-                     You entered:
-                     {value}
-                  </>
+                     <>
+                        You entered:
+                        {value}
+                     </>
                   )}
          </div>
       </div>

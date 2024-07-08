@@ -9,7 +9,7 @@ export default function Component() {
             <CardTitle className="text-4xl">$1,329</CardTitle>
          </CardHeader>
          <CardContent>
-            <div className="text-xs text-muted-foreground">
+            <div className="text-muted-foreground text-xs">
                +25% from last week
             </div>
          </CardContent>

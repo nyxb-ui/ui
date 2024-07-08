@@ -26,13 +26,13 @@ export default function Component() {
                      </SelectTrigger>
                      <SelectContent>
                         <SelectItem value="genesis">
-                           <div className="flex items-start gap-3 text-muted-foreground">
+                           <div className="text-muted-foreground flex items-start gap-3">
                               <Rabbit className="size-5" />
                               <div className="grid gap-0.5">
                                  <p>
                                     Neural
                                     {' '}
-                                    <span className="font-medium text-foreground">
+                                    <span className="text-foreground font-medium">
                                        Genesis
                                     </span>
                                  </p>
@@ -43,13 +43,13 @@ export default function Component() {
                            </div>
                         </SelectItem>
                         <SelectItem value="explorer">
-                           <div className="flex items-start gap-3 text-muted-foreground">
+                           <div className="text-muted-foreground flex items-start gap-3">
                               <Bird className="size-5" />
                               <div className="grid gap-0.5">
                                  <p>
                                     Neural
                                     {' '}
-                                    <span className="font-medium text-foreground">
+                                    <span className="text-foreground font-medium">
                                        Explorer
                                     </span>
                                  </p>
@@ -60,13 +60,13 @@ export default function Component() {
                            </div>
                         </SelectItem>
                         <SelectItem value="quantum">
-                           <div className="flex items-start gap-3 text-muted-foreground">
+                           <div className="text-muted-foreground flex items-start gap-3">
                               <Turtle className="size-5" />
                               <div className="grid gap-0.5">
                                  <p>
                                     Neural
                                     {' '}
-                                    <span className="font-medium text-foreground">
+                                    <span className="text-foreground font-medium">
                                        Quantum
                                     </span>
                                  </p>

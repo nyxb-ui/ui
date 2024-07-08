@@ -33,15 +33,15 @@ export default function ScrollAreaHorizontalDemo() {
                      <Image
                         src={artwork.art}
                         alt={`Photo by ${artwork.artist}`}
-                        className="aspect-[3/4] h-fit w-fit object-cover"
+                        className="aspect-[3/4] size-fit object-cover"
                         width={300}
                         height={400}
                      />
                   </div>
-                  <figcaption className="pt-2 text-xs text-muted-foreground">
+                  <figcaption className="text-muted-foreground pt-2 text-xs">
                      Photo by
                      {' '}
-                     <span className="font-semibold text-foreground">
+                     <span className="text-foreground font-semibold">
                         {artwork.artist}
                      </span>
                   </figcaption>
