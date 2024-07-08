@@ -39,6 +39,15 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Create .env file
+        run: echo "${{ secrets.ENV_FILE }}" > .env
+
+      - name: Load environment variables
+        run: |
+          set -a
+          source .env
+          set +a
+
       - run: pnpm lint
 
   format:
@@ -77,6 +86,15 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Create .env file
+        run: echo "${{ secrets.ENV_FILE }}" > .env
+
+      - name: Load environment variables
+        run: |
+          set -a
+          source .env
+          set +a
+
       - run: pnpm lint:fix
 
   tsc:
@@ -112,5 +130,14 @@ jobs:
             ${{ runner.os }}-pnpm-store-
       - name: Install dependencies
         run: pnpm install
+
+      - name: Create .env file
+        run: echo "${{ secrets.ENV_FILE }}" > .env
+
+      - name: Load environment variables
+        run: |
+          set -a
+          source .env
+          set +a
 
       - run: pnpm typecheck
