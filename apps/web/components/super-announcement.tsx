@@ -16,8 +16,8 @@ export const SuperAnnouncement: FC<SuperAnnouncementProps> = ({ href, text }) =>
          <AnimatedGradientText>
             <div
                className={ny(
-                  `absolute inset-0 block h-full w-full animate-gradient bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:var(--bg-size)_100%] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]`,
-                  `p-[1px] ![mask-composite:subtract]`,
+                  `animate-gradient absolute inset-0 block size-full bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:var(--bg-size)_100%] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]`,
+                  `p-px ![mask-composite:subtract]`,
                )}
             />
             🎉
@@ -30,7 +30,7 @@ export const SuperAnnouncement: FC<SuperAnnouncementProps> = ({ href, text }) =>
             >
                {text}
             </span>
-            <ChevronRight className="ml-1 h-4 w-4 text-gray-500" />
+            <ChevronRight className="ml-1 size-4 text-gray-500" />
          </AnimatedGradientText>
       </Link>
    )

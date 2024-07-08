@@ -245,7 +245,7 @@ const components = {
    code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
       <code
          className={ny(
-            'relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm',
+            'bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm',
             className,
          )}
          {...props}
@@ -291,7 +291,7 @@ const components = {
    }: React.ComponentProps<typeof TabsTrigger>) => (
       <TabsTrigger
          className={ny(
-            'relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none',
+            'text-muted-foreground data-[state=active]:border-b-primary data-[state=active]:text-foreground relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold shadow-none transition-none data-[state=active]:shadow-none',
             className,
          )}
          {...props}
@@ -324,11 +324,21 @@ const components = {
    LinkedCard: ({ className, ...props }: React.ComponentProps<typeof Link>) => (
       <Link
          className={ny(
-            'flex w-full flex-col items-center rounded-xl border bg-card p-6 text-card-foreground shadow transition-colors hover:bg-muted/50 sm:p-10',
+            'bg-card text-card-foreground hover:bg-muted/50 flex w-full flex-col items-center rounded-xl border p-6 shadow transition-colors sm:p-10',
             className,
          )}
          {...props}
       />
+   ),
+   img: ({
+      className,
+      alt,
+      ...props
+   }: React.ImgHTMLAttributes<HTMLImageElement>) => (
+      <img className={ny('rounded-md', className)} alt={alt} {...props} />
+   ),
+   hr: ({ ...props }: React.HTMLAttributes<HTMLHRElement>) => (
+      <hr className="my-4 md:my-8" {...props} />
    ),
 }
 
@@ -343,15 +353,16 @@ export function Mdx({ code }: MDXProps) {
    })
 
    return (
-      <article
+      <div
+         className="mdx"
          className={ny(
             'max-w-[120ch]',
-            'leading-tighter prose prose-gray tracking-tighter dark:prose-invert',
+            'leading-tighter prose prose-gray dark:prose-invert tracking-tighter',
             'prose-pre:mb-4 prose-pre:mt-6 prose-pre:max-h-[650px] prose-pre:overflow-x-auto prose-pre:rounded-lg prose-pre:border prose-pre:px-0 prose-pre:py-4 prose-pre:text-xs prose-pre:tracking-tighter md:prose-pre:text-sm',
          )}
       >
          {/* ~ts-ignore */}
          <Component components={components} />
-      </article>
+      </div>
    )
 }

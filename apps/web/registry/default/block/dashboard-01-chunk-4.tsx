@@ -21,7 +21,7 @@ export default function Component() {
             <Button asChild size="sm" className="ml-auto gap-1">
                <Link href="#">
                   View All
-                  <ArrowUpRight className="h-4 w-4" />
+                  <ArrowUpRight className="size-4" />
                </Link>
             </Button>
          </CardHeader>
@@ -46,7 +46,7 @@ export default function Component() {
                   <TableRow>
                      <TableCell>
                         <div className="font-medium">Liam Johnson</div>
-                        <div className="hidden text-sm text-muted-foreground md:inline">
+                        <div className="text-muted-foreground hidden text-sm md:inline">
                            liam@example.com
                         </div>
                      </TableCell>
@@ -66,7 +66,7 @@ export default function Component() {
                   <TableRow>
                      <TableCell>
                         <div className="font-medium">Olivia Smith</div>
-                        <div className="hidden text-sm text-muted-foreground md:inline">
+                        <div className="text-muted-foreground hidden text-sm md:inline">
                            olivia@example.com
                         </div>
                      </TableCell>
@@ -86,7 +86,7 @@ export default function Component() {
                   <TableRow>
                      <TableCell>
                         <div className="font-medium">Noah Williams</div>
-                        <div className="hidden text-sm text-muted-foreground md:inline">
+                        <div className="text-muted-foreground hidden text-sm md:inline">
                            noah@example.com
                         </div>
                      </TableCell>
@@ -106,7 +106,7 @@ export default function Component() {
                   <TableRow>
                      <TableCell>
                         <div className="font-medium">Emma Brown</div>
-                        <div className="hidden text-sm text-muted-foreground md:inline">
+                        <div className="text-muted-foreground hidden text-sm md:inline">
                            emma@example.com
                         </div>
                      </TableCell>
@@ -126,7 +126,7 @@ export default function Component() {
                   <TableRow>
                      <TableCell>
                         <div className="font-medium">Liam Johnson</div>
-                        <div className="hidden text-sm text-muted-foreground md:inline">
+                        <div className="text-muted-foreground hidden text-sm md:inline">
                            liam@example.com
                         </div>
                      </TableCell>

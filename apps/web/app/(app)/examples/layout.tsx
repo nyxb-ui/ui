@@ -51,7 +51,7 @@ export default function ExamplesLayout({ children }: ExamplesLayoutProps) {
          </PageHeader>
          <section>
             <ExamplesNav />
-            <div className="overflow-hidden rounded-[0.5rem] border bg-background shadow">
+            <div className="bg-background overflow-hidden rounded-lg border shadow">
                {children}
             </div>
          </section>

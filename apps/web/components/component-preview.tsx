@@ -27,6 +27,7 @@ interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
    button?: 'copy' | 'refresh'
    styleSwitch?: boolean
    dots?: boolean
+   hideCode?: boolean
 }
 
 export function ComponentPreview({
@@ -40,6 +41,7 @@ export function ComponentPreview({
    button = 'refresh',
    styleSwitch = false,
    dots = true,
+   hideCode = false,
    ...props
 }: ComponentPreviewProps) {
    const [config] = useConfig()
@@ -54,10 +56,10 @@ export function ComponentPreview({
 
       if (!Component) {
          return (
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
                Component
                {' '}
-               <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm">
+               <code className="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm">
                   {name}
                </code>
                {' '}
@@ -90,47 +92,49 @@ export function ComponentPreview({
       >
          <Tabs defaultValue="preview" className="relative mr-auto w-full">
             <div className="flex items-center justify-between pb-3">
-               <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0 ml-33">
-                  <TabsTrigger
-                     value="preview"
-                     className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
-                  >
-                     Preview
-                  </TabsTrigger>
-                  <TabsTrigger
-                     value="code"
-                     className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
-                  >
-                     Code
-                  </TabsTrigger>
-               </TabsList>
+               {!hideCode && (
+                  <TabsList className="ml-33 w-full justify-start rounded-none border-b bg-transparent p-0">
+                     <TabsTrigger
+                        value="preview"
+                        className="text-muted-foreground data-[state=active]:border-b-primary data-[state=active]:text-foreground relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold shadow-none transition-none data-[state=active]:shadow-none"
+                     >
+                        Preview
+                     </TabsTrigger>
+                     <TabsTrigger
+                        value="code"
+                        className="text-muted-foreground data-[state=active]:border-b-primary data-[state=active]:text-foreground relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold shadow-none transition-none data-[state=active]:shadow-none"
+                     >
+                        Code
+                     </TabsTrigger>
+                  </TabsList>
+               )}
             </div>
             <TabsContent value="preview" className="relative rounded-md" key={key}>
                <ComponentWrapper dots={dots}>
                   {styleSwitch && (
-                     <StyleSwitcher className="absolute top-4 left-4" />
+                     <StyleSwitcher className="absolute left-4 top-4" />
                   )}
                   {button === 'refresh'
                      ? (
-                        <Button
-                           onClick={() => setKey(prev => prev + 1)}
-                           className="absolute right-0 top-0 z-10 ml-4 flex items-center rounded-lg px-3 py-1"
-                           variant="ghost"
-                        >
-                           <RotateCcw size={16} />
-                        </Button>
+                           <Button
+                              onClick={() => setKey(prev => prev + 1)}
+                              className="absolute right-0 top-0 z-10 ml-4 flex items-center rounded-lg px-3 py-1"
+                              variant="ghost"
+                           >
+                              <RotateCcw size={16} />
+                           </Button>
                         )
                      : (
-                        <CopyButton
-                           value={codeString}
-                           className="absolute right-2 top-4 h-7 w-7 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:size-3.5"
-                           variant="outline"
-                        />
+                           <CopyButton
+                              value={codeString}
+                              className="text-foreground hover:bg-muted hover:text-foreground absolute right-2 top-4 size-7 opacity-100 [&_svg]:size-3.5"
+                              variant="outline"
+                           />
                         )}
                   <React.Suspense
                      fallback={(
-                        <div className="flex items-center text-sm text-muted-foreground">
-                           <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+                        <div className="text-muted-foreground flex items-center text-sm">
+                           <Icons.spinner className="mr-2 size-4 animate-spin" />
                            Loading...
                         </div>
                      )}

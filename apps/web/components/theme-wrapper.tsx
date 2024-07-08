@@ -22,10 +22,10 @@ export function ThemeWrapper({
         className,
          )}
          style={
-        {
-           '--radius': `${defaultTheme ? 0.5 : config.radius}rem`,
-        } as React.CSSProperties
-      }
+            {
+               '--radius': `${defaultTheme ? 0.5 : config.radius}rem`,
+            } as React.CSSProperties
+         }
       >
          {children}
       </div>

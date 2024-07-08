@@ -7,7 +7,7 @@ import { Textarea } from '~/registry/default/ui/textarea'
 export default function Component() {
    return (
       <form
-         className="relative overflow-hidden rounded-lg border bg-background focus-within:ring-1 focus-within:ring-ring"
+         className="bg-background focus-within:ring-ring relative overflow-hidden rounded-lg border focus-within:ring-1"
          x-chunk="dashboard-03-chunk-1"
       >
          <Label htmlFor="message" className="sr-only">

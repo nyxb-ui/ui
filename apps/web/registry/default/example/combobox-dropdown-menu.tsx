@@ -43,7 +43,7 @@ export default function ComboboxDropdownMenu() {
    return (
       <div className="flex w-full flex-col items-start justify-between rounded-md border px-4 py-3 sm:flex-row sm:items-center">
          <p className="text-sm font-medium leading-none">
-            <span className="mr-2 rounded-lg bg-primary px-2 py-1 text-xs text-primary-foreground">
+            <span className="bg-primary text-primary-foreground mr-2 rounded-lg px-2 py-1 text-xs">
                {label}
             </span>
             <span className="text-muted-foreground">Create a new project</span>
@@ -58,17 +58,17 @@ export default function ComboboxDropdownMenu() {
                <DropdownMenuLabel>Actions</DropdownMenuLabel>
                <DropdownMenuGroup>
                   <DropdownMenuItem>
-                     <User className="mr-2 h-4 w-4" />
+                     <User className="mr-2 size-4" />
                      Assign to...
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                     <Calendar className="mr-2 h-4 w-4" />
+                     <Calendar className="mr-2 size-4" />
                      Set due date...
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
                   <DropdownMenuSub>
                      <DropdownMenuSubTrigger>
-                        <Tags className="mr-2 h-4 w-4" />
+                        <Tags className="mr-2 size-4" />
                         Apply label
                      </DropdownMenuSubTrigger>
                      <DropdownMenuSubContent className="p-0">
@@ -96,7 +96,7 @@ export default function ComboboxDropdownMenu() {
                   </DropdownMenuSub>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem className="text-red-600">
-                     <Trash className="mr-2 h-4 w-4" />
+                     <Trash className="mr-2 size-4" />
                      Delete
                      <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
                   </DropdownMenuItem>

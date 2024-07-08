@@ -10,20 +10,20 @@ function ComponentWrapper({ className, children, dots = true }: ComponentWrapper
    return (
       <div
          className={ny(
-            'not-prose max-w-screen relative flex flex-col items-center justify-center rounded-xl bg-background p-0 md:border md:p-16',
+            'not-prose max-w-screen bg-background relative flex flex-col items-center justify-center rounded-xl p-0 md:border md:p-16',
             className,
          )}
       >
          {dots && (
             <div
                className={ny(
-                  'absolute inset-0 h-full w-full',
+                  'absolute inset-0 size-full',
                   'bg-[radial-gradient(#00000055_1px,transparent_1px)] dark:bg-[radial-gradient(#ffffff22_1px,transparent_1px)]',
                   'lab-bg [background-size:16px_16px]',
                )}
             />
          )}
-         <div className="mt-12 mb-12 w-full flex flex-col items-center justify-center">
+         <div className="my-12 flex w-full flex-col items-center justify-center">
             {children}
          </div>
       </div>

@@ -1,20 +1,22 @@
-import { ChevronLeftIcon, ChevronRightIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
-import type { Doc } from '~/.contentlayer/generated'
-import { buttonVariants } from '~/components/ui/button'
+import { ChevronLeftIcon, ChevronRightIcon } from '@radix-ui/react-icons'
+import type { Doc } from 'contentlayer/generated'
+import type { NavItem, NavItemWithChildren } from 'types/nav'
+
 import { docsConfig } from '~/config/docs'
 import { ny } from '~/lib/utils'
-import type { NavItem, NavItemWithChildren } from '~/types'
+import { buttonVariants } from '~/registry/miami/ui/button'
 
 interface DocsPagerProps {
    doc: Doc
 }
 
-export function DocPager({ doc }: DocsPagerProps) {
+export function DocsPager({ doc }: DocsPagerProps) {
    const pager = getPagerForDoc(doc)
 
-   if (!pager)
+   if (!pager) {
       return null
+   }
 
    return (
       <div className="flex flex-row items-center justify-between">
@@ -23,7 +25,7 @@ export function DocPager({ doc }: DocsPagerProps) {
                href={pager.prev.href}
                className={buttonVariants({ variant: 'outline' })}
             >
-               <ChevronLeftIcon className="mr-2 h-4 w-4" />
+               <ChevronLeftIcon className="mr-2 size-4" />
                {pager.prev.title}
             </Link>
          )}
@@ -33,7 +35,7 @@ export function DocPager({ doc }: DocsPagerProps) {
                className={ny(buttonVariants({ variant: 'outline' }), 'ml-auto')}
             >
                {pager.next.title}
-               <ChevronRightIcon className="ml-2 h-4 w-4" />
+               <ChevronRightIcon className="ml-2 size-4" />
             </Link>
          )}
       </div>
@@ -41,7 +43,10 @@ export function DocPager({ doc }: DocsPagerProps) {
 }
 
 export function getPagerForDoc(doc: Doc) {
-   const flattenedLinks = [null, ...flatten(docsConfig.sidebarNav), null]
+   const nav = doc.slug.startsWith('/docs/charts')
+      ? docsConfig.chartsNav
+      : docsConfig.sidebarNav
+   const flattenedLinks = [null, ...flatten(nav), null]
    const activeIndex = flattenedLinks.findIndex(
       link => doc.slug === link?.href,
    )

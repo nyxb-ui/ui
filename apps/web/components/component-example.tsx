@@ -52,24 +52,24 @@ export function ComponentExample({
                <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0">
                   <TabsTrigger
                      value="preview"
-                     className="relative rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+                     className="text-muted-foreground data-[state=active]:border-b-primary data-[state=active]:text-foreground relative rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold shadow-none transition-none data-[state=active]:shadow-none"
                   >
                      Preview
                   </TabsTrigger>
                   <TabsTrigger
                      value="code"
-                     className="relative rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+                     className="text-muted-foreground data-[state=active]:border-b-primary data-[state=active]:text-foreground relative rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold shadow-none transition-none data-[state=active]:shadow-none"
                   >
                      Code
                   </TabsTrigger>
                </TabsList>
                {extractedClassNames
                   ? (
-                     <CopyWithClassNames
-                        value={codeString}
-                        classNames={extractedClassNames}
-                        className="absolute right-4 top-20"
-                     />
+                        <CopyWithClassNames
+                           value={codeString}
+                           classNames={extractedClassNames}
+                           className="absolute right-4 top-20"
+                        />
                      )
                   : (
                         codeString && (
@@ -98,9 +98,9 @@ export function ComponentExample({
                   </div>
                   {Children?.length
                      ? (
-                        <div className="rounded-md [&_button]:hidden [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
-                           {Children}
-                        </div>
+                           <div className="rounded-md [&_button]:hidden [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
+                              {Children}
+                           </div>
                         )
                      : null}
                </div>

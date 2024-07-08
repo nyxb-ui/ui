@@ -30,7 +30,7 @@ export function BlockChunk({
                exit={{ opacity: 0, transition: { ease: 'easeOut', duration: 0.2 } }}
                transition={{ ease: 'easeIn', duration: 0.2 }}
                className={ny(
-                  'group rounded-xl bg-background shadow-xl transition',
+                  'bg-background group rounded-xl shadow-xl transition',
                   chunk.container?.className,
                )}
                {...props}

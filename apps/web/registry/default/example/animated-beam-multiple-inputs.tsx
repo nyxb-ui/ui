@@ -5,14 +5,14 @@ import { ny } from '~/lib/utils'
 import { AnimatedBeam } from '~/registry/default/ui/animated-beam'
 
 const Circle = forwardRef<
-  HTMLDivElement,
-  { className?: string, children?: React.ReactNode }
+   HTMLDivElement,
+   { className?: string, children?: React.ReactNode }
 >(({ className, children }, ref) => {
    return (
       <div
          ref={ref}
          className={ny(
-            'z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 border-border bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]',
+            'border-border z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]',
             className,
          )}
       >
@@ -33,10 +33,10 @@ export default function AnimatedBeamMultipleInputDemo() {
 
    return (
       <div
-         className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background p-10 md:shadow-xl"
+         className="bg-background relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg border p-10 md:shadow-xl"
          ref={containerRef}
       >
-         <div className="flex h-full w-full flex-row items-stretch justify-between gap-10">
+         <div className="flex size-full flex-row items-stretch justify-between gap-10">
             <div className="flex flex-col justify-center gap-2">
                <Circle ref={div1Ref}>
                   <Icons.googleDrive />
@@ -55,7 +55,7 @@ export default function AnimatedBeamMultipleInputDemo() {
                </Circle>
             </div>
             <div className="flex flex-col justify-center">
-               <Circle ref={div6Ref} className="h-16 w-16">
+               <Circle ref={div6Ref} className="size-16">
                   <Icons.openai />
                </Circle>
             </div>

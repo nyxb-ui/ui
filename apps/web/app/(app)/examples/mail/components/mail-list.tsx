@@ -21,7 +21,7 @@ export function MailList({ items }: MailListProps) {
                <button
                   key={item.id}
                   className={ny(
-                     'flex flex-col items-start gap-2 rounded-lg border p-3 text-left text-sm transition-all hover:bg-accent',
+                     'hover:bg-accent flex flex-col items-start gap-2 rounded-lg border p-3 text-left text-sm transition-all',
                      mail.selected === item.id && 'bg-muted',
                   )}
                   onClick={() =>
@@ -35,7 +35,7 @@ export function MailList({ items }: MailListProps) {
                         <div className="flex items-center gap-2">
                            <div className="font-semibold">{item.name}</div>
                            {!item.read && (
-                              <span className="flex h-2 w-2 rounded-full bg-blue-600" />
+                              <span className="flex size-2 rounded-full bg-blue-600" />
                            )}
                         </div>
                         <div
@@ -53,18 +53,18 @@ export function MailList({ items }: MailListProps) {
                      </div>
                      <div className="text-xs font-medium">{item.subject}</div>
                   </div>
-                  <div className="line-clamp-2 text-xs text-muted-foreground">
+                  <div className="text-muted-foreground line-clamp-2 text-xs">
                      {item.text.substring(0, 300)}
                   </div>
                   {item.labels.length
                      ? (
-                        <div className="flex items-center gap-2">
-                           {item.labels.map(label => (
-                              <Badge key={label} variant={getBadgeVariantFromLabel(label)}>
-                                 {label}
-                              </Badge>
-                           ))}
-                        </div>
+                           <div className="flex items-center gap-2">
+                              {item.labels.map(label => (
+                                 <Badge key={label} variant={getBadgeVariantFromLabel(label)}>
+                                    {label}
+                                 </Badge>
+                              ))}
+                           </div>
                         )
                      : null}
                </button>

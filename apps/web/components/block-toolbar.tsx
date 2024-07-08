@@ -61,15 +61,15 @@ export function BlockToolbar({
             <Popover>
                <PopoverTrigger
                   disabled={isLiftMode}
-                  className="hidden text-muted-foreground hover:text-foreground disabled:opacity-50 sm:flex"
+                  className="text-muted-foreground hover:text-foreground hidden disabled:opacity-50 sm:flex"
                >
-                  <CircleHelp className="h-3.5 w-3.5" />
+                  <CircleHelp className="size-3.5" />
                   <span className="sr-only">Block description</span>
                </PopoverTrigger>
                <PopoverContent
                   side="top"
                   sideOffset={20}
-                  className="space-y-3 rounded-[0.5rem] text-sm"
+                  className="space-y-3 rounded-lg text-sm"
                >
                   <p className="font-medium">
                      What is the difference between the Miami and Default style?
@@ -159,21 +159,21 @@ export function BlockToolbar({
                   >
                      <ToggleGroupItem
                         value="100"
-                        className="h-[22px] w-[22px] rounded-sm p-0"
+                        className="size-[22px] rounded-sm p-0"
                      >
-                        <Monitor className="h-3.5 w-3.5" />
+                        <Monitor className="size-3.5" />
                      </ToggleGroupItem>
                      <ToggleGroupItem
                         value="60"
-                        className="h-[22px] w-[22px] rounded-sm p-0"
+                        className="size-[22px] rounded-sm p-0"
                      >
-                        <Tablet className="h-3.5 w-3.5" />
+                        <Tablet className="size-3.5" />
                      </ToggleGroupItem>
                      <ToggleGroupItem
                         value="30"
-                        className="h-[22px] w-[22px] rounded-sm p-0"
+                        className="size-[22px] rounded-sm p-0"
                      >
-                        <Smartphone className="h-3.5 w-3.5" />
+                        <Smartphone className="size-3.5" />
                      </ToggleGroupItem>
                   </ToggleGroup>
                </div>

@@ -42,7 +42,7 @@ export function PresetActions() {
             <DropdownMenuTrigger asChild>
                <Button variant="secondary">
                   <span className="sr-only">Actions</span>
-                  <DotsHorizontalIcon className="h-4 w-4" />
+                  <DotsHorizontalIcon className="size-4" />
                </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
@@ -69,7 +69,7 @@ export function PresetActions() {
                   </DialogDescription>
                </DialogHeader>
                <div className="py-6">
-                  <h4 className="text-sm text-muted-foreground">
+                  <h4 className="text-muted-foreground text-sm">
                      Playground Warnings
                   </h4>
                   <div className="flex items-start justify-between space-x-4 pt-3">
@@ -78,7 +78,7 @@ export function PresetActions() {
                         <span className="font-semibold">
                            Show a warning when content is flagged
                         </span>
-                        <span className="text-sm text-muted-foreground">
+                        <span className="text-muted-foreground text-sm">
                            A warning will be shown when sexual, hateful, violent or
                            self-harm content is detected.
                         </span>

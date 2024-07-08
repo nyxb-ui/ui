@@ -16,14 +16,14 @@ export function ComponentInstallation({
          {...props}
       >
          <a
-            className="flex w-full flex-col items-center rounded-xl border bg-card p-6 text-card-foreground shadow transition-colors hover:bg-muted/50 sm:p-10"
+            className="bg-card text-card-foreground hover:bg-muted/50 flex w-full flex-col items-center rounded-xl border p-6 shadow transition-colors sm:p-10"
             href="/docs/installation/next"
          >
             <svg
                role="img"
                viewBox="0 0 24 24"
                xmlns="http://www.w3.org/2000/svg"
-               className="w-10 h-10"
+               className="size-10"
                fill="currentColor"
             >
                <title>Next</title>
@@ -32,14 +32,14 @@ export function ComponentInstallation({
             <p className="mt-2 font-medium">Next</p>
          </a>
          <a
-            className="flex w-full flex-col items-center rounded-xl border bg-card p-6 text-card-foreground shadow transition-colors hover:bg-muted/50 sm:p-10"
+            className="bg-card text-card-foreground hover:bg-muted/50 flex w-full flex-col items-center rounded-xl border p-6 shadow transition-colors sm:p-10"
             href="/docs/installation/nuxt"
          >
             <svg
                role="img"
                viewBox="0 0 512 512"
                xmlns="http://www.w3.org/2000/svg"
-               className="w-10 h-10"
+               className="size-10"
                fill="currentColor"
             >
                <title>Nuxt</title>
@@ -48,14 +48,14 @@ export function ComponentInstallation({
             <p className="mt-2 font-medium">Nuxt</p>
          </a>
          <a
-            className="flex w-full flex-col items-center rounded-xl border bg-card p-6 text-card-foreground shadow transition-colors hover:bg-muted/50 sm:p-10"
+            className="bg-card text-card-foreground hover:bg-muted/50 flex w-full flex-col items-center rounded-xl border p-6 shadow transition-colors sm:p-10"
             href="/docs/installation/vite"
          >
             <svg
                role="img"
                viewBox="0 0 24 24"
                xmlns="http://www.w3.org/2000/svg"
-               className="w-10 h-10"
+               className="size-10"
                fill="currentColor"
             >
                <title>Vite</title>
@@ -64,12 +64,12 @@ export function ComponentInstallation({
             <p className="mt-2 font-medium">Vite</p>
          </a>
          <a
-            className="flex w-full flex-col items-center rounded-xl border bg-card p-6 text-card-foreground shadow transition-colors hover:bg-muted/50 sm:p-10"
+            className="bg-card text-card-foreground hover:bg-muted/50 flex w-full flex-col items-center rounded-xl border p-6 shadow transition-colors sm:p-10"
             href="/docs/installation/vue"
          >
             <svg
                xmlns="http://www.w3.org/2000/svg"
-               className="ml-2 h-10 w-10"
+               className="ml-2 size-10"
                viewBox="0 0 18 8"
             >
                <title>Vue</title>
@@ -85,14 +85,14 @@ export function ComponentInstallation({
             <p className="font-medium">Vue</p>
          </a>
          <a
-            className="flex w-full flex-col items-center rounded-xl border bg-card p-6 text-card-foreground shadow transition-colors hover:bg-muted/50 sm:p-10"
+            className="bg-card text-card-foreground hover:bg-muted/50 flex w-full flex-col items-center rounded-xl border p-6 shadow transition-colors sm:p-10"
             href="/docs/installation/remix"
          >
             <svg
                role="img"
                viewBox="0 0 24 24"
                xmlns="http://www.w3.org/2000/svg"
-               className="w-10 h-10"
+               className="size-10"
                fill="currentColor"
             >
                <title>Remix</title>
@@ -101,12 +101,12 @@ export function ComponentInstallation({
             <p className="mt-2 font-medium">Remix</p>
          </a>
          <a
-            className="flex w-full flex-col items-center rounded-xl border bg-card p-6 text-card-foreground shadow transition-colors hover:bg-muted/50 sm:p-10"
+            className="bg-card text-card-foreground hover:bg-muted/50 flex w-full flex-col items-center rounded-xl border p-6 shadow transition-colors sm:p-10"
             href="/docs/installation/svelte"
          >
             <svg
                xmlns="http://www.w3.org/2000/svg"
-               className="h-10 w-10"
+               className="size-10"
                viewBox="0 0 18 14"
             >
                <title>Svelte</title>
@@ -120,14 +120,14 @@ export function ComponentInstallation({
             <p className="mt-3 font-medium">Svelte</p>
          </a>
          <a
-            className="flex w-full flex-col items-center rounded-xl border bg-card p-6 text-card-foreground shadow transition-colors hover:bg-muted/50 sm:p-10"
+            className="bg-card text-card-foreground hover:bg-muted/50 flex w-full flex-col items-center rounded-xl border p-6 shadow transition-colors sm:p-10"
             href="/docs/installation/gatsby"
          >
             <svg
                role="img"
                viewBox="0 0 24 24"
                xmlns="http://www.w3.org/2000/svg"
-               className="w-10 h-10"
+               className="size-10"
                fill="currentColor"
             >
                <title>Gatsby</title>
@@ -136,14 +136,14 @@ export function ComponentInstallation({
             <p className="mt-2 font-medium">Gatsby</p>
          </a>
          <a
-            className="flex w-full flex-col items-center rounded-xl border bg-card p-6 text-card-foreground shadow transition-colors hover:bg-muted/50 sm:p-10"
+            className="bg-card text-card-foreground hover:bg-muted/50 flex w-full flex-col items-center rounded-xl border p-6 shadow transition-colors sm:p-10"
             href="/docs/installation/astro"
          >
             <svg
                role="img"
                viewBox="0 0 24 24"
                xmlns="http://www.w3.org/2000/svg"
-               className="w-10 h-10"
+               className="size-10"
                fill="currentColor"
             >
                <title>Astro</title>
@@ -155,14 +155,14 @@ export function ComponentInstallation({
             <p className="mt-2 font-medium">Astro</p>
          </a>
          <a
-            className="flex w-full flex-col items-center rounded-xl border bg-card p-6 text-card-foreground shadow transition-colors hover:bg-muted/50 sm:p-10"
+            className="bg-card text-card-foreground hover:bg-muted/50 flex w-full flex-col items-center rounded-xl border p-6 shadow transition-colors sm:p-10"
             href="/docs/installation/laravel"
          >
             <svg
                role="img"
                viewBox="0 0 24 24"
                xmlns="http://www.w3.org/2000/svg"
-               className="w-10 h-10"
+               className="size-10"
                fill="currentColor"
             >
                <title>Laravel</title>
@@ -171,14 +171,14 @@ export function ComponentInstallation({
             <p className="mt-2 font-medium">Laravel</p>
          </a>
          <a
-            className="flex w-full flex-col items-center rounded-xl border bg-card p-6 text-card-foreground shadow transition-colors hover:bg-muted/50 sm:p-10"
+            className="bg-card text-card-foreground hover:bg-muted/50 flex w-full flex-col items-center rounded-xl border p-6 shadow transition-colors sm:p-10"
             href="/docs/installation/manual"
          >
             <svg
                role="img"
                viewBox="0 0 24 24"
                xmlns="http://www.w3.org/2000/svg"
-               className="w-10 h-10"
+               className="size-10"
                fill="currentColor"
             >
                <title>React</title>
