@@ -21,6 +21,9 @@ const nextConfig = {
       ],
       domains: ['localhost', 'cdn.nyxbui.design'],
    },
+   env: {
+      NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
+   },
    compiler: {
       // Remove console.log from production except for error logs
       removeConsole:

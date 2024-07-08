@@ -863,6 +863,11 @@ export const examples: Registry = [
       files: ['example/toggle-with-text.tsx'],
    },
    {
+      name: 'mode-toggle-group',
+      type: 'components:example',
+      files: ['example/mode-toggle-group.tsx'],
+   },
+   {
       name: 'tooltip-demo',
       type: 'components:example',
       registryDependencies: ['tooltip'],

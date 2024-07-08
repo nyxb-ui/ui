@@ -2,9 +2,6 @@
   "name": "nyxb-ui",
   "private": true,
   "packageManager": "pnpm@9.4.0",
-  "engines": {
-    "node": ">=20"
-  },
   "scripts": {
     "build": "turbo build",
     "build:cli": "turbo --filter=nyxbui build",
@@ -15,7 +12,7 @@
     "cli:start": "pnpm --filter=nyxbui start:dev",
     "preview": "turbo run preview",
     "sync:templates": "./scripts/sync-templates.sh \"templates/*\"",
-    "check": "turbo lint typecheck format:check",
+    "typecheck": "turbo run typecheck",
     "pub:beta": "cd packages/cli && pnpm pub:beta",
     "pub:release": "cd packages/cli && pnpm pub:release",
     "lint": "turbo run lint",
@@ -49,6 +46,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "dotenv": "^16.4.5",
     "typescript": "^5.4.5"
   }
 }
