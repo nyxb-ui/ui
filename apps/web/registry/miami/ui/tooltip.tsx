@@ -35,8 +35,8 @@ export interface TooltipProps
    VariantProps<typeof tooltipVariants> {};
 
 const TooltipContent = React.forwardRef<
-  React.ElementRef<typeof TooltipPrimitive.Content>,
-  TooltipProps
+   React.ElementRef<typeof TooltipPrimitive.Content>,
+   TooltipProps
 >(({ className, variant, sideOffset = 4, ...props }, ref) => (
    <TooltipPrimitive.Content
       ref={ref}

@@ -132,14 +132,14 @@ export function PropsTable({
                            <TableCell>
                               {defaultValue
                                  ? (
-                                    <code className="bg-gray-100 px-1 dark:bg-gray-700">
-                                       {defaultValue}
-                                    </code>
+                                       <code className="bg-gray-100 px-1 dark:bg-gray-700">
+                                          {defaultValue}
+                                       </code>
                                     )
                                  : (
-                                    <DividerHorizontalIcon
-                                       style={{ color: 'var(--gray-8)' }}
-                                    />
+                                       <DividerHorizontalIcon
+                                          style={{ color: 'var(--gray-8)' }}
+                                       />
                                     )}
                            </TableCell>
                         </TableRow>

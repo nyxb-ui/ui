@@ -30,8 +30,8 @@ export default function HeroClient({ post }: { post: Doc }) {
                         <AnimatedGradientText>
                            <div
                               className={ny(
-                      `absolute inset-0 block h-full w-full animate-gradient bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:var(--bg-size)_100%] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]`,
-                      `p-[1px] ![mask-composite:subtract]`,
+                      `animate-gradient absolute inset-0 block size-full bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:var(--bg-size)_100%] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]`,
+                      `p-px ![mask-composite:subtract]`,
                               )}
                            />
                            🎉
@@ -44,19 +44,19 @@ export default function HeroClient({ post }: { post: Doc }) {
                               {' '}
                               {post.title}
                            </span>
-                           <ChevronRight className="ml-1 h-4 w-4 text-gray-500" />
+                           <ChevronRight className="ml-1 size-4 text-gray-500" />
                         </AnimatedGradientText>
                      </Link>
                      <div className="relative flex flex-col gap-4 md:items-center lg:flex-row">
-                        <h1 className="relative mx-0 max-w-[43.5rem] text-balance bg-gradient-to-br from-black from-50% to-neutral-200/60 bg-clip-text pt-5 text-left text-5xl font-semibold tracking-tighter text-transparent dark:text-white sm:text-7xl md:mx-auto md:px-4 md:py-2 md:text-center md:text-7xl lg:text-7xl">
+                        <h1 className="relative mx-0 max-w-[43.5rem] text-balance bg-gradient-to-br from-black from-50% to-neutral-200/60 bg-clip-text pt-5 text-left text-5xl font-semibold tracking-tighter text-transparent sm:text-7xl md:mx-auto md:px-4 md:py-2 md:text-center md:text-7xl lg:text-7xl dark:text-white">
                            Fusion UI library Shadcn/ui + MagicUI
                         </h1>
-                        <span className="text-neutral-90 absolute -top-2.5 -left-10 z-10 rotate-3 whitespace-nowrap rounded-full bg-neutral-800 px-2.5 py-1 text-[11px] font-semibold uppercase leading-5 tracking-wide text-white md:top-12 md:-rotate-12">
+                        <span className="text-neutral-90 absolute -left-10 -top-2.5 z-10 rotate-3 whitespace-nowrap rounded-full bg-neutral-800 px-2.5 py-1 text-[11px] font-semibold uppercase leading-5 tracking-wide text-white md:top-12 md:-rotate-12">
                            100% open-source
                         </span>
                      </div>
 
-                     <p className="max-w-xl text-balance text-left text-base tracking-tight text-black dark:font-medium dark:text-white md:text-center md:text-lg ">
+                     <p className="max-w-xl text-balance text-left text-base tracking-tight text-black md:text-center md:text-lg dark:font-medium dark:text-white ">
                         150+ free and open-source UI components built with
                         {' '}
                         <span className="font-bold text-black dark:text-white">
@@ -93,7 +93,7 @@ export default function HeroClient({ post }: { post: Doc }) {
                               )}
                            >
                               Browse Components
-                              <ChevronRight className="ml-1  size-4 flex-shrink-0 transition-all duration-300 ease-out group-hover:translate-x-1" />
+                              <ChevronRight className="ml-1  size-4 shrink-0 transition-all duration-300 ease-out group-hover:translate-x-1" />
                            </Link>
                            <Link
                               href="/docs"
@@ -107,14 +107,14 @@ export default function HeroClient({ post }: { post: Doc }) {
                               )}
                            >
                               Get Started
-                              <ChevronRight className="ml-1 size-4 flex-shrink-0 transition-all duration-300 ease-out group-hover:translate-x-1" />
+                              <ChevronRight className="ml-1 size-4 shrink-0 transition-all duration-300 ease-out group-hover:translate-x-1" />
                            </Link>
                         </div>
                      </div>
                   </div>
                </div>
 
-               <div className="relative mx-auto flex w-full max-w-[16rem] items-center justify-center">
+               <div className="relative mx-auto flex w-full max-w-64 items-center justify-center">
                   <TechStack
                      className="mx-auto flex w-full items-center justify-between"
                      technologies={[
@@ -176,13 +176,13 @@ export default function HeroClient({ post }: { post: Doc }) {
                      <AnimatedBeamMultipleInputDemo />
                      <AnimatedListDemo />
                      <RetroGridDemo />
-                     <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+                     <div className="bg-background relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg border md:shadow-xl">
                         <TypingAnimation
                            className="text-4xl font-bold text-black dark:text-white"
                            text="Typing Animation"
                         />
                      </div>
-                     <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background p-4 md:shadow-xl">
+                     <div className="bg-background relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg border p-4 md:shadow-xl">
                         <WordRotate
                            className="text-4xl font-bold text-black dark:text-white"
                            words={[
@@ -201,11 +201,11 @@ export default function HeroClient({ post }: { post: Doc }) {
                            ]}
                         />
                      </div>
-                     <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background py-4 md:shadow-xl">
+                     <div className="bg-background relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg border py-4 md:shadow-xl">
                         <VelocityScroll
                            text="Velocity Scroll"
                            default_velocity={5}
-                           className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
+                           className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm md:text-7xl md:leading-[5rem] dark:text-white"
                         />
                      </div>
                      <OrbitingCirclesDemo />

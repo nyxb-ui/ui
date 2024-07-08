@@ -46,7 +46,7 @@ export default function Component() {
                      type="button"
                      className="flex aspect-square w-full items-center justify-center rounded-md border border-dashed"
                   >
-                     <Upload className="h-4 w-4 text-muted-foreground" />
+                     <Upload className="text-muted-foreground size-4" />
                      <span className="sr-only">Upload</span>
                   </button>
                </div>

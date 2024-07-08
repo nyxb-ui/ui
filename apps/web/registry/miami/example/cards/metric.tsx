@@ -72,18 +72,18 @@ export function CardsMetric() {
                         content={({ active, payload }) => {
                            if (active && payload && payload.length) {
                               return (
-                                 <div className="rounded-lg border bg-background p-2 shadow-sm">
+                                 <div className="bg-background rounded-lg border p-2 shadow-sm">
                                     <div className="grid grid-cols-2 gap-2">
                                        <div className="flex flex-col">
-                                          <span className="text-[0.70rem] uppercase text-muted-foreground">
+                                          <span className="text-muted-foreground text-[0.70rem] uppercase">
                                              Average
                                           </span>
-                                          <span className="font-bold text-muted-foreground">
+                                          <span className="text-muted-foreground font-bold">
                                              {payload[0].value}
                                           </span>
                                        </div>
                                        <div className="flex flex-col">
-                                          <span className="text-[0.70rem] uppercase text-muted-foreground">
+                                          <span className="text-muted-foreground text-[0.70rem] uppercase">
                                              Today
                                           </span>
                                           <span className="font-bold">
@@ -107,14 +107,14 @@ export function CardsMetric() {
                            style: { fill: 'var(--theme-primary)', opacity: 0.25 },
                         }}
                         style={
-                  {
-                     'stroke': 'var(--theme-primary)',
-                     'opacity': 0.25,
-                     '--theme-primary': `hsl(${
+                           {
+                              'stroke': 'var(--theme-primary)',
+                              'opacity': 0.25,
+                              '--theme-primary': `hsl(${
                       theme?.cssVars[mode === 'dark' ? 'dark' : 'light'].primary
                     })`,
-                  } as React.CSSProperties
-                }
+                           } as React.CSSProperties
+                        }
                      />
                      <Line
                         type="monotone"
@@ -125,13 +125,13 @@ export function CardsMetric() {
                            style: { fill: 'var(--theme-primary)' },
                         }}
                         style={
-                  {
-                     'stroke': 'var(--theme-primary)',
-                     '--theme-primary': `hsl(${
+                           {
+                              'stroke': 'var(--theme-primary)',
+                              '--theme-primary': `hsl(${
                       theme?.cssVars[mode === 'dark' ? 'dark' : 'light'].primary
                     })`,
-                  } as React.CSSProperties
-                }
+                           } as React.CSSProperties
+                        }
                      />
                   </LineChart>
                </ResponsiveContainer>

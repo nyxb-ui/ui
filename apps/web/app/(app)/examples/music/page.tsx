@@ -63,7 +63,7 @@ export default function MusicPage() {
                                  </TabsList>
                                  <div className="ml-auto mr-4">
                                     <Button>
-                                       <PlusCircledIcon className="mr-2 h-4 w-4" />
+                                       <PlusCircledIcon className="mr-2 size-4" />
                                        Add music
                                     </Button>
                                  </div>
@@ -77,7 +77,7 @@ export default function MusicPage() {
                                        <h2 className="text-2xl font-semibold tracking-tight">
                                           Listen Now
                                        </h2>
-                                       <p className="text-sm text-muted-foreground">
+                                       <p className="text-muted-foreground text-sm">
                                           Top picks for you. Updated daily.
                                        </p>
                                     </div>
@@ -104,7 +104,7 @@ export default function MusicPage() {
                                     <h2 className="text-2xl font-semibold tracking-tight">
                                        Made for You
                                     </h2>
-                                    <p className="text-sm text-muted-foreground">
+                                    <p className="text-muted-foreground text-sm">
                                        Your personal playlists. Updated daily.
                                     </p>
                                  </div>
@@ -136,7 +136,7 @@ export default function MusicPage() {
                                        <h2 className="text-2xl font-semibold tracking-tight">
                                           New Episodes
                                        </h2>
-                                       <p className="text-sm text-muted-foreground">
+                                       <p className="text-muted-foreground text-sm">
                                           Your favorite podcasts. Updated daily.
                                        </p>
                                     </div>

@@ -79,29 +79,29 @@ export default function DrawerDemo() {
                      <Button
                         variant="outline"
                         size="icon"
-                        className="h-8 w-8 shrink-0 rounded-full"
+                        className="size-8 shrink-0 rounded-full"
                         onClick={() => onClick(-10)}
                         disabled={goal <= 200}
                      >
-                        <Minus className="h-4 w-4" />
+                        <Minus className="size-4" />
                         <span className="sr-only">Decrease</span>
                      </Button>
                      <div className="flex-1 text-center">
                         <div className="text-7xl font-bold tracking-tighter">
                            {goal}
                         </div>
-                        <div className="text-[0.70rem] uppercase text-muted-foreground">
+                        <div className="text-muted-foreground text-[0.70rem] uppercase">
                            Calories/day
                         </div>
                      </div>
                      <Button
                         variant="outline"
                         size="icon"
-                        className="h-8 w-8 shrink-0 rounded-full"
+                        className="size-8 shrink-0 rounded-full"
                         onClick={() => onClick(10)}
                         disabled={goal >= 400}
                      >
-                        <Plus className="h-4 w-4" />
+                        <Plus className="size-4" />
                         <span className="sr-only">Increase</span>
                      </Button>
                   </div>
@@ -111,11 +111,11 @@ export default function DrawerDemo() {
                            <Bar
                               dataKey="goal"
                               style={
-                      {
-                         fill: 'hsl(var(--foreground))',
-                         opacity: 0.9,
-                      } as React.CSSProperties
-                    }
+                                 {
+                                    fill: 'hsl(var(--foreground))',
+                                    opacity: 0.9,
+                                 } as React.CSSProperties
+                              }
                            />
                         </BarChart>
                      </ResponsiveContainer>

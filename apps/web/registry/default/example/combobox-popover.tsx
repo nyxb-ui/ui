@@ -68,7 +68,7 @@ export default function ComboboxPopover() {
 
    return (
       <div className="flex items-center space-x-4">
-         <p className="text-sm text-muted-foreground">Status</p>
+         <p className="text-muted-foreground text-sm">Status</p>
          <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild>
                <Button
@@ -78,13 +78,13 @@ export default function ComboboxPopover() {
                >
                   {selectedStatus
                      ? (
-                        <>
-                           <selectedStatus.icon className="mr-2 h-4 w-4 shrink-0" />
-                           {selectedStatus.label}
-                        </>
+                           <>
+                              <selectedStatus.icon className="mr-2 size-4 shrink-0" />
+                              {selectedStatus.label}
+                           </>
                         )
                      : (
-                        <>+ Set status</>
+                           <>+ Set status</>
                         )}
                </Button>
             </PopoverTrigger>
@@ -108,7 +108,7 @@ export default function ComboboxPopover() {
                            >
                               <status.icon
                                  className={ny(
-                                    'mr-2 h-4 w-4',
+                                    'mr-2 size-4',
                                     status.value === selectedStatus?.value
                                        ? 'opacity-100'
                                        : 'opacity-40',

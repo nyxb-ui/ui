@@ -21,7 +21,7 @@ function PlayButton() {
 
 export default function HeroVideoDemo() {
    return (
-      <div className="relative flex w-full flex-col items-center justify-center gap-8 overflow-hidden rounded-lg border bg-background p-10">
+      <div className="bg-background relative flex w-full flex-col items-center justify-center gap-8 overflow-hidden rounded-lg border p-10">
          <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
             Hero Video
          </span>
@@ -33,7 +33,7 @@ export default function HeroVideoDemo() {
                   image="https://cdn.dribbble.com/userupload/4145843/file/original-c7a2c9a768450460259f232259d103d2.png?resize=1600x1200"
                >
                   <HeroVideoAction>
-                     <Button className="h-20 w-20 rounded-full" variant="outline">
+                     <Button className="size-20 rounded-full" variant="outline">
                         <PlayButton />
                      </Button>
                   </HeroVideoAction>

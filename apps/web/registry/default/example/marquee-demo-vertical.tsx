@@ -62,7 +62,7 @@ function ReviewCard({
 
 function MarqueeDemoVertical() {
    return (
-      <div className="relative flex h-96 flex-row items-center justify-center overflow-hidden rounded-lg border bg-background sm:px-20 md:shadow-xl">
+      <div className="bg-background relative flex h-96 flex-row items-center justify-center overflow-hidden rounded-lg border sm:px-20 md:shadow-xl">
          <Marquee pauseOnHover vertical className="[--duration:20s]">
             {firstRow.map(review => (
                <ReviewCard key={review.username} {...review} />
@@ -73,8 +73,8 @@ function MarqueeDemoVertical() {
                <ReviewCard key={review.username} {...review} />
             ))}
          </Marquee>
-         <div className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-white dark:from-background"></div>
-         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white dark:from-background"></div>
+         <div className="dark:from-background pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-white"></div>
+         <div className="dark:from-background pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white"></div>
       </div>
    )
 }

@@ -64,18 +64,18 @@ export default function KitchenSinkPage() {
                   <ComponentWrapper
                      className="spa flex-col items-start space-x-0 space-y-2"
                   >
-                     <p className="text-sm text-muted-foreground">Documentation</p>
+                     <p className="text-muted-foreground text-sm">Documentation</p>
                      <p className="text-sm font-medium leading-none">
                         You can customize the theme using
                         {' '}
-                        <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-foreground">
+                        <code className="bg-muted text-foreground relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">
                            CSS variables
                         </code>
                         .
                         {' '}
                         <Link
                            href="#"
-                           className="font-medium text-primary underline underline-offset-4"
+                           className="text-primary font-medium underline underline-offset-4"
                         >
                            Click here
                         </Link>

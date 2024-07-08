@@ -3,10 +3,10 @@ import Link from 'next/link'
 export default function Component() {
    return (
       <nav
-         className="grid gap-4 text-sm text-muted-foreground"
+         className="text-muted-foreground grid gap-4 text-sm"
          x-chunk="dashboard-04-chunk-0"
       >
-         <Link href="#" className="font-semibold text-primary">
+         <Link href="#" className="text-primary font-semibold">
             General
          </Link>
          <Link href="#">Security</Link>

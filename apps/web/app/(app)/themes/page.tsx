@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 import 'public/registry/themes.css'
-import { SuperAnnouncement } from '~/components/super-announcement'
+import { Announcement } from '~/components/announcement'
 import {
    PageActions,
    PageHeader,
@@ -21,11 +21,11 @@ export default function ThemesPage() {
    return (
       <div className="container">
          <ThemeWrapper
-            defaultTheme="zinc"
-            className="relative flex flex-col items-start md:flex-row md:items-center"
+            defaultTheme="violet"
+            className="relative flex w-full flex-col items-start md:flex-row"
          >
-            <PageHeader>
-               <SuperAnnouncement href="/docs/changelog" text="Introducing Lift Mode" />
+            <PageHeader className="w-full">
+               <Announcement />
                <PageHeaderHeading className="hidden md:block">
                   Add colors. Make it yours.
                </PageHeaderHeading>

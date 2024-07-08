@@ -11,12 +11,12 @@ export default function AnimatedSubscribeButtonDemo() {
             <span className="group inline-flex items-center">
                Subscribe
                {' '}
-               <ChevronRightIcon className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+               <ChevronRightIcon className="ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
             </span>
          )}
          changeText={(
             <span className="group inline-flex items-center">
-               <CheckIcon className="mr-2 h-4 w-4" />
+               <CheckIcon className="mr-2 size-4" />
                Subscribed
                {' '}
             </span>

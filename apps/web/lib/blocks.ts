@@ -1,8 +1,8 @@
 'use server'
 
-import { promises as fs } from 'node:fs'
-import { tmpdir } from 'node:os'
-import path from 'node:path'
+import { promises as fs } from 'fs'
+import { tmpdir } from 'os'
+import path from 'path'
 import type { SourceFile } from 'ts-morph'
 import { Project, ScriptKind, SyntaxKind } from 'ts-morph'
 import { z } from 'zod'
@@ -70,6 +70,7 @@ export async function getBlock(
       ...entry,
       ...content,
       chunks,
+      description: content.description || '',
       type: 'components:block',
    })
 }
@@ -87,10 +88,15 @@ async function _getBlockCode(
    style: Style['name'] = DEFAULT_BLOCKS_STYLE,
 ) {
    const entry = Index[style][name]
+   if (!entry) {
+      console.error(`Block ${name} not found in style ${style}`)
+      return ''
+   }
    const block = registryEntrySchema.parse(entry)
 
-   if (!block.source)
+   if (!block.source) {
       return ''
+   }
 
    return await readFile(block.source)
 }
@@ -135,8 +141,9 @@ async function _getBlockContent(name: string, style: Style['name']) {
 
 function _extractVariable(sourceFile: SourceFile, name: string) {
    const variable = sourceFile.getVariableDeclaration(name)
-   if (!variable)
+   if (!variable) {
       return null
+   }
 
    const value = variable
       .getInitializerIfKindOrThrow(SyntaxKind.StringLiteral)

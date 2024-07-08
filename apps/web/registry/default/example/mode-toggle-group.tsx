@@ -29,25 +29,25 @@ export default function ModeToggleGroup() {
             value="light"
             onClick={() => setTheme('light')}
             disabled={theme === 'light'}
-            className="rounded-full disabled:bg-accent disabled:opacity-100"
+            className="disabled:bg-accent rounded-full disabled:opacity-100"
          >
-            <Sun className="h-5 w-5" />
+            <Sun className="size-5" />
          </ToggleGroupItem>
          <ToggleGroupItem
             value="system"
             onClick={() => setTheme('system')}
             disabled={theme === 'system'}
-            className="rounded-full disabled:bg-accent disabled:opacity-100"
+            className="disabled:bg-accent rounded-full disabled:opacity-100"
          >
-            <Laptop className="h-5 w-5" />
+            <Laptop className="size-5" />
          </ToggleGroupItem>
          <ToggleGroupItem
             value="dark"
             onClick={() => setTheme('dark')}
             disabled={theme === 'dark'}
-            className="rounded-full disabled:bg-accent disabled:opacity-100"
+            className="disabled:bg-accent rounded-full disabled:opacity-100"
          >
-            <Moon className="h-5 w-5" />
+            <Moon className="size-5" />
          </ToggleGroupItem>
       </ToggleGroup>
    )

@@ -7,8 +7,8 @@ import * as RadioGroupPrimitive from '@radix-ui/react-radio-group'
 import { ny } from '~/lib/utils'
 
 const RadioGroup = React.forwardRef<
-  React.ElementRef<typeof RadioGroupPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
+   React.ElementRef<typeof RadioGroupPrimitive.Root>,
+   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
 >(({ className, ...props }, ref) => {
    return (
       <RadioGroupPrimitive.Root
@@ -21,20 +21,20 @@ const RadioGroup = React.forwardRef<
 RadioGroup.displayName = RadioGroupPrimitive.Root.displayName
 
 const RadioGroupItem = React.forwardRef<
-  React.ElementRef<typeof RadioGroupPrimitive.Item>,
-  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>
+   React.ElementRef<typeof RadioGroupPrimitive.Item>,
+   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>
 >(({ className, ...props }, ref) => {
    return (
       <RadioGroupPrimitive.Item
          ref={ref}
          className={ny(
-            'aspect-square h-4 w-4 flex-shrink-0 rounded-full border border-primary text-primary shadow focus:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50',
+            'border-primary text-primary focus-visible:ring-ring aspect-square size-4 shrink-0 rounded-full border shadow focus:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50',
             className,
          )}
          {...props}
       >
          <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
-            <CheckIcon className="h-3.5 w-3.5 fill-primary" />
+            <CheckIcon className="fill-primary size-3.5" />
          </RadioGroupPrimitive.Indicator>
       </RadioGroupPrimitive.Item>
    )

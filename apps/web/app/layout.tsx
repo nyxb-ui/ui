@@ -31,7 +31,7 @@ export default function RootLayout({
             <head />
             <body
                className={ny(
-                  'relative flex min-h-screen w-full flex-col justify-center overflow-x-hidden scroll-smooth bg-background font-sans antialiased',
+                  'bg-background relative flex min-h-screen w-full flex-col justify-center overflow-x-hidden scroll-smooth font-sans antialiased',
                   fontSans.variable,
                )}
             >

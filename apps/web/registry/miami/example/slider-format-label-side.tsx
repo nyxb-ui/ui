@@ -9,7 +9,7 @@ export default function SliderFormatLabelSide({ className, ...props }: SliderPro
          defaultValue={[2]}
          max={5}
          step={1}
-         className={ny('w-[60%]', className)}
+         className={ny('w-3/5', className)}
          formatLabel={value => `${value} points`}
          formatLabelSide="left"
          {...props}

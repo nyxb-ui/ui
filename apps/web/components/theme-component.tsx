@@ -22,10 +22,10 @@ export function ThemeComponent({ name, ...props }: ThemeComponentProps) {
 
       if (!Component) {
          return (
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
                Component
                {' '}
-               <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm">
+               <code className="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm">
                   {name}
                </code>
                {' '}
@@ -41,8 +41,8 @@ export function ThemeComponent({ name, ...props }: ThemeComponentProps) {
       <div className={ny('relative')} {...props}>
          <React.Suspense
             fallback={(
-               <div className="flex items-center text-sm text-muted-foreground">
-                  <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+               <div className="text-muted-foreground flex items-center text-sm">
+                  <Icons.spinner className="mr-2 size-4 animate-spin" />
                   Loading...
                </div>
             )}

@@ -8,11 +8,11 @@ export default function Component() {
             <CardTitle className="text-sm font-medium">
                Subscriptions
             </CardTitle>
-            <Users className="h-4 w-4 text-muted-foreground" />
+            <Users className="text-muted-foreground size-4" />
          </CardHeader>
          <CardContent>
             <div className="text-2xl font-bold">+2350</div>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-muted-foreground text-xs">
                +180.1% from last month
             </p>
          </CardContent>

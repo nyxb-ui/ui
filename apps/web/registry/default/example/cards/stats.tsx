@@ -59,7 +59,7 @@ export function CardsStats() {
             </CardHeader>
             <CardContent>
                <div className="text-2xl font-bold">$15,231.89</div>
-               <p className="text-xs text-muted-foreground">
+               <p className="text-muted-foreground text-xs">
                   +20.1% from last month
                </p>
                <div className="h-[80px]">
@@ -82,14 +82,14 @@ export function CardsStats() {
                               style: { fill: 'var(--theme-primary)', opacity: 0.25 },
                            }}
                            style={
-                    {
-                       'stroke': 'var(--theme-primary)',
-                       '--theme-primary': `hsl(${
+                              {
+                                 'stroke': 'var(--theme-primary)',
+                                 '--theme-primary': `hsl(${
                         theme?.cssVars[mode === 'dark' ? 'dark' : 'light']
                           .primary
                       })`,
-                    } as React.CSSProperties
-                  }
+                              } as React.CSSProperties
+                           }
                         />
                      </LineChart>
                   </ResponsiveContainer>
@@ -102,7 +102,7 @@ export function CardsStats() {
             </CardHeader>
             <CardContent>
                <div className="text-2xl font-bold">+2350</div>
-               <p className="text-xs text-muted-foreground">
+               <p className="text-muted-foreground text-xs">
                   +180.1% from last month
                </p>
                <div className="mt-4 h-[80px]">
@@ -111,15 +111,15 @@ export function CardsStats() {
                         <Bar
                            dataKey="subscription"
                            style={
-                    {
-                       'fill': 'var(--theme-primary)',
-                       'opacity': 1,
-                       '--theme-primary': `hsl(${
+                              {
+                                 'fill': 'var(--theme-primary)',
+                                 'opacity': 1,
+                                 '--theme-primary': `hsl(${
                         theme?.cssVars[mode === 'dark' ? 'dark' : 'light']
                           .primary
                       })`,
-                    } as React.CSSProperties
-                  }
+                              } as React.CSSProperties
+                           }
                         />
                      </BarChart>
                   </ResponsiveContainer>

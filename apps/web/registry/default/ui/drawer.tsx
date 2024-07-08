@@ -25,8 +25,8 @@ const DrawerPortal = DrawerPrimitive.Portal
 const DrawerClose = DrawerPrimitive.Close
 
 const DrawerOverlay = React.forwardRef<
-  React.ElementRef<typeof DrawerPrimitive.Overlay>,
-  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Overlay>
+   React.ElementRef<typeof DrawerPrimitive.Overlay>,
+   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
    <DrawerPrimitive.Overlay
       ref={ref}
@@ -37,20 +37,20 @@ const DrawerOverlay = React.forwardRef<
 DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName
 
 const DrawerContent = React.forwardRef<
-  React.ElementRef<typeof DrawerPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content>
+   React.ElementRef<typeof DrawerPrimitive.Content>,
+   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
    <DrawerPortal>
       <DrawerOverlay />
       <DrawerPrimitive.Content
          ref={ref}
          className={ny(
-            'fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background',
+            'bg-background fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border',
             className,
          )}
          {...props}
       >
-         <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted cursor-grab active:cursor-grabbing" />
+         <div className="bg-muted mx-auto mt-4 h-2 w-[100px] cursor-grab rounded-full active:cursor-grabbing" />
          {children}
       </DrawerPrimitive.Content>
    </DrawerPortal>
@@ -84,8 +84,8 @@ function DrawerFooter({
 DrawerFooter.displayName = 'DrawerFooter'
 
 const DrawerTitle = React.forwardRef<
-  React.ElementRef<typeof DrawerPrimitive.Title>,
-  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title>
+   React.ElementRef<typeof DrawerPrimitive.Title>,
+   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title>
 >(({ className, ...props }, ref) => (
    <DrawerPrimitive.Title
       ref={ref}
@@ -99,12 +99,12 @@ const DrawerTitle = React.forwardRef<
 DrawerTitle.displayName = DrawerPrimitive.Title.displayName
 
 const DrawerDescription = React.forwardRef<
-  React.ElementRef<typeof DrawerPrimitive.Description>,
-  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description>
+   React.ElementRef<typeof DrawerPrimitive.Description>,
+   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description>
 >(({ className, ...props }, ref) => (
    <DrawerPrimitive.Description
       ref={ref}
-      className={ny('text-sm text-muted-foreground', className)}
+      className={ny('text-muted-foreground text-sm', className)}
       {...props}
    />
 ))

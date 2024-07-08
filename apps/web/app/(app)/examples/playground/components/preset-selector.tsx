@@ -41,7 +41,7 @@ export function PresetSelector({ presets, ...props }: PresetSelectorProps) {
                className="flex-1 justify-between md:max-w-[200px] lg:max-w-[300px]"
             >
                {selectedPreset ? selectedPreset.name : 'Load a preset...'}
-               <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+               <CaretSortIcon className="ml-2 size-4 shrink-0 opacity-50" />
             </Button>
          </PopoverTrigger>
          <PopoverContent className="w-[300px] p-0">
@@ -60,7 +60,7 @@ export function PresetSelector({ presets, ...props }: PresetSelectorProps) {
                         {preset.name}
                         <CheckIcon
                            className={ny(
-                              'ml-auto h-4 w-4',
+                              'ml-auto size-4',
                               selectedPreset?.id === preset.id
                                  ? 'opacity-100'
                                  : 'opacity-0',

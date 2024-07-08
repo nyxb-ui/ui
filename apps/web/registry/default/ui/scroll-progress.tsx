@@ -18,7 +18,7 @@ export default function ScrollProgress({
 
    return (
       <motion.div
-         className={ny('fixed left-0 right-0 top-0 h-1 origin-left bg-gradient-to-r from-[#A97CF8] via-[#F38CB8] to-[#FDCC92] z-[1000]', className)}
+         className={ny('fixed inset-x-0 top-0 z-[1000] h-1 origin-left bg-gradient-to-r from-[#A97CF8] via-[#F38CB8] to-[#FDCC92]', className)}
          style={{
             scaleX,
          }}

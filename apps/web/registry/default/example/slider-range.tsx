@@ -9,7 +9,7 @@ export default function SliderRange({ className, ...props }: SliderProps) {
          defaultValue={[25, 75]}
          max={100}
          step={1}
-         className={ny('w-[60%]', className)}
+         className={ny('w-3/5', className)}
          {...props}
       />
    )

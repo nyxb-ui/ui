@@ -107,11 +107,11 @@ const SparklesText: React.FC<SparklesTextProps> = ({
          className={ny('text-6xl font-bold', className)}
          {...props}
          style={
-        {
-           '--sparkles-first-color': `${colors.first}`,
-           '--sparkles-second-color': `${colors.second}`,
-        } as CSSProperties
-      }
+            {
+               '--sparkles-first-color': `${colors.first}`,
+               '--sparkles-second-color': `${colors.second}`,
+            } as CSSProperties
+         }
       >
          <span className="relative inline-block">
             {sparkles.map(sparkle => (

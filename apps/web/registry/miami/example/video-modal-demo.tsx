@@ -33,12 +33,12 @@ function VideoModalDemo() {
                         />
                      </VideoPreview>
                      <VideoPlayButton>
-                        <button className="flex h-32 w-32 items-center justify-center rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 transition duration-300 hover:bg-opacity-10">
-                           <PlayIcon className="h-20 w-20 stroke-1 text-white" />
+                        <button className="absolute inset-0 m-auto flex size-32 items-center justify-center rounded-full border border-white border-white/10 bg-white/50 transition duration-300 hover:bg-white/75">
+                           <PlayIcon className="size-20 stroke-1 text-white" />
                         </button>
                      </VideoPlayButton>
                      <iframe
-                        className="h-full w-full"
+                        className="size-full"
                         src="https://cdn.magicui.design/globe.mp4"
                         allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
                         allowFullScreen

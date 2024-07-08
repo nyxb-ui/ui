@@ -18,7 +18,7 @@ export function PresetShare() {
          <PopoverContent align="end" className="w-[520px]">
             <div className="flex flex-col space-y-2 text-center sm:text-left">
                <h3 className="text-lg font-semibold">Share preset</h3>
-               <p className="text-sm text-muted-foreground">
+               <p className="text-muted-foreground text-sm">
                   Anyone who has this link and an OpenAI account will be able to view
                   this.
                </p>
@@ -37,7 +37,7 @@ export function PresetShare() {
                </div>
                <Button type="submit" size="sm" className="px-3">
                   <span className="sr-only">Copy</span>
-                  <CopyIcon className="h-4 w-4" />
+                  <CopyIcon className="size-4" />
                </Button>
             </div>
          </PopoverContent>

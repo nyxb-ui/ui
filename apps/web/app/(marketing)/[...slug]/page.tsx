@@ -83,7 +83,7 @@ export default async function PagePage({ params }: PageProps) {
                {page.title}
             </h1>
             {page.description && (
-               <p className="text-xl text-muted-foreground">{page.description}</p>
+               <p className="text-muted-foreground text-xl">{page.description}</p>
             )}
          </div>
          <hr className="my-4" />

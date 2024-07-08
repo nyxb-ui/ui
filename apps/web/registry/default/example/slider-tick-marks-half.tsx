@@ -9,7 +9,7 @@ export default function SliderTickMarksHalf({ className, ...props }: SliderProps
          defaultValue={[2]}
          max={5}
          step={1}
-         className={ny('w-[60%]', className)}
+         className={ny('w-3/5', className)}
          showSteps="half"
          {...props}
       />

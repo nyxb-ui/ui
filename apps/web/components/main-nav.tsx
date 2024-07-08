@@ -14,8 +14,8 @@ export function MainNav() {
 
    return (
       <div className="mr-4 hidden md:flex">
-         <Link href="/" className="relative mr-6 flex items-center space-x-2">
-            <Icons.logo className="h-6 w-6" />
+         <Link href="/" className="relative flex items-center space-x-2 lg:mr-6">
+            <Icons.logo className="size-6" />
             <span className="hidden font-bold md:inline-block">
                {siteConfig.name}
             </span>
@@ -28,7 +28,7 @@ export function MainNav() {
                   href={item.href!}
                   target={item.external ? '_blank' : undefined}
                   className={ny(
-                     'flex items-center justify-center transition-colors hover:text-foreground/80',
+                     'hover:text-foreground/80 flex items-center justify-center transition-colors',
                      pathname?.startsWith(item.href!)
                         ? 'text-foreground'
                         : 'text-foreground/60',

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import { SuperAnnouncement } from '~/components/super-announcement'
+import { Announcement } from '~/components/announcement'
 import {
    PageActions,
    PageHeader,
@@ -22,21 +22,19 @@ export default function BlocksLayout({
 }) {
    return (
       <div className="container relative">
-         <PageHeader className="max-w-3xl">
-            <SuperAnnouncement href="/docs/changelog" text="Introducing Lift Mode" />
-            <PageHeaderHeading className="text-balance">
-               Building Blocks for the Web
-            </PageHeaderHeading>
+         <PageHeader>
+            <Announcement />
+            <PageHeaderHeading>Building Blocks for the Web</PageHeaderHeading>
             <PageHeaderDescription>
                Beautifully designed. Copy and paste into your apps. Open Source.
             </PageHeaderDescription>
             <PageActions>
-               <Button asChild>
+               <Button asChild size="sm">
                   <a href="#blocks">Browse</a>
                </Button>
-               <Button asChild variant="outline">
+               <Button asChild variant="ghost" size="sm">
                   <a
-                     href="https://discord.gg/aBxNpG7fMP"
+                     href="https://github.com/shadcn-ui/ui/discussions/new?category=blocks-request"
                      target="_blank"
                      rel="noreferrer"
                   >

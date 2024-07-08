@@ -63,7 +63,7 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
                   className="w-full justify-between"
                >
                   {selectedModel ? selectedModel.name : 'Select a model...'}
-                  <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                  <CaretSortIcon className="ml-2 size-4 shrink-0 opacity-50" />
                </Button>
             </PopoverTrigger>
             <PopoverContent align="end" className="w-[250px] p-0">
@@ -76,19 +76,19 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
                   >
                      <div className="grid gap-2">
                         <h4 className="font-medium leading-none">{peekedModel.name}</h4>
-                        <div className="text-sm text-muted-foreground">
+                        <div className="text-muted-foreground text-sm">
                            {peekedModel.description}
                         </div>
                         {peekedModel.strengths
                            ? (
-                              <div className="mt-4 grid gap-2">
-                                 <h5 className="text-sm font-medium leading-none">
-                                    Strengths
-                                 </h5>
-                                 <ul className="text-sm text-muted-foreground">
-                                    {peekedModel.strengths}
-                                 </ul>
-                              </div>
+                                 <div className="mt-4 grid gap-2">
+                                    <h5 className="text-sm font-medium leading-none">
+                                       Strengths
+                                    </h5>
+                                    <ul className="text-muted-foreground text-sm">
+                                       {peekedModel.strengths}
+                                    </ul>
+                                 </div>
                               )
                            : null}
                      </div>
@@ -149,12 +149,12 @@ function ModelItem({ model, isSelected, onSelect, onPeek }: ModelItemProps) {
          key={model.id}
          onSelect={onSelect}
          ref={ref}
-         className="data-[selected=true]:bg-primary data-[selected=true]:text-primary-foreground"
+         className="aria-selected:bg-primary aria-selected:text-primary-foreground"
       >
          {model.name}
          <CheckIcon
             className={ny(
-               'ml-auto h-4 w-4',
+               'ml-auto size-4',
                isSelected ? 'opacity-100' : 'opacity-0',
             )}
          />

@@ -72,7 +72,7 @@ export default function Component() {
                                  size="icon"
                                  variant="ghost"
                               >
-                                 <MoreHorizontal className="h-4 w-4" />
+                                 <MoreHorizontal className="size-4" />
                                  <span className="sr-only">Toggle menu</span>
                               </Button>
                            </DropdownMenuTrigger>
@@ -117,7 +117,7 @@ export default function Component() {
                                  size="icon"
                                  variant="ghost"
                               >
-                                 <MoreHorizontal className="h-4 w-4" />
+                                 <MoreHorizontal className="size-4" />
                                  <span className="sr-only">Toggle menu</span>
                               </Button>
                            </DropdownMenuTrigger>
@@ -162,7 +162,7 @@ export default function Component() {
                                  size="icon"
                                  variant="ghost"
                               >
-                                 <MoreHorizontal className="h-4 w-4" />
+                                 <MoreHorizontal className="size-4" />
                                  <span className="sr-only">Toggle menu</span>
                               </Button>
                            </DropdownMenuTrigger>
@@ -207,7 +207,7 @@ export default function Component() {
                                  size="icon"
                                  variant="ghost"
                               >
-                                 <MoreHorizontal className="h-4 w-4" />
+                                 <MoreHorizontal className="size-4" />
                                  <span className="sr-only">Toggle menu</span>
                               </Button>
                            </DropdownMenuTrigger>
@@ -252,7 +252,7 @@ export default function Component() {
                                  size="icon"
                                  variant="ghost"
                               >
-                                 <MoreHorizontal className="h-4 w-4" />
+                                 <MoreHorizontal className="size-4" />
                                  <span className="sr-only">Toggle menu</span>
                               </Button>
                            </DropdownMenuTrigger>
@@ -297,7 +297,7 @@ export default function Component() {
                                  size="icon"
                                  variant="ghost"
                               >
-                                 <MoreHorizontal className="h-4 w-4" />
+                                 <MoreHorizontal className="size-4" />
                                  <span className="sr-only">Toggle menu</span>
                               </Button>
                            </DropdownMenuTrigger>
@@ -313,7 +313,7 @@ export default function Component() {
             </Table>
          </CardContent>
          <CardFooter>
-            <div className="text-xs text-muted-foreground">
+            <div className="text-muted-foreground text-xs">
                Showing
                {' '}
                <strong>1-10</strong>

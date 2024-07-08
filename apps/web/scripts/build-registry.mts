@@ -1,8 +1,8 @@
 // @ts-nocheck
-import { existsSync, promises as fs, readFileSync } from 'node:fs'
-import { tmpdir } from 'node:os'
-import path, { basename } from 'node:path'
-import { cwd } from 'node:process'
+import { existsSync, promises as fs, readFileSync } from 'fs'
+import { tmpdir } from 'os'
+import path, { basename } from 'path'
+import { cwd } from 'process'
 import template from 'lodash.template'
 import { rimraf } from 'rimraf'
 import { Project, ScriptKind, SyntaxKind } from 'ts-morph'
@@ -49,7 +49,7 @@ export const Index: Record<string, any> = {
          let sourceFilename = ''
 
          let chunks: any = []
-         if (item.type === 'components:block') {
+         if (item.type === 'components:block' || item.type === 'components:chart') {
             const file = resolveFiles[0]
             const filename = path.basename(file)
             const raw = await fs.readFile(file, 'utf8')
@@ -60,13 +60,13 @@ export const Index: Record<string, any> = {
 
             // Find all imports.
             const imports = new Map<
-          string,
-          {
-             module: string
-             text: string
-             isDefault?: boolean
-          }
-        >()
+               string,
+               {
+                  module: string
+                  text: string
+                  isDefault?: boolean
+               }
+            >()
             sourceFile.getImportDeclarations().forEach((node) => {
                const module = node.getModuleSpecifier().getLiteralValue()
                node.getNamedImports().forEach((item) => {
@@ -147,9 +147,9 @@ export const Index: Record<string, any> = {
                      )
 
                   const componentImports = new Map<
-              string,
+                     string,
               string | string[] | Set<string>
-            >()
+                  >()
                   children.forEach((child) => {
                      const importLine = imports.get(child)
                      if (importLine) {

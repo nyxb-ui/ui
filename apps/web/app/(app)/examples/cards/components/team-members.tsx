@@ -45,7 +45,7 @@ export function DemoTeamMembers() {
                   </Avatar>
                   <div>
                      <p className="text-sm font-medium leading-none">Sofia Davis</p>
-                     <p className="text-sm text-muted-foreground">m@example.com</p>
+                     <p className="text-muted-foreground text-sm">m@example.com</p>
                   </div>
                </div>
                <Popover>
@@ -53,7 +53,7 @@ export function DemoTeamMembers() {
                      <Button variant="outline" className="ml-auto">
                         Owner
                         {' '}
-                        <ChevronDownIcon className="ml-2 h-4 w-4 text-muted-foreground" />
+                        <ChevronDownIcon className="text-muted-foreground ml-2 size-4" />
                      </Button>
                   </PopoverTrigger>
                   <PopoverContent className="p-0" align="end">
@@ -64,25 +64,25 @@ export function DemoTeamMembers() {
                            <CommandGroup>
                               <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                                  <p>Viewer</p>
-                                 <p className="text-sm text-muted-foreground">
+                                 <p className="text-muted-foreground text-sm">
                                     Can view and comment.
                                  </p>
                               </CommandItem>
                               <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                                  <p>Developer</p>
-                                 <p className="text-sm text-muted-foreground">
+                                 <p className="text-muted-foreground text-sm">
                                     Can view, comment and edit.
                                  </p>
                               </CommandItem>
                               <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                                  <p>Billing</p>
-                                 <p className="text-sm text-muted-foreground">
+                                 <p className="text-muted-foreground text-sm">
                                     Can view, comment and manage billing.
                                  </p>
                               </CommandItem>
                               <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                                  <p>Owner</p>
-                                 <p className="text-sm text-muted-foreground">
+                                 <p className="text-muted-foreground text-sm">
                                     Admin-level access to all resources.
                                  </p>
                               </CommandItem>
@@ -100,7 +100,7 @@ export function DemoTeamMembers() {
                   </Avatar>
                   <div>
                      <p className="text-sm font-medium leading-none">Jackson Lee</p>
-                     <p className="text-sm text-muted-foreground">p@example.com</p>
+                     <p className="text-muted-foreground text-sm">p@example.com</p>
                   </div>
                </div>
                <Popover>
@@ -108,7 +108,7 @@ export function DemoTeamMembers() {
                      <Button variant="outline" className="ml-auto">
                         Member
                         {' '}
-                        <ChevronDownIcon className="ml-2 h-4 w-4 text-muted-foreground" />
+                        <ChevronDownIcon className="text-muted-foreground ml-2 size-4" />
                      </Button>
                   </PopoverTrigger>
                   <PopoverContent className="p-0" align="end">
@@ -119,25 +119,25 @@ export function DemoTeamMembers() {
                            <CommandGroup className="p-1.5">
                               <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                                  <p>Viewer</p>
-                                 <p className="text-sm text-muted-foreground">
+                                 <p className="text-muted-foreground text-sm">
                                     Can view and comment.
                                  </p>
                               </CommandItem>
                               <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                                  <p>Developer</p>
-                                 <p className="text-sm text-muted-foreground">
+                                 <p className="text-muted-foreground text-sm">
                                     Can view, comment and edit.
                                  </p>
                               </CommandItem>
                               <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                                  <p>Billing</p>
-                                 <p className="text-sm text-muted-foreground">
+                                 <p className="text-muted-foreground text-sm">
                                     Can view, comment and manage billing.
                                  </p>
                               </CommandItem>
                               <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                                  <p>Owner</p>
-                                 <p className="text-sm text-muted-foreground">
+                                 <p className="text-muted-foreground text-sm">
                                     Admin-level access to all resources.
                                  </p>
                               </CommandItem>

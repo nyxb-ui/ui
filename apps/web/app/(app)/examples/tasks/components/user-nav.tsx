@@ -19,8 +19,8 @@ export function UserNav() {
    return (
       <DropdownMenu>
          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="relative h-8 w-8 rounded-full">
-               <Avatar className="h-9 w-9">
+            <Button variant="ghost" className="relative size-8 rounded-full">
+               <Avatar className="size-9">
                   <AvatarImage src="/avatars/03.png" alt="@nyxb" />
                   <AvatarFallback>SC</AvatarFallback>
                </Avatar>
@@ -30,7 +30,7 @@ export function UserNav() {
             <DropdownMenuLabel className="font-normal">
                <div className="flex flex-col space-y-1">
                   <p className="text-sm font-medium leading-none">nyxb</p>
-                  <p className="text-xs leading-none text-muted-foreground">
+                  <p className="text-muted-foreground text-xs leading-none">
                      m@example.com
                   </p>
                </div>

@@ -35,10 +35,10 @@ export default async function Testimonials() {
    return (
       <section id="testimonials" className="container py-14">
          <FadeIn delay={0.3}>
-            <h2 className="mb-4 text-center text-5xl font-bold leading-[1.2] tracking-tighter text-foreground">
+            <h2 className="text-foreground mb-4 text-center text-5xl font-bold leading-[1.2] tracking-tighter">
                What People Are Saying
             </h2>
-            <h3 className="mx-auto mb-8 max-w-lg text-balance text-center text-lg font-medium tracking-tight text-foreground/80">
+            <h3 className="text-foreground/80 mx-auto mb-8 max-w-lg text-balance text-center text-lg font-medium tracking-tight">
                Don't just take our word for it. Here's what
                {' '}
                <strong>real people</strong>
@@ -50,7 +50,7 @@ export default async function Testimonials() {
             <Marquee className="max-w-screen [--duration:120s]" pauseOnHover>
                {firstRow.map((id, idx) => (
                   <FadeIn delay={0.06 + idx * 0.04} key={idx}>
-                     <TweetCard id={id} className="max-h-32 w-72 min-w-[18rem]" />
+                     <TweetCard id={id} className="max-h-32 w-72 min-w-72" />
                   </FadeIn>
                ))}
             </Marquee>
@@ -61,12 +61,12 @@ export default async function Testimonials() {
             >
                {secondRow.map((id, idx) => (
                   <FadeIn delay={0.06 + 0.04 * (secondRow.length - idx)} key={idx}>
-                     <TweetCard id={id} className="max-h-32 w-72 min-w-[18rem]" />
+                     <TweetCard id={id} className="max-h-32 w-72 min-w-72" />
                   </FadeIn>
                ))}
             </Marquee>
-            <div className="pointer-events-none absolute inset-y-0 left-0 h-full w-1/3 bg-gradient-to-r from-background"></div>
-            <div className="pointer-events-none absolute inset-y-0 right-0 h-full  w-1/3 bg-gradient-to-l from-background"></div>
+            <div className="from-background pointer-events-none absolute inset-y-0 left-0 h-full w-1/3 bg-gradient-to-r"></div>
+            <div className="from-background pointer-events-none absolute inset-y-0 right-0  h-full w-1/3 bg-gradient-to-l"></div>
          </div>
       </section>
    )

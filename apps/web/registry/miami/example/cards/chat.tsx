@@ -104,7 +104,7 @@ export function CardsChat() {
                   </Avatar>
                   <div>
                      <p className="text-sm font-medium leading-none">Sofia Davis</p>
-                     <p className="text-sm text-muted-foreground">m@example.com</p>
+                     <p className="text-muted-foreground text-sm">m@example.com</p>
                   </div>
                </div>
                <TooltipProvider delayDuration={0}>
@@ -116,7 +116,7 @@ export function CardsChat() {
                            className="ml-auto rounded-full"
                            onClick={() => setOpen(true)}
                         >
-                           <PlusIcon className="h-4 w-4" />
+                           <PlusIcon className="size-4" />
                            <span className="sr-only">New message</span>
                         </Button>
                      </TooltipTrigger>
@@ -132,7 +132,7 @@ export function CardsChat() {
                         className={ny(
                            'flex w-max max-w-[75%] flex-col gap-2 rounded-lg px-3 py-2 text-sm',
                            message.role === 'user'
-                              ? 'ml-auto bg-primary text-primary-foreground'
+                              ? 'bg-primary text-primary-foreground ml-auto'
                               : 'bg-muted',
                         )}
                      >
@@ -167,7 +167,7 @@ export function CardsChat() {
                      onChange={event => setInput(event.target.value)}
                   />
                   <Button type="submit" size="icon" disabled={inputLength === 0}>
-                     <PaperPlaneIcon className="h-4 w-4" />
+                     <PaperPlaneIcon className="size-4" />
                      <span className="sr-only">Send</span>
                   </Button>
                </form>
@@ -215,13 +215,13 @@ export function CardsChat() {
                                  <p className="text-sm font-medium leading-none">
                                     {user.name}
                                  </p>
-                                 <p className="text-sm text-muted-foreground">
+                                 <p className="text-muted-foreground text-sm">
                                     {user.email}
                                  </p>
                               </div>
                               {selectedUsers.includes(user)
                                  ? (
-                                    <CheckIcon className="ml-auto flex h-5 w-5 text-primary" />
+                                       <CheckIcon className="text-primary ml-auto flex size-5" />
                                     )
                                  : null}
                            </CommandItem>
@@ -232,22 +232,22 @@ export function CardsChat() {
                <DialogFooter className="flex items-center border-t p-4 sm:justify-between">
                   {selectedUsers.length > 0
                      ? (
-                        <div className="flex -space-x-2 overflow-hidden">
-                           {selectedUsers.map(user => (
-                              <Avatar
-                                 key={user.email}
-                                 className="inline-block border-2 border-background"
-                              >
-                                 <AvatarImage src={user.avatar} />
-                                 <AvatarFallback>{user.name[0]}</AvatarFallback>
-                              </Avatar>
-                           ))}
-                        </div>
+                           <div className="flex -space-x-2 overflow-hidden">
+                              {selectedUsers.map(user => (
+                                 <Avatar
+                                    key={user.email}
+                                    className="border-background inline-block border-2"
+                                 >
+                                    <AvatarImage src={user.avatar} />
+                                    <AvatarFallback>{user.name[0]}</AvatarFallback>
+                                 </Avatar>
+                              ))}
+                           </div>
                         )
                      : (
-                        <p className="text-sm text-muted-foreground">
-                           Select users to add to this thread.
-                        </p>
+                           <p className="text-muted-foreground text-sm">
+                              Select users to add to this thread.
+                           </p>
                         )}
                   <Button
                      disabled={selectedUsers.length < 2}

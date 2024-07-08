@@ -41,7 +41,7 @@ export async function GET(req: Request) {
                <img
                   tw="absolute inset-0 w-full h-full"
                   alt={title}
-            // @ts-expect-error is fine
+                  // @ts-expect-error is fine
                   src={imageData}
                />
 
@@ -61,7 +61,7 @@ export async function GET(req: Request) {
                   <img
                      tw="h-10 w-10"
                      alt={title}
-              // @ts-expect-error is fine
+                     // @ts-expect-error is fine
                      src={logoData}
                   />
                   <span

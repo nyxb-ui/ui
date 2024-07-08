@@ -8,8 +8,8 @@ interface TableOfContentsListProps
 }
 
 const TableOfContentsList = React.forwardRef<
-  React.ElementRef<'ul'>,
-  TableOfContentsListProps
+   React.ElementRef<'ul'>,
+   TableOfContentsListProps
 >(({ className, indent, ...props }, ref) => (
    <ul
       ref={ref}
@@ -23,8 +23,8 @@ interface TableOfContentsTitleProps
    extends React.ComponentPropsWithoutRef<'li'> {}
 
 const TableOfContentsTitle = React.forwardRef<
-  React.ElementRef<'li'>,
-  TableOfContentsTitleProps
+   React.ElementRef<'li'>,
+   TableOfContentsTitleProps
 >(({ className, ...props }, ref) => (
    <li
       ref={ref}
@@ -40,8 +40,8 @@ interface TableOfContentsItemProps
 }
 
 const TableOfContentsItem = React.forwardRef<
-  React.ElementRef<'li'>,
-  TableOfContentsItemProps
+   React.ElementRef<'li'>,
+   TableOfContentsItemProps
 >(({ className, indent, ...props }, ref) => (
    <li
       ref={ref}
@@ -56,14 +56,14 @@ interface TableOfContentsLinkProps extends React.ComponentPropsWithoutRef<'a'> {
 }
 
 const TableOfContentsLink = React.forwardRef<
-  React.ElementRef<'a'>,
-  TableOfContentsLinkProps
+   React.ElementRef<'a'>,
+   TableOfContentsLinkProps
 >(({ className, isActive, ...props }, ref) => (
    <a
       ref={ref}
       className={ny(
-         'text-sm font-medium text-foreground transition-colors hover:text-primary',
-         isActive ? 'font-medium text-foreground' : 'text-muted-foreground',
+         'text-foreground hover:text-primary text-sm font-medium transition-colors',
+         isActive ? 'text-foreground font-medium' : 'text-muted-foreground',
          className,
       )}
       {...props}

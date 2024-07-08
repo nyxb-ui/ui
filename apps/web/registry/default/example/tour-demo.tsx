@@ -37,23 +37,23 @@ function TourDisplay(props: {
          <CardFooter>
             {ctx.current < ctx.nodes.size
                ? (
-                  <div className="flex w-full justify-between">
-                     <Button variant="outline" onClick={ctx.close}>
-                        Close
-                     </Button>
-                     <div>
-                        <Button onClick={ctx.previous}>Previous</Button>
-                        <Button onClick={ctx.next}>Next</Button>
+                     <div className="flex w-full justify-between">
+                        <Button variant="outline" onClick={ctx.close}>
+                           Close
+                        </Button>
+                        <div>
+                           <Button onClick={ctx.previous}>Previous</Button>
+                           <Button onClick={ctx.next}>Next</Button>
+                        </div>
                      </div>
-                  </div>
                   )
                : (
-                  <div className="flex w-full justify-end">
-                     <Button onClick={ctx.previous}>Previous</Button>
-                     <Button className="bg-green-800" onClick={ctx.close}>
-                        Finish
-                     </Button>
-                  </div>
+                     <div className="flex w-full justify-end">
+                        <Button onClick={ctx.previous}>Previous</Button>
+                        <Button className="bg-green-800" onClick={ctx.close}>
+                           Finish
+                        </Button>
+                     </div>
                   )}
          </CardFooter>
       </Card>

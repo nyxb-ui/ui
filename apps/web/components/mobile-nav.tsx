@@ -23,7 +23,7 @@ export function MobileNav() {
                variant="ghost"
                className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
             >
-               <SidebarOpen className="h-6 w-6" />
+               <SidebarOpen className="size-6" />
                <span className="sr-only">Toggle Menu</span>
             </Button>
          </SheetTrigger>
@@ -33,7 +33,7 @@ export function MobileNav() {
                className="flex items-center"
                onOpenChange={setOpen}
             >
-               <Icons.logo className="mr-2 h-4 w-4" />
+               <Icons.logo className="mr-2 size-4" />
                <span className="font-bold">{siteConfig.name}</span>
             </MobileLink>
             <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
@@ -60,18 +60,18 @@ export function MobileNav() {
                               {!item.disabled
                               && (item.href
                                  ? (
-                                    <MobileLink
-                                       href={item.href}
-                                       onOpenChange={setOpen}
-                                       className="text-muted-foreground"
-                                    >
-                                       {item.title}
-                                       {item.label && (
-                                          <span className="ml-2 rounded-md bg-[#FFBD7A] px-1.5 py-0.5 text-xs leading-none text-[#000000] no-underline group-hover:no-underline">
-                                             {item.label}
-                                          </span>
-                                       )}
-                                    </MobileLink>
+                                       <MobileLink
+                                          href={item.href}
+                                          onOpenChange={setOpen}
+                                          className="text-muted-foreground"
+                                       >
+                                          {item.title}
+                                          {item.label && (
+                                             <span className="ml-2 rounded-md bg-[#FFBD7A] px-1.5 py-0.5 text-xs leading-none text-[#000000] no-underline group-hover:no-underline">
+                                                {item.label}
+                                             </span>
+                                          )}
+                                       </MobileLink>
                                     )
                                  : (
                                        item.title

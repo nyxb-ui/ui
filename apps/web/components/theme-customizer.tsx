@@ -10,7 +10,6 @@ import {
    SunIcon,
 } from '@radix-ui/react-icons'
 import template from 'lodash.template'
-import { Paintbrush } from 'lucide-react'
 import { useTheme } from 'next-themes'
 
 import { ny } from '~/lib/utils'
@@ -58,11 +57,10 @@ export function ThemeCustomizer() {
    }, [])
 
    return (
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center gap-2">
          <Drawer>
             <DrawerTrigger asChild>
-               <Button variant="outline" className="md:hidden">
-                  <Paintbrush className="mr-2 h-4 w-4" />
+               <Button size="sm" className="md:hidden">
                   Customize
                </Button>
             </DrawerTrigger>
@@ -70,92 +68,90 @@ export function ThemeCustomizer() {
                <Customizer />
             </DrawerContent>
          </Drawer>
-         <div className="hidden md:flex">
-            <div className="mr-2 hidden items-center space-x-0.5 lg:flex">
-               {mounted
-                  ? (
-                     <>
-                        {['violet', 'red', 'rose', 'orange', 'green', 'blue', 'yellow', 'zinc'].map((color) => {
-                           const theme = themes.find(theme => theme.name === color)
-                           const isActive = config.theme === color
-
-                           if (!theme)
-                              return null
-
-                           return (
-                              <Tooltip key={theme.name}>
-                                 <TooltipTrigger asChild>
-                                    <button
-                                       onClick={() =>
-                                          setConfig({
-                                             ...config,
-                                             theme: theme.name,
-                                          })}
-                                       className={ny(
-                                          'flex h-9 w-9 items-center justify-center rounded-full border-2 text-xs',
-                                          isActive
-                                             ? 'border-[--theme-primary]'
-                                             : 'border-transparent',
-                                       )}
-                                       style={
-                          {
-                             '--theme-primary': `hsl(${
-                              theme?.activeColor[
-                                mode === 'dark' ? 'dark' : 'light'
-                              ]
-                            })`,
-                          } as React.CSSProperties
-                        }
-                                    >
-                                       <span
-                                          className={ny(
-                                             'flex h-6 w-6 items-center justify-center rounded-full bg-[--theme-primary]',
-                                          )}
-                                       >
-                                          {isActive && (
-                                             <CheckIcon className="h-4 w-4 text-white" />
-                                          )}
-                                       </span>
-                                       <span className="sr-only">{theme.label}</span>
-                                    </button>
-                                 </TooltipTrigger>
-                                 <TooltipContent
-                                    align="center"
-                                    className="rounded-[0.5rem] bg-zinc-900 text-zinc-50"
-                                 >
-                                    {theme.label}
-                                 </TooltipContent>
-                              </Tooltip>
-                           )
-                        })}
-                     </>
-                     )
-                  : (
-                     <div className="mr-1 flex items-center gap-4">
-                        <Skeleton className="h-6 w-6 rounded-full" />
-                        <Skeleton className="h-6 w-6 rounded-full" />
-                        <Skeleton className="h-6 w-6 rounded-full" />
-                        <Skeleton className="h-6 w-6 rounded-full" />
-                        <Skeleton className="h-6 w-6 rounded-full" />
-                     </div>
-                     )}
-            </div>
+         <div className="hidden items-center md:flex">
             <Popover>
                <PopoverTrigger asChild>
-                  <Button variant="outline">
-                     <Paintbrush className="mr-2 h-4 w-4" />
-                     Customize
-                  </Button>
+                  <Button size="sm">Customize</Button>
                </PopoverTrigger>
                <PopoverContent
-                  align="center"
-                  className="z-40 w-[340px] rounded-[0.5rem] bg-white p-6 dark:bg-zinc-950"
+                  align="start"
+                  className="z-40 w-[340px] rounded-[12px] bg-white p-6 dark:bg-zinc-950"
                >
                   <Customizer />
                </PopoverContent>
             </Popover>
+            <div className="ml-2 hidden items-center gap-0.5">
+               {mounted
+                  ? (
+                        <>
+                           {['violet', 'yellow', 'blue', 'green', 'orange', 'rose', 'red', 'neutral', 'gray', 'stone', 'slate', 'zinc'].map((color) => {
+                              const theme = themes.find(theme => theme.name === color)
+                              const isActive = config.theme === color
+
+                              if (!theme) {
+                                 return null
+                              }
+
+                              return (
+                                 <Tooltip key={theme.name}>
+                                    <TooltipTrigger asChild>
+                                       <button
+                                          onClick={() =>
+                                             setConfig({
+                                                ...config,
+                                                theme: theme.name,
+                                             })}
+                                          className={ny(
+                                             'flex size-8 items-center justify-center rounded-full border-2 text-xs',
+                                             isActive
+                                                ? 'border-[--theme-primary]'
+                                                : 'border-transparent',
+                                          )}
+                                          style={
+                                             {
+                                                '--theme-primary': `hsl(${
+                              theme?.activeColor[
+                                mode === 'dark' ? 'dark' : 'light'
+                              ]
+                            })`,
+                                             } as React.CSSProperties
+                                          }
+                                       >
+                                          <span
+                                             className={ny(
+                                                'flex size-5 items-center justify-center rounded-full bg-[--theme-primary]',
+                                             )}
+                                          >
+                                             {isActive && (
+                                                <CheckIcon className="size-4 text-white" />
+                                             )}
+                                          </span>
+                                          <span className="sr-only">{theme.label}</span>
+                                       </button>
+                                    </TooltipTrigger>
+                                    <TooltipContent
+                                       align="center"
+                                       className="rounded-lg bg-zinc-900 text-zinc-50"
+                                    >
+                                       {theme.label}
+                                    </TooltipContent>
+                                 </Tooltip>
+                              )
+                           })}
+                        </>
+                     )
+                  : (
+                        <div className="mr-1 flex items-center gap-4">
+                           <Skeleton className="size-5 rounded-full" />
+                           <Skeleton className="size-5 rounded-full" />
+                           <Skeleton className="size-5 rounded-full" />
+                           <Skeleton className="size-5 rounded-full" />
+                           <Skeleton className="size-5 rounded-full" />
+                        </div>
+                     )}
+            </div>
          </div>
-         <CopyCodeButton />
+         <CopyCodeButton variant="ghost" size="sm" className="[&_svg]:hidden" />
       </div>
    )
 }
@@ -171,7 +167,7 @@ function Customizer() {
 
    return (
       <ThemeWrapper
-         defaultTheme="zinc"
+         defaultTheme="violet"
          className="flex flex-col space-y-4 md:space-y-6"
       >
          <div className="flex items-start pt-4 md:pt-0">
@@ -179,32 +175,25 @@ function Customizer() {
                <div className="font-semibold leading-none tracking-tight">
                   Customize
                </div>
-               <div className="text-xs text-muted-foreground">
+               <div className="text-muted-foreground text-xs">
                   Pick a style and color for your components.
                </div>
             </div>
-            <Tooltip>
-               <Button
-                  variant="ghost"
-                  size="icon"
-                  className="ml-auto rounded-[0.5rem]"
-                  onClick={() => {
-                     setConfig({
-                        ...config,
-                        theme: 'zinc',
-                        radius: 0.5,
-                     })
-                  }}
-               >
-                  <TooltipTrigger>
-                     <ResetIcon />
-                     <span className="sr-only">Reset</span>
-                  </TooltipTrigger>
-                  <TooltipContent align="center" className="rounded-[0.5rem] bg-zinc-900 text-zinc-50">
-                     Reset to default
-                  </TooltipContent>
-               </Button>
-            </Tooltip>
+            <Button
+               variant="ghost"
+               size="icon"
+               className="ml-auto rounded-lg"
+               onClick={() => {
+                  setConfig({
+                     ...config,
+                     theme: 'violet',
+                     radius: 0.5,
+                  })
+               }}
+            >
+               <ResetIcon />
+               <span className="sr-only">Reset</span>
+            </Button>
          </div>
          <div className="flex flex-1 flex-col space-y-4 md:space-y-6">
             <div className="space-y-1.5">
@@ -212,11 +201,11 @@ function Customizer() {
                   <Label className="text-xs">Style</Label>
                   <Popover>
                      <PopoverTrigger>
-                        <InfoCircledIcon className="ml-1 h-3 w-3" />
+                        <InfoCircledIcon className="ml-1 size-3" />
                         <span className="sr-only">About styles</span>
                      </PopoverTrigger>
                      <PopoverContent
-                        className="space-y-3 rounded-[0.5rem] text-sm"
+                        className="space-y-3 rounded-lg text-sm"
                         side="right"
                         align="start"
                         alignOffset={-20}
@@ -255,7 +244,7 @@ function Customizer() {
                      size="sm"
                      onClick={() => setConfig({ ...config, style: 'default' })}
                      className={ny(
-                        config.style === 'default' && 'border-2 border-primary',
+                        config.style === 'default' && 'border-primary border-2',
                      )}
                   >
                      Default
@@ -265,7 +254,7 @@ function Customizer() {
                      size="sm"
                      onClick={() => setConfig({ ...config, style: 'miami' })}
                      className={ny(
-                        config.style === 'miami' && 'border-2 border-primary',
+                        config.style === 'miami' && 'border-primary border-2',
                      )}
                   >
                      Miami
@@ -280,40 +269,40 @@ function Customizer() {
 
                      return mounted
                         ? (
-                           <Button
-                              variant="outline"
-                              size="sm"
-                              key={theme.name}
-                              onClick={() => {
-                                 setConfig({
-                                    ...config,
-                                    theme: theme.name,
-                                 })
-                              }}
-                              className={ny(
-                                 'justify-start',
-                                 isActive && 'border-2 border-primary',
-                              )}
-                              style={
-                    {
-                       '--theme-primary': `hsl(${
+                              <Button
+                                 variant="outline"
+                                 size="sm"
+                                 key={theme.name}
+                                 onClick={() => {
+                                    setConfig({
+                                       ...config,
+                                       theme: theme.name,
+                                    })
+                                 }}
+                                 className={ny(
+                                    'justify-start',
+                                    isActive && 'border-primary border-2',
+                                 )}
+                                 style={
+                                    {
+                                       '--theme-primary': `hsl(${
                         theme?.activeColor[mode === 'dark' ? 'dark' : 'light']
                       })`,
-                    } as React.CSSProperties
-                  }
-                           >
-                              <span
-                                 className={ny(
-                                    'mr-1 flex h-5 w-5 shrink-0 -translate-x-1 items-center justify-center rounded-full bg-[--theme-primary]',
-                                 )}
+                                    } as React.CSSProperties
+                                 }
                               >
-                                 {isActive && <CheckIcon className="h-4 w-4 text-white" />}
-                              </span>
-                              {theme.label}
-                           </Button>
+                                 <span
+                                    className={ny(
+                                       'mr-1 flex size-5 shrink-0 -translate-x-1 items-center justify-center rounded-full bg-[--theme-primary]',
+                                    )}
+                                 >
+                                    {isActive && <CheckIcon className="size-4 text-white" />}
+                                 </span>
+                                 {theme.label}
+                              </Button>
                            )
                         : (
-                           <Skeleton className="h-8 w-full" key={theme.name} />
+                              <Skeleton className="h-8 w-full" key={theme.name} />
                            )
                   })}
                </div>
@@ -335,7 +324,7 @@ function Customizer() {
                            }}
                            className={ny(
                               config.radius === Number.parseFloat(value)
-                              && 'border-2 border-primary',
+                              && 'border-primary border-2',
                            )}
                         >
                            {value}
@@ -349,32 +338,32 @@ function Customizer() {
                <div className="grid grid-cols-3 gap-2">
                   {mounted
                      ? (
-                        <>
-                           <Button
-                              variant="outline"
-                              size="sm"
-                              onClick={() => setMode('light')}
-                              className={ny(mode === 'light' && 'border-2 border-primary')}
-                           >
-                              <SunIcon className="mr-1 -translate-x-1" />
-                              Light
-                           </Button>
-                           <Button
-                              variant="outline"
-                              size="sm"
-                              onClick={() => setMode('dark')}
-                              className={ny(mode === 'dark' && 'border-2 border-primary')}
-                           >
-                              <MoonIcon className="mr-1 -translate-x-1" />
-                              Dark
-                           </Button>
-                        </>
+                           <>
+                              <Button
+                                 variant="outline"
+                                 size="sm"
+                                 onClick={() => setMode('light')}
+                                 className={ny(mode === 'light' && 'border-primary border-2')}
+                              >
+                                 <SunIcon className="mr-1 -translate-x-1" />
+                                 Light
+                              </Button>
+                              <Button
+                                 variant="outline"
+                                 size="sm"
+                                 onClick={() => setMode('dark')}
+                                 className={ny(mode === 'dark' && 'border-primary border-2')}
+                              >
+                                 <MoonIcon className="mr-1 -translate-x-1" />
+                                 Dark
+                              </Button>
+                           </>
                         )
                      : (
-                        <>
-                           <Skeleton className="h-8 w-full" />
-                           <Skeleton className="h-8 w-full" />
-                        </>
+                           <>
+                              <Skeleton className="h-8 w-full" />
+                              <Skeleton className="h-8 w-full" />
+                           </>
                         )}
                </div>
             </div>
@@ -383,7 +372,10 @@ function Customizer() {
    )
 }
 
-function CopyCodeButton() {
+function CopyCodeButton({
+   className,
+   ...props
+}: React.ComponentProps<typeof Button>) {
    const [config] = useConfig()
    const activeTheme = themes.find(theme => theme.name === config.theme)
    const [hasCopied, setHasCopied] = React.useState(false)
@@ -408,21 +400,24 @@ function CopyCodeButton() {
                   })
                   setHasCopied(true)
                }}
-               className="md:hidden"
+               className={ny('md:hidden', className)}
+               {...props}
             >
                {hasCopied
                   ? (
-                     <CheckIcon className="mr-2 h-4 w-4" />
+                        <CheckIcon className="mr-2 size-4" />
                      )
                   : (
-                     <CopyIcon className="mr-2 h-4 w-4" />
+                        <CopyIcon className="mr-2 size-4" />
                      )}
-               Copy
+               Copy code
             </Button>
          )}
          <Dialog>
             <DialogTrigger asChild>
-               <Button className="hidden md:flex">Copy code</Button>
+               <Button className={ny('hidden md:flex', className)} {...props}>
+                  Copy code
+               </Button>
             </DialogTrigger>
             <DialogContent className="max-w-2xl outline-none">
                <DialogHeader>
@@ -431,7 +426,7 @@ function CopyCodeButton() {
                      Copy and paste the following code into your CSS file.
                   </DialogDescription>
                </DialogHeader>
-               <ThemeWrapper defaultTheme="zinc" className="relative">
+               <ThemeWrapper defaultTheme="violet" className="relative">
                   <CustomizerCode />
                   {activeTheme && (
                      <Button
@@ -449,14 +444,14 @@ function CopyCodeButton() {
                            )
                            setHasCopied(true)
                         }}
-                        className="absolute right-4 top-4 bg-muted text-muted-foreground hover:bg-muted hover:text-muted-foreground"
+                        className="bg-muted text-muted-foreground hover:bg-muted hover:text-muted-foreground absolute right-4 top-4"
                      >
                         {hasCopied
                            ? (
-                              <CheckIcon className="mr-2 h-4 w-4" />
+                                 <CheckIcon className="mr-2 size-4" />
                               )
                            : (
-                              <CopyIcon className="mr-2 h-4 w-4" />
+                                 <CopyIcon className="mr-2 size-4" />
                               )}
                         Copy
                      </Button>
@@ -473,10 +468,10 @@ function CustomizerCode() {
    const activeTheme = themes.find(theme => theme.name === config.theme)
 
    return (
-      <ThemeWrapper defaultTheme="zinc" className="relative space-y-4">
+      <ThemeWrapper defaultTheme="violet" className="relative space-y-4">
          <div data-rehype-pretty-code-fragment="">
             <pre className="max-h-[450px] overflow-x-auto rounded-lg border bg-zinc-950 py-4 dark:bg-zinc-900">
-               <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm">
+               <code className="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm">
                   <span className="line text-white">@layer base &#123;</span>
                   <span className="line text-white">&nbsp;&nbsp;:root &#123;</span>
                   <span className="line text-white">
@@ -507,10 +502,10 @@ function CustomizerCode() {
                            :
                            {' '}
                            {
-                    activeTheme?.cssVars.light[
-                       prefix as keyof typeof activeTheme.cssVars.light
-                    ]
-                  }
+                              activeTheme?.cssVars.light[
+                                 prefix as keyof typeof activeTheme.cssVars.light
+                              ]
+                           }
                            ;
                         </span>
                         <span className="line text-white">
@@ -519,10 +514,10 @@ function CustomizerCode() {
                            -foreground:
                            {' '}
                            {
-                    activeTheme?.cssVars.light[
+                              activeTheme?.cssVars.light[
                       `${prefix}-foreground` as keyof typeof activeTheme.cssVars.light
-                    ]
-                  }
+                              ]
+                           }
                            ;
                         </span>
                      </>
@@ -582,10 +577,10 @@ function CustomizerCode() {
                            :
                            {' '}
                            {
-                    activeTheme?.cssVars.dark[
-                       prefix as keyof typeof activeTheme.cssVars.dark
-                    ]
-                  }
+                              activeTheme?.cssVars.dark[
+                                 prefix as keyof typeof activeTheme.cssVars.dark
+                              ]
+                           }
                            ;
                         </span>
                         <span className="line text-white">
@@ -594,10 +589,10 @@ function CustomizerCode() {
                            -foreground:
                            {' '}
                            {
-                    activeTheme?.cssVars.dark[
+                              activeTheme?.cssVars.dark[
                       `${prefix}-foreground` as keyof typeof activeTheme.cssVars.dark
-                    ]
-                  }
+                              ]
+                           }
                            ;
                         </span>
                      </>
@@ -630,8 +625,9 @@ function CustomizerCode() {
 }
 
 function getThemeCode(theme: Theme, radius: number) {
-   if (!theme)
+   if (!theme) {
       return ''
+   }
 
    return template(BASE_STYLES_WITH_VARIABLES)({
       colors: theme.cssVars,

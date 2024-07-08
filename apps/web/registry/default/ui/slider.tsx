@@ -12,8 +12,8 @@ interface SliderProps extends React.ComponentPropsWithoutRef<typeof SliderPrimit
 }
 
 const Slider = React.forwardRef<
-  React.ElementRef<typeof SliderPrimitive.Root>,
-  SliderProps
+   React.ElementRef<typeof SliderPrimitive.Root>,
+   SliderProps
 >(({ className, showSteps = 'none', formatLabel, formatLabelSide = 'top', ...props }, ref) => {
    const { min = 0, max = 100, step = 1, orientation = 'horizontal', value, defaultValue, onValueChange } = props
    const [hoveredThumbIndex, setHoveredThumbIndex] = React.useState<boolean>(false)
@@ -53,7 +53,7 @@ const Slider = React.forwardRef<
       <SliderPrimitive.Root
          ref={ref}
          className={ny(
-            'relative flex touch-none select-none cursor-pointer data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+            'relative flex cursor-pointer touch-none select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
             orientation === 'horizontal' ? 'w-full items-center' : 'h-full justify-center',
             className,
          )}
@@ -67,12 +67,12 @@ const Slider = React.forwardRef<
          onBlur={() => setHoveredThumbIndex(false)}
       >
          <SliderPrimitive.Track className={ny(
-            'relative grow overflow-hidden rounded-full bg-primary/20',
+            'bg-primary/20 relative grow overflow-hidden rounded-full',
             orientation === 'horizontal' ? 'h-1.5 w-full' : 'h-full w-1.5',
          )}
          >
             <SliderPrimitive.Range className={ny(
-               'absolute bg-primary',
+               'bg-primary absolute',
                orientation === 'horizontal' ? 'h-full' : 'w-full',
             )}
             />
@@ -87,14 +87,14 @@ const Slider = React.forwardRef<
                      key={index}
                      className={ny(
                         { 'w-0.5 h-2': orientation !== 'vertical', 'w-2 h-0.5': orientation === 'vertical' },
-                        'absolute bg-muted-foreground',
+                        'bg-muted-foreground absolute',
                         {
                            'left-1': orientation === 'vertical' && showSteps === 'half',
                            'top-1': orientation !== 'vertical' && showSteps === 'half',
                            'left-0': orientation === 'vertical' && showSteps === 'full',
                            'top-0': orientation !== 'vertical' && showSteps === 'full',
-                           'transform -translate-x-1/2': orientation !== 'vertical',
-                           'transform -translate-y-1/2': orientation === 'vertical',
+                           '-translate-x-1/2': orientation !== 'vertical',
+                           '-translate-y-1/2': orientation === 'vertical',
                         },
                      )}
                      style={{
@@ -109,17 +109,17 @@ const Slider = React.forwardRef<
             <SliderPrimitive.Thumb
                key={index}
                className={ny(
-                  'block h-4 w-4 rounded-full border border-primary/50 bg-background shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring',
+                  'border-primary/50 bg-background focus-visible:ring-ring block size-4 rounded-full border shadow transition-colors focus-visible:outline-none focus-visible:ring-1',
                )}
             >
                {hoveredThumbIndex && formatLabel && (
                   <div
                      className={ny(
-                        { 'bottom-8 left-1/2 transform -translate-x-1/2': formatLabelSide === 'top' },
-                        { 'top-8 left-1/2 transform -translate-x-1/2': formatLabelSide === 'bottom' },
-                        { 'right-8 transform -translate-y-1/4': formatLabelSide === 'left' },
-                        { 'left-8 transform -translate-y-1/4': formatLabelSide === 'right' },
-                        'absolute z-30 rounded-md border bg-popover text-popover-foreground shadow-sm px-2 text-center items-center justify-items-center w-max py-1',
+                        { 'bottom-8 left-1/2 -translate-x-1/2': formatLabelSide === 'top' },
+                        { 'top-8 left-1/2 -translate-x-1/2': formatLabelSide === 'bottom' },
+                        { 'right-8 -translate-y-1/4': formatLabelSide === 'left' },
+                        { 'left-8 -translate-y-1/4': formatLabelSide === 'right' },
+                        'bg-popover text-popover-foreground absolute z-30 w-max items-center justify-items-center rounded-md border px-2 py-1 text-center shadow-sm',
                      )}
                   >
                      {formatLabel(numberStep)}

@@ -5,6 +5,7 @@ import { CheckIcon, ClipboardIcon } from 'lucide-react'
 
 import type { Event } from '~/lib/events'
 import { trackEvent } from '~/lib/events'
+import { ny } from '~/lib/utils'
 import type { ButtonProps } from '~/registry/miami/ui/button'
 import { Button } from '~/registry/miami/ui/button'
 import {
@@ -17,6 +18,7 @@ export function BlockCopyButton({
    event,
    name,
    code,
+   className,
    ...props
 }: {
    event: Event['name']
@@ -37,7 +39,10 @@ export function BlockCopyButton({
             <Button
                size="icon"
                variant="outline"
-               className="h-7 w-7 rounded-[6px] [&_svg]:size-3.5"
+               className={ny(
+                  '[&_svg]-h-3.5 size-7 rounded-[6px] [&_svg]:w-3.5',
+                  className,
+               )}
                onClick={() => {
                   navigator.clipboard.writeText(code)
                   trackEvent({
@@ -54,7 +59,7 @@ export function BlockCopyButton({
                {hasCopied ? <CheckIcon /> : <ClipboardIcon />}
             </Button>
          </TooltipTrigger>
-         <TooltipContent>Copy code</TooltipContent>
+         <TooltipContent className="bg-black text-white">Copy code</TooltipContent>
       </Tooltip>
    )
 }

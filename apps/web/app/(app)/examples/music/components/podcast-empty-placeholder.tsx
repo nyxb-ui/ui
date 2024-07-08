@@ -22,7 +22,7 @@ export function PodcastEmptyPlaceholder() {
                strokeLinecap="round"
                strokeLinejoin="round"
                strokeWidth="2"
-               className="h-10 w-10 text-muted-foreground"
+               className="text-muted-foreground size-10"
                viewBox="0 0 24 24"
             >
                <circle cx="12" cy="11" r="1" />
@@ -31,7 +31,7 @@ export function PodcastEmptyPlaceholder() {
             </svg>
 
             <h3 className="mt-4 text-lg font-semibold">No episodes added</h3>
-            <p className="mb-4 mt-2 text-sm text-muted-foreground">
+            <p className="text-muted-foreground mb-4 mt-2 text-sm">
                You have not added any podcasts. Add one below.
             </p>
             <Dialog>

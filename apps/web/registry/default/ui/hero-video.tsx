@@ -39,7 +39,7 @@ export function HeroVideoAction({
    })
 
    return (
-      <div className="absolute left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 transform">
+      <div className="absolute left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2">
          {childWithOnClick}
       </div>
    )
@@ -71,11 +71,11 @@ function HeroVideo({ children, image, title = 'Demo' }: HeroVideoProps) {
    return (
       <HeroVideoContext.Provider value={{ openModal, closeModal }}>
          <div
-            className={ny('absolute inset-[1px] flex overflow-hidden rounded-2xl')}
+            className={ny('absolute inset-px flex overflow-hidden rounded-2xl')}
          >
             {actionChild}
             <img
-               className="pointer-events-none h-full w-full object-cover"
+               className="pointer-events-none size-full object-cover"
                src={image}
             />
          </div>
@@ -93,7 +93,7 @@ function HeroVideo({ children, image, title = 'Demo' }: HeroVideoProps) {
                   leaveFrom="opacity-100"
                   leaveTo="opacity-0"
                >
-                  <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm" />
+                  <div className="bg-opacity/50 fixed inset-0 bg-black backdrop-blur-sm" />
                </Transition.Child>
 
                {/* Video Modal */}
@@ -108,7 +108,7 @@ function HeroVideo({ children, image, title = 'Demo' }: HeroVideoProps) {
                         leaveFrom="opacity-100 scale-100"
                         leaveTo="opacity-0 scale-95"
                      >
-                        <Dialog.Panel className="flex w-full max-w-4xl transform flex-col gap-2 overflow-hidden rounded-2xl p-6 text-left align-middle transition-all">
+                        <Dialog.Panel className="flex w-full max-w-4xl flex-col gap-2 overflow-hidden rounded-2xl p-6 text-left align-middle transition-all">
                            <div className="flex flex-row items-center justify-between">
                               <h3 className="text-lg font-medium leading-6 text-gray-100">
                                  {title}
@@ -119,7 +119,7 @@ function HeroVideo({ children, image, title = 'Demo' }: HeroVideoProps) {
                                     onClick={closeModal}
                                     aria-label="Close"
                                  >
-                                    <X className="h-6 w-6 text-gray-100" />
+                                    <X className="size-6 text-gray-100" />
                                  </button>
                               )}
                            </div>
