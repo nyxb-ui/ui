@@ -17,6 +17,10 @@ export const docsConfig: DocsConfig = {
          href: '/components',
       },
       {
+         title: 'Showcase',
+         href: '/showcase',
+      },
+      {
          title: 'Themes',
          href: '/themes',
       },
@@ -437,6 +441,98 @@ export const docsConfig: DocsConfig = {
                href: `/docs/components/video-modal`,
                items: [],
                label: 'New',
+            },
+         ],
+      },
+      {
+         title: 'Templates',
+         items: [
+            {
+               title: 'Portfolio',
+               href: `/docs/templates/portfolio`,
+               items: [],
+               label: 'New',
+            },
+            {
+               title: 'Startup',
+               href: `/docs/templates/startup`,
+               items: [],
+               label: 'New',
+            },
+            {
+               title: 'SaaS',
+               href: `/docs/templates/saas`,
+               items: [],
+               disabled: true,
+               label: 'Coming soon',
+            },
+            {
+               title: 'Mobile App',
+               href: `/docs/templates/app`,
+               items: [],
+               disabled: true,
+               label: 'Coming soon',
+            },
+         ],
+      },
+      {
+         title: 'Landing Page Components',
+         items: [
+            {
+               title: 'Marquee',
+               href: `/docs/components/marquee`,
+               items: [],
+            },
+            {
+               title: 'Bento Grid',
+               href: `/docs/components/bento-grid`,
+               items: [],
+            },
+            {
+               title: 'Animated List',
+               href: `/docs/components/animated-list`,
+               items: [],
+            },
+            {
+               title: 'Dock',
+               href: `/docs/components/dock`,
+               items: [],
+               label: '',
+            },
+            {
+               title: 'Globe',
+               href: `/docs/components/globe`,
+               items: [],
+            },
+            {
+               title: 'Tweet Card',
+               href: `/docs/components/tweet-card`,
+               items: [],
+            },
+            {
+               title: 'Orbiting Circles',
+               href: `/docs/components/orbiting-circles`,
+               items: [],
+               label: '',
+            },
+
+            {
+               title: 'Avatar Circles',
+               href: `/docs/components/avatar-circles`,
+               items: [],
+               label: '',
+            },
+            {
+               title: 'Interactive Icon Cloud',
+               href: `/docs/components/icon-cloud`,
+               items: [],
+               label: '',
+            },
+            {
+               title: 'Animated Circular Progress Bar',
+               href: `/docs/components/animated-circular-progress-bar`,
+               items: [],
+               label: '',
             },
          ],
       },

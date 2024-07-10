@@ -27,7 +27,7 @@ export const AnimatedSubscribeButton: React.FC<
          {isSubscribed
             ? (
                   <motion.button
-                     className="relative flex w-[200px] items-center justify-center overflow-hidden rounded-md bg-white p-[10px] outline outline-1 outline-black"
+                     className="relative flex h-[46px] w-[200px] items-center justify-center overflow-hidden rounded-md bg-white p-[10px] outline outline-1 outline-black"
                      onClick={() => setIsSubscribed(false)}
                      initial={{ opacity: 0 }}
                      animate={{ opacity: 1 }}

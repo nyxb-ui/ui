@@ -9,8 +9,9 @@ import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 import type { BlogPosting, WithContext } from 'schema-dts'
 import { visit } from 'unist-util-visit'
-import { env } from './scripts/env.mts'
+
 import { rehypeComponent } from './lib/rehype-component'
+import { rehypeNpmCommand } from './lib/rehype-npm-command'
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
@@ -21,7 +22,7 @@ const computedFields = {
    image: {
       type: 'string',
       resolve: (post: any) =>
-      `${env.NEXT_PUBLIC_APP_URL}/api/og?title=${encodeURI(post.title)}`,
+       `${process.env.NEXT_PUBLIC_APP_URL}/api/og?title=${encodeURI(post.title)}`,
    },
    slug: {
       type: 'string',
@@ -42,7 +43,7 @@ const computedFields = {
             'dateModified': doc.date,
             'description': doc.summary,
             'image': doc.image,
-            'url': `https://nyxui.design/${doc._raw.flattenedPath}`,
+            'url': `https://magicui.design/${doc._raw.flattenedPath}`,
             'author': {
                '@type': 'Person',
                'name': doc.author,
@@ -51,6 +52,72 @@ const computedFields = {
          }) as WithContext<BlogPosting>,
    },
 }
+
+export const Showcase = defineDocumentType(() => ({
+   name: 'Showcase',
+   filePathPattern: `showcase/**/*.mdx`,
+   contentType: 'mdx',
+   fields: {
+      title: {
+         type: 'string',
+         required: true,
+      },
+      author: {
+         type: 'string',
+         required: false,
+      },
+      description: {
+         type: 'string',
+      },
+      image: {
+         type: 'string',
+         required: true,
+      },
+      href: {
+         type: 'string',
+         required: true,
+      },
+      affiliation: {
+         type: 'string',
+         required: true,
+      },
+      featured: {
+         type: 'boolean',
+         default: false,
+         required: false,
+      },
+   },
+   computedFields: {
+      slug: {
+         type: 'string',
+         resolve: (doc: any) => `/${doc._raw.flattenedPath}`,
+      },
+      slugAsParams: {
+         type: 'string',
+         resolve: (doc: any) =>
+            doc._raw.flattenedPath.split('/').slice(1).join('/'),
+      },
+      structuredData: {
+         type: 'json',
+         resolve: (doc: any) =>
+            ({
+               '@context': 'https://schema.org',
+               '@type': `BlogPosting`,
+               'headline': doc.title,
+               'datePublished': doc.date,
+               'dateModified': doc.date,
+               'description': doc.summary,
+               'image': doc.image,
+               'url': `https://magicui.design/${doc._raw.flattenedPath}`,
+               'author': {
+                  '@type': 'Person',
+                  'name': doc.author,
+                  'url': `https://twitter.com/${doc.author}`,
+               },
+            }) as WithContext<BlogPosting>,
+      },
+   },
+}))
 
 export const Page = defineDocumentType(() => ({
    name: 'Page',
@@ -65,7 +132,7 @@ export const Page = defineDocumentType(() => ({
          type: 'string',
       },
    },
-   // @ts-expect-error is fine
+   // @ts-expect-error
    computedFields,
 }))
 
@@ -108,22 +175,18 @@ export const Doc = defineDocumentType(() => ({
          default: false,
          required: false,
       },
-      component: {
-         type: 'boolean',
-         default: false,
-         required: false,
-      },
       toc: { type: 'boolean', default: true, required: false },
       author: { type: 'string', required: false },
       video: { type: 'string', required: false },
+      component: { type: 'boolean', required: false }, // Added field
    },
-   // @ts-expect-error is fine
+   // @ts-expect-error
    computedFields,
 }))
 
 export default makeSource({
    contentDirPath: './content',
-   documentTypes: [Page, Doc],
+   documentTypes: [Page, Doc, Showcase],
    mdx: {
       remarkPlugins: [remarkGfm],
       rehypePlugins: [
@@ -133,8 +196,9 @@ export default makeSource({
             visit(tree, (node) => {
                if (node?.type === 'element' && node?.tagName === 'pre') {
                   const [codeEl] = node.children
-                  if (codeEl.tagName !== 'code')
+                  if (codeEl.tagName !== 'code') {
                      return
+                  }
 
                   if (codeEl.data?.meta) {
                      // Extract event from meta and pass it down the tree.
@@ -155,16 +219,14 @@ export default makeSource({
          [
             rehypePrettyCode,
             {
-               theme: 'material-theme-palenight',
-               //   light: "material-theme-lighter",
-               // },
+               theme: 'github-dark',
                onVisitLine(node: any) {
                   // Prevent lines from collapsing in `display: grid` mode, and allow empty
                   // lines to be copy/pasted
-                  if (node.children.length === 0)
+                  if (node.children.length === 0) {
                      node.children = [{ type: 'text', value: ' ' }]
+                  }
                },
-               // keepBackground: true,
                onVisitHighlightedLine(node: any) {
                   node.properties.className.push('line--highlighted')
                },
@@ -176,28 +238,34 @@ export default makeSource({
          () => (tree) => {
             visit(tree, (node) => {
                if (node?.type === 'element' && node?.tagName === 'div') {
-                  if (!('data-rehype-pretty-code-fragment' in node.properties))
+                  if (!('data-rehype-pretty-code-fragment' in node.properties)) {
                      return
+                  }
 
                   const preElement = node.children.at(-1)
-                  if (preElement.tagName !== 'pre')
+                  if (preElement.tagName !== 'pre') {
                      return
+                  }
 
                   preElement.properties.__withMeta__
-              = node.children.at(0).tagName === 'div'
+               = node.children.at(0).tagName === 'div'
                   preElement.properties.__rawString__ = node.__rawString__
 
-                  if (node.__src__)
+                  if (node.__src__) {
                      preElement.properties.__src__ = node.__src__
+                  }
 
-                  if (node.__event__)
+                  if (node.__event__) {
                      preElement.properties.__event__ = node.__event__
+                  }
 
-                  if (node.__style__)
+                  if (node.__style__) {
                      preElement.properties.__style__ = node.__style__
+                  }
                }
             })
          },
+         rehypeNpmCommand,
          [
             rehypeAutolinkHeadings,
             {

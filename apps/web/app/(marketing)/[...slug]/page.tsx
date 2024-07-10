@@ -1,10 +1,11 @@
-import { allPages } from 'contentlayer/generated'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { Mdx } from '~/components/mdx-components'
-import { siteConfig } from '~/config/site'
+import { allPages } from 'contentlayer/generated'
 import { env } from '~/scripts/env.mts'
+import { siteConfig } from '~/config/site'
 import { absoluteUrl } from '~/lib/utils'
+import { Mdx } from '~/components/mdx-components'
+
 import '~/styles/mdx.css'
 
 interface PageProps {
@@ -17,8 +18,9 @@ async function getPageFromParams(params: PageProps['params']) {
    const slug = params?.slug?.join('/')
    const page = allPages.find(page => page.slugAsParams === slug)
 
-   if (!page)
+   if (!page) {
       null
+   }
 
    return page
 }
@@ -28,8 +30,9 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
    const page = await getPageFromParams(params)
 
-   if (!page)
+   if (!page) {
       return {}
+   }
 
    const url = env.NEXT_PUBLIC_APP_URL
 
@@ -73,8 +76,9 @@ export async function generateStaticParams(): Promise<PageProps['params'][]> {
 export default async function PagePage({ params }: PageProps) {
    const page = await getPageFromParams(params)
 
-   if (!page)
+   if (!page) {
       notFound()
+   }
 
    return (
       <article className="container max-w-3xl py-6 lg:py-12">

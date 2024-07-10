@@ -167,6 +167,13 @@
     "type": "components:ui"
   },
   {
+    "name": "blur-fade",
+    "files": [
+      "ui/blur-fade.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "calendar",
     "dependencies": [
       "react-day-picker",

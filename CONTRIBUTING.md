@@ -141,6 +141,27 @@ For a detailed specification, you can visit the [conventional-emoji-commits](htt
 
 If you have a request for a new component, please open a discussion on GitHub. We'll be happy to help you out.
 
+## Adding to the showcase
+
+### 1. Create your showcase as a MDX file
+
+Create your showcase in `content/showcase/website-name.mdx`
+
+```mdx
+---
+title: website-name.com
+description: Website description
+image: /showcase/website-name.png
+href: https://website-name.com
+featured: true
+affiliation: YC S25, raised $10M
+---
+```
+
+### 2. Create an image
+
+Upload an image of your site to `public/showcase/website-name.png`
+
 ## CLI
 
 The `nyxbui` package is a CLI for adding components to your project. You can find the documentation for the CLI [here](https://nyxbui.design/docs/cli).

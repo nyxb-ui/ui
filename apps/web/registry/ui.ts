@@ -111,6 +111,11 @@ export const ui: Registry = [
       files: ['ui/button.tsx'],
    },
    {
+      name: 'blur-fade',
+      type: 'components:ui',
+      files: ['ui/blur-fade.tsx'],
+   },
+   {
       name: 'calendar',
       type: 'components:ui',
       dependencies: ['react-day-picker', 'date-fns'],

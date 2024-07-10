@@ -16,3 +16,8 @@ export interface NavItemWithChildren extends NavItem {
 export interface MainNavItem extends NavItem {}
 
 export interface SidebarNavItem extends NavItemWithChildren {}
+
+export interface DashboardConfig {
+   mainNav: MainNavItem[]
+   sidebarNav: SidebarNavItem[]
+}
