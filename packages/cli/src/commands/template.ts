@@ -43,7 +43,11 @@ export const template = new Command()
       // Fetch templates from remote repository
       const templates: Template[] = []
       try {
-         const response = await fetch('https://api.github.com/repos/nyxb-ui/templates/contents/templates')
+         const response = await fetch('https://api.github.com/repos/nyxb-ui/templates/contents/templates?ref=main', {
+            headers: {
+               Accept: 'application/vnd.github.v3+json',
+            },
+         })
          if (!response.ok) {
             throw new Error('Failed to fetch templates from remote repository')
          }
