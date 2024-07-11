@@ -25,6 +25,10 @@ export const docsConfig: DocsConfig = {
          href: '/themes',
       },
       {
+         title: 'Templates',
+         href: '/templates',
+      },
+      {
          title: 'Examples',
          href: '/examples',
       },

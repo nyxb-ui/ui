@@ -99,6 +99,11 @@ const nextConfig = {
             destination: '/docs/components/form',
             permanent: false,
          },
+         {
+            source: '/templates',
+            destination: '/docs/templates/startup',
+            permanent: false,
+         },
       ]
    },
    webpack: (config) => {
