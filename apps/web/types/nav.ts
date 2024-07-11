@@ -7,6 +7,7 @@ export interface NavItem {
    external?: boolean
    icon?: keyof typeof Icons
    label?: string
+   items?: NavItem[] // Added for dropdown menus
 }
 
 export interface NavItemWithChildren extends NavItem {

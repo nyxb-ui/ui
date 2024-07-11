@@ -337,6 +337,13 @@
     "type": "components:ui"
   },
   {
+    "name": "file-tree",
+    "files": [
+      "ui/file-tree.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "flip-text",
     "files": [
       "ui/flip-text.tsx"

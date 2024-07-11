@@ -215,6 +215,11 @@ export const ui: Registry = [
       files: ['ui/fade-text.tsx'],
    },
    {
+      name: 'file-tree',
+      type: 'components:ui',
+      files: ['ui/file-tree.tsx'],
+   },
+   {
       name: 'flip-text',
       type: 'components:ui',
       files: ['ui/flip-text.tsx'],

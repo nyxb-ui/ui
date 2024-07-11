@@ -17,20 +17,8 @@ export const docsConfig: DocsConfig = {
          href: '/components',
       },
       {
-         title: 'Showcase',
-         href: '/showcase',
-      },
-      {
          title: 'Themes',
          href: '/themes',
-      },
-      {
-         title: 'Templates',
-         href: '/templates',
-      },
-      {
-         title: 'Examples',
-         href: '/examples',
       },
       {
          title: 'Blocks',
@@ -39,6 +27,23 @@ export const docsConfig: DocsConfig = {
       {
          title: 'Charts',
          href: '/charts',
+      },
+      {
+         title: 'Templates',
+         href: '/templates',
+      },
+      {
+         title: 'More',
+         items: [
+            {
+               title: 'Examples',
+               href: '/examples',
+            },
+            {
+               title: 'Showcase',
+               href: '/showcase',
+            },
+         ],
       },
    ],
    sidebarNav: [
@@ -548,11 +553,6 @@ export const docsConfig: DocsConfig = {
                href: `/docs/components/animated-beam`,
                items: [],
             },
-            // {
-            //    title: 'Animated Lines',
-            //    href: `/docs/components/animated-lines`,
-            //    items: [],
-            // },
             {
                title: 'Border Beam',
                href: `/docs/components/border-beam`,
@@ -589,6 +589,34 @@ export const docsConfig: DocsConfig = {
                title: 'Particles',
                href: `/docs/components/particles`,
                items: [],
+            },
+            {
+               title: 'Cool Mode',
+               href: `/docs/components/cool-mode`,
+               items: [],
+               label: '',
+            },
+         ],
+      },
+      {
+         title: 'Animations',
+         items: [
+            {
+               title: 'Blur Fade',
+               href: `/docs/components/blur-fade`,
+               items: [],
+               label: 'New',
+            },
+         ],
+      },
+      {
+         title: 'Developer Components',
+         items: [
+            {
+               title: 'File Tree',
+               href: `/docs/components/file-tree`,
+               items: [],
+               label: 'New',
             },
          ],
       },
@@ -698,11 +726,6 @@ export const docsConfig: DocsConfig = {
             {
                title: 'Sparkles Text',
                href: `/docs/components/sparkles-text`,
-               items: [],
-            },
-            {
-               title: 'Cool Mode',
-               href: `/docs/components/cool-mode`,
                items: [],
             },
          ],

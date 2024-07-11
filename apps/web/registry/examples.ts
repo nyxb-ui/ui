@@ -1630,4 +1630,9 @@ export const examples: Registry = [
       type: 'components:example',
       files: ['example/blur-fade-text-demo.tsx'],
    },
+   {
+      name: 'file-tree-demo',
+      type: 'components:example',
+      files: ['example/file-tree-demo.tsx'],
+   },
 ]
