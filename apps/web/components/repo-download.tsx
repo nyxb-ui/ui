@@ -41,12 +41,11 @@ export default function RepoDownload({
          }
          const data = await response.json()
          const downloadUrl = data.downloadUrl
-         /* window.open(downloadUrl, "_blank"); */
          window.location.href = downloadUrl
       }
       catch (error) {
          toast.error('Error occured while downloading. Please try again.')
-         console.error('error', error)
+         console.error('Download Error:', error)
       }
       finally {
          setLoading(false)
@@ -79,7 +78,7 @@ export default function RepoDownload({
             'not-prose group relative w-full gap-1',
          )}
       >
-         Donate now
+         Donate Now
          <ArrowRightIcon className="size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
       </Link>
    )

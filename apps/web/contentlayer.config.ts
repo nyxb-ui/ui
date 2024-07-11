@@ -132,7 +132,7 @@ export const Page = defineDocumentType(() => ({
          type: 'string',
       },
    },
-   // @ts-expect-error
+   // @ts-expect-error is fine
    computedFields,
 }))
 
@@ -180,7 +180,7 @@ export const Doc = defineDocumentType(() => ({
       video: { type: 'string', required: false },
       component: { type: 'boolean', required: false }, // Added field
    },
-   // @ts-expect-error
+   // @ts-expect-error is fine
    computedFields,
 }))
 

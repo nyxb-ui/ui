@@ -1,3 +1,4 @@
+/* eslint-disable ts/ban-ts-comment */
 // @ts-nocheck
 'use client'
 

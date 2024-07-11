@@ -28,6 +28,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: true, status, downloadUrl })
    }
    catch (error: any) {
+      console.error('GitHub API Error:', error)
       return NextResponse.json(
          { success: false, error: error.message },
          { status: 500 },

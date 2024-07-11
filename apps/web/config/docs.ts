@@ -89,6 +89,37 @@ export const docsConfig: DocsConfig = {
          ],
       },
       {
+         title: 'Templates',
+         items: [
+            {
+               title: 'Portfolio',
+               href: `/docs/templates/portfolio`,
+               items: [],
+               label: 'New',
+            },
+            {
+               title: 'Startup',
+               href: `/docs/templates/startup`,
+               items: [],
+               label: 'New',
+            },
+            {
+               title: 'SaaS',
+               href: `/docs/templates/saas`,
+               items: [],
+               disabled: true,
+               label: 'Coming soon',
+            },
+            {
+               title: 'Mobile App',
+               href: `/docs/templates/app`,
+               items: [],
+               disabled: true,
+               label: 'Coming soon',
+            },
+         ],
+      },
+      {
          title: 'Components',
          items: [
             {
@@ -441,37 +472,6 @@ export const docsConfig: DocsConfig = {
                href: `/docs/components/video-modal`,
                items: [],
                label: 'New',
-            },
-         ],
-      },
-      {
-         title: 'Templates',
-         items: [
-            {
-               title: 'Portfolio',
-               href: `/docs/templates/portfolio`,
-               items: [],
-               label: 'New',
-            },
-            {
-               title: 'Startup',
-               href: `/docs/templates/startup`,
-               items: [],
-               label: 'New',
-            },
-            {
-               title: 'SaaS',
-               href: `/docs/templates/saas`,
-               items: [],
-               disabled: true,
-               label: 'Coming soon',
-            },
-            {
-               title: 'Mobile App',
-               href: `/docs/templates/app`,
-               items: [],
-               disabled: true,
-               label: 'Coming soon',
             },
          ],
       },
