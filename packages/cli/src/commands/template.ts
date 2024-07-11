@@ -18,7 +18,7 @@ interface Options {
    gitInit?: boolean
 }
 
-const DEFAULT_REGISTRY = 'https://raw.githubusercontent.com/nyxb-ui/templates/templates'
+const DEFAULT_REGISTRY = 'https://raw.githubusercontent.com/nyxb-ui/templates/templates/templates'
 const TEMPLATES = [
    { name: 'portfolio', source: 'portfolio' },
    { name: 'startup', source: 'startup' },
