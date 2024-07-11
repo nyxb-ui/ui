@@ -26,15 +26,17 @@ export default function RepoDownload({
       setLoading(true)
 
       try {
+         // eslint-disable-next-line no-console
+         console.log('Fetching from:', `${process.env.NEXT_PUBLIC_APP_URL}/api/repo/download`)
          const response = await fetch(
-        `${process.env.NEXT_PUBLIC_APP_URL}/api/repo/download`,
-        {
-           method: 'POST',
-           headers: {
-              'Content-Type': 'application/json',
-           },
-           body: JSON.stringify({ repo, owner }),
-        },
+            `${process.env.NEXT_PUBLIC_APP_URL}/api/repo/download`,
+            {
+               method: 'POST',
+               headers: {
+                  'Content-Type': 'application/json',
+               },
+               body: JSON.stringify({ repo, owner }),
+            },
          )
          if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`)

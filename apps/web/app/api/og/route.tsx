@@ -121,7 +121,7 @@ export async function GET(req: Request) {
                         ...font('Inter 700'),
                      }}
                   >
-                     Create magical landing pages in minutes.
+                     The best UI library for your next project.
                   </span>
                </h1>
             </div>
@@ -143,6 +143,7 @@ export async function GET(req: Request) {
       )
    }
    catch (e: any) {
+      // eslint-disable-next-line no-console
       console.log(`${e.message}`)
       return new Response(`Failed to generate the image`, {
          status: 500,
