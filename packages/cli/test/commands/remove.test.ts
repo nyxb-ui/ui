@@ -1,6 +1,6 @@
 import * as fs from "fs"
 import * as execaModule from "execa"
-import { createRemoveCommand } from "../../src/commands/remove"
+import { remove } from "../../src/commands/remove"
 import prompts from "prompts"
 
 import {getConfig} from "../../src/utils/get-config"
@@ -161,7 +161,7 @@ beforeAll(async () => {
 })
 
 beforeEach(() => {
-  nyxbuiCli = createRemoveCommand()
+  nyxbuiCli = remove
 
   mockProcessExit = vi.spyOn(process, "exit").mockImplementation((_code?: number): never => { return undefined as never})
   mockFsRm = vi.spyOn(fs.promises, "rm").mockImplementation(async (_path, _options) => { return undefined as never})
