@@ -34,7 +34,7 @@ interface File {
 export const template = new Command()
    .name('template')
    .description('Initialize a fresh project')
-   .argument('<dir>', 'Project directory')
+   .argument('[dir]', 'Project directory', './') // Set default directory to './'
    .option('--install', 'Install dependencies after setup')
    .option('--git-init', 'Initialize a git repository')
    .action(async (dir: string, opts: Options) => {
