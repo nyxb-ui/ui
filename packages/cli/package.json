@@ -1,7 +1,7 @@
 {
   "name": "nyxbui",
   "type": "module",
-  "version": "1.0.4-next.5",
+  "version": "1.0.4-next.6",
   "description": "Add components to your apps.",
   "publishConfig": {
     "access": "public"

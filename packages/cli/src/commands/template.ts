@@ -18,7 +18,7 @@ interface Options {
    gitInit?: boolean
 }
 
-const DEFAULT_REGISTRY = 'https://raw.githubusercontent.com/nyxb-ui/templates/templates/templates'
+const DEFAULT_REGISTRY = 'https://raw.githubusercontent.com/nyxb-ui/templates/templates'
 const TEMPLATES = [
    { name: 'portfolio', source: 'portfolio' },
    { name: 'startup', source: 'startup' },
@@ -32,20 +32,20 @@ export const template = new Command()
    .action(async (opts: Options) => {
       const cwd = resolve(opts.cwd || '.')
 
-      // Prompt for project directory
-      const { projectDir } = await prompts({
-         type: 'text',
-         name: 'projectDir',
-         message: 'What is the name of your project directory?',
-         initial: 'my-app',
-      })
-
       // Select template
       const { templateName } = await prompts({
          type: 'select',
          name: 'templateName',
          message: 'Which template would you like to use?',
          choices: TEMPLATES.map(template => ({ title: template.name, value: template.source })),
+      })
+
+      // Prompt for project directory
+      const { projectDir } = await prompts({
+         type: 'text',
+         name: 'projectDir',
+         message: 'What is the name of your project directory?',
+         initial: 'my-app',
       })
 
       // Download template
