@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
    }
 }
 
-export const config = {
+POST.config = {
    api: {
       bodyParser: false,
       externalResolver: true,
