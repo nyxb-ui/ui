@@ -27,7 +27,7 @@ interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
    button?: 'copy' | 'refresh'
    styleSwitch?: boolean
    dots?: boolean
-   hideCode?: boolean
+   preview?: boolean
 }
 
 export function ComponentPreview({
@@ -41,7 +41,7 @@ export function ComponentPreview({
    button = 'refresh',
    styleSwitch = false,
    dots = true,
-   hideCode = false,
+   preview = false,
    ...props
 }: ComponentPreviewProps) {
    const [config] = useConfig()
@@ -92,7 +92,7 @@ export function ComponentPreview({
       >
          <Tabs defaultValue="preview" className="relative mr-auto w-full">
             <div className="flex items-center justify-between pb-3">
-               {!hideCode && (
+               {!preview && (
                   <TabsList className="ml-33 w-full justify-start rounded-none border-b bg-transparent p-0">
                      <TabsTrigger
                         value="preview"

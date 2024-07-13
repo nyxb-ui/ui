@@ -40,7 +40,8 @@ export function MobileNav() {
                <div className="flex flex-col space-y-3">
                   {docsConfig.mainNav?.map(
                      item =>
-                        item.href && (
+                        // eslint-disable-next-line style/multiline-ternary
+                        item.href ? (
                            <MobileLink
                               key={item.href}
                               href={item.href}
@@ -48,6 +49,25 @@ export function MobileNav() {
                            >
                               {item.title}
                            </MobileLink>
+                        ) : (
+                           <div key={item.title} className="flex flex-col space-y-3">
+                              <h4 className="font-medium">{item.title}</h4>
+                              {item.items?.map(subItem => (
+                                 <MobileLink
+                                    key={subItem.href}
+                                    href={subItem.href!}
+                                    onOpenChange={setOpen}
+                                    className="text-muted-foreground"
+                                 >
+                                    {subItem.title}
+                                    {subItem.label && (
+                                       <span className="ml-2 rounded-md bg-[#FFBD7A] px-1.5 py-0.5 text-xs leading-none text-[#000000] no-underline group-hover:no-underline">
+                                          {subItem.label}
+                                       </span>
+                                    )}
+                                 </MobileLink>
+                              ))}
+                           </div>
                         ),
                   )}
                </div>
@@ -61,7 +81,7 @@ export function MobileNav() {
                               && (item.href
                                  ? (
                                        <MobileLink
-                                          href={item.href}
+                                          href={item.href!} // Sicherstellen, dass href definiert ist
                                           onOpenChange={setOpen}
                                           className="text-muted-foreground"
                                        >

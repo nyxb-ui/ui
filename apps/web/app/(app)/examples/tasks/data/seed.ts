@@ -17,4 +17,5 @@ fs.writeFileSync(
    JSON.stringify(tasks, null, 2),
 )
 
+// eslint-disable-next-line no-console
 console.log('✅ Tasks data generated.')

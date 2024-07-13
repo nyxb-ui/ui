@@ -1615,4 +1615,24 @@ export const examples: Registry = [
       type: 'components:example',
       files: ['example/scratch-to-reveal-demo.tsx'],
    },
+   {
+      name: 'confetti-demo',
+      type: 'components:example',
+      files: ['example/confetti-demo.tsx'],
+   },
+   {
+      name: 'blur-fade-demo',
+      type: 'components:example',
+      files: ['example/blur-fade-demo.tsx'],
+   },
+   {
+      name: 'blur-fade-text-demo',
+      type: 'components:example',
+      files: ['example/blur-fade-text-demo.tsx'],
+   },
+   {
+      name: 'file-tree-demo',
+      type: 'components:example',
+      files: ['example/file-tree-demo.tsx'],
+   },
 ]

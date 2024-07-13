@@ -21,16 +21,29 @@ export const docsConfig: DocsConfig = {
          href: '/themes',
       },
       {
-         title: 'Examples',
-         href: '/examples',
-      },
-      {
          title: 'Blocks',
          href: '/blocks',
       },
       {
          title: 'Charts',
          href: '/charts',
+      },
+      {
+         title: 'Templates',
+         href: '/templates',
+      },
+      {
+         title: 'More',
+         items: [
+            {
+               title: 'Examples',
+               href: '/examples',
+            },
+            {
+               title: 'Showcase',
+               href: '/showcase',
+            },
+         ],
       },
    ],
    sidebarNav: [
@@ -81,6 +94,37 @@ export const docsConfig: DocsConfig = {
                title: 'Changelog',
                href: '/docs/changelog',
                items: [],
+            },
+         ],
+      },
+      {
+         title: 'Templates',
+         items: [
+            {
+               title: 'Portfolio',
+               href: `/docs/templates/portfolio`,
+               items: [],
+               label: 'New',
+            },
+            {
+               title: 'Startup',
+               href: `/docs/templates/startup`,
+               items: [],
+               label: 'New',
+            },
+            {
+               title: 'SaaS',
+               href: `/docs/templates/saas`,
+               items: [],
+               disabled: true,
+               label: 'Coming soon',
+            },
+            {
+               title: 'Mobile App',
+               href: `/docs/templates/app`,
+               items: [],
+               disabled: true,
+               label: 'Coming soon',
             },
          ],
       },
@@ -441,6 +485,67 @@ export const docsConfig: DocsConfig = {
          ],
       },
       {
+         title: 'Landing Page Components',
+         items: [
+            {
+               title: 'Marquee',
+               href: `/docs/components/marquee`,
+               items: [],
+            },
+            {
+               title: 'Bento Grid',
+               href: `/docs/components/bento-grid`,
+               items: [],
+            },
+            {
+               title: 'Animated List',
+               href: `/docs/components/animated-list`,
+               items: [],
+            },
+            {
+               title: 'Dock',
+               href: `/docs/components/dock`,
+               items: [],
+               label: '',
+            },
+            {
+               title: 'Globe',
+               href: `/docs/components/globe`,
+               items: [],
+            },
+            {
+               title: 'Tweet Card',
+               href: `/docs/components/tweet-card`,
+               items: [],
+            },
+            {
+               title: 'Orbiting Circles',
+               href: `/docs/components/orbiting-circles`,
+               items: [],
+               label: '',
+            },
+
+            {
+               title: 'Avatar Circles',
+               href: `/docs/components/avatar-circles`,
+               items: [],
+               label: '',
+            },
+            {
+               title: 'Interactive Icon Cloud',
+               href: `/docs/components/icon-cloud`,
+               items: [],
+               label: '',
+            },
+            {
+               title: 'Animated Circular Progress Bar',
+               href: `/docs/components/animated-circular-progress-bar`,
+               items: [],
+               label: '',
+            },
+         ],
+      },
+      {
          title: 'Special Effects',
          items: [
             {
@@ -448,11 +553,6 @@ export const docsConfig: DocsConfig = {
                href: `/docs/components/animated-beam`,
                items: [],
             },
-            // {
-            //    title: 'Animated Lines',
-            //    href: `/docs/components/animated-lines`,
-            //    items: [],
-            // },
             {
                title: 'Border Beam',
                href: `/docs/components/border-beam`,
@@ -489,6 +589,34 @@ export const docsConfig: DocsConfig = {
                title: 'Particles',
                href: `/docs/components/particles`,
                items: [],
+            },
+            {
+               title: 'Cool Mode',
+               href: `/docs/components/cool-mode`,
+               items: [],
+               label: '',
+            },
+         ],
+      },
+      {
+         title: 'Animations',
+         items: [
+            {
+               title: 'Blur Fade',
+               href: `/docs/components/blur-fade`,
+               items: [],
+               label: 'New',
+            },
+         ],
+      },
+      {
+         title: 'Developer Components',
+         items: [
+            {
+               title: 'File Tree',
+               href: `/docs/components/file-tree`,
+               items: [],
+               label: 'New',
             },
          ],
       },
@@ -598,11 +726,6 @@ export const docsConfig: DocsConfig = {
             {
                title: 'Sparkles Text',
                href: `/docs/components/sparkles-text`,
-               items: [],
-            },
-            {
-               title: 'Cool Mode',
-               href: `/docs/components/cool-mode`,
                items: [],
             },
          ],

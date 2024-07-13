@@ -1,3 +1,4 @@
+/* eslint-disable ts/ban-ts-comment */
 // @ts-nocheck
 'use client'
 
@@ -41,6 +42,8 @@ import {
 import type { Style } from '~/registry/styles'
 import { ComponentInstallation } from '~/components/component-installation'
 import { PropsTable } from '~/components/props-table'
+import RepoDownload from '~/components/repo-download'
+import TemplatePreview from '~/components/template-preview'
 
 function CustomLink(props: any) {
    const href = props.href
@@ -60,6 +63,8 @@ function CustomLink(props: any) {
 }
 
 const components = {
+   RepoDownload,
+   TemplatePreview,
    ComponentInstallation,
    Accordion,
    AccordionContent,

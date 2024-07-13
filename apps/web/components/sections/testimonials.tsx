@@ -1,6 +1,5 @@
-import FadeIn from '~/registry/default/ui/fade-in'
-import Marquee from '~/registry/default/ui/marquee'
-import TweetCard from '~/registry/default/ui/tweet-card'
+import Marquee from '~/registry/miami/ui/marquee'
+import TweetCard from '~/registry/miami/ui/tweet-card'
 
 const tweets = [
    'https://x.com/chronark_/status/1754781648262967323',
@@ -34,24 +33,20 @@ export default async function Testimonials() {
 
    return (
       <section id="testimonials" className="container py-14">
-         <FadeIn delay={0.3}>
-            <h2 className="text-foreground mb-4 text-center text-5xl font-bold leading-[1.2] tracking-tighter">
-               What People Are Saying
-            </h2>
-            <h3 className="text-foreground/80 mx-auto mb-8 max-w-lg text-balance text-center text-lg font-medium tracking-tight">
-               Don't just take our word for it. Here's what
-               {' '}
-               <strong>real people</strong>
-               {' '}
-               are saying about Nyxb UI on Twitter.
-            </h3>
-         </FadeIn>
+         <h2 className="text-foreground mb-4 text-center text-5xl font-bold leading-[1.2] tracking-tighter">
+            What People Are Saying
+         </h2>
+         <h3 className="text-foreground/80 mx-auto mb-8 max-w-lg text-balance text-center text-lg font-medium tracking-tight">
+            Don't just take our word for it. Here's what
+            {' '}
+            <strong>real people</strong>
+            {' '}
+            are saying about Nyxb UI on Twitter.
+         </h3>
          <div className="relative flex flex-col">
             <Marquee className="max-w-screen [--duration:120s]" pauseOnHover>
                {firstRow.map((id, idx) => (
-                  <FadeIn delay={0.06 + idx * 0.04} key={idx}>
-                     <TweetCard id={id} className="max-h-32 w-72 min-w-72" />
-                  </FadeIn>
+                  <TweetCard id={id} className="max-h-32 w-72 min-w-72" key={idx} />
                ))}
             </Marquee>
             <Marquee
@@ -60,9 +55,7 @@ export default async function Testimonials() {
                pauseOnHover
             >
                {secondRow.map((id, idx) => (
-                  <FadeIn delay={0.06 + 0.04 * (secondRow.length - idx)} key={idx}>
-                     <TweetCard id={id} className="max-h-32 w-72 min-w-72" />
-                  </FadeIn>
+                  <TweetCard id={id} className="max-h-32 w-72 min-w-72" key={idx} />
                ))}
             </Marquee>
             <div className="from-background pointer-events-none absolute inset-y-0 left-0 h-full w-1/3 bg-gradient-to-r"></div>

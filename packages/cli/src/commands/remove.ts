@@ -1,5 +1,5 @@
-import { existsSync, promises as fs } from 'node:fs'
-import path from 'node:path'
+import { existsSync, promises as fs } from 'fs'
+import path from 'path'
 import chalk from 'chalk'
 import { Command } from 'commander'
 import { execa } from 'execa'
@@ -59,7 +59,7 @@ export function createRemoveCommand() {
                logger.warn(
             `Configuration is missing. Please run ${chalk.green(
               `init`,
-            )} to create a nyxbui.json file.`,
+            )} to create a components.json file.`,
                )
                return process.exit(1)
             }
@@ -87,15 +87,17 @@ export function createRemoveCommand() {
                      options.path ? path.resolve(cwd, options.path) : undefined,
                   )
 
-                  if (!targetDir)
+                  if (!targetDir) {
                      return acc
+                  }
 
                   const existingComponent = item.files.filter(file =>
                      existsSync(path.resolve(targetDir, file.name)),
                   )
 
-                  if (existingComponent.length)
+                  if (existingComponent.length) {
                      acc.push(item)
+                  }
 
                   return acc
                },
@@ -145,8 +147,9 @@ export function createRemoveCommand() {
                   initial: true,
                })
 
-               if (!proceed)
+               if (!proceed) {
                   return process.exit(0)
+               }
 
                if (!removeDependencies) {
                   const { confirm } = await prompts({
@@ -166,8 +169,9 @@ export function createRemoveCommand() {
                   item => item.name === component,
                )
 
-               if (!item)
+               if (!item) {
                   continue
+               }
 
                const targetDir = await getItemTargetPath(
                   config,
@@ -175,8 +179,9 @@ export function createRemoveCommand() {
                   options.path ? path.resolve(cwd, options.path) : undefined,
                )
 
-               if (!targetDir)
+               if (!targetDir) {
                   continue
+               }
 
                const dependentComponents = existingComponents.filter(_item =>
                   _item.registryDependencies?.includes(component),
@@ -196,8 +201,9 @@ export function createRemoveCommand() {
                      }
                   }
 
-                  if (skipComponentRemove)
+                  if (skipComponentRemove) {
                      continue
+                  }
                }
 
                for (const file of item.files) {

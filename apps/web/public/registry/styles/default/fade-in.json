@@ -1,0 +1,10 @@
+{
+  "name": "fade-in",
+  "files": [
+    {
+      "name": "fade-in.tsx",
+      "content": "'use client'\n\nimport { useRef } from 'react'\nimport { motion, useInView } from 'framer-motion'\n\nexport default function FadeIn({\n   children,\n   className,\n   noVertical,\n   delay,\n   viewTriggerOffset,\n}: {\n   children: React.ReactNode\n   className?: string\n   noVertical?: boolean\n   delay?: number\n   viewTriggerOffset?: boolean\n}) {\n   const ref = useRef(null)\n   const inView = useInView(ref, {\n      once: true,\n      margin: viewTriggerOffset ? '-128px' : '0px',\n   })\n\n   const fadeUpVariants = {\n      initial: {\n         opacity: 0,\n         y: noVertical ? 0 : 24,\n      },\n      animate: {\n         opacity: 1,\n         y: 0,\n      },\n   }\n\n   return (\n      <motion.div\n         ref={ref}\n         animate={inView ? 'animate' : 'initial'}\n         variants={fadeUpVariants}\n         className={className}\n         initial={false}\n         transition={{\n            duration: 0.6,\n            delay: delay || 0,\n            ease: [0.21, 0.47, 0.32, 0.98],\n            type: 'spring',\n         }}\n      >\n         {children}\n      </motion.div>\n   )\n}\n"
+    }
+  ],
+  "type": "components:ui"
+}

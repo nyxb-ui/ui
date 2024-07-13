@@ -1,4 +1,9 @@
+import path, { dirname } from 'path'
+import { fileURLToPath } from 'url'
 import { withContentlayer } from 'next-contentlayer'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -7,6 +12,17 @@ const nextConfig = {
    productionBrowserSourceMaps: true,
    experimental: {
       optimizeCss: true,
+      turbo: {
+         resolveExtensions: [
+            '.mdx',
+            '.tsx',
+            '.ts',
+            '.jsx',
+            '.js',
+            '.mjs',
+            '.json',
+         ],
+      },
    },
    images: {
       remotePatterns: [
@@ -18,8 +34,15 @@ const nextConfig = {
             protocol: 'https',
             hostname: 'images.unsplash.com',
          },
+         {
+            protocol: 'https',
+            hostname: 'cdn.nyxbui.design',
+         },
+         {
+            protocol: 'http',
+            hostname: 'localhost',
+         },
       ],
-      domains: ['localhost', 'cdn.nyxbui.design'],
    },
    env: {
       NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
@@ -76,7 +99,17 @@ const nextConfig = {
             destination: '/docs/components/form',
             permanent: false,
          },
+         {
+            source: '/templates',
+            destination: '/docs/templates/startup',
+            permanent: false,
+         },
       ]
+   },
+   webpack: (config) => {
+      config.resolve.alias.jotai = path.resolve(__dirname, 'node_modules/jotai')
+
+      return config
    },
 }
 

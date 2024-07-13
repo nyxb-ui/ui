@@ -12,6 +12,7 @@ export default function SonnerDemo() {
                action: {
                   label: 'Undo',
 
+                  // eslint-disable-next-line no-console
                   onClick: () => console.log('Undo'),
                },
             })}

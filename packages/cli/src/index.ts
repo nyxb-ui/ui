@@ -5,6 +5,7 @@ import { add } from '~/src/commands/add'
 import { diff } from '~/src/commands/diff'
 import { init } from '~/src/commands/init'
 import { createRemoveCommand } from '~/src/commands/remove'
+import { template } from '~/src/commands/template'
 
 process.on('SIGINT', () => process.exit(0))
 process.on('SIGTERM', () => process.exit(0))
@@ -24,6 +25,7 @@ async function main() {
       .addCommand(add)
       .addCommand(diff)
       .addCommand(createRemoveCommand())
+      .addCommand(template)
 
    program.parse()
 }
