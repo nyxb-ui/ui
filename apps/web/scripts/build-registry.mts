@@ -1,3 +1,4 @@
+/* eslint-disable */
 // @ts-nocheck
 import { existsSync, promises as fs, readFileSync } from 'fs'
 import { tmpdir } from 'os'

@@ -14,7 +14,7 @@ export default function TooltipWithToggleDemo() {
          <Tooltip>
             <TooltipTrigger>
                <Toggle variant="outline" aria-label="Toggle love">
-                  <Heart className="h-4 w-4" />
+                  <Heart className="size-4" />
                </Toggle>
             </TooltipTrigger>
             <TooltipContent>

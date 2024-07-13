@@ -37,6 +37,7 @@ async function main() {
    progressBar.update(2)
 
    progressBar.stop()
+   // eslint-disable-next-line no-console
    console.log('\n ✔︎ All runs completed')
 }
 

@@ -144,6 +144,7 @@ async function fetchRegistry(paths: string[]) {
       return results
    }
    catch (error) {
+      // eslint-disable-next-line no-console
       console.log(error)
       throw new Error(`Failed to fetch registry from ${baseUrl}.`)
    }
