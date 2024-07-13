@@ -37,6 +37,10 @@ Visit our [contributing guide](https://github.com/nyxb-ui/ui/blob/main/CONTRIBUT
 
 ![Alt](https://repobeats.axiom.co/api/embed/5e0f16842e515bdc858138f062dc3f2fbe329b96.svg 'Repobeats analytics image')
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=nyxb-ui/ui&type=Date)](https://star-history.com/#nyxb-ui/ui&Date)
+
 ## License
 
 Licensed under the [MIT license](https://github.com/nyxb-ui/ui/blob/main/LICENSE.md).
