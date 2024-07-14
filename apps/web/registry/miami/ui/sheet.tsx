@@ -64,7 +64,7 @@ const SheetContent = React.forwardRef<
          className={ny(sheetVariants({ side }), className)}
          {...props}
       >
-         <SheetPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none">
+         <SheetPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute end-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none">
             <Cross2Icon className="size-4" />
             <span className="sr-only">Close</span>
          </SheetPrimitive.Close>
@@ -81,7 +81,7 @@ function SheetHeader({
    return (
       <div
          className={ny(
-            'flex flex-col space-y-2 text-center sm:text-left',
+            'flex flex-col space-y-2 text-center sm:text-start',
             className,
          )}
          {...props}
