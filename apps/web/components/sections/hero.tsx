@@ -1,5 +1,5 @@
 import { compareDesc } from 'date-fns'
-import { allDocs } from '~/.contentlayer/generated'
+import { allDocs } from 'content-collections'
 
 import HeroClient from '~/components/sections/hero-client'
 

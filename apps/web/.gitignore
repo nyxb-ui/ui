@@ -9,6 +9,7 @@
 # testing
 /coverage
 .contentlayer
+.content-collections
 
 # next.js
 /.next/

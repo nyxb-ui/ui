@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { headers } from 'next/headers'
-import { allDocs, allPages } from '~/.contentlayer/generated'
+import { allDocs, allPages } from 'content-collections'
 
 export default function sitemap(): MetadataRoute.Sitemap {
    const headersList = headers()

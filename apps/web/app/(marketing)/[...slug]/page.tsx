@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { allPages } from 'contentlayer/generated'
+import { allPages } from 'content-collections'
 import { env } from '~/scripts/env.mts'
 import { siteConfig } from '~/config/site'
 import { absoluteUrl } from '~/lib/utils'
@@ -13,6 +13,9 @@ interface PageProps {
       slug: string[]
    }
 }
+
+// eslint-disable-next-line no-console
+console.log('All pages:', allPages)
 
 async function getPageFromParams(params: PageProps['params']) {
    const slug = params?.slug?.join('/')

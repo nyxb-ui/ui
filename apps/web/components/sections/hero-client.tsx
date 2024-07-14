@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
 import { motion } from 'framer-motion'
-import type { Doc } from '~/.contentlayer/generated'
+import type { Doc } from 'content-collections'
 
 import { ny } from '~/lib/utils'
 import { buttonVariants } from '~/components/ui/button'

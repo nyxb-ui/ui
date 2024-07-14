@@ -106,7 +106,7 @@ ${Object.entries(chartConfig.theme.cssVars.dark)
             >
                <div className="relative overflow-auto rounded-lg bg-black">
                   <div
-                     data-rehype-pretty-code-fragment
+                     data-rehype-pretty-code-figure
                      dangerouslySetInnerHTML={{
                         __html: chart.highlightedCode,
                      }}
@@ -119,7 +119,7 @@ ${Object.entries(chartConfig.theme.cssVars.dark)
                className="h-full flex-1 flex-col overflow-hidden data-[state=active]:flex"
             >
                <div
-                  data-rehype-pretty-code-fragment
+                  data-rehype-pretty-code-figure
                   className="relative overflow-auto rounded-lg bg-black py-6"
                >
                   <pre className="bg-black font-mono text-sm leading-relaxed">

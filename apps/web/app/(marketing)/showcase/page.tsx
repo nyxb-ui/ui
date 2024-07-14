@@ -1,4 +1,4 @@
-import { allShowcases } from 'contentlayer/generated'
+import { allShowcases } from 'content-collections'
 
 import { ShowcaseCard } from '~/components/sections/showcase'
 import BlurFade from '~/registry/miami/ui/blur-fade'

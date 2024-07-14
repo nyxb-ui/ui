@@ -5,7 +5,7 @@
 import * as React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useMDXComponent } from 'next-contentlayer/hooks'
+import { useMDXComponent } from '@content-collections/mdx/react'
 import type { NpmCommands } from 'types/unist'
 
 import type { Event } from '~/lib/events'

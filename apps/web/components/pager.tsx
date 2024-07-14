@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { ChevronLeftIcon, ChevronRightIcon } from '@radix-ui/react-icons'
-import type { Doc } from 'contentlayer/generated'
+import type { Doc } from 'content-collections'
 import type { NavItem, NavItemWithChildren } from 'types/nav'
 
 import { docsConfig } from '~/config/docs'

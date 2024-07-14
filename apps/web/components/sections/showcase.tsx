@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronRightIcon } from '@radix-ui/react-icons'
-import { allShowcases } from '~/.contentlayer/generated'
+import { allShowcases } from 'content-collections'
 
 import Marquee from '~/registry/miami/ui/marquee'
 

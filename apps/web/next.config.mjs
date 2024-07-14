@@ -1,6 +1,6 @@
 import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
-import { withContentlayer } from 'next-contentlayer'
+import { withContentCollections } from '@content-collections/next'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -113,4 +113,4 @@ const nextConfig = {
    },
 }
 
-export default withContentlayer(nextConfig)
+export default withContentCollections(nextConfig)

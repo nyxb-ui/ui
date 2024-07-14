@@ -217,6 +217,7 @@ export default makeSource({
             })
          },
          [
+            // @ts-expect-error is fine
             rehypePrettyCode,
             {
                theme: 'github-dark',
