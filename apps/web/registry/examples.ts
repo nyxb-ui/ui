@@ -1635,4 +1635,9 @@ export const examples: Registry = [
       type: 'components:example',
       files: ['example/file-tree-demo.tsx'],
    },
+   {
+      name: 'rainbow-button-demo',
+      type: 'components:example',
+      files: ['example/rainbow-button-demo.tsx'],
+   },
 ]

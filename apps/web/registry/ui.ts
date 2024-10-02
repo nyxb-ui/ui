@@ -612,4 +612,9 @@ export const ui: Registry = [
       type: 'components:ui',
       files: ['ui/word-rotate.tsx'],
    },
+   {
+      name: 'rainbow-button',
+      type: 'components:ui',
+      files: ['ui/rainbow-button.tsx'],
+   },
 ]

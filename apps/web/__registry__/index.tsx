@@ -1215,6 +1215,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "rainbow-button": {
+      name: "rainbow-button",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/ui/rainbow-button")),
+      source: "",
+      files: ["registry/default/ui/rainbow-button.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "accordion-demo": {
       name: "accordion-demo",
       type: "components:example",
@@ -4427,6 +4438,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "rainbow-button-demo": {
+      name: "rainbow-button-demo",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/example/rainbow-button-demo")),
+      source: "",
+      files: ["registry/default/example/rainbow-button-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "dashboard-05": {
       name: "dashboard-05",
       type: "components:block",
@@ -6626,6 +6648,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("~/registry/miami/ui/word-rotate")),
       source: "",
       files: ["registry/miami/ui/word-rotate.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "rainbow-button": {
+      name: "rainbow-button",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/ui/rainbow-button")),
+      source: "",
+      files: ["registry/miami/ui/rainbow-button.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -9838,6 +9871,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("~/registry/miami/example/file-tree-demo")),
       source: "",
       files: ["registry/miami/example/file-tree-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "rainbow-button-demo": {
+      name: "rainbow-button-demo",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/example/rainbow-button-demo")),
+      source: "",
+      files: ["registry/miami/example/rainbow-button-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

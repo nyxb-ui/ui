@@ -104,20 +104,17 @@ export const docsConfig: DocsConfig = {
                title: 'Portfolio',
                href: `/docs/templates/portfolio`,
                items: [],
-               label: 'New',
             },
             {
                title: 'Startup',
                href: `/docs/templates/startup`,
                items: [],
-               label: 'New',
             },
             {
                title: 'SaaS',
                href: `/docs/templates/saas`,
                items: [],
-               disabled: true,
-               label: 'Coming soon',
+               label: 'New',
             },
             {
                title: 'Mobile App',
@@ -288,7 +285,6 @@ export const docsConfig: DocsConfig = {
                title: 'Input Phone',
                href: '/docs/components/input-phone',
                items: [],
-               label: 'New',
             },
             {
                title: 'Interactive Icon Cloud',
@@ -315,7 +311,6 @@ export const docsConfig: DocsConfig = {
                title: 'Multi Select',
                href: '/docs/components/multi-select',
                items: [],
-               label: 'New',
             },
             {
                title: 'Navigation Menu',
@@ -362,13 +357,11 @@ export const docsConfig: DocsConfig = {
                title: 'Scroll Progress',
                href: `/docs/components/scroll-progress`,
                items: [],
-               label: 'New',
             },
             {
                title: 'Scratch To Reveal',
                href: `/docs/components/scratch-to-reveal`,
                items: [],
-               label: 'New',
             },
             {
                title: 'Select',
@@ -394,7 +387,6 @@ export const docsConfig: DocsConfig = {
                title: 'Slider',
                href: '/docs/components/slider',
                items: [],
-               label: 'New',
             },
             {
                title: 'Sonner',
@@ -405,13 +397,11 @@ export const docsConfig: DocsConfig = {
                title: 'Star Rating',
                href: '/docs/components/star-rating',
                items: [],
-               label: 'New',
             },
             {
                title: 'Stepper',
                href: '/docs/components/stepper',
                items: [],
-               label: 'New',
             },
             {
                title: 'Switch',
@@ -437,7 +427,6 @@ export const docsConfig: DocsConfig = {
                title: 'Timeline',
                href: '/docs/components/timeline',
                items: [],
-               label: 'New',
             },
             {
                title: 'Toast',
@@ -448,7 +437,6 @@ export const docsConfig: DocsConfig = {
                title: 'TOC',
                href: '/docs/components/toc',
                items: [],
-               label: 'New',
             },
             {
                title: 'Toggle',
@@ -469,7 +457,6 @@ export const docsConfig: DocsConfig = {
                title: 'Tour',
                href: '/docs/components/tour',
                items: [],
-               label: 'New',
             },
             {
                title: 'Tweet Card',
@@ -480,7 +467,6 @@ export const docsConfig: DocsConfig = {
                title: 'Video Modal',
                href: `/docs/components/video-modal`,
                items: [],
-               label: 'New',
             },
          ],
       },
@@ -605,7 +591,6 @@ export const docsConfig: DocsConfig = {
                title: 'Blur Fade',
                href: `/docs/components/blur-fade`,
                items: [],
-               label: 'New',
             },
          ],
       },
@@ -616,7 +601,6 @@ export const docsConfig: DocsConfig = {
                title: 'File Tree',
                href: `/docs/components/file-tree`,
                items: [],
-               label: 'New',
             },
          ],
       },
@@ -734,6 +718,12 @@ export const docsConfig: DocsConfig = {
          title: 'Buttons',
          items: [
             {
+               title: 'Rainbow Button',
+               href: '/docs/components/rainbow-button',
+               items: [],
+               label: 'New',
+            },
+            {
                title: 'Standard Button',
                href: '/docs/components/button',
                items: [],
@@ -758,7 +748,6 @@ export const docsConfig: DocsConfig = {
                title: 'Pulsating Button',
                href: `/docs/components/pulsating-button`,
                items: [],
-               label: 'New',
             },
          ],
       },
