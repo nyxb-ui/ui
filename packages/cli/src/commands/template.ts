@@ -22,6 +22,7 @@ const DEFAULT_REGISTRY = 'https://raw.githubusercontent.com/nyxb-ui/templates/te
 const TEMPLATES = [
    { name: 'portfolio', source: 'portfolio' },
    { name: 'startup', source: 'startup' },
+   { name: 'saas', source: 'saas' },
 ]
 
 export const template = new Command()
