@@ -945,5 +945,12 @@
       "ui/word-rotate.tsx"
     ],
     "type": "components:ui"
+  },
+  {
+    "name": "rainbow-button",
+    "files": [
+      "ui/rainbow-button.tsx"
+    ],
+    "type": "components:ui"
   }
 ]

@@ -50,24 +50,25 @@ export async function SiteHeader() {
             <div className="flex flex-1 items-center justify-between gap-2 md:justify-end">
                <Link
                   className={ny(
-                     buttonVariants(),
-                     'hidden max-w-52 gap-2 overflow-hidden whitespace-pre md:flex',
-                     'hover:ring-primary group relative w-full justify-center gap-2 rounded-md transition-all duration-300 ease-out hover:ring-2 hover:ring-offset-2',
+                     buttonVariants({
+                        variant: 'rainbow',
+                     }),
+                     'hidden md:inline-flex',
                   )}
                   target="_blank"
                   href={siteConfig.links.github}
                >
-                  <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40" />
                   <div className="flex items-center">
-                     <Icons.gitHub className="size-4 text-white" />
-                     <span className="ml-1 text-white">Star on GitHub</span>
+                     <Icons.gitHub className="size-4" />
+                     <span className="ml-1 lg:hidden">Star</span>
+                     <span className="ml-1 hidden lg:inline">Star on GitHub</span>
                      {' '}
                   </div>
                   <div className="ml-2 flex items-center gap-1 text-sm md:flex">
-                     <StarIcon className="size-4 text-white transition-all duration-300 group-hover:text-yellow-300" />
+                     <StarIcon className="size-4 text-gray-500 transition-all duration-300 group-hover:text-yellow-300" />
                      <NumberTicker
                         value={stars}
-                        className="font-display font-medium text-white dark:text-white"
+                        className="font-display font-medium text-white dark:text-black"
                      />
                   </div>
                </Link>

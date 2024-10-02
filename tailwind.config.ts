@@ -185,6 +185,25 @@ module.exports = {
                from: { height: 'var(--radix-collapsible-content-height)' },
                to: { height: '0' },
             },
+            'shine': {
+               '0%': {
+                  'background-position': '0% 0%',
+               },
+               '50%': {
+                  'background-position': '100% 100%',
+               },
+               'to': {
+                  'background-position': '0% 0%',
+               },
+            },
+            'pulse': {
+               '0%, 100%': { boxShadow: '0 0 0 0 var(--pulse-color)' },
+               '50%': { boxShadow: '0 0 0 8px var(--pulse-color)' },
+            },
+            'rainbow': {
+               '0%': { 'background-position': '0%' },
+               '100%': { 'background-position': '200%' },
+            },
          },
          animation: {
             'accordion-down': 'accordion-down 0.2s ease-out',
@@ -208,6 +227,9 @@ module.exports = {
             'background-position-spin 3000ms infinite alternate',
             'collapsible-down': 'collapsible-down 0.2s ease-out',
             'collapsible-up': 'collapsible-up 0.2s ease-out',
+            'shine': 'shine var(--duration) infinite linear',
+            'pulse': 'pulse var(--duration) ease-out infinite',
+            'rainbow': 'rainbow var(--speed, 2s) infinite linear',
          },
       },
    },
