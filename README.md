@@ -1,4 +1,7 @@
-<img alt="Nyxb UI - Fusion UI library Shadcn/ui + MagicUI" src="https://raw.githubusercontent.com/nyxb/nyxb/main/images/nyxb.jpg" width="100%">
+<p align="center">
+<img src="https://raw.githubusercontent.com/nyxb/nyxb/refs/heads/main/images/light.png#gh-light-mode-only">
+<img src="https://raw.githubusercontent.com/nyxb/nyxb/refs/heads/main/images/dark.png#gh-dark-mode-only">
+</p>
 <h3 align="center">Nyxb UI</h3>
 <p align="center">
     Fusion UI library Shadcn/ui + MagicUI
@@ -7,8 +10,7 @@
   <a href="https://github.com/nyxb-ui/ui/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/nyxb-ui/ui"></a>
   <a href="https://twitter.com/nyxb0"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/nyxb0"></a>
   <a href="https://github.com/nyxb-ui/ui/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
-  <a href="https://discord.gg/aBxNpG7fMP"><img alt="Discord" src="https://img.shields.io/discord/1113511184663056404"></a>
-  <a href="https://nyxb.slack.com"><img alt="slack" src="https://img.shields.io/badge/Slack-4A154B?&logo=slack&logoColor=white"></a>
+  <a href="https://nyxb.space"><img alt="Discord" src="https://img.shields.io/discord/1113511184663056404?color=738adb&label=Discord&logo=discord&logoColor=white&style=flat-square"></a>
 </div>
 
 ## Documentation
