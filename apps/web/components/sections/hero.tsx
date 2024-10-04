@@ -1,7 +1,7 @@
 import { compareDesc } from 'date-fns'
 import { ChevronRight } from 'lucide-react'
 import Link from 'next/link'
-import { allDocs } from '~/.contentlayer/generated'
+import { allDocs } from 'content-collections'
 
 import TechStack from '~/components/tech-stack'
 import { buttonVariants } from '~/components/ui/button'

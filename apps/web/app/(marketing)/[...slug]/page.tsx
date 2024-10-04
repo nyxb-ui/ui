@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { allPages } from 'contentlayer/generated'
+import { allPages } from 'content-collections'
 import { env } from '~/scripts/env.mts'
 import { siteConfig } from '~/config/site'
 import { absoluteUrl } from '~/lib/utils'

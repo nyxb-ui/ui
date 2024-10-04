@@ -1,49 +1,26 @@
-/* eslint-disable ts/ban-ts-comment */
-// @ts-nocheck
-'use client'
-
-import * as React from 'react'
+import { useMDXComponent } from '@content-collections/mdx/react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useMDXComponent } from 'next-contentlayer/hooks'
-import type { NpmCommands } from 'types/unist'
 
-import type { Event } from '~/lib/events'
-import { ny } from '~/lib/utils'
-import { useConfig } from '~/hooks/use-config'
+import { ComponentPreview } from './component-preview'
+import { ComponentSource } from './component-source'
+import { CopyButton, CopyNpmCommandButton } from './copy-button'
 import { Callout } from '~/components/callout'
-import { CodeBlockWrapper } from '~/components/code-block-wrapper'
-import { ComponentExample } from '~/components/component-example'
-import { ComponentPreview } from '~/components/component-preview'
-import { ComponentSource } from '~/components/component-source'
-import { CopyButton, CopyNpmCommandButton } from '~/components/copy-button'
-import { FrameworkDocs } from '~/components/framework-docs'
-import { StyleWrapper } from '~/components/style-wrapper'
+import RepoDownload from '~/components/repo-download'
 import TechStack from '~/components/tech-stack'
-import TweetCard from '~/registry/default/ui/tweet-card'
+import TemplatePreview from '~/components/template-preview'
 import {
    Accordion,
    AccordionContent,
    AccordionItem,
    AccordionTrigger,
 } from '~/components/ui/accordion'
-import {
-   Alert,
-   AlertDescription,
-   AlertTitle,
-} from '~/registry/miami/ui/alert'
-import { AspectRatio } from '~/registry/miami/ui/aspect-ratio'
-import {
-   Tabs,
-   TabsContent,
-   TabsList,
-   TabsTrigger,
-} from '~/registry/miami/ui/tabs'
-import type { Style } from '~/registry/styles'
-import { ComponentInstallation } from '~/components/component-installation'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '~/components/ui/tabs'
+import type { Event } from '~/lib/events'
+import { ny } from '~/lib/utils'
+import TweetCard from '~/registry/default/ui/tweet-card'
 import { PropsTable } from '~/components/props-table'
-import RepoDownload from '~/components/repo-download'
-import TemplatePreview from '~/components/template-preview'
+import { ComponentInstallation } from '~/components/component-installation'
 
 function CustomLink(props: any) {
    const href = props.href
@@ -56,36 +33,28 @@ function CustomLink(props: any) {
       )
    }
 
-   if (href.startsWith('#'))
+   if (href.startsWith('#')) {
       return <a {...props} />
+   }
 
    return <a target="_blank" rel="noopener noreferrer" {...props} />
 }
 
 const components = {
-   RepoDownload,
-   TemplatePreview,
-   ComponentInstallation,
    Accordion,
    AccordionContent,
    AccordionItem,
    AccordionTrigger,
-   Alert,
-   AlertTitle,
-   AlertDescription,
-   TechStack,
    Callout,
+   TechStack,
+   RepoDownload,
+   TemplatePreview,
    PropsTable,
-   ComponentExample,
-   ComponentPreview,
-   ComponentSource,
-   FrameworkDocs,
-   StyleWrapper,
+   ComponentInstallation,
    Image,
-   Tweet: ({ id }: { id: string }) => (
-      <TweetCard id={id} className="not-prose mx-auto" />
-   ),
-   ComponentInstallation: (props: any) => <ComponentInstallation {...props} />,
+   Link,
+   Tweet: ({ id }: { id: string }) => <TweetCard id={id} className="mx-auto" />,
+   ComponentPreview,
    ComponentSource: (props: any) => <ComponentSource {...props} />,
    h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
       <h1
@@ -141,10 +110,10 @@ const components = {
          {...props}
       />
    ),
-   a: (props: any) => (
+   a: ({ className, ...props }: React.HTMLAttributes<HTMLAnchorElement>) => (
       <CustomLink
+         className={ny('font-medium underline underline-offset-4', className)}
          {...props}
-         className="font-medium underline underline-offset-4"
       />
    ),
    p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
@@ -154,10 +123,10 @@ const components = {
       />
    ),
    ul: ({ className, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
-      <ul className={ny('my-6 list-disc', className)} {...props} />
+      <ul className={ny('ml-6 list-disc', className)} {...props} />
    ),
    ol: ({ className, ...props }: React.HTMLAttributes<HTMLOListElement>) => (
-      <ol className={ny('my-6 list-decimal', className)} {...props} />
+      <ol className={ny('ml-6 list-decimal', className)} {...props} />
    ),
    li: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
       <li className={ny('mt-2', className)} {...props} />
@@ -169,7 +138,7 @@ const components = {
       />
    ),
    table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
-      <div className="w-full overflow-y-auto">
+      <div className="my-6 w-full overflow-y-auto">
          <table className={ny('w-full', className)} {...props} />
       </div>
    ),
@@ -188,80 +157,14 @@ const components = {
    td: ({ className, ...props }: React.HTMLAttributes<HTMLTableCellElement>) => (
       <td
          className={ny(
-            'whitespace-pre border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right',
+            'border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right',
             className,
          )}
          {...props}
       />
-   ),
-   pre: ({
-      className,
-      __rawString__,
-      __npmCommand__,
-      __yarnCommand__,
-      __pnpmCommand__,
-      __bunCommand__,
-      __withMeta__,
-      __src__,
-      __event__,
-      __style__,
-      ...props
-   }: React.HTMLAttributes<HTMLPreElement> & {
-      __style__?: Style['name']
-      __rawString__?: string
-      __withMeta__?: boolean
-      __src__?: string
-      __event__?: Event['name']
-   } & NpmCommands) => {
-      return (
-         <StyleWrapper styleName={__style__}>
-            <pre
-               className={ny(
-                  'mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border bg-zinc-950 py-4 dark:bg-zinc-900',
-                  className,
-               )}
-               {...props}
-            />
-            {__rawString__ && !__npmCommand__ && (
-               <CopyButton
-                  value={__rawString__}
-                  src={__src__}
-                  event={__event__}
-                  className={ny('absolute right-4 top-4', __withMeta__ && 'top-16')}
-               />
-            )}
-            {__npmCommand__
-            && __yarnCommand__
-            && __pnpmCommand__
-            && __bunCommand__ && (
-               <CopyNpmCommandButton
-                  commands={{
-                     __npmCommand__,
-                     __yarnCommand__,
-                     __pnpmCommand__,
-                     __bunCommand__,
-                  }}
-                  className={ny('absolute right-4 top-4', __withMeta__ && 'top-16')}
-               />
-            )}
-         </StyleWrapper>
-      )
-   },
-   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
-      <code
-         className={ny(
-            'bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm',
-            className,
-         )}
-         {...props}
-      />
-   ),
-   AspectRatio,
-   CodeBlockWrapper: ({ ...props }) => (
-      <CodeBlockWrapper className="rounded-md border" {...props} />
    ),
    Step: ({ className, ...props }: React.ComponentProps<'h3'>) => (
-      <div
+      <h3
          className={ny(
             'font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight',
             className,
@@ -314,15 +217,71 @@ const components = {
          {...props}
       />
    ),
-   FrameworkDocs: ({
+   pre: ({
       className,
+      __rawString__,
+      __npmCommand__,
+      __pnpmCommand__,
+      __yarnCommand__,
+      __bunCommand__,
+      __withMeta__,
+      __src__,
+      __event__,
+      // __style__,
+      __name__,
       ...props
-   }: React.ComponentProps<typeof FrameworkDocs>) => (
-      <FrameworkDocs className={ny(className)} {...props} />
-   ),
-   Link: ({ className, ...props }: React.ComponentProps<typeof Link>) => (
-      <Link
-         className={ny('font-medium underline underline-offset-4', className)}
+   }: React.HTMLAttributes<HTMLPreElement> & {
+      // __style__?: Style["name"]
+      __rawString__?: string
+      __npmCommand__?: string
+      __pnpmCommand__?: string
+      __yarnCommand__?: string
+      __bunCommand__?: string
+      __withMeta__?: boolean
+      __src__?: string
+      __event__?: Event['name']
+      __name__?: string
+   }) => {
+      return (
+         <>
+            <pre
+               className={ny(
+                  'mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border bg-zinc-950 py-4 dark:bg-zinc-900',
+                  className,
+               )}
+               {...props}
+            />
+            {__rawString__ && __src__ && __event__ && (
+               <CopyButton
+                  value={__rawString__}
+                  src={__src__}
+                  event={__event__}
+                  className={ny('absolute right-4 top-4', __withMeta__ && 'top-16')}
+               />
+            )}
+            {__npmCommand__
+            && __yarnCommand__
+            && __pnpmCommand__
+            && __bunCommand__ && (
+               <CopyNpmCommandButton
+                  commands={{
+                     __npmCommand__,
+                     __pnpmCommand__,
+                     __yarnCommand__,
+                     __bunCommand__,
+                  }}
+                  className={ny('absolute right-4 top-4', __withMeta__ && 'top-16')}
+               />
+            )}
+         </>
+      )
+   },
+   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
+      <code
+         className={ny(
+            'bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm',
+            className,
+         )}
          {...props}
       />
    ),
@@ -335,39 +294,19 @@ const components = {
          {...props}
       />
    ),
-   img: ({
-      className,
-      alt,
-      ...props
-   }: React.ImgHTMLAttributes<HTMLImageElement>) => (
-      <img className={ny('rounded-md', className)} alt={alt} {...props} />
-   ),
-   hr: ({ ...props }: React.HTMLAttributes<HTMLHRElement>) => (
-      <hr className="my-4 md:my-8" {...props} />
-   ),
 }
 
 interface MDXProps {
    code: string
+   className?: string
 }
 
-export function Mdx({ code }: MDXProps) {
-   const [config] = useConfig()
-   const Component = useMDXComponent(code, {
-      style: config.style,
-   })
+export function Mdx({ code, className }: MDXProps) {
+   const Component = useMDXComponent(code)
 
    return (
-      <div
-         className="mdx"
-         className={ny(
-            'max-w-[120ch]',
-            'leading-tighter prose prose-gray dark:prose-invert tracking-tighter',
-            'prose-pre:mb-4 prose-pre:mt-6 prose-pre:max-h-[650px] prose-pre:overflow-x-auto prose-pre:rounded-lg prose-pre:border prose-pre:px-0 prose-pre:py-4 prose-pre:text-xs prose-pre:tracking-tighter md:prose-pre:text-sm',
-         )}
-      >
-         {/* ~ts-ignore */}
+      <article className={ny('mx-auto max-w-[120ch]', className)}>
          <Component components={components} />
-      </div>
+      </article>
    )
 }

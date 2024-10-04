@@ -4,8 +4,9 @@ import { visit } from 'unist-util-visit'
 export function rehypeNpmCommand() {
    return (tree: UnistTree) => {
       visit(tree, (node: UnistNode) => {
-         if (node.type !== 'element' || node?.tagName !== 'pre')
+         if (node.type !== 'element' || node?.tagName !== 'pre') {
             return
+         }
 
          // npm install.
          if (node.properties?.__rawString__?.startsWith('npm install')) {
@@ -39,7 +40,7 @@ export function rehypeNpmCommand() {
             )
             node.properties.__bunCommand__ = npmCommand.replace(
                'npx',
-               'bun x --bun',
+               'bunx --bun',
             )
          }
 
@@ -57,7 +58,7 @@ export function rehypeNpmCommand() {
             )
             node.properties.__bunCommand__ = npmCommand.replace(
                'npx',
-               'bun x --bun',
+               'bunx --bun',
             )
          }
       })
