@@ -77,11 +77,4 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build environment
-        run: pnpm build:env
-
-      - name: Generate Content Collections
-        run: pnpm next build --no-lint
-
-      - name: Run TypeScript check
-        run: pnpm tsc --noEmit
+      - run: pnpm typecheck
