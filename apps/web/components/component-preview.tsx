@@ -4,18 +4,22 @@ import * as React from 'react'
 import { Index } from '__registry__'
 import { RotateCcw } from 'lucide-react'
 
-import { useConfig } from '~/lib/use-config'
+import { useConfig } from '~/hooks/use-config'
 import { ny } from '~/lib/utils'
 import { Button } from '~/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '~/components/ui/tabs'
 import ComponentWrapper from '~/components/component-wrapper'
 import { Icons } from '~/components/icons'
 import { styles } from '~/registry/styles'
+import { StyleSwitcher } from '~/components/style-switcher'
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
    name: string
    align?: 'center' | 'start' | 'end'
    preview?: boolean
+   styleSwitch?: boolean
+   dots?: boolean
+   description?: string
 }
 
 export function ComponentPreview({
@@ -24,6 +28,9 @@ export function ComponentPreview({
    className,
    align = 'center',
    preview = false,
+   styleSwitch = false,
+   dots = true,
+   description,
    ...props
 }: ComponentPreviewProps) {
    const [key, setKey] = React.useState(0)
@@ -62,6 +69,9 @@ export function ComponentPreview({
          )}
          {...props}
       >
+         {description && (
+            <p className="text-muted-foreground text-sm">{description}</p>
+         )}
          <Tabs defaultValue="preview" className="relative mr-auto w-full">
             {!preview && (
                <div className="flex items-center justify-between pb-3">
@@ -82,14 +92,21 @@ export function ComponentPreview({
                </div>
             )}
             <TabsContent value="preview" className="relative rounded-md" key={key}>
-               <ComponentWrapper>
-                  <Button
-                     onClick={() => setKey(prev => prev + 1)}
-                     className="absolute right-1.5 top-1.5 z-10 ml-4 flex items-center rounded-lg px-3 py-1"
-                     variant="ghost"
-                  >
-                     <RotateCcw aria-label="restart-btn" size={16} />
-                  </Button>
+               <ComponentWrapper dots={dots}>
+                  {styleSwitch && (
+                     <div className="absolute left-4 top-4">
+                        <StyleSwitcher />
+                     </div>
+                  )}
+                  {!styleSwitch && (
+                     <Button
+                        onClick={() => setKey(prev => prev + 1)}
+                        className="absolute right-4 top-4 z-10 flex items-center rounded-lg px-3 py-1"
+                        variant="ghost"
+                     >
+                        <RotateCcw aria-label="restart-btn" size={16} />
+                     </Button>
+                  )}
                   <React.Suspense
                      fallback={(
                         <div className="text-muted-foreground flex items-center text-sm">
