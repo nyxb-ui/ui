@@ -19,6 +19,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '~/components/ui/tabs'
 import type { Event } from '~/lib/events'
 import { ny } from '~/lib/utils'
 import TweetCard from '~/registry/default/ui/tweet-card'
+import { PropsTable } from '~/components/props-table'
+import { ComponentInstallation } from '~/components/component-installation'
 
 function CustomLink(props: any) {
    const href = props.href
@@ -47,6 +49,8 @@ const components = {
    TechStack,
    RepoDownload,
    TemplatePreview,
+   PropsTable,
+   ComponentInstallation,
    Image,
    Tweet: ({ id }: { id: string }) => <TweetCard id={id} className="mx-auto" />,
    ComponentPreview,
