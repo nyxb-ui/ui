@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { allShowcases } from 'contentlayer/generated'
+import { allShowcases } from 'content-collections'
 import { env } from '~/scripts/env.mts'
 
 import { siteConfig } from '~/config/site'

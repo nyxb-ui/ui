@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import { allDocs } from 'contentlayer/generated'
+import { allDocs } from 'content-collections'
 
 import '~/styles/mdx.css'
 import type { Metadata } from 'next'
