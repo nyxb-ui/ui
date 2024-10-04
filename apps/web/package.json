@@ -79,7 +79,7 @@
     "react-anime": "^4.1.1",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18.3.1",
-    "react-hook-form": "^7.52.0",
+    "react-hook-form": "7.52.0",
     "react-icon-cloud": "^4.1.4",
     "react-phone-number-input": "^3.3.9",
     "react-resizable-panels": "^0.0.55",

@@ -52,6 +52,7 @@ const components = {
    PropsTable,
    ComponentInstallation,
    Image,
+   Link,
    Tweet: ({ id }: { id: string }) => <TweetCard id={id} className="mx-auto" />,
    ComponentPreview,
    ComponentSource: (props: any) => <ComponentSource {...props} />,
