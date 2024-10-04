@@ -1,4 +1,4 @@
-import { allPages } from 'contentlayer/generated'
+import { allPages } from 'content-collections'
 import { notFound } from 'next/navigation'
 import { Mdx } from '~/components/mdx-components'
 
