@@ -42,22 +42,12 @@
     "graphql",
     "astro"
   ],
-  "workbench.editor.customLabels.patterns": {
-    "**/app/**/page.tsx": "${dirname(1)}/${dirname} <page />",
-    "**/app/**/layout.tsx": "${dirname(1)}/${dirname} <layout />",
-    "**/app/**/route.ts": "${dirname(1)}/${dirname} <route />",
-    "**/components/**/*.tsx": "${dirname(1)}/${filename} <component />",
-    "**/components/**/*.ts": "${dirname(1)}/${filename} <component />",
-    "**/package.json": "${dirname(1)}/${dirname} <package.json />",
-    "**/index.ts": "${dirname(1)}/${dirname} <index.ts />",
-    "**/tsconfig.json": "${dirname(1)}/${dirname} <tsconfig.json />"
-  },
   "search.useIgnoreFiles": true,
   "cSpell.words": [
-   "customizer",
-   "occured",
-   "pullup",
-   "saas",
-   "shadcn"
-]
+    "customizer",
+    "occured",
+    "pullup",
+    "saas",
+    "shadcn"
+  ]
 }
