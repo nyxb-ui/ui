@@ -635,6 +635,7 @@ export const ui: Registry = [
    {
       name: 'code-comparison',
       type: 'components:ui',
+      dependencies: ['shiki', 'next-themes'],
       files: ['ui/code-comparison.tsx'],
    },
    {

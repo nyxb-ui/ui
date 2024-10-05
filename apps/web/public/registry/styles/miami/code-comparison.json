@@ -1,5 +1,9 @@
 {
   "name": "code-comparison",
+  "dependencies": [
+    "shiki",
+    "next-themes"
+  ],
   "files": [
     {
       "name": "code-comparison.tsx",

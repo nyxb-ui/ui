@@ -493,11 +493,11 @@ export const docsConfig: DocsConfig = {
             },
          ],
       },
-      {
-         title: 'Page Sections',
-         items: [
-         ],
-      },
+      // {
+      //    title: 'Page Sections',
+      //    items: [
+      //    ],
+      // },
       {
          title: 'Device Mockups',
          items: [

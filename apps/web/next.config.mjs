@@ -9,20 +9,9 @@ const __dirname = dirname(__filename)
 const nextConfig = {
    output: process.env.NODE_ENV === 'production' ? 'standalone' : undefined,
    reactStrictMode: true,
-   productionBrowserSourceMaps: true,
+   swcMinify: true,
    experimental: {
       optimizeCss: true,
-      turbo: {
-         resolveExtensions: [
-            '.mdx',
-            '.tsx',
-            '.ts',
-            '.jsx',
-            '.js',
-            '.mjs',
-            '.json',
-         ],
-      },
    },
    images: {
       remotePatterns: [

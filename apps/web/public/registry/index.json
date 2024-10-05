@@ -976,6 +976,10 @@
   },
   {
     "name": "code-comparison",
+    "dependencies": [
+      "shiki",
+      "next-themes"
+    ],
     "files": [
       "ui/code-comparison.tsx"
     ],

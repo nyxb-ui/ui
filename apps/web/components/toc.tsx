@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+
 import type { TableOfContents } from '~/lib/toc'
 import { useMounted } from '~/lib/use-mounted'
 import { ny } from '~/lib/utils'
@@ -9,10 +10,11 @@ interface TocProps {
    toc: TableOfContents
 }
 
-export function DashboardTableOfContents({ toc }: TocProps) {
+export function TableOfContents({ toc }: TocProps) {
    const refinedToc = useMemo(() => {
-      if (!toc.items || toc.items.length === 0)
+      if (!toc.items || toc.items.length === 0) {
          return toc
+      }
 
       const [linksInSteps, ...rest] = toc.items
 
@@ -40,8 +42,9 @@ export function DashboardTableOfContents({ toc }: TocProps) {
    const activeHeading = useActiveItem(itemIds)
    const mounted = useMounted()
 
-   if (!toc?.items || !mounted)
+   if (!toc?.items || !mounted) {
       return null
+   }
 
    return (
       <div className="space-y-2">
@@ -58,8 +61,9 @@ function useActiveItem(itemIds: string[]): string | null {
       const observer = new IntersectionObserver(
          (entries) => {
             entries.forEach((entry) => {
-               if (entry.isIntersecting)
+               if (entry.isIntersecting) {
                   setActiveId(entry.target.id)
+               }
             })
          },
          { rootMargin: `0% 0% -80% 0%` },
@@ -67,15 +71,17 @@ function useActiveItem(itemIds: string[]): string | null {
 
       itemIds?.forEach((id) => {
          const element = document.getElementById(id)
-         if (element)
+         if (element) {
             observer.observe(element)
+         }
       })
 
       return () => {
          itemIds?.forEach((id) => {
             const element = document.getElementById(id)
-            if (element)
+            if (element) {
                observer.unobserve(element)
+            }
          })
       }
    }, [itemIds])

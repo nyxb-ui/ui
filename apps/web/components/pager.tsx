@@ -1,17 +1,17 @@
-import Link from 'next/link'
 import { ChevronLeftIcon, ChevronRightIcon } from '@radix-ui/react-icons'
 import type { Doc } from 'content-collections'
-import type { NavItem, NavItemWithChildren } from 'types/nav'
+import Link from 'next/link'
+import type { NavItem, NavItemWithChildren } from '~/types'
 
+import { buttonVariants } from '~/components/ui/button'
 import { docsConfig } from '~/config/docs'
 import { ny } from '~/lib/utils'
-import { buttonVariants } from '~/registry/miami/ui/button'
 
 interface DocsPagerProps {
    doc: Doc
 }
 
-export function DocsPager({ doc }: DocsPagerProps) {
+export function DocPager({ doc }: DocsPagerProps) {
    const pager = getPagerForDoc(doc)
 
    if (!pager) {
@@ -43,10 +43,7 @@ export function DocsPager({ doc }: DocsPagerProps) {
 }
 
 export function getPagerForDoc(doc: Doc) {
-   const nav = doc.slug.startsWith('/docs/charts')
-      ? docsConfig.chartsNav
-      : docsConfig.sidebarNav
-   const flattenedLinks = [null, ...flatten(nav), null]
+   const flattenedLinks = [null, ...flatten(docsConfig.sidebarNav), null]
    const activeIndex = flattenedLinks.findIndex(
       link => doc.slug === link?.href,
    )
