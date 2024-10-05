@@ -149,6 +149,12 @@ export const docsConfig: DocsConfig = {
                items: [],
             },
             {
+               title: 'Animated Circular Progress Bar',
+               href: `/docs/components/animated-circular-progress-bar`,
+               items: [],
+               label: '',
+            },
+            {
                title: 'Aspect Ratio',
                href: '/docs/components/aspect-ratio',
                items: [],
@@ -238,7 +244,7 @@ export const docsConfig: DocsConfig = {
                title: 'Dock',
                href: '/docs/components/dock',
                items: [],
-               label: '',
+               label: 'New',
             },
             {
                title: 'Drawer',
@@ -248,6 +254,11 @@ export const docsConfig: DocsConfig = {
             {
                title: 'Dropdown Menu',
                href: '/docs/components/dropdown-menu',
+               items: [],
+            },
+            {
+               title: 'File Tree',
+               href: `/docs/components/file-tree`,
                items: [],
             },
             {
@@ -264,6 +275,11 @@ export const docsConfig: DocsConfig = {
             {
                title: 'Globe',
                href: '/docs/components/globe',
+               items: [],
+            },
+            {
+               title: 'Hero Video Dialog',
+               href: '/docs/components/hero-video-dialog',
                items: [],
             },
             {
@@ -471,64 +487,8 @@ export const docsConfig: DocsConfig = {
          ],
       },
       {
-         title: 'Landing Page Components',
+         title: 'Page Sections',
          items: [
-            {
-               title: 'Marquee',
-               href: `/docs/components/marquee`,
-               items: [],
-            },
-            {
-               title: 'Bento Grid',
-               href: `/docs/components/bento-grid`,
-               items: [],
-            },
-            {
-               title: 'Animated List',
-               href: `/docs/components/animated-list`,
-               items: [],
-            },
-            {
-               title: 'Dock',
-               href: `/docs/components/dock`,
-               items: [],
-               label: '',
-            },
-            {
-               title: 'Globe',
-               href: `/docs/components/globe`,
-               items: [],
-            },
-            {
-               title: 'Tweet Card',
-               href: `/docs/components/tweet-card`,
-               items: [],
-            },
-            {
-               title: 'Orbiting Circles',
-               href: `/docs/components/orbiting-circles`,
-               items: [],
-               label: '',
-            },
-
-            {
-               title: 'Avatar Circles',
-               href: `/docs/components/avatar-circles`,
-               items: [],
-               label: '',
-            },
-            {
-               title: 'Interactive Icon Cloud',
-               href: `/docs/components/icon-cloud`,
-               items: [],
-               label: '',
-            },
-            {
-               title: 'Animated Circular Progress Bar',
-               href: `/docs/components/animated-circular-progress-bar`,
-               items: [],
-               label: '',
-            },
          ],
       },
       {
@@ -590,16 +550,6 @@ export const docsConfig: DocsConfig = {
             {
                title: 'Blur Fade',
                href: `/docs/components/blur-fade`,
-               items: [],
-            },
-         ],
-      },
-      {
-         title: 'Developer Components',
-         items: [
-            {
-               title: 'File Tree',
-               href: `/docs/components/file-tree`,
                items: [],
             },
          ],

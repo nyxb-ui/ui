@@ -1262,6 +1262,16 @@ export const examples: Registry = [
       files: ['example/dock-demo.tsx'],
    },
    {
+      name: 'dock-demo-2',
+      type: 'components:example',
+      files: ['example/dock-demo-2.tsx'],
+   },
+   {
+      name: 'dock-demo-3',
+      type: 'components:example',
+      files: ['example/dock-demo-3.tsx'],
+   },
+   {
       name: 'word-rotate-demo',
       type: 'components:example',
       files: ['example/word-rotate-demo.tsx'],
@@ -1639,5 +1649,15 @@ export const examples: Registry = [
       name: 'rainbow-button-demo',
       type: 'components:example',
       files: ['example/rainbow-button-demo.tsx'],
+   },
+   {
+      name: 'hero-video-dialog-demo',
+      type: 'components:example',
+      files: ['example/hero-video-dialog-demo.tsx'],
+   },
+   {
+      name: 'hero-video-dialog-demo-top-in-bottom-out',
+      type: 'components:example',
+      files: ['example/hero-video-dialog-demo-top-in-bottom-out.tsx'],
    },
 ]

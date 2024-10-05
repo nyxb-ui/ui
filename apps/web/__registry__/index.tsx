@@ -1226,6 +1226,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "hero-video-dialog": {
+      name: "hero-video-dialog",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/ui/hero-video-dialog")),
+      source: "",
+      files: ["registry/default/ui/hero-video-dialog.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "accordion-demo": {
       name: "accordion-demo",
       type: "components:example",
@@ -3668,6 +3679,28 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "dock-demo-2": {
+      name: "dock-demo-2",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/example/dock-demo-2")),
+      source: "",
+      files: ["registry/default/example/dock-demo-2.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "dock-demo-3": {
+      name: "dock-demo-3",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/example/dock-demo-3")),
+      source: "",
+      files: ["registry/default/example/dock-demo-3.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "word-rotate-demo": {
       name: "word-rotate-demo",
       type: "components:example",
@@ -4445,6 +4478,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("~/registry/default/example/rainbow-button-demo")),
       source: "",
       files: ["registry/default/example/rainbow-button-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "hero-video-dialog-demo": {
+      name: "hero-video-dialog-demo",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/example/hero-video-dialog-demo")),
+      source: "",
+      files: ["registry/default/example/hero-video-dialog-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "hero-video-dialog-demo-top-in-bottom-out": {
+      name: "hero-video-dialog-demo-top-in-bottom-out",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/example/hero-video-dialog-demo-top-in-bottom-out")),
+      source: "",
+      files: ["registry/default/example/hero-video-dialog-demo-top-in-bottom-out.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -6659,6 +6714,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("~/registry/miami/ui/rainbow-button")),
       source: "",
       files: ["registry/miami/ui/rainbow-button.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "hero-video-dialog": {
+      name: "hero-video-dialog",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/ui/hero-video-dialog")),
+      source: "",
+      files: ["registry/miami/ui/hero-video-dialog.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -9105,6 +9171,28 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "dock-demo-2": {
+      name: "dock-demo-2",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/example/dock-demo-2")),
+      source: "",
+      files: ["registry/miami/example/dock-demo-2.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "dock-demo-3": {
+      name: "dock-demo-3",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/example/dock-demo-3")),
+      source: "",
+      files: ["registry/miami/example/dock-demo-3.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "word-rotate-demo": {
       name: "word-rotate-demo",
       type: "components:example",
@@ -9882,6 +9970,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("~/registry/miami/example/rainbow-button-demo")),
       source: "",
       files: ["registry/miami/example/rainbow-button-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "hero-video-dialog-demo": {
+      name: "hero-video-dialog-demo",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/example/hero-video-dialog-demo")),
+      source: "",
+      files: ["registry/miami/example/hero-video-dialog-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "hero-video-dialog-demo-top-in-bottom-out": {
+      name: "hero-video-dialog-demo-top-in-bottom-out",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/example/hero-video-dialog-demo-top-in-bottom-out")),
+      source: "",
+      files: ["registry/miami/example/hero-video-dialog-demo-top-in-bottom-out.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

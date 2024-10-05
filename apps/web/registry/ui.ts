@@ -617,4 +617,9 @@ export const ui: Registry = [
       type: 'components:ui',
       files: ['ui/rainbow-button.tsx'],
    },
+   {
+      name: 'hero-video-dialog',
+      type: 'components:ui',
+      files: ['ui/hero-video-dialog.tsx'],
+   },
 ]

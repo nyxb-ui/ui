@@ -952,5 +952,12 @@
       "ui/rainbow-button.tsx"
     ],
     "type": "components:ui"
+  },
+  {
+    "name": "hero-video-dialog",
+    "files": [
+      "ui/hero-video-dialog.tsx"
+    ],
+    "type": "components:ui"
   }
 ]
