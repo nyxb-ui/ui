@@ -1,6 +1,6 @@
 'use server'
 
-import { codeToHtml } from 'shiki-v1'
+import { codeToHtml } from 'shiki'
 
 export async function highlightCode(code: string) {
    const html = codeToHtml(code, {

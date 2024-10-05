@@ -1,10 +1,10 @@
+import { allPages } from 'content-collections'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { allPages } from 'content-collections'
 import { env } from '~/scripts/env.mts'
+import { Mdx } from '~/components/mdx-components'
 import { siteConfig } from '~/config/site'
 import { absoluteUrl } from '~/lib/utils'
-import { Mdx } from '~/components/mdx-components'
 
 import '~/styles/mdx.css'
 
@@ -36,7 +36,7 @@ export async function generateMetadata({
 
    const url = env.NEXT_PUBLIC_APP_URL
 
-   const ogUrl = new URL(`${url}/api/og`)
+   const ogUrl = new URL(`${url}/og`)
    ogUrl.searchParams.set('heading', page.title)
    ogUrl.searchParams.set('type', siteConfig.name)
    ogUrl.searchParams.set('mode', 'light')

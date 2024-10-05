@@ -1,8 +1,8 @@
+import '~/styles/mdx.css'
+
 import { allPages } from 'content-collections'
 import { notFound } from 'next/navigation'
 import { Mdx } from '~/components/mdx-components'
-
-import '~/styles/mdx.css'
 
 const PAGE = 'home'
 
