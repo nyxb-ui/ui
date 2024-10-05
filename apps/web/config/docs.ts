@@ -201,6 +201,12 @@ export const docsConfig: DocsConfig = {
                items: [],
             },
             {
+               title: 'Code Comparison',
+               href: '/docs/components/code-comparison',
+               items: [],
+               label: 'New',
+            },
+            {
                title: 'Checkbox',
                href: '/docs/components/checkbox',
                items: [],
@@ -281,6 +287,7 @@ export const docsConfig: DocsConfig = {
                title: 'Hero Video Dialog',
                href: '/docs/components/hero-video-dialog',
                items: [],
+               label: 'New',
             },
             {
                title: 'Hover Card',
@@ -492,6 +499,23 @@ export const docsConfig: DocsConfig = {
          ],
       },
       {
+         title: 'Device Mockups',
+         items: [
+            {
+               title: 'Safari',
+               href: '/docs/components/safari',
+               items: [],
+               label: 'New',
+            },
+            {
+               title: 'iPhone 15 Pro',
+               href: '/docs/components/iphone-15-pro',
+               items: [],
+               label: 'New',
+            },
+         ],
+      },
+      {
          title: 'Special Effects',
          items: [
             {
@@ -558,11 +582,6 @@ export const docsConfig: DocsConfig = {
          title: 'Text Animations',
          items: [
             {
-               title: 'Number Ticker',
-               href: `/docs/components/number-ticker`,
-               items: [],
-            },
-            {
                title: 'Animated Shiny Text',
                href: `/docs/components/animated-shiny-text`,
                items: [],
@@ -574,8 +593,19 @@ export const docsConfig: DocsConfig = {
                label: '',
             },
             {
+               title: 'Number Ticker',
+               href: `/docs/components/number-ticker`,
+               items: [],
+            },
+            {
                title: 'Text Reveal',
                href: `/docs/components/text-reveal`,
+               items: [],
+               label: '',
+            },
+            {
+               title: 'Hyper Text',
+               href: `/docs/components/hyper-text`,
                items: [],
                label: '',
             },
@@ -709,6 +739,12 @@ export const docsConfig: DocsConfig = {
                href: `/docs/components/animated-grid-pattern`,
                items: [],
                label: '',
+            },
+            {
+               title: 'Flickering Grid',
+               href: `/docs/components/flickering-grid`,
+               items: [],
+               label: 'New',
             },
             {
                title: 'Retro Grid',

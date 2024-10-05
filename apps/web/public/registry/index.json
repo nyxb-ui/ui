@@ -959,5 +959,40 @@
       "ui/hero-video-dialog.tsx"
     ],
     "type": "components:ui"
+  },
+  {
+    "name": "flickering-grid",
+    "files": [
+      "ui/flickering-grid.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "hyper-text",
+    "files": [
+      "ui/hyper-text.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "code-comparison",
+    "files": [
+      "ui/code-comparison.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "safari",
+    "files": [
+      "ui/safari.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "iphone-15-pro",
+    "files": [
+      "ui/iphone-15-pro.tsx"
+    ],
+    "type": "components:ui"
   }
 ]

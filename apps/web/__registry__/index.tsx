@@ -1237,6 +1237,61 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "flickering-grid": {
+      name: "flickering-grid",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/ui/flickering-grid")),
+      source: "",
+      files: ["registry/default/ui/flickering-grid.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "hyper-text": {
+      name: "hyper-text",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/ui/hyper-text")),
+      source: "",
+      files: ["registry/default/ui/hyper-text.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "code-comparison": {
+      name: "code-comparison",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/ui/code-comparison")),
+      source: "",
+      files: ["registry/default/ui/code-comparison.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "safari": {
+      name: "safari",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/ui/safari")),
+      source: "",
+      files: ["registry/default/ui/safari.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "iphone-15-pro": {
+      name: "iphone-15-pro",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/ui/iphone-15-pro")),
+      source: "",
+      files: ["registry/default/ui/iphone-15-pro.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "accordion-demo": {
       name: "accordion-demo",
       type: "components:example",
@@ -4504,6 +4559,94 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "flickering-grid-demo": {
+      name: "flickering-grid-demo",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/example/flickering-grid-demo")),
+      source: "",
+      files: ["registry/default/example/flickering-grid-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "flickering-grid-rounded-demo": {
+      name: "flickering-grid-rounded-demo",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/example/flickering-grid-rounded-demo")),
+      source: "",
+      files: ["registry/default/example/flickering-grid-rounded-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "hyper-text-demo": {
+      name: "hyper-text-demo",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/example/hyper-text-demo")),
+      source: "",
+      files: ["registry/default/example/hyper-text-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "code-comparison-demo": {
+      name: "code-comparison-demo",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/example/code-comparison-demo")),
+      source: "",
+      files: ["registry/default/example/code-comparison-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "safari-demo": {
+      name: "safari-demo",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/example/safari-demo")),
+      source: "",
+      files: ["registry/default/example/safari-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "safari-demo-2": {
+      name: "safari-demo-2",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/example/safari-demo-2")),
+      source: "",
+      files: ["registry/default/example/safari-demo-2.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "iphone-15-pro-demo": {
+      name: "iphone-15-pro-demo",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/example/iphone-15-pro-demo")),
+      source: "",
+      files: ["registry/default/example/iphone-15-pro-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "iphone-15-pro-demo-2": {
+      name: "iphone-15-pro-demo-2",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/default/example/iphone-15-pro-demo-2")),
+      source: "",
+      files: ["registry/default/example/iphone-15-pro-demo-2.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "dashboard-05": {
       name: "dashboard-05",
       type: "components:block",
@@ -6725,6 +6868,61 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("~/registry/miami/ui/hero-video-dialog")),
       source: "",
       files: ["registry/miami/ui/hero-video-dialog.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "flickering-grid": {
+      name: "flickering-grid",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/ui/flickering-grid")),
+      source: "",
+      files: ["registry/miami/ui/flickering-grid.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "hyper-text": {
+      name: "hyper-text",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/ui/hyper-text")),
+      source: "",
+      files: ["registry/miami/ui/hyper-text.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "code-comparison": {
+      name: "code-comparison",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/ui/code-comparison")),
+      source: "",
+      files: ["registry/miami/ui/code-comparison.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "safari": {
+      name: "safari",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/ui/safari")),
+      source: "",
+      files: ["registry/miami/ui/safari.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "iphone-15-pro": {
+      name: "iphone-15-pro",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/ui/iphone-15-pro")),
+      source: "",
+      files: ["registry/miami/ui/iphone-15-pro.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -9992,6 +10190,94 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("~/registry/miami/example/hero-video-dialog-demo-top-in-bottom-out")),
       source: "",
       files: ["registry/miami/example/hero-video-dialog-demo-top-in-bottom-out.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "flickering-grid-demo": {
+      name: "flickering-grid-demo",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/example/flickering-grid-demo")),
+      source: "",
+      files: ["registry/miami/example/flickering-grid-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "flickering-grid-rounded-demo": {
+      name: "flickering-grid-rounded-demo",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/example/flickering-grid-rounded-demo")),
+      source: "",
+      files: ["registry/miami/example/flickering-grid-rounded-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "hyper-text-demo": {
+      name: "hyper-text-demo",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/example/hyper-text-demo")),
+      source: "",
+      files: ["registry/miami/example/hyper-text-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "code-comparison-demo": {
+      name: "code-comparison-demo",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/example/code-comparison-demo")),
+      source: "",
+      files: ["registry/miami/example/code-comparison-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "safari-demo": {
+      name: "safari-demo",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/example/safari-demo")),
+      source: "",
+      files: ["registry/miami/example/safari-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "safari-demo-2": {
+      name: "safari-demo-2",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/example/safari-demo-2")),
+      source: "",
+      files: ["registry/miami/example/safari-demo-2.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "iphone-15-pro-demo": {
+      name: "iphone-15-pro-demo",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/example/iphone-15-pro-demo")),
+      source: "",
+      files: ["registry/miami/example/iphone-15-pro-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "iphone-15-pro-demo-2": {
+      name: "iphone-15-pro-demo-2",
+      type: "components:example",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("~/registry/miami/example/iphone-15-pro-demo-2")),
+      source: "",
+      files: ["registry/miami/example/iphone-15-pro-demo-2.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

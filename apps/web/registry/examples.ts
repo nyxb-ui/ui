@@ -1660,4 +1660,44 @@ export const examples: Registry = [
       type: 'components:example',
       files: ['example/hero-video-dialog-demo-top-in-bottom-out.tsx'],
    },
+   {
+      name: 'flickering-grid-demo',
+      type: 'components:example',
+      files: ['example/flickering-grid-demo.tsx'],
+   },
+   {
+      name: 'flickering-grid-rounded-demo',
+      type: 'components:example',
+      files: ['example/flickering-grid-rounded-demo.tsx'],
+   },
+   {
+      name: 'hyper-text-demo',
+      type: 'components:example',
+      files: ['example/hyper-text-demo.tsx'],
+   },
+   {
+      name: 'code-comparison-demo',
+      type: 'components:example',
+      files: ['example/code-comparison-demo.tsx'],
+   },
+   {
+      name: 'safari-demo',
+      type: 'components:example',
+      files: ['example/safari-demo.tsx'],
+   },
+   {
+      name: 'safari-demo-2',
+      type: 'components:example',
+      files: ['example/safari-demo-2.tsx'],
+   },
+   {
+      name: 'iphone-15-pro-demo',
+      type: 'components:example',
+      files: ['example/iphone-15-pro-demo.tsx'],
+   },
+   {
+      name: 'iphone-15-pro-demo-2',
+      type: 'components:example',
+      files: ['example/iphone-15-pro-demo-2.tsx'],
+   },
 ]
