@@ -34,11 +34,19 @@ export function ComponentPreview({
    ...props
 }: ComponentPreviewProps) {
    const [key, setKey] = React.useState(0)
+   const [isLoaded, setIsLoaded] = React.useState(!preview)
    const [config] = useConfig()
    const index = styles.findIndex(style => style.name === config.style)
 
    const Codes = React.Children.toArray(children) as React.ReactElement[]
    const Code = Codes[index]
+
+   React.useEffect(() => {
+      if (preview) {
+         const timer = setTimeout(() => setIsLoaded(true), 100)
+         return () => clearTimeout(timer)
+      }
+   }, [preview])
 
    const Preview = React.useMemo(() => {
       const Component = Index[config.style][name]?.component
@@ -60,6 +68,9 @@ export function ComponentPreview({
 
       return <Component />
    }, [name, config.style])
+
+   if (!isLoaded)
+      return null
 
    return (
       <div

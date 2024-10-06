@@ -617,4 +617,29 @@ export const ui: Registry = [
       type: 'components:ui',
       files: ['ui/rainbow-button.tsx'],
    },
+   {
+      name: 'hero-video-dialog',
+      type: 'components:ui',
+      files: ['ui/hero-video-dialog.tsx'],
+   },
+   {
+      name: 'flickering-grid',
+      type: 'components:ui',
+      files: ['ui/flickering-grid.tsx'],
+   },
+   {
+      name: 'hyper-text',
+      type: 'components:ui',
+      files: ['ui/hyper-text.tsx'],
+   },
+   {
+      name: 'safari',
+      type: 'components:ui',
+      files: ['ui/safari.tsx'],
+   },
+   {
+      name: 'iphone-15-pro',
+      type: 'components:ui',
+      files: ['ui/iphone-15-pro.tsx'],
+   },
 ]

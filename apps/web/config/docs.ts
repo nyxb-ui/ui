@@ -149,6 +149,12 @@ export const docsConfig: DocsConfig = {
                items: [],
             },
             {
+               title: 'Animated Circular Progress Bar',
+               href: `/docs/components/animated-circular-progress-bar`,
+               items: [],
+               label: '',
+            },
+            {
                title: 'Aspect Ratio',
                href: '/docs/components/aspect-ratio',
                items: [],
@@ -238,7 +244,7 @@ export const docsConfig: DocsConfig = {
                title: 'Dock',
                href: '/docs/components/dock',
                items: [],
-               label: '',
+               label: 'New',
             },
             {
                title: 'Drawer',
@@ -248,6 +254,11 @@ export const docsConfig: DocsConfig = {
             {
                title: 'Dropdown Menu',
                href: '/docs/components/dropdown-menu',
+               items: [],
+            },
+            {
+               title: 'File Tree',
+               href: `/docs/components/file-tree`,
                items: [],
             },
             {
@@ -265,6 +276,12 @@ export const docsConfig: DocsConfig = {
                title: 'Globe',
                href: '/docs/components/globe',
                items: [],
+            },
+            {
+               title: 'Hero Video Dialog',
+               href: '/docs/components/hero-video-dialog',
+               items: [],
+               label: 'New',
             },
             {
                title: 'Hover Card',
@@ -470,64 +487,25 @@ export const docsConfig: DocsConfig = {
             },
          ],
       },
+      // {
+      //    title: 'Page Sections',
+      //    items: [
+      //    ],
+      // },
       {
-         title: 'Landing Page Components',
+         title: 'Device Mockups',
          items: [
             {
-               title: 'Marquee',
-               href: `/docs/components/marquee`,
+               title: 'Safari',
+               href: '/docs/components/safari',
                items: [],
+               label: 'New',
             },
             {
-               title: 'Bento Grid',
-               href: `/docs/components/bento-grid`,
+               title: 'iPhone 15 Pro',
+               href: '/docs/components/iphone-15-pro',
                items: [],
-            },
-            {
-               title: 'Animated List',
-               href: `/docs/components/animated-list`,
-               items: [],
-            },
-            {
-               title: 'Dock',
-               href: `/docs/components/dock`,
-               items: [],
-               label: '',
-            },
-            {
-               title: 'Globe',
-               href: `/docs/components/globe`,
-               items: [],
-            },
-            {
-               title: 'Tweet Card',
-               href: `/docs/components/tweet-card`,
-               items: [],
-            },
-            {
-               title: 'Orbiting Circles',
-               href: `/docs/components/orbiting-circles`,
-               items: [],
-               label: '',
-            },
-
-            {
-               title: 'Avatar Circles',
-               href: `/docs/components/avatar-circles`,
-               items: [],
-               label: '',
-            },
-            {
-               title: 'Interactive Icon Cloud',
-               href: `/docs/components/icon-cloud`,
-               items: [],
-               label: '',
-            },
-            {
-               title: 'Animated Circular Progress Bar',
-               href: `/docs/components/animated-circular-progress-bar`,
-               items: [],
-               label: '',
+               label: 'New',
             },
          ],
       },
@@ -595,23 +573,8 @@ export const docsConfig: DocsConfig = {
          ],
       },
       {
-         title: 'Developer Components',
-         items: [
-            {
-               title: 'File Tree',
-               href: `/docs/components/file-tree`,
-               items: [],
-            },
-         ],
-      },
-      {
          title: 'Text Animations',
          items: [
-            {
-               title: 'Number Ticker',
-               href: `/docs/components/number-ticker`,
-               items: [],
-            },
             {
                title: 'Animated Shiny Text',
                href: `/docs/components/animated-shiny-text`,
@@ -624,8 +587,19 @@ export const docsConfig: DocsConfig = {
                label: '',
             },
             {
+               title: 'Number Ticker',
+               href: `/docs/components/number-ticker`,
+               items: [],
+            },
+            {
                title: 'Text Reveal',
                href: `/docs/components/text-reveal`,
+               items: [],
+               label: '',
+            },
+            {
+               title: 'Hyper Text',
+               href: `/docs/components/hyper-text`,
                items: [],
                label: '',
             },
@@ -759,6 +733,12 @@ export const docsConfig: DocsConfig = {
                href: `/docs/components/animated-grid-pattern`,
                items: [],
                label: '',
+            },
+            {
+               title: 'Flickering Grid',
+               href: `/docs/components/flickering-grid`,
+               items: [],
+               label: 'New',
             },
             {
                title: 'Retro Grid',

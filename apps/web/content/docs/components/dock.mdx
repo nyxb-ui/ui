@@ -9,7 +9,7 @@ video: https://cdn.nyxbui.design/dock.mp4
 
 <ComponentPreview name="dock-demo" />
 
-### Installation
+## Installation
 
 <Tabs defaultValue="cli">
 
@@ -29,13 +29,11 @@ npx nyxbui@latest add dock
 
 <Steps>
 
-Copy and paste the following code into your project.
-
-```text
-components/ui/dock.tsx
-```
+<Step>Copy and paste the following code into your project.</Step>
 
 <ComponentSource name="dock" />
+
+<Step>Update the import paths to match your project setup.</Step>
 
 </Steps>
 
@@ -43,26 +41,36 @@ components/ui/dock.tsx
 
 </Tabs>
 
+## Examples
+
+### Custom Direction
+
+<ComponentPreview name="dock-demo-2" />
+
+### Custom magnification
+
+<ComponentPreview name="dock-demo-3" />
+
 ## Props
 
 ### Dock
 
-| Prop            | Type    | Description                          | Default                  |
-|-----------------|---------|--------------------------------------|--------------------------|
-| className       | string  | Custom CSS class for styling         | -                        |
-| children        | ReactNode | Children elements                   | -                        |
-| magnification   | number  | Level of icon magnification          | 60  |
-| distance        | number  | Distance from cursor to magnify icon | 140       |
+| Prop          | Type      | Description                          | Default  |
+| ------------- | --------- | ------------------------------------ | -------- |
+| className     | string    | Custom CSS class for styling         | -        |
+| children      | ReactNode | Children elements                    | -        |
+| magnification | number    | Level of icon magnification          | 60       |
+| distance      | number    | Distance from cursor to magnify icon | 140      |
+| direction     | string    | Direction of the dock                | "bottom" |
 
 ### DockIcon
 
-| Prop            | Type            | Description                          | Default                  |
-|-----------------|-----------------|--------------------------------------|--------------------------|
-| size            | number          | Size of the icon                     | -                        |
-| magnification   | number          | Level of icon magnification          | 60  |
-| distance        | number          | Distance from cursor to magnify icon | 140       |
-| mouseX          | any             | Mouse X position for magnification   | -                        |
-| className       | string          | Custom CSS class for styling         | -                        |
-| children        | React.ReactNode | Children elements                    | -                        |
-| props           | PropsWithChildren | Additional props                   | -                        |
-
+| Prop          | Type              | Description                          | Default |
+| ------------- | ----------------- | ------------------------------------ | ------- |
+| size          | number            | Size of the icon                     | -       |
+| magnification | number            | Level of icon magnification          | 60      |
+| distance      | number            | Distance from cursor to magnify icon | 140     |
+| mouseX        | any               | Mouse X position for magnification   | -       |
+| className     | string            | Custom CSS class for styling         | -       |
+| children      | React.ReactNode   | Children elements                    | -       |
+| props         | PropsWithChildren | Additional props                     | -       |
