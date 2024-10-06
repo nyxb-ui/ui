@@ -1259,17 +1259,6 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "code-comparison": {
-      name: "code-comparison",
-      type: "components:ui",
-      registryDependencies: undefined,
-      component: React.lazy(() => import("~/registry/default/ui/code-comparison")),
-      source: "",
-      files: ["registry/default/ui/code-comparison.tsx"],
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
     "safari": {
       name: "safari",
       type: "components:ui",
@@ -4592,17 +4581,6 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "code-comparison-demo": {
-      name: "code-comparison-demo",
-      type: "components:example",
-      registryDependencies: undefined,
-      component: React.lazy(() => import("~/registry/default/example/code-comparison-demo")),
-      source: "",
-      files: ["registry/default/example/code-comparison-demo.tsx"],
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
     "safari-demo": {
       name: "safari-demo",
       type: "components:example",
@@ -6890,17 +6868,6 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("~/registry/miami/ui/hyper-text")),
       source: "",
       files: ["registry/miami/ui/hyper-text.tsx"],
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "code-comparison": {
-      name: "code-comparison",
-      type: "components:ui",
-      registryDependencies: undefined,
-      component: React.lazy(() => import("~/registry/miami/ui/code-comparison")),
-      source: "",
-      files: ["registry/miami/ui/code-comparison.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -10223,17 +10190,6 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("~/registry/miami/example/hyper-text-demo")),
       source: "",
       files: ["registry/miami/example/hyper-text-demo.tsx"],
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "code-comparison-demo": {
-      name: "code-comparison-demo",
-      type: "components:example",
-      registryDependencies: undefined,
-      component: React.lazy(() => import("~/registry/miami/example/code-comparison-demo")),
-      source: "",
-      files: ["registry/miami/example/code-comparison-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

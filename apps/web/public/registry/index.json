@@ -975,17 +975,6 @@
     "type": "components:ui"
   },
   {
-    "name": "code-comparison",
-    "dependencies": [
-      "shiki",
-      "next-themes"
-    ],
-    "files": [
-      "ui/code-comparison.tsx"
-    ],
-    "type": "components:ui"
-  },
-  {
     "name": "safari",
     "files": [
       "ui/safari.tsx"

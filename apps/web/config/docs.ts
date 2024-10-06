@@ -201,12 +201,6 @@ export const docsConfig: DocsConfig = {
                items: [],
             },
             {
-               title: 'Code Comparison',
-               href: '/docs/components/code-comparison',
-               items: [],
-               label: 'New',
-            },
-            {
                title: 'Checkbox',
                href: '/docs/components/checkbox',
                items: [],

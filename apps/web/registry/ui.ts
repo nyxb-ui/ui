@@ -633,12 +633,6 @@ export const ui: Registry = [
       files: ['ui/hyper-text.tsx'],
    },
    {
-      name: 'code-comparison',
-      type: 'components:ui',
-      dependencies: ['shiki', 'next-themes'],
-      files: ['ui/code-comparison.tsx'],
-   },
-   {
       name: 'safari',
       type: 'components:ui',
       files: ['ui/safari.tsx'],

@@ -1676,11 +1676,6 @@ export const examples: Registry = [
       files: ['example/hyper-text-demo.tsx'],
    },
    {
-      name: 'code-comparison-demo',
-      type: 'components:example',
-      files: ['example/code-comparison-demo.tsx'],
-   },
-   {
       name: 'safari-demo',
       type: 'components:example',
       files: ['example/safari-demo.tsx'],
