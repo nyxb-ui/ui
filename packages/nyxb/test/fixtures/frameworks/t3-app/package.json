@@ -1,9 +1,8 @@
 {
   "name": "test-cli-t3-app",
-  "type": "module",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "npm@9.8.0",
+  "type": "module",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
@@ -35,5 +34,6 @@
   },
   "ct3aMetadata": {
     "initVersion": "7.36.2"
-  }
+  },
+  "packageManager": "npm@9.8.0"
 }

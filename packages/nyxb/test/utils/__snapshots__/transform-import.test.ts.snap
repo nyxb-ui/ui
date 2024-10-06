@@ -3,11 +3,11 @@
 exports[`transform import 1`] = `
 "import * as React from "react"
 import { Foo } from "bar"
-    import { Button } from "~/components/ui/button"
+    import { Button } from "@/components/ui/button"
     import { Label} from "ui/label"
-    import { Box } from "~/components/box"
+    import { Box } from "@/components/box"
 
-    import { ny } from "~/lib/utils"
+    import { cn } from "@/lib/utils"
     "
 `;
 
@@ -18,7 +18,7 @@ import { Foo } from "bar"
     import { Label} from "ui/label"
     import { Box } from "~/src/components/box"
 
-    import { ny, foo, bar } from "~/lib/utils"
+    import { cn, foo, bar } from "~/lib/utils"
     import { bar } from "~/lib/utils/bar"
     "
 `;
@@ -30,7 +30,7 @@ import { Foo } from "bar"
     import { Label} from "ui/label"
     import { Box } from "~/src/components/box"
 
-    import { ny } from "~/lib/utils"
+    import { cn } from "~/lib/utils"
     import { bar } from "~/lib/utils/bar"
     "
 `;
@@ -42,7 +42,7 @@ import { Foo } from "bar"
     import { Label} from "ui/label"
     import { Box } from "~/src/components/box"
 
-    import { ny } from "~/lib/utils"
+    import { cn } from "~/lib/utils"
     import { bar } from "~/lib/utils/bar"
     "
 `;
@@ -54,7 +54,7 @@ import { Foo } from "bar"
     import { Label} from "ui/label"
     import { Box } from "~/src/components/box"
 
-    import { ny } from "~/lib/utils"
+    import { cn } from "~/lib/utils"
     import { bar } from "~/lib/utils/bar"
     "
 `;

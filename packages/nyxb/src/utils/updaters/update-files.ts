@@ -1,21 +1,21 @@
 import { existsSync, promises as fs } from 'fs'
 import path, { basename } from 'path'
 import prompts from 'prompts'
-import type { Config } from '~/src/utils/get-config'
-import { getProjectInfo } from '~/src/utils/get-project-info'
-import { highlighter } from '~/src/utils/highlighter'
-import { logger } from '~/src/utils/logger'
+import type { Config } from '@/src/utils/get-config'
+import { getProjectInfo } from '@/src/utils/get-project-info'
+import { highlighter } from '@/src/utils/highlighter'
+import { logger } from '@/src/utils/logger'
 import {
    getRegistryBaseColor,
    getRegistryItemFileTargetPath,
-} from '~/src/utils/registry'
-import type { RegistryItem } from '~/src/utils/registry/schema'
-import { spinner } from '~/src/utils/spinner'
-import { transform } from '~/src/utils/transformers'
-import { transformCssVars } from '~/src/utils/transformers/transform-css-vars'
-import { transformImport } from '~/src/utils/transformers/transform-import'
-import { transformRsc } from '~/src/utils/transformers/transform-rsc'
-import { transformTwPrefixes } from '~/src/utils/transformers/transform-tw-prefix'
+} from '@/src/utils/registry'
+import type { RegistryItem } from '@/src/utils/registry/schema'
+import { spinner } from '@/src/utils/spinner'
+import { transform } from '@/src/utils/transformers'
+import { transformCssVars } from '@/src/utils/transformers/transform-css-vars'
+import { transformImport } from '@/src/utils/transformers/transform-import'
+import { transformRsc } from '@/src/utils/transformers/transform-rsc'
+import { transformTwPrefixes } from '@/src/utils/transformers/transform-tw-prefix'
 
 export function resolveTargetDir(
    projectInfo: Awaited<ReturnType<typeof getProjectInfo>>,

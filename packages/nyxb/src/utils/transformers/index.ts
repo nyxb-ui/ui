@@ -4,12 +4,12 @@ import path from 'path'
 import { Project, ScriptKind, type SourceFile } from 'ts-morph'
 import type { z } from 'zod'
 import { transformTwPrefixes } from './transform-tw-prefix'
-import type { Config } from '~/src/utils/get-config'
-import type { registryBaseColorSchema } from '~/src/utils/registry/schema'
-import { transformCssVars } from '~/src/utils/transformers/transform-css-vars'
-import { transformImport } from '~/src/utils/transformers/transform-import'
-import { transformJsx } from '~/src/utils/transformers/transform-jsx'
-import { transformRsc } from '~/src/utils/transformers/transform-rsc'
+import type { Config } from '@/src/utils/get-config'
+import type { registryBaseColorSchema } from '@/src/utils/registry/schema'
+import { transformCssVars } from '@/src/utils/transformers/transform-css-vars'
+import { transformImport } from '@/src/utils/transformers/transform-import'
+import { transformJsx } from '@/src/utils/transformers/transform-jsx'
+import { transformRsc } from '@/src/utils/transformers/transform-rsc'
 
 export interface TransformOpts {
    filename: string
@@ -30,7 +30,7 @@ const project = new Project({
 })
 
 async function createTempSourceFile(filename: string) {
-   const dir = await fs.mkdtemp(path.join(tmpdir(), 'nyxb-'))
+   const dir = await fs.mkdtemp(path.join(tmpdir(), 'shadcn-'))
    return path.join(dir, filename)
 }
 

@@ -2,9 +2,6 @@
   "name": "remix-indie-stack",
   "private": true,
   "sideEffects": false,
-  "engines": {
-    "node": ">=18.0.0"
-  },
   "scripts": {
     "build": "remix build",
     "dev": "remix dev -c \"npm run dev:serve\"",
@@ -86,6 +83,9 @@
     "vite": "^5.4.3",
     "vite-tsconfig-paths": "^4.3.2",
     "vitest": "^2.0.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "prisma": {
     "seed": "ts-node -r tsconfig-paths/register prisma/seed.ts"

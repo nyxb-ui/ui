@@ -2,17 +2,17 @@ import path from 'path'
 import fg from 'fast-glob'
 import fs from 'fs-extra'
 import { loadConfig } from 'tsconfig-paths'
-import type { Framework } from '~/src/utils/frameworks'
-import { FRAMEWORKS } from '~/src/utils/frameworks'
+import type { Framework } from '@/src/utils/frameworks'
+import { FRAMEWORKS } from '@/src/utils/frameworks'
 import type {
    Config,
    RawConfig,
-} from '~/src/utils/get-config'
+} from '@/src/utils/get-config'
 import {
    getConfig,
    resolveConfigPaths,
-} from '~/src/utils/get-config'
-import { getPackageInfo } from '~/src/utils/get-package-info'
+} from '@/src/utils/get-config'
+import { getPackageInfo } from '@/src/utils/get-package-info'
 
 interface ProjectInfo {
    framework: Framework

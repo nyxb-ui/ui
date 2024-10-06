@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3003",
-    "start": "next start -p 3001",
+    "dev": "next dev -p 3333",
+    "start": "next start -p 3333",
     "build": "NODE_OPTIONS=\"--max-old-space-size=8192\" pnpm build:registry && next build",
     "build:env": "tsx ./scripts/env.mts",
     "build:registry": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-registry.mts && tsx ./scripts/eslint-fix.mts",
@@ -13,7 +13,7 @@
     "typecheck": "pnpm build:env && pnpm build:docs&& tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "preview": "next build && next start -p 3001"
+    "preview": "next build && next start -p 3333"
   },
   "dependencies": {
     "@content-collections/cli": "^0.1.4",

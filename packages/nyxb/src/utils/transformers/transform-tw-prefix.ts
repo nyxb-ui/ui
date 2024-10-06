@@ -1,7 +1,7 @@
 import { SyntaxKind } from 'ts-morph'
 
 import { splitClassName } from './transform-css-vars'
-import type { Transformer } from '~/src/utils/transformers'
+import type { Transformer } from '@/src/utils/transformers'
 
 export const transformTwPrefixes: Transformer = async ({
    sourceFile,
@@ -74,11 +74,11 @@ export const transformTwPrefixes: Transformer = async ({
 
          // className={...}
          if (node.getInitializer()?.isKind(SyntaxKind.JsxExpression)) {
-            // Check if it's a call to ny().
+            // Check if it's a call to cn().
             const callExpression = node
                .getInitializer()
                ?.getDescendantsOfKind(SyntaxKind.CallExpression)
-               .find(node => node.getExpression().getText() === 'ny')
+               .find(node => node.getExpression().getText() === 'cn')
             if (callExpression) {
                // Loop through the arguments.
                callExpression.getArguments().forEach((node) => {

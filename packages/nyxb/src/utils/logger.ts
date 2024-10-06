@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { highlighter } from '~/src/utils/highlighter'
+import { highlighter } from '@/src/utils/highlighter'
 
 export const logger = {
    error(...args: unknown[]) {

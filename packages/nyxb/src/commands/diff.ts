@@ -3,19 +3,19 @@ import path from 'path'
 import { Command } from 'commander'
 import { type Change, diffLines } from 'diff'
 import { z } from 'zod'
-import type { Config } from '~/src/utils/get-config'
-import { getConfig } from '~/src/utils/get-config'
-import { handleError } from '~/src/utils/handle-error'
-import { highlighter } from '~/src/utils/highlighter'
-import { logger } from '~/src/utils/logger'
+import type { Config } from '@/src/utils/get-config'
+import { getConfig } from '@/src/utils/get-config'
+import { handleError } from '@/src/utils/handle-error'
+import { highlighter } from '@/src/utils/highlighter'
+import { logger } from '@/src/utils/logger'
 import {
    fetchTree,
    getItemTargetPath,
    getRegistryBaseColor,
    getRegistryIndex,
-} from '~/src/utils/registry'
-import type { registryIndexSchema } from '~/src/utils/registry/schema'
-import { transform } from '~/src/utils/transformers'
+} from '@/src/utils/registry'
+import type { registryIndexSchema } from '@/src/utils/registry/schema'
+import { transform } from '@/src/utils/transformers'
 
 const updateOptionsSchema = z.object({
    component: z.string().optional(),

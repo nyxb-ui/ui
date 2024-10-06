@@ -1,5 +1,5 @@
-import type { Config } from '~/src/utils/get-config'
-import type { Transformer } from '~/src/utils/transformers'
+import type { Config } from '@/src/utils/get-config'
+import type { Transformer } from '@/src/utils/transformers'
 
 export const transformImport: Transformer = async ({ sourceFile, config }) => {
    const importDeclarations = sourceFile.getImportDeclarations()
@@ -12,11 +12,12 @@ export const transformImport: Transformer = async ({ sourceFile, config }) => {
 
       importDeclaration.setModuleSpecifier(moduleSpecifier)
 
-      // Replace `import { ny } from "~/lib/utils"`
-      if (moduleSpecifier === '~/lib/utils') {
+      // Replace `import { cn } from "@/lib/utils"`
+      // eslint-disable-next-line eqeqeq
+      if (moduleSpecifier == '@/lib/utils') {
          const namedImports = importDeclaration.getNamedImports()
-         const nyImport = namedImports.find(i => i.getName() === 'ny')
-         if (nyImport) {
+         const cnImport = namedImports.find(i => i.getName() === 'cn')
+         if (cnImport) {
             importDeclaration.setModuleSpecifier(
                moduleSpecifier.replace(/^@\/lib\/utils/, config.aliases.utils),
             )
@@ -29,12 +30,12 @@ export const transformImport: Transformer = async ({ sourceFile, config }) => {
 
 function updateImportAliases(moduleSpecifier: string, config: Config) {
    // Not a local import.
-   if (!moduleSpecifier.startsWith('~/')) {
+   if (!moduleSpecifier.startsWith('@/')) {
       return moduleSpecifier
    }
 
    // Not a registry import.
-   if (!moduleSpecifier.startsWith('~/registry/')) {
+   if (!moduleSpecifier.startsWith('@/registry/')) {
       // We fix the alias an return.
       const alias = config.aliases.components.charAt(0)
       return moduleSpecifier.replace(/^@\//, `${alias}/`)

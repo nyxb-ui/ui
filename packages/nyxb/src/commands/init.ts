@@ -3,10 +3,10 @@ import path from 'path'
 import { Command } from 'commander'
 import prompts from 'prompts'
 import { z } from 'zod'
-import { preFlightInit } from '~/src/preflights/preflight-init'
-import { addComponents } from '~/src/utils/add-components'
-import { createProject } from '~/src/utils/create-project'
-import * as ERRORS from '~/src/utils/errors'
+import { preFlightInit } from '@/src/preflights/preflight-init'
+import { addComponents } from '@/src/utils/add-components'
+import { createProject } from '@/src/utils/create-project'
+import * as ERRORS from '@/src/utils/errors'
 import {
    type Config,
    DEFAULT_COMPONENTS,
@@ -16,14 +16,14 @@ import {
    getConfig,
    rawConfigSchema,
    resolveConfigPaths,
-} from '~/src/utils/get-config'
-import { getProjectConfig, getProjectInfo } from '~/src/utils/get-project-info'
-import { handleError } from '~/src/utils/handle-error'
-import { highlighter } from '~/src/utils/highlighter'
-import { logger } from '~/src/utils/logger'
-import { getRegistryBaseColors, getRegistryStyles } from '~/src/utils/registry'
-import { spinner } from '~/src/utils/spinner'
-import { updateTailwindContent } from '~/src/utils/updaters/update-tailwind-content'
+} from '@/src/utils/get-config'
+import { getProjectConfig, getProjectInfo } from '@/src/utils/get-project-info'
+import { handleError } from '@/src/utils/handle-error'
+import { highlighter } from '@/src/utils/highlighter'
+import { logger } from '@/src/utils/logger'
+import { getRegistryBaseColors, getRegistryStyles } from '@/src/utils/registry'
+import { spinner } from '@/src/utils/spinner'
+import { updateTailwindContent } from '@/src/utils/updaters/update-tailwind-content'
 
 export const initOptionsSchema = z.object({
    cwd: z.string(),
@@ -250,7 +250,7 @@ async function promptForConfig(defaultConfig: Config | null = null) {
    ])
 
    return rawConfigSchema.parse({
-      $schema: 'https://nyxb-ui.design/schema.json',
+      $schema: 'https://nyxbui.design/schema.json',
       style: options.style,
       tailwind: {
          config: options.tailwindConfig,

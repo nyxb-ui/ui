@@ -1,8 +1,8 @@
 import { execa } from 'execa'
-import type { Config } from '~/src/utils/get-config'
-import { getPackageManager } from '~/src/utils/get-package-manager'
-import type { RegistryItem } from '~/src/utils/registry/schema'
-import { spinner } from '~/src/utils/spinner'
+import type { Config } from '@/src/utils/get-config'
+import { getPackageManager } from '@/src/utils/get-package-manager'
+import type { RegistryItem } from '@/src/utils/registry/schema'
+import { spinner } from '@/src/utils/spinner'
 
 export async function updateDependencies(
    dependencies: RegistryItem['dependencies'],

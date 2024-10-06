@@ -16,10 +16,10 @@ import {
    SyntaxKind,
 } from 'ts-morph'
 import type { z } from 'zod'
-import { spinner } from '~/src/utils/spinner'
-import type { registryItemTailwindSchema } from '~/src/utils/registry/schema'
-import { highlighter } from '~/src/utils/highlighter'
-import type { Config } from '~/src/utils/get-config'
+import { spinner } from '@/src/utils/spinner'
+import type { registryItemTailwindSchema } from '@/src/utils/registry/schema'
+import { highlighter } from '@/src/utils/highlighter'
+import type { Config } from '@/src/utils/get-config'
 
 export type UpdaterTailwindConfig = Omit<TailwindConfig, 'plugins'> & {
    // We only want string plugins for now.
@@ -252,10 +252,10 @@ function addTailwindConfigPlugin(
 }
 
 export async function _createSourceFile(input: string, config: Config | null) {
-   const dir = await fs.mkdtemp(path.join(tmpdir(), 'nyxb-'))
+   const dir = await fs.mkdtemp(path.join(tmpdir(), 'shadcn-'))
    const resolvedPath
     = config?.resolvedPaths?.tailwindConfig || 'tailwind.config.ts'
-   const tempFile = path.join(dir, `nyxb-${path.basename(resolvedPath)}`)
+   const tempFile = path.join(dir, `shadcn-${path.basename(resolvedPath)}`)
 
    const project = new Project({
       compilerOptions: {},

@@ -1,7 +1,7 @@
 import { ScriptKind, SyntaxKind } from 'ts-morph'
 import type { z } from 'zod'
-import type { registryBaseColorSchema } from '~/src/utils/registry/schema'
-import type { Transformer } from '~/src/utils/transformers'
+import type { registryBaseColorSchema } from '@/src/utils/registry/schema'
+import type { Transformer } from '@/src/utils/transformers'
 
 export const transformCssVars: Transformer = async ({
    sourceFile,
@@ -68,7 +68,7 @@ export const transformCssVars: Transformer = async ({
 //           node.value.expression.type === "CallExpression"
 //         ) {
 //           const callee = node.value.expression.callee
-//           if (callee.type === "Identifier" && callee.name === "ny") {
+//           if (callee.type === "Identifier" && callee.name === "cn") {
 //             node.value.expression.arguments.forEach((arg) => {
 //               if (arg.type === "StringLiteral") {
 //                 arg.value = applyColorMapping(arg.value)

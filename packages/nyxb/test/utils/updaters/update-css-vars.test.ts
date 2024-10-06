@@ -1,32 +1,32 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, test } from "vitest"
 
-import { transformCssVars } from '../../../src/utils/updaters/update-css-vars'
+import { transformCssVars } from "../../../src/utils/updaters/update-css-vars"
 
-describe('transformCssVars', () => {
-   it('should add light and dark css vars if not present', async () => {
-      expect(
-         await transformCssVars(
+describe("transformCssVars", () => {
+  test("should add light and dark css vars if not present", async () => {
+    expect(
+      await transformCssVars(
         `@tailwind base;
 @tailwind components;
 @tailwind utilities;
   `,
         {
-           light: {
-              background: 'white',
-              foreground: 'black',
-           },
-           dark: {
-              background: 'black',
-              foreground: 'white',
-           },
+          light: {
+            background: "white",
+            foreground: "black",
+          },
+          dark: {
+            background: "black",
+            foreground: "white",
+          },
         },
         {
-           tailwind: {
-              cssVariables: true,
-           },
-        },
-         ),
-      ).toMatchInlineSnapshot(`
+          tailwind: {
+            cssVariables: true,
+          },
+        }
+      )
+    ).toMatchInlineSnapshot(`
       "@tailwind base;
       @tailwind components;
       @tailwind utilities;
@@ -50,11 +50,11 @@ describe('transformCssVars', () => {
       }
         "
     `)
-   })
+  })
 
-   it('should update light and dark css vars if present', async () => {
-      expect(
-         await transformCssVars(
+  test("should update light and dark css vars if present", async () => {
+    expect(
+      await transformCssVars(
         `@tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -70,21 +70,21 @@ describe('transformCssVars', () => {
 }
   `,
         {
-           light: {
-              background: '215 20.2% 65.1%',
-              foreground: '222.2 84% 4.9%',
-           },
-           dark: {
-              foreground: '60 9.1% 97.8%',
-           },
+          light: {
+            background: "215 20.2% 65.1%",
+            foreground: "222.2 84% 4.9%",
+          },
+          dark: {
+            foreground: "60 9.1% 97.8%",
+          },
         },
         {
-           tailwind: {
-              cssVariables: true,
-           },
-        },
-         ),
-      ).toMatchInlineSnapshot(`
+          tailwind: {
+            cssVariables: true,
+          },
+        }
+      )
+    ).toMatchInlineSnapshot(`
       "@tailwind base;
       @tailwind components;
       @tailwind utilities;
@@ -111,11 +111,11 @@ describe('transformCssVars', () => {
       }
         "
     `)
-   })
+  })
 
-   it('should not add the base layer if it is already present', async () => {
-      expect(
-         await transformCssVars(
+  test("should not add the base layer if it is already present", async () => {
+    expect(
+      await transformCssVars(
         `@tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -141,12 +141,12 @@ describe('transformCssVars', () => {
   `,
         {},
         {
-           tailwind: {
-              cssVariables: true,
-           },
-        },
-         ),
-      ).toMatchInlineSnapshot(`
+          tailwind: {
+            cssVariables: true,
+          },
+        }
+      )
+    ).toMatchInlineSnapshot(`
       "@tailwind base;
       @tailwind components;
       @tailwind utilities;
@@ -171,5 +171,5 @@ describe('transformCssVars', () => {
       }
         "
     `)
-   })
+  })
 })

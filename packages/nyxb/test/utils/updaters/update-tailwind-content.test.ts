@@ -1,36 +1,36 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, test } from "vitest"
 
-import { transformTailwindContent } from '../../../src/utils/updaters/update-tailwind-content'
+import { transformTailwindContent } from "../../../src/utils/updaters/update-tailwind-content"
 
 const SHARED_CONFIG = {
-   $schema: 'https://nyxbui.design/schema.json',
-   style: 'miami',
-   rsc: true,
-   tsx: true,
-   tailwind: {
-      config: 'tailwind.config.ts',
-      css: 'app/globals.css',
-      baseColor: 'slate',
-      cssVariables: true,
-   },
-   aliases: {
-      components: '~/components',
-      utils: '~/lib/utils',
-   },
-   resolvedPaths: {
-      cwd: '.',
-      tailwindConfig: 'tailwind.config.ts',
-      tailwindCss: 'app/globals.css',
-      components: './components',
-      utils: './lib/utils',
-      ui: './components/ui',
-   },
+  $schema: "https://ui.shadcn.com/schema.json",
+  style: "new-york",
+  rsc: true,
+  tsx: true,
+  tailwind: {
+    config: "tailwind.config.ts",
+    css: "app/globals.css",
+    baseColor: "slate",
+    cssVariables: true,
+  },
+  aliases: {
+    components: "@/components",
+    utils: "@/lib/utils",
+  },
+  resolvedPaths: {
+    cwd: ".",
+    tailwindConfig: "tailwind.config.ts",
+    tailwindCss: "app/globals.css",
+    components: "./components",
+    utils: "./lib/utils",
+    ui: "./components/ui",
+  },
 }
 
-describe('transformTailwindContent -> content property', () => {
-   it('should add content property if not in config', async () => {
-      expect(
-         await transformTailwindContent(
+describe("transformTailwindContent -> content property", () => {
+  test("should add content property if not in config", async () => {
+    expect(
+      await transformTailwindContent(
         `import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -52,17 +52,17 @@ const config: Config = {
 }
 export default config
   `,
-        ['./foo/**/*.{js,ts,jsx,tsx,mdx}', './bar/**/*.{js,ts,jsx,tsx,mdx}'],
+        ["./foo/**/*.{js,ts,jsx,tsx,mdx}", "./bar/**/*.{js,ts,jsx,tsx,mdx}"],
         {
-           config: SHARED_CONFIG,
-        },
-         ),
-      ).toMatchSnapshot()
-   })
+          config: SHARED_CONFIG,
+        }
+      )
+    ).toMatchSnapshot()
+  })
 
-   it('should NOT add content property if already in config', async () => {
-      expect(
-         await transformTailwindContent(
+  test("should NOT add content property if already in config", async () => {
+    expect(
+      await transformTailwindContent(
         `import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -84,11 +84,11 @@ const config: Config = {
 }
 export default config
   `,
-        ['./app/**/*.{js,ts,jsx,tsx,mdx}', './bar/**/*.{js,ts,jsx,tsx,mdx}'],
+        ["./app/**/*.{js,ts,jsx,tsx,mdx}", "./bar/**/*.{js,ts,jsx,tsx,mdx}"],
         {
-           config: SHARED_CONFIG,
-        },
-         ),
-      ).toMatchSnapshot()
-   })
+          config: SHARED_CONFIG,
+        }
+      )
+    ).toMatchSnapshot()
+  })
 })

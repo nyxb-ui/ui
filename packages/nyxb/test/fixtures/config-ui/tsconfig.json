@@ -1,25 +1,25 @@
 {
   "compilerOptions": {
-    "incremental": true,
     "target": "es2017",
-    "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "baseUrl": ".",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "paths": {
-      "~/*": ["./src/*"]
-    },
-    "resolveJsonModule": true,
     "allowJs": true,
     "checkJs": true,
-    "strict": true,
-    "noEmit": true,
-    "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
     "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
     "noUncheckedIndexedAccess": true,
-    "isolatedModules": true
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
   },
   "include": [
     ".eslintrc.cjs",

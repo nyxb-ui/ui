@@ -1,11 +1,8 @@
 {
   "name": "test-cli-remix",
-  "type": "module",
   "private": true,
   "sideEffects": false,
-  "engines": {
-    "node": ">=20.0.0"
-  },
+  "type": "module",
   "scripts": {
     "build": "remix vite:build",
     "dev": "remix vite:dev",
@@ -39,5 +36,8 @@
     "typescript": "^5.1.6",
     "vite": "^5.1.0",
     "vite-tsconfig-paths": "^4.2.1"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 }

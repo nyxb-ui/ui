@@ -3,21 +3,21 @@ import deepmerge from 'deepmerge'
 import { HttpsProxyAgent } from 'https-proxy-agent'
 import fetch from 'node-fetch'
 import { z } from 'zod'
-import type { Config } from '~/src/utils/get-config'
-import { handleError } from '~/src/utils/handle-error'
-import { highlighter } from '~/src/utils/highlighter'
-import { logger } from '~/src/utils/logger'
+import type { Config } from '@/src/utils/get-config'
+import { handleError } from '@/src/utils/handle-error'
+import { highlighter } from '@/src/utils/highlighter'
+import { logger } from '@/src/utils/logger'
 import type {
    registryItemFileSchema,
-} from '~/src/utils/registry/schema'
+} from '@/src/utils/registry/schema'
 import {
    registryBaseColorSchema,
    registryIndexSchema,
    registryItemSchema,
    registryResolvedItemsTreeSchema,
    stylesSchema,
-} from '~/src/utils/registry/schema'
-import { buildTailwindThemeColorsFromCssVars } from '~/src/utils/updaters/update-tailwind-config'
+} from '@/src/utils/registry/schema'
+import { buildTailwindThemeColorsFromCssVars } from '@/src/utils/updaters/update-tailwind-config'
 
 const REGISTRY_URL = process.env.REGISTRY_URL ?? 'https://nyxbui.design/r'
 
