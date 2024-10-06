@@ -1,7 +1,7 @@
 import { SyntaxKind } from 'ts-morph'
 
 import { splitClassName } from './transform-css-vars'
-import type { Transformer } from '@/src/utils/transformers'
+import type { Transformer } from '~/src/utils/transformers'
 
 export const transformTwPrefixes: Transformer = async ({
    sourceFile,

@@ -59,7 +59,7 @@ export function createRemoveCommand() {
                logger.warn(
             `Configuration is missing. Please run ${chalk.green(
               `init`,
-            )} to create a nyxbui.json file.`,
+            )} to create a components.json file.`,
                )
                return process.exit(1)
             }

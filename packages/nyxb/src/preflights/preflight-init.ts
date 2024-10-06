@@ -1,12 +1,12 @@
 import path from 'path'
 import fs from 'fs-extra'
 import type { z } from 'zod'
-import type { initOptionsSchema } from '@/src/commands/init'
-import * as ERRORS from '@/src/utils/errors'
-import { getProjectInfo } from '@/src/utils/get-project-info'
-import { highlighter } from '@/src/utils/highlighter'
-import { logger } from '@/src/utils/logger'
-import { spinner } from '@/src/utils/spinner'
+import type { initOptionsSchema } from '~/src/commands/init'
+import * as ERRORS from '~/src/utils/errors'
+import { getProjectInfo } from '~/src/utils/get-project-info'
+import { highlighter } from '~/src/utils/highlighter'
+import { logger } from '~/src/utils/logger'
+import { spinner } from '~/src/utils/spinner'
 
 export async function preFlightInit(
    options: z.infer<typeof initOptionsSchema>,

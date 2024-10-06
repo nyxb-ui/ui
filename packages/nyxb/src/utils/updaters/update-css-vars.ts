@@ -5,10 +5,10 @@ import AtRule from 'postcss/lib/at-rule'
 import type Root from 'postcss/lib/root'
 import type Rule from 'postcss/lib/rule'
 import type { z } from 'zod'
-import { spinner } from '@/src/utils/spinner'
-import type { registryItemCssVarsSchema } from '@/src/utils/registry/schema'
-import { highlighter } from '@/src/utils/highlighter'
-import type { Config } from '@/src/utils/get-config'
+import { spinner } from '~/src/utils/spinner'
+import type { registryItemCssVarsSchema } from '~/src/utils/registry/schema'
+import { highlighter } from '~/src/utils/highlighter'
+import type { Config } from '~/src/utils/get-config'
 
 export async function updateCssVars(
    cssVars: z.infer<typeof registryItemCssVarsSchema> | undefined,

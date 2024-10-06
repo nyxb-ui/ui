@@ -16,10 +16,10 @@ import {
    SyntaxKind,
 } from 'ts-morph'
 import type { z } from 'zod'
-import { spinner } from '@/src/utils/spinner'
-import type { registryItemTailwindSchema } from '@/src/utils/registry/schema'
-import { highlighter } from '@/src/utils/highlighter'
-import type { Config } from '@/src/utils/get-config'
+import { spinner } from '~/src/utils/spinner'
+import type { registryItemTailwindSchema } from '~/src/utils/registry/schema'
+import { highlighter } from '~/src/utils/highlighter'
+import type { Config } from '~/src/utils/get-config'
 
 export type UpdaterTailwindConfig = Omit<TailwindConfig, 'plugins'> & {
    // We only want string plugins for now.

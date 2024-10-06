@@ -3,11 +3,11 @@ import { execa } from 'execa'
 import fs from 'fs-extra'
 import prompts from 'prompts'
 import type { z } from 'zod'
-import type { initOptionsSchema } from '@/src/commands/init'
-import { getPackageManager } from '@/src/utils/get-package-manager'
-import { highlighter } from '@/src/utils/highlighter'
-import { logger } from '@/src/utils/logger'
-import { spinner } from '@/src/utils/spinner'
+import type { initOptionsSchema } from '~/src/commands/init'
+import { getPackageManager } from '~/src/utils/get-package-manager'
+import { highlighter } from '~/src/utils/highlighter'
+import { logger } from '~/src/utils/logger'
+import { spinner } from '~/src/utils/spinner'
 
 export async function createProject(
    options: Pick<z.infer<typeof initOptionsSchema>, 'cwd' | 'force' | 'srcDir'>,

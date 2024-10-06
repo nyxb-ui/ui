@@ -26,8 +26,8 @@ export const transformImport: Transformer = async ({ sourceFile, config }) => {
       // Replace `import { ny } from "~/lib/utils"`
       if (moduleSpecifier === '~/lib/utils') {
          const namedImports = importDeclaration.getNamedImports()
-         const nyImport = namedImports.find(i => i.getName() === 'ny')
-         if (nyImport) {
+         const cnImport = namedImports.find(i => i.getName() === 'ny')
+         if (cnImport) {
             importDeclaration.setModuleSpecifier(
                moduleSpecifier.replace(/^~\/lib\/utils/, config.aliases.utils),
             )

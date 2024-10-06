@@ -1,11 +1,11 @@
 import path from 'path'
 import fs from 'fs-extra'
 import type { z } from 'zod'
-import type { addOptionsSchema } from '@/src/commands/add'
-import * as ERRORS from '@/src/utils/errors'
-import { getConfig } from '@/src/utils/get-config'
-import { highlighter } from '@/src/utils/highlighter'
-import { logger } from '@/src/utils/logger'
+import type { addOptionsSchema } from '~/src/commands/add'
+import * as ERRORS from '~/src/utils/errors'
+import { getConfig } from '~/src/utils/get-config'
+import { highlighter } from '~/src/utils/highlighter'
+import { logger } from '~/src/utils/logger'
 
 export async function preFlightAdd(options: z.infer<typeof addOptionsSchema>) {
    const errors: Record<string, boolean> = {}

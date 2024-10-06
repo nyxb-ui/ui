@@ -4,7 +4,7 @@
   "properties": {
     "style": {
       "type": "string",
-      "enum": ["default", "new-york"]
+      "enum": ["default", "miami"]
     },
     "tailwind": {
       "type": "object",

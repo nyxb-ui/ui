@@ -1,5 +1,5 @@
-import type { Config } from '@/src/utils/get-config'
-import type { Transformer } from '@/src/utils/transformers'
+import type { Config } from '~/src/utils/get-config'
+import type { Transformer } from '~/src/utils/transformers'
 
 export const transformImport: Transformer = async ({ sourceFile, config }) => {
    const importDeclarations = sourceFile.getImportDeclarations()
