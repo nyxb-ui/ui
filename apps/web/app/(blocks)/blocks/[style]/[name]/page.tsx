@@ -1,16 +1,15 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+
 import { siteConfig } from '~/config/site'
 import { getAllBlockIds, getBlock } from '~/lib/blocks'
 import { absoluteUrl, ny } from '~/lib/utils'
-import type { Style } from '~/registry/styles'
-import { styles } from '~/registry/styles'
-
-import '~/styles/mdx.css'
-import 'public/registry/themes.css'
-
 import { BlockChunk } from '~/components/block-chunk'
 import { BlockWrapper } from '~/components/block-wrapper'
+import type { Style } from '~/registry/registry-styles'
+import { styles } from '~/registry/registry-styles'
+
+import '~/styles/mdx.css'
 
 export async function generateMetadata({
    params,
@@ -23,8 +22,9 @@ export async function generateMetadata({
    const { name, style } = params
    const block = await getBlock(name, style)
 
-   if (!block)
+   if (!block) {
       return {}
+   }
 
    return {
       title: block.name,
@@ -76,8 +76,9 @@ export default async function BlockPage({
    const { name, style } = params
    const block = await getBlock(name, style)
 
-   if (!block)
+   if (!block) {
       return notFound()
+   }
 
    const Component = block.component
 
@@ -86,19 +87,27 @@ export default async function BlockPage({
    block.chunks?.map(chunk => delete chunk.component)
 
    return (
-      <div className={ny(block.container?.className || '', 'theme-zinc')}>
-         <BlockWrapper block={block}>
-            <Component />
-            {chunks?.map((chunk, index) => (
-               <BlockChunk
-                  key={chunk.name}
-                  block={block}
-                  chunk={block.chunks?.[index]}
-               >
-                  <chunk.component />
-               </BlockChunk>
-            ))}
-         </BlockWrapper>
-      </div>
+      <>
+         {/* <ThemesStyle /> */}
+         <div
+            className={ny(
+               'themes-wrapper bg-background',
+               block.container?.className,
+            )}
+         >
+            <BlockWrapper block={block}>
+               <Component />
+               {chunks?.map((chunk, index) => (
+                  <BlockChunk
+                     key={chunk.name}
+                     block={block}
+                     chunk={block.chunks?.[index]}
+                  >
+                     <chunk.component />
+                  </BlockChunk>
+               ))}
+            </BlockWrapper>
+         </div>
+      </>
    )
 }

@@ -43,6 +43,10 @@ export const docsConfig: DocsConfig = {
                title: 'Showcase',
                href: '/showcase',
             },
+            {
+               title: 'Colors',
+               href: '/colors',
+            },
          ],
       },
    ],
@@ -758,16 +762,6 @@ export const docsConfig: DocsConfig = {
             {
                title: 'Grid Pattern',
                href: `/docs/components/grid-pattern`,
-               items: [],
-            },
-            {
-               title: 'Linear Gradient',
-               href: `/docs/components/linear-gradient`,
-               items: [],
-            },
-            {
-               title: 'Radial Gradient',
-               href: `/docs/components/radial-gradient`,
                items: [],
             },
             {

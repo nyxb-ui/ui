@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import 'public/registry/themes.css'
+import 'public/r/themes.css'
 import { Announcement } from '~/components/announcement'
 import {
    PageActions,
@@ -21,7 +21,7 @@ export default function ThemesPage() {
    return (
       <div className="container">
          <ThemeWrapper
-            defaultTheme="violet"
+            defaultTheme="zinc"
             className="relative flex w-full flex-col items-start md:flex-row"
          >
             <PageHeader className="w-full">
