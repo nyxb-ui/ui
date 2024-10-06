@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import { ThemeWrapper } from '~/components/theme-wrapper'
-import { styles } from '~/registry/styles'
+import { styles } from '~/registry/registry-styles'
 
 interface SinkLayoutProps {
    children: React.ReactNode
@@ -13,7 +13,7 @@ export default function SinkLayout({ children }: SinkLayoutProps) {
          <div className="container">
             <div className="flex space-x-2 px-2 py-4">
                {styles.map(style => (
-                  <Link href={style.name === 'default' ? '/sink' : `/sink/${style.name}`} key={style.name}>
+                  <Link href={`/sink/${style.name}`} key={style.name}>
                      {style.label}
                   </Link>
                ))}
