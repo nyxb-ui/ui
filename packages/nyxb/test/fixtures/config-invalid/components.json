@@ -1,0 +1,5 @@
+{
+  "ny": "./components",
+  "ui": "./ui",
+  "does-not-exist": "./does-not-exist"
+}
