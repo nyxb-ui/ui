@@ -1,12 +1,12 @@
 import { useAtom } from 'jotai'
 import { atomWithStorage } from 'jotai/utils'
 
-import type { Style } from '~/registry/styles'
-import type { Theme } from '~/registry/themes'
+import type { BaseColor } from '~/registry/registry-base-colors'
+import type { Style } from '~/registry/registry-styles'
 
 interface Config {
    style: Style['name']
-   theme: Theme['name']
+   theme: BaseColor['name']
    radius: number
 }
 

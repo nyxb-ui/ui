@@ -1,3 +1,5 @@
+'use client'
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '~/registry/miami/ui/card'
 import { Progress } from '~/registry/miami/ui/progress'
 

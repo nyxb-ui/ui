@@ -1,3 +1,5 @@
+'use client'
+
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from '~/registry/miami/ui/card'
 import { Button } from '~/registry/miami/ui/button'
 

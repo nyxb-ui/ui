@@ -553,7 +553,7 @@ export default function Dashboard() {
                                     width="300"
                                  />
                                  <div className="grid grid-cols-3 gap-2">
-                                    <button type="button">
+                                    <button>
                                        <Image
                                           alt="Product image"
                                           className="aspect-square w-full rounded-md object-cover"
@@ -562,7 +562,7 @@ export default function Dashboard() {
                                           width="84"
                                        />
                                     </button>
-                                    <button type="button">
+                                    <button>
                                        <Image
                                           alt="Product image"
                                           className="aspect-square w-full rounded-md object-cover"
@@ -571,10 +571,7 @@ export default function Dashboard() {
                                           width="84"
                                        />
                                     </button>
-                                    <button
-                                       type="button"
-                                       className="flex aspect-square w-full items-center justify-center rounded-md border border-dashed"
-                                    >
+                                    <button className="flex aspect-square w-full items-center justify-center rounded-md border border-dashed">
                                        <Upload className="text-muted-foreground size-4" />
                                        <span className="sr-only">Upload</span>
                                     </button>

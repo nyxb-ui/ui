@@ -37,15 +37,15 @@ import {
    PopoverTrigger,
 } from '~/registry/miami/ui/popover'
 import { Skeleton } from '~/registry/miami/ui/skeleton'
-import type { Theme } from '~/registry/themes'
-import { themes } from '~/registry/themes'
-
-import '~/styles/mdx.css'
 import {
    Tooltip,
    TooltipContent,
    TooltipTrigger,
 } from '~/registry/miami/ui/tooltip'
+import type { BaseColor } from '~/registry/registry-base-colors'
+import { baseColors } from '~/registry/registry-base-colors'
+
+import '~/styles/mdx.css'
 
 export function ThemeCustomizer() {
    const [config, setConfig] = useConfig()
@@ -84,22 +84,24 @@ export function ThemeCustomizer() {
                {mounted
                   ? (
                         <>
-                           {['violet', 'yellow', 'blue', 'green', 'orange', 'rose', 'red', 'neutral', 'gray', 'stone', 'slate', 'zinc'].map((color) => {
-                              const theme = themes.find(theme => theme.name === color)
+                           {['zinc', 'rose', 'blue', 'green', 'orange'].map((color) => {
+                              const baseColor = baseColors.find(
+                                 baseColor => baseColor.name === color,
+                              )
                               const isActive = config.theme === color
 
-                              if (!theme) {
+                              if (!baseColor) {
                                  return null
                               }
 
                               return (
-                                 <Tooltip key={theme.name}>
+                                 <Tooltip key={baseColor.name}>
                                     <TooltipTrigger asChild>
                                        <button
                                           onClick={() =>
                                              setConfig({
                                                 ...config,
-                                                theme: theme.name,
+                                                theme: baseColor.name,
                                              })}
                                           className={ny(
                                              'flex size-8 items-center justify-center rounded-full border-2 text-xs',
@@ -110,7 +112,7 @@ export function ThemeCustomizer() {
                                           style={
                                              {
                                                 '--theme-primary': `hsl(${
-                              theme?.activeColor[
+                              baseColor?.activeColor[
                                 mode === 'dark' ? 'dark' : 'light'
                               ]
                             })`,
@@ -126,14 +128,14 @@ export function ThemeCustomizer() {
                                                 <CheckIcon className="size-4 text-white" />
                                              )}
                                           </span>
-                                          <span className="sr-only">{theme.label}</span>
+                                          <span className="sr-only">{baseColor.label}</span>
                                        </button>
                                     </TooltipTrigger>
                                     <TooltipContent
                                        align="center"
                                        className="rounded-lg bg-zinc-900 text-zinc-50"
                                     >
-                                       {theme.label}
+                                       {baseColor.label}
                                     </TooltipContent>
                                  </Tooltip>
                               )
@@ -167,7 +169,7 @@ function Customizer() {
 
    return (
       <ThemeWrapper
-         defaultTheme="violet"
+         defaultTheme="zinc"
          className="flex flex-col space-y-4 md:space-y-6"
       >
          <div className="flex items-start pt-4 md:pt-0">
@@ -186,7 +188,7 @@ function Customizer() {
                onClick={() => {
                   setConfig({
                      ...config,
-                     theme: 'violet',
+                     theme: 'zinc',
                      radius: 0.5,
                   })
                }}
@@ -264,7 +266,7 @@ function Customizer() {
             <div className="space-y-1.5">
                <Label className="text-xs">Color</Label>
                <div className="grid grid-cols-3 gap-2">
-                  {themes.map((theme) => {
+                  {baseColors.map((theme) => {
                      const isActive = config.theme === theme.name
 
                      return mounted
@@ -377,7 +379,7 @@ function CopyCodeButton({
    ...props
 }: React.ComponentProps<typeof Button>) {
    const [config] = useConfig()
-   const activeTheme = themes.find(theme => theme.name === config.theme)
+   const activeTheme = baseColors.find(theme => theme.name === config.theme)
    const [hasCopied, setHasCopied] = React.useState(false)
 
    React.useEffect(() => {
@@ -426,7 +428,7 @@ function CopyCodeButton({
                      Copy and paste the following code into your CSS file.
                   </DialogDescription>
                </DialogHeader>
-               <ThemeWrapper defaultTheme="violet" className="relative">
+               <ThemeWrapper defaultTheme="zinc" className="relative">
                   <CustomizerCode />
                   {activeTheme && (
                      <Button
@@ -465,10 +467,10 @@ function CopyCodeButton({
 
 function CustomizerCode() {
    const [config] = useConfig()
-   const activeTheme = themes.find(theme => theme.name === config.theme)
+   const activeTheme = baseColors.find(theme => theme.name === config.theme)
 
    return (
-      <ThemeWrapper defaultTheme="violet" className="relative space-y-4">
+      <ThemeWrapper defaultTheme="zinc" className="relative space-y-4">
          <div data-rehype-pretty-code-fragment="">
             <pre className="max-h-[450px] overflow-x-auto rounded-lg border bg-zinc-950 py-4 dark:bg-zinc-900">
                <code className="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm">
@@ -546,6 +548,24 @@ function CustomizerCode() {
                      {config.radius}
                      rem;
                   </span>
+                  {['chart-1', 'chart-2', 'chart-3', 'chart-4', 'chart-5'].map(
+                     prefix => (
+                        <>
+                           <span className="line text-white">
+                    &nbsp;&nbsp;&nbsp;&nbsp;--
+                              {prefix}
+                              :
+                              {' '}
+                              {
+                                 activeTheme?.cssVars.light[
+                                    prefix as keyof typeof activeTheme.cssVars.light
+                                 ]
+                              }
+                              ;
+                           </span>
+                        </>
+                     ),
+                  )}
                   <span className="line text-white">&nbsp;&nbsp;&#125;</span>
                   <span className="line text-white">&nbsp;</span>
                   <span className="line text-white">&nbsp;&nbsp;.dark &#123;</span>
@@ -615,6 +635,24 @@ function CustomizerCode() {
                      {activeTheme?.cssVars.dark.ring}
                      ;
                   </span>
+                  {['chart-1', 'chart-2', 'chart-3', 'chart-4', 'chart-5'].map(
+                     prefix => (
+                        <>
+                           <span className="line text-white">
+                    &nbsp;&nbsp;&nbsp;&nbsp;--
+                              {prefix}
+                              :
+                              {' '}
+                              {
+                                 activeTheme?.cssVars.dark[
+                                    prefix as keyof typeof activeTheme.cssVars.dark
+                                 ]
+                              }
+                              ;
+                           </span>
+                        </>
+                     ),
+                  )}
                   <span className="line text-white">&nbsp;&nbsp;&#125;</span>
                   <span className="line text-white">&#125;</span>
                </code>
@@ -624,7 +662,7 @@ function CustomizerCode() {
    )
 }
 
-function getThemeCode(theme: Theme, radius: number) {
+function getThemeCode(theme: BaseColor, radius: number) {
    if (!theme) {
       return ''
    }
@@ -658,6 +696,11 @@ const BASE_STYLES_WITH_VARIABLES = `
     --input: <%- colors.light["input"] %>;
     --ring: <%- colors.light["ring"] %>;
     --radius: <%- radius %>rem;
+    --chart-1: <%- colors.light["chart-1"] %>;
+    --chart-2: <%- colors.light["chart-2"] %>;
+    --chart-3: <%- colors.light["chart-3"] %>;
+    --chart-4: <%- colors.light["chart-4"] %>;
+    --chart-5: <%- colors.light["chart-5"] %>;
   }
 
   .dark {
@@ -680,6 +723,11 @@ const BASE_STYLES_WITH_VARIABLES = `
     --border: <%- colors.dark["border"] %>;
     --input: <%- colors.dark["input"] %>;
     --ring: <%- colors.dark["ring"] %>;
+    --chart-1: <%- colors.dark["chart-1"] %>;
+    --chart-2: <%- colors.dark["chart-2"] %>;
+    --chart-3: <%- colors.dark["chart-3"] %>;
+    --chart-4: <%- colors.dark["chart-4"] %>;
+    --chart-5: <%- colors.dark["chart-5"] %>;
   }
 }
 `

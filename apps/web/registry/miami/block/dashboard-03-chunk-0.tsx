@@ -1,3 +1,5 @@
+'use client'
+
 import { Bird, Rabbit, Turtle } from 'lucide-react'
 import { Label } from '~/registry/miami/ui/label'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '~/registry/miami/ui/select'

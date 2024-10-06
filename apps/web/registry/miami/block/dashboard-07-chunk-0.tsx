@@ -1,3 +1,5 @@
+'use client'
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/registry/miami/ui/card'
 import { Label } from '~/registry/miami/ui/label'
 import { Input } from '~/registry/miami/ui/input'

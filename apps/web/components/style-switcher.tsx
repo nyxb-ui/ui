@@ -12,8 +12,8 @@ import {
    SelectTrigger,
    SelectValue,
 } from '~/registry/miami/ui/select'
-import type { Style } from '~/registry/styles'
-import { styles } from '~/registry/styles'
+import type { Style } from '~/registry/registry-styles'
+import { styles } from '~/registry/registry-styles'
 
 export function StyleSwitcher({ className, ...props }: SelectTriggerProps) {
    const [config, setConfig] = useConfig()

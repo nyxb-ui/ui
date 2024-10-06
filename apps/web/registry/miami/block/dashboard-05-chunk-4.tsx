@@ -1,3 +1,5 @@
+'use client'
+
 import { ChevronLeft, ChevronRight, Copy, CreditCard, MoreVertical, Truck } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '~/registry/miami/ui/card'
 import { Button } from '~/registry/miami/ui/button'
@@ -118,7 +120,7 @@ export default function Component() {
                   <div className="flex items-center justify-between">
                      <dt className="text-muted-foreground">Email</dt>
                      <dd>
-                        <a href="mailto:">liam~acme.com</a>
+                        <a href="mailto:">liam@acme.com</a>
                      </dd>
                   </div>
                   <div className="flex items-center justify-between">

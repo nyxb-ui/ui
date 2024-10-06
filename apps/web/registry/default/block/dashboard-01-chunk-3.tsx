@@ -1,3 +1,5 @@
+'use client'
+
 import { Activity } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '~/registry/default/ui/card'
 

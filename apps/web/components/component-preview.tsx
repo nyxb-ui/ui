@@ -10,7 +10,7 @@ import { Button } from '~/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '~/components/ui/tabs'
 import ComponentWrapper from '~/components/component-wrapper'
 import { Icons } from '~/components/icons'
-import { styles } from '~/registry/styles'
+import { styles } from '~/registry/registry-styles'
 import { StyleSwitcher } from '~/components/style-switcher'
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {

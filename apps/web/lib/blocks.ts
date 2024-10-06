@@ -9,9 +9,9 @@ import { z } from 'zod'
 import { Index } from '~/__registry__'
 
 import { highlightCode } from '~/lib/highlight-code'
+import type { Style } from '~/registry/registry-styles'
 import type { BlockChunk } from '~/registry/schema'
 import { blockSchema, registryEntrySchema } from '~/registry/schema'
-import type { Style } from '~/registry/styles'
 
 const DEFAULT_BLOCKS_STYLE = 'default' satisfies Style['name']
 
@@ -70,17 +70,14 @@ export async function getBlock(
       ...entry,
       ...content,
       chunks,
-      description: content.description || '',
-      type: 'components:block',
+      type: 'registry:block',
    })
 }
 
 async function _getAllBlocks(style: Style['name'] = DEFAULT_BLOCKS_STYLE) {
    const index = z.record(registryEntrySchema).parse(Index[style])
 
-   return Object.values(index).filter(
-      block => block.type === 'components:block',
-   )
+   return Object.values(index).filter(block => block.type === 'registry:block')
 }
 
 async function _getBlockCode(
@@ -120,7 +117,6 @@ async function _getBlockContent(name: string, style: Style['name']) {
    })
 
    // Extract meta.
-   const description = _extractVariable(sourceFile, 'description')
    const iframeHeight = _extractVariable(sourceFile, 'iframeHeight')
    const containerClassName = _extractVariable(sourceFile, 'containerClassName')
 
@@ -130,7 +126,6 @@ async function _getBlockContent(name: string, style: Style['name']) {
    code = code.replaceAll('export default', 'export')
 
    return {
-      description,
       code,
       container: {
          height: iframeHeight,

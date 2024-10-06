@@ -53,9 +53,8 @@ const showcase = defineCollection({
       description: z.string(),
       image: z.string(),
       href: z.string(),
-      affiliation: z.string().optional(),
+      affiliation: z.string(),
       featured: z.boolean().optional().default(false),
-      author: z.string(),
    }),
    transform: async (document, context) => {
       const body = await compileMDX(context, document, {
@@ -201,66 +200,6 @@ const documents = defineCollection({
    },
 })
 
-const block = defineCollection({
-   name: 'Block',
-   directory: 'content/blocks',
-   include: '**/*.mdx',
-   schema: z => ({
-      title: z.string(),
-      description: z.string(),
-      author: z.string().optional(),
-      image: z.string(),
-      featured: z.boolean().optional().default(false),
-   }),
-   transform: async (document, context) => {
-      const body = await compileMDX(context, document, {
-         remarkPlugins: [codeImport, remarkGfm],
-         rehypePlugins: [
-            // ... same rehype plugins as in documents collection ...
-         ],
-      })
-      return {
-         ...document,
-         slug: `/blocks/${document._meta.path}`,
-         slugAsParams: document._meta.path,
-         body: {
-            raw: document.content,
-            code: body,
-         },
-      }
-   },
-})
-
-const charts = defineCollection({
-   name: 'Chart',
-   directory: 'content/charts',
-   include: '**/*.mdx',
-   schema: z => ({
-      title: z.string(),
-      description: z.string(),
-      author: z.string().optional(),
-      image: z.string(),
-      featured: z.boolean().optional().default(false),
-   }),
-   transform: async (document, context) => {
-      const body = await compileMDX(context, document, {
-         remarkPlugins: [codeImport, remarkGfm],
-         rehypePlugins: [
-            // ... same rehype plugins as in documents collection ...
-         ],
-      })
-      return {
-         ...document,
-         slug: `/charts/${document._meta.path}`,
-         slugAsParams: document._meta.path,
-         body: {
-            raw: document.content,
-            code: body,
-         },
-      }
-   },
-})
-
 export default defineConfig({
-   collections: [documents, pages, showcase, block, charts],
+   collections: [documents, pages, showcase],
 })

@@ -1,3 +1,5 @@
+'use client'
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/registry/default/ui/card'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '~/registry/default/ui/table'
 import { Badge } from '~/registry/default/ui/badge'

@@ -10,6 +10,9 @@
     "web:dev": "pnpm --filter=web dev",
     "cli:dev": "turbo --filter=nyxbui dev",
     "cli:start": "pnpm --filter=nyxbui start:dev",
+    "nyxb:dev": "turbo --filter=nyxb dev",
+    "nyxb:build": "turbo --filter=nyxb build",
+    "nyxb:test": "turbo --filter=nyxb test",
     "preview": "turbo run preview",
     "sync:templates": "./scripts/sync-templates.sh \"templates/*\"",
     "typecheck": "turbo run typecheck",
@@ -39,8 +42,9 @@
     "tailwindcss-animate": "^1.0.7",
     "tsx": "^4.15.5",
     "turbo": "^2.0.4",
+    "vite": "^5.4.1",
     "vite-tsconfig-paths": "^4.2.0",
-    "vitest": "^0.31.1"
+    "vitest": "^2.0.5"
   },
   "devDependencies": {
     "@types/cli-progress": "^3.11.5",

@@ -1,3 +1,5 @@
+'use client'
+
 import { Card, CardContent, CardHeader, CardTitle } from '~/registry/default/ui/card'
 import { Avatar, AvatarFallback, AvatarImage } from '~/registry/default/ui/avatar'
 
@@ -18,7 +20,7 @@ export default function Component() {
                      Olivia Martin
                   </p>
                   <p className="text-muted-foreground text-sm">
-                     olivia.martin~email.com
+                     olivia.martin@email.com
                   </p>
                </div>
                <div className="ml-auto font-medium">+$1,999.00</div>
@@ -33,7 +35,7 @@ export default function Component() {
                      Jackson Lee
                   </p>
                   <p className="text-muted-foreground text-sm">
-                     jackson.lee~email.com
+                     jackson.lee@email.com
                   </p>
                </div>
                <div className="ml-auto font-medium">+$39.00</div>
@@ -48,7 +50,7 @@ export default function Component() {
                      Isabella Nguyen
                   </p>
                   <p className="text-muted-foreground text-sm">
-                     isabella.nguyen~email.com
+                     isabella.nguyen@email.com
                   </p>
                </div>
                <div className="ml-auto font-medium">+$299.00</div>
@@ -63,7 +65,7 @@ export default function Component() {
                      William Kim
                   </p>
                   <p className="text-muted-foreground text-sm">
-                     will~email.com
+                     will@email.com
                   </p>
                </div>
                <div className="ml-auto font-medium">+$99.00</div>
@@ -78,7 +80,7 @@ export default function Component() {
                      Sofia Davis
                   </p>
                   <p className="text-muted-foreground text-sm">
-                     sofia.davis~email.com
+                     sofia.davis@email.com
                   </p>
                </div>
                <div className="ml-auto font-medium">+$39.00</div>

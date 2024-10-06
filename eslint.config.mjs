@@ -6,7 +6,7 @@ export default nyxb(
       react: true,
       tailwindcss: {
          settings: {
-            callees: ['classnames', 'ny', 'cn'],
+            callees: ['classnames', 'ny'],
             config: './apps/web/tailwind.config.ts',
          },
       },
@@ -21,6 +21,13 @@ export default nyxb(
       },
    },
    {
-      ignores: ['**/dist/**', '**/node_modules/**', 'packages/cli/test/**', '**/__registry__/**', '.content-collections/**'],
+      ignores: [
+         '**/dist/**',
+         '**/node_modules/**',
+         'packages/cli/test/**',
+         'packages/nyxb/test/**',
+         '**/__registry__/**',
+         '.content-collections/**',
+      ],
    },
 )

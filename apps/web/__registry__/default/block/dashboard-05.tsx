@@ -673,7 +673,7 @@ export default function Dashboard() {
                               <div className="flex items-center justify-between">
                                  <dt className="text-muted-foreground">Email</dt>
                                  <dd>
-                                    <a href="mailto:">liam~acme.com</a>
+                                    <a href="mailto:">liam@acme.com</a>
                                  </dd>
                               </div>
                               <div className="flex items-center justify-between">

@@ -3,8 +3,8 @@ import path from 'path'
 import { u } from 'unist-builder'
 import { visit } from 'unist-util-visit'
 
-import { Index } from '~/__registry__'
-import { styles } from '~/registry/styles'
+import { Index } from '../__registry__'
+import { styles } from '../registry/registry-styles'
 import type { UnistNode, UnistTree } from '~/types/unist'
 
 export function rehypeComponent() {
@@ -49,8 +49,8 @@ export function rehypeComponent() {
                   // TODO: Use @swc/core and a visitor to replace this.
                   // For now a simple regex should do.
                   source = source.replaceAll(
-              `@/registry/${style.name}/`,
-              '@/components/',
+              `~/registry/${style.name}/`,
+              '~/components/',
                   )
                   source = source.replaceAll('export default', 'export')
 
@@ -114,8 +114,8 @@ export function rehypeComponent() {
                   // TODO: Use @swc/core and a visitor to replace this.
                   // For now a simple regex should do.
                   source = source.replaceAll(
-              `@/registry/${style.name}/`,
-              '@/components/',
+              `~/registry/${style.name}/`,
+              '~/components/',
                   )
                   source = source.replaceAll('export default', 'export')
 

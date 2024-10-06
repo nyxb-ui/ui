@@ -1,3 +1,5 @@
+'use client'
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '~/registry/default/ui/card'
 import { Button } from '~/registry/default/ui/button'
 import { Input } from '~/registry/default/ui/input'

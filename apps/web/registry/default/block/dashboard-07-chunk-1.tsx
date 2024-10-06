@@ -1,3 +1,5 @@
+'use client'
+
 import { PlusCircle } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '~/registry/default/ui/card'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '~/registry/default/ui/table'

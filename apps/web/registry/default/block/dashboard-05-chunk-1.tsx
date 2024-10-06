@@ -1,3 +1,5 @@
+'use client'
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '~/registry/default/ui/card'
 import { Progress } from '~/registry/default/ui/progress'
 

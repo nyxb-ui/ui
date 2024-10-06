@@ -1,3 +1,5 @@
+'use client'
+
 import { DollarSign } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '~/registry/miami/ui/card'
 

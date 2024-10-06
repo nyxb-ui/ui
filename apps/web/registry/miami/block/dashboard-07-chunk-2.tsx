@@ -1,3 +1,5 @@
+'use client'
+
 import { Card, CardContent, CardHeader, CardTitle } from '~/registry/miami/ui/card'
 import { Label } from '~/registry/miami/ui/label'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '~/registry/miami/ui/select'

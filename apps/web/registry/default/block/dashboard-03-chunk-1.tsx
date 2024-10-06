@@ -1,3 +1,5 @@
+'use client'
+
 import { CornerDownLeft, Mic, Paperclip } from 'lucide-react'
 import { Label } from '~/registry/default/ui/label'
 import { Tooltip, TooltipContent, TooltipTrigger } from '~/registry/default/ui/tooltip'

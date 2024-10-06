@@ -1,3 +1,5 @@
+'use client'
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/registry/miami/ui/card'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '~/registry/miami/ui/table'
 import { Badge } from '~/registry/miami/ui/badge'

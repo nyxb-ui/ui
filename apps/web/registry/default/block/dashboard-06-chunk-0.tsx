@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import { MoreHorizontal } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '~/registry/default/ui/card'

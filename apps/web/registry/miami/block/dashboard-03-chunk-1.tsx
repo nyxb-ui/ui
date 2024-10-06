@@ -1,3 +1,5 @@
+'use client'
+
 import { CornerDownLeft, Mic, Paperclip } from 'lucide-react'
 import { Label } from '~/registry/miami/ui/label'
 import { Tooltip, TooltipContent, TooltipTrigger } from '~/registry/miami/ui/tooltip'
