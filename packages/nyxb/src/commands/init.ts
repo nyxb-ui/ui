@@ -113,7 +113,7 @@ export async function runInit(
          type: 'confirm',
          name: 'proceed',
          message: `Write configuration to ${highlighter.info(
-        'nyxbui.json',
+        'components.json',
       )}. Proceed?`,
          initial: true,
       })
@@ -123,9 +123,9 @@ export async function runInit(
       }
    }
 
-   // Write nyxbui.json.
-   const componentSpinner = spinner(`Writing nyxbui.json.`).start()
-   const targetPath = path.resolve(options.cwd, 'nyxbui.json')
+   // Write components.json.
+   const componentSpinner = spinner(`Writing components.json.`).start()
+   const targetPath = path.resolve(options.cwd, 'components.json')
    await fs.writeFile(targetPath, JSON.stringify(config, null, 2), 'utf8')
    componentSpinner.succeed()
 
@@ -250,7 +250,7 @@ async function promptForConfig(defaultConfig: Config | null = null) {
    ])
 
    return rawConfigSchema.parse({
-      $schema: 'https://nyxbui.design/schema.json',
+      $schema: 'https://ui.shadcn.com/schema.json',
       style: options.style,
       tailwind: {
          config: options.tailwindConfig,
