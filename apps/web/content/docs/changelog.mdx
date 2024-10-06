@@ -4,6 +4,61 @@ description: Latest updates and announcements.
 toc: false
 ---
 
+## October 2024 - npx nyxb init
+
+The new CLI is now available. It's a complete rewrite with a lot of new features and improvements. You can now install components, themes, hooks, utils and more using `npx nyxb add`.
+
+This is a major step towards distributing code that you and your LLMs can access and use.
+
+1. First up, the cli now has support for all major React framework out of the box. Next.js, Remix, Vite and Laravel. And when you init into a new app, we update your existing Tailwind files instead of overriding.
+2. A component now ship its own dependencies. Take the accordion for example, it can define its Tailwind keyframes. When you add it to your project, we’ll update your tailwind.config.ts file accordingly.
+3. You can also install remote components using url. `npx nyxb add https://acme.com/registry/navbar.json`.
+4. We have also improve the init command. It does framework detection and can even init a brand new Next.js app in one command. `npx nyxb init`.
+5. We have created a new schema that you can use to ship your own component registry. And since it has support for urls, you can even use it to distribute private components.
+6. And a few more updates like better error handling and monorepo support.
+
+You can try the new cli today.
+
+```bash
+npx nyxb init sidebar-01 login-01
+```
+
+### Update Your Project
+
+To update an existing project to use the new CLI, update your `nyxbui.json` file to include import aliases for your **components**, **utils**, **ui**, **lib** and **hooks**.
+
+```json showLineNumbers {7-13} title="nyxbui.json"
+{
+  "$schema": "https://nyxbui.design/schema.json",
+  "style": "miami",
+  "tailwind": {
+    // ...
+  },
+  "aliases": {
+    "components": "~/components",
+    "utils": "~/lib/utils",
+    "ui": "~/components/ui",
+    "lib": "~/lib",
+    "hooks": "~/hooks"
+  }
+}
+```
+
+### New UI Components
+
+We've introduced five new UI components with comprehensive documentation:
+
+- [Safari](https://nyxbui.design/docs/components/safari): A realistic Safari browser mockup for showcasing websites.
+- [iPhone 15 Pro](https://nyxbui.design/docs/components/iphone-15-pro): A detailed mockup for displaying mobile designs.
+- [Hyper Text](https://nyxbui.design/docs/components/hyper-text): A dynamic text animation component with hover effects.
+- [Flickering Grid](https://nyxbui.design/docs/components/flickering-grid): An animated background with customizable SVG squares.
+
+All new components are available in both standard and Miami registries for maximum flexibility.
+
+### New Colors Page
+
+We've added a new [Colors page](https://nyxbui.design/colors) that showcases all Tailwind CSS color keys in HSL, RGB, and HEX formats. This intuitive interface allows you to easily browse and select Tailwind colors, making it simpler to choose the right shades for your projects.
+
 ## Juni 2024 - Introducing Lift Mode
 
 We're introducing a new mode for [Blocks](/blocks) called **Lift Mode**.
