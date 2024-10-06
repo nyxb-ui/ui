@@ -113,7 +113,7 @@ export async function runInit(
          type: 'confirm',
          name: 'proceed',
          message: `Write configuration to ${highlighter.info(
-        'components.json',
+        'nyxbui.json',
       )}. Proceed?`,
          initial: true,
       })
@@ -123,9 +123,9 @@ export async function runInit(
       }
    }
 
-   // Write components.json.
-   const componentSpinner = spinner(`Writing components.json.`).start()
-   const targetPath = path.resolve(options.cwd, 'components.json')
+   // Write nyxbui.json.
+   const componentSpinner = spinner(`Writing nyxbui.json.`).start()
+   const targetPath = path.resolve(options.cwd, 'nyxbui.json')
    await fs.writeFile(targetPath, JSON.stringify(config, null, 2), 'utf8')
    componentSpinner.succeed()
 
