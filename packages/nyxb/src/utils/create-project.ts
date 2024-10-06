@@ -88,7 +88,7 @@ export async function createProject(
       '--typescript',
       '--app',
       options.srcDir ? '--src-dir' : '--no-src-dir',
-      '--no-import-alias',
+      '--import-alias=~/*',
     `--use-${packageManager}`,
    ]
 
