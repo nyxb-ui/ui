@@ -21,7 +21,7 @@
     "ui",
     "tailwind",
     "radix-ui",
-    "shadcn"
+    "nyxbui"
   ],
   "exports": "./dist/index.js",
   "bin": "./dist/index.js",

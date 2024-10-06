@@ -58,9 +58,9 @@ const data = {
       },
    ],
    user: {
-      name: 'shadcn',
+      name: 'nyxb',
       email: 'm@example.com',
-      avatar: '/avatars/shadcn.jpg',
+      avatar: '/avatars/nyxb.jpg',
    },
    navMain: [
       {

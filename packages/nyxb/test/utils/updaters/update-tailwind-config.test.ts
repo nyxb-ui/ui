@@ -9,8 +9,8 @@ import {
 } from "../../../src/utils/updaters/update-tailwind-config"
 
 const SHARED_CONFIG = {
-  $schema: "https://ui.shadcn.com/schema.json",
-  style: "new-york",
+  $schema: "https://nyxbui.design/schema.json",
+  style: "miami",
   rsc: true,
   tsx: true,
   tailwind: {

@@ -1,5 +1,5 @@
 {
-  "style": "new-york",
+  "style": "miami",
   "tailwind": {
     "config": "tailwind.config.ts",
     "css": "src/app/globals.css",

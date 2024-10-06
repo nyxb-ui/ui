@@ -2,6 +2,6 @@
   "name": "test-cli-project-pnpm",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "shadcn",
+  "author": "nyxb",
   "license": "MIT"
 }

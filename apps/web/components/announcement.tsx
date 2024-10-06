@@ -15,7 +15,7 @@ export function Announcement() {
          <Separator className="mx-2 h-4" orientation="vertical" />
          {' '}
          <span className="underline-offset-4 group-hover:underline">
-            npx shadcn init
+            npx nyxb init
          </span>
          <ArrowRightIcon className="ml-1 size-4" />
       </Link>

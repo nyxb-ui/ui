@@ -3,8 +3,8 @@ import { describe, expect, test } from "vitest"
 import { transformTailwindContent } from "../../../src/utils/updaters/update-tailwind-content"
 
 const SHARED_CONFIG = {
-  $schema: "https://ui.shadcn.com/schema.json",
-  style: "new-york",
+  $schema: "https://nyxbui.design/schema.json",
+  style: "miami",
   rsc: true,
   tsx: true,
   tailwind: {
