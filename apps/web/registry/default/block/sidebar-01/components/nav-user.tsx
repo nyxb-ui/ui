@@ -40,7 +40,7 @@ export function NavUser({
                      alt={user.name}
                      className="animate-in fade-in-50 zoom-in-90"
                   />
-                  <AvatarFallback className="rounded-md">CN</AvatarFallback>
+                  <AvatarFallback className="rounded-md">NY</AvatarFallback>
                </Avatar>
                <div className="grid flex-1 leading-none">
                   <div className="font-medium">{user.name}</div>
@@ -61,7 +61,7 @@ export function NavUser({
                <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm transition-all">
                   <Avatar className="size-7 rounded-md">
                      <AvatarImage src={user.avatar} alt={user.name} />
-                     <AvatarFallback>CN</AvatarFallback>
+                     <AvatarFallback>NY</AvatarFallback>
                   </Avatar>
                   <div className="grid flex-1">
                      <div className="font-medium">{user.name}</div>

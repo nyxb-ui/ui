@@ -21,32 +21,7 @@ video: https://cdn.nyxbui.design/animated-shiny-text.mp4
 <TabsContent value="cli">
 
 ```bash
-npx nyxbui@latest add animated-shiny-text
-```
-
-Add the following animations to your tailwind.config.ts file:
-
-```ts
-// tailwind.config.ts
-module.exports = {
-  theme: {
-    extend: {
-      animation: {
-        shimmer: "shimmer 8s infinite",
-      },
-      keyframes: {
-        shimmer: {
-          "0%, 90%, 100%": {
-            "background-position": "calc(-100% - var(--shimmer-width)) 0",
-          },
-          "30%, 60%": {
-            "background-position": "calc(100% + var(--shimmer-width)) 0",
-          },
-        },
-      },
-    },
-  },
-};
+npx nyxb@latest add animated-shiny-text
 ```
 
 </TabsContent>

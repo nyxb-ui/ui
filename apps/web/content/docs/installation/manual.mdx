@@ -1,7 +1,6 @@
 ---
 title: Manual Installation
 description: Add dependencies to your project manually.
-published: true
 ---
 
 <Steps>
@@ -17,7 +16,7 @@ Components are styled using Tailwind CSS. You need to install Tailwind CSS in yo
 Add the following dependencies to your project:
 
 ```bash
-npm install tailwindcss-animate class-variance-authority clsx tailwind-merge framer-motion
+npm install tailwindcss-animate class-variance-authority clsx tailwind-merge
 ```
 
 ### Add icon library
@@ -36,7 +35,7 @@ npm install @radix-ui/react-icons
 
 ### Configure path aliases
 
-I use the `@` alias. This is how I configure it in tsconfig.json:
+I use the `~` alias. This is how I configure it in tsconfig.json:
 
 ```json {3-6} title="tsconfig.json"
 {
@@ -49,9 +48,9 @@ I use the `@` alias. This is how I configure it in tsconfig.json:
 }
 ```
 
-The `@` alias is a preference. You can use other aliases if you want.
+The `~` alias is a preference. You can use other aliases if you want.
 
-**If you use a different alias such as ~, you'll need to update import statements when adding components.**
+**If you use a different alias such as @, you'll need to update import statements when adding components.**
 
 ### Configure tailwind.config.js
 

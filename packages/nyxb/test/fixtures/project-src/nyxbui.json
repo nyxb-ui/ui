@@ -2,6 +2,6 @@
   "components": "src/components",
   "ui": "src/ui",
   "styles": "src/styles/main.css",
-  "utils": "src/lib/cn.ts",
+  "utils": "src/lib/ny.ts",
   "tailwindConfig": "tailwind.config.ts"
 }

@@ -12,7 +12,7 @@ import { Foo } from "bar"
     import { Label} from "ui/label"
     import { Box } from "@/registry/miami/box"
 
-    import { cn } from "@/lib/utils"
+    import { ny } from "@/lib/utils"
     `,
       config: {
         tsx: true,
@@ -37,7 +37,7 @@ import { Foo } from "bar"
     import { Label} from "ui/label"
     import { Box } from "@/registry/miami/box"
 
-    import { cn, foo, bar } from "@/lib/utils"
+    import { ny, foo, bar } from "@/lib/utils"
     import { bar } from "@/lib/utils/bar"
     `,
       config: {
@@ -59,7 +59,7 @@ import { Foo } from "bar"
     import { Label} from "ui/label"
     import { Box } from "@/registry/miami/box"
 
-    import { cn } from "@/lib/utils"
+    import { ny } from "@/lib/utils"
     import { bar } from "@/lib/utils/bar"
     `,
       config: {
@@ -81,7 +81,7 @@ import { Foo } from "bar"
     import { Label} from "ui/label"
     import { Box } from "@/registry/miami/box"
 
-    import { cn } from "@/lib/utils"
+    import { ny } from "@/lib/utils"
     import { bar } from "@/lib/utils/bar"
     `,
       config: {
@@ -104,7 +104,7 @@ import { Foo } from "bar"
     import { Label} from "ui/label"
     import { Box } from "@/registry/miami/box"
 
-    import { cn } from "@/lib/utils"
+    import { ny } from "@/lib/utils"
     import { bar } from "@/lib/utils/bar"
     `,
       config: {

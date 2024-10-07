@@ -16,7 +16,7 @@ We use it to understand how your project is set up and how to generate component
 You can create a `nyxbui.json` file in your project by running the following command:
 
 ```bash
-npx nyxbui@latest init
+npx nyxb@latest init
 ```
 
 See the <Link href="/docs/cli">CLI section</Link> for more information.
@@ -27,7 +27,7 @@ You can see the JSON Schema for `nyxbui.json` [here](https://nyxbui.design/schem
 
 ```json title="nyxbui.json"
 {
-  "$schema": "https://nyxbui.json/schema.json"
+  "$schema": "https://nyxbui.design/schema.json"
 }
 ```
 
@@ -41,12 +41,7 @@ The style for your components. **This cannot be changed after initialization.**
 }
 ```
 
-<ComponentPreview 
-   name="card-with-form"
-   styleSwitch={true}
-   button="copy"
-   dots={false}
- />
+<ComponentPreview name="card-with-form" />
 
 ## tailwind
 
@@ -56,12 +51,12 @@ See the <Link href="/docs/installation">installation section</Link> for how to s
 
 ### tailwind.config
 
-Path to where your `tailwind.config.ts` file is located.
+Path to where your `tailwind.config.js` file is located.
 
-```json title="nyxbui.json"
+```json title="components.json"
 {
   "tailwind": {
-    "config": "tailwind.config.ts" | "tailwind.config.ts"
+    "config": "tailwind.config.js" | "tailwind.config.ts"
   }
 }
 ```
@@ -70,7 +65,7 @@ Path to where your `tailwind.config.ts` file is located.
 
 Path to the CSS file that imports Tailwind CSS into your project.
 
-```json title="nyxbui.json"
+```json title="components.json"
 {
   "tailwind": {
     "css": "styles/global.css"
@@ -189,6 +184,30 @@ The CLI will use the `aliases.ui` value to determine where to place your `ui` co
 {
   "aliases": {
     "ui": "~/app/ui"
+  }
+}
+```
+
+### aliases.lib
+
+Import alias for `lib` functions such as `format-date` or `generate-id`.
+
+```json title="nyxbui.json"
+{
+  "aliases": {
+    "lib": "~/lib"
+  }
+}
+```
+
+### aliases.hooks
+
+Import alias for `hooks` such as `use-media-query` or `use-toast`.
+
+```json title="nyxbui.json"
+{
+  "aliases": {
+    "hooks": "~/hooks"
   }
 }
 ```

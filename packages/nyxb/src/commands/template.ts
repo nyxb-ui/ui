@@ -87,7 +87,7 @@ export const template = new Command()
          logger.info('Installing dependencies...')
          try {
             await installDependencies({
-               cwd: relativeProjectPath,
+               cwd: template.dir,
                packageManager: {
                   name: packageManager,
                   command: packageManager,
