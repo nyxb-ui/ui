@@ -86,17 +86,15 @@ export const template = new Command()
       if (opts.install) {
          logger.info('Installing dependencies...')
          try {
-            await installDependencies({
+            const installCommand = packageManager === 'npm' ? 'npm install' : `${packageManager} install`
+            await execaCommand(installCommand, {
                cwd: template.dir,
-               packageManager: {
-                  name: packageManager,
-                  command: packageManager,
-               },
+               stdio: 'inherit',
             })
             logger.info('Installation completed.')
          }
          catch (error) {
-            logger.error((error as Error).toString())
+            logger.error(`Failed to install dependencies: ${(error as Error).message}`)
             process.exit(1)
          }
       }
