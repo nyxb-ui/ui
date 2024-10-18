@@ -29,16 +29,20 @@ export const docsConfig: DocsConfig = {
          href: '/charts',
       },
       {
-         title: 'Templates',
-         href: '/templates',
+         title: 'Examples',
+         href: '/examples',
       },
+      // {
+      //    title: 'Templates',
+      //    href: '/templates',
+      // },
       {
          title: 'More',
          items: [
-            {
-               title: 'Examples',
-               href: '/examples',
-            },
+            // {
+            //    title: 'Examples',
+            //    href: '/examples',
+            // },
             {
                title: 'Showcase',
                href: '/showcase',
@@ -101,34 +105,34 @@ export const docsConfig: DocsConfig = {
             },
          ],
       },
-      {
-         title: 'Templates',
-         items: [
-            {
-               title: 'Portfolio',
-               href: `/docs/templates/portfolio`,
-               items: [],
-            },
-            {
-               title: 'Startup',
-               href: `/docs/templates/startup`,
-               items: [],
-            },
-            {
-               title: 'SaaS',
-               href: `/docs/templates/saas`,
-               items: [],
-               label: 'New',
-            },
-            {
-               title: 'Mobile App',
-               href: `/docs/templates/app`,
-               items: [],
-               disabled: true,
-               label: 'Coming soon',
-            },
-         ],
-      },
+      // {
+      //    title: 'Templates',
+      //    items: [
+      //       {
+      //          title: 'Portfolio',
+      //          href: `/docs/templates/portfolio`,
+      //          items: [],
+      //       },
+      //       {
+      //          title: 'Startup',
+      //          href: `/docs/templates/startup`,
+      //          items: [],
+      //       },
+      //       {
+      //          title: 'SaaS',
+      //          href: `/docs/templates/saas`,
+      //          items: [],
+      //          label: 'New',
+      //       },
+      //       {
+      //          title: 'Mobile App',
+      //          href: `/docs/templates/app`,
+      //          items: [],
+      //          disabled: true,
+      //          label: 'Coming soon',
+      //       },
+      //    ],
+      // },
       {
          title: 'Components',
          items: [
