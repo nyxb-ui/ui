@@ -13,7 +13,7 @@ import type { Style } from '~/registry/registry-styles'
 import type { BlockChunk } from '~/registry/schema'
 import { blockSchema, registryEntrySchema } from '~/registry/schema'
 
-const DEFAULT_BLOCKS_STYLE = 'default' satisfies Style['name']
+const DEFAULT_BLOCKS_STYLE = 'miami' satisfies Style['name']
 
 const project = new Project({
    compilerOptions: {},
@@ -34,44 +34,54 @@ export async function getBlock(
 
    const content = await _getBlockContent(name, style)
 
-   const chunks = await Promise.all(
-      entry.chunks?.map(async (chunk: BlockChunk) => {
-         const code = await readFile(chunk.file)
+   const chunks = entry?.chunks
+      ? await Promise.all(
+         entry?.chunks?.map(async (chunk: BlockChunk) => {
+            const code = await readFile(chunk.file)
 
-         const tempFile = await createTempSourceFile(`${chunk.name}.tsx`)
-         const sourceFile = project.createSourceFile(tempFile, code, {
-            scriptKind: ScriptKind.TSX,
-         })
-
-         sourceFile
-            .getDescendantsOfKind(SyntaxKind.JsxOpeningElement)
-            .filter((node) => {
-               return node.getAttribute('x-chunk') !== undefined
-            })
-            ?.map((component) => {
-               component
-                  .getAttribute('x-chunk')
-                  ?.asKind(SyntaxKind.JsxAttribute)
-                  ?.remove()
+            const tempFile = await createTempSourceFile(`${chunk.name}.tsx`)
+            const sourceFile = project.createSourceFile(tempFile, code, {
+               scriptKind: ScriptKind.TSX,
             })
 
-         return {
-            ...chunk,
-            code: sourceFile
-               .getText()
-               .replaceAll(`~/registry/${style}/`, '~/components/'),
-         }
-      }),
-   )
+            sourceFile
+               .getDescendantsOfKind(SyntaxKind.JsxOpeningElement)
+               .filter((node) => {
+                  return node.getAttribute('x-chunk') !== undefined
+               })
+               ?.map((component) => {
+                  component
+                     .getAttribute('x-chunk')
+                     ?.asKind(SyntaxKind.JsxAttribute)
+                     ?.remove()
+               })
 
-   return blockSchema.parse({
+            return {
+               ...chunk,
+               code: sourceFile
+                  .getText()
+                  .replaceAll(`@/registry/${style}/`, '@/components/'),
+            }
+         }),
+      )
+      : []
+
+   const block = {
       style,
       highlightedCode: content.code ? await highlightCode(content.code) : '',
       ...entry,
       ...content,
       chunks,
       type: 'registry:block',
-   })
+   }
+
+   const result = blockSchema.safeParse(block)
+
+   if (!result.success) {
+      return null
+   }
+
+   return result.data
 }
 
 async function _getAllBlocks(style: Style['name'] = DEFAULT_BLOCKS_STYLE) {
@@ -122,7 +132,7 @@ async function _getBlockContent(name: string, style: Style['name']) {
 
    // Format the code.
    let code = sourceFile.getText()
-   code = code.replaceAll(`~/registry/${style}/`, '~/components/')
+   code = code.replaceAll(`@/registry/${style}/`, '@/components/')
    code = code.replaceAll('export default', 'export')
 
    return {

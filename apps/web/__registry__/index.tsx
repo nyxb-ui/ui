@@ -885,6 +885,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "sidebar": {
+      name: "sidebar",
+      type: "registry:ui",
+      registryDependencies: ["button","separator","sheet","tooltip","input","use-mobile","skeleton"],
+      files: ["registry/miami/ui/sidebar.tsx"],
+      component: React.lazy(() => import("~/registry/miami/ui/sidebar.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "skeleton": {
       name: "skeleton",
       type: "registry:ui",
@@ -3096,6 +3107,149 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "demo-sidebar": {
+      name: "demo-sidebar",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/miami/block/demo-sidebar.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/demo-sidebar.tsx")),
+      source: "__registry__/miami/block/demo-sidebar.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-header": {
+      name: "demo-sidebar-header",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/miami/block/demo-sidebar-header.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/demo-sidebar-header.tsx")),
+      source: "__registry__/miami/block/demo-sidebar-header.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-footer": {
+      name: "demo-sidebar-footer",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/miami/block/demo-sidebar-footer.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/demo-sidebar-footer.tsx")),
+      source: "__registry__/miami/block/demo-sidebar-footer.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-group": {
+      name: "demo-sidebar-group",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/miami/block/demo-sidebar-group.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/demo-sidebar-group.tsx")),
+      source: "__registry__/miami/block/demo-sidebar-group.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-group-collapsible": {
+      name: "demo-sidebar-group-collapsible",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/miami/block/demo-sidebar-group-collapsible.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/demo-sidebar-group-collapsible.tsx")),
+      source: "__registry__/miami/block/demo-sidebar-group-collapsible.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-group-action": {
+      name: "demo-sidebar-group-action",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/miami/block/demo-sidebar-group-action.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/demo-sidebar-group-action.tsx")),
+      source: "__registry__/miami/block/demo-sidebar-group-action.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-menu": {
+      name: "demo-sidebar-menu",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/miami/block/demo-sidebar-menu.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/demo-sidebar-menu.tsx")),
+      source: "__registry__/miami/block/demo-sidebar-menu.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-menu-action": {
+      name: "demo-sidebar-menu-action",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/miami/block/demo-sidebar-menu-action.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/demo-sidebar-menu-action.tsx")),
+      source: "__registry__/miami/block/demo-sidebar-menu-action.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-menu-sub": {
+      name: "demo-sidebar-menu-sub",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/miami/block/demo-sidebar-menu-sub.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/demo-sidebar-menu-sub.tsx")),
+      source: "__registry__/miami/block/demo-sidebar-menu-sub.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-menu-collapsible": {
+      name: "demo-sidebar-menu-collapsible",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/miami/block/demo-sidebar-menu-collapsible.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/demo-sidebar-menu-collapsible.tsx")),
+      source: "__registry__/miami/block/demo-sidebar-menu-collapsible.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-menu-badge": {
+      name: "demo-sidebar-menu-badge",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/miami/block/demo-sidebar-menu-badge.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/demo-sidebar-menu-badge.tsx")),
+      source: "__registry__/miami/block/demo-sidebar-menu-badge.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-rsc": {
+      name: "demo-sidebar-rsc",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/miami/block/demo-sidebar-rsc.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/demo-sidebar-rsc.tsx")),
+      source: "__registry__/miami/block/demo-sidebar-rsc.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-controlled": {
+      name: "demo-sidebar-controlled",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/miami/block/demo-sidebar-controlled.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/demo-sidebar-controlled.tsx")),
+      source: "__registry__/miami/block/demo-sidebar-controlled.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "magic-card-demo": {
       name: "magic-card-demo",
       type: "registry:example",
@@ -4537,90 +4691,169 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "charts-01": {
-      name: "charts-01",
-      type: "registry:block",
-      registryDependencies: ["chart"],
-      files: ["registry/miami/block/charts-01.tsx"],
-      component: React.lazy(() => import("~/registry/miami/block/charts-01.tsx")),
-      source: "__registry__/miami/block/charts-01.tsx",
-      category: "Application",
-      subcategory: "Charts",
-      chunks: [{
-        name: "charts-01-chunk-0",
-        description: "A bar chart showing the number of steps you have walked in the past 7 days.",
-        component: React.lazy(() => import("~/registry/miami/block/charts-01-chunk-0")),
-        file: "registry/miami/block/charts-01-chunk-0.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "charts-01-chunk-1",
-        description: "A line chart showing the resting heart rate for the past 7 days.",
-        component: React.lazy(() => import("~/registry/miami/block/charts-01-chunk-1")),
-        file: "registry/miami/block/charts-01-chunk-1.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "charts-01-chunk-2",
-        description: "Two horizontal bar charts showing total steps taken during the current year and last year.",
-        component: React.lazy(() => import("~/registry/miami/block/charts-01-chunk-2")),
-        file: "registry/miami/block/charts-01-chunk-2.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "charts-01-chunk-3",
-        description: "A bar chart showing the walking and running distance for the past 7 days.",
-        component: React.lazy(() => import("~/registry/miami/block/charts-01-chunk-3")),
-        file: "registry/miami/block/charts-01-chunk-3.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "charts-01-chunk-4",
-        description: "A bar chart showing move, exercise, and stand progress.",
-        component: React.lazy(() => import("~/registry/miami/block/charts-01-chunk-4")),
-        file: "registry/miami/block/charts-01-chunk-4.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "charts-01-chunk-5",
-        description: "A radial bar chart showing the percentage of time spent moving, exercising, and standing.",
-        component: React.lazy(() => import("~/registry/miami/block/charts-01-chunk-5")),
-        file: "registry/miami/block/charts-01-chunk-5.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "charts-01-chunk-6",
-        description: "A bar chart showing active energy in the past 7 days.",
-        component: React.lazy(() => import("~/registry/miami/block/charts-01-chunk-6")),
-        file: "registry/miami/block/charts-01-chunk-6.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "charts-01-chunk-7",
-        description: "An area chart showing the time spent in bed for the past 7 days.",
-        component: React.lazy(() => import("~/registry/miami/block/charts-01-chunk-7")),
-        file: "registry/miami/block/charts-01-chunk-7.tsx",
-        container: {
-          className: "undefined"
-        }
-      }]
-    },
     "sidebar-01": {
       name: "sidebar-01",
       type: "registry:block",
-      registryDependencies: ["avatar","button","collapsible","dropdown-menu","drawer","separator","input","popover","sheet","progress","card","use-mobile"],
-      files: ["registry/miami/block/sidebar-01/page.tsx","registry/miami/block/sidebar-01/components/app-sidebar.tsx","registry/miami/block/sidebar-01/components/nav-main.tsx","registry/miami/block/sidebar-01/components/nav-projects.tsx","registry/miami/block/sidebar-01/components/nav-secondary.tsx","registry/miami/block/sidebar-01/components/nav-user.tsx","registry/miami/block/sidebar-01/components/storage-card.tsx","registry/miami/block/sidebar-01/components/team-switcher.tsx","registry/miami/block/sidebar-01/hooks/use-sidebar.tsx","registry/miami/block/sidebar-01/ui/sidebar.tsx"],
+      registryDependencies: ["sidebar","breadcrumb","separator","label","dropdown-menu"],
+      files: ["registry/miami/block/sidebar-01/page.tsx","registry/miami/block/sidebar-01/components/app-sidebar.tsx","registry/miami/block/sidebar-01/components/search-form.tsx","registry/miami/block/sidebar-01/components/version-switcher.tsx"],
       component: React.lazy(() => import("~/registry/miami/block/sidebar-01/page.tsx")),
       source: "__registry__/miami/block/sidebar-01/page.tsx",
       category: "Application",
-      subcategory: "Dashboard",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-02": {
+      name: "sidebar-02",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","label","dropdown-menu"],
+      files: ["registry/miami/block/sidebar-02/page.tsx","registry/miami/block/sidebar-02/components/app-sidebar.tsx","registry/miami/block/sidebar-02/components/search-form.tsx","registry/miami/block/sidebar-02/components/version-switcher.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-02/page.tsx")),
+      source: "__registry__/miami/block/sidebar-02/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-03": {
+      name: "sidebar-03",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb"],
+      files: ["registry/miami/block/sidebar-03/page.tsx","registry/miami/block/sidebar-03/components/app-sidebar.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-03/page.tsx")),
+      source: "__registry__/miami/block/sidebar-03/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-04": {
+      name: "sidebar-04",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator"],
+      files: ["registry/miami/block/sidebar-04/page.tsx","registry/miami/block/sidebar-04/components/app-sidebar.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-04/page.tsx")),
+      source: "__registry__/miami/block/sidebar-04/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-05": {
+      name: "sidebar-05",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","label","collapsible"],
+      files: ["registry/miami/block/sidebar-05/page.tsx","registry/miami/block/sidebar-05/components/app-sidebar.tsx","registry/miami/block/sidebar-05/components/search-form.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-05/page.tsx")),
+      source: "__registry__/miami/block/sidebar-05/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-06": {
+      name: "sidebar-06",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","card","dropdown-menu"],
+      files: ["registry/miami/block/sidebar-06/page.tsx","registry/miami/block/sidebar-06/components/app-sidebar.tsx","registry/miami/block/sidebar-06/components/nav-main.tsx","registry/miami/block/sidebar-06/components/sidebar-opt-in-form.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-06/page.tsx")),
+      source: "__registry__/miami/block/sidebar-06/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-07": {
+      name: "sidebar-07",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","collapsible","dropdown-menu","avatar"],
+      files: ["registry/miami/block/sidebar-07/page.tsx","registry/miami/block/sidebar-07/components/app-sidebar.tsx","registry/miami/block/sidebar-07/components/nav-main.tsx","registry/miami/block/sidebar-07/components/nav-projects.tsx","registry/miami/block/sidebar-07/components/nav-user.tsx","registry/miami/block/sidebar-07/components/team-switcher.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-07/page.tsx")),
+      source: "__registry__/miami/block/sidebar-07/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-08": {
+      name: "sidebar-08",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","collapsible","dropdown-menu","avatar"],
+      files: ["registry/miami/block/sidebar-08/page.tsx","registry/miami/block/sidebar-08/components/app-sidebar.tsx","registry/miami/block/sidebar-08/components/nav-main.tsx","registry/miami/block/sidebar-08/components/nav-projects.tsx","registry/miami/block/sidebar-08/components/nav-secondary.tsx","registry/miami/block/sidebar-08/components/nav-user.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-08/page.tsx")),
+      source: "__registry__/miami/block/sidebar-08/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-09": {
+      name: "sidebar-09",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","collapsible","dropdown-menu","avatar","switch"],
+      files: ["registry/miami/block/sidebar-09/page.tsx","registry/miami/block/sidebar-09/components/nav-user.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-09/page.tsx")),
+      source: "__registry__/miami/block/sidebar-09/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-10": {
+      name: "sidebar-10",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","popover","collapsible","dropdown-menu"],
+      files: ["registry/miami/block/sidebar-10/page.tsx","registry/miami/block/sidebar-10/components/app-sidebar.tsx","registry/miami/block/sidebar-10/components/nav-actions.tsx","registry/miami/block/sidebar-10/components/nav-favorites.tsx","registry/miami/block/sidebar-10/components/nav-main.tsx","registry/miami/block/sidebar-10/components/nav-secondary.tsx","registry/miami/block/sidebar-10/components/nav-workspaces.tsx","registry/miami/block/sidebar-10/components/team-switcher.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-10/page.tsx")),
+      source: "__registry__/miami/block/sidebar-10/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-11": {
+      name: "sidebar-11",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","collapsible"],
+      files: ["registry/miami/block/sidebar-11/page.tsx","registry/miami/block/sidebar-11/components/app-sidebar.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-11/page.tsx")),
+      source: "__registry__/miami/block/sidebar-11/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-12": {
+      name: "sidebar-12",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","collapsible","calendar","dropdown-menu","avatar"],
+      files: ["registry/miami/block/sidebar-12/page.tsx","registry/miami/block/sidebar-12/components/app-sidebar.tsx","registry/miami/block/sidebar-12/components/calendars.tsx","registry/miami/block/sidebar-12/components/date-picker.tsx","registry/miami/block/sidebar-12/components/nav-user.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-12/page.tsx")),
+      source: "__registry__/miami/block/sidebar-12/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-13": {
+      name: "sidebar-13",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","button","dialog"],
+      files: ["registry/miami/block/sidebar-13/page.tsx","registry/miami/block/sidebar-13/components/settings-dialog.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-13/page.tsx")),
+      source: "__registry__/miami/block/sidebar-13/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-14": {
+      name: "sidebar-14",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb"],
+      files: ["registry/miami/block/sidebar-14/page.tsx","registry/miami/block/sidebar-14/components/app-sidebar.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-14/page.tsx")),
+      source: "__registry__/miami/block/sidebar-14/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-15": {
+      name: "sidebar-15",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","popover","collapsible","dropdown-menu","calendar","avatar"],
+      files: ["registry/miami/block/sidebar-15/page.tsx","registry/miami/block/sidebar-15/components/calendars.tsx","registry/miami/block/sidebar-15/components/date-picker.tsx","registry/miami/block/sidebar-15/components/nav-favorites.tsx","registry/miami/block/sidebar-15/components/nav-main.tsx","registry/miami/block/sidebar-15/components/nav-secondary.tsx","registry/miami/block/sidebar-15/components/nav-user.tsx","registry/miami/block/sidebar-15/components/nav-workspaces.tsx","registry/miami/block/sidebar-15/components/sidebar-left.tsx","registry/miami/block/sidebar-15/components/sidebar-right.tsx","registry/miami/block/sidebar-15/components/team-switcher.tsx"],
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-15/page.tsx")),
+      source: "__registry__/miami/block/sidebar-15/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
       chunks: []
     },
     "login-01": {
@@ -4630,327 +4863,6 @@ export const Index: Record<string, any> = {
       files: ["registry/miami/block/login-01/page.tsx","registry/miami/block/login-01/components/login-form.tsx"],
       component: React.lazy(() => import("~/registry/miami/block/login-01/page.tsx")),
       source: "__registry__/miami/block/login-01/page.tsx",
-      category: "Authentication",
-      subcategory: "Login",
-      chunks: []
-    },
-    "dashboard-05": {
-      name: "dashboard-05",
-      type: "registry:block",
-      registryDependencies: ["badge","breadcrumb","button","card","dropdown-menu","input","pagination","progress","separator","sheet","table","tabs","tooltip"],
-      files: ["registry/miami/block/dashboard-05.tsx"],
-      component: React.lazy(() => import("~/registry/miami/block/dashboard-05.tsx")),
-      source: "__registry__/miami/block/dashboard-05.tsx",
-      category: "Application",
-      subcategory: "Dashboard",
-      chunks: [{
-        name: "dashboard-05-chunk-0",
-        description: "A card for an orders dashboard with a description and a button to create a new order.",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-05-chunk-0")),
-        file: "registry/miami/block/dashboard-05-chunk-0.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-05-chunk-1",
-        description: "A stats card showing this week's total sales in USD, the percentage difference from last week, and a progress bar.",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-05-chunk-1")),
-        file: "registry/miami/block/dashboard-05-chunk-1.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-05-chunk-2",
-        description: "A stats card showing this month's total sales in USD, the percentage difference from last month, and a progress bar.",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-05-chunk-2")),
-        file: "registry/miami/block/dashboard-05-chunk-2.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-05-chunk-3",
-        description: "A table of recent orders showing the following columns: Customer, Type, Status, Date, and Amount.",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-05-chunk-3")),
-        file: "registry/miami/block/dashboard-05-chunk-3.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-05-chunk-4",
-        description: "An order details card with order details, shipping information, customer information and payment information.",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-05-chunk-4")),
-        file: "registry/miami/block/dashboard-05-chunk-4.tsx",
-        container: {
-          className: "undefined"
-        }
-      }]
-    },
-    "dashboard-06": {
-      name: "dashboard-06",
-      type: "registry:block",
-      registryDependencies: ["badge","breadcrumb","button","card","dropdown-menu","input","sheet","table","tabs","tooltip"],
-      files: ["registry/miami/block/dashboard-06.tsx"],
-      component: React.lazy(() => import("~/registry/miami/block/dashboard-06.tsx")),
-      source: "__registry__/miami/block/dashboard-06.tsx",
-      category: "Application",
-      subcategory: "Dashboard",
-      chunks: [{
-        name: "dashboard-06-chunk-0",
-        description: "A list of products in a table with actions. Each row has an image, name, status, price, total sales, created at and actions.",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-06-chunk-0")),
-        file: "registry/miami/block/dashboard-06-chunk-0.tsx",
-        container: {
-          className: "undefined"
-        }
-      }]
-    },
-    "dashboard-07": {
-      name: "dashboard-07",
-      type: "registry:block",
-      registryDependencies: ["badge","breadcrumb","button","card","dropdown-menu","input","pagination","progress","separator","sheet","table","tabs","tooltip"],
-      files: ["registry/miami/block/dashboard-07.tsx"],
-      component: React.lazy(() => import("~/registry/miami/block/dashboard-07.tsx")),
-      source: "__registry__/miami/block/dashboard-07.tsx",
-      category: "Application",
-      subcategory: "Dashboard",
-      chunks: [{
-        name: "dashboard-07-chunk-0",
-        description: "A card with a form to edit the product details",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-07-chunk-0")),
-        file: "registry/miami/block/dashboard-07-chunk-0.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-07-chunk-1",
-        description: "A card with a form to edit the product stock and variants",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-07-chunk-1")),
-        file: "registry/miami/block/dashboard-07-chunk-1.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-07-chunk-2",
-        description: "A card with a form to edit the product category and subcategory",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-07-chunk-2")),
-        file: "registry/miami/block/dashboard-07-chunk-2.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-07-chunk-3",
-        description: "A card with a form to edit the product status",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-07-chunk-3")),
-        file: "registry/miami/block/dashboard-07-chunk-3.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-07-chunk-4",
-        description: "A card with a form to upload product images",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-07-chunk-4")),
-        file: "registry/miami/block/dashboard-07-chunk-4.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-07-chunk-5",
-        description: "A card with a call to action to archive the product",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-07-chunk-5")),
-        file: "registry/miami/block/dashboard-07-chunk-5.tsx",
-        container: {
-          className: "undefined"
-        }
-      }]
-    },
-    "dashboard-04": {
-      name: "dashboard-04",
-      type: "registry:block",
-      registryDependencies: ["button","card","dropdown-menu","input"],
-      files: ["registry/miami/block/dashboard-04.tsx"],
-      component: React.lazy(() => import("~/registry/miami/block/dashboard-04.tsx")),
-      source: "__registry__/miami/block/dashboard-04.tsx",
-      category: "Application",
-      subcategory: "Dashboard",
-      chunks: [{
-        name: "dashboard-04-chunk-0",
-        description: "A sidebar navigation with links to general, security, integrations, support, organizations, and advanced settings.",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-04-chunk-0")),
-        file: "registry/miami/block/dashboard-04-chunk-0.tsx",
-        container: {
-          className: "chunk-container after:right-0"
-        }
-      },{
-        name: "dashboard-04-chunk-1",
-        description: "A form to update the store name.",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-04-chunk-1")),
-        file: "registry/miami/block/dashboard-04-chunk-1.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-04-chunk-2",
-        description: "A form to update the plugins directory with a checkbox to allow administrators to change the directory.",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-04-chunk-2")),
-        file: "registry/miami/block/dashboard-04-chunk-2.tsx",
-        container: {
-          className: "undefined"
-        }
-      }]
-    },
-    "dashboard-03": {
-      name: "dashboard-03",
-      type: "registry:block",
-      registryDependencies: ["badge","button","drawer","input","label","select","textarea","tooltip"],
-      files: ["registry/miami/block/dashboard-03.tsx"],
-      component: React.lazy(() => import("~/registry/miami/block/dashboard-03.tsx")),
-      source: "__registry__/miami/block/dashboard-03.tsx",
-      category: "Application",
-      subcategory: "Dashboard",
-      chunks: [{
-        name: "dashboard-03-chunk-0",
-        description: "A settings form a configuring an AI model and messages.",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-03-chunk-0")),
-        file: "registry/miami/block/dashboard-03-chunk-0.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-03-chunk-1",
-        description: "A form for sending a message to an AI chatbot. The form has a textarea and buttons to upload files and record audio.",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-03-chunk-1")),
-        file: "registry/miami/block/dashboard-03-chunk-1.tsx",
-        container: {
-          className: "undefined"
-        }
-      }]
-    },
-    "dashboard-02": {
-      name: "dashboard-02",
-      type: "registry:block",
-      registryDependencies: ["badge","button","card","dropdown-menu","input"],
-      files: ["registry/miami/block/dashboard-02.tsx"],
-      component: React.lazy(() => import("~/registry/miami/block/dashboard-02.tsx")),
-      source: "__registry__/miami/block/dashboard-02.tsx",
-      category: "Application",
-      subcategory: "Dashboard",
-      chunks: [{
-        name: "dashboard-02-chunk-0",
-        description: "A card with a call to action",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-02-chunk-0")),
-        file: "registry/miami/block/dashboard-02-chunk-0.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-02-chunk-1",
-        description: "An empty state showing no products with a heading, description and a call to action to add a product.",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-02-chunk-1")),
-        file: "registry/miami/block/dashboard-02-chunk-1.tsx",
-        container: {
-          className: "undefined"
-        }
-      }]
-    },
-    "dashboard-01": {
-      name: "dashboard-01",
-      type: "registry:block",
-      registryDependencies: ["button","dropdown-menu","input","sheet"],
-      files: ["registry/miami/block/dashboard-01.tsx"],
-      component: React.lazy(() => import("~/registry/miami/block/dashboard-01.tsx")),
-      source: "__registry__/miami/block/dashboard-01.tsx",
-      category: "Application",
-      subcategory: "Dashboard",
-      chunks: [{
-        name: "dashboard-01-chunk-0",
-        description: "A card showing the total revenue in USD and the percentage difference from last month.",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-01-chunk-0")),
-        file: "registry/miami/block/dashboard-01-chunk-0.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-01-chunk-1",
-        description: "A card showing the total subscriptions and the percentage difference from last month.",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-01-chunk-1")),
-        file: "registry/miami/block/dashboard-01-chunk-1.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-01-chunk-2",
-        description: "A card showing the total sales and the percentage difference from last month.",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-01-chunk-2")),
-        file: "registry/miami/block/dashboard-01-chunk-2.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-01-chunk-3",
-        description: "A card showing the total active users and the percentage difference from last hour.",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-01-chunk-3")),
-        file: "registry/miami/block/dashboard-01-chunk-3.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-01-chunk-4",
-        description: "A card showing a table of recent transactions with a link to view all transactions.",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-01-chunk-4")),
-        file: "registry/miami/block/dashboard-01-chunk-4.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-01-chunk-5",
-        description: "A card showing a list of recent sales with customer names and email addresses.",
-        component: React.lazy(() => import("~/registry/miami/block/dashboard-01-chunk-5")),
-        file: "registry/miami/block/dashboard-01-chunk-5.tsx",
-        container: {
-          className: "undefined"
-        }
-      }]
-    },
-    "authentication-01": {
-      name: "authentication-01",
-      type: "registry:block",
-      registryDependencies: ["button","card","input","label"],
-      files: ["registry/miami/block/authentication-01.tsx"],
-      component: React.lazy(() => import("~/registry/miami/block/authentication-01.tsx")),
-      source: "__registry__/miami/block/authentication-01.tsx",
-      category: "Authentication",
-      subcategory: "Login",
-      chunks: []
-    },
-    "authentication-02": {
-      name: "authentication-02",
-      type: "registry:block",
-      registryDependencies: ["button","card","input","label"],
-      files: ["registry/miami/block/authentication-02.tsx"],
-      component: React.lazy(() => import("~/registry/miami/block/authentication-02.tsx")),
-      source: "__registry__/miami/block/authentication-02.tsx",
-      category: "Authentication",
-      subcategory: "Login",
-      chunks: []
-    },
-    "authentication-03": {
-      name: "authentication-03",
-      type: "registry:block",
-      registryDependencies: ["button","card","input","label"],
-      files: ["registry/miami/block/authentication-03.tsx"],
-      component: React.lazy(() => import("~/registry/miami/block/authentication-03.tsx")),
-      source: "__registry__/miami/block/authentication-03.tsx",
-      category: "Authentication",
-      subcategory: "Login",
-      chunks: []
-    },
-    "authentication-04": {
-      name: "authentication-04",
-      type: "registry:block",
-      registryDependencies: ["button","card","input","label"],
-      files: ["registry/miami/block/authentication-04.tsx"],
-      component: React.lazy(() => import("~/registry/miami/block/authentication-04.tsx")),
-      source: "__registry__/miami/block/authentication-04.tsx",
       category: "Authentication",
       subcategory: "Login",
       chunks: []
@@ -6634,6 +6546,17 @@ export const Index: Record<string, any> = {
       registryDependencies: undefined,
       files: ["registry/default/ui/shiny-button.tsx"],
       component: React.lazy(() => import("~/registry/default/ui/shiny-button.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "sidebar": {
+      name: "sidebar",
+      type: "registry:ui",
+      registryDependencies: ["button","separator","sheet","tooltip","input","use-mobile","skeleton"],
+      files: ["registry/default/ui/sidebar.tsx"],
+      component: React.lazy(() => import("~/registry/default/ui/sidebar.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
@@ -8850,6 +8773,149 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "demo-sidebar": {
+      name: "demo-sidebar",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/default/block/demo-sidebar.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/demo-sidebar.tsx")),
+      source: "__registry__/default/block/demo-sidebar.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-header": {
+      name: "demo-sidebar-header",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/default/block/demo-sidebar-header.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/demo-sidebar-header.tsx")),
+      source: "__registry__/default/block/demo-sidebar-header.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-footer": {
+      name: "demo-sidebar-footer",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/default/block/demo-sidebar-footer.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/demo-sidebar-footer.tsx")),
+      source: "__registry__/default/block/demo-sidebar-footer.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-group": {
+      name: "demo-sidebar-group",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/default/block/demo-sidebar-group.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/demo-sidebar-group.tsx")),
+      source: "__registry__/default/block/demo-sidebar-group.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-group-collapsible": {
+      name: "demo-sidebar-group-collapsible",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/default/block/demo-sidebar-group-collapsible.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/demo-sidebar-group-collapsible.tsx")),
+      source: "__registry__/default/block/demo-sidebar-group-collapsible.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-group-action": {
+      name: "demo-sidebar-group-action",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/default/block/demo-sidebar-group-action.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/demo-sidebar-group-action.tsx")),
+      source: "__registry__/default/block/demo-sidebar-group-action.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-menu": {
+      name: "demo-sidebar-menu",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/default/block/demo-sidebar-menu.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/demo-sidebar-menu.tsx")),
+      source: "__registry__/default/block/demo-sidebar-menu.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-menu-action": {
+      name: "demo-sidebar-menu-action",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/default/block/demo-sidebar-menu-action.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/demo-sidebar-menu-action.tsx")),
+      source: "__registry__/default/block/demo-sidebar-menu-action.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-menu-sub": {
+      name: "demo-sidebar-menu-sub",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/default/block/demo-sidebar-menu-sub.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/demo-sidebar-menu-sub.tsx")),
+      source: "__registry__/default/block/demo-sidebar-menu-sub.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-menu-collapsible": {
+      name: "demo-sidebar-menu-collapsible",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/default/block/demo-sidebar-menu-collapsible.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/demo-sidebar-menu-collapsible.tsx")),
+      source: "__registry__/default/block/demo-sidebar-menu-collapsible.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-menu-badge": {
+      name: "demo-sidebar-menu-badge",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/default/block/demo-sidebar-menu-badge.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/demo-sidebar-menu-badge.tsx")),
+      source: "__registry__/default/block/demo-sidebar-menu-badge.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-rsc": {
+      name: "demo-sidebar-rsc",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/default/block/demo-sidebar-rsc.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/demo-sidebar-rsc.tsx")),
+      source: "__registry__/default/block/demo-sidebar-rsc.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "demo-sidebar-controlled": {
+      name: "demo-sidebar-controlled",
+      type: "registry:block",
+      registryDependencies: undefined,
+      files: ["registry/default/block/demo-sidebar-controlled.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/demo-sidebar-controlled.tsx")),
+      source: "__registry__/default/block/demo-sidebar-controlled.tsx",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "magic-card-demo": {
       name: "magic-card-demo",
       type: "registry:example",
@@ -10291,90 +10357,169 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "charts-01": {
-      name: "charts-01",
-      type: "registry:block",
-      registryDependencies: ["chart"],
-      files: ["registry/default/block/charts-01.tsx"],
-      component: React.lazy(() => import("~/registry/default/block/charts-01.tsx")),
-      source: "__registry__/default/block/charts-01.tsx",
-      category: "Application",
-      subcategory: "Charts",
-      chunks: [{
-        name: "charts-01-chunk-0",
-        description: "A bar chart showing the number of steps you have walked in the past 7 days.",
-        component: React.lazy(() => import("~/registry/default/block/charts-01-chunk-0")),
-        file: "registry/default/block/charts-01-chunk-0.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "charts-01-chunk-1",
-        description: "A line chart showing the resting heart rate for the past 7 days.",
-        component: React.lazy(() => import("~/registry/default/block/charts-01-chunk-1")),
-        file: "registry/default/block/charts-01-chunk-1.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "charts-01-chunk-2",
-        description: "Two horizontal bar charts showing total steps taken during the current year and last year.",
-        component: React.lazy(() => import("~/registry/default/block/charts-01-chunk-2")),
-        file: "registry/default/block/charts-01-chunk-2.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "charts-01-chunk-3",
-        description: "A bar chart showing the walking and running distance for the past 7 days.",
-        component: React.lazy(() => import("~/registry/default/block/charts-01-chunk-3")),
-        file: "registry/default/block/charts-01-chunk-3.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "charts-01-chunk-4",
-        description: "A bar chart showing move, exercise, and stand progress.",
-        component: React.lazy(() => import("~/registry/default/block/charts-01-chunk-4")),
-        file: "registry/default/block/charts-01-chunk-4.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "charts-01-chunk-5",
-        description: "A radial bar chart showing the percentage of time spent moving, exercising, and standing.",
-        component: React.lazy(() => import("~/registry/default/block/charts-01-chunk-5")),
-        file: "registry/default/block/charts-01-chunk-5.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "charts-01-chunk-6",
-        description: "A bar chart showing active energy in the past 7 days.",
-        component: React.lazy(() => import("~/registry/default/block/charts-01-chunk-6")),
-        file: "registry/default/block/charts-01-chunk-6.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "charts-01-chunk-7",
-        description: "An area chart showing the time spent in bed for the past 7 days.",
-        component: React.lazy(() => import("~/registry/default/block/charts-01-chunk-7")),
-        file: "registry/default/block/charts-01-chunk-7.tsx",
-        container: {
-          className: "undefined"
-        }
-      }]
-    },
     "sidebar-01": {
       name: "sidebar-01",
       type: "registry:block",
-      registryDependencies: ["avatar","button","collapsible","dropdown-menu","drawer","separator","input","popover","sheet","progress","card","use-mobile"],
-      files: ["registry/default/block/sidebar-01/page.tsx","registry/default/block/sidebar-01/components/app-sidebar.tsx","registry/default/block/sidebar-01/components/nav-main.tsx","registry/default/block/sidebar-01/components/nav-projects.tsx","registry/default/block/sidebar-01/components/nav-secondary.tsx","registry/default/block/sidebar-01/components/nav-user.tsx","registry/default/block/sidebar-01/components/storage-card.tsx","registry/default/block/sidebar-01/components/team-switcher.tsx","registry/default/block/sidebar-01/hooks/use-sidebar.tsx","registry/default/block/sidebar-01/ui/sidebar.tsx"],
+      registryDependencies: ["sidebar","breadcrumb","separator","label","dropdown-menu"],
+      files: ["registry/default/block/sidebar-01/page.tsx","registry/default/block/sidebar-01/components/app-sidebar.tsx","registry/default/block/sidebar-01/components/search-form.tsx","registry/default/block/sidebar-01/components/version-switcher.tsx"],
       component: React.lazy(() => import("~/registry/default/block/sidebar-01/page.tsx")),
       source: "__registry__/default/block/sidebar-01/page.tsx",
       category: "Application",
-      subcategory: "Dashboard",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-02": {
+      name: "sidebar-02",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","label","dropdown-menu"],
+      files: ["registry/default/block/sidebar-02/page.tsx","registry/default/block/sidebar-02/components/app-sidebar.tsx","registry/default/block/sidebar-02/components/search-form.tsx","registry/default/block/sidebar-02/components/version-switcher.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/sidebar-02/page.tsx")),
+      source: "__registry__/default/block/sidebar-02/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-03": {
+      name: "sidebar-03",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb"],
+      files: ["registry/default/block/sidebar-03/page.tsx","registry/default/block/sidebar-03/components/app-sidebar.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/sidebar-03/page.tsx")),
+      source: "__registry__/default/block/sidebar-03/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-04": {
+      name: "sidebar-04",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator"],
+      files: ["registry/default/block/sidebar-04/page.tsx","registry/default/block/sidebar-04/components/app-sidebar.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/sidebar-04/page.tsx")),
+      source: "__registry__/default/block/sidebar-04/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-05": {
+      name: "sidebar-05",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","label","collapsible"],
+      files: ["registry/default/block/sidebar-05/page.tsx","registry/default/block/sidebar-05/components/app-sidebar.tsx","registry/default/block/sidebar-05/components/search-form.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/sidebar-05/page.tsx")),
+      source: "__registry__/default/block/sidebar-05/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-06": {
+      name: "sidebar-06",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","card","dropdown-menu"],
+      files: ["registry/default/block/sidebar-06/page.tsx","registry/default/block/sidebar-06/components/app-sidebar.tsx","registry/default/block/sidebar-06/components/nav-main.tsx","registry/default/block/sidebar-06/components/sidebar-opt-in-form.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/sidebar-06/page.tsx")),
+      source: "__registry__/default/block/sidebar-06/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-07": {
+      name: "sidebar-07",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","collapsible","dropdown-menu","avatar"],
+      files: ["registry/default/block/sidebar-07/page.tsx","registry/default/block/sidebar-07/components/app-sidebar.tsx","registry/default/block/sidebar-07/components/nav-main.tsx","registry/default/block/sidebar-07/components/nav-projects.tsx","registry/default/block/sidebar-07/components/nav-user.tsx","registry/default/block/sidebar-07/components/team-switcher.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/sidebar-07/page.tsx")),
+      source: "__registry__/default/block/sidebar-07/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-08": {
+      name: "sidebar-08",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","collapsible","dropdown-menu","avatar"],
+      files: ["registry/default/block/sidebar-08/page.tsx","registry/default/block/sidebar-08/components/app-sidebar.tsx","registry/default/block/sidebar-08/components/nav-main.tsx","registry/default/block/sidebar-08/components/nav-projects.tsx","registry/default/block/sidebar-08/components/nav-secondary.tsx","registry/default/block/sidebar-08/components/nav-user.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/sidebar-08/page.tsx")),
+      source: "__registry__/default/block/sidebar-08/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-09": {
+      name: "sidebar-09",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","collapsible","dropdown-menu","avatar","switch"],
+      files: ["registry/default/block/sidebar-09/page.tsx","registry/default/block/sidebar-09/components/nav-user.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/sidebar-09/page.tsx")),
+      source: "__registry__/default/block/sidebar-09/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-10": {
+      name: "sidebar-10",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","popover","collapsible","dropdown-menu"],
+      files: ["registry/default/block/sidebar-10/page.tsx","registry/default/block/sidebar-10/components/app-sidebar.tsx","registry/default/block/sidebar-10/components/nav-actions.tsx","registry/default/block/sidebar-10/components/nav-favorites.tsx","registry/default/block/sidebar-10/components/nav-main.tsx","registry/default/block/sidebar-10/components/nav-secondary.tsx","registry/default/block/sidebar-10/components/nav-workspaces.tsx","registry/default/block/sidebar-10/components/team-switcher.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/sidebar-10/page.tsx")),
+      source: "__registry__/default/block/sidebar-10/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-11": {
+      name: "sidebar-11",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","collapsible"],
+      files: ["registry/default/block/sidebar-11/page.tsx","registry/default/block/sidebar-11/components/app-sidebar.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/sidebar-11/page.tsx")),
+      source: "__registry__/default/block/sidebar-11/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-12": {
+      name: "sidebar-12",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","collapsible","calendar","dropdown-menu","avatar"],
+      files: ["registry/default/block/sidebar-12/page.tsx","registry/default/block/sidebar-12/components/app-sidebar.tsx","registry/default/block/sidebar-12/components/calendars.tsx","registry/default/block/sidebar-12/components/date-picker.tsx","registry/default/block/sidebar-12/components/nav-user.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/sidebar-12/page.tsx")),
+      source: "__registry__/default/block/sidebar-12/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-13": {
+      name: "sidebar-13",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","button","dialog"],
+      files: ["registry/default/block/sidebar-13/page.tsx","registry/default/block/sidebar-13/components/settings-dialog.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/sidebar-13/page.tsx")),
+      source: "__registry__/default/block/sidebar-13/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-14": {
+      name: "sidebar-14",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb"],
+      files: ["registry/default/block/sidebar-14/page.tsx","registry/default/block/sidebar-14/components/app-sidebar.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/sidebar-14/page.tsx")),
+      source: "__registry__/default/block/sidebar-14/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
+      chunks: []
+    },
+    "sidebar-15": {
+      name: "sidebar-15",
+      type: "registry:block",
+      registryDependencies: ["sidebar","breadcrumb","separator","popover","collapsible","dropdown-menu","calendar","avatar"],
+      files: ["registry/default/block/sidebar-15/page.tsx","registry/default/block/sidebar-15/components/calendars.tsx","registry/default/block/sidebar-15/components/date-picker.tsx","registry/default/block/sidebar-15/components/nav-favorites.tsx","registry/default/block/sidebar-15/components/nav-main.tsx","registry/default/block/sidebar-15/components/nav-secondary.tsx","registry/default/block/sidebar-15/components/nav-user.tsx","registry/default/block/sidebar-15/components/nav-workspaces.tsx","registry/default/block/sidebar-15/components/sidebar-left.tsx","registry/default/block/sidebar-15/components/sidebar-right.tsx","registry/default/block/sidebar-15/components/team-switcher.tsx"],
+      component: React.lazy(() => import("~/registry/default/block/sidebar-15/page.tsx")),
+      source: "__registry__/default/block/sidebar-15/page.tsx",
+      category: "Application",
+      subcategory: "Sidebars",
       chunks: []
     },
     "login-01": {
@@ -10384,327 +10529,6 @@ export const Index: Record<string, any> = {
       files: ["registry/default/block/login-01/page.tsx","registry/default/block/login-01/components/login-form.tsx"],
       component: React.lazy(() => import("~/registry/default/block/login-01/page.tsx")),
       source: "__registry__/default/block/login-01/page.tsx",
-      category: "Authentication",
-      subcategory: "Login",
-      chunks: []
-    },
-    "dashboard-05": {
-      name: "dashboard-05",
-      type: "registry:block",
-      registryDependencies: ["badge","breadcrumb","button","card","dropdown-menu","input","pagination","progress","separator","sheet","table","tabs","tooltip"],
-      files: ["registry/default/block/dashboard-05.tsx"],
-      component: React.lazy(() => import("~/registry/default/block/dashboard-05.tsx")),
-      source: "__registry__/default/block/dashboard-05.tsx",
-      category: "Application",
-      subcategory: "Dashboard",
-      chunks: [{
-        name: "dashboard-05-chunk-0",
-        description: "A card for an orders dashboard with a description and a button to create a new order.",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-05-chunk-0")),
-        file: "registry/default/block/dashboard-05-chunk-0.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-05-chunk-1",
-        description: "A stats card showing this week's total sales in USD, the percentage difference from last week, and a progress bar.",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-05-chunk-1")),
-        file: "registry/default/block/dashboard-05-chunk-1.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-05-chunk-2",
-        description: "A stats card showing this month's total sales in USD, the percentage difference from last month, and a progress bar.",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-05-chunk-2")),
-        file: "registry/default/block/dashboard-05-chunk-2.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-05-chunk-3",
-        description: "A table of recent orders showing the following columns: Customer, Type, Status, Date, and Amount.",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-05-chunk-3")),
-        file: "registry/default/block/dashboard-05-chunk-3.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-05-chunk-4",
-        description: "An order details card with order details, shipping information, customer information and payment information.",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-05-chunk-4")),
-        file: "registry/default/block/dashboard-05-chunk-4.tsx",
-        container: {
-          className: "undefined"
-        }
-      }]
-    },
-    "dashboard-06": {
-      name: "dashboard-06",
-      type: "registry:block",
-      registryDependencies: ["badge","breadcrumb","button","card","dropdown-menu","input","sheet","table","tabs","tooltip"],
-      files: ["registry/default/block/dashboard-06.tsx"],
-      component: React.lazy(() => import("~/registry/default/block/dashboard-06.tsx")),
-      source: "__registry__/default/block/dashboard-06.tsx",
-      category: "Application",
-      subcategory: "Dashboard",
-      chunks: [{
-        name: "dashboard-06-chunk-0",
-        description: "A list of products in a table with actions. Each row has an image, name, status, price, total sales, created at and actions.",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-06-chunk-0")),
-        file: "registry/default/block/dashboard-06-chunk-0.tsx",
-        container: {
-          className: "undefined"
-        }
-      }]
-    },
-    "dashboard-07": {
-      name: "dashboard-07",
-      type: "registry:block",
-      registryDependencies: ["badge","breadcrumb","button","card","dropdown-menu","input","pagination","progress","separator","sheet","table","tabs","tooltip"],
-      files: ["registry/default/block/dashboard-07.tsx"],
-      component: React.lazy(() => import("~/registry/default/block/dashboard-07.tsx")),
-      source: "__registry__/default/block/dashboard-07.tsx",
-      category: "Application",
-      subcategory: "Dashboard",
-      chunks: [{
-        name: "dashboard-07-chunk-0",
-        description: "A card with a form to edit the product details",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-07-chunk-0")),
-        file: "registry/default/block/dashboard-07-chunk-0.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-07-chunk-1",
-        description: "A card with a form to edit the product stock and variants",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-07-chunk-1")),
-        file: "registry/default/block/dashboard-07-chunk-1.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-07-chunk-2",
-        description: "A card with a form to edit the product category and subcategory",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-07-chunk-2")),
-        file: "registry/default/block/dashboard-07-chunk-2.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-07-chunk-3",
-        description: "A card with a form to edit the product status",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-07-chunk-3")),
-        file: "registry/default/block/dashboard-07-chunk-3.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-07-chunk-4",
-        description: "A card with a form to upload product images",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-07-chunk-4")),
-        file: "registry/default/block/dashboard-07-chunk-4.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-07-chunk-5",
-        description: "A card with a call to action to archive the product",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-07-chunk-5")),
-        file: "registry/default/block/dashboard-07-chunk-5.tsx",
-        container: {
-          className: "undefined"
-        }
-      }]
-    },
-    "dashboard-04": {
-      name: "dashboard-04",
-      type: "registry:block",
-      registryDependencies: ["button","card","dropdown-menu","input"],
-      files: ["registry/default/block/dashboard-04.tsx"],
-      component: React.lazy(() => import("~/registry/default/block/dashboard-04.tsx")),
-      source: "__registry__/default/block/dashboard-04.tsx",
-      category: "Application",
-      subcategory: "Dashboard",
-      chunks: [{
-        name: "dashboard-04-chunk-0",
-        description: "A sidebar navigation with links to general, security, integrations, support, organizations, and advanced settings.",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-04-chunk-0")),
-        file: "registry/default/block/dashboard-04-chunk-0.tsx",
-        container: {
-          className: "chunk-container after:right-0"
-        }
-      },{
-        name: "dashboard-04-chunk-1",
-        description: "A form to update the store name.",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-04-chunk-1")),
-        file: "registry/default/block/dashboard-04-chunk-1.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-04-chunk-2",
-        description: "A form to update the plugins directory with a checkbox to allow administrators to change the directory.",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-04-chunk-2")),
-        file: "registry/default/block/dashboard-04-chunk-2.tsx",
-        container: {
-          className: "undefined"
-        }
-      }]
-    },
-    "dashboard-03": {
-      name: "dashboard-03",
-      type: "registry:block",
-      registryDependencies: ["badge","button","drawer","input","label","select","textarea","tooltip"],
-      files: ["registry/default/block/dashboard-03.tsx"],
-      component: React.lazy(() => import("~/registry/default/block/dashboard-03.tsx")),
-      source: "__registry__/default/block/dashboard-03.tsx",
-      category: "Application",
-      subcategory: "Dashboard",
-      chunks: [{
-        name: "dashboard-03-chunk-0",
-        description: "A settings form a configuring an AI model and messages.",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-03-chunk-0")),
-        file: "registry/default/block/dashboard-03-chunk-0.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-03-chunk-1",
-        description: "A form for sending a message to an AI chatbot. The form has a textarea and buttons to upload files and record audio.",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-03-chunk-1")),
-        file: "registry/default/block/dashboard-03-chunk-1.tsx",
-        container: {
-          className: "undefined"
-        }
-      }]
-    },
-    "dashboard-02": {
-      name: "dashboard-02",
-      type: "registry:block",
-      registryDependencies: ["badge","button","card","dropdown-menu","input"],
-      files: ["registry/default/block/dashboard-02.tsx"],
-      component: React.lazy(() => import("~/registry/default/block/dashboard-02.tsx")),
-      source: "__registry__/default/block/dashboard-02.tsx",
-      category: "Application",
-      subcategory: "Dashboard",
-      chunks: [{
-        name: "dashboard-02-chunk-0",
-        description: "A card with a call to action",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-02-chunk-0")),
-        file: "registry/default/block/dashboard-02-chunk-0.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-02-chunk-1",
-        description: "An empty state showing no products with a heading, description and a call to action to add a product.",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-02-chunk-1")),
-        file: "registry/default/block/dashboard-02-chunk-1.tsx",
-        container: {
-          className: "undefined"
-        }
-      }]
-    },
-    "dashboard-01": {
-      name: "dashboard-01",
-      type: "registry:block",
-      registryDependencies: ["button","dropdown-menu","input","sheet"],
-      files: ["registry/default/block/dashboard-01.tsx"],
-      component: React.lazy(() => import("~/registry/default/block/dashboard-01.tsx")),
-      source: "__registry__/default/block/dashboard-01.tsx",
-      category: "Application",
-      subcategory: "Dashboard",
-      chunks: [{
-        name: "dashboard-01-chunk-0",
-        description: "A card showing the total revenue in USD and the percentage difference from last month.",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-01-chunk-0")),
-        file: "registry/default/block/dashboard-01-chunk-0.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-01-chunk-1",
-        description: "A card showing the total subscriptions and the percentage difference from last month.",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-01-chunk-1")),
-        file: "registry/default/block/dashboard-01-chunk-1.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-01-chunk-2",
-        description: "A card showing the total sales and the percentage difference from last month.",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-01-chunk-2")),
-        file: "registry/default/block/dashboard-01-chunk-2.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-01-chunk-3",
-        description: "A card showing the total active users and the percentage difference from last hour.",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-01-chunk-3")),
-        file: "registry/default/block/dashboard-01-chunk-3.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-01-chunk-4",
-        description: "A card showing a table of recent transactions with a link to view all transactions.",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-01-chunk-4")),
-        file: "registry/default/block/dashboard-01-chunk-4.tsx",
-        container: {
-          className: "undefined"
-        }
-      },{
-        name: "dashboard-01-chunk-5",
-        description: "A card showing a list of recent sales with customer names and email addresses.",
-        component: React.lazy(() => import("~/registry/default/block/dashboard-01-chunk-5")),
-        file: "registry/default/block/dashboard-01-chunk-5.tsx",
-        container: {
-          className: "undefined"
-        }
-      }]
-    },
-    "authentication-01": {
-      name: "authentication-01",
-      type: "registry:block",
-      registryDependencies: ["button","card","input","label"],
-      files: ["registry/default/block/authentication-01.tsx"],
-      component: React.lazy(() => import("~/registry/default/block/authentication-01.tsx")),
-      source: "__registry__/default/block/authentication-01.tsx",
-      category: "Authentication",
-      subcategory: "Login",
-      chunks: []
-    },
-    "authentication-02": {
-      name: "authentication-02",
-      type: "registry:block",
-      registryDependencies: ["button","card","input","label"],
-      files: ["registry/default/block/authentication-02.tsx"],
-      component: React.lazy(() => import("~/registry/default/block/authentication-02.tsx")),
-      source: "__registry__/default/block/authentication-02.tsx",
-      category: "Authentication",
-      subcategory: "Login",
-      chunks: []
-    },
-    "authentication-03": {
-      name: "authentication-03",
-      type: "registry:block",
-      registryDependencies: ["button","card","input","label"],
-      files: ["registry/default/block/authentication-03.tsx"],
-      component: React.lazy(() => import("~/registry/default/block/authentication-03.tsx")),
-      source: "__registry__/default/block/authentication-03.tsx",
-      category: "Authentication",
-      subcategory: "Login",
-      chunks: []
-    },
-    "authentication-04": {
-      name: "authentication-04",
-      type: "registry:block",
-      registryDependencies: ["button","card","input","label"],
-      files: ["registry/default/block/authentication-04.tsx"],
-      component: React.lazy(() => import("~/registry/default/block/authentication-04.tsx")),
-      source: "__registry__/default/block/authentication-04.tsx",
       category: "Authentication",
       subcategory: "Login",
       chunks: []

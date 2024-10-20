@@ -6,7 +6,8 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { ny } from '~/lib/utils'
 import { useLiftMode } from '~/hooks/use-lift-mode'
 import { BlockCopyButton } from '~/components/block-copy-button'
-import type { Block, BlockChunk } from '~/registry/schema'
+import type { Block } from '~/registry/schema'
+import type { BlockChunk } from '~/registry/schema'
 
 export function BlockChunk({
    block,
@@ -16,8 +17,9 @@ export function BlockChunk({
 }: React.PropsWithChildren<{ block: Block, chunk?: BlockChunk }>) {
    const { isLiftMode } = useLiftMode(block.name)
 
-   if (!chunk)
+   if (!chunk) {
       return null
+   }
 
    return (
       <AnimatePresence>
@@ -37,7 +39,7 @@ export function BlockChunk({
             >
                <div className="relative z-30">{children}</div>
                {chunk.code && (
-                  <div className="absolute inset-x-0 top-0 z-20 flex px-4 py-3 opacity-0 transition-all duration-200 ease-in group-hover:-translate-y-12 group-hover:opacity-100">
+                  <div className="absolute inset-x-0 top-0 z-30 flex px-4 py-3 opacity-0 transition-all duration-200 ease-in group-hover:-translate-y-12 group-hover:opacity-100">
                      <div className="flex w-full items-center justify-end gap-2">
                         <BlockCopyButton
                            event="copy_chunk_code"

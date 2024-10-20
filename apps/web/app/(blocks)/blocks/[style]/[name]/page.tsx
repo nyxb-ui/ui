@@ -26,12 +26,15 @@ export async function generateMetadata({
       return {}
    }
 
+   const title = block.name
+   const description = block.description
+
    return {
-      title: block.name,
-      description: block.description,
+      title: `${block.description} - ${block.name}`,
+      description,
       openGraph: {
-         title: block.name,
-         description: block.description,
+         title,
+         description,
          type: 'article',
          url: absoluteUrl(`/blocks/${block.name}`),
          images: [
@@ -45,10 +48,10 @@ export async function generateMetadata({
       },
       twitter: {
          card: 'summary_large_image',
-         title: block.name,
-         description: block.description,
+         title,
+         description,
          images: [siteConfig.ogImage],
-         creator: '@nyxb0',
+         creator: '@shadny',
       },
    }
 }

@@ -34,9 +34,9 @@ export default function BlocksLayout({
                </Button>
                <Button asChild variant="ghost" size="sm">
                   <a
-                     rel="noreferrer noopener"
                      href="https://github.com/nyxb-ui/ui/discussions/new?category=blocks-request"
                      target="_blank"
+                     rel="noreferrer noopener"
                   >
                      Request a block
                   </a>

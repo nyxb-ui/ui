@@ -93,6 +93,11 @@ const nextConfig = {
             destination: '/docs/templates/startup',
             permanent: false,
          },
+         {
+            source: '/sidebar',
+            destination: '/docs/components/sidebar',
+            permanent: true,
+         },
       ]
    },
    webpack: (config) => {

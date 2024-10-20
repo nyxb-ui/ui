@@ -24,8 +24,9 @@ export function BlockWrapper({
 
          const $component = components[index]
 
-         if (!$chunk || !$component)
+         if (!$chunk || !$component) {
             return
+         }
 
          const position = $component.getBoundingClientRect()
          $chunk.style.zIndex = '40'

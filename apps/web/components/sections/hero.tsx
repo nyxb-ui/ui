@@ -57,7 +57,7 @@ export default async function Hero() {
                               'text-5xl sm:text-7xl md:text-7xl lg:text-7xl',
                            )}
                         >
-                           Fusion UI library Shadcn/ui + MagicUI
+                           Nyxb UI library
                         </h1>
                      </div>
 
