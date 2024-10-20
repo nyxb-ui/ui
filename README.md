@@ -4,7 +4,7 @@
 </p>
 <h3 align="center">Nyxb UI</h3>
 <p align="center">
-    Nyxb UI library
+    Nyxb UI
 </p>
 <div align="center">
   <a href="https://github.com/nyxb-ui/ui/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/nyxb-ui/ui"></a>

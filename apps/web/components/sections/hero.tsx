@@ -57,7 +57,7 @@ export default async function Hero() {
                               'text-5xl sm:text-7xl md:text-7xl lg:text-7xl',
                            )}
                         >
-                           Nyxb UI library
+                           Nyxb UI
                         </h1>
                      </div>
 
