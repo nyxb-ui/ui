@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { Command } from 'commander'
 import packageJson from '../package.json'
+import { DEPRECATED_MESSAGE } from './deprecated'
 import { add } from '~/src/commands/add'
 import { diff } from '~/src/commands/diff'
 import { init } from '~/src/commands/init'
@@ -14,6 +15,7 @@ async function main() {
    const program = new Command()
       .name('nyxbui')
       .description('Manage nyxbui components and dependencies to your project')
+      .addHelpText('after', DEPRECATED_MESSAGE)
       .version(
          packageJson.version,
          '-v, --version',

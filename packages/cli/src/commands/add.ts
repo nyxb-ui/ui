@@ -10,6 +10,7 @@ import { getConfig } from '~/src/utils/get-config'
 import { getPackageManager } from '~/src/utils/get-package-manager'
 import { handleError } from '~/src/utils/handle-error'
 import { logger } from '~/src/utils/logger'
+import { DEPRECATED_MESSAGE } from '~/src/deprecated'
 import {
    fetchTree,
    getItemTargetPath,
@@ -43,6 +44,8 @@ export const add = new Command()
    .option('-p, --path <path>', 'the path to add the component to.')
    .action(async (components, opts) => {
       try {
+         // eslint-disable-next-line no-console
+         console.log(DEPRECATED_MESSAGE)
          const options = addOptionsSchema.parse({
             components,
             ...opts,

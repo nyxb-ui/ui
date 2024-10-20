@@ -2,6 +2,9 @@
 
 A CLI for adding components to your project.
 
+> [!WARNING]
+> The nyxb-ui CLI is deprecated. Bug fixes and new features should be added to the `.packages/nyxb` instead.
+
 ## Usage
 
 Use the `init` command to initialize dependencies for a new project.

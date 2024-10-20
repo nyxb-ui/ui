@@ -7,8 +7,9 @@ import template from 'lodash.template'
 import ora from 'ora'
 import prompts from 'prompts'
 import { z } from 'zod'
-
 import { applyPrefixesCss } from '../utils/transformers/transform-tw-prefix'
+import { DEPRECATED_MESSAGE } from '~/src/deprecated'
+
 import * as templates from '~/src/utils/templates'
 import {
    getRegistryBaseColor,
@@ -58,6 +59,8 @@ export const init = new Command()
    )
    .action(async (opts) => {
       try {
+         // eslint-disable-next-line no-console
+         console.log(DEPRECATED_MESSAGE)
          const options = initOptionsSchema.parse(opts)
          const cwd = path.resolve(options.cwd)
 
