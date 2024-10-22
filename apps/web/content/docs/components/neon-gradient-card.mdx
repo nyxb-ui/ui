@@ -8,8 +8,7 @@ published: true
 
 <ComponentPreview name="neon-gradient-card-demo" />
 
-
-### Installation
+## Installation
 
 <Tabs defaultValue="cli">
 
@@ -29,15 +28,23 @@ npx nyxb@latest add neon-gradient-card
 
 <Steps>
 
-Copy and paste the following code into your project.
+<Step>Copy and paste the following code into your project.</Step>
 
-```ts
-// tailwind.config.ts
+<ComponentSource name="neon-gradient-card" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+<Step>Update `tailwind.config.js`</Step>
+
+Add the following animations to your `tailwind.config.js` file:
+
+```js title="tailwind.config.js" {5-14}
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   theme: {
     extend: {
       animation: {
-        backgroundPositionSpin:
+        "background-position-spin":
           "background-position-spin 3000ms infinite alternate",
       },
       keyframes: {
@@ -50,12 +57,6 @@ module.exports = {
   },
 };
 ```
-
-```text
-components/ui/neon-gradient-card.tsx
-```
-
-<ComponentSource name="neon-gradient-card" />
 
 </Steps>
 
@@ -72,4 +73,3 @@ components/ui/neon-gradient-card.tsx
 | borderSize   | number    | The size of the border                        | 5                                                   |
 | borderRadius | number    | The size of the radius                        | 20                                                  |
 | neonColors   | object    | The colors of the neon gradient               | `{ firstColor: "#ff00aa", secondColor: "#00FFF1" }` |
-
