@@ -721,7 +721,30 @@ async function buildThemes() {
       // Build registry/themes/[theme].json
       // ----------------------------------------------------------------------------
       rimraf.sync(path.join(REGISTRY_PATH, 'themes'))
-      for (const baseColor of ['slate', 'gray', 'zinc', 'neutral', 'stone']) {
+      for (const baseColor of [
+         'slate',
+         'gray',
+         'zinc',
+         'neutral',
+         'stone',
+         'red',
+         'orange',
+         'amber',
+         'yellow',
+         'lime',
+         'green',
+         'emerald',
+         'teal',
+         'cyan',
+         'sky',
+         'blue',
+         'indigo',
+         'violet',
+         'purple',
+         'fuchsia',
+         'pink',
+         'rose',
+      ]) {
          const payload: Record<string, any> = {
             name: baseColor,
             label: baseColor.charAt(0).toUpperCase() + baseColor.slice(1),
