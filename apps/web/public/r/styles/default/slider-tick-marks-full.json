@@ -1,0 +1,15 @@
+{
+  "name": "slider-tick-marks-full",
+  "type": "registry:example",
+  "registryDependencies": [
+    "slider"
+  ],
+  "files": [
+    {
+      "path": "example/slider-tick-marks-full.tsx",
+      "content": "import { ny } from '~/lib/utils'\nimport { Slider } from '~/registry/default/ui/slider'\n\ntype SliderProps = React.ComponentProps<typeof Slider>\n\nexport default function SliderTickMarksFull({ className, ...props }: SliderProps) {\n   return (\n      <Slider\n         defaultValue={[2]}\n         max={5}\n         step={1}\n         className={ny('w-3/5', className)}\n         showSteps=\"full\"\n         {...props}\n      />\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

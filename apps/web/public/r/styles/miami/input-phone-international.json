@@ -1,0 +1,17 @@
+{
+  "name": "input-phone-international",
+  "type": "registry:example",
+  "registryDependencies": [
+    "button",
+    "input",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "example/input-phone-international.tsx",
+      "content": "import * as React from 'react'\n\nimport { InputPhone } from '~/registry/miami/ui/input-phone'\n\nexport default function InputPhoneInternational() {\n   const [value, setValue] = React.useState('')\n\n   return (\n      <InputPhone\n         value={value}\n         onChange={setValue}\n         international\n         defaultCountry=\"US\"\n      />\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

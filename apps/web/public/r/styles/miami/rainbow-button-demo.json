@@ -1,0 +1,12 @@
+{
+  "name": "rainbow-button-demo",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/rainbow-button-demo.tsx",
+      "content": "import { RainbowButton } from '~/registry/miami/ui/rainbow-button'\n\nexport default function RainbowButtonDemo() {\n   return <RainbowButton>Get Unlimited Access</RainbowButton>\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

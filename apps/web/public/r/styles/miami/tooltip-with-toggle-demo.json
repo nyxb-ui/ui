@@ -1,0 +1,15 @@
+{
+  "name": "tooltip-with-toggle-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "example/tooltip-with-toggle-demo.tsx",
+      "content": "import { Heart } from 'lucide-react'\n\nimport { Toggle } from '~/registry/miami/ui/toggle'\nimport {\n   Tooltip,\n   TooltipContent,\n   TooltipProvider,\n   TooltipTrigger,\n} from '~/registry/miami/ui/tooltip'\n\nexport default function TooltipWithToggleDemo() {\n   return (\n      <TooltipProvider>\n         <Tooltip>\n            <TooltipTrigger>\n               <Toggle variant=\"outline\" aria-label=\"Toggle Heart\">\n                  <Heart className=\"size-4\" />\n               </Toggle>\n            </TooltipTrigger>\n            <TooltipContent><p>Heart</p></TooltipContent>\n         </Tooltip>\n      </TooltipProvider>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

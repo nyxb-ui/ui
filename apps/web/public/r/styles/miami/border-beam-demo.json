@@ -1,0 +1,12 @@
+{
+  "name": "border-beam-demo",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/border-beam-demo.tsx",
+      "content": "import { BorderBeam } from '~/registry/miami/ui/border-beam'\n\nexport default function BorderBeamDemo() {\n   return (\n      <div className=\"relative rounded-xl\">\n         <img\n            src=\"/dashboard-dark.png\"\n            alt=\"Hero Image\"\n            className=\"hidden w-[700px] rounded-[inherit] border object-contain shadow-lg dark:block\"\n         />\n         <img\n            src=\"/dashboard-light.png\"\n            alt=\"Hero Image\"\n            className=\"block w-[700px] rounded-[inherit] border object-contain shadow-lg dark:hidden\"\n         />\n\n         <BorderBeam size={250} duration={12} delay={9} />\n      </div>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

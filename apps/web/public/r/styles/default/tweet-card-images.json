@@ -1,0 +1,12 @@
+{
+  "name": "tweet-card-images",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/tweet-card-images.tsx",
+      "content": "import ClientTweetCard from '~/registry/default/ui/client-tweet-card'\n\nexport default async function TweetImages() {\n   return <ClientTweetCard id=\"1803717292087296479\" className=\"shadow-2xl\" />\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

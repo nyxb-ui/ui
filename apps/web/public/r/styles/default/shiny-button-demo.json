@@ -1,0 +1,12 @@
+{
+  "name": "shiny-button-demo",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/shiny-button-demo.tsx",
+      "content": "import ShinyButton from '~/registry/default/ui/shiny-button'\n\nexport default function ShinyButtonDemo() {\n   return <ShinyButton text=\"Shiny Button\" />\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

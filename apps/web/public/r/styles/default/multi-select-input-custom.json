@@ -1,0 +1,15 @@
+{
+  "name": "multi-select-input-custom",
+  "type": "registry:example",
+  "registryDependencies": [
+    "multi-select"
+  ],
+  "files": [
+    {
+      "path": "example/multi-select-input-custom.tsx",
+      "content": "'use client'\n\nimport { useRef, useState } from 'react'\n\nimport {\n   MultiSelect,\n   MultiSelectContent,\n   MultiSelectEmpty,\n   MultiSelectList,\n   type MultiSelectOption,\n   type MultiSelectOptionGroup,\n   MultiSelectSearch,\n   MultiSelectTrigger,\n   MultiSelectValue,\n   renderMultiSelectOptions,\n} from '~/registry/default/ui/multi-select'\n\nconst ALL_ITEMS = [\n   { value: 'react', label: 'React', group: 'React' },\n   { value: 'next', label: 'Next.js', group: 'React' },\n   { value: 'remix', label: 'Remix', group: 'React' },\n   { value: 'vue', label: 'Vue', group: 'Vue' },\n   { value: 'nuxt', label: 'Nuxt.js', group: 'Vue' },\n   { value: 'angular', label: 'Angular', group: 'Others' },\n   { value: 'svelte', label: 'Svelte', group: 'Others' },\n]\n\nfunction group(options: Array<(typeof ALL_ITEMS)[number]>): MultiSelectOptionGroup[] {\n   return options.reduce((acc, item) => {\n      const group = acc.find(g => g.heading === item.group)\n      if (group)\n         group.children.push(item)\n      else\n         acc.push({ heading: item.group, children: [item] })\n\n      return acc\n   }, [] as MultiSelectOptionGroup[])\n}\n\nasync function search(keyword?: string) {\n   if (!keyword)\n      return group(ALL_ITEMS)\n   const lowerKeyword = keyword.toLowerCase()\n   const filtered = ALL_ITEMS.filter(item =>\n      item.label.toLowerCase().includes(lowerKeyword),\n   )\n\n   if (!filtered.length) {\n      return [\n         {\n            label: keyword,\n            value: keyword,\n         },\n      ]\n   }\n\n   return group(filtered)\n}\n\nexport default function MultiSelectInputCustomDemo() {\n   const [loading, setLoading] = useState(false)\n   const [options, setOptions] = useState<MultiSelectOption[]>(() =>\n      group(ALL_ITEMS),\n   )\n\n   const indexRef = useRef(0)\n\n   const handleSearch = async (keyword: string) => {\n      const index = ++indexRef.current\n      setLoading(true)\n      const newOptions = await search(keyword)\n      if (indexRef.current === index) {\n         setOptions(newOptions)\n         setLoading(false)\n      }\n   }\n\n   return (\n      <MultiSelect onSearch={keyword => handleSearch(keyword ?? '')}>\n         <MultiSelectTrigger className=\"w-96\">\n            <MultiSelectValue placeholder=\"Select stack\" />\n         </MultiSelectTrigger>\n         <MultiSelectContent>\n            <MultiSelectSearch placeholder=\"input any...\" />\n            <MultiSelectList>\n               {loading ? null : renderMultiSelectOptions(options)}\n               <MultiSelectEmpty>\n                  {loading ? 'Loading...' : 'No results found'}\n               </MultiSelectEmpty>\n            </MultiSelectList>\n         </MultiSelectContent>\n      </MultiSelect>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

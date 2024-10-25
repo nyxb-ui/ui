@@ -1,0 +1,15 @@
+{
+  "name": "slider-format-label-side",
+  "type": "registry:example",
+  "registryDependencies": [
+    "slider"
+  ],
+  "files": [
+    {
+      "path": "example/slider-format-label-side.tsx",
+      "content": "import { ny } from '~/lib/utils'\nimport { Slider } from '~/registry/miami/ui/slider'\n\ntype SliderProps = React.ComponentProps<typeof Slider>\n\nexport default function SliderFormatLabelSide({ className, ...props }: SliderProps) {\n   return (\n      <Slider\n         defaultValue={[2]}\n         max={5}\n         step={1}\n         className={ny('w-3/5', className)}\n         formatLabel={value => `${value} points`}\n         formatLabelSide=\"left\"\n         {...props}\n      />\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

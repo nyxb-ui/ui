@@ -1,6 +1,7 @@
 {
   "name": "demo-sidebar-controlled",
   "type": "registry:block",
+  "description": "",
   "files": [
     {
       "path": "block/demo-sidebar-controlled.tsx",

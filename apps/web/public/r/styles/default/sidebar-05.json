@@ -1,6 +1,7 @@
 {
   "name": "sidebar-05",
   "type": "registry:block",
+  "description": "A sidebar with collapsible submenus.",
   "registryDependencies": [
     "sidebar",
     "breadcrumb",

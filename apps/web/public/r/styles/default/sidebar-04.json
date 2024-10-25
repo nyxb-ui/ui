@@ -1,6 +1,7 @@
 {
   "name": "sidebar-04",
   "type": "registry:block",
+  "description": "A floating sidebar with submenus.",
   "registryDependencies": [
     "sidebar",
     "breadcrumb",

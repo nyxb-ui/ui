@@ -1,6 +1,7 @@
 {
   "name": "demo-sidebar-rsc",
   "type": "registry:block",
+  "description": "",
   "files": [
     {
       "path": "block/demo-sidebar-rsc.tsx",

@@ -1,0 +1,12 @@
+{
+  "name": "animated-subscribe-button-demo",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/animated-subscribe-button-demo.tsx",
+      "content": "import { CheckIcon, ChevronRightIcon } from 'lucide-react'\nimport { AnimatedSubscribeButton } from '~/registry/default/ui/animated-subscribe-button'\n\nexport default function AnimatedSubscribeButtonDemo() {\n   return (\n      <AnimatedSubscribeButton\n         buttonColor=\"#000000\"\n         buttonTextColor=\"#ffffff\"\n         subscribeStatus={false}\n         initialText={(\n            <span className=\"group inline-flex items-center\">\n               Subscribe\n               {' '}\n               <ChevronRightIcon className=\"ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1\" />\n            </span>\n         )}\n         changeText={(\n            <span className=\"group inline-flex items-center\">\n               <CheckIcon className=\"mr-2 size-4\" />\n               Subscribed\n               {' '}\n            </span>\n         )}\n      />\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

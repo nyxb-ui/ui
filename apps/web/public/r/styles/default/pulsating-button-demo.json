@@ -1,0 +1,12 @@
+{
+  "name": "pulsating-button-demo",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/pulsating-button-demo.tsx",
+      "content": "import { PulsatingButton } from '~/registry/default/ui/pulsating-button'\n\nfunction PulsatingButtonDemo() {\n   return (\n      <PulsatingButton\n         text=\"Join Affiliate Program\"\n         pulseColor=\"150, 0, 255\"\n         backgroundColor=\"#9945FF\"\n         textColor=\"#ffffff\"\n         animationDuration=\"1.5s\"\n         buttonWidth=\"200px\"\n         buttonHeight=\"50px\"\n      />\n   )\n}\n\nexport default PulsatingButtonDemo\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

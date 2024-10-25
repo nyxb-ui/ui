@@ -1,0 +1,12 @@
+{
+  "name": "shine-border-demo-2",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/shine-border-demo-2.tsx",
+      "content": "import ShineBorder from '~/registry/default/ui/shine-border'\n\nexport default function ShineBorderDemo() {\n   return (\n      <ShineBorder className=\"text-center text-2xl font-bold capitalize\">\n         Shine Border\n      </ShineBorder>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 {
   "name": "sidebar-07",
   "type": "registry:block",
+  "description": "A sidebar that collapses to icons.",
   "registryDependencies": [
     "sidebar",
     "breadcrumb",

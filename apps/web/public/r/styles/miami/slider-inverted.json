@@ -1,0 +1,15 @@
+{
+  "name": "slider-inverted",
+  "type": "registry:example",
+  "registryDependencies": [
+    "slider"
+  ],
+  "files": [
+    {
+      "path": "example/slider-inverted.tsx",
+      "content": "import { ny } from '~/lib/utils'\nimport { Slider } from '~/registry/miami/ui/slider'\n\ntype SliderProps = React.ComponentProps<typeof Slider>\n\nexport default function SliderInverted({ className, ...props }: SliderProps) {\n   return (\n      <Slider\n         defaultValue={[50]}\n         max={100}\n         step={1}\n         className={ny('w-3/5', className)}\n         inverted\n         {...props}\n      />\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

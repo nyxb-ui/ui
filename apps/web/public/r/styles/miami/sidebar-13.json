@@ -1,6 +1,7 @@
 {
   "name": "sidebar-13",
   "type": "registry:block",
+  "description": "A sidebar in a dialog.",
   "registryDependencies": [
     "sidebar",
     "breadcrumb",

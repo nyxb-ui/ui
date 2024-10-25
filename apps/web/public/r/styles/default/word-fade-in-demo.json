@@ -1,0 +1,12 @@
+{
+  "name": "word-fade-in-demo",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/word-fade-in-demo.tsx",
+      "content": "import WordFadeIn from '~/registry/default/ui/word-fade-in'\n\nexport default async function WordFadeInDemo() {\n   return <WordFadeIn words=\"Word Fade In\" />\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

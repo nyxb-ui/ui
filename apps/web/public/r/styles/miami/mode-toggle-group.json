@@ -1,0 +1,12 @@
+{
+  "name": "mode-toggle-group",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/mode-toggle-group.tsx",
+      "content": "'use client'\n\nimport * as React from 'react'\nimport { LaptopIcon, MoonIcon, SunIcon } from '@radix-ui/react-icons'\nimport { useEffect, useState } from 'react'\nimport { useTheme } from 'next-themes'\n\nimport {\n   ToggleGroup,\n   ToggleGroupItem,\n} from '~/registry/miami/ui/toggle-group'\n\nexport default function ModeToggleGroup() {\n   const { setTheme, theme } = useTheme()\n   const [currentTheme, setCurrentTheme] = useState<string>('')\n\n   useEffect(() => {\n      if (theme === 'system')\n         setCurrentTheme('system')\n      else if (theme === 'dark')\n         setCurrentTheme('dark')\n      else if (theme === 'light')\n         setCurrentTheme('light')\n   }, [theme])\n\n   return (\n      <ToggleGroup type=\"single\" variant=\"outline\" className=\"scale-90 rounded-full border p-1\" value={currentTheme}>\n         <ToggleGroupItem\n            value=\"light\"\n            onClick={() => setTheme('light')}\n            disabled={theme === 'light'}\n            className=\"disabled:bg-accent rounded-full disabled:opacity-100\"\n         >\n            <SunIcon className=\"size-5\" />\n         </ToggleGroupItem>\n         <ToggleGroupItem\n            value=\"system\"\n            onClick={() => setTheme('system')}\n            disabled={theme === 'system'}\n            className=\"disabled:bg-accent rounded-full disabled:opacity-100\"\n         >\n            <LaptopIcon className=\"size-5\" />\n         </ToggleGroupItem>\n         <ToggleGroupItem\n            value=\"dark\"\n            onClick={() => setTheme('dark')}\n            disabled={theme === 'dark'}\n            className=\"disabled:bg-accent rounded-full disabled:opacity-100\"\n         >\n            <MoonIcon className=\"size-5\" />\n         </ToggleGroupItem>\n      </ToggleGroup>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

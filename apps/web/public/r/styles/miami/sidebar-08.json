@@ -1,6 +1,7 @@
 {
   "name": "sidebar-08",
   "type": "registry:block",
+  "description": "An inset sidebar with secondary navigation.",
   "registryDependencies": [
     "sidebar",
     "breadcrumb",
