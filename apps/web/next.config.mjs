@@ -98,6 +98,11 @@ const nextConfig = {
             destination: '/docs/components/sidebar',
             permanent: true,
          },
+         {
+            source: '/react-19',
+            destination: '/docs/react-19',
+            permanent: true,
+         },
       ]
    },
    webpack: (config) => {

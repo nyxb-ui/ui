@@ -14,8 +14,8 @@ import { useTheme } from 'next-themes'
 
 import { ny } from '~/lib/utils'
 import { useConfig } from '~/hooks/use-config'
-import { copyToClipboardWithMeta } from '~/components/copy-button'
-import { ThemeWrapper } from '~/components/theme-wrapper'
+import { copyToClipboardWithMeta } from '~/components/copy-button2'
+import { ThemeWrapper } from '~/components/theme-wrapper2'
 import { Button } from '~/registry/miami/ui/button'
 import {
    Dialog,
@@ -45,7 +45,7 @@ import {
 import type { BaseColor } from '~/registry/registry-base-colors'
 import { baseColors } from '~/registry/registry-base-colors'
 
-import '~/styles/mdx.css'
+import '~/styles/mdx2.css'
 
 export function ThemeCustomizer() {
    const [config, setConfig] = useConfig()
@@ -213,7 +213,7 @@ function Customizer() {
                         alignOffset={-20}
                      >
                         <p className="font-medium">
-                           What is the difference between the Miami and Default style?
+                           What is the difference between the New York and Default style?
                         </p>
                         <p>
                            A style comes with its own set of components, animations,
@@ -231,7 +231,7 @@ function Customizer() {
                         <p>
                            The
                            {' '}
-                           <span className="font-medium">Miami</span>
+                           <span className="font-medium">New York</span>
                            {' '}
                            style ships
                            with smaller buttons and cards with shadows. It uses icons
@@ -259,7 +259,7 @@ function Customizer() {
                         config.style === 'miami' && 'border-primary border-2',
                      )}
                   >
-                     Miami
+                     New Miami
                   </Button>
                </div>
             </div>
