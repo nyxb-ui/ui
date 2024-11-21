@@ -6,7 +6,7 @@ describe("registryResolveItemTree", () => {
   test("should resolve items tree", async () => {
     expect(
       await registryResolveItemsTree(["button"], {
-        style: "miami",
+        style: "new-york",
         tailwind: {
           baseColor: "stone",
         },

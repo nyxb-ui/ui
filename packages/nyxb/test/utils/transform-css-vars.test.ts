@@ -19,8 +19,8 @@ export function Foo() {
           cssVariables: true,
         },
         aliases: {
-          components: "@/components",
-          utils: "@/lib/utils",
+          components: "~/components",
+          utils: "~/lib/utils",
         },
       },
       baseColor: stone,
@@ -42,8 +42,8 @@ export function Foo() {
           cssVariables: false,
         },
         aliases: {
-          components: "@/components",
-          utils: "@/lib/utils",
+          components: "~/components",
+          utils: "~/lib/utils",
         },
       },
       baseColor: stone,
@@ -65,8 +65,8 @@ export function Foo() {
           cssVariables: false,
         },
         aliases: {
-          components: "@/components",
-          utils: "@/lib/utils",
+          components: "~/components",
+          utils: "~/lib/utils",
         },
       },
       baseColor: stone,
@@ -88,8 +88,8 @@ export function Foo() {
           cssVariables: false,
         },
         aliases: {
-          components: "@/components",
-          utils: "@/lib/utils",
+          components: "~/components",
+          utils: "~/lib/utils",
         },
       },
       baseColor: stone,

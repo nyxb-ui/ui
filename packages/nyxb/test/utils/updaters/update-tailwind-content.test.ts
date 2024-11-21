@@ -4,7 +4,7 @@ import { transformTailwindContent } from "../../../src/utils/updaters/update-tai
 
 const SHARED_CONFIG = {
   $schema: "https://nyxbui.design/schema.json",
-  style: "miami",
+  style: "new-york",
   rsc: true,
   tsx: true,
   tailwind: {
@@ -14,8 +14,8 @@ const SHARED_CONFIG = {
     cssVariables: true,
   },
   aliases: {
-    components: "@/components",
-    utils: "@/lib/utils",
+    components: "~/components",
+    utils: "~/lib/utils",
   },
   resolvedPaths: {
     cwd: ".",

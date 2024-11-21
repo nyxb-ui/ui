@@ -37,7 +37,9 @@ export async function createProject(
       }
    }
 
-   const packageManager = await getPackageManager(options.cwd)
+   const packageManager = await getPackageManager(options.cwd, {
+      withFallback: true,
+   })
 
    const { name } = await prompts({
       type: 'text',
@@ -88,7 +90,7 @@ export async function createProject(
       '--typescript',
       '--app',
       options.srcDir ? '--src-dir' : '--no-src-dir',
-      '--import-alias=~/*',
+      '--no-import-alias',
     `--use-${packageManager}`,
    ]
 

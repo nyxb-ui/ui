@@ -26,7 +26,7 @@ test.skip("init config-full", async () => {
       "@tailwind base;\n@tailwind components;\n@tailwind utilities;\n",
   })
   vi.spyOn(registry, "getRegistryItem").mockResolvedValue({
-    name: "miami",
+    name: "new-york",
     dependencies: [
       "tailwindcss-animate",
       "class-variance-authority",
@@ -118,7 +118,7 @@ test.skip("init config-partial", async () => {
       "@tailwind base;\n@tailwind components;\n@tailwind utilities;\n",
   })
   vi.spyOn(registry, "getRegistryItem").mockResolvedValue({
-    name: "miami",
+    name: "new-york",
     dependencies: [
       "tailwindcss-animate",
       "class-variance-authority",

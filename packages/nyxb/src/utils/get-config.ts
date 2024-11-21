@@ -5,16 +5,16 @@ import { z } from 'zod'
 import { resolveImport } from '~/src/utils/resolve-import'
 import { highlighter } from '~/src/utils/highlighter'
 
-export const DEFAULT_STYLE = 'miami'
+export const DEFAULT_STYLE = 'default'
 export const DEFAULT_COMPONENTS = '~/components'
 export const DEFAULT_UTILS = '~/lib/utils'
-export const DEFAULT_TAILWIND_CSS = 'styles/globals.css'
-export const DEFAULT_TAILWIND_CONFIG = 'tailwind.config.ts'
+export const DEFAULT_TAILWIND_CSS = 'app/globals.css'
+export const DEFAULT_TAILWIND_CONFIG = 'tailwind.config.js'
 export const DEFAULT_TAILWIND_BASE_COLOR = 'slate'
 
 // TODO: Figure out if we want to support all cosmiconfig formats.
 // A simple nyxbui.json file would be nice.
-const explorer = cosmiconfig('nyxbui', {
+const explorer = cosmiconfig('components', {
    searchPlaces: ['nyxbui.json'],
 })
 
@@ -38,6 +38,7 @@ export const rawConfigSchema = z
          lib: z.string().optional(),
          hooks: z.string().optional(),
       }),
+      iconLibrary: z.string().optional(),
    })
    .strict()
 
@@ -63,6 +64,11 @@ export async function getConfig(cwd: string) {
 
    if (!config) {
       return null
+   }
+
+   // Set default icon library if not provided.
+   if (!config.iconLibrary) {
+      config.iconLibrary = config.style === 'new-york' ? 'radix' : 'lucide'
    }
 
    return await resolveConfigPaths(cwd, config)

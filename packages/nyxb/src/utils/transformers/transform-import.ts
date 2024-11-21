@@ -13,11 +13,10 @@ export const transformImport: Transformer = async ({ sourceFile, config }) => {
       importDeclaration.setModuleSpecifier(moduleSpecifier)
 
       // Replace `import { ny } from "~/lib/utils"`
-      // eslint-disable-next-line eqeqeq
-      if (moduleSpecifier == '~/lib/utils') {
+      if (moduleSpecifier === '~/lib/utils') {
          const namedImports = importDeclaration.getNamedImports()
-         const nyImport = namedImports.find(i => i.getName() === 'ny')
-         if (nyImport) {
+         const cnImport = namedImports.find(i => i.getName() === 'ny')
+         if (cnImport) {
             importDeclaration.setModuleSpecifier(
                moduleSpecifier.replace(/^~\/lib\/utils/, config.aliases.utils),
             )
@@ -36,8 +35,8 @@ function updateImportAliases(moduleSpecifier: string, config: Config) {
 
    // Not a registry import.
    if (!moduleSpecifier.startsWith('~/registry/')) {
-      // We fix the alias an return.
-      const alias = config.aliases.components.charAt(0)
+      // We fix the alias and return.
+      const alias = config.aliases.components.split('/')[0]
       return moduleSpecifier.replace(/^~\//, `${alias}/`)
    }
 

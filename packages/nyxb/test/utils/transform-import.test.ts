@@ -8,11 +8,11 @@ test("transform import", async () => {
       filename: "test.ts",
       raw: `import * as React from "react"
 import { Foo } from "bar"
-    import { Button } from "@/registry/miami/ui/button"
+    import { Button } from "~/registry/new-york/ui/button"
     import { Label} from "ui/label"
-    import { Box } from "@/registry/miami/box"
+    import { Box } from "~/registry/new-york/box"
 
-    import { ny } from "@/lib/utils"
+    import { ny } from "~/lib/utils"
     `,
       config: {
         tsx: true,
@@ -21,8 +21,8 @@ import { Foo } from "bar"
           cssVariables: true,
         },
         aliases: {
-          components: "@/components",
-          utils: "@/lib/utils",
+          components: "~/components",
+          utils: "~/lib/utils",
         },
       },
     })
@@ -33,12 +33,12 @@ import { Foo } from "bar"
       filename: "test.ts",
       raw: `import * as React from "react"
 import { Foo } from "bar"
-    import { Button } from "@/registry/miami/ui/button"
+    import { Button } from "~/registry/new-york/ui/button"
     import { Label} from "ui/label"
-    import { Box } from "@/registry/miami/box"
+    import { Box } from "~/registry/new-york/box"
 
-    import { ny, foo, bar } from "@/lib/utils"
-    import { bar } from "@/lib/utils/bar"
+    import { ny, foo, bar } from "~/lib/utils"
+    import { bar } from "~/lib/utils/bar"
     `,
       config: {
         tsx: true,
@@ -55,12 +55,12 @@ import { Foo } from "bar"
       filename: "test.ts",
       raw: `import * as React from "react"
 import { Foo } from "bar"
-    import { Button } from "@/registry/miami/ui/button"
+    import { Button } from "~/registry/new-york/ui/button"
     import { Label} from "ui/label"
-    import { Box } from "@/registry/miami/box"
+    import { Box } from "~/registry/new-york/box"
 
-    import { ny } from "@/lib/utils"
-    import { bar } from "@/lib/utils/bar"
+    import { ny } from "~/lib/utils"
+    import { bar } from "~/lib/utils/bar"
     `,
       config: {
         tsx: true,
@@ -77,12 +77,12 @@ import { Foo } from "bar"
       filename: "test.ts",
       raw: `import * as React from "react"
 import { Foo } from "bar"
-    import { Button } from "@/registry/miami/ui/button"
+    import { Button } from "~/registry/new-york/ui/button"
     import { Label} from "ui/label"
-    import { Box } from "@/registry/miami/box"
+    import { Box } from "~/registry/new-york/box"
 
-    import { ny } from "@/lib/utils"
-    import { bar } from "@/lib/utils/bar"
+    import { ny } from "~/lib/utils"
+    import { bar } from "~/lib/utils/bar"
     `,
       config: {
         tsx: true,
@@ -100,12 +100,12 @@ import { Foo } from "bar"
       filename: "test.ts",
       raw: `import * as React from "react"
 import { Foo } from "bar"
-    import { Button } from "@/registry/miami/ui/button"
+    import { Button } from "~/registry/new-york/ui/button"
     import { Label} from "ui/label"
-    import { Box } from "@/registry/miami/box"
+    import { Box } from "~/registry/new-york/box"
 
-    import { ny } from "@/lib/utils"
-    import { bar } from "@/lib/utils/bar"
+    import { ny } from "~/lib/utils"
+    import { bar } from "~/lib/utils/bar"
     `,
       config: {
         tsx: true,
@@ -113,6 +113,31 @@ import { Foo } from "bar"
           components: "~/src/components",
           utils: "~/src/utils",
           ui: "~/src/ui",
+        },
+      },
+    })
+  ).toMatchSnapshot()
+
+  expect(
+    await transform({
+      filename: "test.ts",
+      raw: `import * as React from "react"
+import { Foo } from "bar"
+    import { Button } from "~/components/ui/button"
+    import { Label} from "ui/label"
+    import { Box } from "~/registry/new-york/box"
+
+    import { ny } from "~/lib/utils"
+    `,
+      config: {
+        tsx: true,
+        tailwind: {
+          baseColor: "neutral",
+          cssVariables: true,
+        },
+        aliases: {
+          components: "@custom-alias/components",
+          utils: "@custom-alias/lib/utils",
         },
       },
     })

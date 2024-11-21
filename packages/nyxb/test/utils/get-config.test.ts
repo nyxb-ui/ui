@@ -21,8 +21,8 @@ test("get raw config", async () => {
     rsc: false,
     tsx: true,
     aliases: {
-      components: "@/components",
-      utils: "@/lib/utils",
+      components: "~/components",
+      utils: "~/lib/utils",
     },
   })
 
@@ -53,8 +53,8 @@ test("get config", async () => {
     rsc: false,
     tsx: true,
     aliases: {
-      components: "@/components",
-      utils: "@/lib/utils",
+      components: "~/components",
+      utils: "~/lib/utils",
     },
     resolvedPaths: {
       cwd: path.resolve(__dirname, "../fixtures/config-partial"),
@@ -86,12 +86,13 @@ test("get config", async () => {
       hooks: path.resolve(__dirname, "../fixtures/config-partial", "./hooks"),
       lib: path.resolve(__dirname, "../fixtures/config-partial", "./lib"),
     },
+    iconLibrary: "lucide",
   })
 
   expect(
     await getConfig(path.resolve(__dirname, "../fixtures/config-full"))
   ).toEqual({
-    style: "miami",
+    style: "new-york",
     rsc: false,
     tsx: true,
     tailwind: {
@@ -108,6 +109,7 @@ test("get config", async () => {
       hooks: "~/lib/hooks",
       ui: "~/ui",
     },
+    iconLibrary: "lucide",
     resolvedPaths: {
       cwd: path.resolve(__dirname, "../fixtures/config-full"),
       tailwindConfig: path.resolve(
@@ -153,9 +155,10 @@ test("get config", async () => {
     rsc: false,
     tsx: false,
     aliases: {
-      components: "@/components",
-      utils: "@/lib/utils",
+      components: "~/components",
+      utils: "~/lib/utils",
     },
+    iconLibrary: "radix",
     resolvedPaths: {
       cwd: path.resolve(__dirname, "../fixtures/config-jsx"),
       tailwindConfig: path.resolve(

@@ -34,7 +34,7 @@ export async function updateDependencies(
    if (isUsingReact19(config) && packageManager === 'npm') {
       dependenciesSpinner.stopAndPersist()
       logger.warn(
-         '\nIt looks like you are using React 19. \nSome packages may fail to install due to peer dependency issues (see https://nyxbui.design/react-19).\n',
+         '\nIt looks like you are using React 19. \nSome packages may fail to install due to peer dependency issues in npm (see https://nyxbui.design/react-19).\n',
       )
       const confirmation = await prompts([
          {

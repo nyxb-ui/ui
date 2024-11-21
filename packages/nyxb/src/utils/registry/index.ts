@@ -11,6 +11,7 @@ import type {
    registryItemFileSchema,
 } from '~/src/utils/registry/schema'
 import {
+   iconsSchema,
    registryBaseColorSchema,
    registryIndexSchema,
    registryItemSchema,
@@ -47,6 +48,17 @@ export async function getRegistryStyles() {
       logger.error('\n')
       handleError(error)
       return []
+   }
+}
+
+export async function getRegistryIcons() {
+   try {
+      const [result] = await fetchRegistry(['icons/index.json'])
+      return iconsSchema.parse(result)
+   }
+   catch (error) {
+      handleError(error)
+      return {}
    }
 }
 
@@ -439,6 +451,7 @@ export async function registryGetTheme(name: string, config: Config) {
 
 function getRegistryUrl(path: string) {
    if (isUrl(path)) {
+      // If the url contains /chat/b/, we assume it's the v0 registry.
       // We need to add the /json suffix if it's missing.
       const url = new URL(path)
       if (url.pathname.match(/\/chat\/b\//) && !url.pathname.endsWith('/json')) {

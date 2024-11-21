@@ -6,10 +6,10 @@ import { resolveImport } from "../../src/utils/resolve-import"
 
 test("resolve import", async () => {
   expect(
-    await resolveImport("@/foo/bar", {
+    await resolveImport("~/foo/bar", {
       absoluteBaseUrl: "/Users/nyxb/Projects/foobar",
       paths: {
-        "@/*": ["./src/*"],
+        "~/*": ["./src/*"],
         "~/components/*": ["./src/components/*"],
         "~/lib": ["./src/lib"],
       },
@@ -20,7 +20,7 @@ test("resolve import", async () => {
     await resolveImport("~/components/foo/bar/baz", {
       absoluteBaseUrl: "/Users/nyxb/Projects/foobar",
       paths: {
-        "@/*": ["./src/*"],
+        "~/*": ["./src/*"],
         "~/components/*": ["./src/components/*"],
         "~/lib": ["./src/lib"],
       },
@@ -54,10 +54,10 @@ test("resolve import with base url", async () => {
   const cwd = path.resolve(__dirname, "../fixtures/with-base-url")
   const config = (await loadConfig(cwd)) as ConfigLoaderSuccessResult
 
-  expect(await resolveImport("@/components/ui", config)).toEqual(
+  expect(await resolveImport("~/components/ui", config)).toEqual(
     path.resolve(cwd, "components/ui")
   )
-  expect(await resolveImport("@/lib/utils", config)).toEqual(
+  expect(await resolveImport("~/lib/utils", config)).toEqual(
     path.resolve(cwd, "lib/utils")
   )
   expect(await resolveImport("foo/bar", config)).toEqual(

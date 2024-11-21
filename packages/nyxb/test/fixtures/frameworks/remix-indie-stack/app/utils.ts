@@ -3,8 +3,6 @@ import { useMemo } from "react";
 
 import type { User } from "~/models/user.server";
 
-import { validateEmail } from "./email-utils";
-
 const DEFAULT_REDIRECT = "/";
 
 /**

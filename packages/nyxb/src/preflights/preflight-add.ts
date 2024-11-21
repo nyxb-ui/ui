@@ -52,9 +52,9 @@ export async function preFlightAdd(options: z.infer<typeof addOptionsSchema>) {
       )} file by running the ${highlighter.info('init')} command.`,
       )
       logger.error(
-      `Learn more at ${highlighter.info(
-        'https://nyxbui.design/docs/nyxbui-json',
-      )}.`,
+         `Learn more at ${highlighter.info(
+            'https://nyxbui.design/docs/nyxbui-json',
+         )}.`,
       )
       logger.break()
       process.exit(1)

@@ -1,7 +1,7 @@
 import { transformFromAstSync } from '@babel/core'
 import type { ParserOptions } from '@babel/parser'
 import { parse } from '@babel/parser'
-// @ts-expect-error is fine
+// @ts-expect-error babel plugin typescript is not typed
 import transformTypescript from '@babel/plugin-transform-typescript'
 import * as recast from 'recast'
 import type { Transformer } from '~/src/utils/transformers'

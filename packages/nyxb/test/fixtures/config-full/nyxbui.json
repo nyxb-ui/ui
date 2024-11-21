@@ -1,5 +1,5 @@
 {
-  "style": "miami",
+  "style": "new-york",
   "tailwind": {
     "config": "tailwind.config.ts",
     "css": "src/app/globals.css",
@@ -14,5 +14,6 @@
     "lib": "~/lib",
     "hooks": "~/lib/hooks",
     "ui": "~/ui"
-  }
+  },
+  "iconLibrary": "lucide"
 }

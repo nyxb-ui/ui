@@ -147,6 +147,7 @@ export const add = new Command()
 
          await addComponents(options.components, config, options)
 
+         // If we're adding a single component and it's from the v0 registry,
          // let's update the app/page.tsx file to import the component.
          if (shouldUpdateAppIndex) {
             await updateAppIndex(options.components[0], config)

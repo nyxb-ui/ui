@@ -60,7 +60,7 @@ Import the `styles/globals.css` file in the `src/pages/index.astro` file:
 
 ```ts title="src/pages/index.astro" showLineNumbers
 ---
-import '@/styles/globals.css'
+import '~/styles/globals.css'
 ---
 ```
 
@@ -88,7 +88,7 @@ Add the following code to the `tsconfig.json` file to resolve paths:
     // ...
     "baseUrl": ".",
     "paths": {
-      "@/*": [
+      "~/*": [
         "./src/*"
       ]
     }
@@ -117,7 +117,7 @@ The command above will add the `Button` component to your project. You can then 
 
 ```astro {2,10} showLineNumbers
 ---
-import { Button } from "@/components/ui/button"
+import { Button } from "~/components/ui/button"
 ---
 
 <html lang="en">
