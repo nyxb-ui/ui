@@ -15,7 +15,7 @@ import {
 } from '~/src/utils/get-config'
 import { getPackageInfo } from '~/src/utils/get-package-info'
 
-interface ProjectInfo {
+export interface ProjectInfo {
    framework: Framework
    isSrcDir: boolean
    isRSC: boolean
