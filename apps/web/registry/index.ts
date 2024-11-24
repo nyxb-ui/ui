@@ -1,11 +1,11 @@
-import { blocks } from '~/registry/registry-blocks'
-import { charts } from '~/registry/registry-charts'
-import { examples } from '~/registry/registry-examples'
-import { hooks } from '~/registry/registry-hooks'
-import { lib } from '~/registry/registry-lib'
-import { themes } from '~/registry/registry-themes'
-import { ui } from '~/registry/registry-ui'
-import type { Registry } from '~/registry/schema'
+import { charts } from './registry-charts'
+import { examples } from './registry-examples'
+import { hooks } from './registry-hooks'
+import { lib } from './registry-lib'
+import { themes } from './registry-themes'
+import { ui } from './registry-ui'
+import type { Registry } from './schema'
+import { blocks } from './registry-blocks'
 
 export const registry: Registry = [
    ...ui,

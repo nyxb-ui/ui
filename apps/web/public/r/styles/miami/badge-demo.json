@@ -8,7 +8,7 @@
     {
       "path": "example/badge-demo.tsx",
       "content": "import { Badge } from '~/registry/miami/ui/badge'\n\nexport default function BadgeDemo() {\n   return <Badge>Badge</Badge>\n}\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

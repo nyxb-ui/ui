@@ -5,7 +5,7 @@
     {
       "path": "example/shimmer-button-demo.tsx",
       "content": "import ShimmerButton from '~/registry/miami/ui/shimmer-button'\n\nexport default function ShimmerButtonDemo() {\n   return (\n      <div className=\"z-10 flex min-h-64 items-center justify-center\">\n         <ShimmerButton className=\"shadow-2xl\">\n            <span className=\"whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white lg:text-lg dark:from-white dark:to-slate-900/10\">\n               Shimmer Button\n            </span>\n         </ShimmerButton>\n      </div>\n   )\n}\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

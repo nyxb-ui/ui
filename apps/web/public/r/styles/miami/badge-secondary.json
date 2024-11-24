@@ -8,7 +8,7 @@
     {
       "path": "example/badge-secondary.tsx",
       "content": "import { Badge } from '~/registry/miami/ui/badge'\n\nexport default function BadgeSecondary() {\n   return <Badge variant=\"secondary\">Secondary</Badge>\n}\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

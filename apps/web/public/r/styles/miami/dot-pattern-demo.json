@@ -5,7 +5,7 @@
     {
       "path": "example/dot-pattern-demo.tsx",
       "content": "'use client'\n\nimport { ny } from '~/lib/utils'\nimport DotPattern from '~/registry/miami/ui/dot-pattern'\n\nfunction DotPatternDemo() {\n   return (\n      <div className=\"bg-background relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg border p-20 md:shadow-xl\">\n         <p className=\"z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-black dark:text-white\">\n            Dot Pattern\n         </p>\n         <DotPattern\n            className={ny(\n               '[mask-image:radial-gradient(200px_circle_at_center,white,transparent)]',\n            )}\n         />\n      </div>\n   )\n}\n\nexport default DotPatternDemo\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

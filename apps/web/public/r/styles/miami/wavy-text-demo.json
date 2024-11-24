@@ -5,7 +5,7 @@
     {
       "path": "example/wavy-text-demo.tsx",
       "content": "import WavyText from '~/registry/miami/ui/wavy-text'\n\nexport default function WavyTextDemo() {\n   return (\n      <WavyText\n         word=\"Wavy Text\"\n         className=\"text-4xl font-bold text-black dark:text-white\"\n      />\n   )\n}\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

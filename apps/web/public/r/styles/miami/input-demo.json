@@ -8,7 +8,7 @@
     {
       "path": "example/input-demo.tsx",
       "content": "import { Input } from '~/registry/miami/ui/input'\n\nexport default function InputDemo() {\n   return <Input type=\"email\" placeholder=\"Email\" />\n}\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

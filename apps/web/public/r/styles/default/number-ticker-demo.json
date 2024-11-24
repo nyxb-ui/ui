@@ -5,7 +5,7 @@
     {
       "path": "example/number-ticker-demo.tsx",
       "content": "import NumberTicker from '~/registry/default/ui/number-ticker'\n\nfunction NumberTickerDemo() {\n   return (\n      <p className=\"whitespace-pre-wrap text-8xl font-medium tracking-tighter text-black dark:text-white\">\n         <NumberTicker value={100} />\n      </p>\n   )\n}\n\nexport default NumberTickerDemo\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

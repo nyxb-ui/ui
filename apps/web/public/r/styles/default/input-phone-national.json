@@ -10,7 +10,7 @@
     {
       "path": "example/input-phone-national.tsx",
       "content": "import * as React from 'react'\n\nimport { InputPhone } from '~/registry/default/ui/input-phone'\n\nexport default function InputPhoneNational() {\n   const [value, setValue] = React.useState('')\n\n   return (\n      <InputPhone\n         value={value}\n         onChange={setValue}\n         international={false}\n         defaultCountry=\"US\"\n      />\n   )\n}\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

@@ -8,7 +8,7 @@
     {
       "path": "ui/separate-away.tsx",
       "content": "'use client'\n\nimport { motion } from 'framer-motion'\nimport { ny } from '~/lib/utils'\n\ninterface SeparateAwayProps {\n   upper_text: string\n   lower_text: string\n   duration?: number\n   hidden_opacity?: number\n   visible_opacity?: number\n   className?: string\n}\n\nexport function SeparateAway({\n   upper_text,\n   lower_text,\n   duration = 1.5,\n   hidden_opacity = 0,\n   visible_opacity = 1,\n   className,\n}: SeparateAwayProps) {\n   const separate = {\n      hidden: { opacity: hidden_opacity, y: 0 },\n      visible: (custom: number) => ({\n         opacity: visible_opacity,\n         y: custom * 5,\n         transition: { duration },\n      }),\n   }\n\n   return (\n      <div>\n         <motion.h1\n            custom={-1}\n            variants={separate}\n            initial=\"hidden\"\n            animate=\"visible\"\n            className={ny(className)}\n         >\n            {upper_text}\n         </motion.h1>\n         <motion.h1\n            custom={1}\n            variants={separate}\n            initial=\"hidden\"\n            animate=\"visible\"\n            className={ny(className)}\n         >\n            {lower_text}\n         </motion.h1>\n      </div>\n   )\n}\n",
-      "type": "registry:ui",
+      "type": "registry:component",
       "target": ""
     }
   ]

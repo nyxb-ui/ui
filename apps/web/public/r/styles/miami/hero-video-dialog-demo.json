@@ -5,7 +5,7 @@
     {
       "path": "example/hero-video-dialog-demo.tsx",
       "content": "import HeroVideoDialog from '~/registry/miami/ui/hero-video-dialog'\n\nexport default function HeroVideoDialogDemo() {\n   return (\n      <div className=\"relative\">\n         <HeroVideoDialog\n            className=\"block dark:hidden\"\n            animationStyle=\"from-center\"\n            videoSrc=\"https://www.youtube.com/embed/oSgNzZifhEA?si=uLdYEP57m0bZEngR\"\n            thumbnailSrc=\"https://startup-nyxbui.vercel.app/hero-light.png\"\n            thumbnailAlt=\"Hero Video\"\n         />\n         <HeroVideoDialog\n            className=\"hidden dark:block\"\n            animationStyle=\"from-center\"\n            videoSrc=\"https://www.youtube.com/embed/oSgNzZifhEA?si=uLdYEP57m0bZEngR\"\n            thumbnailSrc=\"https://startup-nyxbui.vercel.app/hero-dark.png\"\n            thumbnailAlt=\"Hero Video\"\n         />\n      </div>\n   )\n}\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

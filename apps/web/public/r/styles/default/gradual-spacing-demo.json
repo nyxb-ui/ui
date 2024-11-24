@@ -5,7 +5,7 @@
     {
       "path": "example/gradual-spacing-demo.tsx",
       "content": "import GradualSpacing from '~/registry/default/ui/gradual-spacing'\n\nexport default async function GradualSpacingDemo() {\n   return (\n      <GradualSpacing\n         className=\"font-display text-center text-4xl font-bold -tracking-widest  text-black md:text-7xl md:leading-[5rem] dark:text-white\"\n         text=\"Gradual Spacing\"\n      />\n   )\n}\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

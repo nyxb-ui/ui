@@ -5,7 +5,7 @@
     {
       "path": "example/sparkles-text-demo.tsx",
       "content": "import SparklesText from '~/registry/default/ui/sparkles-text'\n\nexport default async function SparklesTextDemo() {\n   return <SparklesText text=\"Nyxb UI\" />\n}\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

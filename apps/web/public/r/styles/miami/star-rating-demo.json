@@ -5,7 +5,7 @@
     {
       "path": "example/star-rating-demo.tsx",
       "content": "import * as React from 'react'\nimport { StarRating } from '~/registry/miami/ui/star-rating'\n\nexport default function StarRatingDemo() {\n   const [value, setValue] = React.useState<number>(3)\n   return (<StarRating value={value} setValue={setValue} />)\n}\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

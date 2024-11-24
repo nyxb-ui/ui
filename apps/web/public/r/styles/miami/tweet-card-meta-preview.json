@@ -5,7 +5,7 @@
     {
       "path": "example/tweet-card-meta-preview.tsx",
       "content": "import ClientTweetCard from '~/registry/miami/ui/client-tweet-card'\n\nexport default async function TweetMetaPreview() {\n   return <ClientTweetCard id=\"1671108134591504385\" className=\"shadow-2xl\" />\n}\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

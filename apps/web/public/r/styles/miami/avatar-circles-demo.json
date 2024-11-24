@@ -5,7 +5,7 @@
     {
       "path": "example/avatar-circles-demo.tsx",
       "content": "import AvatarCircles from '~/registry/miami/ui/avatar-circles'\n\nconst avatarUrls = [\n   'https://avatars.githubusercontent.com/u/98586665',\n   'https://avatars.githubusercontent.com/u/20110627',\n   'https://avatars.githubusercontent.com/u/106103625',\n   'https://avatars.githubusercontent.com/u/59228569',\n]\n\nexport default async function AvatarCirclesDemo() {\n   return <AvatarCircles numPeople={99} avatarUrls={avatarUrls} />\n}\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

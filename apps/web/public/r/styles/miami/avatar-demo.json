@@ -8,7 +8,7 @@
     {
       "path": "example/avatar-demo.tsx",
       "content": "import {\n   Avatar,\n   AvatarFallback,\n   AvatarImage,\n} from '~/registry/miami/ui/avatar'\n\nexport default function AvatarDemo() {\n   return (\n      <Avatar>\n         <AvatarImage src=\"https://github.com/nyxb.png\" alt=\"@nyxb\" />\n         <AvatarFallback>NY</AvatarFallback>\n      </Avatar>\n   )\n}\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

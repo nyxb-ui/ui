@@ -5,7 +5,7 @@
     {
       "path": "example/word-fade-in-demo.tsx",
       "content": "import WordFadeIn from '~/registry/miami/ui/word-fade-in'\n\nexport default async function WordFadeInDemo() {\n   return <WordFadeIn words=\"Word Fade In\" />\n}\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

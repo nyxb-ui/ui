@@ -5,7 +5,7 @@
     {
       "path": "example/blur-in-demo.tsx",
       "content": "import BlurIn from '~/registry/miami/ui/blur-in'\n\nfunction BlurInDemo() {\n   return (\n      <BlurIn\n         word=\"Blur In\"\n         className=\"text-4xl font-bold text-black dark:text-white\"\n      />\n   )\n}\nexport default BlurInDemo\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

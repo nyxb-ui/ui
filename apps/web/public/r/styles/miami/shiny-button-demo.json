@@ -5,7 +5,7 @@
     {
       "path": "example/shiny-button-demo.tsx",
       "content": "import ShinyButton from '~/registry/miami/ui/shiny-button'\n\nexport default function ShinyButtonDemo() {\n   return <ShinyButton text=\"Shiny Button\" />\n}\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

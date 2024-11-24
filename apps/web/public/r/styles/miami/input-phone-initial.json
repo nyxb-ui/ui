@@ -10,7 +10,7 @@
     {
       "path": "example/input-phone-initial.tsx",
       "content": "import * as React from 'react'\n\nimport { InputPhone } from '~/registry/miami/ui/input-phone'\n\nexport default function InputPhoneInitial() {\n   const [value, setValue] = React.useState('')\n\n   return (\n      <InputPhone\n         value={value}\n         onChange={setValue}\n         initialValueFormat=\"national\"\n      />\n   )\n}\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

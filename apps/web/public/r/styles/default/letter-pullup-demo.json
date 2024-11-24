@@ -5,7 +5,7 @@
     {
       "path": "example/letter-pullup-demo.tsx",
       "content": "import LetterPullup from '~/registry/default/ui/letter-pullup'\n\nexport default async function LetterPullupDemo() {\n   return <LetterPullup words=\"Staggered Letter Pull Up\" delay={0.05} />\n}\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

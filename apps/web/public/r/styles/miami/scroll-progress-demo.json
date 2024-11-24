@@ -5,7 +5,7 @@
     {
       "path": "example/scroll-progress-demo.tsx",
       "content": "import ScrollProgress from '~/registry/miami/ui/scroll-progress'\n\nconst dummyContent = Array.from({ length: 10 }, (_, i) => (\n   <p key={i}>\n      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam\n      lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra\n      nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget\n      libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut\n      porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies\n      a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n   </p>\n))\n\nfunction ScrollProgressDemo() {\n   return (\n      <div>\n         <ScrollProgress className=\"top-[65px]\" />\n         <strong>Note: The scroll progress is shown below the navbar of the page.</strong>\n         {dummyContent}\n      </div>\n   )\n}\n\nexport default ScrollProgressDemo\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]

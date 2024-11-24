@@ -5,7 +5,7 @@
     {
       "path": "example/toc-active.tsx",
       "content": "import {\n   TableOfContentsItem,\n   TableOfContentsLink,\n   TableOfContentsList,\n   TableOfContentsTitle,\n} from '~/registry/miami/ui/toc'\n\nexport default function TOCActive() {\n   return (\n      <TableOfContentsList>\n         <TableOfContentsTitle>Active Item Table of Contents</TableOfContentsTitle>\n         <TableOfContentsItem>\n            <TableOfContentsLink href=\"#first-section\">\n               First Section\n            </TableOfContentsLink>\n         </TableOfContentsItem>\n         <TableOfContentsItem indent>\n            <TableOfContentsLink isActive href=\"#second-section\">\n               Second Section\n            </TableOfContentsLink>\n         </TableOfContentsItem>\n         <TableOfContentsItem>\n            <TableOfContentsLink href=\"#third-section\">\n               Third Section\n            </TableOfContentsLink>\n         </TableOfContentsItem>\n      </TableOfContentsList>\n   )\n}\n",
-      "type": "registry:example",
+      "type": "registry:component",
       "target": ""
     }
   ]
