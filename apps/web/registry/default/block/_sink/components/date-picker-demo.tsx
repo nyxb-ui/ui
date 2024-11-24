@@ -4,7 +4,7 @@ import * as React from "react"
 import { format } from "date-fns"
 import { CalendarIcon } from "lucide-react"
 
-import { cn } from "~/lib/utils"
+import { ny } from "~/lib/utils"
 import { Button } from "~/registry/default/ui/button"
 import { Calendar } from "~/registry/default/ui/calendar"
 import {
@@ -21,7 +21,7 @@ export function DatePickerDemo() {
       <PopoverTrigger asChild>
         <Button
           variant={"outline"}
-          className={cn(
+          className={ny(
             "w-[240px] justify-start text-left font-normal",
             !date && "text-muted-foreground"
           )}

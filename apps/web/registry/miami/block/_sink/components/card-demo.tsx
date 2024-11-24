@@ -1,6 +1,6 @@
 import { BellRing, Check } from "lucide-react"
 
-import { cn } from "~/lib/utils"
+import { ny } from "~/lib/utils"
 import { Button } from "~/registry/miami/ui/button"
 import {
   Card,
@@ -31,7 +31,7 @@ type CardProps = React.ComponentProps<typeof Card>
 
 export function CardDemo({ className, ...props }: CardProps) {
   return (
-    <Card className={cn("w-[380px]", className)} {...props}>
+    <Card className={ny("w-[380px]", className)} {...props}>
       <CardHeader>
         <CardTitle>Notifications</CardTitle>
         <CardDescription>You have 3 unread messages.</CardDescription>
