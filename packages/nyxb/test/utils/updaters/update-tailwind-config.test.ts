@@ -10,7 +10,7 @@ import {
 
 const SHARED_CONFIG = {
   $schema: "https://nyxbui.design/schema.json",
-  style: "new-york",
+  style: "miami",
   rsc: true,
   tsx: true,
   tailwind: {

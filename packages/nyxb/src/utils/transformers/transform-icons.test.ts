@@ -4,7 +4,7 @@ import type { Config } from '~/src/utils/get-config'
 import { transformIcons } from '~/src/utils/transformers/transform-icons'
 
 const testConfig: Config = {
-   style: 'new-york',
+   style: 'miami',
    tsx: true,
    rsc: true,
    tailwind: {

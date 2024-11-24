@@ -250,7 +250,7 @@ export async function getProjectConfig(
       $schema: 'https://nyxbui.design/schema.json',
       rsc: projectInfo.isRSC,
       tsx: projectInfo.isTsx,
-      style: 'new-york',
+      style: 'miami',
       tailwind: {
          config: projectInfo.tailwindConfigFile,
          baseColor: 'zinc',
