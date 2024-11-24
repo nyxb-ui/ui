@@ -1,8 +1,9 @@
 'use client'
 
 import * as React from 'react'
-import { CodeBlockWrapper } from '~/components/code-block-wrapper'
+
 import { ny } from '~/lib/utils'
+import { CodeBlockWrapper } from '~/components/code-block-wrapper'
 
 interface ComponentSourceProps extends React.HTMLAttributes<HTMLDivElement> {
    src: string
@@ -17,7 +18,6 @@ export function ComponentSource({
       <CodeBlockWrapper
          expandButtonTitle="Expand"
          className={ny('my-6 overflow-hidden rounded-md', className)}
-         {...props}
       >
          {children}
       </CodeBlockWrapper>

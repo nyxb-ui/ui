@@ -11,7 +11,6 @@ import { Toaster as NewYorkToaster } from '~/registry/miami/ui/toaster'
 import { TailwindIndicator } from '~/components/tailwind-indicator'
 import { ThemeSwitcher } from '~/components/theme-switcher'
 import '~/styles/globals.css'
-import '~/styles/mdx.css'
 
 export const metadata: Metadata = constructMetadata({
    title: 'Nyxb UI',

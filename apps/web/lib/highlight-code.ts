@@ -5,7 +5,7 @@ import { lumosDarkTheme } from './lumos-dark'
 
 export async function highlightCode(code: string) {
    const html = codeToHtml(code, {
-      lang: 'typescript',
+      lang: 'jsx',
       theme: lumosDarkTheme,
       transformers: [
          {

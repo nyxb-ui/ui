@@ -45,7 +45,7 @@ import {
 import type { BaseColor } from '~/registry/registry-base-colors'
 import { baseColors } from '~/registry/registry-base-colors'
 
-import '~/styles/mdx2.css'
+import '~/styles/mdx.css'
 
 export function ThemeCustomizer() {
    const [config, setConfig] = useConfig()

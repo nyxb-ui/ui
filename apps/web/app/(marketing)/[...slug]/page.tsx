@@ -6,8 +6,6 @@ import { Mdx } from '~/components/mdx-components'
 import { siteConfig } from '~/config/site'
 import { absoluteUrl } from '~/lib/utils'
 
-import '~/styles/mdx.css'
-
 interface PageProps {
    params: {
       slug: string[]
