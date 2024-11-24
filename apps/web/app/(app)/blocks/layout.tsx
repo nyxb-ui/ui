@@ -21,7 +21,7 @@ export default function BlocksLayout({
    children: React.ReactNode
 }) {
    return (
-      <div className="container relative">
+      <div className="relative">
          <PageHeader>
             <Announcement />
             <PageHeaderHeading>Building Blocks for the Web</PageHeaderHeading>
@@ -34,18 +34,20 @@ export default function BlocksLayout({
                </Button>
                <Button asChild variant="ghost" size="sm">
                   <a
-                     href="https://github.com/nyxb-ui/ui/discussions/new?category=blocks-request"
+                     rel="noopener noreferrer"
+                     href="https://github.com/shadcn-ui/ui/discussions/new?category=blocks-request"
                      target="_blank"
-                     rel="noreferrer noopener"
                   >
                      Request a block
                   </a>
                </Button>
             </PageActions>
          </PageHeader>
-         <section id="blocks" className="scroll-mt-24">
-            {children}
-         </section>
+         <div className="container py-6">
+            <section id="blocks" className="scroll-mt-24">
+               {children}
+            </section>
+         </div>
       </div>
    )
 }

@@ -64,3 +64,13 @@ export { default as ChartRadialGrid } from '~/registry/miami/block/chart-radial-
 export { default as ChartRadialText } from '~/registry/miami/block/chart-radial-text'
 export { default as ChartRadialShape } from '~/registry/miami/block/chart-radial-shape'
 export { default as ChartRadialStacked } from '~/registry/miami/block/chart-radial-stacked'
+
+export { default as ChartTooltipDefault } from '~/registry/miami/block/chart-tooltip-default'
+export { default as ChartTooltipIndicatorLine } from '~/registry/miami/block/chart-tooltip-indicator-line'
+export { default as ChartTooltipIndicatorNone } from '~/registry/miami/block/chart-tooltip-indicator-none'
+export { default as ChartTooltipLabelCustom } from '~/registry/miami/block/chart-tooltip-label-custom'
+export { default as ChartTooltipLabelFormatter } from '~/registry/miami/block/chart-tooltip-label-formatter'
+export { default as ChartTooltipLabelNone } from '~/registry/miami/block/chart-tooltip-label-none'
+export { default as ChartTooltipFormatter } from '~/registry/miami/block/chart-tooltip-formatter'
+export { default as ChartTooltipIcons } from '~/registry/miami/block/chart-tooltip-icons'
+export { default as ChartTooltipAdvanced } from '~/registry/miami/block/chart-tooltip-advanced'

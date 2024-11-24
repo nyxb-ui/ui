@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest"
 
-import { createFileTreeForRegistryItemFiles } from "@/lib/registry"
+import { createFileTreeForRegistryItemFiles } from "~/lib/registry"
 
 describe("createFileTreeForRegistryItemFiles", () => {
   it("should create a nested file tree structure", async () => {

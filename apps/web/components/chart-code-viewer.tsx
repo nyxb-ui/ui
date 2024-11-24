@@ -1,50 +1,56 @@
 import * as React from 'react'
 
 import { ny } from '~/lib/utils'
-import { useChartConfig } from '~/hooks/use-chart-config'
 import { useMediaQuery } from '~/hooks/use-media-query'
-import { BlockCopyButton } from '~/components/block-copy-button'
+import { useThemesConfig } from '~/hooks/use-themes-config'
+import { ChartCopyButton } from '~/components/chart-copy-button'
+import type { Chart } from '~/components/chart-display'
 import { Button } from '~/registry/miami/ui/button'
 import {
    Drawer,
    DrawerContent,
    DrawerTrigger,
 } from '~/registry/miami/ui/drawer'
-import { Sheet, SheetContent, SheetTrigger } from '~/registry/miami/ui/sheet'
+import {
+   Sheet,
+   SheetContent,
+   SheetTrigger,
+} from '~/registry/miami/ui/sheet'
 import {
    Tabs,
    TabsContent,
    TabsList,
    TabsTrigger,
 } from '~/registry/miami/ui/tabs'
-import type { Block } from '~/registry/schema'
 
 export function ChartCodeViewer({
    chart,
    className,
    children,
-}: { chart: Block } & React.ComponentProps<'div'>) {
+}: {
+   chart: Chart
+} & React.ComponentProps<'div'>) {
    const [tab, setTab] = React.useState('code')
-   const { chartConfig } = useChartConfig()
+   const { themesConfig } = useThemesConfig()
    const isDesktop = useMediaQuery('(min-width: 768px)')
 
    const themeCode = React.useMemo(() => {
       return `\
 @layer base {
   :root {
-${Object.entries(chartConfig.theme.cssVars.light)
+${Object.entries(themesConfig?.activeTheme.cssVars.light || {})
   .map(([key, value]) => `    ${key}: ${value};`)
   .join('\n')}
   }
 
   .dark {
-${Object.entries(chartConfig.theme.cssVars.dark)
+${Object.entries(themesConfig?.activeTheme.cssVars.dark || {})
   .map(([key, value]) => `    ${key}: ${value};`)
   .join('\n')}
-  }
+    }
 }
 `
-   }, [chartConfig])
+   }, [themesConfig])
 
    const button = (
       <Button
@@ -58,7 +64,7 @@ ${Object.entries(chartConfig.theme.cssVars.dark)
 
    const content = (
       <>
-         <div className="chart-wrapper hidden sm:block [&>div]:rounded-none [&>div]:border-0 [&>div]:border-b [&>div]:shadow-none">
+         <div className="chart-wrapper hidden sm:block [&>div]:rounded-none [&>div]:border-0 [&>div]:border-b [&>div]:shadow-none [&_[data-chart]]:mx-auto [&_[data-chart]]:max-h-[35vh]">
             {children}
          </div>
          <Tabs
@@ -84,15 +90,15 @@ ${Object.entries(chartConfig.theme.cssVars.dark)
                </TabsList>
                {tab === 'code' && (
                   <div className="ml-auto flex items-center justify-center gap-2">
-                     <BlockCopyButton
+                     <ChartCopyButton
                         event="copy_chart_code"
                         name={chart.name}
-                        code={chart.code}
+                        code={chart.files?.[0]?.content ?? ''}
                      />
                   </div>
                )}
                {tab === 'theme' && (
-                  <BlockCopyButton
+                  <ChartCopyButton
                      event="copy_chart_theme"
                      name={chart.name}
                      code={themeCode}
@@ -124,7 +130,7 @@ ${Object.entries(chartConfig.theme.cssVars.dark)
                >
                   <pre className="bg-black font-mono text-sm leading-relaxed">
                      <code data-line-numbers="">
-                        <span className="line text-zinc-700">{`/* ${chartConfig.theme.name} */`}</span>
+                        <span className="line text-zinc-700">{`/* ${themesConfig?.activeTheme.name} */`}</span>
                         {themeCode.split('\n').map((line, index) => (
                            <span key={index} className="line">
                               {line}
