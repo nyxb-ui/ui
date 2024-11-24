@@ -15,7 +15,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/accordion.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/accordion.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -31,7 +31,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/alert.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/alert.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -47,7 +47,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/alert-dialog.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/alert-dialog.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -63,7 +63,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/animated-beam.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/animated-beam.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -79,7 +79,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/animated-grid-pattern.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/animated-grid-pattern.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -95,7 +95,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/animated-list.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/animated-list.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -111,7 +111,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/animated-shiny-text.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/animated-shiny-text.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -127,7 +127,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/animated-subscribe-button.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/animated-subscribe-button.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -143,7 +143,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/animated-gradient-text.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/animated-gradient-text.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -159,7 +159,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/aspect-ratio.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/aspect-ratio.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -175,7 +175,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/avatar.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/avatar.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -191,7 +191,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/avatar-circles.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/avatar-circles.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -207,7 +207,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/badge.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/badge.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -223,7 +223,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/bento-grid.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/bento-grid.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -239,7 +239,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/blur-in.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/blur-in.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -255,7 +255,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/border-beam.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/border-beam.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -271,7 +271,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/box-reveal.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/box-reveal.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -287,7 +287,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/breadcrumb.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/breadcrumb.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -303,7 +303,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/blur-fade.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/blur-fade.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -319,7 +319,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/button.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/button.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -335,7 +335,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/calendar.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/calendar.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -351,7 +351,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/card.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/card.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -367,7 +367,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/carousel.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/carousel.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -383,7 +383,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/chart.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/chart.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -399,7 +399,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/checkbox.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/checkbox.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -415,7 +415,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/client-tweet-card.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/client-tweet-card.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -431,7 +431,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/collapsible.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/collapsible.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -447,7 +447,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/command.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/command.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -463,7 +463,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/confetti.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/confetti.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -479,7 +479,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/context-menu.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/context-menu.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -495,7 +495,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/cool-mode.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/cool-mode.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -511,7 +511,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/dialog.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/dialog.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -527,7 +527,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/dock.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/dock.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -543,7 +543,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/dot-pattern.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/dot-pattern.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -559,7 +559,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/drawer.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/drawer.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -575,7 +575,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/dropdown-menu.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/dropdown-menu.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -591,7 +591,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/fade-text.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/fade-text.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -607,7 +607,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/file-tree.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/file-tree.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -623,7 +623,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/flip-text.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/flip-text.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -639,7 +639,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/form.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -655,7 +655,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/globe.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/globe.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -671,7 +671,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/gradual-spacing.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/gradual-spacing.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -687,7 +687,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/grid-pattern.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/grid-pattern.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -703,7 +703,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/gauge-circle.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/gauge-circle.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -719,7 +719,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/hero-video-dialog.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/hero-video-dialog.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -735,7 +735,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/hover-card.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/hover-card.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -751,7 +751,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/icon-cloud.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/icon-cloud.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -767,7 +767,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/input.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/input.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -783,7 +783,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/input-otp.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/input-otp.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -799,7 +799,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/input-phone.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/input-phone.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -815,7 +815,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/label.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/label.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -831,7 +831,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/letter-pullup.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/letter-pullup.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -847,7 +847,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/magic-card.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/magic-card.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -863,7 +863,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/marquee.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/marquee.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -879,7 +879,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/menubar.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/menubar.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -895,7 +895,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/meteors.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/meteors.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -911,7 +911,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/multi-select.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/multi-select.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -927,7 +927,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/navigation-menu.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/navigation-menu.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -943,7 +943,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/neon-gradient-card.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/neon-gradient-card.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -959,7 +959,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/number-ticker.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/number-ticker.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -975,7 +975,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/orbiting-circles.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/orbiting-circles.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -991,7 +991,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/pagination.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/pagination.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1007,7 +1007,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/particles.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/particles.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1023,7 +1023,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/popover.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/popover.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1039,7 +1039,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/progress.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/progress.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1055,7 +1055,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/pulsating-button.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/pulsating-button.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1071,7 +1071,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/radio-group.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/radio-group.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1087,7 +1087,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/resizable.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/resizable.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1103,7 +1103,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/retro-grid.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/retro-grid.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1119,7 +1119,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/ripple.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/ripple.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1135,7 +1135,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/scroll-area.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/scroll-area.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1151,7 +1151,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/scroll-based-velocity.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/scroll-based-velocity.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1167,7 +1167,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/scroll-progress.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/scroll-progress.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1183,7 +1183,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/select.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/select.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1199,7 +1199,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/separate-away.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/separate-away.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1215,7 +1215,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/separator.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/separator.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1231,7 +1231,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/sheet.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/sheet.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1247,7 +1247,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/shimmer-button.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/shimmer-button.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1263,7 +1263,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/shine-border.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/shine-border.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1279,7 +1279,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/shiny-button.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/shiny-button.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1295,7 +1295,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/sidebar.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/sidebar.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1311,7 +1311,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/skeleton.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/skeleton.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1327,7 +1327,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/slider.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/slider.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1343,7 +1343,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/sonner.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/sonner.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1359,7 +1359,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/sparkles-text.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/sparkles-text.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1375,7 +1375,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/star-rating.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/star-rating.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1391,7 +1391,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/switch.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/switch.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1407,7 +1407,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/stepper.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/stepper.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1423,7 +1423,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/scratch-to-reveal.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/scratch-to-reveal.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1439,7 +1439,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/table.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/table.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1455,7 +1455,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/tabs.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/tabs.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1471,7 +1471,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/textarea.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/textarea.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1487,7 +1487,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/text-reveal.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/text-reveal.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1503,7 +1503,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/timeline.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/timeline.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1519,7 +1519,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/toc.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/toc.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1543,7 +1543,7 @@ export const Index: Record<string, any> = {
         type: "registry:ui",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/toast.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/toast.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1559,7 +1559,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/toggle.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/toggle.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1575,7 +1575,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/toggle-group.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/toggle-group.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1591,7 +1591,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/tooltip.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/tooltip.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1607,7 +1607,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/tour.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/tour.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1623,7 +1623,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/typing-animation.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/typing-animation.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1639,7 +1639,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/tweet-card.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/tweet-card.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1655,7 +1655,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/video-modal.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/video-modal.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1671,7 +1671,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/wavy-dot-pattern.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/wavy-dot-pattern.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1687,7 +1687,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/wavy-text.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/wavy-text.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1703,7 +1703,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/word-fade-in.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/word-fade-in.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1719,7 +1719,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/word-pull-up.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/word-pull-up.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1735,7 +1735,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/word-rotate.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/word-rotate.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1751,7 +1751,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/rainbow-button.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/rainbow-button.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1767,7 +1767,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/flickering-grid.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/flickering-grid.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1783,7 +1783,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/hyper-text.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/hyper-text.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1799,7 +1799,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/safari.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/safari.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1815,7 +1815,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/ui/iphone-15-pro.tsx")),
+      component: React.lazy(() => import("~/registry/miami/ui/iphone-15-pro.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1831,7 +1831,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/accordion-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/accordion-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1847,7 +1847,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/alert-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/alert-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1863,7 +1863,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/alert-destructive.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/alert-destructive.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1879,7 +1879,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/alert-dialog-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/alert-dialog-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1895,7 +1895,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/aspect-ratio-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/aspect-ratio-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1911,7 +1911,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/avatar-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/avatar-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1927,7 +1927,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/badge-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/badge-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1943,7 +1943,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/badge-destructive.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/badge-destructive.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1959,7 +1959,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/badge-outline.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/badge-outline.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1975,7 +1975,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/badge-secondary.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/badge-secondary.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -1991,7 +1991,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/breadcrumb-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/breadcrumb-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2007,7 +2007,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/breadcrumb-separator.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/breadcrumb-separator.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2023,7 +2023,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/breadcrumb-dropdown.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/breadcrumb-dropdown.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2039,7 +2039,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/breadcrumb-ellipsis.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/breadcrumb-ellipsis.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2055,7 +2055,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/breadcrumb-link.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/breadcrumb-link.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2071,7 +2071,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/breadcrumb-responsive.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/breadcrumb-responsive.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2087,7 +2087,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/button-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/button-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2103,7 +2103,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/button-secondary.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/button-secondary.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2119,7 +2119,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/button-destructive.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/button-destructive.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2135,7 +2135,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/button-outline.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/button-outline.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2151,7 +2151,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/button-ghost.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/button-ghost.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2167,7 +2167,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/button-link.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/button-link.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2183,7 +2183,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/button-with-icon.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/button-with-icon.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2199,7 +2199,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/button-loading.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/button-loading.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2215,7 +2215,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/button-icon.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/button-icon.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2231,7 +2231,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/button-as-child.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/button-as-child.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2247,7 +2247,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/pulsating-button-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/pulsating-button-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2263,7 +2263,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/calendar-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/calendar-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2279,7 +2279,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/calendar-form.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/calendar-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2295,7 +2295,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/card-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/card-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2311,7 +2311,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/card-with-form.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/card-with-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2327,7 +2327,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/carousel-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/carousel-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2343,7 +2343,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/carousel-size.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/carousel-size.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2359,7 +2359,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/carousel-spacing.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/carousel-spacing.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2375,7 +2375,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/carousel-orientation.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/carousel-orientation.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2391,7 +2391,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/carousel-dots.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/carousel-dots.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2407,7 +2407,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/carousel-api.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/carousel-api.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2423,7 +2423,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/carousel-plugin.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/carousel-plugin.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2439,7 +2439,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/checkbox-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/checkbox-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2455,7 +2455,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/checkbox-disabled.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/checkbox-disabled.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2471,7 +2471,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/checkbox-form-multiple.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/checkbox-form-multiple.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2487,7 +2487,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/checkbox-form-single.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/checkbox-form-single.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2503,7 +2503,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/checkbox-with-text.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/checkbox-with-text.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2519,7 +2519,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/collapsible-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/collapsible-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2535,7 +2535,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/combobox-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/combobox-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2551,7 +2551,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/combobox-dropdown-menu.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/combobox-dropdown-menu.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2567,7 +2567,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/combobox-form.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/combobox-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2583,7 +2583,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/combobox-popover.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/combobox-popover.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2599,7 +2599,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/combobox-responsive.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/combobox-responsive.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2615,7 +2615,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/command-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/command-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2631,7 +2631,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/command-dialog.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/command-dialog.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2647,7 +2647,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/context-menu-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/context-menu-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2663,7 +2663,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/data-table-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/data-table-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2679,7 +2679,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/date-picker-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/date-picker-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2695,7 +2695,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/date-picker-form.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/date-picker-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2711,7 +2711,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/date-picker-with-presets.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/date-picker-with-presets.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2727,7 +2727,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/date-picker-with-range.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/date-picker-with-range.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2743,7 +2743,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/dialog-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/dialog-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2759,7 +2759,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/dialog-close-button.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/dialog-close-button.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2775,7 +2775,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/drawer-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/drawer-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2791,7 +2791,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/drawer-dialog.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/drawer-dialog.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2807,7 +2807,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/dropdown-menu-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/dropdown-menu-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2823,7 +2823,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/dropdown-menu-checkboxes.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/dropdown-menu-checkboxes.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2839,7 +2839,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/dropdown-menu-radio-group.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/dropdown-menu-radio-group.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2855,7 +2855,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/hover-card-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/hover-card-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2871,7 +2871,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/input-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/input-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2887,7 +2887,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/input-disabled.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/input-disabled.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2903,7 +2903,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/input-file.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/input-file.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2919,7 +2919,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/input-form.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/input-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2935,7 +2935,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/input-with-button.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/input-with-button.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2951,7 +2951,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/input-with-label.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/input-with-label.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2967,7 +2967,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/input-with-text.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/input-with-text.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2983,7 +2983,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/input-otp-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/input-otp-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -2999,7 +2999,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/input-otp-pattern.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/input-otp-pattern.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3015,7 +3015,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/input-otp-separator.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/input-otp-separator.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3031,7 +3031,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/input-otp-controlled.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/input-otp-controlled.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3047,7 +3047,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/input-otp-form.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/input-otp-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3063,7 +3063,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/input-otp-disabled.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/input-otp-disabled.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3079,7 +3079,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/input-phone-default.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/input-phone-default.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3095,7 +3095,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/input-phone-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/input-phone-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3111,7 +3111,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/input-phone-form.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/input-phone-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3127,7 +3127,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/input-phone-initial.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/input-phone-initial.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3143,7 +3143,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/input-phone-international.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/input-phone-international.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3159,7 +3159,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/input-phone-national.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/input-phone-national.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3175,7 +3175,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/label-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/label-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3191,7 +3191,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/menubar-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/menubar-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3207,7 +3207,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/navigation-menu-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/navigation-menu-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3223,7 +3223,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/pagination-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/pagination-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3239,7 +3239,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/popover-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/popover-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3255,7 +3255,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/progress-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/progress-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3271,7 +3271,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/radio-group-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/radio-group-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3287,7 +3287,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/radio-group-form.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/radio-group-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3303,7 +3303,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/resizable-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/resizable-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3319,7 +3319,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/resizable-demo-with-handle.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/resizable-demo-with-handle.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3335,7 +3335,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/resizable-vertical.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/resizable-vertical.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3351,7 +3351,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/resizable-handle.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/resizable-handle.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3367,7 +3367,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/scroll-area-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/scroll-area-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3383,7 +3383,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/scroll-area-horizontal-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/scroll-area-horizontal-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3399,7 +3399,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/magic-card-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/magic-card-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3415,7 +3415,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/neon-gradient-card-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/neon-gradient-card-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3431,7 +3431,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/magic-card-gradient.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/magic-card-gradient.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3447,7 +3447,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/meteors-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/meteors-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3463,7 +3463,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/grid-pattern-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/grid-pattern-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3479,7 +3479,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/grid-pattern-linear-gradient.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/grid-pattern-linear-gradient.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3495,7 +3495,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/grid-pattern-dashed.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/grid-pattern-dashed.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3511,7 +3511,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/dot-pattern-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/dot-pattern-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3527,7 +3527,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/dot-pattern-linear-gradient.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/dot-pattern-linear-gradient.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3543,7 +3543,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/marquee-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/marquee-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3559,7 +3559,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/marquee-demo-vertical.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/marquee-demo-vertical.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3575,7 +3575,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/marquee-logos.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/marquee-logos.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3591,7 +3591,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/marquee-3d.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/marquee-3d.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3607,7 +3607,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/globe-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/globe-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3623,7 +3623,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/tweet-card-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/tweet-card-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3639,7 +3639,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/tweet-card-images.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/tweet-card-images.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3655,7 +3655,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/tweet-card-meta-preview.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/tweet-card-meta-preview.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3671,7 +3671,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/shimmer-button-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/shimmer-button-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3687,7 +3687,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/hero-video-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/hero-video-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3703,7 +3703,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/hero-video-youtube.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/hero-video-youtube.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3719,7 +3719,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/bento-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/bento-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3735,7 +3735,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/bento-demo-vertical.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/bento-demo-vertical.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3751,7 +3751,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/number-ticker-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/number-ticker-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3767,7 +3767,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/ripple-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/ripple-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3783,7 +3783,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/retro-grid-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/retro-grid-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3799,7 +3799,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-list-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-list-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3815,7 +3815,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-shiny-text-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-shiny-text-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3831,7 +3831,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/particles-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/particles-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3847,7 +3847,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-grid-pattern-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-grid-pattern-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3863,7 +3863,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/border-beam-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/border-beam-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3879,7 +3879,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-beam-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-beam-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3895,7 +3895,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-beam-unidirectional.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-beam-unidirectional.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3911,7 +3911,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-beam-bidirectional.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-beam-bidirectional.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3927,7 +3927,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-beam-multiple-inputs.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-beam-multiple-inputs.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3943,7 +3943,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-beam-multiple-outputs.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-beam-multiple-outputs.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3959,7 +3959,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-feature-card-1.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-feature-card-1.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3975,7 +3975,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-feature-card-2.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-feature-card-2.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -3991,7 +3991,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-feature-card-3.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-feature-card-3.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4007,7 +4007,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-feature-card-4.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-feature-card-4.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4023,7 +4023,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-feature-card-5.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-feature-card-5.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4039,7 +4039,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-feature-card-6.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-feature-card-6.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4055,7 +4055,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-feature-card-7.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-feature-card-7.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4071,7 +4071,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-feature-card-8.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-feature-card-8.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4087,7 +4087,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-feature-card-9.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-feature-card-9.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4103,7 +4103,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-feature-card-10.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-feature-card-10.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4119,7 +4119,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/text-reveal-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/text-reveal-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4135,7 +4135,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-gradient-text-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-gradient-text-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4151,7 +4151,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/orbiting-circles-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/orbiting-circles-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4167,7 +4167,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/dock-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/dock-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4183,7 +4183,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/dock-demo-2.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/dock-demo-2.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4199,7 +4199,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/dock-demo-3.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/dock-demo-3.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4215,7 +4215,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/word-rotate-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/word-rotate-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4231,7 +4231,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/avatar-circles-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/avatar-circles-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4247,7 +4247,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/word-pull-up-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/word-pull-up-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4263,7 +4263,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/typing-animation-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/typing-animation-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4279,7 +4279,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/wavy-text-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/wavy-text-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4295,7 +4295,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/blur-in-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/blur-in-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4311,7 +4311,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/separate-away-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/separate-away-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4327,7 +4327,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/scroll-based-velocity-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/scroll-based-velocity-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4343,7 +4343,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/letter-pullup-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/letter-pullup-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4359,7 +4359,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/flip-text-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/flip-text-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4375,7 +4375,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/sparkles-text-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/sparkles-text-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4391,7 +4391,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/icon-cloud-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/icon-cloud-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4407,7 +4407,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/wavy-dot-pattern-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/wavy-dot-pattern-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4423,7 +4423,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/gradual-spacing-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/gradual-spacing-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4439,7 +4439,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/word-fade-in-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/word-fade-in-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4455,7 +4455,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/fade-text-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/fade-text-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4471,7 +4471,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/shiny-button-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/shiny-button-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4487,7 +4487,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/box-reveal-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/box-reveal-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4503,7 +4503,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/gauge-circle-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/gauge-circle-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4519,7 +4519,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/shine-border-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/shine-border-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4535,7 +4535,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/shine-border-demo-2.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/shine-border-demo-2.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4551,7 +4551,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/confetti-hover.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/confetti-hover.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4567,7 +4567,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/confetti-basic-cannon.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/confetti-basic-cannon.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4583,7 +4583,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/confetti-random-direction.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/confetti-random-direction.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4599,7 +4599,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/confetti-fireworks.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/confetti-fireworks.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4615,7 +4615,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/confetti-stars.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/confetti-stars.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4631,7 +4631,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/confetti-side-cannons.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/confetti-side-cannons.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4647,7 +4647,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/confetti-custom-shapes.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/confetti-custom-shapes.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4663,7 +4663,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/confetti-emoji.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/confetti-emoji.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4679,7 +4679,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/animated-subscribe-button-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/animated-subscribe-button-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4695,7 +4695,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/cool-mode-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/cool-mode-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4711,7 +4711,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/cool-mode-custom.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/cool-mode-custom.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4727,7 +4727,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/timeline-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/timeline-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4743,7 +4743,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/timeline-right.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/timeline-right.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4759,7 +4759,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/timeline-alternate.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/timeline-alternate.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4775,7 +4775,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/timeline-labels.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/timeline-labels.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4791,7 +4791,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/star-rating-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/star-rating-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4807,7 +4807,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/star-rating-colored.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/star-rating-colored.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4823,7 +4823,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/star-rating-icon.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/star-rating-icon.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4839,7 +4839,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/stepper-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/stepper-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4855,7 +4855,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/stepper-custom-styles.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/stepper-custom-styles.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4871,7 +4871,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/stepper-orientation.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/stepper-orientation.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4887,7 +4887,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/stepper-description.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/stepper-description.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4903,7 +4903,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/stepper-sizes.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/stepper-sizes.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4919,7 +4919,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/stepper-form.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/stepper-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4935,7 +4935,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/stepper-variants.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/stepper-variants.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4951,7 +4951,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/stepper-custom-icons.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/stepper-custom-icons.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4967,7 +4967,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/stepper-footer-inside.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/stepper-footer-inside.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4983,7 +4983,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/stepper-scroll-tracking.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/stepper-scroll-tracking.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -4999,7 +4999,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/stepper-clickable-steps.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/stepper-clickable-steps.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5015,7 +5015,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/stepper-optional-steps.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/stepper-optional-steps.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5031,7 +5031,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/stepper-state.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/stepper-state.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5047,7 +5047,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/tour-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/tour-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5063,7 +5063,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/toc-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/toc-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5079,7 +5079,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/toc-nested.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/toc-nested.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5095,7 +5095,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/toc-active.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/toc-active.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5111,7 +5111,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/multi-select-basic.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/multi-select-basic.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5127,7 +5127,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/multi-select-filter.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/multi-select-filter.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5143,7 +5143,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/multi-select-controllable-search.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/multi-select-controllable-search.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5159,7 +5159,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/multi-select-input-custom.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/multi-select-input-custom.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5175,7 +5175,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/multi-select-limit-count.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/multi-select-limit-count.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5191,7 +5191,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/multi-select-limit-display-length.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/multi-select-limit-display-length.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5207,7 +5207,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/multi-select-form.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/multi-select-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5223,7 +5223,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/scroll-progress-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/scroll-progress-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5239,7 +5239,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/video-modal-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/video-modal-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5255,7 +5255,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/scratch-to-reveal-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/scratch-to-reveal-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5271,7 +5271,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/confetti-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/confetti-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5287,7 +5287,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/blur-fade-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/blur-fade-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5303,7 +5303,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/blur-fade-text-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/blur-fade-text-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5319,7 +5319,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/file-tree-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/file-tree-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5335,7 +5335,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/rainbow-button-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/rainbow-button-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5351,7 +5351,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/hero-video-dialog-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/hero-video-dialog-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5367,7 +5367,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/hero-video-dialog-demo-top-in-bottom-out.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/hero-video-dialog-demo-top-in-bottom-out.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5383,7 +5383,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/flickering-grid-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/flickering-grid-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5399,7 +5399,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/flickering-grid-rounded-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/flickering-grid-rounded-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5415,7 +5415,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/hyper-text-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/hyper-text-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5431,7 +5431,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/safari-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/safari-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5447,7 +5447,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/safari-demo-2.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/safari-demo-2.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5463,7 +5463,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/iphone-15-pro-demo.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/iphone-15-pro-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5479,7 +5479,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/example/iphone-15-pro-demo-2.tsx")),
+      component: React.lazy(() => import("~/registry/miami/example/iphone-15-pro-demo-2.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -5755,7 +5755,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/_sink/page.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/_sink/page.tsx")),
       source: "__registry__/miami/block/_sink/page.tsx",
       category: "",
       subcategory: "",
@@ -5783,7 +5783,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/sidebar-01/page.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-01/page.tsx")),
       source: "__registry__/miami/block/sidebar-01/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -5811,7 +5811,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/sidebar-02/page.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-02/page.tsx")),
       source: "__registry__/miami/block/sidebar-02/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -5831,7 +5831,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/sidebar-03/page.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-03/page.tsx")),
       source: "__registry__/miami/block/sidebar-03/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -5851,7 +5851,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/sidebar-04/page.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-04/page.tsx")),
       source: "__registry__/miami/block/sidebar-04/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -5875,7 +5875,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/sidebar-05/page.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-05/page.tsx")),
       source: "__registry__/miami/block/sidebar-05/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -5903,7 +5903,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/sidebar-06/page.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-06/page.tsx")),
       source: "__registry__/miami/block/sidebar-06/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -5939,7 +5939,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/sidebar-07/page.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-07/page.tsx")),
       source: "__registry__/miami/block/sidebar-07/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -5975,7 +5975,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/sidebar-08/page.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-08/page.tsx")),
       source: "__registry__/miami/block/sidebar-08/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -5999,7 +5999,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/sidebar-09/page.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-09/page.tsx")),
       source: "__registry__/miami/block/sidebar-09/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -6043,7 +6043,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/sidebar-10/page.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-10/page.tsx")),
       source: "__registry__/miami/block/sidebar-10/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -6063,7 +6063,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/sidebar-11/page.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-11/page.tsx")),
       source: "__registry__/miami/block/sidebar-11/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -6095,7 +6095,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/sidebar-12/page.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-12/page.tsx")),
       source: "__registry__/miami/block/sidebar-12/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -6115,7 +6115,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/sidebar-13/page.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-13/page.tsx")),
       source: "__registry__/miami/block/sidebar-13/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -6135,7 +6135,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/sidebar-14/page.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-14/page.tsx")),
       source: "__registry__/miami/block/sidebar-14/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -6191,7 +6191,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/sidebar-15/page.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/sidebar-15/page.tsx")),
       source: "__registry__/miami/block/sidebar-15/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -6211,7 +6211,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/login-01/page.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/login-01/page.tsx")),
       source: "__registry__/miami/block/login-01/page.tsx",
       category: "Authentication",
       subcategory: "Login",
@@ -6227,7 +6227,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-area-axes.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-area-axes.tsx")),
       source: "__registry__/miami/block/chart-area-axes.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -6243,7 +6243,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-area-default.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-area-default.tsx")),
       source: "__registry__/miami/block/chart-area-default.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -6259,7 +6259,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-area-gradient.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-area-gradient.tsx")),
       source: "__registry__/miami/block/chart-area-gradient.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -6275,7 +6275,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-area-icons.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-area-icons.tsx")),
       source: "__registry__/miami/block/chart-area-icons.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -6291,7 +6291,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-area-interactive.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-area-interactive.tsx")),
       source: "__registry__/miami/block/chart-area-interactive.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -6307,7 +6307,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-area-legend.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-area-legend.tsx")),
       source: "__registry__/miami/block/chart-area-legend.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -6323,7 +6323,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-area-linear.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-area-linear.tsx")),
       source: "__registry__/miami/block/chart-area-linear.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -6339,7 +6339,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-area-stacked-expand.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-area-stacked-expand.tsx")),
       source: "__registry__/miami/block/chart-area-stacked-expand.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -6355,7 +6355,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-area-stacked.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-area-stacked.tsx")),
       source: "__registry__/miami/block/chart-area-stacked.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -6371,7 +6371,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-area-step.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-area-step.tsx")),
       source: "__registry__/miami/block/chart-area-step.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -6387,7 +6387,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-bar-active.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-bar-active.tsx")),
       source: "__registry__/miami/block/chart-bar-active.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -6403,7 +6403,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-bar-default.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-bar-default.tsx")),
       source: "__registry__/miami/block/chart-bar-default.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -6419,7 +6419,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-bar-horizontal.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-bar-horizontal.tsx")),
       source: "__registry__/miami/block/chart-bar-horizontal.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -6435,7 +6435,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-bar-interactive.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-bar-interactive.tsx")),
       source: "__registry__/miami/block/chart-bar-interactive.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -6451,7 +6451,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-bar-label-custom.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-bar-label-custom.tsx")),
       source: "__registry__/miami/block/chart-bar-label-custom.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -6467,7 +6467,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-bar-label.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-bar-label.tsx")),
       source: "__registry__/miami/block/chart-bar-label.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -6483,7 +6483,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-bar-mixed.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-bar-mixed.tsx")),
       source: "__registry__/miami/block/chart-bar-mixed.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -6499,7 +6499,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-bar-multiple.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-bar-multiple.tsx")),
       source: "__registry__/miami/block/chart-bar-multiple.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -6515,7 +6515,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-bar-negative.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-bar-negative.tsx")),
       source: "__registry__/miami/block/chart-bar-negative.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -6531,7 +6531,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-bar-stacked.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-bar-stacked.tsx")),
       source: "__registry__/miami/block/chart-bar-stacked.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -6547,7 +6547,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-line-default.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-line-default.tsx")),
       source: "__registry__/miami/block/chart-line-default.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -6563,7 +6563,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-line-dots-colors.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-line-dots-colors.tsx")),
       source: "__registry__/miami/block/chart-line-dots-colors.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -6579,7 +6579,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-line-dots-custom.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-line-dots-custom.tsx")),
       source: "__registry__/miami/block/chart-line-dots-custom.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -6595,7 +6595,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-line-dots.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-line-dots.tsx")),
       source: "__registry__/miami/block/chart-line-dots.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -6611,7 +6611,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-line-interactive.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-line-interactive.tsx")),
       source: "__registry__/miami/block/chart-line-interactive.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -6627,7 +6627,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-line-label-custom.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-line-label-custom.tsx")),
       source: "__registry__/miami/block/chart-line-label-custom.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -6643,7 +6643,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-line-label.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-line-label.tsx")),
       source: "__registry__/miami/block/chart-line-label.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -6659,7 +6659,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-line-linear.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-line-linear.tsx")),
       source: "__registry__/miami/block/chart-line-linear.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -6675,7 +6675,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-line-multiple.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-line-multiple.tsx")),
       source: "__registry__/miami/block/chart-line-multiple.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -6691,7 +6691,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-line-step.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-line-step.tsx")),
       source: "__registry__/miami/block/chart-line-step.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -6707,7 +6707,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-pie-donut-active.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-pie-donut-active.tsx")),
       source: "__registry__/miami/block/chart-pie-donut-active.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -6723,7 +6723,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-pie-donut-text.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-pie-donut-text.tsx")),
       source: "__registry__/miami/block/chart-pie-donut-text.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -6739,7 +6739,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-pie-donut.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-pie-donut.tsx")),
       source: "__registry__/miami/block/chart-pie-donut.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -6755,7 +6755,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-pie-interactive.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-pie-interactive.tsx")),
       source: "__registry__/miami/block/chart-pie-interactive.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -6771,7 +6771,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-pie-label-custom.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-pie-label-custom.tsx")),
       source: "__registry__/miami/block/chart-pie-label-custom.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -6787,7 +6787,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-pie-label-list.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-pie-label-list.tsx")),
       source: "__registry__/miami/block/chart-pie-label-list.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -6803,7 +6803,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-pie-label.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-pie-label.tsx")),
       source: "__registry__/miami/block/chart-pie-label.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -6819,7 +6819,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-pie-legend.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-pie-legend.tsx")),
       source: "__registry__/miami/block/chart-pie-legend.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -6835,7 +6835,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-pie-separator-none.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-pie-separator-none.tsx")),
       source: "__registry__/miami/block/chart-pie-separator-none.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -6851,7 +6851,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-pie-simple.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-pie-simple.tsx")),
       source: "__registry__/miami/block/chart-pie-simple.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -6867,7 +6867,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-pie-stacked.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-pie-stacked.tsx")),
       source: "__registry__/miami/block/chart-pie-stacked.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -6883,7 +6883,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radar-default.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radar-default.tsx")),
       source: "__registry__/miami/block/chart-radar-default.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -6899,7 +6899,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radar-dots.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radar-dots.tsx")),
       source: "__registry__/miami/block/chart-radar-dots.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -6915,7 +6915,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radar-grid-circle-fill.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radar-grid-circle-fill.tsx")),
       source: "__registry__/miami/block/chart-radar-grid-circle-fill.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -6931,7 +6931,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radar-grid-circle-no-lines.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radar-grid-circle-no-lines.tsx")),
       source: "__registry__/miami/block/chart-radar-grid-circle-no-lines.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -6947,7 +6947,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radar-grid-circle.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radar-grid-circle.tsx")),
       source: "__registry__/miami/block/chart-radar-grid-circle.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -6963,7 +6963,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radar-grid-custom.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radar-grid-custom.tsx")),
       source: "__registry__/miami/block/chart-radar-grid-custom.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -6979,7 +6979,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radar-grid-fill.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radar-grid-fill.tsx")),
       source: "__registry__/miami/block/chart-radar-grid-fill.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -6995,7 +6995,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radar-grid-none.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radar-grid-none.tsx")),
       source: "__registry__/miami/block/chart-radar-grid-none.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -7011,7 +7011,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radar-icons.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radar-icons.tsx")),
       source: "__registry__/miami/block/chart-radar-icons.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -7027,7 +7027,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radar-label-custom.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radar-label-custom.tsx")),
       source: "__registry__/miami/block/chart-radar-label-custom.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -7043,7 +7043,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radar-legend.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radar-legend.tsx")),
       source: "__registry__/miami/block/chart-radar-legend.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -7059,7 +7059,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radar-lines-only.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radar-lines-only.tsx")),
       source: "__registry__/miami/block/chart-radar-lines-only.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -7075,7 +7075,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radar-multiple.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radar-multiple.tsx")),
       source: "__registry__/miami/block/chart-radar-multiple.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -7091,7 +7091,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radar-radius.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radar-radius.tsx")),
       source: "__registry__/miami/block/chart-radar-radius.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -7107,7 +7107,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radial-grid.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radial-grid.tsx")),
       source: "__registry__/miami/block/chart-radial-grid.tsx",
       category: "Charts",
       subcategory: "Radial",
@@ -7123,7 +7123,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radial-label.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radial-label.tsx")),
       source: "__registry__/miami/block/chart-radial-label.tsx",
       category: "Charts",
       subcategory: "Radial",
@@ -7139,7 +7139,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radial-shape.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radial-shape.tsx")),
       source: "__registry__/miami/block/chart-radial-shape.tsx",
       category: "Charts",
       subcategory: "Radial",
@@ -7155,7 +7155,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radial-simple.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radial-simple.tsx")),
       source: "__registry__/miami/block/chart-radial-simple.tsx",
       category: "Charts",
       subcategory: "Radial",
@@ -7171,7 +7171,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radial-stacked.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radial-stacked.tsx")),
       source: "__registry__/miami/block/chart-radial-stacked.tsx",
       category: "Charts",
       subcategory: "Radial",
@@ -7187,7 +7187,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-radial-text.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-radial-text.tsx")),
       source: "__registry__/miami/block/chart-radial-text.tsx",
       category: "Charts",
       subcategory: "Radial",
@@ -7203,7 +7203,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-tooltip-default.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-tooltip-default.tsx")),
       source: "__registry__/miami/block/chart-tooltip-default.tsx",
       category: "Charts",
       subcategory: "Tooltip",
@@ -7219,7 +7219,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-tooltip-indicator-line.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-tooltip-indicator-line.tsx")),
       source: "__registry__/miami/block/chart-tooltip-indicator-line.tsx",
       category: "Charts",
       subcategory: "Tooltip",
@@ -7235,7 +7235,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-tooltip-indicator-none.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-tooltip-indicator-none.tsx")),
       source: "__registry__/miami/block/chart-tooltip-indicator-none.tsx",
       category: "Charts",
       subcategory: "Tooltip",
@@ -7251,7 +7251,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-tooltip-label-none.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-tooltip-label-none.tsx")),
       source: "__registry__/miami/block/chart-tooltip-label-none.tsx",
       category: "Charts",
       subcategory: "Tooltip",
@@ -7267,7 +7267,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-tooltip-label-custom.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-tooltip-label-custom.tsx")),
       source: "__registry__/miami/block/chart-tooltip-label-custom.tsx",
       category: "Charts",
       subcategory: "Tooltip",
@@ -7283,7 +7283,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-tooltip-label-formatter.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-tooltip-label-formatter.tsx")),
       source: "__registry__/miami/block/chart-tooltip-label-formatter.tsx",
       category: "Charts",
       subcategory: "Tooltip",
@@ -7299,7 +7299,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-tooltip-formatter.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-tooltip-formatter.tsx")),
       source: "__registry__/miami/block/chart-tooltip-formatter.tsx",
       category: "Charts",
       subcategory: "Tooltip",
@@ -7315,7 +7315,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-tooltip-icons.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-tooltip-icons.tsx")),
       source: "__registry__/miami/block/chart-tooltip-icons.tsx",
       category: "Charts",
       subcategory: "Tooltip",
@@ -7331,7 +7331,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/block/chart-tooltip-advanced.tsx")),
+      component: React.lazy(() => import("~/registry/miami/block/chart-tooltip-advanced.tsx")),
       source: "__registry__/miami/block/chart-tooltip-advanced.tsx",
       category: "Charts",
       subcategory: "Tooltip",
@@ -7347,7 +7347,7 @@ export const Index: Record<string, any> = {
         type: "registry:lib",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/lib/utils.ts")),
+      component: React.lazy(() => import("~/registry/miami/lib/utils.ts")),
       source: "",
       category: "",
       subcategory: "",
@@ -7363,7 +7363,7 @@ export const Index: Record<string, any> = {
         type: "registry:hook",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/hooks/use-mobile.tsx")),
+      component: React.lazy(() => import("~/registry/miami/hooks/use-mobile.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7379,7 +7379,7 @@ export const Index: Record<string, any> = {
         type: "registry:hook",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/miami/hooks/use-toast.ts")),
+      component: React.lazy(() => import("~/registry/miami/hooks/use-toast.ts")),
       source: "",
       category: "",
       subcategory: "",
@@ -7396,7 +7396,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/accordion.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/accordion.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7412,7 +7412,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/alert.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/alert.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7428,7 +7428,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/alert-dialog.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/alert-dialog.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7444,7 +7444,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/animated-beam.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/animated-beam.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7460,7 +7460,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/animated-grid-pattern.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/animated-grid-pattern.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7476,7 +7476,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/animated-list.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/animated-list.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7492,7 +7492,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/animated-shiny-text.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/animated-shiny-text.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7508,7 +7508,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/animated-subscribe-button.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/animated-subscribe-button.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7524,7 +7524,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/animated-gradient-text.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/animated-gradient-text.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7540,7 +7540,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/aspect-ratio.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/aspect-ratio.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7556,7 +7556,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/avatar.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/avatar.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7572,7 +7572,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/avatar-circles.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/avatar-circles.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7588,7 +7588,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/badge.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/badge.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7604,7 +7604,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/bento-grid.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/bento-grid.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7620,7 +7620,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/blur-in.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/blur-in.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7636,7 +7636,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/border-beam.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/border-beam.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7652,7 +7652,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/box-reveal.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/box-reveal.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7668,7 +7668,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/breadcrumb.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/breadcrumb.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7684,7 +7684,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/blur-fade.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/blur-fade.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7700,7 +7700,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/button.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/button.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7716,7 +7716,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/calendar.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/calendar.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7732,7 +7732,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/card.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/card.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7748,7 +7748,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/carousel.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/carousel.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7764,7 +7764,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/chart.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/chart.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7780,7 +7780,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/checkbox.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/checkbox.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7796,7 +7796,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/client-tweet-card.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/client-tweet-card.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7812,7 +7812,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/collapsible.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/collapsible.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7828,7 +7828,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/command.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/command.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7844,7 +7844,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/confetti.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/confetti.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7860,7 +7860,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/context-menu.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/context-menu.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7876,7 +7876,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/cool-mode.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/cool-mode.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7892,7 +7892,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/dialog.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/dialog.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7908,7 +7908,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/dock.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/dock.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7924,7 +7924,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/dot-pattern.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/dot-pattern.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7940,7 +7940,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/drawer.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/drawer.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7956,7 +7956,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/dropdown-menu.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/dropdown-menu.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7972,7 +7972,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/fade-text.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/fade-text.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -7988,7 +7988,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/file-tree.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/file-tree.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8004,7 +8004,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/flip-text.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/flip-text.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8020,7 +8020,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/form.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8036,7 +8036,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/globe.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/globe.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8052,7 +8052,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/gradual-spacing.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/gradual-spacing.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8068,7 +8068,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/grid-pattern.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/grid-pattern.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8084,7 +8084,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/gauge-circle.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/gauge-circle.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8100,7 +8100,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/hero-video-dialog.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/hero-video-dialog.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8116,7 +8116,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/hover-card.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/hover-card.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8132,7 +8132,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/icon-cloud.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/icon-cloud.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8148,7 +8148,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/input.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/input.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8164,7 +8164,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/input-otp.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/input-otp.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8180,7 +8180,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/input-phone.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/input-phone.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8196,7 +8196,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/label.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/label.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8212,7 +8212,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/letter-pullup.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/letter-pullup.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8228,7 +8228,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/magic-card.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/magic-card.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8244,7 +8244,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/marquee.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/marquee.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8260,7 +8260,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/menubar.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/menubar.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8276,7 +8276,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/meteors.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/meteors.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8292,7 +8292,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/multi-select.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/multi-select.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8308,7 +8308,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/navigation-menu.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/navigation-menu.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8324,7 +8324,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/neon-gradient-card.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/neon-gradient-card.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8340,7 +8340,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/number-ticker.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/number-ticker.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8356,7 +8356,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/orbiting-circles.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/orbiting-circles.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8372,7 +8372,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/pagination.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/pagination.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8388,7 +8388,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/particles.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/particles.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8404,7 +8404,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/popover.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/popover.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8420,7 +8420,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/progress.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/progress.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8436,7 +8436,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/pulsating-button.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/pulsating-button.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8452,7 +8452,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/radio-group.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/radio-group.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8468,7 +8468,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/resizable.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/resizable.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8484,7 +8484,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/retro-grid.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/retro-grid.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8500,7 +8500,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/ripple.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/ripple.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8516,7 +8516,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/scroll-area.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/scroll-area.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8532,7 +8532,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/scroll-based-velocity.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/scroll-based-velocity.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8548,7 +8548,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/scroll-progress.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/scroll-progress.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8564,7 +8564,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/select.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/select.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8580,7 +8580,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/separate-away.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/separate-away.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8596,7 +8596,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/separator.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/separator.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8612,7 +8612,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/sheet.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/sheet.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8628,7 +8628,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/shimmer-button.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/shimmer-button.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8644,7 +8644,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/shine-border.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/shine-border.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8660,7 +8660,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/shiny-button.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/shiny-button.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8676,7 +8676,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/sidebar.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/sidebar.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8692,7 +8692,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/skeleton.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/skeleton.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8708,7 +8708,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/slider.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/slider.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8724,7 +8724,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/sonner.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/sonner.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8740,7 +8740,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/sparkles-text.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/sparkles-text.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8756,7 +8756,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/star-rating.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/star-rating.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8772,7 +8772,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/switch.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/switch.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8788,7 +8788,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/stepper.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/stepper.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8804,7 +8804,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/scratch-to-reveal.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/scratch-to-reveal.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8820,7 +8820,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/table.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/table.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8836,7 +8836,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/tabs.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/tabs.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8852,7 +8852,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/textarea.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/textarea.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8868,7 +8868,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/text-reveal.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/text-reveal.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8884,7 +8884,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/timeline.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/timeline.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8900,7 +8900,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/toc.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/toc.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8924,7 +8924,7 @@ export const Index: Record<string, any> = {
         type: "registry:ui",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/toast.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/toast.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8940,7 +8940,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/toggle.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/toggle.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8956,7 +8956,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/toggle-group.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/toggle-group.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8972,7 +8972,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/tooltip.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/tooltip.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -8988,7 +8988,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/tour.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/tour.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9004,7 +9004,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/typing-animation.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/typing-animation.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9020,7 +9020,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/tweet-card.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/tweet-card.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9036,7 +9036,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/video-modal.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/video-modal.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9052,7 +9052,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/wavy-dot-pattern.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/wavy-dot-pattern.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9068,7 +9068,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/wavy-text.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/wavy-text.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9084,7 +9084,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/word-fade-in.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/word-fade-in.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9100,7 +9100,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/word-pull-up.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/word-pull-up.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9116,7 +9116,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/word-rotate.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/word-rotate.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9132,7 +9132,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/rainbow-button.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/rainbow-button.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9148,7 +9148,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/flickering-grid.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/flickering-grid.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9164,7 +9164,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/hyper-text.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/hyper-text.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9180,7 +9180,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/safari.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/safari.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9196,7 +9196,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/ui/iphone-15-pro.tsx")),
+      component: React.lazy(() => import("~/registry/default/ui/iphone-15-pro.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9212,7 +9212,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/accordion-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/accordion-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9228,7 +9228,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/alert-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/alert-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9244,7 +9244,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/alert-destructive.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/alert-destructive.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9260,7 +9260,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/alert-dialog-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/alert-dialog-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9276,7 +9276,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/aspect-ratio-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/aspect-ratio-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9292,7 +9292,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/avatar-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/avatar-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9308,7 +9308,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/badge-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/badge-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9324,7 +9324,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/badge-destructive.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/badge-destructive.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9340,7 +9340,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/badge-outline.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/badge-outline.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9356,7 +9356,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/badge-secondary.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/badge-secondary.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9372,7 +9372,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/breadcrumb-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/breadcrumb-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9388,7 +9388,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/breadcrumb-separator.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/breadcrumb-separator.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9404,7 +9404,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/breadcrumb-dropdown.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/breadcrumb-dropdown.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9420,7 +9420,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/breadcrumb-ellipsis.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/breadcrumb-ellipsis.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9436,7 +9436,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/breadcrumb-link.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/breadcrumb-link.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9452,7 +9452,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/breadcrumb-responsive.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/breadcrumb-responsive.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9468,7 +9468,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/button-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/button-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9484,7 +9484,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/button-secondary.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/button-secondary.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9500,7 +9500,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/button-destructive.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/button-destructive.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9516,7 +9516,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/button-outline.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/button-outline.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9532,7 +9532,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/button-ghost.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/button-ghost.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9548,7 +9548,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/button-link.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/button-link.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9564,7 +9564,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/button-with-icon.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/button-with-icon.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9580,7 +9580,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/button-loading.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/button-loading.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9596,7 +9596,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/button-icon.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/button-icon.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9612,7 +9612,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/button-as-child.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/button-as-child.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9628,7 +9628,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/pulsating-button-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/pulsating-button-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9644,7 +9644,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/calendar-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/calendar-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9660,7 +9660,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/calendar-form.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/calendar-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9676,7 +9676,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/card-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/card-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9692,7 +9692,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/card-with-form.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/card-with-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9708,7 +9708,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/carousel-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/carousel-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9724,7 +9724,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/carousel-size.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/carousel-size.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9740,7 +9740,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/carousel-spacing.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/carousel-spacing.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9756,7 +9756,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/carousel-orientation.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/carousel-orientation.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9772,7 +9772,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/carousel-dots.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/carousel-dots.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9788,7 +9788,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/carousel-api.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/carousel-api.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9804,7 +9804,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/carousel-plugin.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/carousel-plugin.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9820,7 +9820,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/checkbox-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/checkbox-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9836,7 +9836,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/checkbox-disabled.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/checkbox-disabled.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9852,7 +9852,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/checkbox-form-multiple.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/checkbox-form-multiple.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9868,7 +9868,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/checkbox-form-single.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/checkbox-form-single.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9884,7 +9884,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/checkbox-with-text.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/checkbox-with-text.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9900,7 +9900,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/collapsible-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/collapsible-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9916,7 +9916,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/combobox-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/combobox-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9932,7 +9932,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/combobox-dropdown-menu.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/combobox-dropdown-menu.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9948,7 +9948,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/combobox-form.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/combobox-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9964,7 +9964,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/combobox-popover.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/combobox-popover.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9980,7 +9980,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/combobox-responsive.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/combobox-responsive.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9996,7 +9996,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/command-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/command-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10012,7 +10012,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/command-dialog.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/command-dialog.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10028,7 +10028,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/context-menu-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/context-menu-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10044,7 +10044,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/data-table-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/data-table-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10060,7 +10060,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/date-picker-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/date-picker-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10076,7 +10076,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/date-picker-form.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/date-picker-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10092,7 +10092,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/date-picker-with-presets.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/date-picker-with-presets.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10108,7 +10108,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/date-picker-with-range.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/date-picker-with-range.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10124,7 +10124,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/dialog-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/dialog-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10140,7 +10140,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/dialog-close-button.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/dialog-close-button.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10156,7 +10156,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/drawer-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/drawer-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10172,7 +10172,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/drawer-dialog.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/drawer-dialog.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10188,7 +10188,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/dropdown-menu-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/dropdown-menu-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10204,7 +10204,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/dropdown-menu-checkboxes.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/dropdown-menu-checkboxes.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10220,7 +10220,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/dropdown-menu-radio-group.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/dropdown-menu-radio-group.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10236,7 +10236,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/hover-card-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/hover-card-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10252,7 +10252,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/input-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/input-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10268,7 +10268,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/input-disabled.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/input-disabled.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10284,7 +10284,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/input-file.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/input-file.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10300,7 +10300,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/input-form.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/input-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10316,7 +10316,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/input-with-button.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/input-with-button.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10332,7 +10332,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/input-with-label.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/input-with-label.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10348,7 +10348,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/input-with-text.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/input-with-text.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10364,7 +10364,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/input-otp-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/input-otp-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10380,7 +10380,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/input-otp-pattern.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/input-otp-pattern.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10396,7 +10396,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/input-otp-separator.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/input-otp-separator.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10412,7 +10412,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/input-otp-controlled.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/input-otp-controlled.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10428,7 +10428,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/input-otp-form.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/input-otp-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10444,7 +10444,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/input-otp-disabled.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/input-otp-disabled.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10460,7 +10460,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/input-phone-default.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/input-phone-default.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10476,7 +10476,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/input-phone-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/input-phone-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10492,7 +10492,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/input-phone-form.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/input-phone-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10508,7 +10508,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/input-phone-initial.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/input-phone-initial.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10524,7 +10524,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/input-phone-international.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/input-phone-international.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10540,7 +10540,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/input-phone-national.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/input-phone-national.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10556,7 +10556,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/label-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/label-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10572,7 +10572,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/menubar-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/menubar-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10588,7 +10588,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/navigation-menu-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/navigation-menu-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10604,7 +10604,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/pagination-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/pagination-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10620,7 +10620,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/popover-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/popover-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10636,7 +10636,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/progress-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/progress-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10652,7 +10652,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/radio-group-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/radio-group-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10668,7 +10668,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/radio-group-form.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/radio-group-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10684,7 +10684,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/resizable-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/resizable-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10700,7 +10700,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/resizable-demo-with-handle.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/resizable-demo-with-handle.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10716,7 +10716,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/resizable-vertical.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/resizable-vertical.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10732,7 +10732,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/resizable-handle.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/resizable-handle.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10748,7 +10748,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/scroll-area-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/scroll-area-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10764,7 +10764,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/scroll-area-horizontal-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/scroll-area-horizontal-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10780,7 +10780,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/magic-card-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/magic-card-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10796,7 +10796,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/neon-gradient-card-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/neon-gradient-card-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10812,7 +10812,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/magic-card-gradient.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/magic-card-gradient.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10828,7 +10828,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/meteors-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/meteors-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10844,7 +10844,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/grid-pattern-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/grid-pattern-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10860,7 +10860,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/grid-pattern-linear-gradient.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/grid-pattern-linear-gradient.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10876,7 +10876,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/grid-pattern-dashed.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/grid-pattern-dashed.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10892,7 +10892,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/dot-pattern-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/dot-pattern-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10908,7 +10908,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/dot-pattern-linear-gradient.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/dot-pattern-linear-gradient.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10924,7 +10924,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/marquee-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/marquee-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10940,7 +10940,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/marquee-demo-vertical.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/marquee-demo-vertical.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10956,7 +10956,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/marquee-logos.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/marquee-logos.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10972,7 +10972,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/marquee-3d.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/marquee-3d.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -10988,7 +10988,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/globe-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/globe-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11004,7 +11004,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/tweet-card-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/tweet-card-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11020,7 +11020,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/tweet-card-images.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/tweet-card-images.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11036,7 +11036,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/tweet-card-meta-preview.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/tweet-card-meta-preview.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11052,7 +11052,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/shimmer-button-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/shimmer-button-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11068,7 +11068,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/hero-video-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/hero-video-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11084,7 +11084,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/hero-video-youtube.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/hero-video-youtube.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11100,7 +11100,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/bento-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/bento-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11116,7 +11116,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/bento-demo-vertical.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/bento-demo-vertical.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11132,7 +11132,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/number-ticker-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/number-ticker-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11148,7 +11148,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/ripple-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/ripple-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11164,7 +11164,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/retro-grid-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/retro-grid-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11180,7 +11180,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-list-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-list-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11196,7 +11196,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-shiny-text-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-shiny-text-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11212,7 +11212,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/particles-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/particles-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11228,7 +11228,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-grid-pattern-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-grid-pattern-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11244,7 +11244,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/border-beam-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/border-beam-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11260,7 +11260,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-beam-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-beam-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11276,7 +11276,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-beam-unidirectional.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-beam-unidirectional.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11292,7 +11292,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-beam-bidirectional.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-beam-bidirectional.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11308,7 +11308,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-beam-multiple-inputs.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-beam-multiple-inputs.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11324,7 +11324,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-beam-multiple-outputs.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-beam-multiple-outputs.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11340,7 +11340,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-feature-card-1.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-feature-card-1.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11356,7 +11356,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-feature-card-2.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-feature-card-2.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11372,7 +11372,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-feature-card-3.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-feature-card-3.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11388,7 +11388,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-feature-card-4.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-feature-card-4.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11404,7 +11404,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-feature-card-5.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-feature-card-5.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11420,7 +11420,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-feature-card-6.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-feature-card-6.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11436,7 +11436,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-feature-card-7.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-feature-card-7.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11452,7 +11452,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-feature-card-8.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-feature-card-8.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11468,7 +11468,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-feature-card-9.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-feature-card-9.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11484,7 +11484,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-feature-card-10.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-feature-card-10.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11500,7 +11500,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/text-reveal-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/text-reveal-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11516,7 +11516,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-gradient-text-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-gradient-text-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11532,7 +11532,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/orbiting-circles-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/orbiting-circles-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11548,7 +11548,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/dock-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/dock-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11564,7 +11564,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/dock-demo-2.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/dock-demo-2.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11580,7 +11580,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/dock-demo-3.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/dock-demo-3.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11596,7 +11596,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/word-rotate-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/word-rotate-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11612,7 +11612,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/avatar-circles-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/avatar-circles-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11628,7 +11628,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/word-pull-up-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/word-pull-up-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11644,7 +11644,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/typing-animation-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/typing-animation-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11660,7 +11660,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/wavy-text-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/wavy-text-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11676,7 +11676,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/blur-in-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/blur-in-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11692,7 +11692,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/separate-away-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/separate-away-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11708,7 +11708,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/scroll-based-velocity-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/scroll-based-velocity-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11724,7 +11724,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/letter-pullup-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/letter-pullup-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11740,7 +11740,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/flip-text-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/flip-text-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11756,7 +11756,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/sparkles-text-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/sparkles-text-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11772,7 +11772,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/icon-cloud-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/icon-cloud-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11788,7 +11788,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/wavy-dot-pattern-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/wavy-dot-pattern-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11804,7 +11804,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/gradual-spacing-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/gradual-spacing-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11820,7 +11820,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/word-fade-in-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/word-fade-in-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11836,7 +11836,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/fade-text-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/fade-text-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11852,7 +11852,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/shiny-button-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/shiny-button-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11868,7 +11868,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/box-reveal-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/box-reveal-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11884,7 +11884,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/gauge-circle-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/gauge-circle-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11900,7 +11900,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/shine-border-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/shine-border-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11916,7 +11916,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/shine-border-demo-2.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/shine-border-demo-2.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11932,7 +11932,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/confetti-hover.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/confetti-hover.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11948,7 +11948,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/confetti-basic-cannon.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/confetti-basic-cannon.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11964,7 +11964,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/confetti-random-direction.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/confetti-random-direction.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11980,7 +11980,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/confetti-fireworks.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/confetti-fireworks.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -11996,7 +11996,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/confetti-stars.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/confetti-stars.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12012,7 +12012,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/confetti-side-cannons.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/confetti-side-cannons.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12028,7 +12028,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/confetti-custom-shapes.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/confetti-custom-shapes.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12044,7 +12044,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/confetti-emoji.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/confetti-emoji.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12060,7 +12060,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/animated-subscribe-button-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/animated-subscribe-button-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12076,7 +12076,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/cool-mode-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/cool-mode-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12092,7 +12092,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/cool-mode-custom.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/cool-mode-custom.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12108,7 +12108,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/timeline-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/timeline-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12124,7 +12124,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/timeline-right.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/timeline-right.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12140,7 +12140,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/timeline-alternate.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/timeline-alternate.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12156,7 +12156,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/timeline-labels.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/timeline-labels.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12172,7 +12172,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/star-rating-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/star-rating-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12188,7 +12188,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/star-rating-colored.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/star-rating-colored.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12204,7 +12204,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/star-rating-icon.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/star-rating-icon.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12220,7 +12220,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/stepper-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/stepper-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12236,7 +12236,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/stepper-custom-styles.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/stepper-custom-styles.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12252,7 +12252,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/stepper-orientation.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/stepper-orientation.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12268,7 +12268,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/stepper-description.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/stepper-description.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12284,7 +12284,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/stepper-sizes.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/stepper-sizes.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12300,7 +12300,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/stepper-form.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/stepper-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12316,7 +12316,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/stepper-variants.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/stepper-variants.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12332,7 +12332,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/stepper-custom-icons.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/stepper-custom-icons.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12348,7 +12348,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/stepper-footer-inside.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/stepper-footer-inside.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12364,7 +12364,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/stepper-scroll-tracking.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/stepper-scroll-tracking.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12380,7 +12380,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/stepper-clickable-steps.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/stepper-clickable-steps.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12396,7 +12396,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/stepper-optional-steps.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/stepper-optional-steps.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12412,7 +12412,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/stepper-state.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/stepper-state.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12428,7 +12428,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/tour-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/tour-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12444,7 +12444,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/toc-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/toc-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12460,7 +12460,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/toc-nested.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/toc-nested.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12476,7 +12476,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/toc-active.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/toc-active.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12492,7 +12492,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/multi-select-basic.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/multi-select-basic.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12508,7 +12508,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/multi-select-filter.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/multi-select-filter.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12524,7 +12524,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/multi-select-controllable-search.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/multi-select-controllable-search.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12540,7 +12540,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/multi-select-input-custom.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/multi-select-input-custom.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12556,7 +12556,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/multi-select-limit-count.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/multi-select-limit-count.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12572,7 +12572,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/multi-select-limit-display-length.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/multi-select-limit-display-length.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12588,7 +12588,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/multi-select-form.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/multi-select-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12604,7 +12604,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/scroll-progress-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/scroll-progress-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12620,7 +12620,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/video-modal-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/video-modal-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12636,7 +12636,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/scratch-to-reveal-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/scratch-to-reveal-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12652,7 +12652,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/confetti-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/confetti-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12668,7 +12668,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/blur-fade-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/blur-fade-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12684,7 +12684,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/blur-fade-text-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/blur-fade-text-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12700,7 +12700,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/file-tree-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/file-tree-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12716,7 +12716,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/rainbow-button-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/rainbow-button-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12732,7 +12732,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/hero-video-dialog-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/hero-video-dialog-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12748,7 +12748,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/hero-video-dialog-demo-top-in-bottom-out.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/hero-video-dialog-demo-top-in-bottom-out.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12764,7 +12764,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/flickering-grid-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/flickering-grid-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12780,7 +12780,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/flickering-grid-rounded-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/flickering-grid-rounded-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12796,7 +12796,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/hyper-text-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/hyper-text-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12812,7 +12812,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/safari-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/safari-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12828,7 +12828,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/safari-demo-2.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/safari-demo-2.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12844,7 +12844,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/iphone-15-pro-demo.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/iphone-15-pro-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -12860,7 +12860,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/example/iphone-15-pro-demo-2.tsx")),
+      component: React.lazy(() => import("~/registry/default/example/iphone-15-pro-demo-2.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -13136,7 +13136,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/_sink/page.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/_sink/page.tsx")),
       source: "__registry__/default/block/_sink/page.tsx",
       category: "",
       subcategory: "",
@@ -13164,7 +13164,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/sidebar-01/page.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/sidebar-01/page.tsx")),
       source: "__registry__/default/block/sidebar-01/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -13192,7 +13192,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/sidebar-02/page.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/sidebar-02/page.tsx")),
       source: "__registry__/default/block/sidebar-02/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -13212,7 +13212,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/sidebar-03/page.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/sidebar-03/page.tsx")),
       source: "__registry__/default/block/sidebar-03/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -13232,7 +13232,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/sidebar-04/page.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/sidebar-04/page.tsx")),
       source: "__registry__/default/block/sidebar-04/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -13256,7 +13256,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/sidebar-05/page.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/sidebar-05/page.tsx")),
       source: "__registry__/default/block/sidebar-05/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -13284,7 +13284,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/sidebar-06/page.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/sidebar-06/page.tsx")),
       source: "__registry__/default/block/sidebar-06/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -13320,7 +13320,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/sidebar-07/page.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/sidebar-07/page.tsx")),
       source: "__registry__/default/block/sidebar-07/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -13356,7 +13356,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/sidebar-08/page.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/sidebar-08/page.tsx")),
       source: "__registry__/default/block/sidebar-08/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -13380,7 +13380,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/sidebar-09/page.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/sidebar-09/page.tsx")),
       source: "__registry__/default/block/sidebar-09/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -13424,7 +13424,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/sidebar-10/page.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/sidebar-10/page.tsx")),
       source: "__registry__/default/block/sidebar-10/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -13444,7 +13444,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/sidebar-11/page.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/sidebar-11/page.tsx")),
       source: "__registry__/default/block/sidebar-11/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -13476,7 +13476,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/sidebar-12/page.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/sidebar-12/page.tsx")),
       source: "__registry__/default/block/sidebar-12/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -13496,7 +13496,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/sidebar-13/page.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/sidebar-13/page.tsx")),
       source: "__registry__/default/block/sidebar-13/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -13516,7 +13516,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/sidebar-14/page.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/sidebar-14/page.tsx")),
       source: "__registry__/default/block/sidebar-14/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -13572,7 +13572,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/sidebar-15/page.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/sidebar-15/page.tsx")),
       source: "__registry__/default/block/sidebar-15/page.tsx",
       category: "Application",
       subcategory: "Sidebars",
@@ -13592,7 +13592,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/login-01/page.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/login-01/page.tsx")),
       source: "__registry__/default/block/login-01/page.tsx",
       category: "Authentication",
       subcategory: "Login",
@@ -13608,7 +13608,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-area-axes.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-area-axes.tsx")),
       source: "__registry__/default/block/chart-area-axes.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -13624,7 +13624,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-area-default.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-area-default.tsx")),
       source: "__registry__/default/block/chart-area-default.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -13640,7 +13640,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-area-gradient.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-area-gradient.tsx")),
       source: "__registry__/default/block/chart-area-gradient.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -13656,7 +13656,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-area-icons.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-area-icons.tsx")),
       source: "__registry__/default/block/chart-area-icons.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -13672,7 +13672,7 @@ export const Index: Record<string, any> = {
         type: "registry:component",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-area-interactive.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-area-interactive.tsx")),
       source: "__registry__/default/block/chart-area-interactive.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -13688,7 +13688,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-area-legend.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-area-legend.tsx")),
       source: "__registry__/default/block/chart-area-legend.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -13704,7 +13704,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-area-linear.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-area-linear.tsx")),
       source: "__registry__/default/block/chart-area-linear.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -13720,7 +13720,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-area-stacked-expand.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-area-stacked-expand.tsx")),
       source: "__registry__/default/block/chart-area-stacked-expand.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -13736,7 +13736,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-area-stacked.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-area-stacked.tsx")),
       source: "__registry__/default/block/chart-area-stacked.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -13752,7 +13752,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-area-step.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-area-step.tsx")),
       source: "__registry__/default/block/chart-area-step.tsx",
       category: "Charts",
       subcategory: "Area",
@@ -13768,7 +13768,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-bar-active.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-bar-active.tsx")),
       source: "__registry__/default/block/chart-bar-active.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -13784,7 +13784,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-bar-default.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-bar-default.tsx")),
       source: "__registry__/default/block/chart-bar-default.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -13800,7 +13800,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-bar-horizontal.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-bar-horizontal.tsx")),
       source: "__registry__/default/block/chart-bar-horizontal.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -13816,7 +13816,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-bar-interactive.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-bar-interactive.tsx")),
       source: "__registry__/default/block/chart-bar-interactive.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -13832,7 +13832,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-bar-label-custom.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-bar-label-custom.tsx")),
       source: "__registry__/default/block/chart-bar-label-custom.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -13848,7 +13848,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-bar-label.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-bar-label.tsx")),
       source: "__registry__/default/block/chart-bar-label.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -13864,7 +13864,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-bar-mixed.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-bar-mixed.tsx")),
       source: "__registry__/default/block/chart-bar-mixed.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -13880,7 +13880,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-bar-multiple.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-bar-multiple.tsx")),
       source: "__registry__/default/block/chart-bar-multiple.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -13896,7 +13896,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-bar-negative.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-bar-negative.tsx")),
       source: "__registry__/default/block/chart-bar-negative.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -13912,7 +13912,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-bar-stacked.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-bar-stacked.tsx")),
       source: "__registry__/default/block/chart-bar-stacked.tsx",
       category: "Charts",
       subcategory: "Bar",
@@ -13928,7 +13928,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-line-default.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-line-default.tsx")),
       source: "__registry__/default/block/chart-line-default.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -13944,7 +13944,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-line-dots-colors.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-line-dots-colors.tsx")),
       source: "__registry__/default/block/chart-line-dots-colors.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -13960,7 +13960,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-line-dots-custom.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-line-dots-custom.tsx")),
       source: "__registry__/default/block/chart-line-dots-custom.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -13976,7 +13976,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-line-dots.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-line-dots.tsx")),
       source: "__registry__/default/block/chart-line-dots.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -13992,7 +13992,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-line-interactive.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-line-interactive.tsx")),
       source: "__registry__/default/block/chart-line-interactive.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -14008,7 +14008,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-line-label-custom.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-line-label-custom.tsx")),
       source: "__registry__/default/block/chart-line-label-custom.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -14024,7 +14024,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-line-label.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-line-label.tsx")),
       source: "__registry__/default/block/chart-line-label.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -14040,7 +14040,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-line-linear.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-line-linear.tsx")),
       source: "__registry__/default/block/chart-line-linear.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -14056,7 +14056,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-line-multiple.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-line-multiple.tsx")),
       source: "__registry__/default/block/chart-line-multiple.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -14072,7 +14072,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-line-step.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-line-step.tsx")),
       source: "__registry__/default/block/chart-line-step.tsx",
       category: "Charts",
       subcategory: "Line",
@@ -14088,7 +14088,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-pie-donut-active.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-pie-donut-active.tsx")),
       source: "__registry__/default/block/chart-pie-donut-active.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -14104,7 +14104,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-pie-donut-text.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-pie-donut-text.tsx")),
       source: "__registry__/default/block/chart-pie-donut-text.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -14120,7 +14120,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-pie-donut.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-pie-donut.tsx")),
       source: "__registry__/default/block/chart-pie-donut.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -14136,7 +14136,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-pie-interactive.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-pie-interactive.tsx")),
       source: "__registry__/default/block/chart-pie-interactive.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -14152,7 +14152,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-pie-label-custom.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-pie-label-custom.tsx")),
       source: "__registry__/default/block/chart-pie-label-custom.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -14168,7 +14168,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-pie-label-list.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-pie-label-list.tsx")),
       source: "__registry__/default/block/chart-pie-label-list.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -14184,7 +14184,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-pie-label.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-pie-label.tsx")),
       source: "__registry__/default/block/chart-pie-label.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -14200,7 +14200,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-pie-legend.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-pie-legend.tsx")),
       source: "__registry__/default/block/chart-pie-legend.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -14216,7 +14216,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-pie-separator-none.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-pie-separator-none.tsx")),
       source: "__registry__/default/block/chart-pie-separator-none.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -14232,7 +14232,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-pie-simple.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-pie-simple.tsx")),
       source: "__registry__/default/block/chart-pie-simple.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -14248,7 +14248,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-pie-stacked.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-pie-stacked.tsx")),
       source: "__registry__/default/block/chart-pie-stacked.tsx",
       category: "Charts",
       subcategory: "Pie",
@@ -14264,7 +14264,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radar-default.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radar-default.tsx")),
       source: "__registry__/default/block/chart-radar-default.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -14280,7 +14280,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radar-dots.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radar-dots.tsx")),
       source: "__registry__/default/block/chart-radar-dots.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -14296,7 +14296,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radar-grid-circle-fill.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radar-grid-circle-fill.tsx")),
       source: "__registry__/default/block/chart-radar-grid-circle-fill.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -14312,7 +14312,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radar-grid-circle-no-lines.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radar-grid-circle-no-lines.tsx")),
       source: "__registry__/default/block/chart-radar-grid-circle-no-lines.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -14328,7 +14328,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radar-grid-circle.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radar-grid-circle.tsx")),
       source: "__registry__/default/block/chart-radar-grid-circle.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -14344,7 +14344,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radar-grid-custom.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radar-grid-custom.tsx")),
       source: "__registry__/default/block/chart-radar-grid-custom.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -14360,7 +14360,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radar-grid-fill.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radar-grid-fill.tsx")),
       source: "__registry__/default/block/chart-radar-grid-fill.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -14376,7 +14376,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radar-grid-none.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radar-grid-none.tsx")),
       source: "__registry__/default/block/chart-radar-grid-none.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -14392,7 +14392,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radar-icons.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radar-icons.tsx")),
       source: "__registry__/default/block/chart-radar-icons.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -14408,7 +14408,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radar-label-custom.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radar-label-custom.tsx")),
       source: "__registry__/default/block/chart-radar-label-custom.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -14424,7 +14424,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radar-legend.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radar-legend.tsx")),
       source: "__registry__/default/block/chart-radar-legend.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -14440,7 +14440,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radar-lines-only.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radar-lines-only.tsx")),
       source: "__registry__/default/block/chart-radar-lines-only.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -14456,7 +14456,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radar-multiple.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radar-multiple.tsx")),
       source: "__registry__/default/block/chart-radar-multiple.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -14472,7 +14472,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radar-radius.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radar-radius.tsx")),
       source: "__registry__/default/block/chart-radar-radius.tsx",
       category: "Charts",
       subcategory: "Radar",
@@ -14488,7 +14488,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radial-grid.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radial-grid.tsx")),
       source: "__registry__/default/block/chart-radial-grid.tsx",
       category: "Charts",
       subcategory: "Radial",
@@ -14504,7 +14504,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radial-label.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radial-label.tsx")),
       source: "__registry__/default/block/chart-radial-label.tsx",
       category: "Charts",
       subcategory: "Radial",
@@ -14520,7 +14520,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radial-shape.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radial-shape.tsx")),
       source: "__registry__/default/block/chart-radial-shape.tsx",
       category: "Charts",
       subcategory: "Radial",
@@ -14536,7 +14536,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radial-simple.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radial-simple.tsx")),
       source: "__registry__/default/block/chart-radial-simple.tsx",
       category: "Charts",
       subcategory: "Radial",
@@ -14552,7 +14552,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radial-stacked.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radial-stacked.tsx")),
       source: "__registry__/default/block/chart-radial-stacked.tsx",
       category: "Charts",
       subcategory: "Radial",
@@ -14568,7 +14568,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-radial-text.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-radial-text.tsx")),
       source: "__registry__/default/block/chart-radial-text.tsx",
       category: "Charts",
       subcategory: "Radial",
@@ -14584,7 +14584,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-tooltip-default.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-tooltip-default.tsx")),
       source: "__registry__/default/block/chart-tooltip-default.tsx",
       category: "Charts",
       subcategory: "Tooltip",
@@ -14600,7 +14600,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-tooltip-indicator-line.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-tooltip-indicator-line.tsx")),
       source: "__registry__/default/block/chart-tooltip-indicator-line.tsx",
       category: "Charts",
       subcategory: "Tooltip",
@@ -14616,7 +14616,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-tooltip-indicator-none.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-tooltip-indicator-none.tsx")),
       source: "__registry__/default/block/chart-tooltip-indicator-none.tsx",
       category: "Charts",
       subcategory: "Tooltip",
@@ -14632,7 +14632,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-tooltip-label-none.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-tooltip-label-none.tsx")),
       source: "__registry__/default/block/chart-tooltip-label-none.tsx",
       category: "Charts",
       subcategory: "Tooltip",
@@ -14648,7 +14648,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-tooltip-label-custom.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-tooltip-label-custom.tsx")),
       source: "__registry__/default/block/chart-tooltip-label-custom.tsx",
       category: "Charts",
       subcategory: "Tooltip",
@@ -14664,7 +14664,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-tooltip-label-formatter.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-tooltip-label-formatter.tsx")),
       source: "__registry__/default/block/chart-tooltip-label-formatter.tsx",
       category: "Charts",
       subcategory: "Tooltip",
@@ -14680,7 +14680,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-tooltip-formatter.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-tooltip-formatter.tsx")),
       source: "__registry__/default/block/chart-tooltip-formatter.tsx",
       category: "Charts",
       subcategory: "Tooltip",
@@ -14696,7 +14696,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-tooltip-icons.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-tooltip-icons.tsx")),
       source: "__registry__/default/block/chart-tooltip-icons.tsx",
       category: "Charts",
       subcategory: "Tooltip",
@@ -14712,7 +14712,7 @@ export const Index: Record<string, any> = {
         type: "registry:block",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/block/chart-tooltip-advanced.tsx")),
+      component: React.lazy(() => import("~/registry/default/block/chart-tooltip-advanced.tsx")),
       source: "__registry__/default/block/chart-tooltip-advanced.tsx",
       category: "Charts",
       subcategory: "Tooltip",
@@ -14728,7 +14728,7 @@ export const Index: Record<string, any> = {
         type: "registry:lib",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/lib/utils.ts")),
+      component: React.lazy(() => import("~/registry/default/lib/utils.ts")),
       source: "",
       category: "",
       subcategory: "",
@@ -14744,7 +14744,7 @@ export const Index: Record<string, any> = {
         type: "registry:hook",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/hooks/use-mobile.tsx")),
+      component: React.lazy(() => import("~/registry/default/hooks/use-mobile.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -14760,7 +14760,7 @@ export const Index: Record<string, any> = {
         type: "registry:hook",
         target: ""
       }],
-      component: React.lazy(() => import("@/registry/default/hooks/use-toast.ts")),
+      component: React.lazy(() => import("~/registry/default/hooks/use-toast.ts")),
       source: "",
       category: "",
       subcategory: "",
