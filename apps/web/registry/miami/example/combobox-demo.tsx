@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import { CaretSortIcon, CheckIcon } from '@radix-ui/react-icons'
+import { Check, ChevronsUpDown } from 'lucide-react'
 
 import { ny } from '~/lib/utils'
 import { Button } from '~/registry/miami/ui/button'
@@ -58,7 +58,7 @@ export default function ComboboxDemo() {
                {value
                   ? frameworks.find(framework => framework.value === value)?.label
                   : 'Select framework...'}
-               <CaretSortIcon className="ml-2 size-4 shrink-0 opacity-50" />
+               <ChevronsUpDown className="opacity-50" />
             </Button>
          </PopoverTrigger>
          <PopoverContent className="w-[200px] p-0">
@@ -72,14 +72,16 @@ export default function ComboboxDemo() {
                            key={framework.value}
                            value={framework.value}
                            onSelect={(currentValue) => {
+                              // eslint-disable-next-line no-console
+                              console.log('Selected:', currentValue)
                               setValue(currentValue === value ? '' : currentValue)
                               setOpen(false)
                            }}
                         >
                            {framework.label}
-                           <CheckIcon
+                           <Check
                               className={ny(
-                                 'ml-auto size-4',
+                                 'ml-auto',
                                  value === framework.value ? 'opacity-100' : 'opacity-0',
                               )}
                            />
