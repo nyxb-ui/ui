@@ -1610,4 +1610,14 @@ export const ui: Registry = [
          },
       ],
    },
+   {
+      name: 'animated-circular-progress-bar',
+      type: 'registry:ui',
+      files: [
+         {
+            path: 'ui/animated-circular-progress-bar.tsx',
+            type: 'registry:component',
+         },
+      ],
+   },
 ]

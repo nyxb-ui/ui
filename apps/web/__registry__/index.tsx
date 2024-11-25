@@ -1821,6 +1821,22 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "animated-circular-progress-bar": {
+      name: "animated-circular-progress-bar",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/ui/animated-circular-progress-bar.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/ui/animated-circular-progress-bar.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "accordion-demo": {
       name: "accordion-demo",
       description: "",
@@ -5512,6 +5528,22 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("~/registry/miami/example/iphone-15-pro-demo-2.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "animated-circular-progress-bar-demo": {
+      name: "animated-circular-progress-bar-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/example/animated-circular-progress-bar-demo.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/animated-circular-progress-bar-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -9234,6 +9266,22 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "animated-circular-progress-bar": {
+      name: "animated-circular-progress-bar",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/animated-circular-progress-bar.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/ui/animated-circular-progress-bar.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "accordion-demo": {
       name: "accordion-demo",
       description: "",
@@ -12925,6 +12973,22 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("~/registry/default/example/iphone-15-pro-demo-2.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "animated-circular-progress-bar-demo": {
+      name: "animated-circular-progress-bar-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/animated-circular-progress-bar-demo.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/animated-circular-progress-bar-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",

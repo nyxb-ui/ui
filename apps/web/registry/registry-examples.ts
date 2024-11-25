@@ -2436,4 +2436,14 @@ export const examples: Registry = [
          },
       ],
    },
+   {
+      name: 'animated-circular-progress-bar-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/animated-circular-progress-bar-demo.tsx',
+            type: 'registry:component',
+         },
+      ],
+   },
 ]
