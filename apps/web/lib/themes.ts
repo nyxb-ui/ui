@@ -3,7 +3,7 @@ import { themeColorsToCssVariables } from '~/lib/charts'
 const _THEMES = [
    {
       name: 'Default',
-      id: 'default-nyxb',
+      id: 'default-shadcn',
       colors: {
          'background': '0 0% 100%',
          'foreground': '240 10% 3.9%',

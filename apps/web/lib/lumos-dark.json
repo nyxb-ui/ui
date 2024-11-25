@@ -1,0 +1,51 @@
+{
+  "lumos-dark": {
+    "name": "lumos-dark",
+    "type": "dark",
+    "settings": [
+      {
+        "settings": {
+          "background": "#121212",
+          "foreground": "#dbd7caee",
+          "selectionBackground": "#eeeeee15",
+          "selectionForeground": "#dbd7caee"
+        }
+      },
+      {
+        "scope": [
+          "comment",
+          "punctuation.definition.comment",
+          "string.comment"
+        ],
+        "settings": {
+          "foreground": "#758575dd"
+        }
+      },
+      {
+        "scope": [
+          "delimiter.bracket",
+          "delimiter",
+          "invalid.illegal.character-not-allowed-here.html",
+          "keyword.operator.rest",
+          "keyword.operator.spread",
+          "keyword.operator.type.annotation",
+          "keyword.operator.relational",
+          "keyword.operator.assignment",
+          "meta.brace",
+          "meta.tag.block.any.html",
+          "meta.tag.inline.any.html",
+          "meta.tag.structure.input.void.html",
+          "meta.type.annotation",
+          "meta.embedded.block.github-actions-expression",
+          "storage.type.function.arrow",
+          "keyword.operator.type",
+          "meta.objectliteral.ts",
+          "punctuation"
+        ],
+        "settings": {
+          "foreground": "#FF00F"
+        }
+      }
+    ]
+  }
+}

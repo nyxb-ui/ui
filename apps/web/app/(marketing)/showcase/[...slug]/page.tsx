@@ -18,7 +18,7 @@ async function getPageFromParams(params: PageProps['params']) {
    const page = allShowcases.find(page => page.slugAsParams === slug)
 
    if (!page) {
-      null
+      return null
    }
 
    return page

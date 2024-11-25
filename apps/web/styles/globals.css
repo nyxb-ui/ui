@@ -90,12 +90,21 @@
 @layer base {
   * {
     @apply border-border;
+    /* Scrollbars für Webkit-Browser (Chrome, Safari, etc.) ausschalten */
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
+  
   body {
-   @apply bg-background text-foreground overscroll-none;
-   font-feature-settings: "rlig" 1, "calt" 1;
-   font-synthesis-weight: none;
+    @apply bg-background text-foreground overscroll-none;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
+    /* Scrollbars für Firefox ausschalten */
+    scrollbar-width: none;
+    /* IE und Edge */
+    -ms-overflow-style: none;
   }
 }
 

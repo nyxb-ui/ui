@@ -4685,6 +4685,38 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "mode-toggle": {
+      name: "mode-toggle",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/example/mode-toggle.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/mode-toggle.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "mode-toggle-group": {
+      name: "mode-toggle-group",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/example/mode-toggle.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/mode-toggle.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "cool-mode-demo": {
       name: "cool-mode-demo",
       description: "",
@@ -12061,6 +12093,38 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("~/registry/default/example/animated-subscribe-button-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "mode-toggle": {
+      name: "mode-toggle",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/mode-toggle.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/mode-toggle.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "mode-toggle-group": {
+      name: "mode-toggle-group",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/mode-toggle.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/mode-toggle.tsx")),
       source: "",
       category: "",
       subcategory: "",

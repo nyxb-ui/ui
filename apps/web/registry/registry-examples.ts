@@ -1893,6 +1893,26 @@ export const examples: Registry = [
       ],
    },
    {
+      name: 'mode-toggle',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/mode-toggle.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'mode-toggle-group',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/mode-toggle.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
       name: 'cool-mode-demo',
       type: 'registry:example',
       files: [
