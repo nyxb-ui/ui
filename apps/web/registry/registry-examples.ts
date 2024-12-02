@@ -2501,4 +2501,15 @@ export const examples: Registry = [
          },
       ],
    },
+   {
+      name: 'sonner-demo',
+      type: 'registry:example',
+      registryDependencies: ['sonner'],
+      files: [
+         {
+            path: 'example/sonner-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
 ]

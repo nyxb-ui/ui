@@ -5629,6 +5629,22 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "sonner-demo": {
+      name: "sonner-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["sonner"],
+      files: [{
+        path: "registry/miami/example/sonner-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/sonner-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "_sink": {
       name: "_sink",
       description: "",
@@ -13149,6 +13165,22 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("~/registry/default/example/toast-with-title.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "sonner-demo": {
+      name: "sonner-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["sonner"],
+      files: [{
+        path: "registry/default/example/sonner-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/sonner-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
