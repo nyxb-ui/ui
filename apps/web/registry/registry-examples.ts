@@ -2446,4 +2446,59 @@ export const examples: Registry = [
          },
       ],
    },
+   {
+      name: 'toast-demo',
+      type: 'registry:example',
+      registryDependencies: ['toast'],
+      files: [
+         {
+            path: 'example/toast-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toast-destructive',
+      type: 'registry:example',
+      registryDependencies: ['toast'],
+      files: [
+         {
+            path: 'example/toast-destructive.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toast-simple',
+      type: 'registry:example',
+      registryDependencies: ['toast'],
+      files: [
+         {
+            path: 'example/toast-simple.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toast-with-action',
+      type: 'registry:example',
+      registryDependencies: ['toast'],
+      files: [
+         {
+            path: 'example/toast-with-action.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toast-with-title',
+      type: 'registry:example',
+      registryDependencies: ['toast'],
+      files: [
+         {
+            path: 'example/toast-with-title.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
 ]

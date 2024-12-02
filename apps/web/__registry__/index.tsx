@@ -5549,6 +5549,86 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "toast-demo": {
+      name: "toast-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["toast"],
+      files: [{
+        path: "registry/miami/example/toast-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/toast-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "toast-destructive": {
+      name: "toast-destructive",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["toast"],
+      files: [{
+        path: "registry/miami/example/toast-destructive.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/toast-destructive.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "toast-simple": {
+      name: "toast-simple",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["toast"],
+      files: [{
+        path: "registry/miami/example/toast-simple.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/toast-simple.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "toast-with-action": {
+      name: "toast-with-action",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["toast"],
+      files: [{
+        path: "registry/miami/example/toast-with-action.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/toast-with-action.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "toast-with-title": {
+      name: "toast-with-title",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["toast"],
+      files: [{
+        path: "registry/miami/example/toast-with-title.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/toast-with-title.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "_sink": {
       name: "_sink",
       description: "",
@@ -12989,6 +13069,86 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("~/registry/default/example/animated-circular-progress-bar-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "toast-demo": {
+      name: "toast-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["toast"],
+      files: [{
+        path: "registry/default/example/toast-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/toast-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "toast-destructive": {
+      name: "toast-destructive",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["toast"],
+      files: [{
+        path: "registry/default/example/toast-destructive.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/toast-destructive.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "toast-simple": {
+      name: "toast-simple",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["toast"],
+      files: [{
+        path: "registry/default/example/toast-simple.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/toast-simple.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "toast-with-action": {
+      name: "toast-with-action",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["toast"],
+      files: [{
+        path: "registry/default/example/toast-with-action.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/toast-with-action.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "toast-with-title": {
+      name: "toast-with-title",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["toast"],
+      files: [{
+        path: "registry/default/example/toast-with-title.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/toast-with-title.tsx")),
       source: "",
       category: "",
       subcategory: "",
