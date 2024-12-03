@@ -1,22 +1,23 @@
 [phases.setup]
-nixPkgs = [ 'nodejs@20' ]
+nixPkgs = [ "nodejs_20" ]
 
 [phases.install]
 cmds = [
-   'corepack enable',
-   'pnpm install'
+   "corepack enable",
+   "pnpm install"
 ]
 
 [phases.build]
 cmds = [
-   'pnpm build:registry',
-   'pnpm --filter=web build'
+   "cd apps/web && pnpm build:registry",
+   "pnpm --filter=web build"
 ]
 
 [variables]
 NIXPACKS_TURBO_APP_NAME = "web"
 NODE_ENV = "production"
-NEXT_PUBLIC_APP_URL = "https://nyxbui.design"
+NODE_OPTIONS = "--max-old-space-size=8192"
+NEXT_PUBLIC_APP_URL = "https://your-production-url.com"
 
 [start]
-cmd = 'pnpm --filter=web start'
+cmd = "cd apps/web && pnpm start"
