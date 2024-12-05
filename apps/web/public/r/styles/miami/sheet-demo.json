@@ -1,9 +1,6 @@
 {
   "name": "sheet-demo",
   "type": "registry:example",
-  "registryDependencies": [
-    "sheet"
-  ],
   "files": [
     {
       "path": "example/sheet-demo.tsx",

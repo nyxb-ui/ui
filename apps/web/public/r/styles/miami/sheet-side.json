@@ -1,9 +1,6 @@
 {
   "name": "sheet-side",
   "type": "registry:example",
-  "registryDependencies": [
-    "sheet"
-  ],
   "files": [
     {
       "path": "example/sheet-side.tsx",

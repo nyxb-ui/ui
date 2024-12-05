@@ -2555,4 +2555,24 @@ export const examples: Registry = [
          },
       ],
    },
+   {
+      name: 'sheet-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/sheet-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'sheet-side',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/sheet-side.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
 ]

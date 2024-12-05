@@ -5709,6 +5709,38 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "sheet-demo": {
+      name: "sheet-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/example/sheet-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/sheet-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "sheet-side": {
+      name: "sheet-side",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/example/sheet-side.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/sheet-side.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "_sink": {
       name: "_sink",
       description: "",
@@ -13309,6 +13341,38 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("~/registry/default/example/separator-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "sheet-demo": {
+      name: "sheet-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/sheet-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/sheet-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "sheet-side": {
+      name: "sheet-side",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/sheet-side.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/sheet-side.tsx")),
       source: "",
       category: "",
       subcategory: "",
