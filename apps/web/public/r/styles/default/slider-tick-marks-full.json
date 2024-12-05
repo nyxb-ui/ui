@@ -1,9 +1,6 @@
 {
   "name": "slider-tick-marks-full",
   "type": "registry:example",
-  "registryDependencies": [
-    "slider"
-  ],
   "files": [
     {
       "path": "example/slider-tick-marks-full.tsx",

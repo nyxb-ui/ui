@@ -1620,4 +1620,264 @@ export const ui: Registry = [
          },
       ],
    },
+   {
+      name: 'switch-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/switch-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'switch-form',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/switch-form.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'table-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/table-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'tabs-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/tabs-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'textarea-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/textarea-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'textarea-disabled',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/textarea-disabled.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'textarea-with-label',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/textarea-with-label.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'textarea-with-text',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/textarea-with-text.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'textarea-with-button',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/textarea-with-button.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'textarea-form',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/textarea-form.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-outline',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-outline.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-with-text',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-with-text.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-sm',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-sm.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-lg',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-lg.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-disabled',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-disabled.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-group-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-outline',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-group-outline.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-single',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-group-single.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-sm',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-group-sm.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-lg',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-group-lg.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-disabled',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-group-disabled.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'tooltip-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/tooltip-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'tooltip-secondary',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/tooltip-secondary.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'tooltip-outline',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/tooltip-outline.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'tooltip-with-toggle-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/tooltip-with-toggle-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
 ]

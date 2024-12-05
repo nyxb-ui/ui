@@ -1,9 +1,6 @@
 {
   "name": "textarea-disabled",
   "type": "registry:example",
-  "registryDependencies": [
-    "textarea"
-  ],
   "files": [
     {
       "path": "example/textarea-disabled.tsx",

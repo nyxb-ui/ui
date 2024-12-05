@@ -2512,4 +2512,177 @@ export const examples: Registry = [
          },
       ],
    },
+   {
+      name: 'select-demo',
+      type: 'registry:example',
+      registryDependencies: ['select'],
+      files: [
+         {
+            path: 'example/select-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'select-scrollable',
+      type: 'registry:example',
+      registryDependencies: ['select'],
+      files: [
+         {
+            path: 'example/select-scrollable.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'select-form',
+      type: 'registry:example',
+      registryDependencies: ['select'],
+      files: [
+         {
+            path: 'example/select-form.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'separator-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/separator-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'sheet-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/sheet-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'sheet-side',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/sheet-side.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'skeleton-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/skeleton-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'skeleton-card',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/skeleton-card.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-disabled',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-disabled.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-inverted',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-inverted.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-vertical',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-vertical.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-range',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-range.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-tick-marks-half',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-tick-marks-half.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-tick-marks-full',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-tick-marks-full.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-format-label',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-format-label.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-format-label-side',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-format-label-side.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
 ]

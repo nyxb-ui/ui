@@ -1,9 +1,6 @@
 {
   "name": "slider-vertical",
   "type": "registry:example",
-  "registryDependencies": [
-    "slider"
-  ],
   "files": [
     {
       "path": "example/slider-vertical.tsx",

@@ -1,9 +1,6 @@
 {
   "name": "table-demo",
   "type": "registry:example",
-  "registryDependencies": [
-    "table"
-  ],
   "files": [
     {
       "path": "example/table-demo.tsx",

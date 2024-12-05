@@ -1,9 +1,6 @@
 {
   "name": "slider-inverted",
   "type": "registry:example",
-  "registryDependencies": [
-    "slider"
-  ],
   "files": [
     {
       "path": "example/slider-inverted.tsx",
