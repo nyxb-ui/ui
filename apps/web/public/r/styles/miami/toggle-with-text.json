@@ -1,9 +1,6 @@
 {
   "name": "toggle-with-text",
   "type": "registry:example",
-  "registryDependencies": [
-    "toggle"
-  ],
   "files": [
     {
       "path": "example/toggle-with-text.tsx",
