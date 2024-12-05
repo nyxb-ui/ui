@@ -1,10 +1,6 @@
 {
   "name": "textarea-with-button",
   "type": "registry:example",
-  "registryDependencies": [
-    "textarea",
-    "button"
-  ],
   "files": [
     {
       "path": "example/textarea-with-button.tsx",

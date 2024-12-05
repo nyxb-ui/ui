@@ -1,10 +1,6 @@
 {
   "name": "textarea-form",
   "type": "registry:example",
-  "registryDependencies": [
-    "textarea",
-    "form"
-  ],
   "files": [
     {
       "path": "example/textarea-form.tsx",
