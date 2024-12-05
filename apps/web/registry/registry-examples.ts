@@ -2595,4 +2595,94 @@ export const examples: Registry = [
          },
       ],
    },
+   {
+      name: 'slider-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-disabled',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-disabled.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-inverted',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-inverted.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-vertical',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-vertical.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-range',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-range.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-tick-marks-half',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-tick-marks-half.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-tick-marks-full',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-tick-marks-full.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-format-label',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-format-label.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-format-label-side',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-format-label-side.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
 ]

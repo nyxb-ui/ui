@@ -1,9 +1,6 @@
 {
   "name": "slider-tick-marks-half",
   "type": "registry:example",
-  "registryDependencies": [
-    "slider"
-  ],
   "files": [
     {
       "path": "example/slider-tick-marks-half.tsx",

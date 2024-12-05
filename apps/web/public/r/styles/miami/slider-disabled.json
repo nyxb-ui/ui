@@ -1,9 +1,6 @@
 {
   "name": "slider-disabled",
   "type": "registry:example",
-  "registryDependencies": [
-    "slider"
-  ],
   "files": [
     {
       "path": "example/slider-disabled.tsx",

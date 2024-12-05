@@ -1,9 +1,6 @@
 {
   "name": "slider-demo",
   "type": "registry:example",
-  "registryDependencies": [
-    "slider"
-  ],
   "files": [
     {
       "path": "example/slider-demo.tsx",
