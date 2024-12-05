@@ -2685,4 +2685,24 @@ export const examples: Registry = [
          },
       ],
    },
+   {
+      name: 'switch-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/switch-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'switch-form',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/switch-form.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
 ]
