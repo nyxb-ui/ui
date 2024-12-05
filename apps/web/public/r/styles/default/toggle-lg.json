@@ -1,9 +1,6 @@
 {
   "name": "toggle-lg",
   "type": "registry:example",
-  "registryDependencies": [
-    "toggle"
-  ],
   "files": [
     {
       "path": "example/toggle-lg.tsx",

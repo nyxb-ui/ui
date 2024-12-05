@@ -1,9 +1,6 @@
 {
   "name": "toggle-demo",
   "type": "registry:example",
-  "registryDependencies": [
-    "toggle"
-  ],
   "files": [
     {
       "path": "example/toggle-demo.tsx",

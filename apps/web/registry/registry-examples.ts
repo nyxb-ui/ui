@@ -2785,4 +2785,64 @@ export const examples: Registry = [
          },
       ],
    },
+   {
+      name: 'toggle-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-outline',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-outline.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-with-text',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-with-text.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-sm',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-sm.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-lg',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-lg.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-disabled',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-disabled.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
 ]
