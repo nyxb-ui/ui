@@ -2575,4 +2575,24 @@ export const examples: Registry = [
          },
       ],
    },
+   {
+      name: 'skeleton-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/skeleton-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'skeleton-card',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/skeleton-card.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
 ]
