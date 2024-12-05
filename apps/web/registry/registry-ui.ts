@@ -1650,4 +1650,14 @@ export const ui: Registry = [
          },
       ],
    },
+   {
+      name: 'tabs-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/tabs-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
 ]
