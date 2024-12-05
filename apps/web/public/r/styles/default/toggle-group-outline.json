@@ -1,9 +1,6 @@
 {
   "name": "toggle-group-outline",
   "type": "registry:example",
-  "registryDependencies": [
-    "toggle-group"
-  ],
   "files": [
     {
       "path": "example/toggle-group-outline.tsx",

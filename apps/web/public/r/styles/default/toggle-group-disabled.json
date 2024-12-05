@@ -1,9 +1,6 @@
 {
   "name": "toggle-group-disabled",
   "type": "registry:example",
-  "registryDependencies": [
-    "toggle-group"
-  ],
   "files": [
     {
       "path": "example/toggle-group-disabled.tsx",

@@ -2845,4 +2845,64 @@ export const examples: Registry = [
          },
       ],
    },
+   {
+      name: 'toggle-group-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-group-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-outline',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-group-outline.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-single',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-group-single.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-sm',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-group-sm.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-lg',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-group-lg.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-disabled',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-group-disabled.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
 ]
