@@ -1640,4 +1640,14 @@ export const ui: Registry = [
          },
       ],
    },
+   {
+      name: 'table-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/table-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
 ]
