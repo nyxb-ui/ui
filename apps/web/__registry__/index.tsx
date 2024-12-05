@@ -5693,6 +5693,22 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "separator-demo": {
+      name: "separator-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/example/separator-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/separator-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "_sink": {
       name: "_sink",
       description: "",
@@ -13277,6 +13293,22 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("~/registry/default/example/select-form.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "separator-demo": {
+      name: "separator-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/separator-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/separator-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",

@@ -1,9 +1,6 @@
 {
   "name": "separator-demo",
   "type": "registry:example",
-  "registryDependencies": [
-    "separator"
-  ],
   "files": [
     {
       "path": "example/separator-demo.tsx",

@@ -2545,4 +2545,14 @@ export const examples: Registry = [
          },
       ],
    },
+   {
+      name: 'separator-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/separator-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
 ]
