@@ -1,9 +1,6 @@
 {
   "name": "tooltip-with-toggle-demo",
   "type": "registry:example",
-  "registryDependencies": [
-    "tooltip"
-  ],
   "files": [
     {
       "path": "example/tooltip-with-toggle-demo.tsx",

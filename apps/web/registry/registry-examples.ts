@@ -2905,4 +2905,44 @@ export const examples: Registry = [
          },
       ],
    },
+   {
+      name: 'tooltip-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/tooltip-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'tooltip-secondary',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/tooltip-secondary.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'tooltip-outline',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/tooltip-outline.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'tooltip-with-toggle-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/tooltip-with-toggle-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
 ]
