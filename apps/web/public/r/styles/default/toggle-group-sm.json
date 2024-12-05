@@ -1,9 +1,6 @@
 {
   "name": "toggle-group-sm",
   "type": "registry:example",
-  "registryDependencies": [
-    "toggle-group"
-  ],
   "files": [
     {
       "path": "example/toggle-group-sm.tsx",
