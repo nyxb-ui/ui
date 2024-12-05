@@ -2725,4 +2725,64 @@ export const examples: Registry = [
          },
       ],
    },
+   {
+      name: 'textarea-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/textarea-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'textarea-disabled',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/textarea-disabled.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'textarea-with-label',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/textarea-with-label.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'textarea-with-text',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/textarea-with-text.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'textarea-with-button',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/textarea-with-button.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'textarea-form',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/textarea-form.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
 ]

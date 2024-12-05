@@ -5981,6 +5981,102 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "textarea-demo": {
+      name: "textarea-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/example/textarea-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/textarea-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "textarea-disabled": {
+      name: "textarea-disabled",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/example/textarea-disabled.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/textarea-disabled.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "textarea-with-label": {
+      name: "textarea-with-label",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/example/textarea-with-label.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/textarea-with-label.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "textarea-with-text": {
+      name: "textarea-with-text",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/example/textarea-with-text.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/textarea-with-text.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "textarea-with-button": {
+      name: "textarea-with-button",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/example/textarea-with-button.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/textarea-with-button.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "textarea-form": {
+      name: "textarea-form",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/example/textarea-form.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/textarea-form.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "_sink": {
       name: "_sink",
       description: "",
@@ -13853,6 +13949,102 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("~/registry/default/example/tabs-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "textarea-demo": {
+      name: "textarea-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/textarea-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/textarea-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "textarea-disabled": {
+      name: "textarea-disabled",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/textarea-disabled.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/textarea-disabled.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "textarea-with-label": {
+      name: "textarea-with-label",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/textarea-with-label.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/textarea-with-label.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "textarea-with-text": {
+      name: "textarea-with-text",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/textarea-with-text.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/textarea-with-text.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "textarea-with-button": {
+      name: "textarea-with-button",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/textarea-with-button.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/textarea-with-button.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "textarea-form": {
+      name: "textarea-form",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/textarea-form.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/textarea-form.tsx")),
       source: "",
       category: "",
       subcategory: "",
