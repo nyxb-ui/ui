@@ -1,14 +1,14 @@
 import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "~/registry/miami/ui/avatar"
+   Avatar,
+   AvatarFallback,
+   AvatarImage,
+} from '~/registry/miami/ui/avatar'
 
 export function AvatarDemo() {
-  return (
-    <Avatar>
-      <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-      <AvatarFallback>CN</AvatarFallback>
-    </Avatar>
-  )
+   return (
+      <Avatar>
+         <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+         <AvatarFallback>CN</AvatarFallback>
+      </Avatar>
+   )
 }

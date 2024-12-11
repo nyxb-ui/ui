@@ -1,10 +1,10 @@
-import { describe, expect, it } from "vitest"
+import { describe, expect, it } from 'vitest'
 
-import { migrateIconsFile } from "./migrate-icons"
+import { migrateIconsFile } from './migrate-icons'
 
-describe("migrateIconsFile", () => {
-  it("should replace radix icons with lucide icons", async () => {
-    const input = `
+describe('migrateIconsFile', () => {
+   it('should replace radix icons with lucide icons', async () => {
+      const input = `
       import { CheckIcon, CloseIcon } from "@radix-ui/react-icons"
       import { Something } from "other-package"
 
@@ -17,18 +17,18 @@ describe("migrateIconsFile", () => {
         )
       }`
 
-    expect(
-      await migrateIconsFile(input, "radix", "lucide", {
-        Check: {
-          lucide: "Check",
-          radix: "CheckIcon",
-        },
-        X: {
-          lucide: "X",
-          radix: "CloseIcon",
-        },
-      })
-    ).toMatchInlineSnapshot(`
+      expect(
+         await migrateIconsFile(input, 'radix', 'lucide', {
+            Check: {
+               lucide: 'Check',
+               radix: 'CheckIcon',
+            },
+            X: {
+               lucide: 'X',
+               radix: 'CloseIcon',
+            },
+         }),
+      ).toMatchInlineSnapshot(`
       "import { Something } from "other-package"
       import { Check, X } from "lucide-react";
 
@@ -41,28 +41,28 @@ describe("migrateIconsFile", () => {
               )
             }"
     `)
-  })
+   })
 
-  it("should return null if no radix icons are found", async () => {
-    const input = `
+   it('should return null if no radix icons are found', async () => {
+      const input = `
       import { Something } from "other-package"
 
       export function Component() {
         return <div>No icons here</div>
       }`
 
-    expect(await migrateIconsFile(input, "lucide", "radix", {}))
-      .toMatchInlineSnapshot(`
+      expect(await migrateIconsFile(input, 'lucide', 'radix', {}))
+         .toMatchInlineSnapshot(`
       "import { Something } from "other-package"
 
             export function Component() {
               return <div>No icons here</div>
             }"
     `)
-  })
+   })
 
-  it("should handle mixed icon imports from different packages", async () => {
-    const input = `
+   it('should handle mixed icon imports from different packages', async () => {
+      const input = `
       import { CheckIcon } from "@radix-ui/react-icons"
       import { AlertCircle } from "lucide-react"
       import { Something } from "other-package"
@@ -78,18 +78,18 @@ describe("migrateIconsFile", () => {
         )
       }`
 
-    expect(
-      await migrateIconsFile(input, "radix", "lucide", {
-        Check: {
-          lucide: "Check",
-          radix: "CheckIcon",
-        },
-        X: {
-          lucide: "X",
-          radix: "Cross2Icon",
-        },
-      })
-    ).toMatchInlineSnapshot(`
+      expect(
+         await migrateIconsFile(input, 'radix', 'lucide', {
+            Check: {
+               lucide: 'Check',
+               radix: 'CheckIcon',
+            },
+            X: {
+               lucide: 'X',
+               radix: 'Cross2Icon',
+            },
+         }),
+      ).toMatchInlineSnapshot(`
       "import { AlertCircle } from "lucide-react"
             import { Something } from "other-package"
       import { Check, X } from "lucide-react";
@@ -104,10 +104,10 @@ describe("migrateIconsFile", () => {
               )
             }"
     `)
-  })
+   })
 
-  it("should preserve all props and children on icons", async () => {
-    const input = `
+   it('should preserve all props and children on icons', async () => {
+      const input = `
       import { CheckIcon, Cross2Icon } from "@radix-ui/react-icons"
 
       export function Component() {
@@ -125,18 +125,18 @@ describe("migrateIconsFile", () => {
         )
       }`
 
-    expect(
-      await migrateIconsFile(input, "radix", "lucide", {
-        Check: {
-          lucide: "Check",
-          radix: "CheckIcon",
-        },
-        X: {
-          lucide: "X",
-          radix: "Cross2Icon",
-        },
-      })
-    ).toMatchInlineSnapshot(`
+      expect(
+         await migrateIconsFile(input, 'radix', 'lucide', {
+            Check: {
+               lucide: 'Check',
+               radix: 'CheckIcon',
+            },
+            X: {
+               lucide: 'X',
+               radix: 'Cross2Icon',
+            },
+         }),
+      ).toMatchInlineSnapshot(`
       "import { Check, X } from "lucide-react";
 
                   export function Component() {
@@ -154,5 +154,5 @@ describe("migrateIconsFile", () => {
               )
             }"
     `)
-  })
+   })
 })
