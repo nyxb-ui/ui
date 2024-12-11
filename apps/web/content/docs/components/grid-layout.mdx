@@ -1,0 +1,98 @@
+---
+title: Grid Layout
+date: 2024-03-20
+description: A customizable grid layout component with optional crosshairs and grid lines.
+author: nyxb
+published: true
+---
+
+<ComponentPreview name="grid-layout-demo" dots={false} />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+```bash
+npx nyxb@latest add grid-layout
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+```text
+components/ui/grid-layout.tsx
+```
+
+<ComponentSource name="grid-layout" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Examples
+
+### Basic Usage
+
+<ComponentPreview name="grid-layout-demo" dots={false} />
+
+### With Crosshairs
+
+<ComponentPreview name="grid-layout-crosshairs-demo" dots={false} />
+
+### Custom Columns
+
+<ComponentPreview name="grid-layout-columns-demo" dots={false} />
+
+### Line Variants
+
+<ComponentPreview name="grid-layout-variants-demo" dots={false} />
+
+## Props
+
+<PropsTable
+  data={[
+    {
+      name: "children",
+      type: "ReactNode",
+      description: "The content to display within the grid",
+    },
+    {
+      name: "crosshairs",
+      type: "CrosshairConfig",
+      description: "Configuration for corner crosshairs",
+    },
+    {
+      name: "gridLines",
+      type: "boolean",
+      default: "true",
+      description: "Whether to show grid lines",
+    },
+    {
+      name: "columns",
+      type: "number",
+      default: "16",
+      description: "Number of grid columns",
+    },
+    {
+      name: "className",
+      type: "string",
+      description: "Additional CSS classes",
+    },
+  ]}
+/>

@@ -246,6 +246,14 @@ const config: Config = {
             'pulse': 'pulse var(--duration) ease-out infinite',
             'rainbow': 'rainbow var(--speed, 2s) infinite linear',
          },
+         borderColor: {
+            'grid-line': 'hsl(var(--border) / 0.5)',
+         },
+         gridTemplateColumns: {
+            'grid-16': 'repeat(16, minmax(0, 1fr))',
+            'grid-12': 'repeat(12, minmax(0, 1fr))',
+            'grid-8': 'repeat(8, minmax(0, 1fr))',
+         },
       },
    },
    plugins: [

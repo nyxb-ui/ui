@@ -6,6 +6,7 @@
     "build": "turbo build",
     "build:cli": "turbo --filter=nyxbui build",
     "build:registry": "pnpm --filter=web build:registry",
+    "build:env": "pnpm --filter=web build:env",
     "dev": "turbo run dev --parallel",
     "web:dev": "pnpm --filter=web dev",
     "cli:dev": "turbo --filter=nyxbui dev",

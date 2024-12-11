@@ -1,15 +1,16 @@
-import { atom, useAtom } from "jotai"
+import { atom, useAtom } from 'jotai'
 
-import { Mail, mails } from "~/app/(app)/examples/mail/data"
+import type { Mail } from '~/app/(app)/examples/mail/data'
+import { mails } from '~/app/(app)/examples/mail/data'
 
-type Config = {
-  selected: Mail["id"] | null
+interface Config {
+   selected: Mail['id'] | null
 }
 
 const configAtom = atom<Config>({
-  selected: mails[0].id,
+   selected: mails[0].id,
 })
 
 export function useMail() {
-  return useAtom(configAtom)
+   return useAtom(configAtom)
 }

@@ -2710,16 +2710,6 @@ export const examples: Registry = [
       ],
    },
    {
-      name: 'separate-away-demo',
-      type: 'registry:example',
-      files: [
-         {
-            path: 'example/separate-away-demo.tsx',
-            type: 'registry:component',
-         },
-      ],
-   },
-   {
       name: 'sheet-demo',
       type: 'registry:example',
       files: [
@@ -2835,6 +2825,47 @@ export const examples: Registry = [
          {
             path: 'example/textarea-with-text.tsx',
             type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'grid-layout-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/grid-layout-demo.tsx',
+            type: 'registry:component',
+         },
+      ],
+   },
+   {
+      name: 'grid-layout-crosshairs-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/grid-layout-crosshairs-demo.tsx',
+            type: 'registry:component',
+         },
+      ],
+   },
+   {
+      name: 'grid-layout-columns-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/grid-layout-columns-demo.tsx',
+            type: 'registry:component',
+         },
+      ],
+   },
+   {
+      name: 'grid-layout-variants-demo',
+      type: 'registry:example',
+      registryDependencies: ['grid-layout'],
+      files: [
+         {
+            path: 'example/grid-layout-variants-demo.tsx',
+            type: 'registry:component',
          },
       ],
    },

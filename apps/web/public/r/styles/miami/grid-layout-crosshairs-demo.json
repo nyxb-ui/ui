@@ -1,0 +1,12 @@
+{
+  "name": "grid-layout-crosshairs-demo",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/grid-layout-crosshairs-demo.tsx",
+      "content": "'use client'\n\nimport GridLayout from '~/registry/miami/ui/grid-layout'\n\nexport default function GridLayoutCrosshairsDemo() {\n   return (\n      <GridLayout\n         crosshairs={{\n            topLeft: true,\n            topRight: true,\n            bottomLeft: true,\n            bottomRight: true,\n         }}\n         className=\"min-h-[350px] p-6\"\n      >\n         <div className=\"space-y-4\">\n            <div className=\"text-muted-foreground flex items-center justify-center gap-4\">\n               <span>All Crosshairs Enabled</span>\n            </div>\n            <div className=\"grid grid-cols-2 gap-4\">\n               <div className=\"rounded-lg border p-4 text-center\">Top Left</div>\n               <div className=\"rounded-lg border p-4 text-center\">Top Right</div>\n               <div className=\"rounded-lg border p-4 text-center\">Bottom Left</div>\n               <div className=\"rounded-lg border p-4 text-center\">Bottom Right</div>\n            </div>\n         </div>\n      </GridLayout>\n   )\n}\n",
+      "type": "registry:component",
+      "target": ""
+    }
+  ]
+}

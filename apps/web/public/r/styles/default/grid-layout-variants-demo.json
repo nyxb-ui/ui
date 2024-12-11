@@ -1,0 +1,15 @@
+{
+  "name": "grid-layout-variants-demo",
+  "type": "registry:example",
+  "registryDependencies": [
+    "grid-layout"
+  ],
+  "files": [
+    {
+      "path": "example/grid-layout-variants-demo.tsx",
+      "content": "'use client'\n\nimport GridLayout from '~/registry/default/ui/grid-layout'\n\nexport default function GridLayoutVariantsDemo() {\n   return (\n      <div className=\"space-y-8\">\n         <GridLayout lineVariant=\"center\" className=\"h-[200px]\">\n            <div className=\"text-muted-foreground text-center text-sm\">\n               Center Line Only\n            </div>\n         </GridLayout>\n\n         <GridLayout lineVariant=\"vertical\" className=\"h-[200px]\">\n            <div className=\"text-muted-foreground text-center text-sm\">\n               Vertical Lines Only\n            </div>\n         </GridLayout>\n\n         <GridLayout lineVariant=\"horizontal\" className=\"h-[200px]\">\n            <div className=\"text-muted-foreground text-center text-sm\">\n               Horizontal Lines Only\n            </div>\n         </GridLayout>\n\n         <GridLayout lineVariant=\"none\" className=\"h-[200px]\">\n            <div className=\"text-muted-foreground text-center text-sm\">\n               No Grid Lines\n            </div>\n         </GridLayout>\n      </div>\n   )\n}\n",
+      "type": "registry:component",
+      "target": ""
+    }
+  ]
+}
