@@ -1620,4 +1620,38 @@ export const ui: Registry = [
          },
       ],
    },
+   {
+      name: 'grid-layout',
+      type: 'registry:ui',
+      files: [
+         {
+            path: 'ui/grid-layout.tsx',
+            type: 'registry:component',
+         },
+      ],
+      tailwind: {
+         config: {
+            theme: {
+               extend: {
+                  borderColor: {
+                     'grid-line': 'hsl(var(--border) / var(--grid-line-opacity))',
+                  },
+                  gridTemplateColumns: {
+                     'grid-16': 'repeat(16, minmax(0, 1fr))',
+                     'grid-12': 'repeat(12, minmax(0, 1fr))',
+                     'grid-8': 'repeat(8, minmax(0, 1fr))',
+                  },
+               },
+            },
+         },
+      },
+      cssVars: {
+         light: {
+            '--grid-line-opacity': '0.5',
+         },
+         dark: {
+            '--grid-line-opacity': '0.5',
+         },
+      },
+   },
 ]

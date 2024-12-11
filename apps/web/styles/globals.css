@@ -43,6 +43,10 @@
     --color-3: 210 100% 63%;
     --color-4: 195 100% 63%;
     --color-5: 90 100% 63%;
+
+    /* Grid Layout spezifische Variablen */
+    --grid-line-color: var(--border);
+    --grid-line-opacity: 0.5;
   }
 
   .dark {
@@ -155,4 +159,18 @@
   /* -webkit-mask: radial-gradient(circle at 50% 50%,transparent 0,#fff calc(100% - var(--mask-offset)),transparent 100%); */
   -webkit-mask-composite: source-in, xor;
   mask-composite: intersect;
+}
+
+@layer components {
+  .grid-layout {
+    @apply relative grid w-full gap-0;
+  }
+
+  .grid-layout-lines {
+    @apply border border-grid-line;
+  }
+
+  .grid-layout-crosshair {
+    @apply absolute text-grid-line;
+  }
 }

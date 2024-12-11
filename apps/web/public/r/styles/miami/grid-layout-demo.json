@@ -1,0 +1,12 @@
+{
+  "name": "grid-layout-demo",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/grid-layout-demo.tsx",
+      "content": "'use client'\n\nimport GridLayout from '~/registry/miami/ui/grid-layout'\n\nexport default function GridLayoutDemo() {\n   return (\n      <GridLayout\n         crosshairs={{\n            topLeft: true,\n            bottomRight: true,\n         }}\n         className=\"min-h-[350px] p-6\"\n      >\n         <div className=\"space-y-8\">\n            <div className=\"text-muted-foreground flex items-center justify-center gap-4\">\n               <span>Basic Grid Layout</span>\n               <span>•</span>\n               <span>16 Columns</span>\n            </div>\n            <div className=\"grid gap-4 md:grid-cols-2\">\n               <div className=\"rounded-lg border p-4\">\n                  <h3 className=\"text-lg font-semibold\">Grid Lines</h3>\n                  <p className=\"text-muted-foreground text-sm\">\n                     Visual guides for alignment\n                  </p>\n               </div>\n               <div className=\"rounded-lg border p-4\">\n                  <h3 className=\"text-lg font-semibold\">Crosshairs</h3>\n                  <p className=\"text-muted-foreground text-sm\">\n                     Optional corner markers\n                  </p>\n               </div>\n            </div>\n         </div>\n      </GridLayout>\n   )\n}\n",
+      "type": "registry:component",
+      "target": ""
+    }
+  ]
+}

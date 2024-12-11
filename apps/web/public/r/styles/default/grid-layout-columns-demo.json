@@ -1,0 +1,12 @@
+{
+  "name": "grid-layout-columns-demo",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/grid-layout-columns-demo.tsx",
+      "content": "'use client'\n\nimport GridLayout from '~/registry/default/ui/grid-layout'\n\nexport default function GridLayoutColumnsDemo() {\n   return (\n      <div className=\"space-y-8\">\n         <GridLayout\n            columns={8}\n            className=\"min-h-[150px] p-4\"\n         >\n            <div className=\"text-muted-foreground text-center text-sm\">\n               8 Columns\n            </div>\n         </GridLayout>\n\n         <GridLayout\n            columns={12}\n            className=\"min-h-[150px] p-4\"\n         >\n            <div className=\"text-muted-foreground text-center text-sm\">\n               12 Columns\n            </div>\n         </GridLayout>\n\n         <GridLayout\n            columns={16}\n            className=\"min-h-[150px] p-4\"\n         >\n            <div className=\"text-muted-foreground text-center text-sm\">\n               16 Columns (Default)\n            </div>\n         </GridLayout>\n      </div>\n   )\n}\n",
+      "type": "registry:component",
+      "target": ""
+    }
+  ]
+}
