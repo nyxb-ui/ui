@@ -1913,6 +1913,138 @@ export const examples: Registry = [
       ],
    },
    {
+      name: 'toggle-group-demo',
+      type: 'registry:example',
+      registryDependencies: ['toggle-group'],
+      files: [
+         {
+            path: 'example/toggle-group-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-disabled',
+      type: 'registry:example',
+      registryDependencies: ['toggle-group'],
+      files: [
+         {
+            path: 'example/toggle-group-disabled.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-lg',
+      type: 'registry:example',
+      registryDependencies: ['toggle-group'],
+      files: [
+         {
+            path: 'example/toggle-group-lg.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-outline',
+      type: 'registry:example',
+      registryDependencies: ['toggle-group'],
+      files: [
+         {
+            path: 'example/toggle-group-outline.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-sm',
+      type: 'registry:example',
+      registryDependencies: ['toggle-group'],
+      files: [
+         {
+            path: 'example/toggle-group-sm.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-single',
+      type: 'registry:example',
+      registryDependencies: ['toggle-group'],
+      files: [
+         {
+            path: 'example/toggle-group-single.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-demo',
+      type: 'registry:example',
+      registryDependencies: ['toggle'],
+      files: [
+         {
+            path: 'example/toggle-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-disabled',
+      type: 'registry:example',
+      registryDependencies: ['toggle'],
+      files: [
+         {
+            path: 'example/toggle-disabled.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-lg',
+      type: 'registry:example',
+      registryDependencies: ['toggle'],
+      files: [
+         {
+            path: 'example/toggle-lg.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-outline',
+      type: 'registry:example',
+      registryDependencies: ['toggle'],
+      files: [
+         {
+            path: 'example/toggle-outline.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-sm',
+      type: 'registry:example',
+      registryDependencies: ['toggle'],
+      files: [
+         {
+            path: 'example/toggle-sm.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-with-text',
+      type: 'registry:example',
+      registryDependencies: ['toggle'],
+      files: [
+         {
+            path: 'example/toggle-with-text.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
       name: 'cool-mode-demo',
       type: 'registry:example',
       files: [
@@ -2508,6 +2640,200 @@ export const examples: Registry = [
       files: [
          {
             path: 'example/sonner-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'tooltip-demo',
+      type: 'registry:example',
+      registryDependencies: ['tooltip'],
+      files: [
+         {
+            path: 'example/tooltip-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'switch-demo',
+      type: 'registry:example',
+      registryDependencies: ['switch'],
+      files: [
+         {
+            path: 'example/switch-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'select-demo',
+      type: 'registry:example',
+      registryDependencies: ['select'],
+      files: [
+         {
+            path: 'example/select-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'select-scrollable',
+      type: 'registry:example',
+      registryDependencies: ['select'],
+      files: [
+         {
+            path: 'example/select-scrollable.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'select-form',
+      type: 'registry:example',
+      registryDependencies: ['select'],
+      files: [
+         {
+            path: 'example/select-form.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'separator-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/separator-demo.tsx',
+            type: 'registry:component',
+         },
+      ],
+   },
+   {
+      name: 'separate-away-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/separate-away-demo.tsx',
+            type: 'registry:component',
+         },
+      ],
+   },
+   {
+      name: 'sheet-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/sheet-demo.tsx',
+            type: 'registry:component',
+         },
+      ],
+   },
+   {
+      name: 'skeleton-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/skeleton-demo.tsx',
+            type: 'registry:component',
+         },
+      ],
+   },
+   {
+      name: 'slider-demo',
+      type: 'registry:example',
+      registryDependencies: ['slider'],
+      files: [
+         {
+            path: 'example/slider-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'table-demo',
+      type: 'registry:example',
+      registryDependencies: ['table'],
+      files: [
+         {
+            path: 'example/table-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'tabs-demo',
+      type: 'registry:example',
+      registryDependencies: ['tabs'],
+      files: [
+         {
+            path: 'example/tabs-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'textarea-demo',
+      type: 'registry:example',
+      registryDependencies: ['textarea'],
+      files: [
+         {
+            path: 'example/textarea-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'textarea-disabled',
+      type: 'registry:example',
+      registryDependencies: ['textarea'],
+      files: [
+         {
+            path: 'example/textarea-disabled.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'textarea-form',
+      type: 'registry:example',
+      registryDependencies: ['textarea', 'form'],
+      files: [
+         {
+            path: 'example/textarea-form.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'textarea-with-button',
+      type: 'registry:example',
+      registryDependencies: ['textarea', 'button'],
+      files: [
+         {
+            path: 'example/textarea-with-button.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'textarea-with-label',
+      type: 'registry:example',
+      registryDependencies: ['textarea', 'label'],
+      files: [
+         {
+            path: 'example/textarea-with-label.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'textarea-with-text',
+      type: 'registry:example',
+      registryDependencies: ['textarea', 'label'],
+      files: [
+         {
+            path: 'example/textarea-with-text.tsx',
             type: 'registry:example',
          },
       ],

@@ -1,6 +1,12 @@
 /* eslint-disable no-console */
-'use client'
-import React, { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react'
+import React, {
+   createContext,
+   useContext,
+   useEffect,
+   useMemo,
+   useRef,
+   useState,
+} from 'react'
 import { createPortal } from 'react-dom'
 
 import { ny } from '~/lib/utils'
@@ -77,12 +83,14 @@ export function TourFactory<T extends string>(order: T[]) {
       }, [])
 
       useEffect(() => {
-         if (ctx.show)
+         if (ctx.show) {
             forceUpdate({})
+         }
       }, [ctx.show])
 
-      if (!currentElement)
+      if (!currentElement) {
          return <></>
+      }
 
       const currentElementRect = currentElement.ref.getBoundingClientRect()
 
@@ -166,12 +174,12 @@ export function TourFactory<T extends string>(order: T[]) {
 
          const getNextIndex = (currIndex: number, nextDiff: number): number => {
             const lookAheadIndex = currIndex + nextDiff
-            if (lookAheadIndex >= order.length || lookAheadIndex < 0)
+            if (lookAheadIndex >= order.length || lookAheadIndex < 0) {
                return currIndex
-
-            if (!nodes.current.has(order[lookAheadIndex]))
+            }
+            if (!nodes.current.has(order[lookAheadIndex])) {
                return getNextIndex(lookAheadIndex, nextDiff)
-
+            }
             return lookAheadIndex
          }
 

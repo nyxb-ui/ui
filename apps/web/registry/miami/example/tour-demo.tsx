@@ -1,226 +1,129 @@
-/* eslint-disable no-console */
-'use client'
-import React, { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react'
-import { createPortal } from 'react-dom'
+import * as React from 'react'
 
-import { ny } from '~/lib/utils'
+import { Button } from '~/registry/miami/ui/button'
+import {
+   Card,
+   CardContent,
+   CardDescription,
+   CardFooter,
+   CardHeader,
+   CardTitle,
+} from '~/registry/miami/ui/card'
+import { Input } from '~/registry/miami/ui/input'
+import { TourFactory } from '~/registry/miami/ui/tour'
 
-export interface TourContext<T extends string> {
-   nodes: Map<
-      string,
-      {
-         ref: HTMLElement
-         render: React.ReactNode
-         name: T
-      }
-   >
-   show: boolean
-   current: number
-   next: () => void
-   previous: () => void
-   close: () => void
-   open: () => void
-}
+const tour = TourFactory([
+   'buttonOne',
+   'buttonTwo',
+   'missingButton',
+   'buttonFour',
+   'emailInput',
+])
 
-export interface TourProps {
-   children?: React.ReactNode
-}
-
-export interface TourFocusProps<T extends string> {
+function TourDisplay(props: {
    children: React.ReactNode
-   tourRender: React.ReactNode
-   name: T
+   title?: string
+   description?: string
+}) {
+   const ctx = tour.useContext()
+   return (
+      <Card className="w-[350px]">
+         <CardHeader>
+            <CardTitle>{props.title}</CardTitle>
+            <CardDescription>{props.description}</CardDescription>
+         </CardHeader>
+         <CardContent>{props.children}</CardContent>
+         <CardFooter>
+            {ctx.current < ctx.nodes.size
+               ? (
+                     <div className="flex w-full justify-between">
+                        <Button variant="outline" onClick={ctx.close}>
+                           Close
+                        </Button>
+                        <div>
+                           <Button onClick={ctx.previous}>Previous</Button>
+                           <Button onClick={ctx.next}>Next</Button>
+                        </div>
+                     </div>
+                  )
+               : (
+                     <div className="flex w-full justify-end">
+                        <Button onClick={ctx.previous}>Previous</Button>
+                        <Button className="bg-green-800" onClick={ctx.close}>
+                           Finish
+                        </Button>
+                     </div>
+                  )}
+         </CardFooter>
+      </Card>
+   )
 }
 
-export function TourFactory<T extends string>(order: T[]) {
-   const tourContext = createContext<TourContext<T>>({
-      nodes: new Map(),
-      show: false,
-      current: 0,
-      next: () => {
-         console.log('empty')
-      },
-      previous: () => {
-         console.log('empty')
-      },
-      close: () => {
-         console.log('empty')
-      },
-      open: () => {
-         console.log('empty')
-      },
-   })
-
-   function TourPortal() {
-      const ctx = useContext(tourContext)
-
-      const ref = useRef<HTMLDivElement>(null)
-      const [, forceUpdate] = React.useState({})
-
-      const currentElement = useMemo(
-         () => ctx.nodes.get(order[ctx.current] ?? ''),
-         [ctx],
-      )
-
-      useEffect(() => {
-         const handleResize = () => {
-            forceUpdate({})
-         }
-
-         window.addEventListener('resize', handleResize)
-         window.addEventListener('scroll', handleResize)
-
-         return () => {
-            window.removeEventListener('resize', handleResize)
-            window.removeEventListener('scroll', handleResize)
-         }
-      }, [])
-
-      useEffect(() => {
-         if (ctx.show)
-            forceUpdate({})
-      }, [ctx.show])
-
-      if (!currentElement)
-         return <></>
-
-      const currentElementRect = currentElement.ref.getBoundingClientRect()
-
-      const height = ref.current?.getBoundingClientRect().height ?? 0
-      const width = ref.current?.getBoundingClientRect().width ?? 0
-
-      const closest = (): React.CSSProperties => {
-         const isCloseToTop = currentElementRect.top < height
-         const isCloseToLeft = currentElementRect.left < width
-         const isCloseToRight
-         = currentElementRect.right > window.innerWidth - width
-
-         if (isCloseToLeft) {
-            return {
-               left: currentElementRect.x + currentElementRect.width,
-               top:
-             currentElementRect.y - height / 2 + currentElementRect.height / 2,
-            }
-         }
-
-         if (isCloseToRight) {
-            return {
-               left: currentElementRect.x - width,
-               top:
-             currentElementRect.y - height / 2 + currentElementRect.height / 2,
-            }
-         }
-
-         if (isCloseToTop) {
-            return {
-               left: currentElementRect.x - width / 2 + currentElementRect.width / 2,
-               top: currentElementRect.y + currentElementRect.height,
-            }
-         }
-
-         return {
-            left: currentElementRect.x - width / 2 + currentElementRect.width / 2,
-            top: currentElementRect.y - height,
-         }
-      }
-
-      return createPortal(
-         <div
-            id="tour"
-            className={ny(
-               'pointer-events-auto fixed left-0 top-0 h-screen w-screen transition-none',
-               !ctx.show ? 'invisible' : 'visible',
-            )}
-         >
-            <div
-               ref={ref}
-               className={ny(
-             `absolute z-50 transition-all duration-500 ease-in-out`,
+function TourApplication() {
+   const ctx = tour.useContext()
+   return (
+      <div className="flex h-96 w-full items-center justify-center">
+         <div className="absolute bottom-2 left-2 flex gap-2">
+            <tour.TourFocus
+               name="buttonOne"
+               tourRender={(
+                  <TourDisplay title="Create Incident">
+                     <h1>This button creates an incident</h1>
+                     <p>helpful text about this button</p>
+                  </TourDisplay>
                )}
-               style={{
-                  ...closest(),
-               }}
             >
-               {currentElement.render}
-            </div>
-            <div
-               className="absolute z-40 h-screen w-screen overflow-hidden opacity-80 shadow-[0_0_0_100vw_rgba(0,0,0,.99)] transition-all duration-500 ease-in-out"
-               style={{
-                  height: currentElementRect.height,
-                  width: currentElementRect.width,
-                  left: currentElementRect.x,
-                  top: currentElementRect.y,
-               }}
-            />
-         </div>,
-         document.body,
-      )
-   }
-
-   return {
-      TourProvider: function TourProvider(props: TourProps) {
-         const nodes = useRef<TourContext<T>['nodes']>(new Map())
-
-         const [show, setShow] = useState(false)
-         const [current, setCurrent] = useState(0)
-
-         const getNextIndex = (currIndex: number, nextDiff: number): number => {
-            const lookAheadIndex = currIndex + nextDiff
-            if (lookAheadIndex >= order.length || lookAheadIndex < 0)
-               return currIndex
-
-            if (!nodes.current.has(order[lookAheadIndex]))
-               return getNextIndex(lookAheadIndex, nextDiff)
-
-            return lookAheadIndex
-         }
-
-         return (
-            <tourContext.Provider
-               value={{
-                  nodes: nodes.current,
-                  current,
-                  show,
-                  next: () => {
-                     setCurrent(state =>
-                        Math.min(getNextIndex(state, 1), order.length - 1),
-                     )
-                  },
-                  previous: () => {
-                     setCurrent(state => Math.max(getNextIndex(state, -1), 0))
-                  },
-                  close: () => {
-                     setShow(false)
-                  },
-                  open: () => {
-                     setShow(true)
-                  },
-               }}
+               <Button>Create Incident</Button>
+            </tour.TourFocus>
+            <tour.TourFocus
+               name="buttonFour"
+               tourRender={(
+                  <TourDisplay title="Update Incident">
+                     <h1>This button pushes your updates</h1>
+                     <p>helpful text about this button</p>
+                  </TourDisplay>
+               )}
             >
-               <TourPortal />
-               {props.children}
-            </tourContext.Provider>
-         )
-      },
-      context: tourContext,
-      useContext: () => useContext(tourContext),
-      TourFocus: function TourFocus(props: TourFocusProps<T>) {
-         const ctx = useContext(tourContext)
-         return (
-            <div
-               ref={(divRef) => {
-                  if (divRef && !ctx.nodes.has(props.name)) {
-                     ctx.nodes.set(props.name, {
-                        ref: divRef,
-                        render: props.tourRender,
-                        name: props.name,
-                     })
-                  }
-               }}
+               <Button>Update Incident</Button>
+            </tour.TourFocus>
+         </div>
+         <div className="absolute right-2 top-12 flex gap-2">
+            <tour.TourFocus
+               name="buttonTwo"
+               tourRender={(
+                  <TourDisplay title="Resolve Incident">
+                     <h1>This button Resolves the Incident</h1>
+                     <p>helpful text about this button</p>
+                  </TourDisplay>
+               )}
             >
-               {props.children}
-            </div>
-         )
-      },
-   }
+               <Button>Resolve Incident</Button>
+            </tour.TourFocus>
+         </div>
+         <div>
+            <tour.TourFocus
+               name="emailInput"
+               tourRender={(
+                  <TourDisplay title="Email Input">
+                     <h1>This is where you put incident info</h1>
+                     <p>helpful text about this input</p>
+                  </TourDisplay>
+               )}
+            >
+               <Input type="email" placeholder="Email" />
+            </tour.TourFocus>
+         </div>
+         <div className="absolute bottom-2 right-2">
+            <Button onClick={ctx.open}>Open Tour</Button>
+         </div>
+      </div>
+   )
+}
+
+export default function TourDemo() {
+   return (
+      <tour.TourProvider>
+         <TourApplication />
+      </tour.TourProvider>
+   )
 }
