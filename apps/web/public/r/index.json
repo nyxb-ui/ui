@@ -1869,5 +1869,48 @@
         "--grid-line-opacity": "0.5"
       }
     }
+  },
+  {
+    "name": "globe-grid",
+    "type": "registry:ui",
+    "dependencies": [],
+    "files": [
+      {
+        "path": "ui/globe-grid.tsx",
+        "type": "registry:component"
+      }
+    ],
+    "tailwind": {
+      "config": {
+        "theme": {
+          "extend": {
+            "gridTemplateColumns": {
+              "grid-md": "repeat(var(--md-grid-columns), 1fr)",
+              "grid-sm": "repeat(var(--sm-grid-columns), 1fr)"
+            },
+            "gridTemplateRows": {
+              "grid-md": "repeat(var(--md-grid-rows), 1fr)",
+              "grid-sm": "repeat(var(--sm-grid-rows), 1fr)"
+            }
+          }
+        }
+      }
+    },
+    "cssVars": {
+      "light": {
+        "--guide-color": "rgba(255, 255, 255, 0.1)",
+        "--ds-background-200": "rgba(0, 0, 0, 0.5)",
+        "--line-color-1": "hsl(54, 88%, 65%)",
+        "--line-color-2": "hsl(94, 68%, 56%)",
+        "--line-color-3": "hsl(39, 89%, 65%)"
+      },
+      "dark": {
+        "--guide-color": "rgba(255, 255, 255, 0.15)",
+        "--ds-background-200": "rgba(0, 0, 0, 0.7)",
+        "--line-color-1": "hsl(54, 88%, 65%)",
+        "--line-color-2": "hsl(94, 68%, 56%)",
+        "--line-color-3": "hsl(39, 89%, 65%)"
+      }
+    }
   }
 ]

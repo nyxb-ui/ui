@@ -2869,4 +2869,24 @@ export const examples: Registry = [
          },
       ],
    },
+   {
+      name: 'globe-grid-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/globe-grid-demo.tsx',
+            type: 'registry:component',
+         },
+      ],
+   },
+   {
+      name: 'globe-grid-full-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/globe-grid-full-demo.tsx',
+            type: 'registry:component',
+         },
+      ],
+   },
 ]

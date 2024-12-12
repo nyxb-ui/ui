@@ -579,6 +579,12 @@ export const docsConfig: DocsConfig = {
                href: `/docs/components/blur-fade`,
                items: [],
             },
+            {
+               title: 'Globe Grid',
+               href: `/docs/components/globe-grid`,
+               items: [],
+               label: 'New',
+            },
          ],
       },
       {

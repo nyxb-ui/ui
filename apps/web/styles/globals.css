@@ -47,6 +47,13 @@
       /* Grid Layout spezifische Variablen */
       --grid-line-color: var(--border);
       --grid-line-opacity: 0.5;
+
+      /* Globe Grid */
+      --guide-color: rgba(255, 255, 255, 0.1);
+      --ds-background-200: rgba(0, 0, 0, 0.5);
+      --line-color-1: hsl(54, 88%, 65%);
+      --line-color-2: hsl(94, 68%, 56%);
+      --line-color-3: hsl(39, 89%, 65%);
    }
 
    .dark {
@@ -88,6 +95,13 @@
       --color-3: 210 100% 63%;
       --color-4: 195 100% 63%;
       --color-5: 90 100% 63%;
+
+      /* Globe Grid */
+      --guide-color: rgba(255, 255, 255, 0.1);
+      --ds-background-200: rgba(0, 0, 0, 0.5);
+      --line-color-1: hsl(54, 88%, 65%);
+      --line-color-2: hsl(94, 68%, 56%);
+      --line-color-3: hsl(39, 89%, 65%);
    }
 }
 
@@ -161,18 +175,4 @@
    /* -webkit-mask: radial-gradient(circle at 50% 50%,transparent 0,#fff calc(100% - var(--mask-offset)),transparent 100%); */
    -webkit-mask-composite: source-in, xor;
    mask-composite: intersect;
-}
-
-@layer components {
-   .grid-layout {
-      @apply relative grid w-full gap-0;
-   }
-
-   .grid-layout-lines {
-      @apply border border-grid-line;
-   }
-
-   .grid-layout-crosshair {
-      @apply absolute text-grid-line;
-   }
 }

@@ -1,0 +1,111 @@
+---
+title: Globe Grid
+description: An animated globe grid component with glowing line effects.
+component: true
+---
+
+<ComponentPreview name="globe-grid-demo" dots={false} />
+
+## Full Globe
+
+The Globe Grid component can display a full spherical grid by using the `fullGlobe` prop, which shows both hemispheres with mirrored animations:
+
+<ComponentPreview name="globe-grid-full-demo" dots={false} />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+```bash
+npx nyxb@latest add globe-grid
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="globe-grid" />
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { GlobeGrid } from "~/components/ui/globe-grid"
+```
+
+```tsx
+// Basic half globe
+<GlobeGrid />
+
+// Full spherical globe
+<GlobeGrid fullGlobe />
+```
+
+## Props
+
+| Prop       | Type      | Description                                           | Default |
+| ---------- | --------- | ----------------------------------------------------- | ------- |
+| fullGlobe  | boolean   | Whether to display a full spherical grid              | false   |
+| className  | string    | Additional classes to apply to the container          | -       |
+
+## Customization
+
+The component uses CSS variables for styling that can be customized:
+
+### Colors
+
+```css
+:root {
+  /* Grid structure colors */
+  --guide-color: rgba(255, 255, 255, 0.1);      /* Grid lines color */
+  --ds-background-200: rgba(0, 0, 0, 0.5);      /* Globe background */
+  
+  /* Animation line colors */
+  --line-color-1: hsl(54, 88%, 65%);            /* Yellow animation */
+  --line-color-2: hsl(94, 68%, 56%);            /* Green animation */
+  --line-color-3: hsl(39, 89%, 65%);            /* Orange animation */
+}
+```
+
+### Animation Details
+
+The component features multiple animated paths with the following characteristics:
+
+- Each path has a duration of 5.5 seconds
+- Animations use radial gradients for a glowing effect
+- Line animations have varying opacity transitions
+- The full globe mode mirrors animations to the bottom hemisphere with 50% opacity
+
+## Examples
+
+### Custom Colors
+
+```tsx
+<div className="[--line-color-1:theme(colors.blue.400)] [--line-color-2:theme(colors.purple.400)] [--line-color-3:theme(colors.pink.400)]">
+  <GlobeGrid />
+</div>
+```
+
+### Custom Background
+
+```tsx
+<div className="[--ds-background-200:rgba(0,0,0,0.7)]">
+  <GlobeGrid fullGlobe />
+</div>
+```
