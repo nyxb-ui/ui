@@ -290,12 +290,6 @@ export const docsConfig: DocsConfig = {
                items: [],
             },
             {
-               title: 'Grid Layout',
-               href: '/docs/components/grid-layout',
-               items: [],
-               label: 'New',
-            },
-            {
                title: 'Hero Video Dialog',
                href: '/docs/components/hero-video-dialog',
                items: [],
@@ -752,6 +746,12 @@ export const docsConfig: DocsConfig = {
                title: 'Flickering Grid',
                href: `/docs/components/flickering-grid`,
                items: [],
+            },
+            {
+               title: 'Grid Layout',
+               href: '/docs/components/grid-layout',
+               items: [],
+               label: 'New',
             },
             {
                title: 'Retro Grid',
