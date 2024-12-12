@@ -16,7 +16,6 @@ interface GridLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
    gridLines?: boolean
    columns?: 8 | 12 | 16
    lineVariant?: 'all' | 'vertical' | 'horizontal' | 'center' | 'none'
-   className?: string
 }
 
 function CrosshairIcon({ className }: { className?: string }) {
@@ -51,8 +50,8 @@ export function GridLayout({
    return (
       <div
          className={ny(
-            'grid-layout',
-            gridLines && 'grid-layout-lines',
+            'relative grid w-full gap-0',
+            gridLines && 'border-grid-line border',
             columns === 16 && 'grid-cols-grid-16',
             columns === 12 && 'grid-cols-grid-12',
             columns === 8 && 'grid-cols-grid-8',
@@ -64,36 +63,35 @@ export function GridLayout({
             <div className="absolute inset-0 z-0">
                {/* Vertikale Linien */}
                {(lineVariant === 'all' || lineVariant === 'vertical' || lineVariant === 'center') && (
-                  <div
-                     className={ny(
-                        'grid size-full',
-                        columns === 16 && 'grid-cols-grid-16',
-                        columns === 12 && 'grid-cols-grid-12',
-                        columns === 8 && 'grid-cols-grid-8',
-                     )}
-                  >
-                     {Array.from({ length: columns }).map((_, i) => {
-                        if (lineVariant === 'center') {
-                           // Nur die mittlere Linie anzeigen
-                           const centerIndex = Math.floor((columns - 1) / 2)
-                           if (i !== centerIndex)
-                              return null
-                        }
-
-                        return (
-                           <div
-                              key={i}
-                              className={ny(
-                                 'border-grid-line border-r',
-                                 i === 0 && 'border-l',
-                              )}
-                           />
-                        )
-                     })}
+                  <div className="absolute inset-0 flex justify-center">
+                     {lineVariant === 'center'
+                        ? (
+                              <div className="border-grid-line h-full w-px border-r" />
+                           )
+                        : (
+                              <div
+                                 className={ny(
+                                    'grid size-full',
+                                    columns === 16 && 'grid-cols-grid-16',
+                                    columns === 12 && 'grid-cols-grid-12',
+                                    columns === 8 && 'grid-cols-grid-8',
+                                 )}
+                              >
+                                 {Array.from({ length: columns }).map((_, i) => (
+                                    <div
+                                       key={i}
+                                       className={ny(
+                                          'border-grid-line border-r',
+                                          i === 0 && 'border-l',
+                                       )}
+                                    />
+                                 ))}
+                              </div>
+                           )}
                   </div>
                )}
 
-               {/* Horizontale Linien bleiben unverändert */}
+               {/* Horizontale Linien */}
                {(lineVariant === 'all' || lineVariant === 'horizontal') && (
                   <div className="absolute inset-0 grid grid-rows-[repeat(16,1fr)]">
                      {Array.from({ length: 17 }).map((_, i) => (
@@ -110,7 +108,7 @@ export function GridLayout({
             </div>
          )}
 
-         {/* Crosshairs bleiben unverändert */}
+         {/* Crosshairs */}
          {crosshairs?.topLeft && (
             <CrosshairIcon className="text-grid-line absolute -left-2 -top-2" />
          )}

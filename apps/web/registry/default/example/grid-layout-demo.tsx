@@ -1,5 +1,6 @@
 'use client'
 
+import { Button } from '~/registry/default/ui/button'
 import GridLayout from '~/registry/default/ui/grid-layout'
 
 export default function GridLayoutDemo() {
@@ -9,27 +10,37 @@ export default function GridLayoutDemo() {
             topLeft: true,
             bottomRight: true,
          }}
-         className="min-h-[350px] p-6"
+         lineVariant="center"
+         className="min-h-[350px] p-8"
       >
          <div className="space-y-8">
-            <div className="text-muted-foreground flex items-center justify-center gap-4">
-               <span>Basic Grid Layout</span>
-               <span>•</span>
-               <span>16 Columns</span>
+            <div>
+               <h2 className="text-4xl font-medium tracking-tight">
+                  Ready to deploy?
+                  {' '}
+                  <span className="text-muted-foreground">
+                     Start building with a free account.
+                  </span>
+               </h2>
+               <p className="text-muted-foreground mt-4 text-xl">
+                  Speak to an expert for your
+                  {' '}
+                  <span className="text-blue-500">Pro</span>
+                  {' '}
+                  or
+                  {' '}
+                  <span className="text-purple-500">Enterprise</span>
+                  {' '}
+                  needs.
+               </p>
             </div>
-            <div className="grid gap-4 md:grid-cols-2">
-               <div className="rounded-lg border p-4">
-                  <h3 className="text-lg font-semibold">Grid Lines</h3>
-                  <p className="text-muted-foreground text-sm">
-                     Visual guides for alignment
-                  </p>
-               </div>
-               <div className="rounded-lg border p-4">
-                  <h3 className="text-lg font-semibold">Crosshairs</h3>
-                  <p className="text-muted-foreground text-sm">
-                     Optional corner markers
-                  </p>
-               </div>
+            <div className="flex gap-4">
+               <Button variant="default" size="lg">
+                  Start Deploying
+               </Button>
+               <Button variant="outline" size="lg">
+                  Contact Sales
+               </Button>
             </div>
          </div>
       </GridLayout>
