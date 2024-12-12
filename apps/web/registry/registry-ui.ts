@@ -1668,16 +1668,16 @@ export const ui: Registry = [
          light: {
             '--guide-color': 'rgba(255, 255, 255, 0.1)',
             '--ds-background-200': 'rgba(0, 0, 0, 0.5)',
-            '--line-color-1': 'hsl(54, 88%, 65%)',
-            '--line-color-2': 'hsl(94, 68%, 56%)',
-            '--line-color-3': 'hsl(39, 89%, 65%)',
+            '--line-color-1': 'hsl(267, 100%, 64%)',
+            '--line-color-2': 'hsl(272.1, 71.7%, 47.1%)',
+            '--line-color-3': 'hsl(155, 89%, 51%)',
          },
          dark: {
             '--guide-color': 'rgba(255, 255, 255, 0.15)',
             '--ds-background-200': 'rgba(0, 0, 0, 0.7)',
-            '--line-color-1': 'hsl(54, 88%, 65%)',
-            '--line-color-2': 'hsl(94, 68%, 56%)',
-            '--line-color-3': 'hsl(39, 89%, 65%)',
+            '--line-color-1': 'hsl(267, 100%, 64%)',
+            '--line-color-2': 'hsl(272.1, 71.7%, 47.1%)',
+            '--line-color-3': 'hsl(155, 89%, 51%)',
          },
       },
       tailwind: {
