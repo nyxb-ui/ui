@@ -42,10 +42,10 @@
       --color-2: 270 100% 63%;
       --color-3: 210 100% 63%;
       --color-4: 195 100% 63%;
-      --color-5:  
+      --color-5:
 
-      /* Grid Layout spezifische Variablen */
-      --grid-line-color: var(--border);
+      /* Grid Layout spezifische Variablen */ --grid-line-color:
+         var(--border);
       --grid-line-opacity: 0.5;
 
       /* Globe Grid */
