@@ -1,12 +1,12 @@
 'use client'
 
-import React from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Check, ChevronsUpDown } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
 import { ny } from '~/lib/utils'
+import { toast } from '~/registry/default/hooks/use-toast'
 import { Button } from '~/registry/default/ui/button'
 import {
    Command,
@@ -30,7 +30,6 @@ import {
    PopoverContent,
    PopoverTrigger,
 } from '~/registry/default/ui/popover'
-import { toast } from '~/registry/default/ui/use-toast'
 
 const languages = [
    { label: 'English', value: 'en' },
@@ -51,8 +50,6 @@ const FormSchema = z.object({
 })
 
 export default function ComboboxForm() {
-   const [open, setOpen] = React.useState(false)
-
    const form = useForm<z.infer<typeof FormSchema>>({
       resolver: zodResolver(FormSchema),
    })
@@ -77,7 +74,7 @@ export default function ComboboxForm() {
                render={({ field }) => (
                   <FormItem className="flex flex-col">
                      <FormLabel>Language</FormLabel>
-                     <Popover open={open} onOpenChange={setOpen}>
+                     <Popover>
                         <PopoverTrigger asChild>
                            <FormControl>
                               <Button
@@ -100,8 +97,8 @@ export default function ComboboxForm() {
                         <PopoverContent className="w-[200px] p-0">
                            <Command>
                               <CommandInput placeholder="Search language..." />
-                              <CommandEmpty>No language found.</CommandEmpty>
                               <CommandList>
+                                 <CommandEmpty>No language found.</CommandEmpty>
                                  <CommandGroup>
                                     {languages.map(language => (
                                        <CommandItem
@@ -109,18 +106,17 @@ export default function ComboboxForm() {
                                           key={language.value}
                                           onSelect={() => {
                                              form.setValue('language', language.value)
-                                             setOpen(false)
                                           }}
                                        >
+                                          {language.label}
                                           <Check
                                              className={ny(
-                                                'mr-2 size-4',
+                                                'ml-auto',
                                                 language.value === field.value
                                                    ? 'opacity-100'
                                                    : 'opacity-0',
                                              )}
                                           />
-                                          {language.label}
                                        </CommandItem>
                                     ))}
                                  </CommandGroup>

@@ -27,7 +27,7 @@ export default nyxb(
          'packages/cli/test/**',
          'packages/nyxb/test/**',
          '**/__registry__/**',
-         '.content-collections/**',
+         '**/.content-collections/**',
       ],
    },
 )

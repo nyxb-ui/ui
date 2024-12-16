@@ -1,12 +1,12 @@
 'use client'
 
-import React from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { CaretSortIcon, CheckIcon } from '@radix-ui/react-icons'
+import { Check, ChevronsUpDown } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
 import { ny } from '~/lib/utils'
+import { toast } from '~/registry/miami/hooks/use-toast'
 import { Button } from '~/registry/miami/ui/button'
 import {
    Command,
@@ -30,7 +30,6 @@ import {
    PopoverContent,
    PopoverTrigger,
 } from '~/registry/miami/ui/popover'
-import { toast } from '~/registry/miami/ui/use-toast'
 
 const languages = [
    { label: 'English', value: 'en' },
@@ -51,8 +50,6 @@ const FormSchema = z.object({
 })
 
 export default function ComboboxForm() {
-   const [open, setOpen] = React.useState(false)
-
    const form = useForm<z.infer<typeof FormSchema>>({
       resolver: zodResolver(FormSchema),
    })
@@ -77,7 +74,7 @@ export default function ComboboxForm() {
                render={({ field }) => (
                   <FormItem className="flex flex-col">
                      <FormLabel>Language</FormLabel>
-                     <Popover open={open} onOpenChange={setOpen}>
+                     <Popover>
                         <PopoverTrigger asChild>
                            <FormControl>
                               <Button
@@ -93,7 +90,7 @@ export default function ComboboxForm() {
                                        language => language.value === field.value,
                                     )?.label
                                     : 'Select language'}
-                                 <CaretSortIcon className="ml-2 size-4 shrink-0 opacity-50" />
+                                 <ChevronsUpDown className="opacity-50" />
                               </Button>
                            </FormControl>
                         </PopoverTrigger>
@@ -103,8 +100,8 @@ export default function ComboboxForm() {
                                  placeholder="Search framework..."
                                  className="h-9"
                               />
-                              <CommandEmpty>No framework found.</CommandEmpty>
                               <CommandList>
+                                 <CommandEmpty>No framework found.</CommandEmpty>
                                  <CommandGroup>
                                     {languages.map(language => (
                                        <CommandItem
@@ -112,13 +109,12 @@ export default function ComboboxForm() {
                                           key={language.value}
                                           onSelect={() => {
                                              form.setValue('language', language.value)
-                                             setOpen(false)
                                           }}
                                        >
                                           {language.label}
-                                          <CheckIcon
+                                          <Check
                                              className={ny(
-                                                'ml-auto size-4',
+                                                'ml-auto',
                                                 language.value === field.value
                                                    ? 'opacity-100'
                                                    : 'opacity-0',

@@ -257,7 +257,6 @@ export const docsConfig: DocsConfig = {
                title: 'Dock',
                href: '/docs/components/dock',
                items: [],
-               label: 'New',
             },
             {
                title: 'Drawer',
@@ -294,7 +293,6 @@ export const docsConfig: DocsConfig = {
                title: 'Hero Video Dialog',
                href: '/docs/components/hero-video-dialog',
                items: [],
-               label: 'New',
             },
             {
                title: 'Hover Card',
@@ -512,13 +510,11 @@ export const docsConfig: DocsConfig = {
                title: 'Safari',
                href: '/docs/components/safari',
                items: [],
-               label: 'New',
             },
             {
                title: 'iPhone 15 Pro',
                href: '/docs/components/iphone-15-pro',
                items: [],
-               label: 'New',
             },
          ],
       },
@@ -582,6 +578,12 @@ export const docsConfig: DocsConfig = {
                title: 'Blur Fade',
                href: `/docs/components/blur-fade`,
                items: [],
+            },
+            {
+               title: 'Globe Grid',
+               href: `/docs/components/globe-grid`,
+               items: [],
+               label: 'New',
             },
          ],
       },
@@ -708,7 +710,6 @@ export const docsConfig: DocsConfig = {
                title: 'Rainbow Button',
                href: '/docs/components/rainbow-button',
                items: [],
-               label: 'New',
             },
             {
                title: 'Standard Button',
@@ -750,6 +751,11 @@ export const docsConfig: DocsConfig = {
             {
                title: 'Flickering Grid',
                href: `/docs/components/flickering-grid`,
+               items: [],
+            },
+            {
+               title: 'Grid Layout',
+               href: '/docs/components/grid-layout',
                items: [],
                label: 'New',
             },

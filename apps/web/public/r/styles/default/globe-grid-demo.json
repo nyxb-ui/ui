@@ -1,0 +1,12 @@
+{
+  "name": "globe-grid-demo",
+  "type": "registry:example",
+  "files": [
+    {
+      "path": "example/globe-grid-demo.tsx",
+      "content": "import { GlobeGrid } from '~/registry/miami/ui/globe-grid'\n\nexport function GlobeGridDemo() {\n   return (\n      <GlobeGrid />\n   )\n}\n\nexport default GlobeGridDemo\n",
+      "type": "registry:component",
+      "target": ""
+    }
+  ]
+}

@@ -72,8 +72,6 @@ export default function ComboboxDemo() {
                            key={framework.value}
                            value={framework.value}
                            onSelect={(currentValue) => {
-                              // eslint-disable-next-line no-console
-                              console.log('Selected:', currentValue)
                               setValue(currentValue === value ? '' : currentValue)
                               setOpen(false)
                            }}

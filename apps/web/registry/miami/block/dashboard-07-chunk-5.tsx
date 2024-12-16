@@ -1,29 +1,29 @@
-"use client"
+'use client'
 
-import { Button } from "~/registry/miami/ui/button"
+import { Button } from '~/registry/miami/ui/button'
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "~/registry/miami/ui/card"
+   Card,
+   CardContent,
+   CardDescription,
+   CardHeader,
+   CardTitle,
+} from '~/registry/miami/ui/card'
 
 export default function Component() {
-  return (
-    <Card x-chunk="dashboard-07-chunk-5">
-      <CardHeader>
-        <CardTitle>Archive Product</CardTitle>
-        <CardDescription>
-          Lipsum dolor sit amet, consectetur adipiscing elit.
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div></div>
-        <Button size="sm" variant="secondary">
-          Archive Product
-        </Button>
-      </CardContent>
-    </Card>
-  )
+   return (
+      <Card x-chunk="dashboard-07-chunk-5">
+         <CardHeader>
+            <CardTitle>Archive Product</CardTitle>
+            <CardDescription>
+               Lipsum dolor sit amet, consectetur adipiscing elit.
+            </CardDescription>
+         </CardHeader>
+         <CardContent>
+            <div></div>
+            <Button size="sm" variant="secondary">
+               Archive Product
+            </Button>
+         </CardContent>
+      </Card>
+   )
 }

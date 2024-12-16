@@ -2945,4 +2945,65 @@ export const examples: Registry = [
          },
       ],
    },
+   {
+      name: 'grid-layout-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/grid-layout-demo.tsx',
+            type: 'registry:component',
+         },
+      ],
+   },
+   {
+      name: 'grid-layout-crosshairs-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/grid-layout-crosshairs-demo.tsx',
+            type: 'registry:component',
+         },
+      ],
+   },
+   {
+      name: 'grid-layout-columns-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/grid-layout-columns-demo.tsx',
+            type: 'registry:component',
+         },
+      ],
+   },
+   {
+      name: 'grid-layout-variants-demo',
+      type: 'registry:example',
+      registryDependencies: ['grid-layout'],
+      files: [
+         {
+            path: 'example/grid-layout-variants-demo.tsx',
+            type: 'registry:component',
+         },
+      ],
+   },
+   {
+      name: 'globe-grid-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/globe-grid-demo.tsx',
+            type: 'registry:component',
+         },
+      ],
+   },
+   {
+      name: 'globe-grid-full-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/globe-grid-full-demo.tsx',
+            type: 'registry:component',
+         },
+      ],
+   },
 ]

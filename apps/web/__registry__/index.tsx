@@ -1837,6 +1837,38 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "grid-layout": {
+      name: "grid-layout",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/ui/grid-layout.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/ui/grid-layout.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "globe-grid": {
+      name: "globe-grid",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/ui/globe-grid.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/ui/globe-grid.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "accordion-demo": {
       name: "accordion-demo",
       description: "",
@@ -6333,6 +6365,102 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "grid-layout-demo": {
+      name: "grid-layout-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/example/grid-layout-demo.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/grid-layout-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "grid-layout-crosshairs-demo": {
+      name: "grid-layout-crosshairs-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/example/grid-layout-crosshairs-demo.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/grid-layout-crosshairs-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "grid-layout-columns-demo": {
+      name: "grid-layout-columns-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/example/grid-layout-columns-demo.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/grid-layout-columns-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "grid-layout-variants-demo": {
+      name: "grid-layout-variants-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["grid-layout"],
+      files: [{
+        path: "registry/miami/example/grid-layout-variants-demo.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/grid-layout-variants-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "globe-grid-demo": {
+      name: "globe-grid-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/example/globe-grid-demo.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/globe-grid-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "globe-grid-full-demo": {
+      name: "globe-grid-full-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/example/globe-grid-full-demo.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/globe-grid-full-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "_sink": {
       name: "_sink",
       description: "",
@@ -10061,6 +10189,38 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("~/registry/default/ui/animated-circular-progress-bar.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "grid-layout": {
+      name: "grid-layout",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/grid-layout.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/ui/grid-layout.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "globe-grid": {
+      name: "globe-grid",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/ui/globe-grid.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/ui/globe-grid.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -14557,6 +14717,102 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("~/registry/default/example/tooltip-with-toggle-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "grid-layout-demo": {
+      name: "grid-layout-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/grid-layout-demo.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/grid-layout-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "grid-layout-crosshairs-demo": {
+      name: "grid-layout-crosshairs-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/grid-layout-crosshairs-demo.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/grid-layout-crosshairs-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "grid-layout-columns-demo": {
+      name: "grid-layout-columns-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/grid-layout-columns-demo.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/grid-layout-columns-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "grid-layout-variants-demo": {
+      name: "grid-layout-variants-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["grid-layout"],
+      files: [{
+        path: "registry/default/example/grid-layout-variants-demo.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/grid-layout-variants-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "globe-grid-demo": {
+      name: "globe-grid-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/globe-grid-demo.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/globe-grid-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "globe-grid-full-demo": {
+      name: "globe-grid-full-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/globe-grid-full-demo.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/globe-grid-full-demo.tsx")),
       source: "",
       category: "",
       subcategory: "",
