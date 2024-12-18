@@ -1,9 +1,6 @@
 {
   "name": "tabs-demo",
   "type": "registry:example",
-  "registryDependencies": [
-    "tabs"
-  ],
   "files": [
     {
       "path": "example/tabs-demo.tsx",

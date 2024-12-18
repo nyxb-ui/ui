@@ -1913,138 +1913,6 @@ export const examples: Registry = [
       ],
    },
    {
-      name: 'toggle-group-demo',
-      type: 'registry:example',
-      registryDependencies: ['toggle-group'],
-      files: [
-         {
-            path: 'example/toggle-group-demo.tsx',
-            type: 'registry:example',
-         },
-      ],
-   },
-   {
-      name: 'toggle-group-disabled',
-      type: 'registry:example',
-      registryDependencies: ['toggle-group'],
-      files: [
-         {
-            path: 'example/toggle-group-disabled.tsx',
-            type: 'registry:example',
-         },
-      ],
-   },
-   {
-      name: 'toggle-group-lg',
-      type: 'registry:example',
-      registryDependencies: ['toggle-group'],
-      files: [
-         {
-            path: 'example/toggle-group-lg.tsx',
-            type: 'registry:example',
-         },
-      ],
-   },
-   {
-      name: 'toggle-group-outline',
-      type: 'registry:example',
-      registryDependencies: ['toggle-group'],
-      files: [
-         {
-            path: 'example/toggle-group-outline.tsx',
-            type: 'registry:example',
-         },
-      ],
-   },
-   {
-      name: 'toggle-group-sm',
-      type: 'registry:example',
-      registryDependencies: ['toggle-group'],
-      files: [
-         {
-            path: 'example/toggle-group-sm.tsx',
-            type: 'registry:example',
-         },
-      ],
-   },
-   {
-      name: 'toggle-group-single',
-      type: 'registry:example',
-      registryDependencies: ['toggle-group'],
-      files: [
-         {
-            path: 'example/toggle-group-single.tsx',
-            type: 'registry:example',
-         },
-      ],
-   },
-   {
-      name: 'toggle-demo',
-      type: 'registry:example',
-      registryDependencies: ['toggle'],
-      files: [
-         {
-            path: 'example/toggle-demo.tsx',
-            type: 'registry:example',
-         },
-      ],
-   },
-   {
-      name: 'toggle-disabled',
-      type: 'registry:example',
-      registryDependencies: ['toggle'],
-      files: [
-         {
-            path: 'example/toggle-disabled.tsx',
-            type: 'registry:example',
-         },
-      ],
-   },
-   {
-      name: 'toggle-lg',
-      type: 'registry:example',
-      registryDependencies: ['toggle'],
-      files: [
-         {
-            path: 'example/toggle-lg.tsx',
-            type: 'registry:example',
-         },
-      ],
-   },
-   {
-      name: 'toggle-outline',
-      type: 'registry:example',
-      registryDependencies: ['toggle'],
-      files: [
-         {
-            path: 'example/toggle-outline.tsx',
-            type: 'registry:example',
-         },
-      ],
-   },
-   {
-      name: 'toggle-sm',
-      type: 'registry:example',
-      registryDependencies: ['toggle'],
-      files: [
-         {
-            path: 'example/toggle-sm.tsx',
-            type: 'registry:example',
-         },
-      ],
-   },
-   {
-      name: 'toggle-with-text',
-      type: 'registry:example',
-      registryDependencies: ['toggle'],
-      files: [
-         {
-            path: 'example/toggle-with-text.tsx',
-            type: 'registry:example',
-         },
-      ],
-   },
-   {
       name: 'cool-mode-demo',
       type: 'registry:example',
       files: [
@@ -2645,28 +2513,6 @@ export const examples: Registry = [
       ],
    },
    {
-      name: 'tooltip-demo',
-      type: 'registry:example',
-      registryDependencies: ['tooltip'],
-      files: [
-         {
-            path: 'example/tooltip-demo.tsx',
-            type: 'registry:example',
-         },
-      ],
-   },
-   {
-      name: 'switch-demo',
-      type: 'registry:example',
-      registryDependencies: ['switch'],
-      files: [
-         {
-            path: 'example/switch-demo.tsx',
-            type: 'registry:example',
-         },
-      ],
-   },
-   {
       name: 'select-demo',
       type: 'registry:example',
       registryDependencies: ['select'],
@@ -2705,7 +2551,7 @@ export const examples: Registry = [
       files: [
          {
             path: 'example/separator-demo.tsx',
-            type: 'registry:component',
+            type: 'registry:example',
          },
       ],
    },
@@ -2715,7 +2561,17 @@ export const examples: Registry = [
       files: [
          {
             path: 'example/sheet-demo.tsx',
-            type: 'registry:component',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'sheet-side',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/sheet-side.tsx',
+            type: 'registry:example',
          },
       ],
    },
@@ -2725,14 +2581,23 @@ export const examples: Registry = [
       files: [
          {
             path: 'example/skeleton-demo.tsx',
-            type: 'registry:component',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'skeleton-card',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/skeleton-card.tsx',
+            type: 'registry:example',
          },
       ],
    },
    {
       name: 'slider-demo',
       type: 'registry:example',
-      registryDependencies: ['slider'],
       files: [
          {
             path: 'example/slider-demo.tsx',
@@ -2741,9 +2606,108 @@ export const examples: Registry = [
       ],
    },
    {
+      name: 'slider-disabled',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-disabled.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-inverted',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-inverted.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-vertical',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-vertical.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-range',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-range.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-tick-marks-half',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-tick-marks-half.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-tick-marks-full',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-tick-marks-full.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-format-label',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-format-label.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'slider-format-label-side',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/slider-format-label-side.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'switch-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/switch-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'switch-form',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/switch-form.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
       name: 'table-demo',
       type: 'registry:example',
-      registryDependencies: ['table'],
       files: [
          {
             path: 'example/table-demo.tsx',
@@ -2754,7 +2718,6 @@ export const examples: Registry = [
    {
       name: 'tabs-demo',
       type: 'registry:example',
-      registryDependencies: ['tabs'],
       files: [
          {
             path: 'example/tabs-demo.tsx',
@@ -2765,7 +2728,6 @@ export const examples: Registry = [
    {
       name: 'textarea-demo',
       type: 'registry:example',
-      registryDependencies: ['textarea'],
       files: [
          {
             path: 'example/textarea-demo.tsx',
@@ -2776,7 +2738,6 @@ export const examples: Registry = [
    {
       name: 'textarea-disabled',
       type: 'registry:example',
-      registryDependencies: ['textarea'],
       files: [
          {
             path: 'example/textarea-disabled.tsx',
@@ -2785,31 +2746,8 @@ export const examples: Registry = [
       ],
    },
    {
-      name: 'textarea-form',
-      type: 'registry:example',
-      registryDependencies: ['textarea', 'form'],
-      files: [
-         {
-            path: 'example/textarea-form.tsx',
-            type: 'registry:example',
-         },
-      ],
-   },
-   {
-      name: 'textarea-with-button',
-      type: 'registry:example',
-      registryDependencies: ['textarea', 'button'],
-      files: [
-         {
-            path: 'example/textarea-with-button.tsx',
-            type: 'registry:example',
-         },
-      ],
-   },
-   {
       name: 'textarea-with-label',
       type: 'registry:example',
-      registryDependencies: ['textarea', 'label'],
       files: [
          {
             path: 'example/textarea-with-label.tsx',
@@ -2820,10 +2758,189 @@ export const examples: Registry = [
    {
       name: 'textarea-with-text',
       type: 'registry:example',
-      registryDependencies: ['textarea', 'label'],
       files: [
          {
             path: 'example/textarea-with-text.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'textarea-with-button',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/textarea-with-button.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'textarea-form',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/textarea-form.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-outline',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-outline.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-with-text',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-with-text.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-sm',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-sm.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-lg',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-lg.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-disabled',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-disabled.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-group-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-outline',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-group-outline.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-single',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-group-single.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-sm',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-group-sm.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-lg',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-group-lg.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'toggle-group-disabled',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/toggle-group-disabled.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'tooltip-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/tooltip-demo.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'tooltip-secondary',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/tooltip-secondary.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'tooltip-outline',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/tooltip-outline.tsx',
+            type: 'registry:example',
+         },
+      ],
+   },
+   {
+      name: 'tooltip-with-toggle-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/tooltip-with-toggle-demo.tsx',
             type: 'registry:example',
          },
       ],

@@ -1,9 +1,6 @@
 {
   "name": "slider-format-label-side",
   "type": "registry:example",
-  "registryDependencies": [
-    "slider"
-  ],
   "files": [
     {
       "path": "example/slider-format-label-side.tsx",

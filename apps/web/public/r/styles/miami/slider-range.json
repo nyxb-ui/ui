@@ -1,9 +1,6 @@
 {
   "name": "slider-range",
   "type": "registry:example",
-  "registryDependencies": [
-    "slider"
-  ],
   "files": [
     {
       "path": "example/slider-range.tsx",

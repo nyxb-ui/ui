@@ -1,10 +1,6 @@
 {
   "name": "textarea-with-text",
   "type": "registry:example",
-  "registryDependencies": [
-    "textarea",
-    "label"
-  ],
   "files": [
     {
       "path": "example/textarea-with-text.tsx",

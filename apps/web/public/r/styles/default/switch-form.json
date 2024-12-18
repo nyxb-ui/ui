@@ -1,10 +1,6 @@
 {
   "name": "switch-form",
   "type": "registry:example",
-  "registryDependencies": [
-    "switch",
-    "form"
-  ],
   "files": [
     {
       "path": "example/switch-form.tsx",

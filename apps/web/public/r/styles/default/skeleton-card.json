@@ -1,9 +1,6 @@
 {
   "name": "skeleton-card",
   "type": "registry:example",
-  "registryDependencies": [
-    "skeleton"
-  ],
   "files": [
     {
       "path": "example/skeleton-card.tsx",
