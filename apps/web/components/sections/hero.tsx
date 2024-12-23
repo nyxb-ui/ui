@@ -93,7 +93,7 @@ export default async function Hero() {
                               <ChevronRight className="ml-1  size-4 shrink-0 transition-all duration-300 ease-out group-hover:translate-x-1" />
                            </Link>
                            <Link
-                              href="https://pro.magicui.design"
+                              href="/components"
                               className={ny(
                                  buttonVariants({
                                     size: 'lg',
