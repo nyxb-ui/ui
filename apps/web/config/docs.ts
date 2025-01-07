@@ -467,6 +467,12 @@ export const docsConfig: DocsConfig = {
                items: [],
             },
             {
+               title: 'Nyx TOC',
+               href: '/docs/components/nyx-toc',
+               items: [],
+               label: 'New',
+            },
+            {
                title: 'Toggle',
                href: '/docs/components/toggle',
                items: [],

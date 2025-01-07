@@ -219,6 +219,13 @@ const config: Config = {
                '0%': { 'background-position': '0%' },
                '100%': { 'background-position': '200%' },
             },
+            'nyx-fade-out': {
+               '0%': { opacity: '1' },
+               '100%': { opacity: '0' },
+            },
+         },
+         spacing: {
+            'nyx-layout-top': 'calc(var(--nyx-banner-height) + var(--nyx-nav-height))',
          },
          animation: {
             'accordion-down': 'accordion-down 0.2s ease-out',
@@ -245,6 +252,7 @@ const config: Config = {
             'shine': 'shine var(--duration) infinite linear',
             'pulse': 'pulse var(--duration) ease-out infinite',
             'rainbow': 'rainbow var(--speed, 2s) infinite linear',
+            'nyx-toc-fade-out': 'nyx-toc-fade-out 0.2s ease-out',
          },
          borderColor: {
             'grid-line': 'hsl(var(--border) / 0.5)',

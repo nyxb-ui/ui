@@ -82,7 +82,7 @@ export function CommandMenu({ ...props }: DialogProps) {
                      .filter(navitem => !navitem.external)
                      .map(navItem => (
                         <CommandItem
-                           key={navItem.href}
+                           key={navItem.href || navItem.title}
                            value={navItem.title}
                            onSelect={() => {
                               runCommand(() => router.push(navItem.href as string))
@@ -97,7 +97,7 @@ export function CommandMenu({ ...props }: DialogProps) {
                   <CommandGroup key={group.title} heading={group.title}>
                      {group.items.map(navItem => (
                         <CommandItem
-                           key={navItem.href}
+                           key={navItem.href || navItem.title}
                            value={navItem.title}
                            onSelect={() => {
                               runCommand(() => router.push(navItem.href as string))

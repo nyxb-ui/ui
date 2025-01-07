@@ -1869,6 +1869,30 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "nyx-toc": {
+      name: "nyx-toc",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: ["popover"],
+      files: [{
+        path: "registry/miami/ui/nyx-toc.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/miami/hooks/use-anchor-observer.ts",
+        type: "registry:hook",
+        target: ""
+      },{
+        path: "registry/miami/hooks/use-on-change.ts",
+        type: "registry:hook",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/ui/nyx-toc.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "accordion-demo": {
       name: "accordion-demo",
       description: "",
@@ -6461,6 +6485,38 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "nyx-toc-demo": {
+      name: "nyx-toc-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/example/nyx-toc-demo.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/nyx-toc-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "nyx-toc-popover-demo": {
+      name: "nyx-toc-popover-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/example/nyx-toc-popover-demo.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/example/nyx-toc-popover-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "_sink": {
       name: "_sink",
       description: "",
@@ -8361,6 +8417,38 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "use-anchor-observer": {
+      name: "use-anchor-observer",
+      description: "",
+      type: "registry:hook",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/hooks/use-anchor-observer.ts",
+        type: "registry:hook",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/hooks/use-anchor-observer.ts")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "use-on-change": {
+      name: "use-on-change",
+      description: "",
+      type: "registry:hook",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/miami/hooks/use-on-change.ts",
+        type: "registry:hook",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/miami/hooks/use-on-change.ts")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
   },  "default": {
     "accordion": {
       name: "accordion",
@@ -10221,6 +10309,30 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("~/registry/default/ui/globe-grid.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "nyx-toc": {
+      name: "nyx-toc",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: ["popover"],
+      files: [{
+        path: "registry/default/ui/nyx-toc.tsx",
+        type: "registry:component",
+        target: ""
+      },{
+        path: "registry/default/hooks/use-anchor-observer.ts",
+        type: "registry:hook",
+        target: ""
+      },{
+        path: "registry/default/hooks/use-on-change.ts",
+        type: "registry:hook",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/ui/nyx-toc.tsx")),
       source: "",
       category: "",
       subcategory: "",
@@ -14818,6 +14930,38 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: []
     },
+    "nyx-toc-demo": {
+      name: "nyx-toc-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/nyx-toc-demo.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/nyx-toc-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "nyx-toc-popover-demo": {
+      name: "nyx-toc-popover-demo",
+      description: "",
+      type: "registry:example",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/example/nyx-toc-popover-demo.tsx",
+        type: "registry:component",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/example/nyx-toc-popover-demo.tsx")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
     "_sink": {
       name: "_sink",
       description: "",
@@ -16713,6 +16857,38 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: React.lazy(() => import("~/registry/default/hooks/use-toast.ts")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "use-anchor-observer": {
+      name: "use-anchor-observer",
+      description: "",
+      type: "registry:hook",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/hooks/use-anchor-observer.ts",
+        type: "registry:hook",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/hooks/use-anchor-observer.ts")),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: []
+    },
+    "use-on-change": {
+      name: "use-on-change",
+      description: "",
+      type: "registry:hook",
+      registryDependencies: undefined,
+      files: [{
+        path: "registry/default/hooks/use-on-change.ts",
+        type: "registry:hook",
+        target: ""
+      }],
+      component: React.lazy(() => import("~/registry/default/hooks/use-on-change.ts")),
       source: "",
       category: "",
       subcategory: "",

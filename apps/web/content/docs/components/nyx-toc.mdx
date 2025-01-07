@@ -1,0 +1,165 @@
+---
+title: Nyx TOC
+description: A table of contents component that highlights the current section and shows the document structure.
+component: true
+---
+
+<ComponentPreview name="nyx-toc-demo" dots={false} />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+<Steps>
+
+<Step>Run the following command to install the Table of Contents component:</Step>
+
+```bash
+npx nyxb@latest add nyx-toc
+```
+
+</Steps>
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install the necessary dependencies:</Step>
+
+```bash
+pnpm add @nyxb/nyx-toc
+```
+
+<Step>Copy and paste the following code into your project:</Step>
+
+<ComponentSource name="nyx-toc" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+To use the Table of Contents component, import it into your project and pass the required props.
+
+```tsx
+import { TableOfContentsList } from '~/registry/miami/ui/nyx-toc'
+
+const items = [
+  { title: 'Introduction', url: '#introduction', depth: 1 },
+  { title: 'Getting Started', url: '#getting-started', depth: 2 },
+  // Add more items as needed
+]
+
+export default function MyPage() {
+  return (
+    <div className="w-[240px]">
+      <TableOfContentsList 
+        items={items}
+        label="On This Page"
+      />
+    </div>
+  )
+}
+```
+
+### Popover Components
+
+The TOC includes popover components for mobile/responsive views:
+
+```tsx
+import { TocPopover, TocPopoverTrigger, TocPopoverContent } from '@nyxb/nyx-toc'
+
+export default function TableOfContents({ items }) {
+  return (
+    <TocPopover>
+      <TocPopoverTrigger items={items} />
+      <TocPopoverContent>
+        <NyxTOCItems items={items} />
+      </TocPopoverContent>
+    </TocPopover>
+  )
+}
+```
+
+### Advanced Usage
+
+For more control over the TOC behavior, you can use the context providers:
+
+```tsx
+import { AnchorProvider, ScrollProvider } from '@nyxb/nyx-toc'
+
+export default function CustomTOC({ items }) {
+  const containerRef = useRef(null)
+  
+  return (
+    <ScrollProvider containerRef={containerRef}>
+      <AnchorProvider toc={items}>
+        <NyxTOCItems items={items} />
+      </AnchorProvider>
+    </ScrollProvider>
+  )
+}
+```
+
+## Features
+
+- Automatic scroll syncing with document sections
+- Visual indicator for current section
+- Responsive design with popover support
+- RTL support
+- Customizable styling
+- Nested section support with indentation
+- Smooth scrolling to sections
+
+### Custom Styling
+
+You can customize the appearance using standard Tailwind classes:
+
+```tsx
+<NyxTOCItems 
+  items={items} 
+  className="custom-toc-class"
+/>
+```
+
+## Examples
+
+### Basic Example
+
+<ComponentPreview name="nyx-toc-demo" dots={false} />
+
+### With Popover (Mobile-Friendly)
+
+<ComponentPreview name="nyx-toc-popover-demo" dots={false} />
+
+## Props
+
+### TableOfContentsList
+
+| Prop     | Type     | Description                                      |
+| -------- | -------- | ------------------------------------------------ |
+| items    | TOCItem[]| An array of items to display in the table of contents. |
+| isMenu   | boolean  | Optional. If true, styles the TOC as a menu.     |
+| label    | ReactNode| Optional. Adds a heading above the TOC items.     |
+
+### TOCItem
+
+| Prop  | Type           | Description                                      |
+| ----- | -------------- | ------------------------------------------------ |
+| title | React.ReactNode| The title of the section.                        |
+| url   | string         | The URL or anchor link to the section.           |
+| depth | number         | The depth level of the section in the document (1-4).  |

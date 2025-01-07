@@ -3006,4 +3006,24 @@ export const examples: Registry = [
          },
       ],
    },
+   {
+      name: 'nyx-toc-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/nyx-toc-demo.tsx',
+            type: 'registry:component',
+         },
+      ],
+   },
+   {
+      name: 'nyx-toc-popover-demo',
+      type: 'registry:example',
+      files: [
+         {
+            path: 'example/nyx-toc-popover-demo.tsx',
+            type: 'registry:component',
+         },
+      ],
+   },
 ]

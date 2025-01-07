@@ -1697,4 +1697,49 @@ export const ui: Registry = [
          },
       },
    },
+   {
+      name: 'nyx-toc',
+      type: 'registry:ui',
+      dependencies: [
+         '@radix-ui/react-icons',
+         '@radix-ui/react-popover',
+         '@radix-ui/react-scroll-area',
+         'scroll-into-view-if-needed',
+      ],
+      registryDependencies: ['popover'],
+      files: [
+         {
+            path: 'ui/nyx-toc.tsx',
+            type: 'registry:component',
+         },
+         {
+            path: 'hooks/use-anchor-observer.ts',
+            type: 'registry:hook',
+         },
+         {
+            path: 'hooks/use-on-change.ts',
+            type: 'registry:hook',
+         },
+      ],
+      tailwind: {
+         config: {
+            theme: {
+               extend: {
+                  animation: {
+                     'nyx-fade-out': 'nyx-fade-out 0.2s ease-out',
+                  },
+                  keyframes: {
+                     'nyx-fade-out': {
+                        '0%': { opacity: '1' },
+                        '100%': { opacity: '0' },
+                     },
+                  },
+               },
+               spacing: {
+                  'nyx-layout-top': 'calc(var(--nyx-banner-height) + var(--nyx-nav-height))',
+               },
+            },
+         },
+      },
+   },
 ]

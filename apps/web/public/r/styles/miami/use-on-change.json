@@ -1,0 +1,12 @@
+{
+  "name": "use-on-change",
+  "type": "registry:hook",
+  "files": [
+    {
+      "path": "hooks/use-on-change.ts",
+      "content": "'use client'\n\nimport { useState } from 'react'\n\nfunction isDifferent(a: unknown, b: unknown): boolean {\n   if (Array.isArray(a) && Array.isArray(b)) {\n      return b.length !== a.length || a.some((v, i) => isDifferent(v, b[i]))\n   }\n\n   return a !== b\n}\n\n/**\n * @param value - state to watch\n * @param onChange - when the state changed\n * @param isUpdated - a function that determines if the state is updated\n */\nexport function useOnChange<T>(\n   value: T,\n   onChange: (current: T, previous: T) => void,\n   isUpdated: (prev: T, current: T) => boolean = isDifferent,\n): void {\n   const [prev, setPrev] = useState<T>(value)\n\n   if (isUpdated(prev, value)) {\n      onChange(value, prev)\n      setPrev(value)\n   }\n}\n",
+      "type": "registry:hook",
+      "target": ""
+    }
+  ]
+}

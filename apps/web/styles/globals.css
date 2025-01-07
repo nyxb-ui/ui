@@ -54,6 +54,10 @@
       --line-color-1: hsl(267, 100%, 64%);
       --line-color-2: hsl(155, 89%, 51%);
       --line-color-3: hsl(39, 89%, 65%);
+
+      /* Nyx TOC */
+      --nyx-banner-height: 0px;
+      --nyx-nav-height: 0px;
    }
 
    .dark {
