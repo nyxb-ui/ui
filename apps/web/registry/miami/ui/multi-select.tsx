@@ -104,7 +104,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
             onValueChangeProp(state, items)
          }
       },
-      [onValueChangeProp],
+      [onValueChangeProp, itemCache],
    )
 
    const [value, setValue] = useControllableState({
@@ -168,6 +168,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
       maxCount,
       handleSelect,
       handleDeselect,
+      itemCache
    ])
 
    return (
@@ -325,6 +326,8 @@ const MultiSelectValue = React.forwardRef<
    },
 )
 
+MultiSelectValue.displayName = 'MultiSelectValue'
+
 const MultiSelectSearch = React.forwardRef<
    React.ElementRef<typeof CommandInput>,
    React.ComponentPropsWithoutRef<typeof CommandInput>
@@ -410,6 +413,8 @@ const MultiSelectContent = React.forwardRef<
    )
 })
 
+MultiSelectContent.displayName = 'MultiSelectContent'
+
 type MultiSelectItemProps = React.ComponentPropsWithoutRef<typeof CommandItem> &
    Partial<MultiSelectOptionItem> & {
       onSelect?: (value: string, item: MultiSelectOptionItem) => void
@@ -456,7 +461,7 @@ const MultiSelectItem = React.forwardRef<
       React.useEffect(() => {
          if (value)
             itemCache.set(value, item!)
-      }, [selected, value, item])
+      }, [selected, value, item, itemCache])
 
       const disabled = Boolean(
          disabledProp || (!selected && maxCount && contextValue.length >= maxCount),
@@ -494,6 +499,8 @@ const MultiSelectItem = React.forwardRef<
       )
    },
 )
+
+MultiSelectItem.displayName = 'MultiSelectItem'
 
 const MultiSelectGroup = React.forwardRef<
    React.ElementRef<typeof CommandGroup>,
