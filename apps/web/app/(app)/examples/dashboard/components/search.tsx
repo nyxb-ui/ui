@@ -1,4 +1,4 @@
-import { Input } from '~/registry/miami/ui/input'
+import { Input } from "~/registry/miami/ui/input"
 
 export function Search() {
    return (

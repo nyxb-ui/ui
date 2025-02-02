@@ -1,13 +1,12 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import type { PopoverProps } from '@radix-ui/react-popover'
-import { Check, ChevronsUpDown } from 'lucide-react'
+import type { PopoverProps } from "@radix-ui/react-popover"
+import { Check, ChevronsUpDown } from "lucide-react"
+import * as React from "react"
 
-import type { Model, ModelType } from '../data/models'
-import { ny } from '~/lib/utils'
-import { useMutationObserver } from '~/hooks/use-mutation-observer'
-import { Button } from '~/registry/miami/ui/button'
+import { useMutationObserver } from "~/hooks/use-mutation-observer"
+import { ny } from "~/lib/utils"
+import { Button } from "~/registry/miami/ui/button"
 import {
    Command,
    CommandEmpty,
@@ -15,18 +14,20 @@ import {
    CommandInput,
    CommandItem,
    CommandList,
-} from '~/registry/miami/ui/command'
+} from "~/registry/miami/ui/command"
 import {
    HoverCard,
    HoverCardContent,
    HoverCardTrigger,
-} from '~/registry/miami/ui/hover-card'
-import { Label } from '~/registry/miami/ui/label'
+} from "~/registry/miami/ui/hover-card"
+import { Label } from "~/registry/miami/ui/label"
 import {
    Popover,
    PopoverContent,
    PopoverTrigger,
-} from '~/registry/miami/ui/popover'
+} from "~/registry/miami/ui/popover"
+
+import type { Model, ModelType } from "../data/models"
 
 interface ModelSelectorProps extends PopoverProps {
    types: readonly ModelType[]
@@ -49,8 +50,9 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
                className="w-[260px] text-sm"
                side="left"
             >
-               The model which will generate the completion. Some models are suitable
-               for natural language tasks, others specialize in code. Learn more.
+               The model which will generate the completion. Some models are
+               suitable for natural language tasks, others specialize in code.
+               Learn more.
             </HoverCardContent>
          </HoverCard>
          <Popover open={open} onOpenChange={setOpen} {...props}>
@@ -62,7 +64,7 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
                   aria-label="Select a model"
                   className="w-full justify-between"
                >
-                  {selectedModel ? selectedModel.name : 'Select a model...'}
+                  {selectedModel ? selectedModel.name : "Select a model..."}
                   <ChevronsUpDown className="opacity-50" />
                </Button>
             </PopoverTrigger>
@@ -75,22 +77,22 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
                      className="min-h-[280px]"
                   >
                      <div className="grid gap-2">
-                        <h4 className="font-medium leading-none">{peekedModel.name}</h4>
-                        <div className="text-muted-foreground text-sm">
+                        <h4 className="font-medium leading-none">
+                           {peekedModel.name}
+                        </h4>
+                        <div className="text-sm text-muted-foreground">
                            {peekedModel.description}
                         </div>
-                        {peekedModel.strengths
-                           ? (
-                                 <div className="mt-4 grid gap-2">
-                                    <h5 className="text-sm font-medium leading-none">
-                                       Strengths
-                                    </h5>
-                                    <ul className="text-muted-foreground text-sm">
-                                       {peekedModel.strengths}
-                                    </ul>
-                                 </div>
-                              )
-                           : null}
+                        {peekedModel.strengths ? (
+                           <div className="mt-4 grid gap-2">
+                              <h5 className="text-sm font-medium leading-none">
+                                 Strengths
+                              </h5>
+                              <ul className="text-sm text-muted-foreground">
+                                 {peekedModel.strengths}
+                              </ul>
+                           </div>
+                        ) : null}
                      </div>
                   </HoverCardContent>
                   <Command loop>
@@ -98,16 +100,18 @@ export function ModelSelector({ models, types, ...props }: ModelSelectorProps) {
                         <CommandInput placeholder="Search Models..." />
                         <CommandEmpty>No Models found.</CommandEmpty>
                         <HoverCardTrigger />
-                        {types.map(type => (
+                        {types.map((type) => (
                            <CommandGroup key={type} heading={type}>
                               {models
-                                 .filter(model => model.type === type)
-                                 .map(model => (
+                                 .filter((model) => model.type === type)
+                                 .map((model) => (
                                     <ModelItem
                                        key={model.id}
                                        model={model}
-                                       isSelected={selectedModel?.id === model.id}
-                                       onPeek={model => setPeekedModel(model)}
+                                       isSelected={
+                                          selectedModel?.id === model.id
+                                       }
+                                       onPeek={(model) => setPeekedModel(model)}
                                        onSelect={() => {
                                           setSelectedModel(model)
                                           setOpen(false)
@@ -138,9 +142,9 @@ function ModelItem({ model, isSelected, onSelect, onPeek }: ModelItemProps) {
    useMutationObserver(ref, (mutations) => {
       mutations.forEach((mutation) => {
          if (
-            mutation.type === 'attributes'
-            && mutation.attributeName === 'aria-selected'
-            && ref.current?.getAttribute('aria-selected') === 'true'
+            mutation.type === "attributes" &&
+            mutation.attributeName === "aria-selected" &&
+            ref.current?.getAttribute("aria-selected") === "true"
          ) {
             onPeek(model)
          }
@@ -156,7 +160,7 @@ function ModelItem({ model, isSelected, onSelect, onPeek }: ModelItemProps) {
       >
          {model.name}
          <Check
-            className={ny('ml-auto', isSelected ? 'opacity-100' : 'opacity-0')}
+            className={ny("ml-auto", isSelected ? "opacity-100" : "opacity-0")}
          />
       </CommandItem>
    )

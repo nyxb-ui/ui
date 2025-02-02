@@ -1,4 +1,4 @@
-import { Button } from '~/registry/miami/ui/button'
+import { Button } from "~/registry/miami/ui/button"
 import {
    Dialog,
    DialogContent,
@@ -7,9 +7,9 @@ import {
    DialogHeader,
    DialogTitle,
    DialogTrigger,
-} from '~/registry/miami/ui/dialog'
-import { Input } from '~/registry/miami/ui/input'
-import { Label } from '~/registry/miami/ui/label'
+} from "~/registry/miami/ui/dialog"
+import { Input } from "~/registry/miami/ui/input"
+import { Label } from "~/registry/miami/ui/label"
 
 export function PodcastEmptyPlaceholder() {
    return (
@@ -22,7 +22,7 @@ export function PodcastEmptyPlaceholder() {
                strokeLinecap="round"
                strokeLinejoin="round"
                strokeWidth="2"
-               className="text-muted-foreground size-10"
+               className="h-10 w-10 text-muted-foreground"
                viewBox="0 0 24 24"
             >
                <circle cx="12" cy="11" r="1" />
@@ -31,7 +31,7 @@ export function PodcastEmptyPlaceholder() {
             </svg>
 
             <h3 className="mt-4 text-lg font-semibold">No episodes added</h3>
-            <p className="text-muted-foreground mb-4 mt-2 text-sm">
+            <p className="mb-4 mt-2 text-sm text-muted-foreground">
                You have not added any podcasts. Add one below.
             </p>
             <Dialog>
@@ -50,7 +50,10 @@ export function PodcastEmptyPlaceholder() {
                   <div className="grid gap-4 py-4">
                      <div className="grid gap-2">
                         <Label htmlFor="url">Podcast URL</Label>
-                        <Input id="url" placeholder="https://example.com/feed.xml" />
+                        <Input
+                           id="url"
+                           placeholder="https://example.com/feed.xml"
+                        />
                      </div>
                   </div>
                   <DialogFooter>

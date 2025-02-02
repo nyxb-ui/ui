@@ -1,59 +1,58 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
+import type { Metadata } from "next"
+import Link from "next/link"
 
-import { siteConfig } from '~/config/site'
-import { Announcement } from '~/components/announcement'
-import { ExamplesNav } from '~/components/examples-nav'
+import { Announcement } from "~/components/announcement"
+import { ExamplesNav } from "~/components/examples-nav"
 import {
    PageActions,
    PageHeader,
    PageHeaderDescription,
    PageHeaderHeading,
-} from '~/components/page-header'
-import { Button } from '~/registry/miami/ui/button'
+} from "~/components/page-header"
+import { Button } from "~/registry/miami/ui/button"
 
 export const metadata: Metadata = {
-   title: 'Examples',
-   description: 'Check out some examples app built using the components.',
+   title: "Examples",
+   description: "Check out some examples app built using the components.",
 }
 
-interface ExamplesLayoutProps {
+export default function ExamplesLayout({
+   children,
+}: {
    children: React.ReactNode
-}
-
-export default function ExamplesLayout({ children }: ExamplesLayoutProps) {
+}) {
    return (
-      <div className="relative">
+      <>
          <PageHeader>
             <Announcement />
             <PageHeaderHeading>Build your component library</PageHeaderHeading>
             <PageHeaderDescription>
-               Beautifully designed components that you can copy and paste into your
-               apps. Made with Tailwind CSS. Open source.
+               Beautifully designed components that you can copy and paste into
+               your apps. Made with Tailwind CSS. Open source.
             </PageHeaderDescription>
             <PageActions>
                <Button asChild size="sm">
                   <Link href="/docs">Get Started</Link>
                </Button>
                <Button asChild size="sm" variant="ghost">
-                  <Link
-                     target="_blank"
-                     rel="noreferrer"
-                     href={siteConfig.links.github}
-                  >
-                     GitHub
-                  </Link>
+                  <Link href="/blocks">Browse Blocks</Link>
                </Button>
             </PageActions>
          </PageHeader>
-         <div className="container py-6">
-            <section>
-               <ExamplesNav />
-               <div className="bg-background overflow-hidden rounded-lg border shadow">
-                  {children}
+         <div className="border-grid border-b">
+            <div className="container-wrapper">
+               <div className="container py-4">
+                  <ExamplesNav />
                </div>
-            </section>
+            </div>
          </div>
-      </div>
+         <div className="container-wrapper">
+            <div className="container py-6">
+               <section className="overflow-hidden rounded-[0.5rem] border bg-background shadow">
+                  {children}
+               </section>
+            </div>
+         </div>
+      </>
    )
 }

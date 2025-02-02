@@ -1,13 +1,12 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import { useRouter } from 'next/navigation'
-import type { PopoverProps } from '@radix-ui/react-popover'
-import { Check, ChevronsUpDown } from 'lucide-react'
+import type { PopoverProps } from "@radix-ui/react-popover"
+import { Check, ChevronsUpDown } from "lucide-react"
+import { useRouter } from "next/navigation"
+import * as React from "react"
 
-import type { Preset } from '../data/presets'
-import { ny } from '~/lib/utils'
-import { Button } from '~/registry/miami/ui/button'
+import { ny } from "~/lib/utils"
+import { Button } from "~/registry/miami/ui/button"
 import {
    Command,
    CommandEmpty,
@@ -15,12 +14,14 @@ import {
    CommandInput,
    CommandItem,
    CommandList,
-} from '~/registry/miami/ui/command'
+} from "~/registry/miami/ui/command"
 import {
    Popover,
    PopoverContent,
    PopoverTrigger,
-} from '~/registry/miami/ui/popover'
+} from "~/registry/miami/ui/popover"
+
+import type { Preset } from "../data/presets"
 
 interface PresetSelectorProps extends PopoverProps {
    presets: Preset[]
@@ -41,7 +42,7 @@ export function PresetSelector({ presets, ...props }: PresetSelectorProps) {
                aria-expanded={open}
                className="flex-1 justify-between md:max-w-[200px] lg:max-w-[300px]"
             >
-               {selectedPreset ? selectedPreset.name : 'Load a preset...'}
+               {selectedPreset ? selectedPreset.name : "Load a preset..."}
                <ChevronsUpDown className="opacity-50" />
             </Button>
          </PopoverTrigger>
@@ -51,7 +52,7 @@ export function PresetSelector({ presets, ...props }: PresetSelectorProps) {
                <CommandList>
                   <CommandEmpty>No presets found.</CommandEmpty>
                   <CommandGroup heading="Examples">
-                     {presets.map(preset => (
+                     {presets.map((preset) => (
                         <CommandItem
                            key={preset.id}
                            onSelect={() => {
@@ -62,17 +63,17 @@ export function PresetSelector({ presets, ...props }: PresetSelectorProps) {
                            {preset.name}
                            <Check
                               className={ny(
-                                 'ml-auto',
+                                 "ml-auto",
                                  selectedPreset?.id === preset.id
-                                    ? 'opacity-100'
-                                    : 'opacity-0',
+                                    ? "opacity-100"
+                                    : "opacity-0",
                               )}
                            />
                         </CommandItem>
                      ))}
                   </CommandGroup>
                   <CommandGroup className="pt-0">
-                     <CommandItem onSelect={() => router.push('/examples')}>
+                     <CommandItem onSelect={() => router.push("/examples")}>
                         More examples
                      </CommandItem>
                   </CommandGroup>

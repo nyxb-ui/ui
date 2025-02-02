@@ -1,17 +1,17 @@
-'use client'
+"use client"
 
-import { DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu'
-import type { Table } from '@tanstack/react-table'
-import { Settings2 } from 'lucide-react'
+import { DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu"
+import type { Table } from "@tanstack/react-table"
+import { Settings2 } from "lucide-react"
 
-import { Button } from '~/registry/miami/ui/button'
+import { Button } from "~/registry/miami/ui/button"
 import {
    DropdownMenu,
    DropdownMenuCheckboxItem,
    DropdownMenuContent,
    DropdownMenuLabel,
    DropdownMenuSeparator,
-} from '~/registry/miami/ui/dropdown-menu'
+} from "~/registry/miami/ui/dropdown-menu"
 
 interface DataTableViewOptionsProps<TData> {
    table: Table<TData>
@@ -38,8 +38,9 @@ export function DataTableViewOptions<TData>({
             {table
                .getAllColumns()
                .filter(
-                  column =>
-                     typeof column.accessorFn !== 'undefined' && column.getCanHide(),
+                  (column) =>
+                     typeof column.accessorFn !== "undefined" &&
+                     column.getCanHide(),
                )
                .map((column) => {
                   return (
@@ -47,7 +48,9 @@ export function DataTableViewOptions<TData>({
                         key={column.id}
                         className="capitalize"
                         checked={column.getIsVisible()}
-                        onCheckedChange={value => column.toggleVisibility(!!value)}
+                        onCheckedChange={(value) =>
+                           column.toggleVisibility(!!value)
+                        }
                      >
                         {column.id}
                      </DropdownMenuCheckboxItem>

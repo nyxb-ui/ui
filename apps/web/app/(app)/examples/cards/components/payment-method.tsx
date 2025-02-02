@@ -1,5 +1,5 @@
-import { Icons } from '~/components/icons'
-import { Button } from '~/registry/miami/ui/button'
+import { Icons } from "~/components/icons"
+import { Button } from "~/registry/miami/ui/button"
 import {
    Card,
    CardContent,
@@ -7,17 +7,17 @@ import {
    CardFooter,
    CardHeader,
    CardTitle,
-} from '~/registry/miami/ui/card'
-import { Input } from '~/registry/miami/ui/input'
-import { Label } from '~/registry/miami/ui/label'
-import { RadioGroup, RadioGroupItem } from '~/registry/miami/ui/radio-group'
+} from "~/registry/miami/ui/card"
+import { Input } from "~/registry/miami/ui/input"
+import { Label } from "~/registry/miami/ui/label"
+import { RadioGroup, RadioGroupItem } from "~/registry/miami/ui/radio-group"
 import {
    Select,
    SelectContent,
    SelectItem,
    SelectTrigger,
    SelectValue,
-} from '~/registry/miami/ui/select'
+} from "~/registry/miami/ui/select"
 
 export function DemoPaymentMethod() {
    return (
@@ -31,10 +31,14 @@ export function DemoPaymentMethod() {
          <CardContent className="grid gap-6">
             <RadioGroup defaultValue="card" className="grid grid-cols-3 gap-4">
                <div>
-                  <RadioGroupItem value="card" id="card" className="peer sr-only" />
+                  <RadioGroupItem
+                     value="card"
+                     id="card"
+                     className="peer sr-only"
+                  />
                   <Label
                      htmlFor="card"
-                     className="border-muted bg-popover hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary flex flex-col items-center justify-between rounded-md border-2 p-4"
+                     className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
                   >
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +48,7 @@ export function DemoPaymentMethod() {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
-                        className="mb-3 size-6"
+                        className="mb-3 h-6 w-6"
                      >
                         <rect width="20" height="14" x="2" y="5" rx="2" />
                         <path d="M2 10h20" />
@@ -60,19 +64,23 @@ export function DemoPaymentMethod() {
                   />
                   <Label
                      htmlFor="paypal"
-                     className="border-muted bg-popover hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary flex flex-col items-center justify-between rounded-md border-2 p-4"
+                     className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
                   >
-                     <Icons.paypal className="mb-3 size-6" />
+                     <Icons.paypal className="mb-3 h-6 w-6" />
                      Paypal
                   </Label>
                </div>
                <div>
-                  <RadioGroupItem value="apple" id="apple" className="peer sr-only" />
+                  <RadioGroupItem
+                     value="apple"
+                     id="apple"
+                     className="peer sr-only"
+                  />
                   <Label
                      htmlFor="apple"
-                     className="border-muted bg-popover hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary flex flex-col items-center justify-between rounded-md border-2 p-4"
+                     className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
                   >
-                     <Icons.apple className="mb-3 size-6" />
+                     <Icons.apple className="mb-3 h-6 w-6" />
                      Apple
                   </Label>
                </div>
@@ -116,7 +124,10 @@ export function DemoPaymentMethod() {
                      </SelectTrigger>
                      <SelectContent>
                         {Array.from({ length: 10 }, (_, i) => (
-                           <SelectItem key={i} value={`${new Date().getFullYear() + i}`}>
+                           <SelectItem
+                              key={i}
+                              value={`${new Date().getFullYear() + i}`}
+                           >
                               {new Date().getFullYear() + i}
                            </SelectItem>
                         ))}

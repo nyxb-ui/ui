@@ -1,10 +1,10 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import { Dialog } from '@radix-ui/react-dialog'
-import { MoreHorizontal } from 'lucide-react'
+import { Dialog } from "@radix-ui/react-dialog"
+import { MoreHorizontal } from "lucide-react"
+import * as React from "react"
 
-import { toast } from '~/registry/miami/hooks/use-toast'
+import { toast } from "~/hooks/use-toast"
 import {
    AlertDialog,
    AlertDialogCancel,
@@ -13,24 +13,24 @@ import {
    AlertDialogFooter,
    AlertDialogHeader,
    AlertDialogTitle,
-} from '~/registry/miami/ui/alert-dialog'
-import { Button } from '~/registry/miami/ui/button'
+} from "~/registry/miami/ui/alert-dialog"
+import { Button } from "~/registry/miami/ui/button"
 import {
    DialogContent,
    DialogDescription,
    DialogFooter,
    DialogHeader,
    DialogTitle,
-} from '~/registry/miami/ui/dialog'
+} from "~/registry/miami/ui/dialog"
 import {
    DropdownMenu,
    DropdownMenuContent,
    DropdownMenuItem,
    DropdownMenuSeparator,
    DropdownMenuTrigger,
-} from '~/registry/miami/ui/dropdown-menu'
-import { Label } from '~/registry/miami/ui/label'
-import { Switch } from '~/registry/miami/ui/switch'
+} from "~/registry/miami/ui/dropdown-menu"
+import { Label } from "~/registry/miami/ui/label"
+import { Switch } from "~/registry/miami/ui/switch"
 
 export function PresetActions() {
    const [open, setIsOpen] = React.useState(false)
@@ -63,24 +63,25 @@ export function PresetActions() {
                <DialogHeader>
                   <DialogTitle>Content filter preferences</DialogTitle>
                   <DialogDescription>
-                     The content filter flags text that may violate our content policy.
-                     It&apos;s powered by our moderation endpoint which is free to use
-                     to moderate your OpenAI API traffic. Learn more.
+                     The content filter flags text that may violate our content
+                     policy. It&apos;s powered by our moderation endpoint which
+                     is free to use to moderate your OpenAI API traffic. Learn
+                     more.
                   </DialogDescription>
                </DialogHeader>
                <div className="py-6">
-                  <h4 className="text-muted-foreground text-sm">
+                  <h4 className="text-sm text-muted-foreground">
                      Playground Warnings
                   </h4>
                   <div className="flex items-start justify-between space-x-4 pt-3">
-                     <Switch name="show" id="show" defaultChecked />
+                     <Switch name="show" id="show" defaultChecked={true} />
                      <Label className="grid gap-1 font-normal" htmlFor="show">
                         <span className="font-semibold">
                            Show a warning when content is flagged
                         </span>
-                        <span className="text-muted-foreground text-sm">
-                           A warning will be shown when sexual, hateful, violent or
-                           self-harm content is detected.
+                        <span className="text-sm text-muted-foreground">
+                           A warning will be shown when sexual, hateful, violent
+                           or self-harm content is detected.
                         </span>
                      </Label>
                   </div>
@@ -92,7 +93,10 @@ export function PresetActions() {
                </DialogFooter>
             </DialogContent>
          </Dialog>
-         <AlertDialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
+         <AlertDialog
+            open={showDeleteDialog}
+            onOpenChange={setShowDeleteDialog}
+         >
             <AlertDialogContent>
                <AlertDialogHeader>
                   <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
@@ -108,7 +112,7 @@ export function PresetActions() {
                      onClick={() => {
                         setShowDeleteDialog(false)
                         toast({
-                           description: 'This preset has been deleted.',
+                           description: "This preset has been deleted.",
                         })
                      }}
                   >

@@ -1,18 +1,18 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import type { SliderProps } from '@radix-ui/react-slider'
+import type { SliderProps } from "@radix-ui/react-slider"
+import * as React from "react"
 
 import {
    HoverCard,
    HoverCardContent,
    HoverCardTrigger,
-} from '~/registry/miami/ui/hover-card'
-import { Label } from '~/registry/miami/ui/label'
-import { Slider } from '~/registry/miami/ui/slider'
+} from "~/registry/miami/ui/hover-card"
+import { Label } from "~/registry/miami/ui/label"
+import { Slider } from "~/registry/miami/ui/slider"
 
 interface TemperatureSelectorProps {
-   defaultValue: SliderProps['defaultValue']
+   defaultValue: SliderProps["defaultValue"]
 }
 
 export function TemperatureSelector({
@@ -27,7 +27,7 @@ export function TemperatureSelector({
                <div className="grid gap-4">
                   <div className="flex items-center justify-between">
                      <Label htmlFor="temperature">Temperature</Label>
-                     <span className="text-muted-foreground hover:border-border w-12 rounded-md border border-transparent px-2 py-0.5 text-right text-sm">
+                     <span className="w-12 rounded-md border border-transparent px-2 py-0.5 text-right text-sm text-muted-foreground hover:border-border">
                         {value}
                      </span>
                   </div>
@@ -37,7 +37,7 @@ export function TemperatureSelector({
                      defaultValue={value}
                      step={0.1}
                      onValueChange={setValue}
-                     className="[&_[role=slider]]:size-4"
+                     className="[&_[role=slider]]:h-4 [&_[role=slider]]:w-4"
                      aria-label="Temperature"
                   />
                </div>
@@ -47,9 +47,9 @@ export function TemperatureSelector({
                className="w-[260px] text-sm"
                side="left"
             >
-               Controls randomness: lowering results in less random completions. As
-               the temperature approaches zero, the model will become deterministic
-               and repetitive.
+               Controls randomness: lowering results in less random completions.
+               As the temperature approaches zero, the model will become
+               deterministic and repetitive.
             </HoverCardContent>
          </HoverCard>
       </div>

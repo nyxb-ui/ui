@@ -1,24 +1,27 @@
-'use client'
+"use client"
 
-import type { ColumnDef } from '@tanstack/react-table'
+import type { ColumnDef } from "@tanstack/react-table"
 
-import { labels, priorities, statuses } from '../data/data'
-import type { Task } from '../data/schema'
-import { DataTableColumnHeader } from './data-table-column-header'
-import { DataTableRowActions } from './data-table-row-actions'
-import { Checkbox } from '~/registry/miami/ui/checkbox'
-import { Badge } from '~/registry/miami/ui/badge'
+import { Badge } from "~/registry/miami/ui/badge"
+import { Checkbox } from "~/registry/miami/ui/checkbox"
+
+import { labels, priorities, statuses } from "../data/data"
+import type { Task } from "../data/schema"
+import { DataTableColumnHeader } from "./data-table-column-header"
+import { DataTableRowActions } from "./data-table-row-actions"
 
 export const columns: ColumnDef<Task>[] = [
    {
-      id: 'select',
+      id: "select",
       header: ({ table }) => (
          <Checkbox
             checked={
-               table.getIsAllPageRowsSelected()
-               || (table.getIsSomePageRowsSelected() && 'indeterminate')
+               table.getIsAllPageRowsSelected() ||
+               (table.getIsSomePageRowsSelected() && "indeterminate")
             }
-            onCheckedChange={value => table.toggleAllPageRowsSelected(!!value)}
+            onCheckedChange={(value) =>
+               table.toggleAllPageRowsSelected(!!value)
+            }
             aria-label="Select all"
             className="translate-y-[2px]"
          />
@@ -26,7 +29,7 @@ export const columns: ColumnDef<Task>[] = [
       cell: ({ row }) => (
          <Checkbox
             checked={row.getIsSelected()}
-            onCheckedChange={value => row.toggleSelected(!!value)}
+            onCheckedChange={(value) => row.toggleSelected(!!value)}
             aria-label="Select row"
             className="translate-y-[2px]"
          />
@@ -35,40 +38,42 @@ export const columns: ColumnDef<Task>[] = [
       enableHiding: false,
    },
    {
-      accessorKey: 'id',
+      accessorKey: "id",
       header: ({ column }) => (
          <DataTableColumnHeader column={column} title="Task" />
       ),
-      cell: ({ row }) => <div className="w-[80px]">{row.getValue('id')}</div>,
+      cell: ({ row }) => <div className="w-[80px]">{row.getValue("id")}</div>,
       enableSorting: false,
       enableHiding: false,
    },
    {
-      accessorKey: 'title',
+      accessorKey: "title",
       header: ({ column }) => (
          <DataTableColumnHeader column={column} title="Title" />
       ),
       cell: ({ row }) => {
-         const label = labels.find(label => label.value === row.original.label)
+         const label = labels.find(
+            (label) => label.value === row.original.label,
+         )
 
          return (
             <div className="flex space-x-2">
                {label && <Badge variant="outline">{label.label}</Badge>}
                <span className="max-w-[500px] truncate font-medium">
-                  {row.getValue('title')}
+                  {row.getValue("title")}
                </span>
             </div>
          )
       },
    },
    {
-      accessorKey: 'status',
+      accessorKey: "status",
       header: ({ column }) => (
          <DataTableColumnHeader column={column} title="Status" />
       ),
       cell: ({ row }) => {
          const status = statuses.find(
-            status => status.value === row.getValue('status'),
+            (status) => status.value === row.getValue("status"),
          )
 
          if (!status) {
@@ -78,7 +83,7 @@ export const columns: ColumnDef<Task>[] = [
          return (
             <div className="flex w-[100px] items-center">
                {status.icon && (
-                  <status.icon className="text-muted-foreground mr-2 size-4" />
+                  <status.icon className="mr-2 h-4 w-4 text-muted-foreground" />
                )}
                <span>{status.label}</span>
             </div>
@@ -89,13 +94,13 @@ export const columns: ColumnDef<Task>[] = [
       },
    },
    {
-      accessorKey: 'priority',
+      accessorKey: "priority",
       header: ({ column }) => (
          <DataTableColumnHeader column={column} title="Priority" />
       ),
       cell: ({ row }) => {
          const priority = priorities.find(
-            priority => priority.value === row.getValue('priority'),
+            (priority) => priority.value === row.getValue("priority"),
          )
 
          if (!priority) {
@@ -105,7 +110,7 @@ export const columns: ColumnDef<Task>[] = [
          return (
             <div className="flex items-center">
                {priority.icon && (
-                  <priority.icon className="text-muted-foreground mr-2 size-4" />
+                  <priority.icon className="mr-2 h-4 w-4 text-muted-foreground" />
                )}
                <span>{priority.label}</span>
             </div>
@@ -116,7 +121,7 @@ export const columns: ColumnDef<Task>[] = [
       },
    },
    {
-      id: 'actions',
+      id: "actions",
       cell: ({ row }) => <DataTableRowActions row={row} />,
    },
 ]

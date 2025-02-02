@@ -1,13 +1,13 @@
-import { ChevronDown, Circle, Plus, Star } from 'lucide-react'
+import { ChevronDown, Circle, Plus, Star } from "lucide-react"
 
-import { Button } from '~/registry/miami/ui/button'
+import { Button } from "~/registry/miami/ui/button"
 import {
    Card,
    CardContent,
    CardDescription,
    CardHeader,
    CardTitle,
-} from '~/registry/miami/ui/card'
+} from "~/registry/miami/ui/card"
 import {
    DropdownMenu,
    DropdownMenuCheckboxItem,
@@ -16,8 +16,8 @@ import {
    DropdownMenuLabel,
    DropdownMenuSeparator,
    DropdownMenuTrigger,
-} from '~/registry/miami/ui/dropdown-menu'
-import { Separator } from '~/registry/miami/ui/separator'
+} from "~/registry/miami/ui/dropdown-menu"
+import { Separator } from "~/registry/miami/ui/separator"
 
 export function DemoGithub() {
    return (
@@ -26,11 +26,11 @@ export function DemoGithub() {
             <div className="space-y-1">
                <CardTitle>shadcn/ui</CardTitle>
                <CardDescription>
-                  Beautifully designed components that you can copy and paste into
-                  your apps. Accessible. Customizable. Open Source.
+                  Beautifully designed components that you can copy and paste
+                  into your apps. Accessible. Customizable. Open Source.
                </CardDescription>
             </div>
-            <div className="bg-secondary text-secondary-foreground flex items-center space-x-1 rounded-md">
+            <div className="flex items-center space-x-1 rounded-md bg-secondary text-secondary-foreground">
                <Button variant="secondary" className="px-3 shadow-none">
                   <Star />
                   Star
@@ -53,26 +53,28 @@ export function DemoGithub() {
                      <DropdownMenuCheckboxItem checked>
                         Future Ideas
                      </DropdownMenuCheckboxItem>
-                     <DropdownMenuCheckboxItem>My Stack</DropdownMenuCheckboxItem>
-                     <DropdownMenuCheckboxItem>Inspiration</DropdownMenuCheckboxItem>
+                     <DropdownMenuCheckboxItem>
+                        My Stack
+                     </DropdownMenuCheckboxItem>
+                     <DropdownMenuCheckboxItem>
+                        Inspiration
+                     </DropdownMenuCheckboxItem>
                      <DropdownMenuSeparator />
                      <DropdownMenuItem>
-                        <Plus />
-                        {' '}
-                        Create List
+                        <Plus /> Create List
                      </DropdownMenuItem>
                   </DropdownMenuContent>
                </DropdownMenu>
             </div>
          </CardHeader>
          <CardContent>
-            <div className="text-muted-foreground flex space-x-4 text-sm">
+            <div className="flex space-x-4 text-sm text-muted-foreground">
                <div className="flex items-center">
-                  <Circle className="mr-1 size-3 fill-sky-400 text-sky-400" />
+                  <Circle className="mr-1 h-3 w-3 fill-sky-400 text-sky-400" />
                   TypeScript
                </div>
                <div className="flex items-center">
-                  <Star className="mr-1 size-3" />
+                  <Star className="mr-1 h-3 w-3" />
                   20k
                </div>
                <div>Updated April 2023</div>
