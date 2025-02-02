@@ -1,37 +1,37 @@
-import { randomBytes } from 'crypto'
-import { promises as fs } from 'fs'
-import { tmpdir } from 'os'
-import path from 'path'
-import fg from 'fast-glob'
-import prompts from 'prompts'
-import { Project, ScriptKind, SyntaxKind } from 'ts-morph'
-import type { z } from 'zod'
-import type { Config } from '~/src/utils/get-config'
-import { highlighter } from '~/src/utils/highlighter'
-import { ICON_LIBRARIES } from '~/src/utils/icon-libraries'
-import { logger } from '~/src/utils/logger'
-import { getRegistryIcons } from '~/src/utils/registry'
-import type { iconsSchema } from '~/src/utils/registry/schema'
-import { spinner } from '~/src/utils/spinner'
-import { updateDependencies } from '~/src/utils/updaters/update-dependencies'
+import { randomBytes } from "crypto"
+import { promises as fs } from "fs"
+import { tmpdir } from "os"
+import path from "path"
+import fg from "fast-glob"
+import prompts from "prompts"
+import { Project, ScriptKind, SyntaxKind } from "ts-morph"
+import type { z } from "zod"
+import { getRegistryIcons } from "~/src/registry/api"
+import type { iconsSchema } from "~/src/registry/schema"
+import type { Config } from "~/src/utils/get-config"
+import { highlighter } from "~/src/utils/highlighter"
+import { ICON_LIBRARIES } from "~/src/utils/icon-libraries"
+import { logger } from "~/src/utils/logger"
+import { spinner } from "~/src/utils/spinner"
+import { updateDependencies } from "~/src/utils/updaters/update-dependencies"
 
 export async function migrateIcons(config: Config) {
    if (!config.resolvedPaths.ui) {
       throw new Error(
-         'We could not find a valid `ui` path in your `nyxbui.json` file. Please ensure you have a valid `ui` path in your `nyxbui.json` file.',
+         "We could not find a valid `ui` path in your `nyxbui.json` file. Please ensure you have a valid `ui` path in your `nyxbui.json` file.",
       )
    }
 
    const uiPath = config.resolvedPaths.ui
    const [files, registryIcons] = await Promise.all([
-      fg('**/*.{js,ts,jsx,tsx}', {
+      fg("**/*.{js,ts,jsx,tsx}", {
          cwd: uiPath,
       }),
       getRegistryIcons(),
    ])
 
    if (Object.keys(registryIcons).length === 0) {
-      throw new Error('Something went wrong fetching the registry icons.')
+      throw new Error("Something went wrong fetching the registry icons.")
    }
 
    const libraryChoices = Object.entries(ICON_LIBRARIES).map(
@@ -43,57 +43,63 @@ export async function migrateIcons(config: Config) {
 
    const migrateOptions = await prompts([
       {
-         type: 'select',
-         name: 'sourceLibrary',
+         type: "select",
+         name: "sourceLibrary",
          message: `Which icon library would you like to ${highlighter.info(
-        'migrate from',
-      )}?`,
+            "migrate from",
+         )}?`,
          choices: libraryChoices,
       },
       {
-         type: 'select',
-         name: 'targetLibrary',
+         type: "select",
+         name: "targetLibrary",
          message: `Which icon library would you like to ${highlighter.info(
-        'migrate to',
-      )}?`,
+            "migrate to",
+         )}?`,
          choices: libraryChoices,
       },
    ])
 
    if (migrateOptions.sourceLibrary === migrateOptions.targetLibrary) {
       throw new Error(
-         'You cannot migrate to the same icon library. Please choose a different icon library.',
+         "You cannot migrate to the same icon library. Please choose a different icon library.",
       )
    }
 
    if (
       !(
-         migrateOptions.sourceLibrary in ICON_LIBRARIES
-         && migrateOptions.targetLibrary in ICON_LIBRARIES
+         migrateOptions.sourceLibrary in ICON_LIBRARIES &&
+         migrateOptions.targetLibrary in ICON_LIBRARIES
       )
    ) {
-      throw new Error('Invalid icon library. Please choose a valid icon library.')
+      throw new Error(
+         "Invalid icon library. Please choose a valid icon library.",
+      )
    }
 
-   const sourceLibrary
-    = ICON_LIBRARIES[migrateOptions.sourceLibrary as keyof typeof ICON_LIBRARIES]
-   const targetLibrary
-    = ICON_LIBRARIES[migrateOptions.targetLibrary as keyof typeof ICON_LIBRARIES]
+   const sourceLibrary =
+      ICON_LIBRARIES[
+         migrateOptions.sourceLibrary as keyof typeof ICON_LIBRARIES
+      ]
+   const targetLibrary =
+      ICON_LIBRARIES[
+         migrateOptions.targetLibrary as keyof typeof ICON_LIBRARIES
+      ]
    const { confirm } = await prompts({
-      type: 'confirm',
-      name: 'confirm',
+      type: "confirm",
+      name: "confirm",
       initial: true,
       message: `We will migrate ${highlighter.info(
-      files.length,
-    )} files in ${highlighter.info(
-      `./${path.relative(config.resolvedPaths.cwd, uiPath)}`,
-    )} from ${highlighter.info(sourceLibrary.name)} to ${highlighter.info(
-      targetLibrary.name,
-    )}. Continue?`,
+         files.length,
+      )} files in ${highlighter.info(
+         `./${path.relative(config.resolvedPaths.cwd, uiPath)}`,
+      )} from ${highlighter.info(sourceLibrary.name)} to ${highlighter.info(
+         targetLibrary.name,
+      )}. Continue?`,
    })
 
    if (!confirm) {
-      logger.info('Migration cancelled.')
+      logger.info("Migration cancelled.")
       process.exit(0)
    }
 
@@ -110,7 +116,7 @@ export async function migrateIcons(config: Config) {
          migrationSpinner.text = `Migrating ${file}...`
 
          const filePath = path.join(uiPath, file)
-         const fileContent = await fs.readFile(filePath, 'utf-8')
+         const fileContent = await fs.readFile(filePath, "utf-8")
 
          const content = await migrateIconsFile(
             fileContent,
@@ -123,7 +129,7 @@ export async function migrateIcons(config: Config) {
       }),
    )
 
-   migrationSpinner.succeed('Migration complete.')
+   migrationSpinner.succeed("Migration complete.")
 }
 
 export async function migrateIconsFile(
@@ -135,14 +141,14 @@ export async function migrateIconsFile(
    const sourceLibraryImport = ICON_LIBRARIES[sourceLibrary]?.import
    const targetLibraryImport = ICON_LIBRARIES[targetLibrary]?.import
 
-   const dir = await fs.mkdtemp(path.join(tmpdir(), 'nyxb-'))
+   const dir = await fs.mkdtemp(path.join(tmpdir(), "nyxb-"))
    const project = new Project({
       compilerOptions: {},
    })
 
    const tempFile = path.join(
       dir,
-    `nyxb-icons-${randomBytes(4).toString('hex')}.tsx`,
+      `nyxb-icons-${randomBytes(4).toString("hex")}.tsx`,
    )
    const sourceFile = project.createSourceFile(tempFile, content, {
       scriptKind: ScriptKind.TSX,
@@ -152,8 +158,8 @@ export async function migrateIconsFile(
    const targetedIcons: string[] = []
    for (const importDeclaration of sourceFile.getImportDeclarations() ?? []) {
       if (
-         importDeclaration.getModuleSpecifier()?.getText()
-         !== `"${sourceLibraryImport}"`
+         importDeclaration.getModuleSpecifier()?.getText() !==
+         `"${sourceLibraryImport}"`
       ) {
          continue
       }
@@ -163,7 +169,7 @@ export async function migrateIconsFile(
 
          // TODO: this is O(n^2) but okay for now.
          const targetedIcon = Object.values(iconsMapping).find(
-            icon => icon[sourceLibrary] === iconName,
+            (icon) => icon[sourceLibrary] === iconName,
          )?.[targetLibrary]
 
          if (!targetedIcon || targetedIcons.includes(targetedIcon)) {
@@ -178,8 +184,10 @@ export async function migrateIconsFile(
          // Replace with the targeted icon.
          sourceFile
             .getDescendantsOfKind(SyntaxKind.JsxSelfClosingElement)
-            .filter(node => node.getTagNameNode()?.getText() === iconName)
-            .forEach(node => node.getTagNameNode()?.replaceWithText(targetedIcon))
+            .filter((node) => node.getTagNameNode()?.getText() === iconName)
+            .forEach((node) =>
+               node.getTagNameNode()?.replaceWithText(targetedIcon),
+            )
       }
 
       // If the named import is empty, remove the import declaration.
@@ -191,7 +199,7 @@ export async function migrateIconsFile(
    if (targetedIcons.length > 0) {
       sourceFile.addImportDeclaration({
          moduleSpecifier: targetLibraryImport,
-         namedImports: targetedIcons.map(icon => ({
+         namedImports: targetedIcons.map((icon) => ({
             name: icon,
          })),
       })

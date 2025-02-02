@@ -1,29 +1,31 @@
-import { promises as fs } from 'fs'
-import { tmpdir } from 'os'
-import path from 'path'
-import { Project, ScriptKind, type SourceFile } from 'ts-morph'
-import type { z } from 'zod'
-import { transformTwPrefixes } from './transform-tw-prefix'
-import type { Config } from '~/src/utils/get-config'
-import type { registryBaseColorSchema } from '~/src/utils/registry/schema'
-import { transformCssVars } from '~/src/utils/transformers/transform-css-vars'
-import { transformIcons } from '~/src/utils/transformers/transform-icons'
-import { transformImport } from '~/src/utils/transformers/transform-import'
-import { transformJsx } from '~/src/utils/transformers/transform-jsx'
-import { transformRsc } from '~/src/utils/transformers/transform-rsc'
+import { promises as fs } from "fs"
+import { tmpdir } from "os"
+import path from "path"
+import { Project, ScriptKind, type SourceFile } from "ts-morph"
+import type { z } from "zod"
+import type { registryBaseColorSchema } from "~/src/registry/schema"
+import type { Config } from "~/src/utils/get-config"
+import { transformCssVars } from "~/src/utils/transformers/transform-css-vars"
+import { transformIcons } from "~/src/utils/transformers/transform-icons"
+import { transformImport } from "~/src/utils/transformers/transform-import"
+import { transformJsx } from "~/src/utils/transformers/transform-jsx"
+import { transformRsc } from "~/src/utils/transformers/transform-rsc"
 
-export interface TransformOpts {
+import { transformTwPrefixes } from "./transform-tw-prefix"
+
+export type TransformOpts = {
    filename: string
    raw: string
    config: Config
    baseColor?: z.infer<typeof registryBaseColorSchema>
    transformJsx?: boolean
+   isRemote?: boolean
 }
 
 export type Transformer<Output = SourceFile> = (
    opts: TransformOpts & {
       sourceFile: SourceFile
-   }
+   },
 ) => Promise<Output>
 
 const project = new Project({
@@ -31,7 +33,7 @@ const project = new Project({
 })
 
 async function createTempSourceFile(filename: string) {
-   const dir = await fs.mkdtemp(path.join(tmpdir(), 'nyxb-'))
+   const dir = await fs.mkdtemp(path.join(tmpdir(), "nyxb-"))
    return path.join(dir, filename)
 }
 

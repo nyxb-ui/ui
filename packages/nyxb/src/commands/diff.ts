@@ -1,21 +1,20 @@
-import { existsSync, promises as fs } from 'fs'
-import path from 'path'
-import { Command } from 'commander'
-import { type Change, diffLines } from 'diff'
-import { z } from 'zod'
-import type { Config } from '~/src/utils/get-config'
-import { getConfig } from '~/src/utils/get-config'
-import { handleError } from '~/src/utils/handle-error'
-import { highlighter } from '~/src/utils/highlighter'
-import { logger } from '~/src/utils/logger'
+import { promises as fs, existsSync } from "fs"
+import path from "path"
+import { Command } from "commander"
+import { type Change, diffLines } from "diff"
+import { z } from "zod"
 import {
    fetchTree,
    getItemTargetPath,
    getRegistryBaseColor,
    getRegistryIndex,
-} from '~/src/utils/registry'
-import type { registryIndexSchema } from '~/src/utils/registry/schema'
-import { transform } from '~/src/utils/transformers'
+} from "~/src/registry/api"
+import type { registryIndexSchema } from "~/src/registry/schema"
+import { type Config, getConfig } from "~/src/utils/get-config"
+import { handleError } from "~/src/utils/handle-error"
+import { highlighter } from "~/src/utils/highlighter"
+import { logger } from "~/src/utils/logger"
+import { transform } from "~/src/utils/transformers"
 
 const updateOptionsSchema = z.object({
    component: z.string().optional(),
@@ -25,13 +24,13 @@ const updateOptionsSchema = z.object({
 })
 
 export const diff = new Command()
-   .name('diff')
-   .description('check for updates against the registry')
-   .argument('[component]', 'the component name')
-   .option('-y, --yes', 'skip confirmation prompt.', false)
+   .name("diff")
+   .description("check for updates against the registry")
+   .argument("[component]", "the component name")
+   .option("-y, --yes", "skip confirmation prompt.", false)
    .option(
-      '-c, --cwd <cwd>',
-      'the working directory. defaults to the current directory.',
+      "-c, --cwd <cwd>",
+      "the working directory. defaults to the current directory.",
       process.cwd(),
    )
    .action(async (name, opts) => {
@@ -51,9 +50,9 @@ export const diff = new Command()
          const config = await getConfig(cwd)
          if (!config) {
             logger.warn(
-          `Configuration is missing. Please run ${highlighter.success(
-            `init`,
-          )} to create a nyxbui.json file.`,
+               `Configuration is missing. Please run ${highlighter.success(
+                  `init`,
+               )} to create a nyxbui.json file.`,
             )
             process.exit(1)
          }
@@ -61,7 +60,7 @@ export const diff = new Command()
          const registryIndex = await getRegistryIndex()
 
          if (!registryIndex) {
-            handleError(new Error('Failed to fetch registry index.'))
+            handleError(new Error("Failed to fetch registry index."))
             process.exit(1)
          }
 
@@ -73,7 +72,7 @@ export const diff = new Command()
                for (const file of item.files ?? []) {
                   const filePath = path.resolve(
                      targetDir,
-                     typeof file === 'string' ? file : file.path,
+                     typeof file === "string" ? file : file.path,
                   )
                   if (existsSync(filePath)) {
                      return true
@@ -96,11 +95,11 @@ export const diff = new Command()
             }
 
             if (!componentsWithUpdates.length) {
-               logger.info('No updates found.')
+               logger.info("No updates found.")
                process.exit(0)
             }
 
-            logger.info('The following components have updates available:')
+            logger.info("The following components have updates available:")
             for (const component of componentsWithUpdates) {
                logger.info(`- ${component.name}`)
                for (const change of component.changes) {
@@ -109,21 +108,21 @@ export const diff = new Command()
             }
             logger.break()
             logger.info(
-          `Run ${highlighter.success(`diff <component>`)} to see the changes.`,
+               `Run ${highlighter.success(`diff <component>`)} to see the changes.`,
             )
             process.exit(0)
          }
 
          // Show diff for a single component.
          const component = registryIndex.find(
-            item => item.name === options.component,
+            (item) => item.name === options.component,
          )
 
          if (!component) {
             logger.error(
-          `The component ${highlighter.success(
-            options.component,
-          )} does not exist.`,
+               `The component ${highlighter.success(
+                  options.component,
+               )} does not exist.`,
             )
             process.exit(1)
          }
@@ -138,10 +137,9 @@ export const diff = new Command()
          for (const change of changes) {
             logger.info(`- ${change.filePath}`)
             await printDiff(change.patch)
-            logger.info('')
+            logger.info("")
          }
-      }
-      catch (error) {
+      } catch (error) {
          handleError(error)
       }
    })
@@ -169,16 +167,16 @@ async function diffComponent(
       for (const file of item.files ?? []) {
          const filePath = path.resolve(
             targetDir,
-            typeof file === 'string' ? file : file.path,
+            typeof file === "string" ? file : file.path,
          )
 
          if (!existsSync(filePath)) {
             continue
          }
 
-         const fileContent = await fs.readFile(filePath, 'utf8')
+         const fileContent = await fs.readFile(filePath, "utf8")
 
-         if (typeof file === 'string' || !file.content) {
+         if (typeof file === "string" || !file.content) {
             continue
          }
 

@@ -1,17 +1,18 @@
-import path from 'path'
-import { Command } from 'commander'
-import prompts from 'prompts'
-import { z } from 'zod'
-import { runInit } from '~/src/commands/init'
-import { preFlightAdd } from '~/src/preflights/preflight-add'
-import { addComponents } from '~/src/utils/add-components'
-import { createProject } from '~/src/utils/create-project'
-import * as ERRORS from '~/src/utils/errors'
-import { handleError } from '~/src/utils/handle-error'
-import { highlighter } from '~/src/utils/highlighter'
-import { logger } from '~/src/utils/logger'
-import { getRegistryIndex } from '~/src/utils/registry'
-import { updateAppIndex } from '~/src/utils/update-app-index'
+import path from "path"
+import { Command } from "commander"
+import prompts from "prompts"
+import { z } from "zod"
+import { runInit } from "~/src/commands/init"
+import { preFlightAdd } from "~/src/preflights/preflight-add"
+import { getRegistryIndex } from "~/src/registry/api"
+import { addComponents } from "~/src/utils/add-components"
+import { createProject } from "~/src/utils/create-project"
+import * as ERRORS from "~/src/utils/errors"
+import { getConfig } from "~/src/utils/get-config"
+import { handleError } from "~/src/utils/handle-error"
+import { highlighter } from "~/src/utils/highlighter"
+import { logger } from "~/src/utils/logger"
+import { updateAppIndex } from "~/src/utils/update-app-index"
 
 export const addOptionsSchema = z.object({
    components: z.array(z.string()).optional(),
@@ -25,25 +26,25 @@ export const addOptionsSchema = z.object({
 })
 
 export const add = new Command()
-   .name('add')
-   .description('add a component to your project')
+   .name("add")
+   .description("add a component to your project")
    .argument(
-      '[components...]',
-      'the components to add or a url to the component.',
+      "[components...]",
+      "the components to add or a url to the component.",
    )
-   .option('-y, --yes', 'skip confirmation prompt.', false)
-   .option('-o, --overwrite', 'overwrite existing files.', false)
+   .option("-y, --yes", "skip confirmation prompt.", false)
+   .option("-o, --overwrite", "overwrite existing files.", false)
    .option(
-      '-c, --cwd <cwd>',
-      'the working directory. defaults to the current directory.',
+      "-c, --cwd <cwd>",
+      "the working directory. defaults to the current directory.",
       process.cwd(),
    )
-   .option('-a, --all', 'add all available components', false)
-   .option('-p, --path <path>', 'the path to add the component to.')
-   .option('-s, --silent', 'mute output.', false)
+   .option("-a, --all", "add all available components", false)
+   .option("-p, --path <path>", "the path to add the component to.")
+   .option("-s, --silent", "mute output.", false)
    .option(
-      '--src-dir',
-      'use the src directory when creating a new project.',
+      "--src-dir",
+      "use the src directory when creating a new project.",
       false,
    )
    .action(async (components, opts) => {
@@ -56,21 +57,21 @@ export const add = new Command()
 
          // Confirm if user is installing themes.
          // For now, we assume a theme is prefixed with "theme-".
-         const isTheme = options.components?.some(component =>
-            component.includes('theme-'),
+         const isTheme = options.components?.some((component) =>
+            component.includes("theme-"),
          )
          if (!options.yes && isTheme) {
             logger.break()
             const { confirm } = await prompts({
-               type: 'confirm',
-               name: 'confirm',
+               type: "confirm",
+               name: "confirm",
                message: highlighter.warn(
-                  'You are about to install a new theme. \nExisting CSS variables will be overwritten. Continue?',
+                  "You are about to install a new theme. \nExisting CSS variables will be overwritten. Continue?",
                ),
             })
             if (!confirm) {
                logger.break()
-               logger.log('Theme installation cancelled.')
+               logger.log("Theme installation cancelled.")
                logger.break()
                process.exit(1)
             }
@@ -82,14 +83,14 @@ export const add = new Command()
 
          let { errors, config } = await preFlightAdd(options)
 
-         // No nyxbui.json file. Prompt the user to run init.
+         // No components.json file. Prompt the user to run init.
          if (errors[ERRORS.MISSING_CONFIG]) {
             const { proceed } = await prompts({
-               type: 'confirm',
-               name: 'proceed',
+               type: "confirm",
+               name: "proceed",
                message: `You need to create a ${highlighter.info(
-            'nyxbui.json',
-          )} file to add components. Proceed?`,
+                  "nyxbui.json",
+               )} file to add components. Proceed?`,
                initial: true,
             })
 
@@ -112,10 +113,11 @@ export const add = new Command()
 
          let shouldUpdateAppIndex = false
          if (errors[ERRORS.MISSING_DIR_OR_EMPTY_PROJECT]) {
-            const { projectPath } = await createProject({
+            const { projectPath, projectType } = await createProject({
                cwd: options.cwd,
                force: options.overwrite,
                srcDir: options.srcDir,
+               components: options.components,
             })
             if (!projectPath) {
                logger.break()
@@ -123,25 +125,30 @@ export const add = new Command()
             }
             options.cwd = projectPath
 
-            config = await runInit({
-               cwd: options.cwd,
-               yes: true,
-               force: true,
-               defaults: false,
-               skipPreflight: true,
-               silent: true,
-               isNewProject: true,
-               srcDir: options.srcDir,
-            })
+            if (projectType === "monorepo") {
+               options.cwd = path.resolve(options.cwd, "apps/web")
+               config = await getConfig(options.cwd)
+            } else {
+               config = await runInit({
+                  cwd: options.cwd,
+                  yes: true,
+                  force: true,
+                  defaults: false,
+                  skipPreflight: true,
+                  silent: true,
+                  isNewProject: true,
+                  srcDir: options.srcDir,
+               })
 
-            shouldUpdateAppIndex
-          = options.components?.length === 1
-          && !!options.components[0].match(/\/chat\/b\//)
+               shouldUpdateAppIndex =
+                  options.components?.length === 1 &&
+                  !!options.components[0].match(/\/chat\/b\//)
+            }
          }
 
          if (!config) {
             throw new Error(
-          `Failed to read config at ${highlighter.info(options.cwd)}.`,
+               `Failed to read config at ${highlighter.info(options.cwd)}.`,
             )
          }
 
@@ -152,8 +159,7 @@ export const add = new Command()
          if (shouldUpdateAppIndex) {
             await updateAppIndex(options.components[0], config)
          }
-      }
-      catch (error) {
+      } catch (error) {
          logger.break()
          handleError(error)
       }
@@ -165,12 +171,12 @@ async function promptForRegistryComponents(
    const registryIndex = await getRegistryIndex()
    if (!registryIndex) {
       logger.break()
-      handleError(new Error('Failed to fetch registry index.'))
+      handleError(new Error("Failed to fetch registry index."))
       return []
    }
 
    if (options.all) {
-      return registryIndex.map(entry => entry.name)
+      return registryIndex.map((entry) => entry.name)
    }
 
    if (options.components?.length) {
@@ -178,30 +184,32 @@ async function promptForRegistryComponents(
    }
 
    const { components } = await prompts({
-      type: 'multiselect',
-      name: 'components',
-      message: 'Which components would you like to add?',
-      hint: 'Space to select. A to toggle all. Enter to submit.',
+      type: "multiselect",
+      name: "components",
+      message: "Which components would you like to add?",
+      hint: "Space to select. A to toggle all. Enter to submit.",
       instructions: false,
       choices: registryIndex
-         .filter(entry => entry.type === 'registry:ui')
-         .map(entry => ({
+         .filter((entry) => entry.type === "registry:ui")
+         .map((entry) => ({
             title: entry.name,
             value: entry.name,
-            selected: options.all ? true : options.components?.includes(entry.name),
+            selected: options.all
+               ? true
+               : options.components?.includes(entry.name),
          })),
    })
 
    if (!components?.length) {
-      logger.warn('No components selected. Exiting.')
-      logger.info('')
+      logger.warn("No components selected. Exiting.")
+      logger.info("")
       process.exit(1)
    }
 
    const result = z.array(z.string()).safeParse(components)
    if (!result.success) {
-      logger.error('')
-      handleError(new Error('Something went wrong. Please try again.'))
+      logger.error("")
+      handleError(new Error("Something went wrong. Please try again."))
       return []
    }
    return result.data

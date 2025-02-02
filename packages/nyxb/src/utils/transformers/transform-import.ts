@@ -1,24 +1,41 @@
-import type { Config } from '~/src/utils/get-config'
-import type { Transformer } from '~/src/utils/transformers'
+import type { Config } from "~/src/utils/get-config"
+import type { Transformer } from "~/src/utils/transformers"
 
-export const transformImport: Transformer = async ({ sourceFile, config }) => {
+const COMMON_CN_IMPORTS = {
+   "~/lib/utils": /^~\/lib\/utils/,
+   "@workspace/lib/utils": /^@workspace\/lib\/utils/,
+}
+
+export const transformImport: Transformer = async ({
+   sourceFile,
+   config,
+   isRemote,
+}) => {
    const importDeclarations = sourceFile.getImportDeclarations()
 
    for (const importDeclaration of importDeclarations) {
       const moduleSpecifier = updateImportAliases(
          importDeclaration.getModuleSpecifierValue(),
          config,
+         isRemote,
       )
 
       importDeclaration.setModuleSpecifier(moduleSpecifier)
 
       // Replace `import { ny } from "~/lib/utils"`
-      if (moduleSpecifier === '~/lib/utils') {
+      if (
+         COMMON_CN_IMPORTS[moduleSpecifier as keyof typeof COMMON_CN_IMPORTS]
+      ) {
          const namedImports = importDeclaration.getNamedImports()
-         const cnImport = namedImports.find(i => i.getName() === 'ny')
+         const cnImport = namedImports.find((i) => i.getName() === "cn")
          if (cnImport) {
             importDeclaration.setModuleSpecifier(
-               moduleSpecifier.replace(/^~\/lib\/utils/, config.aliases.utils),
+               moduleSpecifier.replace(
+                  COMMON_CN_IMPORTS[
+                     moduleSpecifier as keyof typeof COMMON_CN_IMPORTS
+                  ],
+                  config.aliases.utils,
+               ),
             )
          }
       }
@@ -27,16 +44,25 @@ export const transformImport: Transformer = async ({ sourceFile, config }) => {
    return sourceFile
 }
 
-function updateImportAliases(moduleSpecifier: string, config: Config) {
+function updateImportAliases(
+   moduleSpecifier: string,
+   config: Config,
+   isRemote = false,
+) {
    // Not a local import.
-   if (!moduleSpecifier.startsWith('~/')) {
+   if (!moduleSpecifier.startsWith("~/") && !isRemote) {
       return moduleSpecifier
    }
 
+   // This treats the remote as coming from a faux registry.
+   if (isRemote && moduleSpecifier.startsWith("~/")) {
+      moduleSpecifier = moduleSpecifier.replace(/^~\//, `~/registry/miami/`)
+   }
+
    // Not a registry import.
-   if (!moduleSpecifier.startsWith('~/registry/')) {
+   if (!moduleSpecifier.startsWith("~/registry/")) {
       // We fix the alias and return.
-      const alias = config.aliases.components.split('/')[0]
+      const alias = config.aliases.components.split("/")[0]
       return moduleSpecifier.replace(/^~\//, `${alias}/`)
    }
 
@@ -48,8 +74,8 @@ function updateImportAliases(moduleSpecifier: string, config: Config) {
    }
 
    if (
-      config.aliases.components
-      && moduleSpecifier.match(/^~\/registry\/(.+)\/components/)
+      config.aliases.components &&
+      moduleSpecifier.match(/^~\/registry\/(.+)\/components/)
    ) {
       return moduleSpecifier.replace(
          /^~\/registry\/(.+)\/components/,
@@ -65,8 +91,8 @@ function updateImportAliases(moduleSpecifier: string, config: Config) {
    }
 
    if (
-      config.aliases.hooks
-      && moduleSpecifier.match(/^~\/registry\/(.+)\/hooks/)
+      config.aliases.hooks &&
+      moduleSpecifier.match(/^~\/registry\/(.+)\/hooks/)
    ) {
       return moduleSpecifier.replace(
          /^~\/registry\/(.+)\/hooks/,

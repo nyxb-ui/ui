@@ -1,10 +1,9 @@
-import { transformFromAstSync } from '@babel/core'
-import type { ParserOptions } from '@babel/parser'
-import { parse } from '@babel/parser'
-// @ts-expect-error babel plugin typescript is not typed
-import transformTypescript from '@babel/plugin-transform-typescript'
-import * as recast from 'recast'
-import type { Transformer } from '~/src/utils/transformers'
+import { transformFromAstSync } from "@babel/core"
+import { type ParserOptions, parse } from "@babel/parser"
+// @ts-ignore
+import transformTypescript from "@babel/plugin-transform-typescript"
+import * as recast from "recast"
+import type { Transformer } from "~/src/utils/transformers"
 
 // TODO.
 // I'm using recast for the AST here.
@@ -15,50 +14,50 @@ import type { Transformer } from '~/src/utils/transformers'
 // We want to be able to parse any valid tsx code.
 // See https://github.com/benjamn/recast/blob/master/parsers/_babel_options.ts.
 const PARSE_OPTIONS: ParserOptions = {
-   sourceType: 'module',
+   sourceType: "module",
    allowImportExportEverywhere: true,
    allowReturnOutsideFunction: true,
    startLine: 1,
    tokens: true,
    plugins: [
-      'asyncGenerators',
-      'bigInt',
-      'classPrivateMethods',
-      'classPrivateProperties',
-      'classProperties',
-      'classStaticBlock',
-      'decimal',
-      'decorators-legacy',
-      'doExpressions',
-      'dynamicImport',
-      'exportDefaultFrom',
-      'exportNamespaceFrom',
-      'functionBind',
-      'functionSent',
-      'importAssertions',
-      'importMeta',
-      'nullishCoalescingOperator',
-      'numericSeparator',
-      'objectRestSpread',
-      'optionalCatchBinding',
-      'optionalChaining',
+      "asyncGenerators",
+      "bigInt",
+      "classPrivateMethods",
+      "classPrivateProperties",
+      "classProperties",
+      "classStaticBlock",
+      "decimal",
+      "decorators-legacy",
+      "doExpressions",
+      "dynamicImport",
+      "exportDefaultFrom",
+      "exportNamespaceFrom",
+      "functionBind",
+      "functionSent",
+      "importAssertions",
+      "importMeta",
+      "nullishCoalescingOperator",
+      "numericSeparator",
+      "objectRestSpread",
+      "optionalCatchBinding",
+      "optionalChaining",
       [
-         'pipelineOperator',
+         "pipelineOperator",
          {
-            proposal: 'minimal',
+            proposal: "minimal",
          },
       ],
       [
-         'recordAndTuple',
+         "recordAndTuple",
          {
-            syntaxType: 'hash',
+            syntaxType: "hash",
          },
       ],
-      'throwExpressions',
-      'topLevelAwait',
-      'v8intrinsic',
-      'typescript',
-      'jsx',
+      "throwExpressions",
+      "topLevelAwait",
+      "v8intrinsic",
+      "typescript",
+      "jsx",
    ],
 }
 
@@ -89,7 +88,7 @@ export const transformJsx: Transformer<string> = async ({
    })
 
    if (!result || !result.ast) {
-      throw new Error('Failed to transform JSX')
+      throw new Error("Failed to transform JSX")
    }
 
    return recast.print(result.ast).code

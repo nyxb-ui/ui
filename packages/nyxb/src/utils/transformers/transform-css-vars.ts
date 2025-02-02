@@ -1,7 +1,7 @@
-import { ScriptKind, SyntaxKind } from 'ts-morph'
-import type { z } from 'zod'
-import type { registryBaseColorSchema } from '~/src/utils/registry/schema'
-import type { Transformer } from '~/src/utils/transformers'
+import { ScriptKind, SyntaxKind } from "ts-morph"
+import type { z } from "zod"
+import type { registryBaseColorSchema } from "~/src/registry/schema"
+import type { Transformer } from "~/src/utils/transformers"
 
 export const transformCssVars: Transformer = async ({
    sourceFile,
@@ -34,7 +34,7 @@ export const transformCssVars: Transformer = async ({
       const value = node.getText()
       if (value) {
          const valueWithColorMapping = applyColorMapping(
-            value.replace(/"/g, ''),
+            value.replace(/"/g, ""),
             baseColor.inlineColors,
          )
          node.replaceWithText(`"${valueWithColorMapping.trim()}"`)
@@ -68,7 +68,7 @@ export const transformCssVars: Transformer = async ({
 //           node.value.expression.type === "CallExpression"
 //         ) {
 //           const callee = node.value.expression.callee
-//           if (callee.type === "Identifier" && callee.name === "ny") {
+//           if (callee.type === "Identifier" && callee.name === "cn") {
 //             node.value.expression.arguments.forEach((arg) => {
 //               if (arg.type === "StringLiteral") {
 //                 arg.value = applyColorMapping(arg.value)
@@ -105,27 +105,27 @@ export const transformCssVars: Transformer = async ({
 // Splits a className into variant-name-alpha.
 // eg. hover:bg-primary-100 -> [hover, bg-primary, 100]
 export function splitClassName(className: string): (string | null)[] {
-   if (!className.includes('/') && !className.includes(':')) {
+   if (!className.includes("/") && !className.includes(":")) {
       return [null, className, null]
    }
 
    const parts: (string | null)[] = []
    // First we split to find the alpha.
-   const [rest, alpha] = className.split('/')
+   const [rest, alpha] = className.split("/")
 
    // Check if rest has a colon.
-   if (!rest.includes(':')) {
+   if (!rest.includes(":")) {
       return [null, rest, alpha]
    }
 
    // Next we split the rest by the colon.
-   const split = rest.split(':')
+   const split = rest.split(":")
 
    // We take the last item from the split as the name.
    const name = split.pop()
 
    // We glue back the rest of the split.
-   const variant = split.join(':')
+   const variant = split.join(":")
 
    // Finally we push the variant, name and alpha.
    parts.push(variant ?? null, name ?? null, alpha ?? null)
@@ -133,24 +133,24 @@ export function splitClassName(className: string): (string | null)[] {
    return parts
 }
 
-const PREFIXES = ['bg-', 'text-', 'border-', 'ring-offset-', 'ring-']
+const PREFIXES = ["bg-", "text-", "border-", "ring-offset-", "ring-"]
 
 export function applyColorMapping(
    input: string,
-   mapping: z.infer<typeof registryBaseColorSchema>['inlineColors'],
+   mapping: z.infer<typeof registryBaseColorSchema>["inlineColors"],
 ) {
    // Handle border classes.
-   if (input.includes(' border ')) {
-      input = input.replace(' border ', ' border border-border ')
+   if (input.includes(" border ")) {
+      input = input.replace(" border ", " border border-border ")
    }
 
    // Build color mappings.
-   const classNames = input.split(' ')
+   const classNames = input.split(" ")
    const lightMode = new Set<string>()
    const darkMode = new Set<string>()
    for (const className of classNames) {
       const [variant, value, modifier] = splitClassName(className)
-      const prefix = PREFIXES.find(prefix => value?.startsWith(prefix))
+      const prefix = PREFIXES.find((prefix) => value?.startsWith(prefix))
       if (!prefix) {
          if (!lightMode.has(className)) {
             lightMode.add(className)
@@ -158,18 +158,18 @@ export function applyColorMapping(
          continue
       }
 
-      const needle = value?.replace(prefix, '')
+      const needle = value?.replace(prefix, "")
       if (needle && needle in mapping.light) {
          lightMode.add(
             [variant, `${prefix}${mapping.light[needle]}`]
                .filter(Boolean)
-               .join(':') + (modifier ? `/${modifier}` : ''),
+               .join(":") + (modifier ? `/${modifier}` : ""),
          )
 
          darkMode.add(
-            ['dark', variant, `${prefix}${mapping.dark[needle]}`]
+            ["dark", variant, `${prefix}${mapping.dark[needle]}`]
                .filter(Boolean)
-               .join(':') + (modifier ? `/${modifier}` : ''),
+               .join(":") + (modifier ? `/${modifier}` : ""),
          )
          continue
       }
@@ -179,5 +179,5 @@ export function applyColorMapping(
       }
    }
 
-   return [...Array.from(lightMode), ...Array.from(darkMode)].join(' ').trim()
+   return [...Array.from(lightMode), ...Array.from(darkMode)].join(" ").trim()
 }

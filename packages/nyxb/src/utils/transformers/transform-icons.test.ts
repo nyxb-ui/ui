@@ -1,57 +1,58 @@
-import { describe, expect, it, vi } from 'vitest'
-import { transform } from '~/src/utils/transformers'
-import type { Config } from '~/src/utils/get-config'
-import { transformIcons } from '~/src/utils/transformers/transform-icons'
+import { describe, expect, test, vi } from "vitest"
+import type { Config } from "~/src/utils/get-config"
+import { transformIcons } from "~/src/utils/transformers/transform-icons"
+
+import { transform } from "../transformers"
 
 const testConfig: Config = {
-   style: 'miami',
+   style: "miami",
    tsx: true,
    rsc: true,
    tailwind: {
-      baseColor: 'neutral',
+      baseColor: "neutral",
       cssVariables: true,
-      config: 'tailwind.config.ts',
-      css: 'tailwind.css',
+      config: "tailwind.config.ts",
+      css: "tailwind.css",
    },
    aliases: {
-      components: '~/components',
-      utils: '~/lib/utils',
+      components: "~/components",
+      utils: "~/lib/utils",
    },
    resolvedPaths: {
-      cwd: '/',
-      components: '/components',
-      utils: '/lib/utils',
-      ui: '/ui',
-      lib: '/lib',
-      hooks: '/hooks',
-      tailwindConfig: 'tailwind.config.ts',
-      tailwindCss: 'tailwind.css',
+      cwd: "/",
+      components: "/components",
+      utils: "/lib/utils",
+      ui: "/ui",
+      lib: "/lib",
+      hooks: "/hooks",
+      tailwindConfig: "tailwind.config.ts",
+      tailwindCss: "tailwind.css",
    },
 }
 
-vi.mock('~/src/utils/registry', () => ({
+vi.mock("~/src/registry/api", () => ({
    getRegistryIcons: () => ({
       Check: {
-         lucide: 'Check',
-         radix: 'CheckIcon',
+         lucide: "Check",
+         radix: "CheckIcon",
       },
       ChevronDown: {
-         lucide: 'ChevronDown',
-         radix: 'ChevronDownIcon',
+         lucide: "ChevronDown",
+         radix: "ChevronDownIcon",
       },
       ChevronLeft: {
-         lucide: 'ChevronLeft',
-         radix: 'ChevronLeftIcon',
+         lucide: "ChevronLeft",
+         radix: "ChevronLeftIcon",
       },
    }),
 }))
 
-describe('transformIcons', () => {
-   it('transforms radix icons', async () => {
+describe("transformIcons", () => {
+   test("transforms radix icons", async () => {
       expect(
          await transform(
             {
-               filename: 'test.ts',
+               filename: "test.ts",
                raw: `import * as React from "react"
 import { Check } from "lucide-react"
 
@@ -61,7 +62,7 @@ return <div><Check /></div>
   `,
                config: {
                   ...testConfig,
-                  iconLibrary: 'radix',
+                  iconLibrary: "radix",
                },
             },
             [transformIcons],
@@ -77,11 +78,11 @@ return <div><Check /></div>
     `)
    })
 
-   it('does not transform lucide icons', async () => {
+   test("does not transform lucide icons", async () => {
       expect(
          await transform(
             {
-               filename: 'test.ts',
+               filename: "test.ts",
                raw: `import * as React from "react"
 import { Check } from "lucide-react"
 
@@ -91,7 +92,7 @@ export function Component() {
     `,
                config: {
                   ...testConfig,
-                  iconLibrary: 'lucide',
+                  iconLibrary: "lucide",
                },
             },
             [transformIcons],
@@ -107,11 +108,11 @@ export function Component() {
     `)
    })
 
-   it('preserves semicolon', async () => {
+   test("preserves semicolon", async () => {
       expect(
          await transform(
             {
-               filename: 'test.ts',
+               filename: "test.ts",
                raw: `import * as React from "react";
 import { ChevronDown } from "lucide-react";
 
@@ -121,7 +122,7 @@ export function Component() {
     `,
                config: {
                   ...testConfig,
-                  iconLibrary: 'radix',
+                  iconLibrary: "radix",
                },
             },
             [transformIcons],

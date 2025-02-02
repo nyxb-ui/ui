@@ -1,11 +1,10 @@
-import type { SourceFile } from 'ts-morph'
-import { SyntaxKind } from 'ts-morph'
-import { ICON_LIBRARIES } from '~/src/utils/icon-libraries'
-import { getRegistryIcons } from '~/src/utils/registry'
-import type { Transformer } from '~/src/utils/transformers'
+import { type SourceFile, SyntaxKind } from "ts-morph"
+import { getRegistryIcons } from "~/src/registry/api"
+import { ICON_LIBRARIES } from "~/src/utils/icon-libraries"
+import type { Transformer } from "~/src/utils/transformers"
 
 // Lucide is the default icon library in the registry.
-const SOURCE_LIBRARY = 'lucide'
+const SOURCE_LIBRARY = "lucide"
 
 export const transformIcons: Transformer = async ({ sourceFile, config }) => {
    // No transform if we cannot read the icon library.
@@ -24,8 +23,8 @@ export const transformIcons: Transformer = async ({ sourceFile, config }) => {
    const targetedIcons: string[] = []
    for (const importDeclaration of sourceFile.getImportDeclarations() ?? []) {
       if (
-         importDeclaration.getModuleSpecifier()?.getText()
-         !== `"${ICON_LIBRARIES[SOURCE_LIBRARY].import}"`
+         importDeclaration.getModuleSpecifier()?.getText() !==
+         `"${ICON_LIBRARIES[SOURCE_LIBRARY].import}"`
       ) {
          continue
       }
@@ -47,8 +46,10 @@ export const transformIcons: Transformer = async ({ sourceFile, config }) => {
          // Replace with the targeted icon.
          sourceFile
             .getDescendantsOfKind(SyntaxKind.JsxSelfClosingElement)
-            .filter(node => node.getTagNameNode()?.getText() === iconName)
-            .forEach(node => node.getTagNameNode()?.replaceWithText(targetedIcon))
+            .filter((node) => node.getTagNameNode()?.getText() === iconName)
+            .forEach((node) =>
+               node.getTagNameNode()?.replaceWithText(targetedIcon),
+            )
       }
 
       // If the named import is empty, remove the import declaration.
@@ -60,15 +61,16 @@ export const transformIcons: Transformer = async ({ sourceFile, config }) => {
    if (targetedIcons.length > 0) {
       const iconImportDeclaration = sourceFile.addImportDeclaration({
          moduleSpecifier:
-        ICON_LIBRARIES[targetLibrary as keyof typeof ICON_LIBRARIES]?.import,
-         namedImports: targetedIcons.map(icon => ({
+            ICON_LIBRARIES[targetLibrary as keyof typeof ICON_LIBRARIES]
+               ?.import,
+         namedImports: targetedIcons.map((icon) => ({
             name: icon,
          })),
       })
 
       if (!_useSemicolon(sourceFile)) {
          iconImportDeclaration.replaceWithText(
-            iconImportDeclaration.getText().replace(';', ''),
+            iconImportDeclaration.getText().replace(";", ""),
          )
       }
    }
@@ -78,6 +80,6 @@ export const transformIcons: Transformer = async ({ sourceFile, config }) => {
 
 function _useSemicolon(sourceFile: SourceFile) {
    return (
-      sourceFile.getImportDeclarations()?.[0]?.getText().endsWith(';') ?? false
+      sourceFile.getImportDeclarations()?.[0]?.getText().endsWith(";") ?? false
    )
 }

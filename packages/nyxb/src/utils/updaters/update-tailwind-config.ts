@@ -1,39 +1,39 @@
-import { promises as fs } from 'fs'
-import { tmpdir } from 'os'
-import path from 'path'
-import deepmerge from 'deepmerge'
-import objectToString from 'stringify-object'
-import type { Config as TailwindConfig } from 'tailwindcss'
-import type {
-   ArrayLiteralExpression,
-   ObjectLiteralExpression,
-   PropertyAssignment,
-   VariableStatement,
-} from 'ts-morph'
+import { promises as fs } from "fs"
+import { tmpdir } from "os"
+import path from "path"
+import deepmerge from "deepmerge"
+import objectToString from "stringify-object"
+import type { Config as TailwindConfig } from "tailwindcss"
 import {
+   type ArrayLiteralExpression,
+   type ObjectLiteralExpression,
    Project,
+   type PropertyAssignment,
    QuoteKind,
    ScriptKind,
    SyntaxKind,
-} from 'ts-morph'
-import type { z } from 'zod'
-import { spinner } from '~/src/utils/spinner'
-import type { registryItemTailwindSchema } from '~/src/utils/registry/schema'
-import { highlighter } from '~/src/utils/highlighter'
-import type { Config } from '~/src/utils/get-config'
+   type VariableStatement,
+} from "ts-morph"
+import type { z } from "zod"
+import type { registryItemTailwindSchema } from "~/src/registry/schema"
+import type { Config } from "~/src/utils/get-config"
+import type { TailwindVersion } from "~/src/utils/get-project-info"
+import { highlighter } from "~/src/utils/highlighter"
+import { spinner } from "~/src/utils/spinner"
 
-export type UpdaterTailwindConfig = Omit<TailwindConfig, 'plugins'> & {
+export type UpdaterTailwindConfig = Omit<TailwindConfig, "plugins"> & {
    // We only want string plugins for now.
    plugins?: string[]
 }
 
 export async function updateTailwindConfig(
    tailwindConfig:
-      | z.infer<typeof registryItemTailwindSchema>['config']
+      | z.infer<typeof registryItemTailwindSchema>["config"]
       | undefined,
    config: Config,
    options: {
       silent?: boolean
+      tailwindVersion?: TailwindVersion
    },
 ) {
    if (!tailwindConfig) {
@@ -42,7 +42,13 @@ export async function updateTailwindConfig(
 
    options = {
       silent: false,
+      tailwindVersion: "v3",
       ...options,
+   }
+
+   // No tailwind config in v4.
+   if (options.tailwindVersion === "v4") {
+      return
    }
 
    const tailwindFileRelativePath = path.relative(
@@ -50,14 +56,14 @@ export async function updateTailwindConfig(
       config.resolvedPaths.tailwindConfig,
    )
    const tailwindSpinner = spinner(
-    `Updating ${highlighter.info(tailwindFileRelativePath)}`,
-    {
-       silent: options.silent,
-    },
+      `Updating ${highlighter.info(tailwindFileRelativePath)}`,
+      {
+         silent: options.silent,
+      },
    ).start()
-   const raw = await fs.readFile(config.resolvedPaths.tailwindConfig, 'utf8')
+   const raw = await fs.readFile(config.resolvedPaths.tailwindConfig, "utf8")
    const output = await transformTailwindConfig(raw, tailwindConfig, config)
-   await fs.writeFile(config.resolvedPaths.tailwindConfig, output, 'utf8')
+   await fs.writeFile(config.resolvedPaths.tailwindConfig, output, "utf8")
    tailwindSpinner?.succeed()
 }
 
@@ -72,13 +78,13 @@ export async function transformTailwindConfig(
    // TODO: maybe we do need to traverse the default export?
    const configObject = sourceFile
       .getDescendantsOfKind(SyntaxKind.ObjectLiteralExpression)
-      .find(node =>
+      .find((node) =>
          node
             .getProperties()
             .some(
-               property =>
-                  property.isKind(SyntaxKind.PropertyAssignment)
-                  && property.getName() === 'content',
+               (property) =>
+                  property.isKind(SyntaxKind.PropertyAssignment) &&
+                  property.getName() === "content",
             ),
       )
 
@@ -93,8 +99,8 @@ export async function transformTailwindConfig(
    addTailwindConfigProperty(
       configObject,
       {
-         name: 'darkMode',
-         value: 'class',
+         name: "darkMode",
+         value: "class",
       },
       { quoteChar },
    )
@@ -124,7 +130,7 @@ function addTailwindConfigProperty(
       quoteChar: string
    },
 ) {
-   const existingProperty = configObject.getProperty('darkMode')
+   const existingProperty = configObject.getProperty("darkMode")
 
    if (!existingProperty) {
       const newProperty = {
@@ -133,7 +139,7 @@ function addTailwindConfigProperty(
       }
 
       // We need to add darkMode as the first property.
-      if (property.name === 'darkMode') {
+      if (property.name === "darkMode") {
          configObject.insertPropertyAssignment(0, newProperty)
          return configObject
       }
@@ -156,11 +162,11 @@ function addTailwindConfigProperty(
 
       // If property is an array, append.
       if (initializer?.isKind(SyntaxKind.ArrayLiteralExpression)) {
-      // Check if the array already contains the value.
+         // Check if the array already contains the value.
          if (
             initializer
                .getElements()
-               .map(element => element.getText())
+               .map((element) => element.getText())
                .includes(newValue)
          ) {
             return configObject
@@ -176,13 +182,13 @@ function addTailwindConfigProperty(
 
 async function addTailwindConfigTheme(
    configObject: ObjectLiteralExpression,
-   theme: UpdaterTailwindConfig['theme'],
+   theme: UpdaterTailwindConfig["theme"],
 ) {
    // Ensure there is a theme property.
-   if (!configObject.getProperty('theme')) {
+   if (!configObject.getProperty("theme")) {
       configObject.addPropertyAssignment({
-         name: 'theme',
-         initializer: '{}',
+         name: "theme",
+         initializer: "{}",
       })
    }
 
@@ -190,7 +196,7 @@ async function addTailwindConfigTheme(
    nestSpreadProperties(configObject)
 
    const themeProperty = configObject
-      .getPropertyOrThrow('theme')
+      .getPropertyOrThrow("theme")
       ?.asKindOrThrow(SyntaxKind.PropertyAssignment)
 
    const themeInitializer = themeProperty.getInitializer()
@@ -201,15 +207,15 @@ async function addTailwindConfigTheme(
          arrayMerge: (dst, src) => src,
       })
       const resultString = objectToString(result)
-         .replace(/'\.\.\.(.*)'/g, '...$1') // Remove quote around spread element
-         .replace(/'"/g, '\'') // Replace `\" with "
-         .replace(/"'/g, '\'') // Replace `\" with "
-         .replace(/'\[/g, '[') // Replace `[ with [
-         .replace(/\]'/g, ']') // Replace `] with ]
-         .replace(/'\\'/g, '\'') // Replace `\' with '
-         .replace(/\\'/g, '\'') // Replace \' with '
-         .replace(/\\''/g, '\'')
-         .replace(/''/g, '\'')
+         .replace(/\'\.\.\.(.*)\'/g, "...$1") // Remove quote around spread element
+         .replace(/\'\"/g, "'") // Replace `\" with "
+         .replace(/\"\'/g, "'") // Replace `\" with "
+         .replace(/\'\[/g, "[") // Replace `[ with [
+         .replace(/\]\'/g, "]") // Replace `] with ]
+         .replace(/\'\\\'/g, "'") // Replace `\' with '
+         .replace(/\\\'/g, "'") // Replace \' with '
+         .replace(/\\\'\'/g, "'")
+         .replace(/\'\'/g, "'")
       themeInitializer.replaceWithText(resultString)
    }
 
@@ -221,11 +227,11 @@ function addTailwindConfigPlugin(
    configObject: ObjectLiteralExpression,
    plugin: string,
 ) {
-   const existingPlugins = configObject.getProperty('plugins')
+   const existingPlugins = configObject.getProperty("plugins")
 
    if (!existingPlugins) {
       configObject.addPropertyAssignment({
-         name: 'plugins',
+         name: "plugins",
          initializer: `[${plugin}]`,
       })
 
@@ -240,9 +246,9 @@ function addTailwindConfigPlugin(
             initializer
                .getElements()
                .map((element) => {
-                  return element.getText().replace(/["']/g, '')
+                  return element.getText().replace(/["']/g, "")
                })
-               .includes(plugin.replace(/["']/g, ''))
+               .includes(plugin.replace(/["']/g, ""))
          ) {
             return configObject
          }
@@ -256,9 +262,9 @@ function addTailwindConfigPlugin(
 }
 
 export async function _createSourceFile(input: string, config: Config | null) {
-   const dir = await fs.mkdtemp(path.join(tmpdir(), 'nyxb-'))
-   const resolvedPath
-    = config?.resolvedPaths?.tailwindConfig || 'tailwind.config.ts'
+   const dir = await fs.mkdtemp(path.join(tmpdir(), "nyxb-"))
+   const resolvedPath =
+      config?.resolvedPaths?.tailwindConfig || "tailwind.config.ts"
    const tempFile = path.join(dir, `nyxb-${path.basename(resolvedPath)}`)
 
    const project = new Project({
@@ -268,7 +274,7 @@ export async function _createSourceFile(input: string, config: Config | null) {
       // Note: .js and .mjs can still be valid for TS projects.
       // We can't infer TypeScript from config.tsx.
       scriptKind:
-      path.extname(resolvedPath) === '.ts' ? ScriptKind.TS : ScriptKind.JS,
+         path.extname(resolvedPath) === ".ts" ? ScriptKind.TS : ScriptKind.JS,
    })
 
    return sourceFile
@@ -278,7 +284,7 @@ export function _getQuoteChar(configObject: ObjectLiteralExpression) {
    return configObject
       .getFirstDescendantByKind(SyntaxKind.StringLiteral)
       ?.getQuoteKind() === QuoteKind.Single
-      ? '\''
+      ? "'"
       : '"'
 }
 
@@ -288,35 +294,37 @@ export function nestSpreadProperties(obj: ObjectLiteralExpression) {
    for (let i = 0; i < properties.length; i++) {
       const prop = properties[i]
       if (prop.isKind(SyntaxKind.SpreadAssignment)) {
-         const spreadAssignment = prop.asKindOrThrow(SyntaxKind.SpreadAssignment)
+         const spreadAssignment = prop.asKindOrThrow(
+            SyntaxKind.SpreadAssignment,
+         )
          const spreadText = spreadAssignment.getExpression().getText()
 
          // Replace spread with a property assignment
          obj.insertPropertyAssignment(i, {
             // Need to escape the name with " so that deepmerge doesn't mishandle the key
-            name: `"___${spreadText.replace(/^\.\.\./, '')}"`,
-            initializer: `"...${spreadText.replace(/^\.\.\./, '')}"`,
+            name: `"___${spreadText.replace(/^\.\.\./, "")}"`,
+            initializer: `"...${spreadText.replace(/^\.\.\./, "")}"`,
          })
 
          // Remove the original spread assignment
          spreadAssignment.remove()
-      }
-      else if (prop.isKind(SyntaxKind.PropertyAssignment)) {
-         const propAssignment = prop.asKindOrThrow(SyntaxKind.PropertyAssignment)
+      } else if (prop.isKind(SyntaxKind.PropertyAssignment)) {
+         const propAssignment = prop.asKindOrThrow(
+            SyntaxKind.PropertyAssignment,
+         )
          const initializer = propAssignment.getInitializer()
 
          if (
-            initializer
-            && initializer.isKind(SyntaxKind.ObjectLiteralExpression)
+            initializer &&
+            initializer.isKind(SyntaxKind.ObjectLiteralExpression)
          ) {
             // Recursively process nested object literals
             nestSpreadProperties(
                initializer.asKindOrThrow(SyntaxKind.ObjectLiteralExpression),
             )
-         }
-         else if (
-            initializer
-            && initializer.isKind(SyntaxKind.ArrayLiteralExpression)
+         } else if (
+            initializer &&
+            initializer.isKind(SyntaxKind.ArrayLiteralExpression)
          ) {
             nestSpreadElements(
                initializer.asKindOrThrow(SyntaxKind.ArrayLiteralExpression),
@@ -331,18 +339,16 @@ export function nestSpreadElements(arr: ArrayLiteralExpression) {
    for (let j = 0; j < elements.length; j++) {
       const element = elements[j]
       if (element.isKind(SyntaxKind.ObjectLiteralExpression)) {
-      // Recursive check on objects within arrays
+         // Recursive check on objects within arrays
          nestSpreadProperties(
             element.asKindOrThrow(SyntaxKind.ObjectLiteralExpression),
          )
-      }
-      else if (element.isKind(SyntaxKind.ArrayLiteralExpression)) {
-      // Recursive check on nested arrays
+      } else if (element.isKind(SyntaxKind.ArrayLiteralExpression)) {
+         // Recursive check on nested arrays
          nestSpreadElements(
             element.asKindOrThrow(SyntaxKind.ArrayLiteralExpression),
          )
-      }
-      else if (element.isKind(SyntaxKind.SpreadElement)) {
+      } else if (element.isKind(SyntaxKind.SpreadElement)) {
          const spreadText = element.getText()
          // Spread element within an array
          arr.removeElement(j)
@@ -364,17 +370,15 @@ export function unnestSpreadProperties(obj: ObjectLiteralExpression) {
             const value = initializer
                .asKindOrThrow(SyntaxKind.StringLiteral)
                .getLiteralValue()
-            if (value.startsWith('...')) {
+            if (value.startsWith("...")) {
                obj.insertSpreadAssignment(i, { expression: value.slice(3) })
                propAssignment.remove()
             }
-         }
-         else if (initializer?.isKind(SyntaxKind.ObjectLiteralExpression)) {
+         } else if (initializer?.isKind(SyntaxKind.ObjectLiteralExpression)) {
             unnestSpreadProperties(initializer as ObjectLiteralExpression)
-         }
-         else if (
-            initializer
-            && initializer.isKind(SyntaxKind.ArrayLiteralExpression)
+         } else if (
+            initializer &&
+            initializer.isKind(SyntaxKind.ArrayLiteralExpression)
          ) {
             unnsetSpreadElements(
                initializer.asKindOrThrow(SyntaxKind.ArrayLiteralExpression),
@@ -389,24 +393,22 @@ export function unnsetSpreadElements(arr: ArrayLiteralExpression) {
    for (let j = 0; j < elements.length; j++) {
       const element = elements[j]
       if (element.isKind(SyntaxKind.ObjectLiteralExpression)) {
-      // Recursive check on objects within arrays
+         // Recursive check on objects within arrays
          unnestSpreadProperties(
             element.asKindOrThrow(SyntaxKind.ObjectLiteralExpression),
          )
-      }
-      else if (element.isKind(SyntaxKind.ArrayLiteralExpression)) {
-      // Recursive check on nested arrays
+      } else if (element.isKind(SyntaxKind.ArrayLiteralExpression)) {
+         // Recursive check on nested arrays
          unnsetSpreadElements(
             element.asKindOrThrow(SyntaxKind.ArrayLiteralExpression),
          )
-      }
-      else if (element.isKind(SyntaxKind.StringLiteral)) {
+      } else if (element.isKind(SyntaxKind.StringLiteral)) {
          const spreadText = element.getText()
          // check if spread element
-         const spreadTest = /^['"](\.\.\..*)['"]$/g
+         const spreadTest = /(?:^['"])(\.\.\..*)(?:['"]$)/g
          if (spreadTest.test(spreadText)) {
             arr.removeElement(j)
-            arr.insertElement(j, spreadText.replace(spreadTest, '$1'))
+            arr.insertElement(j, spreadText.replace(spreadTest, "$1"))
          }
       }
    }
@@ -414,8 +416,8 @@ export function unnsetSpreadElements(arr: ArrayLiteralExpression) {
 
 async function parseObjectLiteral(objectLiteralString: string): Promise<any> {
    const sourceFile = await _createSourceFile(
-    `const theme = ${objectLiteralString}`,
-    null,
+      `const theme = ${objectLiteralString}`,
+      null,
    )
 
    const statement = sourceFile.getStatements()[0]
@@ -429,29 +431,29 @@ async function parseObjectLiteral(objectLiteralString: string): Promise<any> {
       }
    }
 
-   throw new Error('Invalid input: not an object literal')
+   throw new Error("Invalid input: not an object literal")
 }
 
 function parseObjectLiteralExpression(node: ObjectLiteralExpression): any {
    const result: any = {}
    for (const property of node.getProperties()) {
       if (property.isKind(SyntaxKind.PropertyAssignment)) {
-         const name = property.getName().replace(/'/g, '')
+         const name = property.getName().replace(/\'/g, "")
          if (
-            property.getInitializer()?.isKind(SyntaxKind.ObjectLiteralExpression)
+            property
+               .getInitializer()
+               ?.isKind(SyntaxKind.ObjectLiteralExpression)
          ) {
             result[name] = parseObjectLiteralExpression(
                property.getInitializer() as ObjectLiteralExpression,
             )
-         }
-         else if (
+         } else if (
             property.getInitializer()?.isKind(SyntaxKind.ArrayLiteralExpression)
          ) {
             result[name] = parseArrayLiteralExpression(
                property.getInitializer() as ArrayLiteralExpression,
             )
-         }
-         else {
+         } else {
             result[name] = parseValue(property.getInitializer())
          }
       }
@@ -468,15 +470,13 @@ function parseArrayLiteralExpression(node: ArrayLiteralExpression): any[] {
                element.asKindOrThrow(SyntaxKind.ObjectLiteralExpression),
             ),
          )
-      }
-      else if (element.isKind(SyntaxKind.ArrayLiteralExpression)) {
+      } else if (element.isKind(SyntaxKind.ArrayLiteralExpression)) {
          result.push(
             parseArrayLiteralExpression(
                element.asKindOrThrow(SyntaxKind.ArrayLiteralExpression),
             ),
          )
-      }
-      else {
+      } else {
          result.push(parseValue(element))
       }
    }
@@ -510,20 +510,18 @@ export function buildTailwindThemeColorsFromCssVars(
    const result: Record<string, any> = {}
 
    for (const key of Object.keys(cssVars)) {
-      const parts = key.split('-')
+      const parts = key.split("-")
       const colorName = parts[0]
-      const subType = parts.slice(1).join('-')
+      const subType = parts.slice(1).join("-")
 
-      if (subType === '') {
-         if (typeof result[colorName] === 'object') {
+      if (subType === "") {
+         if (typeof result[colorName] === "object") {
             result[colorName].DEFAULT = `hsl(var(--${key}))`
-         }
-         else {
+         } else {
             result[colorName] = `hsl(var(--${key}))`
          }
-      }
-      else {
-         if (typeof result[colorName] !== 'object') {
+      } else {
+         if (typeof result[colorName] !== "object") {
             result[colorName] = { DEFAULT: `hsl(var(--${colorName}))` }
          }
          result[colorName][subType] = `hsl(var(--${key}))`
@@ -533,9 +531,9 @@ export function buildTailwindThemeColorsFromCssVars(
    // Remove DEFAULT if it's not in the original cssVars
    for (const [colorName, value] of Object.entries(result)) {
       if (
-         typeof value === 'object'
-         && value.DEFAULT === `hsl(var(--${colorName}))`
-         && !(colorName in cssVars)
+         typeof value === "object" &&
+         value.DEFAULT === `hsl(var(--${colorName}))` &&
+         !(colorName in cssVars)
       ) {
          delete value.DEFAULT
       }
