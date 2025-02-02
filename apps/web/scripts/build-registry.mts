@@ -1,28 +1,24 @@
-/* eslint-disable no-console */
-// @sts-nocheck
-import { existsSync, promises as fs, readFileSync } from 'fs'
+// @ts-nocheck
+import { existsSync, promises as fs } from 'fs'
 import { tmpdir } from 'os'
 import path from 'path'
-import { cwd } from 'process'
-import template from 'lodash.template'
+import template from 'lodash/template'
+import {
+   type Registry,
+   registryItemSchema,
+   type registryItemTypeSchema,
+   registrySchema,
+} from 'nyxb/registry'
 import { rimraf } from 'rimraf'
-import { Project, ScriptKind, SyntaxKind } from 'ts-morph'
+import { Project, ScriptKind } from 'ts-morph'
 import type { z } from 'zod'
 
 import { registry } from '../registry'
 import { baseColors } from '../registry/registry-base-colors'
+import { registryCategories } from '../registry/registry-categories'
 import { colorMapping, colors } from '../registry/registry-colors'
 import { iconLibraries, icons } from '../registry/registry-icons'
 import { styles } from '../registry/registry-styles'
-import type {
-   Registry,
-   RegistryEntry,
-   registryItemTypeSchema,
-} from '../registry/schema'
-import {
-   registryEntrySchema,
-   registrySchema,
-} from '../registry/schema'
 import { fixImport } from './fix-import.mts'
 
 const REGISTRY_PATH = path.join(process.cwd(), 'public/r')
@@ -34,6 +30,7 @@ const REGISTRY_INDEX_WHITELIST: z.infer<typeof registryItemTypeSchema>[] = [
    'registry:theme',
    'registry:block',
    'registry:example',
+   'registry:internal',
 ]
 
 const project = new Project({
@@ -41,8 +38,63 @@ const project = new Project({
 })
 
 async function createTempSourceFile(filename: string) {
-   const dir = await fs.mkdtemp(path.join(tmpdir(), 'shadcn-'))
+   const dir = await fs.mkdtemp(path.join(tmpdir(), 'nyxb-'))
    return path.join(dir, filename)
+}
+
+// ----------------------------------------------------------------------------
+// Sync styles
+// ----------------------------------------------------------------------------
+async function syncStyles() {
+   const sourceStyle = 'miami'
+   const targetStyle = 'default'
+
+   const syncDirectories = ['blocks', 'hooks', 'internal', 'lib', 'charts']
+
+   // Clean up sync directories.
+   for (const dir of syncDirectories) {
+      rimraf.sync(path.join('registry', targetStyle, dir))
+   }
+
+   for (const item of registry.items) {
+      if (
+         !REGISTRY_INDEX_WHITELIST.includes(item.type)
+         && item.type !== 'registry:ui'
+      ) {
+         continue
+      }
+
+      const resolveFiles = item.files?.map(
+         file =>
+            `registry/${sourceStyle}/${typeof file === 'string' ? file : file.path}`,
+      )
+      if (!resolveFiles) {
+         continue
+      }
+
+      // Copy files to target style if they don't exist.
+      for (const file of resolveFiles) {
+         const sourcePath = path.join(process.cwd(), file)
+         const targetPath = path.join(
+            process.cwd(),
+            file.replace(sourceStyle, targetStyle),
+         )
+
+         if (!existsSync(targetPath)) {
+            // Create directory if it doesn't exist.
+            await fs.mkdir(path.dirname(targetPath), { recursive: true })
+            await fs.copyFile(sourcePath, targetPath)
+
+            // Replace all ~/registry/miami/ with ~/registry/default/.
+            const content = await fs.readFile(targetPath, 'utf8')
+            const fixedContent = content.replace(
+               new RegExp(`~/registry/${sourceStyle}/`, 'g'),
+               `~/registry/${targetStyle}/`,
+            )
+            await fs.writeFile(targetPath, fixedContent, 'utf8')
+         }
+      }
+   }
 }
 
 // ----------------------------------------------------------------------------
@@ -61,21 +113,35 @@ export const Index: Record<string, any> = {
       index += `  "${style.name}": {`
 
       // Build style index.
-      for (const item of registry) {
+      for (const item of registry.items) {
          const resolveFiles = item.files?.map(
             file =>
-          `registry/${style.name}/${
-            typeof file === 'string' ? file : file.path
-          }`,
+               `registry/${style.name}/${
+                  typeof file === 'string' ? file : file.path
+               }`,
          )
          if (!resolveFiles) {
             continue
          }
 
+         // Validate categories.
+         if (item.categories) {
+            const invalidCategories = item.categories.filter(
+               category =>
+                  !registryCategories.some(c => c.slug === category),
+            )
+
+            if (invalidCategories.length > 0) {
+               console.error(
+                  `${item.name} has invalid categories: ${invalidCategories}`,
+               )
+               process.exit(1)
+            }
+         }
+
          const type = item.type.split(':')[1]
          let sourceFilename = ''
 
-         let chunks: any = []
          if (item.type === 'registry:block') {
             const file = resolveFiles[0]
             const filename = path.basename(file)
@@ -90,14 +156,6 @@ export const Index: Record<string, any> = {
             const sourceFile = project.createSourceFile(tempFile, raw, {
                scriptKind: ScriptKind.TSX,
             })
-
-            const description = sourceFile
-               .getVariableDeclaration('description')
-               ?.getInitializerOrThrow()
-               .asKindOrThrow(SyntaxKind.StringLiteral)
-               .getLiteralValue()
-
-            item.description = description ?? ''
 
             // Find all imports.
             const imports = new Map<
@@ -127,129 +185,7 @@ export const Index: Record<string, any> = {
                }
             })
 
-            // Find all opening tags with x-chunk attribute.
-            const components = sourceFile
-               .getDescendantsOfKind(SyntaxKind.JsxOpeningElement)
-               .filter((node) => {
-                  return node.getAttribute('x-chunk') !== undefined
-               })
-
-            chunks = await Promise.all(
-               components.map(async (component, index) => {
-                  const chunkName = `${item.name}-chunk-${index}`
-
-                  // Get the value of x-chunk attribute.
-                  const attr = component
-                     .getAttributeOrThrow('x-chunk')
-                     .asKindOrThrow(SyntaxKind.JsxAttribute)
-
-                  const description = attr
-                     .getInitializerOrThrow()
-                     .asKindOrThrow(SyntaxKind.StringLiteral)
-                     .getLiteralValue()
-
-                  // Delete the x-chunk attribute.
-                  attr.remove()
-
-                  // Add a new attribute to the component.
-                  component.addAttribute({
-                     name: 'x-chunk',
-                     initializer: `"${chunkName}"`,
-                  })
-
-                  // Get the value of x-chunk-container attribute.
-                  const containerAttr = component
-                     .getAttribute('x-chunk-container')
-                     ?.asKindOrThrow(SyntaxKind.JsxAttribute)
-
-                  const containerClassName = containerAttr
-                     ?.getInitializer()
-                     ?.asKindOrThrow(SyntaxKind.StringLiteral)
-                     .getLiteralValue()
-
-                  containerAttr?.remove()
-
-                  const parentJsxElement = component.getParentIfKindOrThrow(
-                     SyntaxKind.JsxElement,
-                  )
-
-                  // Find all opening tags on component.
-                  const children = parentJsxElement
-                     .getDescendantsOfKind(SyntaxKind.JsxOpeningElement)
-                     .map((node) => {
-                        return node.getTagNameNode().getText()
-                     })
-                     .concat(
-                        parentJsxElement
-                           .getDescendantsOfKind(SyntaxKind.JsxSelfClosingElement)
-                           .map((node) => {
-                              return node.getTagNameNode().getText()
-                           }),
-                     )
-
-                  const componentImports = new Map<
-                     string,
-              string | string[] | Set<string>
-                  >()
-                  children.forEach((child) => {
-                     const importLine = imports.get(child)
-                     if (importLine) {
-                        const imports = componentImports.get(importLine.module) || []
-
-                        const newImports = importLine.isDefault
-                           ? importLine.text
-                           : new Set([...imports, child])
-
-                        componentImports.set(
-                           importLine.module,
-                           importLine?.isDefault ? newImports : Array.from(newImports),
-                        )
-                     }
-                  })
-
-                  const componnetImportLines = Array.from(
-                     componentImports.keys(),
-                  ).map((key) => {
-                     const values = componentImports.get(key)
-                     const specifier = Array.isArray(values)
-                        ? `{${values.join(',')}}`
-                        : values
-
-                     return `import ${specifier} from "${key}"`
-                  })
-
-                  const code = `
-            'use client'
-
-            ${componnetImportLines.join('\n')}
-
-            export default function Component() {
-              return (${parentJsxElement.getText()})
-            }`
-
-                  const targetFile = file.replace(item.name, `${chunkName}`)
-                  const targetFilePath = path.join(
-                     cwd(),
-              `registry/${style.name}/${type}/${chunkName}.tsx`,
-                  )
-
-                  // Write component file.
-                  rimraf.sync(targetFilePath)
-                  await fs.writeFile(targetFilePath, code, 'utf8')
-
-                  return {
-                     name: chunkName,
-                     description,
-                     component: `React.lazy(() => import("~/registry/${style.name}/${type}/${chunkName}")),`,
-                     file: targetFile,
-                     container: {
-                        className: containerClassName,
-                     },
-                  }
-               }),
-            )
-
-            // // Write the source file for blocks only.
+            // Write the source file for blocks only.
             sourceFilename = `__registry__/${style.name}/${type}/${item.name}.tsx`
 
             if (item.files) {
@@ -292,33 +228,22 @@ export const Index: Record<string, any> = {
       type: "${item.type}",
       registryDependencies: ${JSON.stringify(item.registryDependencies)},
       files: [${item.files?.map((file) => {
-        const filePath = `registry/${style.name}/${
-          typeof file === 'string' ? file : file.path
-        }`
-        const resolvedFilePath = path.resolve(filePath)
-        return typeof file === 'string'
-          ? `"${resolvedFilePath}"`
-          : `{
+         const filePath = `registry/${style.name}/${
+            typeof file === 'string' ? file : file.path
+         }`
+         const resolvedFilePath = path.resolve(filePath)
+         return typeof file === 'string'
+            ? `"${resolvedFilePath}"`
+            : `{
         path: "${filePath}",
         type: "${file.type}",
         target: "${file.target ?? ''}"
       }`
       })}],
+      categories: ${JSON.stringify(item.categories)},
       component: React.lazy(() => import("${componentPath}")),
       source: "${sourceFilename}",
-      category: "${item.category ?? ''}",
-      subcategory: "${item.subcategory ?? ''}",
-      chunks: [${chunks.map(
-        chunk => `{
-        name: "${chunk.name}",
-        description: "${chunk.description ?? 'No description'}",
-        component: ${chunk.component}
-        file: "${chunk.file}",
-        container: {
-          className: "${chunk.container.className}"
-        }
-      }`,
-      )}]
+      meta: ${JSON.stringify(item.meta)},
     },`
       }
 
@@ -333,19 +258,19 @@ export const Index: Record<string, any> = {
    // ----------------------------------------------------------------------------
    // Build registry/index.json.
    // ----------------------------------------------------------------------------
-   const items = registry
+   const items = registry.items
       .filter(item => ['registry:ui'].includes(item.type))
       .map((item) => {
          return {
             ...item,
             files: item.files?.map((_file) => {
                const file
-            = typeof _file === 'string'
-               ? {
-                     path: _file,
-                     type: item.type,
-                  }
-               : _file
+                  = typeof _file === 'string'
+                     ? {
+                           path: _file,
+                           type: item.type,
+                        }
+                     : _file
 
                return file
             }),
@@ -376,7 +301,7 @@ async function buildStyles(registry: Registry) {
          await fs.mkdir(targetPath, { recursive: true })
       }
 
-      for (const item of registry) {
+      for (const item of registry.items) {
          if (!REGISTRY_INDEX_WHITELIST.includes(item.type)) {
             continue
          }
@@ -386,19 +311,24 @@ async function buildStyles(registry: Registry) {
             files = await Promise.all(
                item.files.map(async (_file) => {
                   const file
-              = typeof _file === 'string'
-                 ? {
-                       path: _file,
-                       type: item.type,
-                       content: '',
-                       target: '',
-                    }
-                 : _file
+                     = typeof _file === 'string'
+                        ? {
+                              path: _file,
+                              type: item.type,
+                              content: '',
+                              target: '',
+                           }
+                        : _file
 
                   let content: string
                   try {
                      content = await fs.readFile(
-                        path.join(process.cwd(), 'registry', style.name, file.path),
+                        path.join(
+                           process.cwd(),
+                           'registry',
+                           style.name,
+                           file.path,
+                        ),
                         'utf8',
                      )
 
@@ -412,17 +342,26 @@ async function buildStyles(registry: Registry) {
                   }
 
                   const tempFile = await createTempSourceFile(file.path)
-                  const sourceFile = project.createSourceFile(tempFile, content, {
-                     scriptKind: ScriptKind.TSX,
-                  })
+                  const sourceFile = project.createSourceFile(
+                     tempFile,
+                     content,
+                     {
+                        scriptKind: ScriptKind.TSX,
+                     },
+                  )
 
                   sourceFile.getVariableDeclaration('iframeHeight')?.remove()
-                  sourceFile.getVariableDeclaration('containerClassName')?.remove()
+                  sourceFile
+                     .getVariableDeclaration('containerClassName')
+                     ?.remove()
                   sourceFile.getVariableDeclaration('description')?.remove()
 
                   let target = file.target || ''
 
-                  if ((!target || target === '') && item.name.startsWith('v0-')) {
+                  if (
+                     (!target || target === '')
+                     && item.name.startsWith('v0-')
+                  ) {
                      const fileName = file.path.split('/').pop()
                      if (
                         file.type === 'registry:block'
@@ -455,19 +394,12 @@ async function buildStyles(registry: Registry) {
             )
          }
 
-         const payload = registryEntrySchema
-            .omit({
-               // @ts-expect-error -- TODO: Fix this.
-               source: true,
-               category: true,
-               subcategory: true,
-               // @ts-expect-error -- TODO: Fix this.
-               chunks: true,
-            })
-            .safeParse({
-               ...item,
-               files,
-            })
+         const payload = registryItemSchema.safeParse({
+            $schema: 'https://nyxbui.design/schema/registry-item.json',
+            author: 'nyxbui (https://nyxbui.design)',
+            ...item,
+            files,
+         })
 
          if (payload.success) {
             await fs.writeFile(
@@ -497,21 +429,14 @@ async function buildStylesIndex() {
    for (const style of styles) {
       const targetPath = path.join(REGISTRY_PATH, 'styles', style.name)
 
-      const dependencies = [
-         'tailwindcss-animate',
-         'class-variance-authority',
-         'lucide-react',
-      ]
-
-      // TODO: Remove this when we migrate to lucide-react.
-      // if (style.name === "miami") {
-      //   dependencies.push("@radix-ui/react-icons")
-      // }
-
-      const payload: RegistryEntry = {
+      const payload: z.infer<typeof registryItemSchema> = {
          name: style.name,
          type: 'registry:style',
-         dependencies,
+         dependencies: [
+            'tailwindcss-animate',
+            'class-variance-authority',
+            'lucide-react',
+         ],
          registryDependencies: ['utils'],
          tailwind: {
             config: {
@@ -550,7 +475,10 @@ async function buildThemes() {
       if (Array.isArray(value)) {
          colorsData[color] = value.map(item => ({
             ...item,
-            rgbChannel: item.rgb.replace(/^rgb\((\d+),(\d+),(\d+)\)$/, '$1 $2 $3'),
+            rgbChannel: item.rgb.replace(
+               /^rgb\((\d+),(\d+),(\d+)\)$/,
+               '$1 $2 $3',
+            ),
             hslChannel: item.hsl.replace(
                /^hsl\(([\d.]+),([\d.]+%),([\d.]+%)\)$/,
                '$1 $2 $3',
@@ -562,7 +490,10 @@ async function buildThemes() {
       if (typeof value === 'object') {
          colorsData[color] = {
             ...value,
-            rgbChannel: value.rgb.replace(/^rgb\((\d+),(\d+),(\d+)\)$/, '$1 $2 $3'),
+            rgbChannel: value.rgb.replace(
+               /^rgb\((\d+),(\d+),(\d+)\)$/,
+               '$1 $2 $3',
+            ),
             hslChannel: value.hsl.replace(
                /^hsl\(([\d.]+),([\d.]+%),([\d.]+%)\)$/,
                '$1 $2 $3',
@@ -657,7 +588,6 @@ async function buildThemes() {
 }`
 
    for (const baseColor of [
-      'slate',
       'gray',
       'zinc',
       'neutral',
@@ -695,7 +625,10 @@ async function buildThemes() {
                   continue
                }
 
-               const resolvedColor = value.replace(/\{\{base\}\}-/g, `${baseColor}-`)
+               const resolvedColor = value.replace(
+                  /\{\{base\}\}-/g,
+                  `${baseColor}-`,
+               )
                base.inlineColors[mode][key] = resolvedColor
 
                const [resolvedBase, scale] = resolvedColor.split('-')
@@ -794,7 +727,7 @@ async function buildThemes() {
       const themeCSS = []
       for (const theme of baseColors) {
          themeCSS.push(
-            // @ts-expect-error -- TODO: Fix this.
+            // @ts-expect-error
             template(THEME_STYLES_WITH_VARIABLES)({
                colors: theme.cssVars,
                theme: theme.name,
@@ -812,30 +745,7 @@ async function buildThemes() {
       // Build registry/themes/[theme].json
       // ----------------------------------------------------------------------------
       rimraf.sync(path.join(REGISTRY_PATH, 'themes'))
-      for (const baseColor of [
-         'slate',
-         'gray',
-         'zinc',
-         'neutral',
-         'stone',
-         'red',
-         'orange',
-         'amber',
-         'yellow',
-         'lime',
-         'green',
-         'emerald',
-         'teal',
-         'cyan',
-         'sky',
-         'blue',
-         'indigo',
-         'violet',
-         'purple',
-         'fuchsia',
-         'pink',
-         'rose',
-      ]) {
+      for (const baseColor of ['slate', 'gray', 'zinc', 'neutral', 'stone']) {
          const payload: Record<string, any> = {
             name: baseColor,
             label: baseColor.charAt(0).toUpperCase() + baseColor.slice(1),
@@ -845,7 +755,10 @@ async function buildThemes() {
             payload.cssVars[mode] = {}
             for (const [key, value] of Object.entries(values)) {
                if (typeof value === 'string') {
-                  const resolvedColor = value.replace(/\{\{base\}\}-/g, `${baseColor}-`)
+                  const resolvedColor = value.replace(
+                     /\{\{base\}\}-/g,
+                     `${baseColor}-`,
+                  )
                   payload.cssVars[mode][key] = resolvedColor
 
                   const [resolvedBase, scale] = resolvedColor.split('-')
@@ -937,6 +850,7 @@ export const Icons = {
 }
 
 try {
+   console.log('💽 Building registry...')
    const result = registrySchema.safeParse(registry)
 
    if (!result.success) {
@@ -944,6 +858,7 @@ try {
       process.exit(1)
    }
 
+   await syncStyles()
    await buildRegistry(result.data)
    await buildStyles(result.data)
    await buildStylesIndex()
