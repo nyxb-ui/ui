@@ -3,7 +3,13 @@
    "tasks": {
       "build": {
          "dependsOn": ["^build"],
-         "inputs": ["$TURBO_DEFAULT$", ".env", ".env.*"],
+         "inputs": [
+            "$TURBO_DEFAULT$",
+            ".env",
+            ".env.*",
+            "V0_URL",
+            "V0_EDIT_SECRET"
+         ],
          "outputs": [".next/**", "!.next/cache/**"]
       },
       "dev": {

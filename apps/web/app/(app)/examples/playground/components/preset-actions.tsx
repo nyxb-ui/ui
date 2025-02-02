@@ -4,7 +4,7 @@ import { Dialog } from "@radix-ui/react-dialog"
 import { MoreHorizontal } from "lucide-react"
 import * as React from "react"
 
-import { toast } from "~/hooks/use-toast"
+import { toast } from "~/registry/miami/hooks/use-toast"
 import {
    AlertDialog,
    AlertDialogCancel,

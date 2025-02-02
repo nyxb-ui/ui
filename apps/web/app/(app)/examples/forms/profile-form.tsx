@@ -5,9 +5,9 @@ import Link from "next/link"
 import { useFieldArray, useForm } from "react-hook-form"
 import { z } from "zod"
 
-import { ny } from "@/lib/utils"
-import { toast } from "@/registry/new-york/hooks/use-toast"
-import { Button } from "@/registry/new-york/ui/button"
+import { toast } from "~/registry/miami/hooks/use-toast"
+import { ny } from "~/registry/miami/lib/utils"
+import { Button } from "~/registry/miami/ui/button"
 import {
    Form,
    FormControl,
@@ -16,16 +16,16 @@ import {
    FormItem,
    FormLabel,
    FormMessage,
-} from "@/registry/new-york/ui/form"
-import { Input } from "@/registry/new-york/ui/input"
+} from "~/registry/miami/ui/form"
+import { Input } from "~/registry/miami/ui/input"
 import {
    Select,
    SelectContent,
    SelectItem,
    SelectTrigger,
    SelectValue,
-} from "@/registry/new-york/ui/select"
-import { Textarea } from "@/registry/new-york/ui/textarea"
+} from "~/registry/miami/ui/select"
+import { Textarea } from "~/registry/miami/ui/textarea"
 
 const profileFormSchema = z.object({
    username: z
@@ -57,8 +57,8 @@ type ProfileFormValues = z.infer<typeof profileFormSchema>
 const defaultValues: Partial<ProfileFormValues> = {
    bio: "I own a computer.",
    urls: [
-      { value: "https://shadcn.com" },
-      { value: "http://twitter.com/shadcn" },
+      { value: "https://nyxbui.design" },
+      { value: "http://twitter.com/nyxb0" },
    ],
 }
 
@@ -97,7 +97,7 @@ export function ProfileForm() {
                   <FormItem>
                      <FormLabel>Username</FormLabel>
                      <FormControl>
-                        <Input placeholder="shadcn" {...field} />
+                        <Input placeholder="nyxb" {...field} />
                      </FormControl>
                      <FormDescription>
                         This is your public display name. It can be your real

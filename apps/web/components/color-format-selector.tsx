@@ -1,24 +1,24 @@
-'use client'
+"use client"
 
-import * as React from 'react'
+import * as React from "react"
 
-import { type Color, getColorFormat } from '~/lib/colors'
-import { ny } from '~/lib/utils'
-import { useColors } from '~/hooks/use-colors'
+import { useColors } from "~/hooks/use-colors"
+import { type Color, getColorFormat } from "~/lib/colors"
+import { ny } from "~/lib/utils"
 import {
    Select,
    SelectContent,
    SelectItem,
    SelectTrigger,
    SelectValue,
-} from '~/registry/miami/ui/select'
-import { Skeleton } from '~/registry/miami/ui/skeleton'
+} from "~/registry/miami/ui/select"
+import { Skeleton } from "~/registry/miami/ui/skeleton"
 
 export function ColorFormatSelector({
    color,
    className,
    ...props
-}: Omit<React.ComponentProps<typeof SelectTrigger>, 'color'> & {
+}: Omit<React.ComponentProps<typeof SelectTrigger>, "color"> & {
    color: Color
 }) {
    const { format, setFormat, isLoading } = useColors()
@@ -31,11 +31,14 @@ export function ColorFormatSelector({
    return (
       <Select value={format} onValueChange={setFormat}>
          <SelectTrigger
-            className={ny('h-7 w-auto gap-1.5 rounded-lg pr-2 text-xs', className)}
+            className={ny(
+               "h-7 w-auto gap-1.5 rounded-lg pr-2 text-xs",
+               className,
+            )}
             {...props}
          >
             <span className="font-medium">Format: </span>
-            <span className="text-muted-foreground font-mono text-xs">
+            <span className="font-mono text-xs text-muted-foreground">
                {format}
             </span>
          </SelectTrigger>
@@ -47,7 +50,7 @@ export function ColorFormatSelector({
                   className="gap-2 rounded-lg [&>span]:flex [&>span]:items-center [&>span]:gap-2"
                >
                   <span className="font-medium">{format}</span>
-                  <span className="text-muted-foreground font-mono text-xs">
+                  <span className="font-mono text-xs text-muted-foreground">
                      {value}
                   </span>
                </SelectItem>
@@ -63,7 +66,7 @@ export function ColorFormatSelectorSkeleton({
 }: React.ComponentProps<typeof Skeleton>) {
    return (
       <Skeleton
-         className={ny('h-7 w-[116px] gap-1.5 rounded-lg', className)}
+         className={ny("h-7 w-[116px] gap-1.5 rounded-lg", className)}
          {...props}
       />
    )

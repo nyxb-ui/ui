@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 
 import { Announcement } from "~/components/announcement"
 import {
@@ -8,14 +7,15 @@ import {
    PageHeaderDescription,
    PageHeaderHeading,
 } from "~/components/page-header"
-import { Button } from "~/registry/miami/ui/button"
+import { ThemeCustomizer } from "~/components/theme-customizer"
 
 export const metadata: Metadata = {
-   title: "Tailwind Colors",
-   description: "All colors in all formats.",
+   title: "Themes",
+   description:
+      "Hand-picked themes that you can copy and paste into your apps.",
 }
 
-export default function ColorsLayout({
+export default function ThemesLayout({
    children,
 }: {
    children: React.ReactNode
@@ -24,22 +24,22 @@ export default function ColorsLayout({
       <>
          <PageHeader>
             <Announcement />
-            <PageHeaderHeading>Tailwind Colors</PageHeaderHeading>
+            <PageHeaderHeading className="hidden md:block">
+               Add colors. Make it yours.
+            </PageHeaderHeading>
+            <PageHeaderHeading className="md:hidden">
+               Make it yours
+            </PageHeaderHeading>
             <PageHeaderDescription>
-               Tailwind CSS colors in HSL, RGB, and HEX formats.
+               Hand-picked themes that you can copy and paste into your apps.
             </PageHeaderDescription>
             <PageActions>
-               <Button asChild size="sm">
-                  <a href="#colors">Browse Colors</a>
-               </Button>
-               <Button asChild variant="ghost" size="sm">
-                  <Link href="/docs/theming">Documentation</Link>
-               </Button>
+               <ThemeCustomizer />
             </PageActions>
          </PageHeader>
          <div className="container-wrapper">
             <div className="container py-6">
-               <section id="colors" className="scroll-mt-20">
+               <section id="themes" className="scroll-mt-20">
                   {children}
                </section>
             </div>

@@ -7,7 +7,7 @@ import { getAllBlockIds } from "~/lib/blocks"
 import { absoluteUrl, ny } from "~/lib/utils"
 import { type Style, styles } from "~/registry/registry-styles"
 
-import "~/styles/mdx2.css"
+import "~/styles/mdx.css"
 import { getRegistryComponent, getRegistryItem } from "~/lib/registry"
 
 const getCachedRegistryItem = React.cache(

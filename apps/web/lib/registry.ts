@@ -97,7 +97,7 @@ async function getFileContent(file: z.infer<typeof registryItemFileSchema>) {
 
    // Some registry items uses default export.
    // We want to use named export instead.
-   // TODO: do we really need this? - @shadcn.
+   // TODO: do we really need this? - @nyxb.
    if (file.type !== "registry:page") {
       code = code.replaceAll("export default", "export")
    }
@@ -161,7 +161,7 @@ function getFileTarget(file: z.infer<typeof registryItemFileSchema>) {
 }
 
 async function createTempSourceFile(filename: string) {
-   const dir = await fs.mkdtemp(path.join(tmpdir(), "shadcn-"))
+   const dir = await fs.mkdtemp(path.join(tmpdir(), "nyxb-"))
    return path.join(dir, filename)
 }
 
