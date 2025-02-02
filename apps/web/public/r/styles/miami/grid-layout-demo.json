@@ -1,11 +1,13 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "grid-layout-demo",
   "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
   "files": [
     {
-      "path": "example/grid-layout-demo.tsx",
-      "content": "'use client'\n\nimport { Button } from '~/registry/default/ui/button'\nimport GridLayout from '~/registry/default/ui/grid-layout'\n\nexport default function GridLayoutDemo() {\n   return (\n      <GridLayout\n         crosshairs={{\n            topLeft: true,\n            bottomRight: true,\n         }}\n         lineVariant=\"center\"\n         className=\"min-h-[350px] p-8\"\n      >\n         <div className=\"space-y-8\">\n            <div>\n               <h2 className=\"text-4xl font-medium tracking-tight\">\n                  Ready to deploy?\n                  {' '}\n                  <span className=\"text-muted-foreground\">\n                     Start building with a free account.\n                  </span>\n               </h2>\n               <p className=\"text-muted-foreground mt-4 text-xl\">\n                  Speak to an expert for your\n                  {' '}\n                  <span className=\"text-blue-500\">Pro</span>\n                  {' '}\n                  or\n                  {' '}\n                  <span className=\"text-purple-500\">Enterprise</span>\n                  {' '}\n                  needs.\n               </p>\n            </div>\n            <div className=\"flex gap-4\">\n               <Button variant=\"default\" size=\"lg\">\n                  Start Deploying\n               </Button>\n               <Button variant=\"outline\" size=\"lg\">\n                  Contact Sales\n               </Button>\n            </div>\n         </div>\n      </GridLayout>\n   )\n}\n",
-      "type": "registry:component",
+      "path": "examples/grid-layout-demo.tsx",
+      "content": "\"use client\"\n\nimport { Button } from \"~/registry/default/ui/button\"\nimport GridLayout from \"~/registry/default/ui/grid-layout\"\n\nexport default function GridLayoutDemo() {\n   return (\n      <GridLayout\n         crosshairs={{\n            topLeft: true,\n            bottomRight: true,\n         }}\n         lineVariant=\"center\"\n         className=\"min-h-[350px] p-8\"\n      >\n         <div className=\"space-y-8\">\n            <div>\n               <h2 className=\"text-4xl font-medium tracking-tight\">\n                  Ready to deploy?{\" \"}\n                  <span className=\"text-muted-foreground\">\n                     Start building with a free account.\n                  </span>\n               </h2>\n               <p className=\"text-muted-foreground mt-4 text-xl\">\n                  Speak to an expert for your{\" \"}\n                  <span className=\"text-blue-500\">Pro</span> or{\" \"}\n                  <span className=\"text-purple-500\">Enterprise</span> needs.\n               </p>\n            </div>\n            <div className=\"flex gap-4\">\n               <Button variant=\"default\" size=\"lg\">\n                  Start Deploying\n               </Button>\n               <Button variant=\"outline\" size=\"lg\">\n                  Contact Sales\n               </Button>\n            </div>\n         </div>\n      </GridLayout>\n   )\n}\n",
+      "type": "registry:example",
       "target": ""
     }
   ]

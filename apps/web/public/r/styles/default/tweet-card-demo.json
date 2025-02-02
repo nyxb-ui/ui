@@ -1,11 +1,13 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "tweet-card-demo",
   "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
   "files": [
     {
-      "path": "example/tweet-card-demo.tsx",
-      "content": "import ClientTweetCard from '~/registry/default/ui/client-tweet-card'\n\n/**\n * <TweetCard /> (Server Side Only)\n * <ClientTweetCard /> (Client Side Only)\n */\nexport default async function TweetDemo() {\n   return <ClientTweetCard id=\"1703861725534011484\" className=\"shadow-2xl\" />\n}\n",
-      "type": "registry:component",
+      "path": "examples/tweet-card-demo.tsx",
+      "content": "import ClientTweetCard from \"~/registry/default/ui/client-tweet-card\"\n\n/**\n * <TweetCard /> (Server Side Only)\n * <ClientTweetCard /> (Client Side Only)\n */\nexport default async function TweetDemo() {\n   return <ClientTweetCard id=\"1703861725534011484\" className=\"shadow-2xl\" />\n}\n",
+      "type": "registry:example",
       "target": ""
     }
   ]

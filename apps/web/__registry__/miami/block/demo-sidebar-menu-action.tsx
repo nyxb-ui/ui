@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import {
    Frame,
@@ -7,14 +7,14 @@ import {
    MoreHorizontal,
    PieChart,
    Send,
-} from 'lucide-react'
+} from "lucide-react"
 
 import {
    DropdownMenu,
    DropdownMenuContent,
    DropdownMenuItem,
    DropdownMenuTrigger,
-} from '~/registry/miami/ui/dropdown-menu'
+} from "~/registry/miami/ui/dropdown-menu"
 import {
    Sidebar,
    SidebarContent,
@@ -26,32 +26,32 @@ import {
    SidebarMenuButton,
    SidebarMenuItem,
    SidebarProvider,
-} from '~/registry/miami/ui/sidebar'
+} from "~/registry/miami/ui/sidebar"
 
 const projects = [
    {
-      name: 'Design Engineering',
-      url: '#',
+      name: "Design Engineering",
+      url: "#",
       icon: Frame,
    },
    {
-      name: 'Sales & Marketing',
-      url: '#',
+      name: "Sales & Marketing",
+      url: "#",
       icon: PieChart,
    },
    {
-      name: 'Travel',
-      url: '#',
+      name: "Travel",
+      url: "#",
       icon: Map,
    },
    {
-      name: 'Support',
-      url: '#',
+      name: "Support",
+      url: "#",
       icon: LifeBuoy,
    },
    {
-      name: 'Feedback',
-      url: '#',
+      name: "Feedback",
+      url: "#",
       icon: Send,
    },
 ]
@@ -83,7 +83,10 @@ export default function AppSidebar() {
                                        <span className="sr-only">More</span>
                                     </SidebarMenuAction>
                                  </DropdownMenuTrigger>
-                                 <DropdownMenuContent side="right" align="start">
+                                 <DropdownMenuContent
+                                    side="right"
+                                    align="start"
+                                 >
                                     <DropdownMenuItem>
                                        <span>Edit Project</span>
                                     </DropdownMenuItem>

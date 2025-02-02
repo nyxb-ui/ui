@@ -27,7 +27,7 @@ import Link from "next/link"
 import * as React from "react"
 
 import { Icons } from "~/components/icons"
-import { cn } from "~/lib/utils"
+import { ny } from "~/lib/utils"
 import { Avatar, AvatarFallback, AvatarImage } from "~/registry/miami/ui/avatar"
 import {
    Breadcrumb,
@@ -379,7 +379,7 @@ export default function Page() {
                         <NavigationMenuItem>
                            <Link href="/docs" legacyBehavior passHref>
                               <NavigationMenuLink
-                                 className={cn(
+                                 className={ny(
                                     navigationMenuTriggerStyle(),
                                     "bg-sidebar",
                                  )}

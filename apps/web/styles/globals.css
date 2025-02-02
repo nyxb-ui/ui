@@ -112,10 +112,12 @@
 @layer base {
    * {
       @apply border-border;
-      /* Scrollbars für Webkit-Browser (Chrome, Safari, etc.) ausschalten */
-      &::-webkit-scrollbar {
-         display: none;
-      }
+      scrollbar-width: thin;
+      scrollbar-color: hsl(var(--border)) transparent;
+   }
+
+   html {
+      @apply scroll-smooth;
    }
 
    body {
@@ -125,10 +127,24 @@
          'calt' 1;
       font-synthesis-weight: none;
       text-rendering: optimizeLegibility;
-      /* Scrollbars für Firefox ausschalten */
-      scrollbar-width: none;
-      /* IE und Edge */
-      -ms-overflow-style: none;
+   }
+
+   /* Custom scrollbar styling */
+   ::-webkit-scrollbar {
+      width: 5px;
+   }
+   ::-webkit-scrollbar-track {
+      background: transparent;
+   }
+   ::-webkit-scrollbar-thumb {
+      background: hsl(var(--border));
+      border-radius: 5px;
+   }
+
+   @supports (font: -apple-system-body) and (-webkit-appearance: none) {
+      [data-wrapper] {
+         @apply min-[1800px]:border-t;
+      }
    }
 }
 

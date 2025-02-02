@@ -1,8 +1,8 @@
-import { SettingsDialog } from '~/registry/default/block/sidebar-13/components/settings-dialog'
+import { SettingsDialog } from "~/registry/default/block/sidebar-13/components/settings-dialog"
 
-export const iframeHeight = '800px'
+export const iframeHeight = "800px"
 
-export const description = 'A sidebar in a dialog.'
+export const description = "A sidebar in a dialog."
 
 export default function Page() {
    return (

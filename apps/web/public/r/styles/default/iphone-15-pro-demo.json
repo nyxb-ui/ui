@@ -1,11 +1,13 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "iphone-15-pro-demo",
   "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
   "files": [
     {
-      "path": "example/iphone-15-pro-demo.tsx",
-      "content": "import Iphone15Pro from '~/registry/default/ui/iphone-15-pro'\n\nexport default function Iphone15ProDemo() {\n   return (\n      <div className=\"relative\">\n         <Iphone15Pro className=\"size-full\" />\n      </div>\n   )\n}\n",
-      "type": "registry:component",
+      "path": "examples/iphone-15-pro-demo.tsx",
+      "content": "import Iphone15Pro from \"~/registry/default/ui/iphone-15-pro\"\n\nexport default function Iphone15ProDemo() {\n   return (\n      <div className=\"relative\">\n         <Iphone15Pro className=\"size-full\" />\n      </div>\n   )\n}\n",
+      "type": "registry:example",
       "target": ""
     }
   ]

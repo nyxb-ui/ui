@@ -1,10 +1,12 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "slider-range",
   "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
   "files": [
     {
-      "path": "example/slider-range.tsx",
-      "content": "import { ny } from '~/lib/utils'\nimport { Slider } from '~/registry/default/ui/slider'\n\ntype SliderProps = React.ComponentProps<typeof Slider>\n\nexport default function SliderRange({ className, ...props }: SliderProps) {\n   return (\n      <Slider\n         defaultValue={[25, 75]}\n         max={100}\n         step={1}\n         className={ny('w-3/5', className)}\n         {...props}\n      />\n   )\n}\n",
+      "path": "examples/slider-range.tsx",
+      "content": "import { ny } from \"~/lib/utils\"\nimport { Slider } from \"~/registry/default/ui/slider\"\n\ntype SliderProps = React.ComponentProps<typeof Slider>\n\nexport default function SliderRange({ className, ...props }: SliderProps) {\n   return (\n      <Slider\n         defaultValue={[25, 75]}\n         max={100}\n         step={1}\n         className={ny(\"w-3/5\", className)}\n         {...props}\n      />\n   )\n}\n",
       "type": "registry:example",
       "target": ""
     }

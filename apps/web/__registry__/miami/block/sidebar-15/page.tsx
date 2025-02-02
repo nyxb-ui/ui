@@ -1,21 +1,21 @@
-import { SidebarLeft } from '~/registry/miami/block/sidebar-15/components/sidebar-left'
-import { SidebarRight } from '~/registry/miami/block/sidebar-15/components/sidebar-right'
+import { SidebarLeft } from "~/registry/miami/block/sidebar-15/components/sidebar-left"
+import { SidebarRight } from "~/registry/miami/block/sidebar-15/components/sidebar-right"
 import {
    Breadcrumb,
    BreadcrumbItem,
    BreadcrumbList,
    BreadcrumbPage,
-} from '~/registry/miami/ui/breadcrumb'
-import { Separator } from '~/registry/miami/ui/separator'
+} from "~/registry/miami/ui/breadcrumb"
+import { Separator } from "~/registry/miami/ui/separator"
 import {
    SidebarInset,
    SidebarProvider,
    SidebarTrigger,
-} from '~/registry/miami/ui/sidebar'
+} from "~/registry/miami/ui/sidebar"
 
-export const iframeHeight = '800px'
+export const iframeHeight = "800px"
 
-export const description = 'A left and right sidebar.'
+export const description = "A left and right sidebar."
 
 export default function Page() {
    return (

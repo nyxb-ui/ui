@@ -1,11 +1,13 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "cool-mode-demo",
   "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
   "files": [
     {
-      "path": "example/cool-mode-demo.tsx",
-      "content": "import React from 'react'\nimport { CoolMode } from '~/registry/default/ui/cool-mode'\nimport { Button } from '~/components/ui/button'\n\nexport default function CoolModeDemo() {\n   return (\n      <div className=\"relative justify-center\">\n         <CoolMode>\n            <Button>Click Me!</Button>\n         </CoolMode>\n      </div>\n   )\n}\n",
-      "type": "registry:component",
+      "path": "examples/cool-mode-demo.tsx",
+      "content": "import React from \"react\"\nimport { Button } from \"~/components/ui/button\"\nimport { CoolMode } from \"~/registry/default/ui/cool-mode\"\n\nexport default function CoolModeDemo() {\n   return (\n      <div className=\"relative justify-center\">\n         <CoolMode>\n            <Button>Click Me!</Button>\n         </CoolMode>\n      </div>\n   )\n}\n",
+      "type": "registry:example",
       "target": ""
     }
   ]

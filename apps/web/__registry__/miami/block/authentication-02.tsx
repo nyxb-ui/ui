@@ -1,23 +1,23 @@
-import Link from 'next/link'
+import Link from "next/link"
 
-import { Button } from '~/registry/miami/ui/button'
+import { Button } from "~/registry/miami/ui/button"
 import {
    Card,
    CardContent,
    CardDescription,
    CardHeader,
    CardTitle,
-} from '~/registry/miami/ui/card'
-import { Input } from '~/registry/miami/ui/input'
-import { Label } from '~/registry/miami/ui/label'
+} from "~/registry/miami/ui/card"
+import { Input } from "~/registry/miami/ui/input"
+import { Label } from "~/registry/miami/ui/label"
 
-export const description
-  = 'A login form with email and password. There\'s an option to login with Google and a link to sign up if you don\'t have an account.'
+export const description =
+   "A login form with email and password. There's an option to login with Google and a link to sign up if you don't have an account."
 
-export const iframeHeight = '600px'
+export const iframeHeight = "600px"
 
-export const containerClassName
-  = 'w-full h-screen flex items-center justify-center px-4'
+export const containerClassName =
+   "w-full h-screen flex items-center justify-center px-4"
 
 export default function LoginForm() {
    return (
@@ -42,7 +42,10 @@ export default function LoginForm() {
                <div className="grid gap-2">
                   <div className="flex items-center">
                      <Label htmlFor="password">Password</Label>
-                     <Link href="#" className="ml-auto inline-block text-sm underline">
+                     <Link
+                        href="#"
+                        className="ml-auto inline-block text-sm underline"
+                     >
                         Forgot your password?
                      </Link>
                   </div>
@@ -56,8 +59,7 @@ export default function LoginForm() {
                </Button>
             </div>
             <div className="mt-4 text-center text-sm">
-               Don&apos;t have an account?
-               {' '}
+               Don&apos;t have an account?{" "}
                <Link href="#" className="underline">
                   Sign up
                </Link>

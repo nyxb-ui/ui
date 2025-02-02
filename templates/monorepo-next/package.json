@@ -1,0 +1,20 @@
+{
+  "name": "nyxbui-monorepo",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@9.12.3",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "check": "biome check .",
+    "check:fix": "biome check . --write"
+  },
+  "devDependencies": {
+    "@workspace/typescript": "workspace:*",
+    "turbo": "^2.3.0",
+    "typescript": "5.5.4"
+  }
+}

@@ -1,6 +1,8 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "input-phone-demo",
   "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
   "registryDependencies": [
     "button",
     "input",
@@ -8,9 +10,9 @@
   ],
   "files": [
     {
-      "path": "example/input-phone-demo.tsx",
-      "content": "import * as React from 'react'\n\nimport { InputPhone } from '~/registry/miami/ui/input-phone'\n\nexport default function InputPhoneDemo() {\n   const [value, setValue] = React.useState('')\n\n   return (\n      <InputPhone\n         value={value}\n         onChange={setValue}\n         placeholder=\"Enter a phone number\"\n         defaultCountry=\"US\"\n      />\n   )\n}\n",
-      "type": "registry:component",
+      "path": "examples/input-phone-demo.tsx",
+      "content": "import * as React from \"react\"\n\nimport { InputPhone } from \"~/registry/miami/ui/input-phone\"\n\nexport default function InputPhoneDemo() {\n   const [value, setValue] = React.useState(\"\")\n\n   return (\n      <InputPhone\n         value={value}\n         onChange={setValue}\n         placeholder=\"Enter a phone number\"\n         defaultCountry=\"US\"\n      />\n   )\n}\n",
+      "type": "registry:example",
       "target": ""
     }
   ]

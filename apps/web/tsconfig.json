@@ -1,49 +1,43 @@
 {
-  "compilerOptions": {
-    "incremental": true,
-    "target": "esnext",
-    "jsx": "preserve",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "baseUrl": ".",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "paths": {
-      "~/*": [
-        "./*"
-      ],
-      "content-collections": ["./.content-collections/generated"]
-    },
-    "resolveJsonModule": true,
-    "allowImportingTsExtensions": true,
-    "allowJs": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "skipLibCheck": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    ".content-colletions/generated"
-  ],
-  "exclude": [
-    "node_modules",
-    "packages/**/*",
-    "scripts/**/*",
-    "scripts/build-registry.ts",
-    "__registry__"
-  ]
+   "compilerOptions": {
+      "incremental": true,
+      "target": "esnext",
+      "jsx": "preserve",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "baseUrl": ".",
+      "module": "esnext",
+      "moduleResolution": "bundler",
+      "paths": {
+         "~/*": ["./*"],
+         "content-collections": ["./.content-collections/generated"]
+      },
+      "resolveJsonModule": true,
+      "allowImportingTsExtensions": true,
+      "allowJs": true,
+      "strict": true,
+      "noEmit": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "isolatedModules": true,
+      "skipLibCheck": true,
+      "plugins": [
+         {
+            "name": "next"
+         }
+      ]
+   },
+   "include": [
+      "next-env.d.ts",
+      "**/*.ts",
+      "**/*.tsx",
+      ".next/types/**/*.ts",
+      ".content-colletions/generated"
+   ],
+   "exclude": [
+      "node_modules",
+      "packages/**/*",
+      "scripts/**/*",
+      "scripts/build-registry.ts",
+      "__registry__"
+   ]
 }

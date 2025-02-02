@@ -1,6 +1,6 @@
-'use client'
+"use client"
 
-import { Bar, BarChart, XAxis } from 'recharts'
+import { Bar, BarChart, XAxis } from "recharts"
 
 import {
    Card,
@@ -8,35 +8,33 @@ import {
    CardDescription,
    CardHeader,
    CardTitle,
-} from '~/registry/miami/ui/card'
-import type {
-   ChartConfig,
-} from '~/registry/miami/ui/chart'
+} from "~/registry/miami/ui/card"
+import type { ChartConfig } from "~/registry/miami/ui/chart"
 import {
    ChartContainer,
    ChartTooltip,
    ChartTooltipContent,
-} from '~/registry/miami/ui/chart'
+} from "~/registry/miami/ui/chart"
 
-export const description = 'A stacked bar chart with a legend'
+export const description = "A stacked bar chart with a legend"
 
 const chartData = [
-   { date: '2024-07-15', running: 450, swimming: 300 },
-   { date: '2024-07-16', running: 380, swimming: 420 },
-   { date: '2024-07-17', running: 520, swimming: 120 },
-   { date: '2024-07-18', running: 140, swimming: 550 },
-   { date: '2024-07-19', running: 600, swimming: 350 },
-   { date: '2024-07-20', running: 480, swimming: 400 },
+   { date: "2024-07-15", running: 450, swimming: 300 },
+   { date: "2024-07-16", running: 380, swimming: 420 },
+   { date: "2024-07-17", running: 520, swimming: 120 },
+   { date: "2024-07-18", running: 140, swimming: 550 },
+   { date: "2024-07-19", running: 600, swimming: 350 },
+   { date: "2024-07-20", running: 480, swimming: 400 },
 ]
 
 const chartConfig = {
    running: {
-      label: 'Running',
-      color: 'hsl(var(--chart-1))',
+      label: "Running",
+      color: "hsl(var(--chart-1))",
    },
    swimming: {
-      label: 'Swimming',
-      color: 'hsl(var(--chart-2))',
+      label: "Swimming",
+      color: "hsl(var(--chart-2))",
    },
 } satisfies ChartConfig
 
@@ -58,8 +56,8 @@ export default function Component() {
                      tickMargin={10}
                      axisLine={false}
                      tickFormatter={(value) => {
-                        return new Date(value).toLocaleDateString('en-US', {
-                           weekday: 'short',
+                        return new Date(value).toLocaleDateString("en-US", {
+                           weekday: "short",
                         })
                      }}
                   />
@@ -76,7 +74,7 @@ export default function Component() {
                      radius={[4, 4, 0, 0]}
                   />
                   <ChartTooltip
-                     content={(
+                     content={
                         <ChartTooltipContent
                            hideLabel
                            className="w-[180px]"
@@ -86,12 +84,12 @@ export default function Component() {
                                     className="size-2.5 shrink-0 rounded-[2px] bg-[--color-bg]"
                                     style={
                                        {
-                                          '--color-bg': `var(--color-${name})`,
+                                          "--color-bg": `var(--color-${name})`,
                                        } as React.CSSProperties
                                     }
                                  />
-                                 {chartConfig[name as keyof typeof chartConfig]?.label
-                                 || name}
+                                 {chartConfig[name as keyof typeof chartConfig]
+                                    ?.label || name}
                                  <div className="text-foreground ml-auto flex items-baseline gap-0.5 font-mono font-medium tabular-nums">
                                     {value}
                                     <span className="text-muted-foreground font-normal">
@@ -103,7 +101,8 @@ export default function Component() {
                                     <div className="text-foreground mt-1.5 flex basis-full items-center border-t pt-1.5 text-xs font-medium">
                                        Total
                                        <div className="text-foreground ml-auto flex items-baseline gap-0.5 font-mono font-medium tabular-nums">
-                                          {item.payload.running + item.payload.swimming}
+                                          {item.payload.running +
+                                             item.payload.swimming}
                                           <span className="text-muted-foreground font-normal">
                                              kcal
                                           </span>
@@ -113,7 +112,7 @@ export default function Component() {
                               </>
                            )}
                         />
-                     )}
+                     }
                      cursor={false}
                      defaultIndex={1}
                   />

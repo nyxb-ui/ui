@@ -1,6 +1,6 @@
-'use client'
+"use client"
 
-import { Calendar, Home, Inbox, Search, Settings } from 'lucide-react'
+import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
 
 import {
    Sidebar,
@@ -14,33 +14,33 @@ import {
    SidebarMenuItem,
    SidebarProvider,
    SidebarTrigger,
-} from '~/registry/miami/ui/sidebar'
+} from "~/registry/miami/ui/sidebar"
 
 // Menu items.
 const items = [
    {
-      title: 'Home',
-      url: '#',
+      title: "Home",
+      url: "#",
       icon: Home,
    },
    {
-      title: 'Inbox',
-      url: '#',
+      title: "Inbox",
+      url: "#",
       icon: Inbox,
    },
    {
-      title: 'Calendar',
-      url: '#',
+      title: "Calendar",
+      url: "#",
       icon: Calendar,
    },
    {
-      title: 'Search',
-      url: '#',
+      title: "Search",
+      url: "#",
       icon: Search,
    },
    {
-      title: 'Settings',
-      url: '#',
+      title: "Settings",
+      url: "#",
       icon: Settings,
    },
 ]
@@ -54,7 +54,7 @@ export default function AppSidebar() {
                   <SidebarGroupLabel>Application</SidebarGroupLabel>
                   <SidebarGroupContent>
                      <SidebarMenu>
-                        {items.map(item => (
+                        {items.map((item) => (
                            <SidebarMenuItem key={item.title}>
                               <SidebarMenuButton asChild>
                                  <a href={item.url}>

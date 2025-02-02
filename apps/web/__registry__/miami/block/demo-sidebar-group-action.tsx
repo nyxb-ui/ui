@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import {
    ChevronDown,
@@ -8,8 +8,8 @@ import {
    PieChart,
    Plus,
    Send,
-} from 'lucide-react'
-import { Toaster, toast } from 'sonner'
+} from "lucide-react"
+import { Toaster, toast } from "sonner"
 
 import {
    Sidebar,
@@ -22,7 +22,7 @@ import {
    SidebarMenuButton,
    SidebarMenuItem,
    SidebarProvider,
-} from '~/registry/miami/ui/sidebar'
+} from "~/registry/miami/ui/sidebar"
 
 export default function AppSidebar() {
    return (
@@ -30,7 +30,7 @@ export default function AppSidebar() {
          <Toaster
             position="bottom-left"
             toastOptions={{
-               className: 'ml-[160px]',
+               className: "ml-[160px]",
             }}
          />
          <Sidebar>
@@ -39,11 +39,9 @@ export default function AppSidebar() {
                   <SidebarGroupLabel>Projects</SidebarGroupLabel>
                   <SidebarGroupAction
                      title="Add Project"
-                     onClick={() => toast('You clicked the group action!')}
+                     onClick={() => toast("You clicked the group action!")}
                   >
-                     <Plus />
-                     {' '}
-                     <span className="sr-only">Add Project</span>
+                     <Plus /> <span className="sr-only">Add Project</span>
                   </SidebarGroupAction>
                   <SidebarGroupContent>
                      <SidebarMenu>

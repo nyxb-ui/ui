@@ -3,7 +3,7 @@
 import { Check, ChevronsUpDown } from "lucide-react"
 import * as React from "react"
 
-import { cn } from "~/lib/utils"
+import { ny } from "~/lib/utils"
 import { Button } from "~/registry/default/ui/button"
 import {
    Command,
@@ -84,7 +84,7 @@ export function ComboboxDemo() {
                         >
                            {framework.label}
                            <Check
-                              className={cn(
+                              className={ny(
                                  "ml-auto",
                                  value === framework.value
                                     ? "opacity-100"

@@ -76,11 +76,11 @@ export const transformTwPrefixes: Transformer = async ({
 
          // className={...}
          if (node.getInitializer()?.isKind(SyntaxKind.JsxExpression)) {
-            // Check if it's a call to cn().
+            // Check if it's a call to ny().
             const callExpression = node
                .getInitializer()
                ?.getDescendantsOfKind(SyntaxKind.CallExpression)
-               .find((node) => node.getExpression().getText() === "cn")
+               .find((node) => node.getExpression().getText() === "ny")
             if (callExpression) {
                // Loop through the arguments.
                callExpression.getArguments().forEach((node) => {

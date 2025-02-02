@@ -27,7 +27,7 @@ export const transformImport: Transformer = async ({
          COMMON_CN_IMPORTS[moduleSpecifier as keyof typeof COMMON_CN_IMPORTS]
       ) {
          const namedImports = importDeclaration.getNamedImports()
-         const cnImport = namedImports.find((i) => i.getName() === "cn")
+         const cnImport = namedImports.find((i) => i.getName() === "ny")
          if (cnImport) {
             importDeclaration.setModuleSpecifier(
                moduleSpecifier.replace(

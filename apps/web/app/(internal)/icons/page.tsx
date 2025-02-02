@@ -1,7 +1,7 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import { Icons } from '~/__registry__/icons'
+import * as React from "react"
+import { Icons } from "~/__registry__/icons"
 
 import {
    Table,
@@ -10,8 +10,8 @@ import {
    TableHead,
    TableHeader,
    TableRow,
-} from '~/registry/miami/ui/table'
-import { iconLibraries } from '~/registry/registry-icons'
+} from "~/registry/miami/ui/table"
+import { iconLibraries } from "~/registry/registry-icons"
 
 export default function IconsPage() {
    return (
@@ -22,7 +22,7 @@ export default function IconsPage() {
                   <TableHead className="w-[240px]" align="left">
                      name
                   </TableHead>
-                  {Object.keys(iconLibraries).map(library => (
+                  {Object.keys(iconLibraries).map((library) => (
                      <TableHead key={library}>{library}</TableHead>
                   ))}
                </TableRow>
@@ -36,7 +36,10 @@ export default function IconsPage() {
                      {Object.entries(iconLibraries).map(([library, name]) => {
                         const IconComponent = icon[library as keyof typeof icon]
                         return (
-                           <TableCell key={library} className="[&_svg]:size-4">
+                           <TableCell
+                              key={library}
+                              className="[&_svg]:h-4 [&_svg]:w-4"
+                           >
                               <React.Suspense fallback={<div>Loading...</div>}>
                                  {IconComponent && <IconComponent />}
                               </React.Suspense>

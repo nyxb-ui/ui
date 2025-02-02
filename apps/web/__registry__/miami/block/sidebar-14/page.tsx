@@ -1,4 +1,4 @@
-import { AppSidebar } from '~/registry/miami/block/sidebar-14/components/app-sidebar'
+import { AppSidebar } from "~/registry/miami/block/sidebar-14/components/app-sidebar"
 import {
    Breadcrumb,
    BreadcrumbItem,
@@ -6,16 +6,16 @@ import {
    BreadcrumbList,
    BreadcrumbPage,
    BreadcrumbSeparator,
-} from '~/registry/miami/ui/breadcrumb'
+} from "~/registry/miami/ui/breadcrumb"
 import {
    SidebarInset,
    SidebarProvider,
    SidebarTrigger,
-} from '~/registry/miami/ui/sidebar'
+} from "~/registry/miami/ui/sidebar"
 
-export const iframeHeight = '800px'
+export const iframeHeight = "800px"
 
-export const description = 'A sidebar on the right.'
+export const description = "A sidebar on the right."
 
 export default function Page() {
    return (

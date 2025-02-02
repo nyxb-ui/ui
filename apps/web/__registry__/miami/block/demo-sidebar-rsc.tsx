@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { Frame, LifeBuoy, Map, PieChart, Send } from 'lucide-react'
+import * as React from "react"
+import { Frame, LifeBuoy, Map, PieChart, Send } from "lucide-react"
 
 import {
    Sidebar,
@@ -12,44 +12,44 @@ import {
    SidebarMenuItem,
    SidebarMenuSkeleton,
    SidebarProvider,
-} from '~/registry/miami/ui/sidebar'
+} from "~/registry/miami/ui/sidebar"
 
 const projects = [
    {
-      name: 'Design Engineering',
-      url: '#',
+      name: "Design Engineering",
+      url: "#",
       icon: Frame,
-      badge: '24',
+      badge: "24",
    },
    {
-      name: 'Sales & Marketing',
-      url: '#',
+      name: "Sales & Marketing",
+      url: "#",
       icon: PieChart,
-      badge: '12',
+      badge: "12",
    },
    {
-      name: 'Travel',
-      url: '#',
+      name: "Travel",
+      url: "#",
       icon: Map,
-      badge: '3',
+      badge: "3",
    },
    {
-      name: 'Support',
-      url: '#',
+      name: "Support",
+      url: "#",
       icon: LifeBuoy,
-      badge: '21',
+      badge: "21",
    },
    {
-      name: 'Feedback',
-      url: '#',
+      name: "Feedback",
+      url: "#",
       icon: Send,
-      badge: '8',
+      badge: "8",
    },
 ]
 
 // Dummy fetch function
 async function fetchProjects() {
-   await new Promise(resolve => setTimeout(resolve, 3000))
+   await new Promise((resolve) => setTimeout(resolve, 3000))
    return projects
 }
 
@@ -89,7 +89,7 @@ async function NavProjects() {
 
    return (
       <SidebarMenu>
-         {projects.map(project => (
+         {projects.map((project) => (
             <SidebarMenuItem key={project.name}>
                <SidebarMenuButton asChild>
                   <a href={project.url}>

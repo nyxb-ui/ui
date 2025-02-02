@@ -1,14 +1,16 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "button-icon",
   "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
   "registryDependencies": [
     "button"
   ],
   "files": [
     {
-      "path": "example/button-icon.tsx",
-      "content": "import { ChevronRightIcon } from '@radix-ui/react-icons'\n\nimport { Button } from '~/registry/miami/ui/button'\n\nexport default function ButtonIcon() {\n   return (\n      <Button variant=\"outline\" size=\"icon\">\n         <ChevronRightIcon className=\"size-4\" />\n      </Button>\n   )\n}\n",
-      "type": "registry:component",
+      "path": "examples/button-icon.tsx",
+      "content": "import { ChevronRightIcon } from \"@radix-ui/react-icons\"\n\nimport { Button } from \"~/registry/miami/ui/button\"\n\nexport default function ButtonIcon() {\n   return (\n      <Button variant=\"outline\" size=\"icon\">\n         <ChevronRightIcon className=\"size-4\" />\n      </Button>\n   )\n}\n",
+      "type": "registry:example",
       "target": ""
     }
   ]

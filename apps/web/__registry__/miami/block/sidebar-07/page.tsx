@@ -1,4 +1,4 @@
-import { AppSidebar } from '~/registry/miami/block/sidebar-07/components/app-sidebar'
+import { AppSidebar } from "~/registry/miami/block/sidebar-07/components/app-sidebar"
 import {
    Breadcrumb,
    BreadcrumbItem,
@@ -6,17 +6,17 @@ import {
    BreadcrumbList,
    BreadcrumbPage,
    BreadcrumbSeparator,
-} from '~/registry/miami/ui/breadcrumb'
-import { Separator } from '~/registry/miami/ui/separator'
+} from "~/registry/miami/ui/breadcrumb"
+import { Separator } from "~/registry/miami/ui/separator"
 import {
    SidebarInset,
    SidebarProvider,
    SidebarTrigger,
-} from '~/registry/miami/ui/sidebar'
+} from "~/registry/miami/ui/sidebar"
 
-export const iframeHeight = '800px'
+export const iframeHeight = "800px"
 
-export const description = 'A sidebar that collapses to icons.'
+export const description = "A sidebar that collapses to icons."
 
 export default function Page() {
    return (

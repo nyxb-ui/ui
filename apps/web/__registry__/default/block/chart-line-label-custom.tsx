@@ -1,7 +1,7 @@
-'use client'
+"use client"
 
-import { TrendingUp } from 'lucide-react'
-import { CartesianGrid, LabelList, Line, LineChart } from 'recharts'
+import { TrendingUp } from "lucide-react"
+import { CartesianGrid, LabelList, Line, LineChart } from "recharts"
 
 import {
    Card,
@@ -10,50 +10,48 @@ import {
    CardFooter,
    CardHeader,
    CardTitle,
-} from '~/registry/default/ui/card'
-import type {
-   ChartConfig,
-} from '~/registry/default/ui/chart'
+} from "~/registry/default/ui/card"
+import type { ChartConfig } from "~/registry/default/ui/chart"
 import {
    ChartContainer,
    ChartTooltip,
    ChartTooltipContent,
-} from '~/registry/default/ui/chart'
+} from "~/registry/default/ui/chart"
 
-export const description = 'A line chart with a custom label'
+export const description = "A line chart with a custom label"
 
 const chartData = [
-   { browser: 'chrome', visitors: 275, fill: 'var(--color-chrome)' },
-   { browser: 'safari', visitors: 200, fill: 'var(--color-safari)' },
-   { browser: 'firefox', visitors: 187, fill: 'var(--color-firefox)' },
-   { browser: 'edge', visitors: 173, fill: 'var(--color-edge)' },
-   { browser: 'other', visitors: 90, fill: 'var(--color-other)' },
+   { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
+   { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
+   { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
+   { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
+   { browser: "other", visitors: 90, fill: "var(--color-other)" },
 ]
 
 const chartConfig = {
    visitors: {
-      label: 'Visitors',
-      color: 'hsl(var(--chart-2))',
+      label: "Visitors",
+      color: "hsl(var(--chart-2))",
    },
    chrome: {
-      label: 'Chrome',
-      color: 'hsl(var(--chart-1))',
+      label: "Chrome",
+      color: "hsl(var(--chart-1))",
    },
    safari: {
-      label: 'Safari',
-      color: 'hsl(var(--chart-2))',
+      label: "Safari",
+      color: "hsl(var(--chart-2))",
    },
    firefox: {
-      label: 'Firefox',
-      color: 'hsl(var(--chart-3))',
+      label: "Firefox",
+      color: "hsl(var(--chart-3))",
    },
    edge: {
-      label: 'Edge',
-      color: 'hsl(var(--chart-4))',
+      label: "Edge",
+      color: "hsl(var(--chart-4))",
    },
    other: {
-      label: 'Other',
-      color: 'hsl(var(--chart-5))',
+      label: "Other",
+      color: "hsl(var(--chart-5))",
    },
 } satisfies ChartConfig
 
@@ -78,13 +76,13 @@ export default function Component() {
                   <CartesianGrid vertical={false} />
                   <ChartTooltip
                      cursor={false}
-                     content={(
+                     content={
                         <ChartTooltipContent
                            indicator="line"
                            nameKey="visitors"
                            hideLabel
                         />
-                     )}
+                     }
                   />
                   <Line
                      dataKey="visitors"
@@ -92,7 +90,7 @@ export default function Component() {
                      stroke="var(--color-visitors)"
                      strokeWidth={2}
                      dot={{
-                        fill: 'var(--color-visitors)',
+                        fill: "var(--color-visitors)",
                      }}
                      activeDot={{
                         r: 6,
@@ -105,7 +103,8 @@ export default function Component() {
                         fontSize={12}
                         dataKey="browser"
                         formatter={(value: keyof typeof chartConfig) =>
-                           chartConfig[value]?.label}
+                           chartConfig[value]?.label
+                        }
                      />
                   </Line>
                </LineChart>
@@ -113,9 +112,7 @@ export default function Component() {
          </CardContent>
          <CardFooter className="flex-col items-start gap-2 text-sm">
             <div className="flex gap-2 font-medium leading-none">
-               Trending up by 5.2% this month
-               {' '}
-               <TrendingUp className="size-4" />
+               Trending up by 5.2% this month <TrendingUp className="size-4" />
             </div>
             <div className="text-muted-foreground leading-none">
                Showing total visitors for the last 6 months

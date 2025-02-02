@@ -1,13 +1,13 @@
-'use client'
+"use client"
 
-import { TrendingUp } from 'lucide-react'
+import { TrendingUp } from "lucide-react"
 import {
    Label,
    PolarGrid,
    PolarRadiusAxis,
    RadialBar,
    RadialBarChart,
-} from 'recharts'
+} from "recharts"
 
 import {
    Card,
@@ -16,23 +16,23 @@ import {
    CardFooter,
    CardHeader,
    CardTitle,
-} from '~/registry/default/ui/card'
-import type { ChartConfig } from '~/registry/default/ui/chart'
-import { ChartContainer } from '~/registry/default/ui/chart'
+} from "~/registry/default/ui/card"
+import type { ChartConfig } from "~/registry/default/ui/chart"
+import { ChartContainer } from "~/registry/default/ui/chart"
 
-export const description = 'A radial chart with text'
+export const description = "A radial chart with text"
 
 const chartData = [
-   { browser: 'safari', visitors: 200, fill: 'var(--color-safari)' },
+   { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
 ]
 
 const chartConfig = {
    visitors: {
-      label: 'Visitors',
+      label: "Visitors",
    },
    safari: {
-      label: 'Safari',
-      color: 'hsl(var(--chart-2))',
+      label: "Safari",
+      color: "hsl(var(--chart-2))",
    },
 } satisfies ChartConfig
 
@@ -63,10 +63,14 @@ export default function Component() {
                      polarRadius={[86, 74]}
                   />
                   <RadialBar dataKey="visitors" background cornerRadius={10} />
-                  <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
+                  <PolarRadiusAxis
+                     tick={false}
+                     tickLine={false}
+                     axisLine={false}
+                  >
                      <Label
                         content={({ viewBox }) => {
-                           if (viewBox && 'cx' in viewBox && 'cy' in viewBox) {
+                           if (viewBox && "cx" in viewBox && "cy" in viewBox) {
                               return (
                                  <text
                                     x={viewBox.cx}
@@ -99,9 +103,7 @@ export default function Component() {
          </CardContent>
          <CardFooter className="flex-col gap-2 text-sm">
             <div className="flex items-center gap-2 font-medium leading-none">
-               Trending up by 5.2% this month
-               {' '}
-               <TrendingUp className="size-4" />
+               Trending up by 5.2% this month <TrendingUp className="size-4" />
             </div>
             <div className="text-muted-foreground leading-none">
                Showing total visitors for the last 6 months

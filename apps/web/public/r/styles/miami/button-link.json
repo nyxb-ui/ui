@@ -1,14 +1,16 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "button-link",
   "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
   "registryDependencies": [
     "button"
   ],
   "files": [
     {
-      "path": "example/button-link.tsx",
-      "content": "import { Button } from '~/registry/miami/ui/button'\n\nexport default function ButtonLink() {\n   return <Button variant=\"link\">Link</Button>\n}\n",
-      "type": "registry:component",
+      "path": "examples/button-link.tsx",
+      "content": "import { Button } from \"~/registry/miami/ui/button\"\n\nexport default function ButtonLink() {\n   return <Button variant=\"link\">Link</Button>\n}\n",
+      "type": "registry:example",
       "target": ""
     }
   ]

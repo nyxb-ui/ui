@@ -1,4 +1,4 @@
-import { AppSidebar } from '~/registry/default/block/sidebar-02/components/app-sidebar'
+import { AppSidebar } from "~/registry/default/block/sidebar-02/components/app-sidebar"
 import {
    Breadcrumb,
    BreadcrumbItem,
@@ -6,17 +6,17 @@ import {
    BreadcrumbList,
    BreadcrumbPage,
    BreadcrumbSeparator,
-} from '~/registry/default/ui/breadcrumb'
-import { Separator } from '~/registry/default/ui/separator'
+} from "~/registry/default/ui/breadcrumb"
+import { Separator } from "~/registry/default/ui/separator"
 import {
    SidebarInset,
    SidebarProvider,
    SidebarTrigger,
-} from '~/registry/default/ui/sidebar'
+} from "~/registry/default/ui/sidebar"
 
-export const iframeHeight = '800px'
+export const iframeHeight = "800px"
 
-export const description = 'A sidebar with collapsible sections.'
+export const description = "A sidebar with collapsible sections."
 
 export default function Page() {
    return (

@@ -1,4 +1,4 @@
-import { Button } from '~/registry/default/ui/button'
+import { Button } from "~/registry/default/ui/button"
 import {
    Card,
    CardContent,
@@ -6,17 +6,17 @@ import {
    CardFooter,
    CardHeader,
    CardTitle,
-} from '~/registry/default/ui/card'
-import { Input } from '~/registry/default/ui/input'
-import { Label } from '~/registry/default/ui/label'
+} from "~/registry/default/ui/card"
+import { Input } from "~/registry/default/ui/input"
+import { Label } from "~/registry/default/ui/label"
 
-export const description
-  = 'A simple login form with email and password. The submit button says \'Sign in\'.'
+export const description =
+   "A simple login form with email and password. The submit button says 'Sign in'."
 
-export const iframeHeight = '600px'
+export const iframeHeight = "600px"
 
-export const containerClassName
-  = 'w-full h-screen flex items-center justify-center px-4'
+export const containerClassName =
+   "w-full h-screen flex items-center justify-center px-4"
 
 export default function LoginForm() {
    return (
@@ -30,7 +30,12 @@ export default function LoginForm() {
          <CardContent className="grid gap-4">
             <div className="grid gap-2">
                <Label htmlFor="email">Email</Label>
-               <Input id="email" type="email" placeholder="m@example.com" required />
+               <Input
+                  id="email"
+                  type="email"
+                  placeholder="m@example.com"
+                  required
+               />
             </div>
             <div className="grid gap-2">
                <Label htmlFor="password">Password</Label>

@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import { CircleUser, Menu, Package2, Search } from 'lucide-react'
+import Link from "next/link"
+import { CircleUser, Menu, Package2, Search } from "lucide-react"
 
-import { Button } from '~/registry/default/ui/button'
+import { Button } from "~/registry/default/ui/button"
 import {
    Card,
    CardContent,
@@ -9,8 +9,8 @@ import {
    CardFooter,
    CardHeader,
    CardTitle,
-} from '~/registry/default/ui/card'
-import { Checkbox } from '~/registry/default/ui/checkbox'
+} from "~/registry/default/ui/card"
+import { Checkbox } from "~/registry/default/ui/checkbox"
 import {
    DropdownMenu,
    DropdownMenuContent,
@@ -18,16 +18,16 @@ import {
    DropdownMenuLabel,
    DropdownMenuSeparator,
    DropdownMenuTrigger,
-} from '~/registry/default/ui/dropdown-menu'
-import { Input } from '~/registry/default/ui/input'
-import { Sheet, SheetContent, SheetTrigger } from '~/registry/default/ui/sheet'
+} from "~/registry/default/ui/dropdown-menu"
+import { Input } from "~/registry/default/ui/input"
+import { Sheet, SheetContent, SheetTrigger } from "~/registry/default/ui/sheet"
 
-export const description
-  = 'A settings page. The settings page has a sidebar navigation and a main content area. The main content area has a form to update the store name and a form to update the plugins directory. The sidebar navigation has links to general, security, integrations, support, organizations, and advanced settings.'
+export const description =
+   "A settings page. The settings page has a sidebar navigation and a main content area. The main content area has a form to update the store name and a form to update the plugins directory. The sidebar navigation has links to general, security, integrations, support, organizations, and advanced settings."
 
-export const iframeHeight = '780px'
+export const iframeHeight = "780px"
 
-export const containerClassName = 'w-full h-full'
+export const containerClassName = "w-full h-full"
 
 export default function Dashboard() {
    return (
@@ -135,7 +135,11 @@ export default function Dashboard() {
                </form>
                <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                     <Button variant="secondary" size="icon" className="rounded-full">
+                     <Button
+                        variant="secondary"
+                        size="icon"
+                        className="rounded-full"
+                     >
                         <CircleUser className="size-5" />
                         <span className="sr-only">Toggle user menu</span>
                      </Button>
@@ -157,7 +161,8 @@ export default function Dashboard() {
             </div>
             <div className="mx-auto grid w-full max-w-6xl items-start gap-6 md:grid-cols-[180px_1fr] lg:grid-cols-[250px_1fr]">
                <nav
-                  className="text-muted-foreground grid gap-4 text-sm" x-chunk="dashboard-04-chunk-0"
+                  className="text-muted-foreground grid gap-4 text-sm"
+                  x-chunk="dashboard-04-chunk-0"
                >
                   <Link href="#" className="text-primary font-semibold">
                      General
@@ -189,8 +194,8 @@ export default function Dashboard() {
                      <CardHeader>
                         <CardTitle>Plugins Directory</CardTitle>
                         <CardDescription>
-                           The directory within your project, in which your plugins are
-                           located.
+                           The directory within your project, in which your
+                           plugins are located.
                         </CardDescription>
                      </CardHeader>
                      <CardContent>

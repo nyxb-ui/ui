@@ -1,7 +1,7 @@
-'use client'
+"use client"
 
-import { Footprints, Waves } from 'lucide-react'
-import { Bar, BarChart, XAxis } from 'recharts'
+import { Footprints, Waves } from "lucide-react"
+import { Bar, BarChart, XAxis } from "recharts"
 
 import {
    Card,
@@ -9,36 +9,34 @@ import {
    CardDescription,
    CardHeader,
    CardTitle,
-} from '~/registry/default/ui/card'
-import type {
-   ChartConfig,
-} from '~/registry/default/ui/chart'
+} from "~/registry/default/ui/card"
+import type { ChartConfig } from "~/registry/default/ui/chart"
 import {
    ChartContainer,
    ChartTooltip,
    ChartTooltipContent,
-} from '~/registry/default/ui/chart'
+} from "~/registry/default/ui/chart"
 
-export const description = 'A stacked bar chart with a legend'
+export const description = "A stacked bar chart with a legend"
 
 const chartData = [
-   { date: '2024-07-15', running: 450, swimming: 300 },
-   { date: '2024-07-16', running: 380, swimming: 420 },
-   { date: '2024-07-17', running: 520, swimming: 120 },
-   { date: '2024-07-18', running: 140, swimming: 550 },
-   { date: '2024-07-19', running: 600, swimming: 350 },
-   { date: '2024-07-20', running: 480, swimming: 400 },
+   { date: "2024-07-15", running: 450, swimming: 300 },
+   { date: "2024-07-16", running: 380, swimming: 420 },
+   { date: "2024-07-17", running: 520, swimming: 120 },
+   { date: "2024-07-18", running: 140, swimming: 550 },
+   { date: "2024-07-19", running: 600, swimming: 350 },
+   { date: "2024-07-20", running: 480, swimming: 400 },
 ]
 
 const chartConfig = {
    running: {
-      label: 'Running',
-      color: 'hsl(var(--chart-1))',
+      label: "Running",
+      color: "hsl(var(--chart-1))",
       icon: Footprints,
    },
    swimming: {
-      label: 'Swimming',
-      color: 'hsl(var(--chart-2))',
+      label: "Swimming",
+      color: "hsl(var(--chart-2))",
       icon: Waves,
    },
 } satisfies ChartConfig
@@ -59,8 +57,8 @@ export default function Component() {
                      tickMargin={10}
                      axisLine={false}
                      tickFormatter={(value) => {
-                        return new Date(value).toLocaleDateString('en-US', {
-                           weekday: 'short',
+                        return new Date(value).toLocaleDateString("en-US", {
+                           weekday: "short",
                         })
                      }}
                   />

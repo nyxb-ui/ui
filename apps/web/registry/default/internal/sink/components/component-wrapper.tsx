@@ -1,4 +1,4 @@
-import { cn } from "~/registry/default/lib/utils"
+import { ny } from "~/registry/default/lib/utils"
 
 export function ComponentWrapper({
    className,
@@ -8,7 +8,7 @@ export function ComponentWrapper({
 }: React.ComponentPropsWithoutRef<"div"> & { name: string }) {
    return (
       <div
-         className={cn("flex w-full flex-col rounded-lg border", className)}
+         className={ny("flex w-full flex-col rounded-lg border", className)}
          {...props}
       >
          <div className="border-b px-4 py-3">

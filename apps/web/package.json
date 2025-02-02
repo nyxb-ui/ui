@@ -16,6 +16,9 @@
       "typecheck": "contentlayer2 build && tsc --noEmit"
    },
    "dependencies": {
+      "change-case": "^5.4.4",
+      "nyxb": "workspace:*",
+      "lodash": "^4.17.21",
       "@content-collections/cli": "^0.1.4",
       "@content-collections/core": "^0.7.1",
       "@content-collections/mdx": "^0.1.5",
@@ -100,6 +103,7 @@
       "zod": "^3.20.2"
    },
    "devDependencies": {
+      "@types/lodash": "^4.17.7",
       "@tailwindcss/typography": "^0.5.9",
       "@types/canvas-confetti": "^1.6.4",
       "@types/lodash.template": "^4.5.1",

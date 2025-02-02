@@ -1,14 +1,16 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "multi-select-basic",
   "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
   "registryDependencies": [
     "multi-select"
   ],
   "files": [
     {
-      "path": "example/multi-select-basic.tsx",
-      "content": "'use client'\n\nimport {\n   MultiSelect,\n   MultiSelectContent,\n   MultiSelectGroup,\n   MultiSelectItem,\n   MultiSelectList,\n   MultiSelectTrigger,\n   MultiSelectValue,\n} from '~/registry/default/ui/multi-select'\n\nexport default function MultiSelectBasicDemo() {\n   return (\n      <MultiSelect>\n         <MultiSelectTrigger className=\"w-96\">\n            <MultiSelectValue placeholder=\"Select stack\" />\n         </MultiSelectTrigger>\n         <MultiSelectContent>\n            <MultiSelectList>\n               <MultiSelectGroup heading=\"React\">\n                  <MultiSelectItem value=\"react\">React</MultiSelectItem>\n                  <MultiSelectItem value=\"next\">Next.js</MultiSelectItem>\n                  <MultiSelectItem value=\"remix\">Remix</MultiSelectItem>\n               </MultiSelectGroup>\n               <MultiSelectGroup heading=\"Vue\">\n                  <MultiSelectItem value=\"vue\">Vue</MultiSelectItem>\n                  <MultiSelectItem value=\"nuxt\">Nuxt</MultiSelectItem>\n               </MultiSelectGroup>\n               <MultiSelectGroup heading=\"Others\">\n                  <MultiSelectItem value=\"angular\">Angular</MultiSelectItem>\n                  <MultiSelectItem value=\"svelte\">Svelte</MultiSelectItem>\n               </MultiSelectGroup>\n            </MultiSelectList>\n         </MultiSelectContent>\n      </MultiSelect>\n   )\n}\n",
-      "type": "registry:component",
+      "path": "examples/multi-select-basic.tsx",
+      "content": "\"use client\"\n\nimport {\n   MultiSelect,\n   MultiSelectContent,\n   MultiSelectGroup,\n   MultiSelectItem,\n   MultiSelectList,\n   MultiSelectTrigger,\n   MultiSelectValue,\n} from \"~/registry/default/ui/multi-select\"\n\nexport default function MultiSelectBasicDemo() {\n   return (\n      <MultiSelect>\n         <MultiSelectTrigger className=\"w-96\">\n            <MultiSelectValue placeholder=\"Select stack\" />\n         </MultiSelectTrigger>\n         <MultiSelectContent>\n            <MultiSelectList>\n               <MultiSelectGroup heading=\"React\">\n                  <MultiSelectItem value=\"react\">React</MultiSelectItem>\n                  <MultiSelectItem value=\"next\">Next.js</MultiSelectItem>\n                  <MultiSelectItem value=\"remix\">Remix</MultiSelectItem>\n               </MultiSelectGroup>\n               <MultiSelectGroup heading=\"Vue\">\n                  <MultiSelectItem value=\"vue\">Vue</MultiSelectItem>\n                  <MultiSelectItem value=\"nuxt\">Nuxt</MultiSelectItem>\n               </MultiSelectGroup>\n               <MultiSelectGroup heading=\"Others\">\n                  <MultiSelectItem value=\"angular\">Angular</MultiSelectItem>\n                  <MultiSelectItem value=\"svelte\">Svelte</MultiSelectItem>\n               </MultiSelectGroup>\n            </MultiSelectList>\n         </MultiSelectContent>\n      </MultiSelect>\n   )\n}\n",
+      "type": "registry:example",
       "target": ""
     }
   ]

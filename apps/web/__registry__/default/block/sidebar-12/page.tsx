@@ -1,20 +1,20 @@
-import { AppSidebar } from '~/registry/default/block/sidebar-12/components/app-sidebar'
+import { AppSidebar } from "~/registry/default/block/sidebar-12/components/app-sidebar"
 import {
    Breadcrumb,
    BreadcrumbItem,
    BreadcrumbList,
    BreadcrumbPage,
-} from '~/registry/default/ui/breadcrumb'
-import { Separator } from '~/registry/default/ui/separator'
+} from "~/registry/default/ui/breadcrumb"
+import { Separator } from "~/registry/default/ui/separator"
 import {
    SidebarInset,
    SidebarProvider,
    SidebarTrigger,
-} from '~/registry/default/ui/sidebar'
+} from "~/registry/default/ui/sidebar"
 
-export const iframeHeight = '800px'
+export const iframeHeight = "800px"
 
-export const description = 'A sidebar with a calendar.'
+export const description = "A sidebar with a calendar."
 
 export default function Page() {
    return (
@@ -35,7 +35,10 @@ export default function Page() {
             <div className="flex flex-1 flex-col gap-4 p-4">
                <div className="grid auto-rows-min gap-4 md:grid-cols-5">
                   {Array.from({ length: 20 }).map((_, i) => (
-                     <div key={i} className="bg-muted/50 aspect-square rounded-xl" />
+                     <div
+                        key={i}
+                        className="bg-muted/50 aspect-square rounded-xl"
+                     />
                   ))}
                </div>
             </div>

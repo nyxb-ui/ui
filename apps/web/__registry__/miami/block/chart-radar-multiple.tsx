@@ -1,7 +1,7 @@
-'use client'
+"use client"
 
-import { TrendingUp } from 'lucide-react'
-import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from 'recharts'
+import { TrendingUp } from "lucide-react"
+import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from "recharts"
 
 import {
    Card,
@@ -10,35 +10,33 @@ import {
    CardFooter,
    CardHeader,
    CardTitle,
-} from '~/registry/miami/ui/card'
-import type {
-   ChartConfig,
-} from '~/registry/miami/ui/chart'
+} from "~/registry/miami/ui/card"
+import type { ChartConfig } from "~/registry/miami/ui/chart"
 import {
    ChartContainer,
    ChartTooltip,
    ChartTooltipContent,
-} from '~/registry/miami/ui/chart'
+} from "~/registry/miami/ui/chart"
 
-export const description = 'A radar chart with multiple data'
+export const description = "A radar chart with multiple data"
 
 const chartData = [
-   { month: 'January', desktop: 186, mobile: 80 },
-   { month: 'February', desktop: 305, mobile: 200 },
-   { month: 'March', desktop: 237, mobile: 120 },
-   { month: 'April', desktop: 73, mobile: 190 },
-   { month: 'May', desktop: 209, mobile: 130 },
-   { month: 'June', desktop: 214, mobile: 140 },
+   { month: "January", desktop: 186, mobile: 80 },
+   { month: "February", desktop: 305, mobile: 200 },
+   { month: "March", desktop: 237, mobile: 120 },
+   { month: "April", desktop: 73, mobile: 190 },
+   { month: "May", desktop: 209, mobile: 130 },
+   { month: "June", desktop: 214, mobile: 140 },
 ]
 
 const chartConfig = {
    desktop: {
-      label: 'Desktop',
-      color: 'hsl(var(--chart-1))',
+      label: "Desktop",
+      color: "hsl(var(--chart-1))",
    },
    mobile: {
-      label: 'Mobile',
-      color: 'hsl(var(--chart-2))',
+      label: "Mobile",
+      color: "hsl(var(--chart-2))",
    },
 } satisfies ChartConfig
 
@@ -74,9 +72,7 @@ export default function Component() {
          </CardContent>
          <CardFooter className="flex-col gap-2 text-sm">
             <div className="flex items-center gap-2 font-medium leading-none">
-               Trending up by 5.2% this month
-               {' '}
-               <TrendingUp className="size-4" />
+               Trending up by 5.2% this month <TrendingUp className="size-4" />
             </div>
             <div className="text-muted-foreground flex items-center gap-2 leading-none">
                January - June 2024

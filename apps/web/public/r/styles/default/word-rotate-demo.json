@@ -1,11 +1,13 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "word-rotate-demo",
   "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
   "files": [
     {
-      "path": "example/word-rotate-demo.tsx",
-      "content": "import WordRotate from '~/registry/default/ui/word-rotate'\n\nexport default async function WordRotateDemo() {\n   return (\n      <WordRotate\n         className=\"text-4xl font-bold text-black dark:text-white\"\n         words={['Word', 'Rotate']}\n      />\n   )\n}\n",
-      "type": "registry:component",
+      "path": "examples/word-rotate-demo.tsx",
+      "content": "import WordRotate from \"~/registry/default/ui/word-rotate\"\n\nexport default async function WordRotateDemo() {\n   return (\n      <WordRotate\n         className=\"text-4xl font-bold text-black dark:text-white\"\n         words={[\"Word\", \"Rotate\"]}\n      />\n   )\n}\n",
+      "type": "registry:example",
       "target": ""
     }
   ]

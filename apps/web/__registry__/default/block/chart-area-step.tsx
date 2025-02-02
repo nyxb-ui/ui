@@ -1,7 +1,7 @@
-'use client'
+"use client"
 
-import { Activity, TrendingUp } from 'lucide-react'
-import { Area, AreaChart, CartesianGrid, XAxis } from 'recharts'
+import { Activity, TrendingUp } from "lucide-react"
+import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
 
 import {
    Card,
@@ -10,31 +10,29 @@ import {
    CardFooter,
    CardHeader,
    CardTitle,
-} from '~/registry/default/ui/card'
-import type {
-   ChartConfig,
-} from '~/registry/default/ui/chart'
+} from "~/registry/default/ui/card"
+import type { ChartConfig } from "~/registry/default/ui/chart"
 import {
    ChartContainer,
    ChartTooltip,
    ChartTooltipContent,
-} from '~/registry/default/ui/chart'
+} from "~/registry/default/ui/chart"
 
-export const description = 'A step area chart'
+export const description = "A step area chart"
 
 const chartData = [
-   { month: 'January', desktop: 186 },
-   { month: 'February', desktop: 305 },
-   { month: 'March', desktop: 237 },
-   { month: 'April', desktop: 73 },
-   { month: 'May', desktop: 209 },
-   { month: 'June', desktop: 214 },
+   { month: "January", desktop: 186 },
+   { month: "February", desktop: 305 },
+   { month: "March", desktop: 237 },
+   { month: "April", desktop: 73 },
+   { month: "May", desktop: 209 },
+   { month: "June", desktop: 214 },
 ]
 
 const chartConfig = {
    desktop: {
-      label: 'Desktop',
-      color: 'hsl(var(--chart-1))',
+      label: "Desktop",
+      color: "hsl(var(--chart-1))",
       icon: Activity,
    },
 } satisfies ChartConfig
@@ -64,7 +62,7 @@ export default function Component() {
                      tickLine={false}
                      axisLine={false}
                      tickMargin={8}
-                     tickFormatter={value => value.slice(0, 3)}
+                     tickFormatter={(value) => value.slice(0, 3)}
                   />
                   <ChartTooltip
                      cursor={false}
@@ -84,8 +82,7 @@ export default function Component() {
             <div className="flex w-full items-start gap-2 text-sm">
                <div className="grid gap-2">
                   <div className="flex items-center gap-2 font-medium leading-none">
-                     Trending up by 5.2% this month
-                     {' '}
+                     Trending up by 5.2% this month{" "}
                      <TrendingUp className="size-4" />
                   </div>
                   <div className="text-muted-foreground flex items-center gap-2 leading-none">

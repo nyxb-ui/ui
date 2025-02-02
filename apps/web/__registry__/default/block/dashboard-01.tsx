@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link"
 import {
    Activity,
    ArrowUpRight,
@@ -9,22 +9,22 @@ import {
    Package2,
    Search,
    Users,
-} from 'lucide-react'
+} from "lucide-react"
 
 import {
    Avatar,
    AvatarFallback,
    AvatarImage,
-} from '~/registry/default/ui/avatar'
-import { Badge } from '~/registry/default/ui/badge'
-import { Button } from '~/registry/default/ui/button'
+} from "~/registry/default/ui/avatar"
+import { Badge } from "~/registry/default/ui/badge"
+import { Button } from "~/registry/default/ui/button"
 import {
    Card,
    CardContent,
    CardDescription,
    CardHeader,
    CardTitle,
-} from '~/registry/default/ui/card'
+} from "~/registry/default/ui/card"
 import {
    DropdownMenu,
    DropdownMenuContent,
@@ -32,9 +32,9 @@ import {
    DropdownMenuLabel,
    DropdownMenuSeparator,
    DropdownMenuTrigger,
-} from '~/registry/default/ui/dropdown-menu'
-import { Input } from '~/registry/default/ui/input'
-import { Sheet, SheetContent, SheetTrigger } from '~/registry/default/ui/sheet'
+} from "~/registry/default/ui/dropdown-menu"
+import { Input } from "~/registry/default/ui/input"
+import { Sheet, SheetContent, SheetTrigger } from "~/registry/default/ui/sheet"
 import {
    Table,
    TableBody,
@@ -42,14 +42,14 @@ import {
    TableHead,
    TableHeader,
    TableRow,
-} from '~/registry/default/ui/table'
+} from "~/registry/default/ui/table"
 
-export const description
-  = 'An application shell with a header and main content area. The header has a navbar, a search input and and a user nav dropdown. The user nav is toggled by a button with an avatar image.'
+export const description =
+   "An application shell with a header and main content area. The header has a navbar, a search input and and a user nav dropdown. The user nav is toggled by a button with an avatar image."
 
-export const iframeHeight = '825px'
+export const iframeHeight = "825px"
 
-export const containerClassName = 'w-full h-full'
+export const containerClassName = "w-full h-full"
 
 export default function Dashboard() {
    return (
@@ -157,7 +157,11 @@ export default function Dashboard() {
                </form>
                <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                     <Button variant="secondary" size="icon" className="rounded-full">
+                     <Button
+                        variant="secondary"
+                        size="icon"
+                        className="rounded-full"
+                     >
                         <CircleUser className="size-5" />
                         <span className="sr-only">Toggle user menu</span>
                      </Button>
@@ -205,7 +209,9 @@ export default function Dashboard() {
                </Card>
                <Card x-chunk="dashboard-01-chunk-2">
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                     <CardTitle className="text-sm font-medium">Sales</CardTitle>
+                     <CardTitle className="text-sm font-medium">
+                        Sales
+                     </CardTitle>
                      <CreditCard className="text-muted-foreground size-4" />
                   </CardHeader>
                   <CardContent>
@@ -217,7 +223,9 @@ export default function Dashboard() {
                </Card>
                <Card x-chunk="dashboard-01-chunk-3">
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                     <CardTitle className="text-sm font-medium">Active Now</CardTitle>
+                     <CardTitle className="text-sm font-medium">
+                        Active Now
+                     </CardTitle>
                      <Activity className="text-muted-foreground size-4" />
                   </CardHeader>
                   <CardContent>
@@ -229,9 +237,7 @@ export default function Dashboard() {
                </Card>
             </div>
             <div className="grid gap-4 md:gap-8 lg:grid-cols-2 xl:grid-cols-3">
-               <Card
-                  className="xl:col-span-2" x-chunk="dashboard-01-chunk-4"
-               >
+               <Card className="xl:col-span-2" x-chunk="dashboard-01-chunk-4">
                   <CardHeader className="flex flex-row items-center">
                      <div className="grid gap-2">
                         <CardTitle>Transactions</CardTitle>
@@ -260,7 +266,9 @@ export default function Dashboard() {
                               <TableHead className="hidden xl:table-column">
                                  Date
                               </TableHead>
-                              <TableHead className="text-right">Amount</TableHead>
+                              <TableHead className="text-right">
+                                 Amount
+                              </TableHead>
                            </TableRow>
                         </TableHeader>
                         <TableBody>
@@ -282,7 +290,9 @@ export default function Dashboard() {
                               <TableCell className="hidden md:table-cell lg:hidden xl:table-column">
                                  2023-06-23
                               </TableCell>
-                              <TableCell className="text-right">$250.00</TableCell>
+                              <TableCell className="text-right">
+                                 $250.00
+                              </TableCell>
                            </TableRow>
                            <TableRow>
                               <TableCell>
@@ -302,11 +312,15 @@ export default function Dashboard() {
                               <TableCell className="hidden md:table-cell lg:hidden xl:table-column">
                                  2023-06-24
                               </TableCell>
-                              <TableCell className="text-right">$150.00</TableCell>
+                              <TableCell className="text-right">
+                                 $150.00
+                              </TableCell>
                            </TableRow>
                            <TableRow>
                               <TableCell>
-                                 <div className="font-medium">Noah Williams</div>
+                                 <div className="font-medium">
+                                    Noah Williams
+                                 </div>
                                  <div className="text-muted-foreground hidden text-sm md:inline">
                                     noah@example.com
                                  </div>
@@ -322,7 +336,9 @@ export default function Dashboard() {
                               <TableCell className="hidden md:table-cell lg:hidden xl:table-column">
                                  2023-06-25
                               </TableCell>
-                              <TableCell className="text-right">$350.00</TableCell>
+                              <TableCell className="text-right">
+                                 $350.00
+                              </TableCell>
                            </TableRow>
                            <TableRow>
                               <TableCell>
@@ -342,7 +358,9 @@ export default function Dashboard() {
                               <TableCell className="hidden md:table-cell lg:hidden xl:table-column">
                                  2023-06-26
                               </TableCell>
-                              <TableCell className="text-right">$450.00</TableCell>
+                              <TableCell className="text-right">
+                                 $450.00
+                              </TableCell>
                            </TableRow>
                            <TableRow>
                               <TableCell>
@@ -362,7 +380,9 @@ export default function Dashboard() {
                               <TableCell className="hidden md:table-cell lg:hidden xl:table-column">
                                  2023-06-27
                               </TableCell>
-                              <TableCell className="text-right">$550.00</TableCell>
+                              <TableCell className="text-right">
+                                 $550.00
+                              </TableCell>
                            </TableRow>
                         </TableBody>
                      </Table>

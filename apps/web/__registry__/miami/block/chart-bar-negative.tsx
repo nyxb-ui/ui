@@ -1,7 +1,7 @@
-'use client'
+"use client"
 
-import { TrendingUp } from 'lucide-react'
-import { Bar, BarChart, CartesianGrid, Cell, LabelList } from 'recharts'
+import { TrendingUp } from "lucide-react"
+import { Bar, BarChart, CartesianGrid, Cell, LabelList } from "recharts"
 
 import {
    Card,
@@ -10,30 +10,28 @@ import {
    CardFooter,
    CardHeader,
    CardTitle,
-} from '~/registry/miami/ui/card'
-import type {
-   ChartConfig,
-} from '~/registry/miami/ui/chart'
+} from "~/registry/miami/ui/card"
+import type { ChartConfig } from "~/registry/miami/ui/chart"
 import {
    ChartContainer,
    ChartTooltip,
    ChartTooltipContent,
-} from '~/registry/miami/ui/chart'
+} from "~/registry/miami/ui/chart"
 
-export const description = 'A bar chart with negative values'
+export const description = "A bar chart with negative values"
 
 const chartData = [
-   { month: 'January', visitors: 186 },
-   { month: 'February', visitors: 205 },
-   { month: 'March', visitors: -207 },
-   { month: 'April', visitors: 173 },
-   { month: 'May', visitors: -209 },
-   { month: 'June', visitors: 214 },
+   { month: "January", visitors: 186 },
+   { month: "February", visitors: 205 },
+   { month: "March", visitors: -207 },
+   { month: "April", visitors: 173 },
+   { month: "May", visitors: -209 },
+   { month: "June", visitors: 214 },
 ]
 
 const chartConfig = {
    visitors: {
-      label: 'Visitors',
+      label: "Visitors",
    },
 } satisfies ChartConfig
 
@@ -53,14 +51,18 @@ export default function Component() {
                      content={<ChartTooltipContent hideLabel hideIndicator />}
                   />
                   <Bar dataKey="visitors">
-                     <LabelList position="top" dataKey="month" fillOpacity={1} />
-                     {chartData.map(item => (
+                     <LabelList
+                        position="top"
+                        dataKey="month"
+                        fillOpacity={1}
+                     />
+                     {chartData.map((item) => (
                         <Cell
                            key={item.month}
                            fill={
                               item.visitors > 0
-                                 ? 'hsl(var(--chart-1))'
-                                 : 'hsl(var(--chart-2))'
+                                 ? "hsl(var(--chart-1))"
+                                 : "hsl(var(--chart-2))"
                            }
                         />
                      ))}
@@ -70,9 +72,7 @@ export default function Component() {
          </CardContent>
          <CardFooter className="flex-col items-start gap-2 text-sm">
             <div className="flex gap-2 font-medium leading-none">
-               Trending up by 5.2% this month
-               {' '}
-               <TrendingUp className="size-4" />
+               Trending up by 5.2% this month <TrendingUp className="size-4" />
             </div>
             <div className="text-muted-foreground leading-none">
                Showing total visitors for the last 6 months

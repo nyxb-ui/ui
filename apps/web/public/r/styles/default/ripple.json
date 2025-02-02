@@ -1,11 +1,13 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "ripple",
   "type": "registry:ui",
+  "author": "nyxbui (https://nyxbui.design)",
   "files": [
     {
       "path": "ui/ripple.tsx",
-      "content": "import type { CSSProperties } from 'react'\nimport React from 'react'\n\n// Modify these\nconst MAIN_CIRCLE_SIZE = 210\nconst MAIN_CIRCLE_OPACITY = 0.24\nconst NUM_CIRCLES = 8\n\nconst Ripple = React.memo(() => {\n   return (\n      <div className=\"absolute left-1/2 top-1/2 size-full overflow-visible\">\n         {Array.from({ length: NUM_CIRCLES }, (_, i) => (\n            <div\n               key={i}\n               className=\"animate-ripple absolute -translate-x-1/2 -translate-y-1/2 rounded-full bg-neutral-400\"\n               style={\n                  {\n                     width: MAIN_CIRCLE_SIZE + i * 70,\n                     height: MAIN_CIRCLE_SIZE + i * 70,\n                     opacity: MAIN_CIRCLE_OPACITY - i * 0.03,\n                     animationDelay: `${i * 0.06}s`,\n                  } as CSSProperties\n               }\n            >\n            </div>\n         ))}\n      </div>\n   )\n})\n\nRipple.displayName = 'Ripple'\n\nexport default Ripple\n",
-      "type": "registry:component",
+      "content": "import type { CSSProperties } from \"react\"\nimport React from \"react\"\n\n// Modify these\nconst MAIN_CIRCLE_SIZE = 210\nconst MAIN_CIRCLE_OPACITY = 0.24\nconst NUM_CIRCLES = 8\n\nconst Ripple = React.memo(() => {\n   return (\n      <div className=\"absolute left-1/2 top-1/2 size-full overflow-visible\">\n         {Array.from({ length: NUM_CIRCLES }, (_, i) => (\n            <div\n               key={i}\n               className=\"animate-ripple absolute -translate-x-1/2 -translate-y-1/2 rounded-full bg-neutral-400\"\n               style={\n                  {\n                     width: MAIN_CIRCLE_SIZE + i * 70,\n                     height: MAIN_CIRCLE_SIZE + i * 70,\n                     opacity: MAIN_CIRCLE_OPACITY - i * 0.03,\n                     animationDelay: `${i * 0.06}s`,\n                  } as CSSProperties\n               }\n            ></div>\n         ))}\n      </div>\n   )\n})\n\nRipple.displayName = \"Ripple\"\n\nexport default Ripple\n",
+      "type": "registry:ui",
       "target": ""
     }
   ],

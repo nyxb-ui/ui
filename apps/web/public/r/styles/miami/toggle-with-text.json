@@ -1,10 +1,12 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "toggle-with-text",
   "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
   "files": [
     {
-      "path": "example/toggle-with-text.tsx",
-      "content": "import { FontItalicIcon } from '@radix-ui/react-icons'\n\nimport { Toggle } from '~/registry/miami/ui/toggle'\n\nexport default function ToggleWithText() {\n   return (\n      <Toggle aria-label=\"Toggle italic\">\n         <FontItalicIcon className=\"mr-2 size-4\" />\n         Italic\n      </Toggle>\n   )\n}\n",
+      "path": "examples/toggle-with-text.tsx",
+      "content": "import { FontItalicIcon } from \"@radix-ui/react-icons\"\n\nimport { Toggle } from \"~/registry/miami/ui/toggle\"\n\nexport default function ToggleWithText() {\n   return (\n      <Toggle aria-label=\"Toggle italic\">\n         <FontItalicIcon className=\"mr-2 size-4\" />\n         Italic\n      </Toggle>\n   )\n}\n",
       "type": "registry:example",
       "target": ""
     }

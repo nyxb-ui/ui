@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link"
 import {
    Bell,
    CircleUser,
@@ -10,17 +10,17 @@ import {
    Search,
    ShoppingCart,
    Users,
-} from 'lucide-react'
+} from "lucide-react"
 
-import { Badge } from '~/registry/miami/ui/badge'
-import { Button } from '~/registry/miami/ui/button'
+import { Badge } from "~/registry/miami/ui/badge"
+import { Button } from "~/registry/miami/ui/button"
 import {
    Card,
    CardContent,
    CardDescription,
    CardHeader,
    CardTitle,
-} from '~/registry/miami/ui/card'
+} from "~/registry/miami/ui/card"
 import {
    DropdownMenu,
    DropdownMenuContent,
@@ -28,16 +28,16 @@ import {
    DropdownMenuLabel,
    DropdownMenuSeparator,
    DropdownMenuTrigger,
-} from '~/registry/miami/ui/dropdown-menu'
-import { Input } from '~/registry/miami/ui/input'
-import { Sheet, SheetContent, SheetTrigger } from '~/registry/miami/ui/sheet'
+} from "~/registry/miami/ui/dropdown-menu"
+import { Input } from "~/registry/miami/ui/input"
+import { Sheet, SheetContent, SheetTrigger } from "~/registry/miami/ui/sheet"
 
-export const description
-  = 'A products dashboard with a sidebar navigation and a main content area. The dashboard has a header with a search input and a user menu. The sidebar has a logo, navigation links, and a card with a call to action. The main content area shows an empty state with a call to action.'
+export const description =
+   "A products dashboard with a sidebar navigation and a main content area. The dashboard has a header with a search input and a user menu. The sidebar has a logo, navigation links, and a card with a call to action. The main content area shows an empty state with a call to action."
 
-export const iframeHeight = '800px'
+export const iframeHeight = "800px"
 
-export const containerClassName = 'w-full h-full'
+export const containerClassName = "w-full h-full"
 
 export default function Dashboard() {
    return (
@@ -45,11 +45,18 @@ export default function Dashboard() {
          <div className="bg-muted/40 hidden border-r md:block">
             <div className="flex h-full max-h-screen flex-col gap-2">
                <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
-                  <Link href="/" className="flex items-center gap-2 font-semibold">
+                  <Link
+                     href="/"
+                     className="flex items-center gap-2 font-semibold"
+                  >
                      <Package2 className="size-6" />
                      <span className="">Acme Inc</span>
                   </Link>
-                  <Button variant="outline" size="icon" className="ml-auto size-8">
+                  <Button
+                     variant="outline"
+                     size="icon"
+                     className="ml-auto size-8"
+                  >
                      <Bell className="size-4" />
                      <span className="sr-only">Toggle notifications</span>
                   </Button>
@@ -78,8 +85,7 @@ export default function Dashboard() {
                         className="bg-muted text-primary hover:text-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
                      >
                         <Package className="size-4" />
-                        Products
-                        {' '}
+                        Products{" "}
                      </Link>
                      <Link
                         href="#"
@@ -102,8 +108,8 @@ export default function Dashboard() {
                      <CardHeader className="p-2 pt-0 md:p-4">
                         <CardTitle>Upgrade to Pro</CardTitle>
                         <CardDescription>
-                           Unlock all features and get unlimited access to our support
-                           team.
+                           Unlock all features and get unlimited access to our
+                           support team.
                         </CardDescription>
                      </CardHeader>
                      <CardContent className="p-2 pt-0 md:p-4 md:pt-0">
@@ -181,8 +187,8 @@ export default function Dashboard() {
                            <CardHeader>
                               <CardTitle>Upgrade to Pro</CardTitle>
                               <CardDescription>
-                                 Unlock all features and get unlimited access to our
-                                 support team.
+                                 Unlock all features and get unlimited access to
+                                 our support team.
                               </CardDescription>
                            </CardHeader>
                            <CardContent>
@@ -208,7 +214,11 @@ export default function Dashboard() {
                </div>
                <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                     <Button variant="secondary" size="icon" className="rounded-full">
+                     <Button
+                        variant="secondary"
+                        size="icon"
+                        className="rounded-full"
+                     >
                         <CircleUser className="size-5" />
                         <span className="sr-only">Toggle user menu</span>
                      </Button>
@@ -225,10 +235,13 @@ export default function Dashboard() {
             </header>
             <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
                <div className="flex items-center">
-                  <h1 className="text-lg font-semibold md:text-2xl">Inventory</h1>
+                  <h1 className="text-lg font-semibold md:text-2xl">
+                     Inventory
+                  </h1>
                </div>
                <div
-                  className="flex flex-1 items-center justify-center rounded-lg border border-dashed shadow-sm" x-chunk="dashboard-02-chunk-1"
+                  className="flex flex-1 items-center justify-center rounded-lg border border-dashed shadow-sm"
+                  x-chunk="dashboard-02-chunk-1"
                >
                   <div className="flex flex-col items-center gap-1 text-center">
                      <h3 className="text-2xl font-bold tracking-tight">

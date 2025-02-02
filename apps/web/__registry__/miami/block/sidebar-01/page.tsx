@@ -1,4 +1,4 @@
-import { AppSidebar } from '~/registry/miami/block/sidebar-01/components/app-sidebar'
+import { AppSidebar } from "~/registry/miami/block/sidebar-01/components/app-sidebar"
 import {
    Breadcrumb,
    BreadcrumbItem,
@@ -6,18 +6,18 @@ import {
    BreadcrumbList,
    BreadcrumbPage,
    BreadcrumbSeparator,
-} from '~/registry/miami/ui/breadcrumb'
-import { Separator } from '~/registry/miami/ui/separator'
+} from "~/registry/miami/ui/breadcrumb"
+import { Separator } from "~/registry/miami/ui/separator"
 import {
    SidebarInset,
    SidebarProvider,
    SidebarTrigger,
-} from '~/registry/miami/ui/sidebar'
+} from "~/registry/miami/ui/sidebar"
 
-export const iframeHeight = '800px'
+export const iframeHeight = "800px"
 
-export const description
-  = 'A simple sidebar with navigation grouped by section.'
+export const description =
+   "A simple sidebar with navigation grouped by section."
 
 export default function Page() {
    return (

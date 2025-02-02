@@ -1,6 +1,8 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "theme-midnight",
   "type": "registry:theme",
+  "author": "nyxbui (https://nyxbui.design)",
   "cssVars": {
     "light": {
       "background": "240 5% 6%",
