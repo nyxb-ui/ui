@@ -11027,6 +11027,273 @@ export const Index: Record<string, any> = {
          source: "",
          meta: undefined,
       },
+      "typography-demo": {
+         name: "typography-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/typography-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/typography-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-h1": {
+         name: "typography-h1",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/typography-h1.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/typography-h1.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-h2": {
+         name: "typography-h2",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/typography-h2.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/typography-h2.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-h3": {
+         name: "typography-h3",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/typography-h3.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/typography-h3.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-h4": {
+         name: "typography-h4",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/typography-h4.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/typography-h4.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-blockquote": {
+         name: "typography-blockquote",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/typography-blockquote.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/typography-blockquote.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-table": {
+         name: "typography-table",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/typography-table.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/typography-table.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-list": {
+         name: "typography-list",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/typography-list.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/typography-list.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-inline-code": {
+         name: "typography-inline-code",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/typography-inline-code.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () =>
+               import("~/registry/miami/examples/typography-inline-code.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-lead": {
+         name: "typography-lead",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/typography-lead.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/typography-lead.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-large": {
+         name: "typography-large",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/typography-large.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/typography-large.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-small": {
+         name: "typography-small",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/typography-small.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/typography-small.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-muted": {
+         name: "typography-muted",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/typography-muted.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/typography-muted.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-p": {
+         name: "typography-p",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/typography-p.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/typography-p.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
    },
    default: {
       accordion: {
@@ -22180,6 +22447,274 @@ export const Index: Record<string, any> = {
          component: React.lazy(
             () =>
                import("~/registry/default/examples/nyx-toc-popover-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-demo": {
+         name: "typography-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/typography-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/typography-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-h1": {
+         name: "typography-h1",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/typography-h1.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/typography-h1.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-h2": {
+         name: "typography-h2",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/typography-h2.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/typography-h2.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-h3": {
+         name: "typography-h3",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/typography-h3.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/typography-h3.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-h4": {
+         name: "typography-h4",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/typography-h4.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/typography-h4.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-blockquote": {
+         name: "typography-blockquote",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/typography-blockquote.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () =>
+               import("~/registry/default/examples/typography-blockquote.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-table": {
+         name: "typography-table",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/typography-table.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/typography-table.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-list": {
+         name: "typography-list",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/typography-list.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/typography-list.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-inline-code": {
+         name: "typography-inline-code",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/typography-inline-code.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () =>
+               import("~/registry/default/examples/typography-inline-code.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-lead": {
+         name: "typography-lead",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/typography-lead.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/typography-lead.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-large": {
+         name: "typography-large",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/typography-large.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/typography-large.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-small": {
+         name: "typography-small",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/typography-small.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/typography-small.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-muted": {
+         name: "typography-muted",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/typography-muted.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/typography-muted.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "typography-p": {
+         name: "typography-p",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/typography-p.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/typography-p.tsx"),
          ),
          source: "",
          meta: undefined,

@@ -1,21 +1,21 @@
-import { ChevronRightIcon, ExternalLinkIcon } from '@radix-ui/react-icons'
-import { allDocs } from 'content-collections'
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
+import { Mdx } from "~/components/mdx-components"
+import { DocPager } from "~/components/pager"
+import { badgeVariants } from "~/components/ui/badge"
+import { ScrollArea } from "~/components/ui/scroll-area"
+import { siteConfig } from "~/config/site"
+import { getTableOfContents } from "~/lib/toc"
+import { absoluteUrl, ny } from "~/lib/utils"
 
-import { Mdx } from '~/components/mdx-components'
-import { DocPager } from '~/components/pager'
-import { badgeVariants } from '~/components/ui/badge'
-import { ScrollArea } from '~/components/ui/scroll-area'
-import { siteConfig } from '~/config/site'
-import { getTableOfContents } from '~/lib/toc'
-import { absoluteUrl, ny } from '~/lib/utils'
+import "~/styles/mdx.css"
 
-import '~/styles/mdx.css'
+import { ChevronRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons"
+import { allDocs } from "content-collections"
+import type { Metadata } from "next"
+import Link from "next/link"
+import { notFound } from "next/navigation"
 
-import { Contribute } from '~/components/contribute'
-import { TableOfContents } from '~/components/toc'
+import { Contribute } from "~/components/contribute"
+import { TableOfContents } from "~/components/toc"
 
 interface DocPageProps {
    params: {
@@ -24,8 +24,8 @@ interface DocPageProps {
 }
 
 async function getDocFromParams({ params }: DocPageProps) {
-   const slug = params.slug?.join('/') || ''
-   const doc = allDocs.find(doc => doc.slugAsParams === slug)
+   const slug = params.slug?.join("/") || ""
+   const doc = allDocs.find((doc) => doc.slugAsParams === slug)
 
    if (!doc) {
       return null
@@ -44,12 +44,12 @@ export async function generateMetadata({
    }
 
    return {
-      title: `${doc.title} | Nyxb UI`,
+      title: `${doc.title} | Magic UI`,
       description: doc.description,
       openGraph: {
          title: doc.title,
          description: doc.description,
-         type: 'article',
+         type: "article",
          url: absoluteUrl(doc.slug),
          images: [
             {
@@ -61,20 +61,20 @@ export async function generateMetadata({
          ],
       },
       twitter: {
-         card: 'summary_large_image',
+         card: "summary_large_image",
          title: doc.title,
          description: doc.description,
          images: [doc.image],
-         creator: '@nyxb0',
+         creator: "@dillionverma",
       },
    }
 }
 
 export async function generateStaticParams(): Promise<
-   DocPageProps['params'][]
+   DocPageProps["params"][]
 > {
-   return allDocs.map(doc => ({
-      slug: doc.slugAsParams.split('/'),
+   return allDocs.map((doc) => ({
+      slug: doc.slugAsParams.split("/"),
    }))
 }
 
@@ -89,54 +89,62 @@ export default async function DocPage({ params }: DocPageProps) {
 
    return (
       <main
-         className={ny('relative py-6 lg:gap-10 lg:py-8 xl:grid ', {
-            'xl:grid-cols-[1fr_300px]': doc.toc,
+         className={ny("relative py-6 lg:gap-10 lg:py-8 xl:grid ", {
+            "xl:grid-cols-[1fr_300px]": doc.toc,
          })}
       >
          <div className="mx-auto w-full min-w-0">
-            <div className="text-muted-foreground mb-4 flex items-center space-x-1 text-sm">
+            <div className="mb-4 flex items-center space-x-1 text-sm text-muted-foreground">
                <div className="truncate">Docs</div>
                <ChevronRightIcon className="size-4" />
-               <div className="text-foreground font-medium">{doc.title}</div>
+               <div className="font-medium text-foreground">{doc.title}</div>
             </div>
             <div className="space-y-2">
-               <h1 className={ny('scroll-m-20 text-4xl font-bold tracking-tight')}>
+               <h1
+                  className={ny(
+                     "scroll-m-20 text-4xl font-bold tracking-tight",
+                  )}
+               >
                   {doc.title}
                </h1>
                {doc.description && (
-                  <p className="text-muted-foreground text-balance text-lg">
+                  <p className="text-balance text-lg text-muted-foreground">
                      {doc.description}
                   </p>
                )}
             </div>
-            {doc.links
-               ? (
-                     <div className="flex items-center space-x-2 pt-4">
-                        {doc.links?.doc && (
-                           <Link
-                              href={doc.links.doc}
-                              target="_blank"
-                              rel="noreferrer"
-                              className={ny(badgeVariants({ variant: 'secondary' }), 'gap-1')}
-                           >
-                              Docs
-                              <ExternalLinkIcon className="size-3" />
-                           </Link>
+            {doc.links ? (
+               <div className="flex items-center space-x-2 pt-4">
+                  {doc.links?.doc && (
+                     <Link
+                        href={doc.links.doc}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={ny(
+                           badgeVariants({ variant: "secondary" }),
+                           "gap-1",
                         )}
-                        {doc.links?.api && (
-                           <Link
-                              href={doc.links.api}
-                              target="_blank"
-                              rel="noreferrer"
-                              className={ny(badgeVariants({ variant: 'secondary' }), 'gap-1')}
-                           >
-                              API Reference
-                              <ExternalLinkIcon className="size-3" />
-                           </Link>
+                     >
+                        Docs
+                        <ExternalLinkIcon className="size-3" />
+                     </Link>
+                  )}
+                  {doc.links?.api && (
+                     <Link
+                        href={doc.links.api}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={ny(
+                           badgeVariants({ variant: "secondary" }),
+                           "gap-1",
                         )}
-                     </div>
-                  )
-               : null}
+                     >
+                        API Reference
+                        <ExternalLinkIcon className="size-3" />
+                     </Link>
+                  )}
+               </div>
+            ) : null}
             <div className="pb-12 pt-8">
                <Mdx code={doc.body.code} />
             </div>

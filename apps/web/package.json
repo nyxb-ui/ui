@@ -16,6 +16,7 @@
       "typecheck": "contentlayer2 build && tsc --noEmit"
    },
    "dependencies": {
+      "motion": "^11.15.0",
       "change-case": "^5.4.4",
       "nyxb": "workspace:*",
       "lodash": "^4.17.21",

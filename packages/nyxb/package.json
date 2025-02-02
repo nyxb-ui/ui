@@ -42,6 +42,7 @@
       "release": "bumping",
       "pub:beta": "pnpm build && pnpm publish --no-git-checks --access public --tag beta",
       "pub:next": "pnpm build && pnpm publish --no-git-checks --access public --tag next",
+      "pub:canary": "pnpm build && pnpm publish --no-git-checks --access public --tag canary",
       "pub:release": "pnpm build && pnpm publish --access public",
       "test": "vitest run",
       "test:dev": "REGISTRY_URL=http://localhost:3333/r vitest run"

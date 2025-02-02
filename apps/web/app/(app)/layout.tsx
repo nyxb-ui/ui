@@ -1,22 +1,18 @@
 import { SiteBanner } from "~/components/site-banner"
 import { SiteFooter } from "~/components/site-footer"
 import { SiteHeader } from "~/components/site-header"
-import { ThemesStyle } from "~/components/themes-styles"
 
-interface MarketingLayoutProps {
+interface AppLayoutProps {
    children: React.ReactNode
 }
 
-export default async function MarketingLayout({
-   children,
-}: MarketingLayoutProps) {
+export default function AppLayout({ children }: AppLayoutProps) {
    return (
-      <>
-         <ThemesStyle />
+      <div data-wrapper="" className="border-grid flex flex-1 flex-col">
          <SiteBanner />
          <SiteHeader />
-         <main className="flex-1">{children}</main>
+         <main className="flex flex-1 flex-col">{children}</main>
          <SiteFooter />
-      </>
+      </div>
    )
 }

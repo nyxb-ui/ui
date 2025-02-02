@@ -3026,4 +3026,144 @@ export const examples: Registry["items"] = [
          },
       ],
    },
+   {
+      name: "typography-demo",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/typography-demo.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "typography-h1",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/typography-h1.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "typography-h2",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/typography-h2.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "typography-h3",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/typography-h3.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "typography-h4",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/typography-h4.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "typography-blockquote",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/typography-blockquote.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "typography-table",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/typography-table.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "typography-list",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/typography-list.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "typography-inline-code",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/typography-inline-code.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "typography-lead",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/typography-lead.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "typography-large",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/typography-large.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "typography-small",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/typography-small.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "typography-muted",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/typography-muted.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "typography-p",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/typography-p.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
 ]

@@ -1,95 +1,151 @@
-'use client'
+"use client"
 
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import type { SidebarNavItem } from 'types/nav'
+import { ExternalLinkIcon } from "@radix-ui/react-icons"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import type { SidebarNavItem } from "~/types"
 
-import type { DocsConfig } from '~/config/docs'
-import { ny } from '~/lib/utils'
+import { motion } from "motion/react"
+import { NavLabel as NavLabelComponent } from "~/components/ui/nav-label"
+import { ny } from "~/lib/utils"
+import type { NavLabel } from "~/types/nav"
 
 export interface DocsSidebarNavProps {
-   config: DocsConfig
+   items: SidebarNavItem[]
 }
 
-export function DocsSidebarNav({ config }: DocsSidebarNavProps) {
+export function DocsSidebarNav({ items }: DocsSidebarNavProps) {
    const pathname = usePathname()
 
-   const items = pathname?.startsWith('/charts')
-      ? config.chartsNav
-      : config.sidebarNav
-
-   return items.length
-      ? (
-            <div className="w-full">
-               {items.map((item, index) => (
-                  <div key={index} className={ny('pb-4')}>
-                     <h4 className="mb-1 rounded-md px-2 py-1 text-sm font-semibold">
-                        {item.title}
-                     </h4>
-                     {item?.items?.length && (
-                        <DocsSidebarNavItems items={item.items} pathname={pathname} />
-                     )}
-                  </div>
-               ))}
+   return items.length ? (
+      <div className="w-full pb-20">
+         {items.map((item, index) => (
+            <div key={index} className={"pb-4"}>
+               <h4 className="mb-1 rounded-md px-2 py-1 text-sm font-semibold">
+                  {item.title}
+               </h4>
+               {item?.items && (
+                  <DocsSidebarNavItems
+                     items={item.items}
+                     pathname={pathname}
+                     groupId={`group-${index}`}
+                  />
+               )}
             </div>
-         )
-      : null
+         ))}
+      </div>
+   ) : null
 }
 
 interface DocsSidebarNavItemsProps {
    items: SidebarNavItem[]
    pathname: string | null
+   groupId: string
 }
 
 export function DocsSidebarNavItems({
    items,
    pathname,
+   groupId,
 }: DocsSidebarNavItemsProps) {
-   return items?.length
-      ? (
-            <div className="grid grid-flow-row auto-rows-max text-sm">
-               {items.map((item, index) =>
-                  item.href && !item.disabled
-                     ? (
-                           <Link
-                              key={index}
-                              href={item.href}
-                              className={ny(
-                                 'group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline',
-                                 item.disabled && 'cursor-not-allowed opacity-60',
-                                 pathname === item.href
-                                    ? 'text-foreground font-medium'
-                                    : 'text-muted-foreground',
-                              )}
-                              target={item.external ? '_blank' : ''}
-                              rel={item.external ? 'noreferrer' : ''}
-                           >
-                              {item.title}
-                              {item.label && (
-                                 <span className="ml-2 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs leading-none text-[#000000] no-underline group-hover:no-underline">
-                                    {item.label}
-                                 </span>
-                              )}
-                           </Link>
-                        )
-                     : (
-                           <span
-                              key={index}
-                              className={ny(
-                                 'text-muted-foreground flex w-full cursor-not-allowed items-center rounded-md p-2 hover:underline',
-                                 item.disabled && 'cursor-not-allowed opacity-60',
-                              )}
-                           >
-                              {item.title}
-                              {item.label && (
-                                 <span className="bg-muted text-muted-foreground ml-2 rounded-md px-1.5 py-0.5 text-xs leading-none no-underline group-hover:no-underline">
-                                    {item.label}
-                                 </span>
-                              )}
-                           </span>
-                        ),
-               )}
-            </div>
-         )
-      : null
+   return items?.length ? (
+      <div className="relative grid grid-flow-row auto-rows-max gap-0.5 text-sm">
+         {items.map((item, index) =>
+            item.href && !item.disabled ? (
+               <Link
+                  key={index}
+                  href={item.href}
+                  className={ny(
+                     "group relative flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:text-foreground",
+                     item.disabled && "cursor-not-allowed opacity-60",
+                     pathname === item.href
+                        ? "font-medium text-foreground"
+                        : "text-muted-foreground",
+                  )}
+                  target={item.external ? "_blank" : ""}
+                  rel={item.external ? "noreferrer" : ""}
+               >
+                  {pathname === item.href && (
+                     <motion.div
+                        layoutId={groupId}
+                        className="absolute inset-0 rounded-r-md border-l-2 border-primary/70 bg-secondary"
+                        initial={false}
+                        transition={{
+                           type: "spring",
+                           stiffness: 350,
+                           damping: 30,
+                           mass: 1,
+                           velocity: 200,
+                        }}
+                     />
+                  )}
+                  <span className="relative z-10 shrink-0">{item.title}</span>
+                  {item.label && (
+                     <div className="flex items-center gap-1.5 ml-2">
+                        {Array.isArray(item.label) ? (
+                           item.label.map((label: NavLabel, i) => (
+                              <NavLabelComponent
+                                 key={i}
+                                 text={label.text}
+                                 variant={label.variant ?? "default"}
+                              />
+                           ))
+                        ) : typeof item.label === "string" ? (
+                           <NavLabelComponent
+                              text={item.label}
+                              variant="default"
+                           />
+                        ) : (
+                           <NavLabelComponent
+                              text={(item.label as NavLabel).text}
+                              variant={
+                                 (item.label as NavLabel).variant ?? "default"
+                              }
+                           />
+                        )}
+                     </div>
+                  )}
+                  {item.external && (
+                     <ExternalLinkIcon className="relative z-10 ml-2 size-4" />
+                  )}
+               </Link>
+            ) : (
+               <span
+                  key={index}
+                  className={ny(
+                     "flex w-full cursor-not-allowed items-center rounded-md p-2 text-muted-foreground",
+                     item.disabled && "cursor-not-allowed opacity-60",
+                  )}
+               >
+                  {item.title}
+                  {item.label && (
+                     <div className="flex items-center gap-1.5 ml-2">
+                        {Array.isArray(item.label) ? (
+                           item.label.map((label: NavLabel, i) => (
+                              <NavLabelComponent
+                                 key={i}
+                                 text={label.text}
+                                 variant={label.variant ?? "default"}
+                              />
+                           ))
+                        ) : typeof item.label === "string" ? (
+                           <NavLabelComponent
+                              text={item.label}
+                              variant="default"
+                           />
+                        ) : (
+                           <NavLabelComponent
+                              text={(item.label as NavLabel).text}
+                              variant={
+                                 (item.label as NavLabel).variant ?? "default"
+                              }
+                           />
+                        )}
+                     </div>
+                  )}
+               </span>
+            ),
+         )}
+      </div>
+   ) : null
 }
