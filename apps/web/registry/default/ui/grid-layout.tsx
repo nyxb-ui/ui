@@ -1,7 +1,7 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import { ny } from '~/lib/utils'
+import type * as React from "react"
+import { ny } from "~/lib/utils"
 
 interface CrosshairConfig {
    topLeft?: boolean
@@ -15,7 +15,7 @@ interface GridLayoutProps extends React.HTMLAttributes<HTMLDivElement> {
    crosshairs?: CrosshairConfig
    gridLines?: boolean
    columns?: 8 | 12 | 16
-   lineVariant?: 'all' | 'vertical' | 'horizontal' | 'center' | 'none'
+   lineVariant?: "all" | "vertical" | "horizontal" | "center" | "none"
 }
 
 function CrosshairIcon({ className }: { className?: string }) {
@@ -43,18 +43,18 @@ export function GridLayout({
    crosshairs,
    gridLines = true,
    columns = 16,
-   lineVariant = 'all',
+   lineVariant = "all",
    className,
    ...props
 }: GridLayoutProps) {
    return (
       <div
          className={ny(
-            'relative grid w-full gap-0',
-            gridLines && 'border-grid-line border',
-            columns === 16 && 'grid-cols-grid-16',
-            columns === 12 && 'grid-cols-grid-12',
-            columns === 8 && 'grid-cols-grid-8',
+            "relative grid w-full gap-0",
+            gridLines && "border-grid-line border",
+            columns === 16 && "grid-cols-grid-16",
+            columns === 12 && "grid-cols-grid-12",
+            columns === 8 && "grid-cols-grid-8",
             className,
          )}
          {...props}
@@ -62,44 +62,44 @@ export function GridLayout({
          {gridLines && (
             <div className="absolute inset-0 z-0">
                {/* Vertikale Linien */}
-               {(lineVariant === 'all' || lineVariant === 'vertical' || lineVariant === 'center') && (
+               {(lineVariant === "all" ||
+                  lineVariant === "vertical" ||
+                  lineVariant === "center") && (
                   <div className="absolute inset-0 flex justify-center">
-                     {lineVariant === 'center'
-                        ? (
-                              <div className="border-grid-line h-full w-px border-r" />
-                           )
-                        : (
-                              <div
-                                 className={ny(
-                                    'grid size-full',
-                                    columns === 16 && 'grid-cols-grid-16',
-                                    columns === 12 && 'grid-cols-grid-12',
-                                    columns === 8 && 'grid-cols-grid-8',
-                                 )}
-                              >
-                                 {Array.from({ length: columns }).map((_, i) => (
-                                    <div
-                                       key={i}
-                                       className={ny(
-                                          'border-grid-line border-r',
-                                          i === 0 && 'border-l',
-                                       )}
-                                    />
-                                 ))}
-                              </div>
+                     {lineVariant === "center" ? (
+                        <div className="border-grid-line h-full w-px border-r" />
+                     ) : (
+                        <div
+                           className={ny(
+                              "grid size-full",
+                              columns === 16 && "grid-cols-grid-16",
+                              columns === 12 && "grid-cols-grid-12",
+                              columns === 8 && "grid-cols-grid-8",
                            )}
+                        >
+                           {Array.from({ length: columns }).map((_, i) => (
+                              <div
+                                 key={i}
+                                 className={ny(
+                                    "border-grid-line border-r",
+                                    i === 0 && "border-l",
+                                 )}
+                              />
+                           ))}
+                        </div>
+                     )}
                   </div>
                )}
 
                {/* Horizontale Linien */}
-               {(lineVariant === 'all' || lineVariant === 'horizontal') && (
+               {(lineVariant === "all" || lineVariant === "horizontal") && (
                   <div className="absolute inset-0 grid grid-rows-[repeat(16,1fr)]">
                      {Array.from({ length: 17 }).map((_, i) => (
                         <div
                            key={i}
                            className={ny(
-                              'border-grid-line border-t',
-                              i === 16 && 'border-b',
+                              "border-grid-line border-t",
+                              i === 16 && "border-b",
                            )}
                         />
                      ))}

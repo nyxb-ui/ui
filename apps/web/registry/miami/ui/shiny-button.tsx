@@ -1,20 +1,20 @@
-'use client'
-import { type AnimationProps, motion } from 'framer-motion'
+"use client"
+import { type AnimationProps, motion } from "framer-motion"
 
 const animationProps = {
-   initial: { '--x': '100%', 'scale': 0.8 },
-   animate: { '--x': '-100%', 'scale': 1 },
+   initial: { "--x": "100%", scale: 0.8 },
+   animate: { "--x": "-100%", scale: 1 },
    whileTap: { scale: 0.95 },
    transition: {
-      repeat: Infinity,
-      repeatType: 'loop',
+      repeat: Number.POSITIVE_INFINITY,
+      repeatType: "loop",
       repeatDelay: 1,
-      type: 'spring',
+      type: "spring",
       stiffness: 20,
       damping: 15,
       mass: 2,
       scale: {
-         type: 'spring',
+         type: "spring",
          stiffness: 200,
          damping: 5,
          mass: 0.5,
@@ -22,7 +22,7 @@ const animationProps = {
    },
 } as AnimationProps
 
-function ShinyButton({ text = 'shiny-button' }) {
+function ShinyButton({ text = "shiny-button" }) {
    return (
       <motion.button
          {...animationProps}
@@ -32,19 +32,18 @@ function ShinyButton({ text = 'shiny-button' }) {
             className="relative block size-full text-sm uppercase tracking-wide text-[rgb(0,0,0,65%)] dark:font-light dark:text-[rgb(255,255,255,90%)]"
             style={{
                maskImage:
-            'linear-gradient(-75deg,hsl(var(--primary)) calc(var(--x) + 20%),transparent calc(var(--x) + 30%),hsl(var(--primary)) calc(var(--x) + 100%))',
+                  "linear-gradient(-75deg,hsl(var(--primary)) calc(var(--x) + 20%),transparent calc(var(--x) + 30%),hsl(var(--primary)) calc(var(--x) + 100%))",
             }}
          >
             {text}
          </span>
          <span
             style={{
-               mask: 'linear-gradient(rgb(0,0,0), rgb(0,0,0)) content-box,linear-gradient(rgb(0,0,0), rgb(0,0,0))',
-               maskComposite: 'exclude',
+               mask: "linear-gradient(rgb(0,0,0), rgb(0,0,0)) content-box,linear-gradient(rgb(0,0,0), rgb(0,0,0))",
+               maskComposite: "exclude",
             }}
             className="absolute inset-0 z-10 block rounded-[inherit] bg-[linear-gradient(-75deg,hsl(var(--primary)/10%)_calc(var(--x)+20%),hsl(var(--primary)/50%)_calc(var(--x)+25%),hsl(var(--primary)/10%)_calc(var(--x)+100%))] p-px"
-         >
-         </span>
+         ></span>
       </motion.button>
    )
 }

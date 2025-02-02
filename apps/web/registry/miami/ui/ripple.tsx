@@ -1,5 +1,5 @@
-import type { CSSProperties } from 'react'
-import React from 'react'
+import type { CSSProperties } from "react"
+import React from "react"
 
 // Modify these
 const MAIN_CIRCLE_SIZE = 210
@@ -21,13 +21,12 @@ const Ripple = React.memo(() => {
                      animationDelay: `${i * 0.06}s`,
                   } as CSSProperties
                }
-            >
-            </div>
+            ></div>
          ))}
       </div>
    )
 })
 
-Ripple.displayName = 'Ripple'
+Ripple.displayName = "Ripple"
 
 export default Ripple

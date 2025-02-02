@@ -1,8 +1,8 @@
-'use client'
+"use client"
 
-import { motion } from 'framer-motion'
-import { useEffect, useId, useRef, useState } from 'react'
-import { ny } from '~/lib/utils'
+import { motion } from "framer-motion"
+import { useEffect, useId, useRef, useState } from "react"
+import { ny } from "~/lib/utils"
 
 interface GridPatternProps {
    width?: number
@@ -52,13 +52,13 @@ export function GridPattern({
 
    // Function to update a single square's position
    const updateSquarePosition = (id: number) => {
-      setSquares(currentSquares =>
-         currentSquares.map(sq =>
+      setSquares((currentSquares) =>
+         currentSquares.map((sq) =>
             sq.id === id
                ? {
-                     ...sq,
-                     pos: getPos(),
-                  }
+                    ...sq,
+                    pos: getPos(),
+                 }
                : sq,
          ),
       )
@@ -81,8 +81,7 @@ export function GridPattern({
          }
       })
 
-      if (containerRef.current)
-         resizeObserver.observe(containerRef.current)
+      if (containerRef.current) resizeObserver.observe(containerRef.current)
 
       return () => {
          if (containerRef.current)
@@ -95,7 +94,7 @@ export function GridPattern({
          ref={containerRef}
          aria-hidden="true"
          className={ny(
-            'pointer-events-none absolute inset-0 size-full fill-gray-400/30 stroke-gray-400/30',
+            "pointer-events-none absolute inset-0 size-full fill-gray-400/30 stroke-gray-400/30",
             className,
          )}
          {...props}
@@ -126,7 +125,7 @@ export function GridPattern({
                      duration,
                      repeat: 1,
                      delay: index * 0.1,
-                     repeatType: 'reverse',
+                     repeatType: "reverse",
                   }}
                   onAnimationComplete={() => updateSquarePosition(id)}
                   key={`${x}-${y}-${index}`}

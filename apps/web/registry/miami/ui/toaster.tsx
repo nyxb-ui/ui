@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import {
    Toast,
@@ -7,8 +7,8 @@ import {
    ToastProvider,
    ToastTitle,
    ToastViewport,
-} from '~/registry/miami/ui/toast'
-import { useToast } from '~/registry/miami/ui/use-toast'
+} from "~/registry/miami/ui/toast"
+import { useToast } from "~/registry/miami/ui/use-toast"
 
 export function Toaster() {
    const { toasts } = useToast()

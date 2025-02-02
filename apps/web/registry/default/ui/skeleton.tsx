@@ -1,4 +1,4 @@
-import { ny } from '~/lib/utils'
+import { ny } from "~/lib/utils"
 
 function Skeleton({
    className,
@@ -6,7 +6,7 @@ function Skeleton({
 }: React.HTMLAttributes<HTMLDivElement>) {
    return (
       <div
-         className={ny('bg-muted animate-pulse rounded-md', className)}
+         className={ny("bg-muted animate-pulse rounded-md", className)}
          {...props}
       />
    )

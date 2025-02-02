@@ -1,21 +1,30 @@
-'use client'
-import confetti from 'canvas-confetti'
-import type { ReactNode } from 'react'
-import React, { createContext, forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useRef } from 'react'
+"use client"
+import confetti from "canvas-confetti"
+import type { ReactNode } from "react"
+import type React from "react"
+import {
+   createContext,
+   forwardRef,
+   useCallback,
+   useEffect,
+   useImperativeHandle,
+   useMemo,
+   useRef,
+} from "react"
 
 import type {
    GlobalOptions as ConfettiGlobalOptions,
    CreateTypes as ConfettiInstance,
    Options as ConfettiOptions,
-} from 'canvas-confetti'
-import { Button } from '~/components/ui/button'
-import type { ButtonProps } from '~/components/ui/button'
+} from "canvas-confetti"
+import { Button } from "~/components/ui/button"
+import type { ButtonProps } from "~/components/ui/button"
 
 interface Api {
    fire: (options?: ConfettiOptions) => void
 }
 
-type Props = React.ComponentPropsWithRef<'canvas'> & {
+type Props = React.ComponentPropsWithRef<"canvas"> & {
    options?: ConfettiOptions
    globalOptions?: ConfettiGlobalOptions
    manualstart?: boolean
@@ -42,14 +51,12 @@ const Confetti = forwardRef<ConfettiRef, Props>((props, ref) => {
       (node: HTMLCanvasElement) => {
          if (node !== null) {
             // <canvas> is mounted => create the confetti instance
-            if (instanceRef.current)
-               return // if not already created
+            if (instanceRef.current) return // if not already created
             instanceRef.current = confetti.create(node, {
                ...globalOptions,
                resize: true,
             })
-         }
-         else {
+         } else {
             // <canvas> is unmounted => reset and destroy instanceRef
             if (instanceRef.current) {
                instanceRef.current.reset()
@@ -76,8 +83,7 @@ const Confetti = forwardRef<ConfettiRef, Props>((props, ref) => {
    useImperativeHandle(ref, () => api, [api])
 
    useEffect(() => {
-      if (!manualstart)
-         fire()
+      if (!manualstart) fire()
    }, [manualstart, fire])
 
    return (
@@ -90,7 +96,7 @@ const Confetti = forwardRef<ConfettiRef, Props>((props, ref) => {
 
 interface ConfettiButtonProps extends ButtonProps {
    options?: ConfettiOptions &
-   ConfettiGlobalOptions & { canvas?: HTMLCanvasElement }
+      ConfettiGlobalOptions & { canvas?: HTMLCanvasElement }
    children?: React.ReactNode
 }
 

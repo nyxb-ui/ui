@@ -1,7 +1,7 @@
-'use client'
+"use client"
 
-import React from 'react'
-import { ny } from '~/lib/utils'
+import React from "react"
+import { ny } from "~/lib/utils"
 
 interface AvatarCirclesProps {
    className?: string
@@ -15,7 +15,9 @@ function AvatarCircles({
    avatarUrls,
 }: AvatarCirclesProps) {
    return (
-      <div className={ny('z-10 flex -space-x-4 rtl:space-x-reverse', className)}>
+      <div
+         className={ny("z-10 flex -space-x-4 rtl:space-x-reverse", className)}
+      >
          {avatarUrls.map((url, index) => (
             <img
                key={index}
@@ -30,8 +32,7 @@ function AvatarCircles({
             className="flex size-10 items-center justify-center rounded-full border-2 border-white bg-black text-center text-xs font-medium text-white hover:bg-gray-600 dark:border-gray-800 dark:bg-white dark:text-black"
             href=""
          >
-            +
-            {numPeople}
+            +{numPeople}
          </a>
       </div>
    )

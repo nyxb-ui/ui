@@ -1,7 +1,7 @@
-'use client'
-import { useState } from 'react'
-import { anime } from 'react-anime'
-import { ny } from '~/lib/utils'
+"use client"
+import { useState } from "react"
+import { anime } from "react-anime"
+import { ny } from "~/lib/utils"
 
 interface WavyDotPatternProps {
    className?: string
@@ -24,18 +24,18 @@ export function WavyDotPattern({
       setDotClickDisabled(true)
 
       anime({
-         targets: '.dot-point',
+         targets: ".dot-point",
          scale: [
-            { value: 1.35, easing: 'easeOutSine', duration: 250 },
-            { value: 1, easing: 'easeInOutQuad', duration: 500 },
+            { value: 1.35, easing: "easeOutSine", duration: 250 },
+            { value: 1, easing: "easeInOutQuad", duration: 500 },
          ],
          translateY: [
-            { value: -15, easing: 'easeOutSine', duration: 250 },
-            { value: 1, easing: 'easeInOutQuad', duration: 500 },
+            { value: -15, easing: "easeOutSine", duration: 250 },
+            { value: 1, easing: "easeInOutQuad", duration: 500 },
          ],
          opacity: [
-            { value: 0.7, easing: 'easeOutSine', duration: 250 },
-            { value: 0.35, easing: 'easeInOutQuad', duration: 500 },
+            { value: 0.7, easing: "easeOutSine", duration: 250 },
+            { value: 0.35, easing: "easeInOutQuad", duration: 500 },
          ],
          delay: anime.stagger(100, {
             grid: [width, height],
@@ -49,8 +49,8 @@ export function WavyDotPattern({
    const GRID_WIDTH = gridWidth || 30
    const GRID_HEIGHT = gridHeight || 30
 
-   const DOT_WIDTH = dotWidth ? `w-[${dotWidth}px]` : 'w-[8px]'
-   const DOT_HEIGHT = dotHeight ? `h-[${dotHeight}px]` : 'h-[8px]'
+   const DOT_WIDTH = dotWidth ? `w-[${dotWidth}px]` : "w-[8px]"
+   const DOT_HEIGHT = dotHeight ? `h-[${dotHeight}px]` : "h-[8px]"
 
    let index = 0
 
@@ -62,15 +62,15 @@ export function WavyDotPattern({
             <button
                className="rounded-[8px] p-[0.8rem]"
                type="button"
-               onClick={e => handleDotClick(e, GRID_WIDTH, GRID_HEIGHT)}
+               onClick={(e) => handleDotClick(e, GRID_WIDTH, GRID_HEIGHT)}
                data-index={index}
                key={`${i}-${j}`}
                disabled={dotClickDisabled}
             >
                <div
                   className={ny(
-                     'dot-point',
-                     'rounded-xl bg-gradient-to-r from-[#d9cab3] to-black opacity-35 hover:from-black hover:to-black hover:opacity-100',
+                     "dot-point",
+                     "rounded-xl bg-gradient-to-r from-[#d9cab3] to-black opacity-35 hover:from-black hover:to-black hover:opacity-100",
                      DOT_WIDTH,
                      DOT_HEIGHT,
                   )}
@@ -85,9 +85,9 @@ export function WavyDotPattern({
    return (
       <div
          style={{ gridTemplateColumns: `repeat(${GRID_WIDTH}, 1fr)` }}
-         className={ny('max-w-3/4 absolute z-0 grid', className)}
+         className={ny("max-w-3/4 absolute z-0 grid", className)}
       >
-         {dots.map(dot => dot)}
+         {dots.map((dot) => dot)}
       </div>
    )
 }

@@ -1,6 +1,6 @@
-'use client'
+"use client"
 
-import React from 'react'
+import type React from "react"
 
 interface PulsatingButtonProps {
    text: string
@@ -22,14 +22,12 @@ export const PulsatingButton: React.FC<PulsatingButtonProps> = ({
    buttonHeight,
 }) => {
    const pulseKeyframes = {
-      '--tw-pulse-color': pulseColor,
-      'animation': `pulse ${animationDuration} linear infinite`,
+      "--tw-pulse-color": pulseColor,
+      animation: `pulse ${animationDuration} linear infinite`,
    }
 
    return (
-      <div
-         className="flex items-center justify-center"
-      >
+      <div className="flex items-center justify-center">
          <button
             className="relative block flex cursor-pointer items-center justify-center text-center"
             style={{
@@ -37,7 +35,7 @@ export const PulsatingButton: React.FC<PulsatingButtonProps> = ({
                backgroundColor,
                width: buttonWidth,
                height: buttonHeight,
-               borderRadius: '12px',
+               borderRadius: "12px",
                ...pulseKeyframes,
             }}
          >

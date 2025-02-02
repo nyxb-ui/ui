@@ -1,9 +1,9 @@
-'use client'
+"use client"
 
-import { motion } from 'framer-motion'
-import type { CSSProperties, ReactElement } from 'react'
-import { useEffect, useState } from 'react'
-import { ny } from '~/lib/utils'
+import { motion } from "framer-motion"
+import type { CSSProperties, ReactElement } from "react"
+import { useEffect, useState } from "react"
+import { ny } from "~/lib/utils"
 
 interface Sparkle {
    id: string
@@ -62,7 +62,7 @@ interface SparklesTextProps {
 
 const SparklesText: React.FC<SparklesTextProps> = ({
    text,
-   colors = { first: '#A07CFE', second: '#FE8FB5' },
+   colors = { first: "#A07CFE", second: "#FE8FB5" },
    className,
    sparklesCount = 10,
    ...props
@@ -87,10 +87,9 @@ const SparklesText: React.FC<SparklesTextProps> = ({
       }
 
       const updateStars = () => {
-         setSparkles(currentSparkles =>
+         setSparkles((currentSparkles) =>
             currentSparkles.map((star) => {
-               if (star.lifespan <= 0)
-                  return generateStar()
+               if (star.lifespan <= 0) return generateStar()
                else return { ...star, lifespan: star.lifespan - 0.1 }
             }),
          )
@@ -104,17 +103,17 @@ const SparklesText: React.FC<SparklesTextProps> = ({
 
    return (
       <div
-         className={ny('text-6xl font-bold', className)}
+         className={ny("text-6xl font-bold", className)}
          {...props}
          style={
             {
-               '--sparkles-first-color': `${colors.first}`,
-               '--sparkles-second-color': `${colors.second}`,
+               "--sparkles-first-color": `${colors.first}`,
+               "--sparkles-second-color": `${colors.second}`,
             } as CSSProperties
          }
       >
          <span className="relative inline-block">
-            {sparkles.map(sparkle => (
+            {sparkles.map((sparkle) => (
                <Sparkle key={sparkle.id} {...sparkle} />
             ))}
             <strong className="bg-gradient-to-r from-[var(--sparkles-first-color)] to-[var(--sparkles-second-color)] bg-clip-text text-transparent">
@@ -136,7 +135,7 @@ const Sparkle: React.FC<Sparkle> = ({ id, x, y, color, delay, scale }) => {
             scale: [0, scale, 0],
             rotate: [75, 120, 150],
          }}
-         transition={{ duration: 0.8, repeat: Infinity, delay }}
+         transition={{ duration: 0.8, repeat: Number.POSITIVE_INFINITY, delay }}
          width="21"
          height="21"
          viewBox="0 0 21 21"

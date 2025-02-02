@@ -1,14 +1,14 @@
-import type { Registry } from '~/registry/schema'
+import type { Registry } from "nyxb/registry"
 
-export const ui: Registry = [
+export const ui: Registry["items"] = [
    {
-      name: 'accordion',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-accordion'],
+      name: "accordion",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-accordion"],
       files: [
          {
-            path: 'ui/accordion.tsx',
-            type: 'registry:component',
+            path: "ui/accordion.tsx",
+            type: "registry:ui",
          },
       ],
       tailwind: {
@@ -16,18 +16,20 @@ export const ui: Registry = [
             theme: {
                extend: {
                   keyframes: {
-                     'accordion-down': {
-                        from: { height: '0' },
-                        to: { height: 'var(--radix-accordion-content-height)' },
+                     "accordion-down": {
+                        from: { height: "0" },
+                        to: { height: "var(--radix-accordion-content-height)" },
                      },
-                     'accordion-up': {
-                        from: { height: 'var(--radix-accordion-content-height)' },
-                        to: { height: '0' },
+                     "accordion-up": {
+                        from: {
+                           height: "var(--radix-accordion-content-height)",
+                        },
+                        to: { height: "0" },
                      },
                   },
                   animation: {
-                     'accordion-down': 'accordion-down 0.2s ease-out',
-                     'accordion-up': 'accordion-up 0.2s ease-out',
+                     "accordion-down": "accordion-down 0.2s ease-out",
+                     "accordion-up": "accordion-up 0.2s ease-out",
                   },
                },
             },
@@ -35,67 +37,67 @@ export const ui: Registry = [
       },
    },
    {
-      name: 'alert',
-      type: 'registry:ui',
+      name: "alert",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/alert.tsx',
-            type: 'registry:component',
+            path: "ui/alert.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'alert-dialog',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-alert-dialog'],
-      registryDependencies: ['button'],
+      name: "alert-dialog",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-alert-dialog"],
+      registryDependencies: ["button"],
       files: [
          {
-            path: 'ui/alert-dialog.tsx',
-            type: 'registry:component',
+            path: "ui/alert-dialog.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'animated-beam',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "animated-beam",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/animated-beam.tsx',
-            type: 'registry:component',
+            path: "ui/animated-beam.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'animated-grid-pattern',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "animated-grid-pattern",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/animated-grid-pattern.tsx',
-            type: 'registry:component',
+            path: "ui/animated-grid-pattern.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'animated-list',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "animated-list",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/animated-list.tsx',
-            type: 'registry:component',
+            path: "ui/animated-list.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'animated-shiny-text',
-      type: 'registry:ui',
+      name: "animated-shiny-text",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/animated-shiny-text.tsx',
-            type: 'registry:component',
+            path: "ui/animated-shiny-text.tsx",
+            type: "registry:ui",
          },
       ],
       tailwind: {
@@ -103,15 +105,17 @@ export const ui: Registry = [
             theme: {
                extend: {
                   animation: {
-                     'shiny-text': 'shiny-text 8s infinite',
+                     "shiny-text": "shiny-text 8s infinite",
                   },
                   keyframes: {
-                     'shiny-text': {
-                        '0%, 90%, 100%': {
-                           'background-position': 'calc(-100% - var(--shiny-width)) 0',
+                     "shiny-text": {
+                        "0%, 90%, 100%": {
+                           "background-position":
+                              "calc(-100% - var(--shiny-width)) 0",
                         },
-                        '30%, 60%': {
-                           'background-position': 'calc(100% + var(--shiny-width)) 0',
+                        "30%, 60%": {
+                           "background-position":
+                              "calc(100% + var(--shiny-width)) 0",
                         },
                      },
                   },
@@ -121,23 +125,23 @@ export const ui: Registry = [
       },
    },
    {
-      name: 'animated-subscribe-button',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "animated-subscribe-button",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/animated-subscribe-button.tsx',
-            type: 'registry:component',
+            path: "ui/animated-subscribe-button.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'animated-gradient-text',
-      type: 'registry:ui',
+      name: "animated-gradient-text",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/animated-gradient-text.tsx',
-            type: 'registry:component',
+            path: "ui/animated-gradient-text.tsx",
+            type: "registry:ui",
          },
       ],
       tailwind: {
@@ -145,12 +149,12 @@ export const ui: Registry = [
             theme: {
                extend: {
                   animation: {
-                     gradient: 'gradient 8s linear infinite',
+                     gradient: "gradient 8s linear infinite",
                   },
                   keyframes: {
                      gradient: {
                         to: {
-                           backgroundPosition: 'var(--bg-size) 0',
+                           backgroundPosition: "var(--bg-size) 0",
                         },
                      },
                   },
@@ -160,76 +164,76 @@ export const ui: Registry = [
       },
    },
    {
-      name: 'aspect-ratio',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-aspect-ratio'],
+      name: "aspect-ratio",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-aspect-ratio"],
       files: [
          {
-            path: 'ui/aspect-ratio.tsx',
-            type: 'registry:component',
+            path: "ui/aspect-ratio.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'avatar',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-avatar'],
+      name: "avatar",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-avatar"],
       files: [
          {
-            path: 'ui/avatar.tsx',
-            type: 'registry:component',
+            path: "ui/avatar.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'avatar-circles',
-      type: 'registry:ui',
+      name: "avatar-circles",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/avatar-circles.tsx',
-            type: 'registry:component',
+            path: "ui/avatar-circles.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'badge',
-      type: 'registry:ui',
+      name: "badge",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/badge.tsx',
-            type: 'registry:component',
+            path: "ui/badge.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'bento-grid',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-icons'],
+      name: "bento-grid",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-icons"],
       files: [
          {
-            path: 'ui/bento-grid.tsx',
-            type: 'registry:component',
+            path: "ui/bento-grid.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'blur-in',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "blur-in",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/blur-in.tsx',
-            type: 'registry:component',
+            path: "ui/blur-in.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'border-beam',
-      type: 'registry:ui',
+      name: "border-beam",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/border-beam.tsx',
-            type: 'registry:component',
+            path: "ui/border-beam.tsx",
+            type: "registry:ui",
          },
       ],
       tailwind: {
@@ -237,13 +241,13 @@ export const ui: Registry = [
             theme: {
                extend: {
                   animation: {
-                     'border-beam':
-                  'border-beam calc(var(--duration)*1s) infinite linear',
+                     "border-beam":
+                        "border-beam calc(var(--duration)*1s) infinite linear",
                   },
                   keyframes: {
-                     'border-beam': {
-                        '100%': {
-                           'offset-distance': '100%',
+                     "border-beam": {
+                        "100%": {
+                           "offset-distance": "100%",
                         },
                      },
                   },
@@ -253,424 +257,424 @@ export const ui: Registry = [
       },
    },
    {
-      name: 'box-reveal',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "box-reveal",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/box-reveal.tsx',
-            type: 'registry:component',
+            path: "ui/box-reveal.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'breadcrumb',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-slot'],
+      name: "breadcrumb",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-slot"],
       files: [
          {
-            path: 'ui/breadcrumb.tsx',
-            type: 'registry:component',
+            path: "ui/breadcrumb.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'blur-fade',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "blur-fade",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/blur-fade.tsx',
-            type: 'registry:component',
+            path: "ui/blur-fade.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'button',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-slot'],
+      name: "button",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-slot"],
       files: [
          {
-            path: 'ui/button.tsx',
-            type: 'registry:component',
+            path: "ui/button.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'calendar',
-      type: 'registry:ui',
-      dependencies: ['react-day-picker@8.10.1', 'date-fns'],
-      registryDependencies: ['button'],
+      name: "calendar",
+      type: "registry:ui",
+      dependencies: ["react-day-picker@8.10.1", "date-fns"],
+      registryDependencies: ["button"],
       files: [
          {
-            path: 'ui/calendar.tsx',
-            type: 'registry:component',
+            path: "ui/calendar.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'card',
-      type: 'registry:ui',
+      name: "card",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/card.tsx',
-            type: 'registry:component',
+            path: "ui/card.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'carousel',
-      type: 'registry:ui',
+      name: "carousel",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/carousel.tsx',
-            type: 'registry:component',
+            path: "ui/carousel.tsx",
+            type: "registry:ui",
          },
       ],
-      registryDependencies: ['button'],
-      dependencies: ['embla-carousel-react'],
+      registryDependencies: ["button"],
+      dependencies: ["embla-carousel-react"],
    },
    {
-      name: 'chart',
-      type: 'registry:ui',
+      name: "chart",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/chart.tsx',
-            type: 'registry:component',
+            path: "ui/chart.tsx",
+            type: "registry:ui",
          },
       ],
-      registryDependencies: ['card'],
-      dependencies: ['recharts', 'lucide-react'],
+      registryDependencies: ["card"],
+      dependencies: ["recharts", "lucide-react"],
    },
    {
-      name: 'checkbox',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-checkbox'],
+      name: "checkbox",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-checkbox"],
       files: [
          {
-            path: 'ui/checkbox.tsx',
-            type: 'registry:component',
-         },
-      ],
-   },
-   {
-      name: 'client-tweet-card',
-      type: 'registry:ui',
-      dependencies: ['react-tweet'],
-      files: [
-         {
-            path: 'ui/client-tweet-card.tsx',
-            type: 'registry:component',
+            path: "ui/checkbox.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'collapsible',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-collapsible'],
+      name: "client-tweet-card",
+      type: "registry:ui",
+      dependencies: ["react-tweet"],
       files: [
          {
-            path: 'ui/collapsible.tsx',
-            type: 'registry:component',
+            path: "ui/client-tweet-card.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'command',
-      type: 'registry:ui',
-      dependencies: ['cmdk@1.0.0'],
-      registryDependencies: ['dialog'],
+      name: "collapsible",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-collapsible"],
       files: [
          {
-            path: 'ui/command.tsx',
-            type: 'registry:component',
+            path: "ui/collapsible.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'confetti',
-      type: 'registry:ui',
-      dependencies: ['canvas-confetti', '@types/canvas-confetti'],
+      name: "command",
+      type: "registry:ui",
+      dependencies: ["cmdk@1.0.0"],
+      registryDependencies: ["dialog"],
       files: [
          {
-            path: 'ui/confetti.tsx',
-            type: 'registry:component',
+            path: "ui/command.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'context-menu',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-context-menu'],
+      name: "confetti",
+      type: "registry:ui",
+      dependencies: ["canvas-confetti", "@types/canvas-confetti"],
       files: [
          {
-            path: 'ui/context-menu.tsx',
-            type: 'registry:component',
+            path: "ui/confetti.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'cool-mode',
-      type: 'registry:ui',
+      name: "context-menu",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-context-menu"],
       files: [
          {
-            path: 'ui/cool-mode.tsx',
-            type: 'registry:component',
+            path: "ui/context-menu.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'dialog',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-dialog'],
+      name: "cool-mode",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/dialog.tsx',
-            type: 'registry:component',
+            path: "ui/cool-mode.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'dock',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "dialog",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-dialog"],
       files: [
          {
-            path: 'ui/dock.tsx',
-            type: 'registry:component',
+            path: "ui/dialog.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'dot-pattern',
-      type: 'registry:ui',
+      name: "dock",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/dot-pattern.tsx',
-            type: 'registry:component',
+            path: "ui/dock.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'drawer',
-      type: 'registry:ui',
-      dependencies: ['vaul', '@radix-ui/react-dialog'],
+      name: "dot-pattern",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/drawer.tsx',
-            type: 'registry:component',
+            path: "ui/dot-pattern.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'dropdown-menu',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-dropdown-menu'],
+      name: "drawer",
+      type: "registry:ui",
+      dependencies: ["vaul", "@radix-ui/react-dialog"],
       files: [
          {
-            path: 'ui/dropdown-menu.tsx',
-            type: 'registry:component',
+            path: "ui/drawer.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'fade-text',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "dropdown-menu",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-dropdown-menu"],
       files: [
          {
-            path: 'ui/fade-text.tsx',
-            type: 'registry:component',
+            path: "ui/dropdown-menu.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'file-tree',
-      type: 'registry:ui',
+      name: "fade-text",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/file-tree.tsx',
-            type: 'registry:component',
+            path: "ui/fade-text.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'flip-text',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "file-tree",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/flip-text.tsx',
-            type: 'registry:component',
+            path: "ui/file-tree.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'form',
-      type: 'registry:ui',
+      name: "flip-text",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
+      files: [
+         {
+            path: "ui/flip-text.tsx",
+            type: "registry:ui",
+         },
+      ],
+   },
+   {
+      name: "form",
+      type: "registry:ui",
       dependencies: [
-         '@radix-ui/react-label',
-         '@radix-ui/react-slot',
-         '@hookform/resolvers',
-         'zod',
-         'react-hook-form',
+         "@radix-ui/react-label",
+         "@radix-ui/react-slot",
+         "@hookform/resolvers",
+         "zod",
+         "react-hook-form",
       ],
-      registryDependencies: ['button', 'label'],
+      registryDependencies: ["button", "label"],
       files: [
          {
-            path: 'ui/form.tsx',
-            type: 'registry:component',
+            path: "ui/form.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'globe',
-      type: 'registry:ui',
-      dependencies: ['cobe', 'react-spring'],
+      name: "globe",
+      type: "registry:ui",
+      dependencies: ["cobe", "react-spring"],
       files: [
          {
-            path: 'ui/globe.tsx',
-            type: 'registry:component',
+            path: "ui/globe.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'gradual-spacing',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "gradual-spacing",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/gradual-spacing.tsx',
-            type: 'registry:component',
+            path: "ui/gradual-spacing.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'grid-pattern',
-      type: 'registry:ui',
+      name: "grid-pattern",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/grid-pattern.tsx',
-            type: 'registry:component',
+            path: "ui/grid-pattern.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'gauge-circle',
-      type: 'registry:ui',
+      name: "gauge-circle",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/gauge-circle.tsx',
-            type: 'registry:component',
+            path: "ui/gauge-circle.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'hero-video-dialog',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "hero-video-dialog",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/hero-video-dialog.tsx',
-            type: 'registry:component',
+            path: "ui/hero-video-dialog.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'hover-card',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-hover-card'],
+      name: "hover-card",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-hover-card"],
       files: [
          {
-            path: 'ui/hover-card.tsx',
-            type: 'registry:component',
+            path: "ui/hover-card.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'icon-cloud',
-      type: 'registry:ui',
-      dependencies: ['next-themes', 'react-icon-cloud'],
+      name: "icon-cloud",
+      type: "registry:ui",
+      dependencies: ["next-themes", "react-icon-cloud"],
       files: [
          {
-            path: 'ui/icon-cloud.tsx',
-            type: 'registry:component',
+            path: "ui/icon-cloud.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'input',
-      type: 'registry:ui',
+      name: "input",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/input.tsx',
-            type: 'registry:component',
+            path: "ui/input.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'input-otp',
-      type: 'registry:ui',
-      dependencies: ['input-otp'],
+      name: "input-otp",
+      type: "registry:ui",
+      dependencies: ["input-otp"],
       files: [
          {
-            path: 'ui/input-otp.tsx',
-            type: 'registry:component',
+            path: "ui/input-otp.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'input-phone',
-      type: 'registry:ui',
-      dependencies: ['react-phone-number-input', '@radix-ui/react-icons'],
-      registryDependencies: ['button', 'input', 'popover', 'command'],
+      name: "input-phone",
+      type: "registry:ui",
+      dependencies: ["react-phone-number-input", "@radix-ui/react-icons"],
+      registryDependencies: ["button", "input", "popover", "command"],
       files: [
          {
-            path: 'ui/input-phone.tsx',
-            type: 'registry:component',
+            path: "ui/input-phone.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'label',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-label'],
+      name: "label",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-label"],
       files: [
          {
-            path: 'ui/label.tsx',
-            type: 'registry:component',
+            path: "ui/label.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'letter-pullup',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "letter-pullup",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/letter-pullup.tsx',
-            type: 'registry:component',
+            path: "ui/letter-pullup.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'magic-card',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "magic-card",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/magic-card.tsx',
-            type: 'registry:component',
+            path: "ui/magic-card.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'marquee',
-      type: 'registry:ui',
+      name: "marquee",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/marquee.tsx',
-            type: 'registry:component',
+            path: "ui/marquee.tsx",
+            type: "registry:ui",
          },
       ],
       tailwind: {
@@ -678,19 +682,23 @@ export const ui: Registry = [
             theme: {
                extend: {
                   keyframes: {
-                     'marquee': {
-                        from: { transform: 'translateX(0)' },
-                        to: { transform: 'translateX(calc(-100% - var(--gap)))' },
+                     marquee: {
+                        from: { transform: "translateX(0)" },
+                        to: {
+                           transform: "translateX(calc(-100% - var(--gap)))",
+                        },
                      },
-                     'marquee-vertical': {
-                        from: { transform: 'translateY(0)' },
-                        to: { transform: 'translateY(calc(-100% - var(--gap)))' },
+                     "marquee-vertical": {
+                        from: { transform: "translateY(0)" },
+                        to: {
+                           transform: "translateY(calc(-100% - var(--gap)))",
+                        },
                      },
                   },
                   animation: {
-                     'marquee': 'marquee var(--duration) infinite linear',
-                     'marquee-vertical':
-                  'marquee-vertical var(--duration) linear infinite',
+                     marquee: "marquee var(--duration) infinite linear",
+                     "marquee-vertical":
+                        "marquee-vertical var(--duration) linear infinite",
                   },
                },
             },
@@ -698,54 +706,54 @@ export const ui: Registry = [
       },
    },
    {
-      name: 'menubar',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-menubar'],
+      name: "menubar",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-menubar"],
       files: [
          {
-            path: 'ui/menubar.tsx',
-            type: 'registry:component',
+            path: "ui/menubar.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'meteors',
-      type: 'registry:ui',
+      name: "meteors",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/meteors.tsx',
-            type: 'registry:component',
+            path: "ui/meteors.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'multi-select',
-      type: 'registry:ui',
+      name: "multi-select",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/multi-select.tsx',
-            type: 'registry:component',
+            path: "ui/multi-select.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'navigation-menu',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-navigation-menu'],
+      name: "navigation-menu",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-navigation-menu"],
       files: [
          {
-            path: 'ui/navigation-menu.tsx',
-            type: 'registry:component',
+            path: "ui/navigation-menu.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'neon-gradient-card',
-      type: 'registry:ui',
+      name: "neon-gradient-card",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/neon-gradient-card.tsx',
-            type: 'registry:component',
+            path: "ui/neon-gradient-card.tsx",
+            type: "registry:ui",
          },
       ],
       tailwind: {
@@ -753,13 +761,13 @@ export const ui: Registry = [
             theme: {
                extend: {
                   animation: {
-                     'background-position-spin':
-                  'background-position-spin 3000ms infinite alternate',
+                     "background-position-spin":
+                        "background-position-spin 3000ms infinite alternate",
                   },
                   keyframes: {
-                     'background-position-spin': {
-                        '0%': { backgroundPosition: 'top center' },
-                        '100%': { backgroundPosition: 'bottom center' },
+                     "background-position-spin": {
+                        "0%": { backgroundPosition: "top center" },
+                        "100%": { backgroundPosition: "bottom center" },
                      },
                   },
                },
@@ -768,23 +776,23 @@ export const ui: Registry = [
       },
    },
    {
-      name: 'number-ticker',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "number-ticker",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/number-ticker.tsx',
-            type: 'registry:component',
+            path: "ui/number-ticker.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'orbiting-circles',
-      type: 'registry:ui',
+      name: "orbiting-circles",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/orbiting-circles.tsx',
-            type: 'registry:component',
+            path: "ui/orbiting-circles.tsx",
+            type: "registry:ui",
          },
       ],
       tailwind: {
@@ -792,17 +800,17 @@ export const ui: Registry = [
             theme: {
                extend: {
                   animation: {
-                     orbit: 'orbit calc(var(--duration)*1s) linear infinite',
+                     orbit: "orbit calc(var(--duration)*1s) linear infinite",
                   },
                   keyframes: {
                      orbit: {
-                        '0%': {
+                        "0%": {
                            transform:
-                      'rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)',
+                              "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
                         },
-                        '100%': {
+                        "100%": {
                            transform:
-                      'rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)',
+                              "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
                         },
                      },
                   },
@@ -812,55 +820,55 @@ export const ui: Registry = [
       },
    },
    {
-      name: 'pagination',
-      type: 'registry:ui',
-      registryDependencies: ['button'],
+      name: "pagination",
+      type: "registry:ui",
+      registryDependencies: ["button"],
       files: [
          {
-            path: 'ui/pagination.tsx',
-            type: 'registry:component',
+            path: "ui/pagination.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'particles',
-      type: 'registry:ui',
+      name: "particles",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/particles.tsx',
-            type: 'registry:component',
+            path: "ui/particles.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'popover',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-popover'],
+      name: "popover",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-popover"],
       files: [
          {
-            path: 'ui/popover.tsx',
-            type: 'registry:component',
+            path: "ui/popover.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'progress',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-progress'],
+      name: "progress",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-progress"],
       files: [
          {
-            path: 'ui/progress.tsx',
-            type: 'registry:component',
+            path: "ui/progress.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'pulsating-button',
-      type: 'registry:ui',
+      name: "pulsating-button",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/pulsating-button.tsx',
-            type: 'registry:component',
+            path: "ui/pulsating-button.tsx",
+            type: "registry:ui",
          },
       ],
       tailwind: {
@@ -868,12 +876,12 @@ export const ui: Registry = [
             theme: {
                extend: {
                   animation: {
-                     pulse: 'pulse var(--duration) ease-out infinite',
+                     pulse: "pulse var(--duration) ease-out infinite",
                   },
                   keyframes: {
                      pulse: {
-                        '0%, 100%': { boxShadow: '0 0 0 0 var(--pulse-color)' },
-                        '50%': { boxShadow: '0 0 0 8px var(--pulse-color)' },
+                        "0%, 100%": { boxShadow: "0 0 0 0 var(--pulse-color)" },
+                        "50%": { boxShadow: "0 0 0 8px var(--pulse-color)" },
                      },
                   },
                },
@@ -882,34 +890,34 @@ export const ui: Registry = [
       },
    },
    {
-      name: 'radio-group',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-radio-group'],
+      name: "radio-group",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-radio-group"],
       files: [
          {
-            path: 'ui/radio-group.tsx',
-            type: 'registry:component',
+            path: "ui/radio-group.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'resizable',
-      type: 'registry:ui',
-      dependencies: ['react-resizable-panels'],
+      name: "resizable",
+      type: "registry:ui",
+      dependencies: ["react-resizable-panels"],
       files: [
          {
-            path: 'ui/resizable.tsx',
-            type: 'registry:component',
+            path: "ui/resizable.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'retro-grid',
-      type: 'registry:ui',
+      name: "retro-grid",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/retro-grid.tsx',
-            type: 'registry:component',
+            path: "ui/retro-grid.tsx",
+            type: "registry:ui",
          },
       ],
       tailwind: {
@@ -917,12 +925,12 @@ export const ui: Registry = [
             theme: {
                extend: {
                   animation: {
-                     grid: 'grid 15s linear infinite',
+                     grid: "grid 15s linear infinite",
                   },
                   keyframes: {
                      grid: {
-                        '0%': { transform: 'translateY(-50%)' },
-                        '100%': { transform: 'translateY(0)' },
+                        "0%": { transform: "translateY(-50%)" },
+                        "100%": { transform: "translateY(0)" },
                      },
                   },
                },
@@ -931,12 +939,12 @@ export const ui: Registry = [
       },
    },
    {
-      name: 'ripple',
-      type: 'registry:ui',
+      name: "ripple",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/ripple.tsx',
-            type: 'registry:component',
+            path: "ui/ripple.tsx",
+            type: "registry:ui",
          },
       ],
       tailwind: {
@@ -945,15 +953,15 @@ export const ui: Registry = [
                extend: {
                   animation: {
                      ripple:
-                  'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite',
+                        "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
                   },
                   keyframes: {
                      ripple: {
-                        '0%, 100%': {
-                           transform: 'translate(-50%, -50%) scale(1)',
+                        "0%, 100%": {
+                           transform: "translate(-50%, -50%) scale(1)",
                         },
-                        '50%': {
-                           transform: 'translate(-50%, -50%) scale(0.9)',
+                        "50%": {
+                           transform: "translate(-50%, -50%) scale(0.9)",
                         },
                      },
                   },
@@ -963,89 +971,89 @@ export const ui: Registry = [
       },
    },
    {
-      name: 'scroll-area',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-scroll-area'],
+      name: "scroll-area",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-scroll-area"],
       files: [
          {
-            path: 'ui/scroll-area.tsx',
-            type: 'registry:component',
+            path: "ui/scroll-area.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'scroll-based-velocity',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "scroll-based-velocity",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/scroll-based-velocity.tsx',
-            type: 'registry:component',
+            path: "ui/scroll-based-velocity.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'scroll-progress',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "scroll-progress",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/scroll-progress.tsx',
-            type: 'registry:component',
+            path: "ui/scroll-progress.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'select',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-select'],
+      name: "select",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-select"],
       files: [
          {
-            path: 'ui/select.tsx',
-            type: 'registry:component',
+            path: "ui/select.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'separate-away',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "separate-away",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/separate-away.tsx',
-            type: 'registry:component',
+            path: "ui/separate-away.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'separator',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-separator'],
+      name: "separator",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-separator"],
       files: [
          {
-            path: 'ui/separator.tsx',
-            type: 'registry:component',
+            path: "ui/separator.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'sheet',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-dialog'],
+      name: "sheet",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-dialog"],
       files: [
          {
-            path: 'ui/sheet.tsx',
-            type: 'registry:component',
+            path: "ui/sheet.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'shimmer-button',
-      type: 'registry:ui',
+      name: "shimmer-button",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/shimmer-button.tsx',
-            type: 'registry:component',
+            path: "ui/shimmer-button.tsx",
+            type: "registry:ui",
          },
       ],
       tailwind: {
@@ -1053,29 +1061,29 @@ export const ui: Registry = [
             theme: {
                extend: {
                   animation: {
-                     'shimmer-slide':
-                  'shimmer-slide var(--speed) ease-in-out infinite alternate',
-                     'spin-around':
-                  'spin-around calc(var(--speed) * 2) infinite linear',
+                     "shimmer-slide":
+                        "shimmer-slide var(--speed) ease-in-out infinite alternate",
+                     "spin-around":
+                        "spin-around calc(var(--speed) * 2) infinite linear",
                   },
                   keyframes: {
-                     'shimmer-slide': {
+                     "shimmer-slide": {
                         to: {
-                           transform: 'translate(calc(100cqw - 100%), 0)',
+                           transform: "translate(calc(100cqw - 100%), 0)",
                         },
                      },
-                     'spin-around': {
-                        '0%': {
-                           transform: 'translateZ(0) rotate(0)',
+                     "spin-around": {
+                        "0%": {
+                           transform: "translateZ(0) rotate(0)",
                         },
-                        '15%, 35%': {
-                           transform: 'translateZ(0) rotate(90deg)',
+                        "15%, 35%": {
+                           transform: "translateZ(0) rotate(90deg)",
                         },
-                        '65%, 85%': {
-                           transform: 'translateZ(0) rotate(270deg)',
+                        "65%, 85%": {
+                           transform: "translateZ(0) rotate(270deg)",
                         },
-                        '100%': {
-                           transform: 'translateZ(0) rotate(360deg)',
+                        "100%": {
+                           transform: "translateZ(0) rotate(360deg)",
                         },
                      },
                   },
@@ -1085,12 +1093,12 @@ export const ui: Registry = [
       },
    },
    {
-      name: 'shine-border',
-      type: 'registry:ui',
+      name: "shine-border",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/shine-border.tsx',
-            type: 'registry:component',
+            path: "ui/shine-border.tsx",
+            type: "registry:ui",
          },
       ],
       tailwind: {
@@ -1098,18 +1106,18 @@ export const ui: Registry = [
             theme: {
                extend: {
                   animation: {
-                     shine: 'shine var(--duration) infinite linear',
+                     shine: "shine var(--duration) infinite linear",
                   },
                   keyframes: {
                      shine: {
-                        '0%': {
-                           'background-position': '0% 0%',
+                        "0%": {
+                           "background-position": "0% 0%",
                         },
-                        '50%': {
-                           'background-position': '100% 100%',
+                        "50%": {
+                           "background-position": "100% 100%",
                         },
-                        'to': {
-                           'background-position': '0% 0%',
+                        to: {
+                           "background-position": "0% 0%",
                         },
                      },
                   },
@@ -1119,37 +1127,37 @@ export const ui: Registry = [
       },
    },
    {
-      name: 'shiny-button',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "shiny-button",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/shiny-button.tsx',
-            type: 'registry:component',
+            path: "ui/shiny-button.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'sidebar',
-      type: 'registry:ui',
+      name: "sidebar",
+      type: "registry:ui",
       dependencies: [
-         '@radix-ui/react-slot',
-         'class-variance-authority',
-         'lucide-react',
+         "@radix-ui/react-slot",
+         "class-variance-authority",
+         "lucide-react",
       ],
       registryDependencies: [
-         'button',
-         'separator',
-         'sheet',
-         'tooltip',
-         'input',
-         'use-mobile',
-         'skeleton',
+         "button",
+         "separator",
+         "sheet",
+         "tooltip",
+         "input",
+         "use-mobile",
+         "skeleton",
       ],
       files: [
          {
-            path: 'ui/sidebar.tsx',
-            type: 'registry:component',
+            path: "ui/sidebar.tsx",
+            type: "registry:ui",
          },
       ],
       tailwind: {
@@ -1158,14 +1166,16 @@ export const ui: Registry = [
                extend: {
                   colors: {
                      sidebar: {
-                        'DEFAULT': 'hsl(var(--sidebar-background))',
-                        'foreground': 'hsl(var(--sidebar-foreground))',
-                        'primary': 'hsl(var(--sidebar-primary))',
-                        'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-                        'accent': 'hsl(var(--sidebar-accent))',
-                        'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-                        'border': 'hsl(var(--sidebar-border))',
-                        'ring': 'hsl(var(--sidebar-ring))',
+                        DEFAULT: "hsl(var(--sidebar-background))",
+                        foreground: "hsl(var(--sidebar-foreground))",
+                        primary: "hsl(var(--sidebar-primary))",
+                        "primary-foreground":
+                           "hsl(var(--sidebar-primary-foreground))",
+                        accent: "hsl(var(--sidebar-accent))",
+                        "accent-foreground":
+                           "hsl(var(--sidebar-accent-foreground))",
+                        border: "hsl(var(--sidebar-border))",
+                        ring: "hsl(var(--sidebar-ring))",
                      },
                   },
                },
@@ -1174,270 +1184,270 @@ export const ui: Registry = [
       },
       cssVars: {
          light: {
-            'sidebar-background': '0 0% 98%',
-            'sidebar-foreground': '240 5.3% 26.1%',
-            'sidebar-primary': '240 5.9% 10%',
-            'sidebar-primary-foreground': '0 0% 98%',
-            'sidebar-accent': '240 4.8% 95.9%',
-            'sidebar-accent-foreground': '240 5.9% 10%',
-            'sidebar-border': '220 13% 91%',
-            'sidebar-ring': '217.2 91.2% 59.8%',
+            "sidebar-background": "0 0% 98%",
+            "sidebar-foreground": "240 5.3% 26.1%",
+            "sidebar-primary": "240 5.9% 10%",
+            "sidebar-primary-foreground": "0 0% 98%",
+            "sidebar-accent": "240 4.8% 95.9%",
+            "sidebar-accent-foreground": "240 5.9% 10%",
+            "sidebar-border": "220 13% 91%",
+            "sidebar-ring": "217.2 91.2% 59.8%",
          },
          dark: {
-            'sidebar-background': '240 5.9% 10%',
-            'sidebar-foreground': '240 4.8% 95.9%',
-            'sidebar-primary': '224.3 76.3% 48%',
-            'sidebar-primary-foreground': '0 0% 100%',
-            'sidebar-accent': '240 3.7% 15.9%',
-            'sidebar-accent-foreground': '240 4.8% 95.9%',
-            'sidebar-border': '240 3.7% 15.9%',
-            'sidebar-ring': '217.2 91.2% 59.8%',
+            "sidebar-background": "240 5.9% 10%",
+            "sidebar-foreground": "240 4.8% 95.9%",
+            "sidebar-primary": "224.3 76.3% 48%",
+            "sidebar-primary-foreground": "0 0% 100%",
+            "sidebar-accent": "240 3.7% 15.9%",
+            "sidebar-accent-foreground": "240 4.8% 95.9%",
+            "sidebar-border": "240 3.7% 15.9%",
+            "sidebar-ring": "217.2 91.2% 59.8%",
          },
       },
    },
    {
-      name: 'skeleton',
-      type: 'registry:ui',
+      name: "skeleton",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/skeleton.tsx',
-            type: 'registry:component',
+            path: "ui/skeleton.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'slider',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-slider'],
+      name: "slider",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-slider"],
       files: [
          {
-            path: 'ui/slider.tsx',
-            type: 'registry:component',
+            path: "ui/slider.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'sonner',
-      type: 'registry:ui',
-      dependencies: ['sonner', 'next-themes'],
+      name: "sonner",
+      type: "registry:ui",
+      dependencies: ["sonner", "next-themes"],
       files: [
          {
-            path: 'ui/sonner.tsx',
-            type: 'registry:component',
+            path: "ui/sonner.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'sparkles-text',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "sparkles-text",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/sparkles-text.tsx',
-            type: 'registry:component',
+            path: "ui/sparkles-text.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'star-rating',
-      type: 'registry:ui',
-      dependencies: ['lucide-react'],
+      name: "star-rating",
+      type: "registry:ui",
+      dependencies: ["lucide-react"],
       files: [
          {
-            path: 'ui/star-rating.tsx',
-            type: 'registry:component',
+            path: "ui/star-rating.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'switch',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-switch'],
+      name: "switch",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-switch"],
       files: [
          {
-            path: 'ui/switch.tsx',
-            type: 'registry:component',
+            path: "ui/switch.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'stepper',
-      type: 'registry:ui',
-      dependencies: ['lucide-react'],
-      registryDependencies: ['collapsible'],
+      name: "stepper",
+      type: "registry:ui",
+      dependencies: ["lucide-react"],
+      registryDependencies: ["collapsible"],
       files: [
          {
-            path: 'ui/stepper.tsx',
-            type: 'registry:component',
+            path: "ui/stepper.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'scratch-to-reveal',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "scratch-to-reveal",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/scratch-to-reveal.tsx',
-            type: 'registry:component',
+            path: "ui/scratch-to-reveal.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'table',
-      type: 'registry:ui',
+      name: "table",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/table.tsx',
-            type: 'registry:component',
+            path: "ui/table.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'tabs',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-tabs'],
+      name: "tabs",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-tabs"],
       files: [
          {
-            path: 'ui/tabs.tsx',
-            type: 'registry:component',
+            path: "ui/tabs.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'textarea',
-      type: 'registry:ui',
+      name: "textarea",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/textarea.tsx',
-            type: 'registry:component',
+            path: "ui/textarea.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'text-reveal',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "text-reveal",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/text-reveal.tsx',
-            type: 'registry:component',
+            path: "ui/text-reveal.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'timeline',
-      type: 'registry:ui',
-      dependencies: ['lucide-react'],
+      name: "timeline",
+      type: "registry:ui",
+      dependencies: ["lucide-react"],
       files: [
          {
-            path: 'ui/timeline.tsx',
-            type: 'registry:component',
+            path: "ui/timeline.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'toc',
-      type: 'registry:ui',
+      name: "toc",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/toc.tsx',
-            type: 'registry:component',
+            path: "ui/toc.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'toast',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-toast'],
+      name: "toast",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-toast"],
       files: [
          {
-            path: 'ui/toast.tsx',
-            type: 'registry:ui',
+            path: "ui/toast.tsx",
+            type: "registry:ui",
          },
          {
-            path: 'hooks/use-toast.ts',
-            type: 'registry:hook',
+            path: "hooks/use-toast.ts",
+            type: "registry:hook",
          },
          {
-            path: 'ui/toaster.tsx',
-            type: 'registry:ui',
+            path: "ui/toaster.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'toggle',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-toggle'],
+      name: "toggle",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-toggle"],
       files: [
          {
-            path: 'ui/toggle.tsx',
-            type: 'registry:component',
+            path: "ui/toggle.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'toggle-group',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-toggle-group'],
-      registryDependencies: ['toggle'],
+      name: "toggle-group",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-toggle-group"],
+      registryDependencies: ["toggle"],
       files: [
          {
-            path: 'ui/toggle-group.tsx',
-            type: 'registry:component',
+            path: "ui/toggle-group.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'tooltip',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-tooltip'],
+      name: "tooltip",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-tooltip"],
       files: [
          {
-            path: 'ui/tooltip.tsx',
-            type: 'registry:component',
+            path: "ui/tooltip.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'tour',
-      type: 'registry:ui',
+      name: "tour",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/tour.tsx',
-            type: 'registry:component',
+            path: "ui/tour.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'typing-animation',
-      type: 'registry:ui',
+      name: "typing-animation",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/typing-animation.tsx',
-            type: 'registry:component',
+            path: "ui/typing-animation.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'tweet-card',
-      type: 'registry:ui',
-      dependencies: ['react-tweet'],
+      name: "tweet-card",
+      type: "registry:ui",
+      dependencies: ["react-tweet"],
       files: [
          {
-            path: 'ui/tweet-card.tsx',
-            type: 'registry:component',
+            path: "ui/tweet-card.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'video-modal',
-      type: 'registry:ui',
-      dependencies: ['@radix-ui/react-dialog'],
+      name: "video-modal",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-dialog"],
       files: [
          {
-            path: 'ui/video-modal.tsx',
-            type: 'registry:component',
+            path: "ui/video-modal.tsx",
+            type: "registry:ui",
          },
       ],
       tailwind: {
@@ -1445,17 +1455,17 @@ export const ui: Registry = [
             theme: {
                extend: {
                   animation: {
-                     'modal-fade-in': 'modal-fade-in 500ms ease-out',
-                     'modal-fade-out': 'modal-fade-out 500ms ease-in',
+                     "modal-fade-in": "modal-fade-in 500ms ease-out",
+                     "modal-fade-out": "modal-fade-out 500ms ease-in",
                   },
                   keyframes: {
-                     'modal-fade-in': {
-                        '0%': { opacity: '0' },
-                        '100%': { opacity: '1' },
+                     "modal-fade-in": {
+                        "0%": { opacity: "0" },
+                        "100%": { opacity: "1" },
                      },
-                     'modal-fade-out': {
-                        '0%': { opacity: '1' },
-                        '100%': { opacity: '0' },
+                     "modal-fade-out": {
+                        "0%": { opacity: "1" },
+                        "100%": { opacity: "0" },
                      },
                   },
                },
@@ -1464,83 +1474,83 @@ export const ui: Registry = [
       },
    },
    {
-      name: 'wavy-dot-pattern',
-      type: 'registry:ui',
-      dependencies: ['react-anime'],
+      name: "wavy-dot-pattern",
+      type: "registry:ui",
+      dependencies: ["react-anime"],
       files: [
          {
-            path: 'ui/wavy-dot-pattern.tsx',
-            type: 'registry:component',
+            path: "ui/wavy-dot-pattern.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'wavy-text',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "wavy-text",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/wavy-text.tsx',
-            type: 'registry:component',
+            path: "ui/wavy-text.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'word-fade-in',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "word-fade-in",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/word-fade-in.tsx',
-            type: 'registry:component',
+            path: "ui/word-fade-in.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'word-pull-up',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "word-pull-up",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/word-pull-up.tsx',
-            type: 'registry:component',
+            path: "ui/word-pull-up.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'word-rotate',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "word-rotate",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/word-rotate.tsx',
-            type: 'registry:component',
+            path: "ui/word-rotate.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'rainbow-button',
-      type: 'registry:ui',
+      name: "rainbow-button",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/rainbow-button.tsx',
-            type: 'registry:component',
+            path: "ui/rainbow-button.tsx",
+            type: "registry:ui",
          },
       ],
       cssVars: {
          light: {
-            '--color-1': '0 100% 63%',
-            '--color-2': '270 100% 63%',
-            '--color-3': '210 100% 63%',
-            '--color-4': '195 100% 63%',
-            '--color-5': '90 100% 63%',
+            "--color-1": "0 100% 63%",
+            "--color-2": "270 100% 63%",
+            "--color-3": "210 100% 63%",
+            "--color-4": "195 100% 63%",
+            "--color-5": "90 100% 63%",
          },
          dark: {
-            '--color-1': '0 100% 63%',
-            '--color-2': '270 100% 63%',
-            '--color-3': '210 100% 63%',
-            '--color-4': '195 100% 63%',
-            '--color-5': '90 100% 63%',
+            "--color-1": "0 100% 63%",
+            "--color-2": "270 100% 63%",
+            "--color-3": "210 100% 63%",
+            "--color-4": "195 100% 63%",
+            "--color-5": "90 100% 63%",
          },
       },
       tailwind: {
@@ -1548,19 +1558,19 @@ export const ui: Registry = [
             theme: {
                extend: {
                   colors: {
-                     'color-1': 'hsl(var(--color-1))',
-                     'color-2': 'hsl(var(--color-2))',
-                     'color-3': 'hsl(var(--color-3))',
-                     'color-4': 'hsl(var(--color-4))',
-                     'color-5': 'hsl(var(--color-5))',
+                     "color-1": "hsl(var(--color-1))",
+                     "color-2": "hsl(var(--color-2))",
+                     "color-3": "hsl(var(--color-3))",
+                     "color-4": "hsl(var(--color-4))",
+                     "color-5": "hsl(var(--color-5))",
                   },
                   animation: {
-                     rainbow: 'rainbow var(--speed, 2s) infinite linear',
+                     rainbow: "rainbow var(--speed, 2s) infinite linear",
                   },
                   keyframes: {
                      rainbow: {
-                        '0%': { 'background-position': '0%' },
-                        '100%': { 'background-position': '200%' },
+                        "0%": { "background-position": "0%" },
+                        "100%": { "background-position": "200%" },
                      },
                   },
                },
@@ -1569,64 +1579,64 @@ export const ui: Registry = [
       },
    },
    {
-      name: 'flickering-grid',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "flickering-grid",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/flickering-grid.tsx',
-            type: 'registry:component',
+            path: "ui/flickering-grid.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'hyper-text',
-      type: 'registry:ui',
-      dependencies: ['framer-motion'],
+      name: "hyper-text",
+      type: "registry:ui",
+      dependencies: ["framer-motion"],
       files: [
          {
-            path: 'ui/hyper-text.tsx',
-            type: 'registry:component',
+            path: "ui/hyper-text.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'safari',
-      type: 'registry:ui',
+      name: "safari",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/safari.tsx',
-            type: 'registry:component',
+            path: "ui/safari.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'iphone-15-pro',
-      type: 'registry:ui',
+      name: "iphone-15-pro",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/iphone-15-pro.tsx',
-            type: 'registry:component',
+            path: "ui/iphone-15-pro.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'animated-circular-progress-bar',
-      type: 'registry:ui',
+      name: "animated-circular-progress-bar",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/animated-circular-progress-bar.tsx',
-            type: 'registry:component',
+            path: "ui/animated-circular-progress-bar.tsx",
+            type: "registry:ui",
          },
       ],
    },
    {
-      name: 'grid-layout',
-      type: 'registry:ui',
+      name: "grid-layout",
+      type: "registry:ui",
       files: [
          {
-            path: 'ui/grid-layout.tsx',
-            type: 'registry:component',
+            path: "ui/grid-layout.tsx",
+            type: "registry:ui",
          },
       ],
       tailwind: {
@@ -1634,12 +1644,13 @@ export const ui: Registry = [
             theme: {
                extend: {
                   borderColor: {
-                     'grid-line': 'hsl(var(--border) / var(--grid-line-opacity))',
+                     "grid-line":
+                        "hsl(var(--border) / var(--grid-line-opacity))",
                   },
                   gridTemplateColumns: {
-                     'grid-16': 'repeat(16, minmax(0, 1fr))',
-                     'grid-12': 'repeat(12, minmax(0, 1fr))',
-                     'grid-8': 'repeat(8, minmax(0, 1fr))',
+                     "grid-16": "repeat(16, minmax(0, 1fr))",
+                     "grid-12": "repeat(12, minmax(0, 1fr))",
+                     "grid-8": "repeat(8, minmax(0, 1fr))",
                   },
                },
             },
@@ -1647,37 +1658,37 @@ export const ui: Registry = [
       },
       cssVars: {
          light: {
-            '--grid-line-opacity': '0.5',
+            "--grid-line-opacity": "0.5",
          },
          dark: {
-            '--grid-line-opacity': '0.5',
+            "--grid-line-opacity": "0.5",
          },
       },
    },
    {
-      name: 'globe-grid',
-      type: 'registry:ui',
+      name: "globe-grid",
+      type: "registry:ui",
       dependencies: [],
       files: [
          {
-            path: 'ui/globe-grid.tsx',
-            type: 'registry:component',
+            path: "ui/globe-grid.tsx",
+            type: "registry:ui",
          },
       ],
       cssVars: {
          light: {
-            '--guide-color': 'rgba(255, 255, 255, 0.1)',
-            '--ds-background-200': 'rgba(0, 0, 0, 0.5)',
-            '--line-color-1': 'hsl(267, 100%, 64%)',
-            '--line-color-2': 'hsl(272.1, 71.7%, 47.1%)',
-            '--line-color-3': 'hsl(155, 89%, 51%)',
+            "--guide-color": "rgba(255, 255, 255, 0.1)",
+            "--ds-background-200": "rgba(0, 0, 0, 0.5)",
+            "--line-color-1": "hsl(267, 100%, 64%)",
+            "--line-color-2": "hsl(272.1, 71.7%, 47.1%)",
+            "--line-color-3": "hsl(155, 89%, 51%)",
          },
          dark: {
-            '--guide-color': 'rgba(255, 255, 255, 0.15)',
-            '--ds-background-200': 'rgba(0, 0, 0, 0.7)',
-            '--line-color-1': 'hsl(267, 100%, 64%)',
-            '--line-color-2': 'hsl(272.1, 71.7%, 47.1%)',
-            '--line-color-3': 'hsl(155, 89%, 51%)',
+            "--guide-color": "rgba(255, 255, 255, 0.15)",
+            "--ds-background-200": "rgba(0, 0, 0, 0.7)",
+            "--line-color-1": "hsl(267, 100%, 64%)",
+            "--line-color-2": "hsl(272.1, 71.7%, 47.1%)",
+            "--line-color-3": "hsl(155, 89%, 51%)",
          },
       },
       tailwind: {
@@ -1685,12 +1696,12 @@ export const ui: Registry = [
             theme: {
                extend: {
                   gridTemplateColumns: {
-                     'grid-md': 'repeat(var(--md-grid-columns), 1fr)',
-                     'grid-sm': 'repeat(var(--sm-grid-columns), 1fr)',
+                     "grid-md": "repeat(var(--md-grid-columns), 1fr)",
+                     "grid-sm": "repeat(var(--sm-grid-columns), 1fr)",
                   },
                   gridTemplateRows: {
-                     'grid-md': 'repeat(var(--md-grid-rows), 1fr)',
-                     'grid-sm': 'repeat(var(--sm-grid-rows), 1fr)',
+                     "grid-md": "repeat(var(--md-grid-rows), 1fr)",
+                     "grid-sm": "repeat(var(--sm-grid-rows), 1fr)",
                   },
                },
             },
@@ -1698,27 +1709,27 @@ export const ui: Registry = [
       },
    },
    {
-      name: 'nyx-toc',
-      type: 'registry:ui',
+      name: "nyx-toc",
+      type: "registry:ui",
       dependencies: [
-         '@radix-ui/react-icons',
-         '@radix-ui/react-popover',
-         '@radix-ui/react-scroll-area',
-         'scroll-into-view-if-needed',
+         "@radix-ui/react-icons",
+         "@radix-ui/react-popover",
+         "@radix-ui/react-scroll-area",
+         "scroll-into-view-if-needed",
       ],
-      registryDependencies: ['popover'],
+      registryDependencies: ["popover"],
       files: [
          {
-            path: 'ui/nyx-toc.tsx',
-            type: 'registry:component',
+            path: "ui/nyx-toc.tsx",
+            type: "registry:ui",
          },
          {
-            path: 'hooks/use-anchor-observer.ts',
-            type: 'registry:hook',
+            path: "hooks/use-anchor-observer.ts",
+            type: "registry:hook",
          },
          {
-            path: 'hooks/use-on-change.ts',
-            type: 'registry:hook',
+            path: "hooks/use-on-change.ts",
+            type: "registry:hook",
          },
       ],
       tailwind: {
@@ -1726,17 +1737,18 @@ export const ui: Registry = [
             theme: {
                extend: {
                   animation: {
-                     'nyx-fade-out': 'nyx-fade-out 0.2s ease-out',
+                     "nyx-fade-out": "nyx-fade-out 0.2s ease-out",
                   },
                   keyframes: {
-                     'nyx-fade-out': {
-                        '0%': { opacity: '1' },
-                        '100%': { opacity: '0' },
+                     "nyx-fade-out": {
+                        "0%": { opacity: "1" },
+                        "100%": { opacity: "0" },
                      },
                   },
                },
                spacing: {
-                  'nyx-layout-top': 'calc(var(--nyx-banner-height) + var(--nyx-nav-height))',
+                  "nyx-layout-top":
+                     "calc(var(--nyx-banner-height) + var(--nyx-nav-height))",
                },
             },
          },

@@ -1,12 +1,12 @@
-'use client'
+"use client"
 
-import type { TweetProps } from 'react-tweet'
-import { useTweet } from 'react-tweet'
+import type { TweetProps } from "react-tweet"
+import { useTweet } from "react-tweet"
 import {
    MagicTweet,
    TweetNotFound,
    TweetSkeleton,
-} from '~/registry/miami/ui/tweet-card'
+} from "~/registry/miami/ui/tweet-card"
 
 function ClientTweetCard({
    id,
@@ -19,8 +19,7 @@ function ClientTweetCard({
 }: TweetProps & { className?: string }) {
    const { data, error, isLoading } = useTweet(id, apiUrl, fetchOptions)
 
-   if (isLoading)
-      return fallback
+   if (isLoading) return fallback
    if (error || !data) {
       const NotFound = components?.TweetNotFound || TweetNotFound
       return <NotFound error={onError ? onError(error) : error} />

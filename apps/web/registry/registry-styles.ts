@@ -1,11 +1,11 @@
 export const styles = [
    {
-      name: 'miami',
-      label: 'Miami',
+      name: "miami",
+      label: "Miami",
    },
    {
-      name: 'default',
-      label: 'Default',
+      name: "default",
+      label: "Default",
    },
 ] as const
 

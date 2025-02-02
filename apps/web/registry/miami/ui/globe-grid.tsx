@@ -1,7 +1,7 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import { ny } from '~/lib/utils'
+import type * as React from "react"
+import { ny } from "~/lib/utils"
 
 interface GlobeGridProps {
    fullGlobe?: boolean
@@ -10,18 +10,25 @@ interface GlobeGridProps {
 
 export function GlobeGrid({ fullGlobe = false, className }: GlobeGridProps) {
    return (
-      <div className={ny('relative flex min-h-[350px] w-full items-center justify-center overflow-hidden', className)}>
+      <div
+         className={ny(
+            "relative flex min-h-[350px] w-full items-center justify-center overflow-hidden",
+            className,
+         )}
+      >
          <section
             className="relative w-full max-w-[600px]"
-            style={{
-               '--sm-grid-columns': '6',
-               '--md-grid-columns': '6',
-               '--sm-grid-rows': fullGlobe ? '12' : '6',
-               '--md-grid-rows': fullGlobe ? '12' : '6',
-               '--grid-columns': 'var(--sm-grid-columns)',
-               '--grid-rows': 'var(--sm-grid-rows)',
-               'aspectRatio': fullGlobe ? '1/1' : '2/1',
-            } as React.CSSProperties}
+            style={
+               {
+                  "--sm-grid-columns": "6",
+                  "--md-grid-columns": "6",
+                  "--sm-grid-rows": fullGlobe ? "12" : "6",
+                  "--md-grid-rows": fullGlobe ? "12" : "6",
+                  "--grid-columns": "var(--sm-grid-columns)",
+                  "--grid-rows": "var(--sm-grid-rows)",
+                  aspectRatio: fullGlobe ? "1/1" : "2/1",
+               } as React.CSSProperties
+            }
          >
             <style jsx>
                {`
@@ -39,10 +46,10 @@ export function GlobeGrid({ fullGlobe = false, className }: GlobeGridProps) {
                   height="100%"
                   style={{
                      transform: fullGlobe
-                        ? 'translateY(0px) scale(1.002)'
-                        : 'translateY(-12.5%) scale(1.002)',
+                        ? "translateY(0px) scale(1.002)"
+                        : "translateY(-12.5%) scale(1.002)",
                   }}
-                  viewBox={fullGlobe ? '-1 -1 802 802' : '-1 -151 802 602'}
+                  viewBox={fullGlobe ? "-1 -1 802 802" : "-1 -151 802 602"}
                   width="100%"
                   className="[--guide-color:theme(colors.border/50%)]"
                >
@@ -54,30 +61,143 @@ export function GlobeGrid({ fullGlobe = false, className }: GlobeGridProps) {
 
                   <g
                      data-testid="globe-wireframe"
-                     clipPath={fullGlobe ? 'none' : 'url(#half-globe-clip)'}
+                     clipPath={fullGlobe ? "none" : "url(#half-globe-clip)"}
                   >
-                     <circle cx="400" cy="400" fill="var(--ds-background-200)" r="400" />
-                     <path d="M 400 800 A -400 400 0 0 0 400 0" fill="none" stroke="url(#globe-gradient)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-                     <path d="M 400 800 A -266.667 400 0 0 0 400 0" fill="none" stroke="url(#globe-gradient)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-                     <path d="M 400 800 A -133.333 400 0 0 0 400 0" fill="none" stroke="url(#globe-gradient)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-                     <path d="M 400 800 A 0 400 0 0 0 400 0" fill="none" stroke="url(#globe-gradient)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-                     <path d="M 400 0 A 133.333 400 0 0 0 400 800" fill="none" stroke="url(#globe-gradient)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-                     <path d="M 400 0 A 266.667 400 0 0 0 400 800" fill="none" stroke="url(#globe-gradient)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-                     <path d="M 400 0 A 400 400 0 0 0 400 800" fill="none" stroke="url(#globe-gradient)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
+                     <circle
+                        cx="400"
+                        cy="400"
+                        fill="var(--ds-background-200)"
+                        r="400"
+                     />
+                     <path
+                        d="M 400 800 A -400 400 0 0 0 400 0"
+                        fill="none"
+                        stroke="url(#globe-gradient)"
+                        strokeWidth="1"
+                        vectorEffect="non-scaling-stroke"
+                     />
+                     <path
+                        d="M 400 800 A -266.667 400 0 0 0 400 0"
+                        fill="none"
+                        stroke="url(#globe-gradient)"
+                        strokeWidth="1"
+                        vectorEffect="non-scaling-stroke"
+                     />
+                     <path
+                        d="M 400 800 A -133.333 400 0 0 0 400 0"
+                        fill="none"
+                        stroke="url(#globe-gradient)"
+                        strokeWidth="1"
+                        vectorEffect="non-scaling-stroke"
+                     />
+                     <path
+                        d="M 400 800 A 0 400 0 0 0 400 0"
+                        fill="none"
+                        stroke="url(#globe-gradient)"
+                        strokeWidth="1"
+                        vectorEffect="non-scaling-stroke"
+                     />
+                     <path
+                        d="M 400 0 A 133.333 400 0 0 0 400 800"
+                        fill="none"
+                        stroke="url(#globe-gradient)"
+                        strokeWidth="1"
+                        vectorEffect="non-scaling-stroke"
+                     />
+                     <path
+                        d="M 400 0 A 266.667 400 0 0 0 400 800"
+                        fill="none"
+                        stroke="url(#globe-gradient)"
+                        strokeWidth="1"
+                        vectorEffect="non-scaling-stroke"
+                     />
+                     <path
+                        d="M 400 0 A 400 400 0 0 0 400 800"
+                        fill="none"
+                        stroke="url(#globe-gradient)"
+                        strokeWidth="1"
+                        vectorEffect="non-scaling-stroke"
+                     />
 
-                     <path d="M178.892,66.667 h442.217" fill="none" stroke="url(#globe-gradient)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-                     <path d="M101.858,133.333 h596.285" fill="none" stroke="url(#globe-gradient)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-                     <path d="M53.59,200 h692.82" fill="none" stroke="url(#globe-gradient)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-                     <path d="M22.876,266.667 h754.247" fill="none" stroke="url(#globe-gradient)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-                     <path d="M5.595,333.333 h788.811" fill="none" stroke="url(#globe-gradient)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-                     <path d="M0,400 h800" fill="none" stroke="url(#globe-gradient)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
+                     <path
+                        d="M178.892,66.667 h442.217"
+                        fill="none"
+                        stroke="url(#globe-gradient)"
+                        strokeWidth="1"
+                        vectorEffect="non-scaling-stroke"
+                     />
+                     <path
+                        d="M101.858,133.333 h596.285"
+                        fill="none"
+                        stroke="url(#globe-gradient)"
+                        strokeWidth="1"
+                        vectorEffect="non-scaling-stroke"
+                     />
+                     <path
+                        d="M53.59,200 h692.82"
+                        fill="none"
+                        stroke="url(#globe-gradient)"
+                        strokeWidth="1"
+                        vectorEffect="non-scaling-stroke"
+                     />
+                     <path
+                        d="M22.876,266.667 h754.247"
+                        fill="none"
+                        stroke="url(#globe-gradient)"
+                        strokeWidth="1"
+                        vectorEffect="non-scaling-stroke"
+                     />
+                     <path
+                        d="M5.595,333.333 h788.811"
+                        fill="none"
+                        stroke="url(#globe-gradient)"
+                        strokeWidth="1"
+                        vectorEffect="non-scaling-stroke"
+                     />
+                     <path
+                        d="M0,400 h800"
+                        fill="none"
+                        stroke="url(#globe-gradient)"
+                        strokeWidth="1"
+                        vectorEffect="non-scaling-stroke"
+                     />
                      {fullGlobe && (
                         <>
-                           <path d="M5.595,466.667 h788.811" fill="none" stroke="url(#globe-gradient)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-                           <path d="M22.876,533.333 h754.247" fill="none" stroke="url(#globe-gradient)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-                           <path d="M53.59,600 h692.82" fill="none" stroke="url(#globe-gradient)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-                           <path d="M101.858,666.667 h596.285" fill="none" stroke="url(#globe-gradient)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-                           <path d="M178.892,733.333 h442.217" fill="none" stroke="url(#globe-gradient)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
+                           <path
+                              d="M5.595,466.667 h788.811"
+                              fill="none"
+                              stroke="url(#globe-gradient)"
+                              strokeWidth="1"
+                              vectorEffect="non-scaling-stroke"
+                           />
+                           <path
+                              d="M22.876,533.333 h754.247"
+                              fill="none"
+                              stroke="url(#globe-gradient)"
+                              strokeWidth="1"
+                              vectorEffect="non-scaling-stroke"
+                           />
+                           <path
+                              d="M53.59,600 h692.82"
+                              fill="none"
+                              stroke="url(#globe-gradient)"
+                              strokeWidth="1"
+                              vectorEffect="non-scaling-stroke"
+                           />
+                           <path
+                              d="M101.858,666.667 h596.285"
+                              fill="none"
+                              stroke="url(#globe-gradient)"
+                              strokeWidth="1"
+                              vectorEffect="non-scaling-stroke"
+                           />
+                           <path
+                              d="M178.892,733.333 h442.217"
+                              fill="none"
+                              stroke="url(#globe-gradient)"
+                              strokeWidth="1"
+                              vectorEffect="non-scaling-stroke"
+                           />
                         </>
                      )}
                   </g>
@@ -85,7 +205,11 @@ export function GlobeGrid({ fullGlobe = false, className }: GlobeGridProps) {
                   {/* Original animated paths */}
                   <g id="animated-paths">
                      {/* First animated path */}
-                     <g id="lllldll31" opacity="1" className="[--normal-color:var(--line-color-1)]">
+                     <g
+                        id="lllldll31"
+                        opacity="1"
+                        className="[--normal-color:var(--line-color-1)]"
+                     >
                         <path
                            d="M794.405,333.333 h-131.468M662.937,333.333 h-131.468M531.468,333.333 h-131.468M400,333.333 h-131.468M 268.532 333.333 A -133.333 400 0 0 0 266.667 400M266.667,400 h-133.333M133.333,400 h-133.333"
                            fill="none"
@@ -114,7 +238,11 @@ export function GlobeGrid({ fullGlobe = false, className }: GlobeGridProps) {
                            >
                               <stop offset="0" stopColor="var(--color)" />
                               <stop offset="0.4" stopColor="var(--color)" />
-                              <stop offset="1" stopColor="var(--color)" stopOpacity="0" />
+                              <stop
+                                 offset="1"
+                                 stopColor="var(--color)"
+                                 stopOpacity="0"
+                              />
                               <animate
                                  attributeName="cx"
                                  dur="5.5s"
@@ -144,7 +272,11 @@ export function GlobeGrid({ fullGlobe = false, className }: GlobeGridProps) {
                      </g>
 
                      {/* Second animated path */}
-                     <g id="llullldl34" opacity="1" className="[--normal-color:var(--line-color-2)]">
+                     <g
+                        id="llullldl34"
+                        opacity="1"
+                        className="[--normal-color:var(--line-color-2)]"
+                     >
                         <path
                            d="M698.142,133.333 h-99.381M598.762,133.333 h-99.381M 499.381 133.333 A 133.333 400 0 0 0 473.703 66.667M473.703,66.667 h-73.703M400,66.667 h-73.703M326.297,66.667 h-73.703M 252.594 66.667 A -266.667 400 0 0 0 201.238 133.333M201.238,133.333 h-99.381"
                            fill="none"
@@ -173,7 +305,11 @@ export function GlobeGrid({ fullGlobe = false, className }: GlobeGridProps) {
                            >
                               <stop offset="0" stopColor="var(--color)" />
                               <stop offset="0.4" stopColor="var(--color)" />
-                              <stop offset="1" stopColor="var(--color)" stopOpacity="0" />
+                              <stop
+                                 offset="1"
+                                 stopColor="var(--color)"
+                                 stopOpacity="0"
+                              />
                               <animate
                                  attributeName="cx"
                                  dur="5.5s"
@@ -203,7 +339,11 @@ export function GlobeGrid({ fullGlobe = false, className }: GlobeGridProps) {
                      </g>
 
                      {/* Third animated path */}
-                     <g id="llldlll35" opacity="1" className="[--normal-color:var(--line-color-1)]">
+                     <g
+                        id="llldlll35"
+                        opacity="1"
+                        className="[--normal-color:var(--line-color-1)]"
+                     >
                         <path
                            d="M621.108,66.667 h-73.703M547.406,66.667 h-73.703M473.703,66.667 h-73.703M 400 133.333 A 0 400 0 0 0 400 66.667M400,133.333 h-99.381M300.619,133.333 h-99.381M201.238,133.333 h-99.381"
                            fill="none"
@@ -232,7 +372,11 @@ export function GlobeGrid({ fullGlobe = false, className }: GlobeGridProps) {
                            >
                               <stop offset="0" stopColor="var(--color)" />
                               <stop offset="0.4" stopColor="var(--color)" />
-                              <stop offset="1" stopColor="var(--color)" stopOpacity="0" />
+                              <stop
+                                 offset="1"
+                                 stopColor="var(--color)"
+                                 stopOpacity="0"
+                              />
                               <animate
                                  attributeName="cx"
                                  dur="5.5s"
@@ -262,7 +406,11 @@ export function GlobeGrid({ fullGlobe = false, className }: GlobeGridProps) {
                      </g>
 
                      {/* Fourth animated path */}
-                     <g id="llddllll33" opacity="1" className="[--normal-color:var(--line-color-3)]">
+                     <g
+                        id="llddllll33"
+                        opacity="1"
+                        className="[--normal-color:var(--line-color-3)]"
+                     >
                         <path
                            d="M746.41,200 h-115.47M630.94,200 h-115.47M 525.708 266.667 A 133.333 400 0 0 0 515.47 200M 531.468 333.333 A 133.333 400 0 0 0 525.708 266.667M531.468,333.333 h-131.468M400,333.333 h-131.468M268.532,333.333 h-131.468M137.063,333.333 h-131.468"
                            fill="none"
@@ -291,7 +439,11 @@ export function GlobeGrid({ fullGlobe = false, className }: GlobeGridProps) {
                            >
                               <stop offset="0" stopColor="var(--color)" />
                               <stop offset="0.4" stopColor="var(--color)" />
-                              <stop offset="1" stopColor="var(--color)" stopOpacity="0" />
+                              <stop
+                                 offset="1"
+                                 stopColor="var(--color)"
+                                 stopOpacity="0"
+                              />
                               <animate
                                  attributeName="cx"
                                  dur="5.5s"
@@ -321,7 +473,11 @@ export function GlobeGrid({ fullGlobe = false, className }: GlobeGridProps) {
                      </g>
 
                      {/* Fifth animated path */}
-                     <g id="lllddlll34" opacity="1" className="[--normal-color:var(--line-color-2)]">
+                     <g
+                        id="lllddlll34"
+                        opacity="1"
+                        className="[--normal-color:var(--line-color-2)]"
+                     >
                         <path
                            d="M698.142,133.333 h-99.381M598.762,133.333 h-99.381M499.381,133.333 h-99.381M 400 200 A 0 400 0 0 0 400 133.333M 400 266.667 A 0 400 0 0 0 400 200M400,266.667 h-125.708M274.292,266.667 h-125.708M148.584,266.667 h-125.708"
                            fill="none"
@@ -350,7 +506,11 @@ export function GlobeGrid({ fullGlobe = false, className }: GlobeGridProps) {
                            >
                               <stop offset="0" stopColor="var(--color)" />
                               <stop offset="0.4" stopColor="var(--color)" />
-                              <stop offset="1" stopColor="var(--color)" stopOpacity="0" />
+                              <stop
+                                 offset="1"
+                                 stopColor="var(--color)"
+                                 stopOpacity="0"
+                              />
                               <animate
                                  attributeName="cx"
                                  dur="5.5s"
@@ -380,7 +540,11 @@ export function GlobeGrid({ fullGlobe = false, className }: GlobeGridProps) {
                      </g>
 
                      {/* Sixth animated path */}
-                     <g id="llullll32" opacity="1" className="[--normal-color:var(--line-color-3)]">
+                     <g
+                        id="llullll32"
+                        opacity="1"
+                        className="[--normal-color:var(--line-color-3)]"
+                     >
                         <path
                            d="M777.124,266.667 h-125.708M651.416,266.667 h-125.708M 525.708 266.667 A 133.333 400 0 0 0 515.47 200M515.47,200 h-115.47M400,200 h-115.47M284.53,200 h-115.47M169.06,200 h-115.47"
                            fill="none"
@@ -409,7 +573,11 @@ export function GlobeGrid({ fullGlobe = false, className }: GlobeGridProps) {
                            >
                               <stop offset="0" stopColor="var(--color)" />
                               <stop offset="0.4" stopColor="var(--color)" />
-                              <stop offset="1" stopColor="var(--color)" stopOpacity="0" />
+                              <stop
+                                 offset="1"
+                                 stopColor="var(--color)"
+                                 stopOpacity="0"
+                              />
                               <animate
                                  attributeName="cx"
                                  dur="5.5s"

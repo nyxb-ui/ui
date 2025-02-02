@@ -1,6 +1,7 @@
-'use client'
+"use client"
 
-import React, { useEffect, useRef, useState } from 'react'
+import type React from "react"
+import { useEffect, useRef, useState } from "react"
 
 interface MousePosition {
    x: number
@@ -18,10 +19,10 @@ function MousePosition(): MousePosition {
          setMousePosition({ x: event.clientX, y: event.clientY })
       }
 
-      window.addEventListener('mousemove', handleMouseMove)
+      window.addEventListener("mousemove", handleMouseMove)
 
       return () => {
-         window.removeEventListener('mousemove', handleMouseMove)
+         window.removeEventListener("mousemove", handleMouseMove)
       }
    }, [])
 
@@ -40,14 +41,14 @@ interface ParticlesProps {
    vy?: number
 }
 function hexToRgb(hex: string): number[] {
-   hex = hex.replace('#', '')
+   hex = hex.replace("#", "")
 
    // Unterstützung für dreistellige Hex-Farbcodes
    if (hex.length === 3) {
       hex = hex
-         .split('')
-         .map(char => char + char)
-         .join('')
+         .split("")
+         .map((char) => char + char)
+         .join("")
    }
 
    const hexInt = Number.parseInt(hex, 16)
@@ -58,13 +59,13 @@ function hexToRgb(hex: string): number[] {
 }
 
 const Particles: React.FC<ParticlesProps> = ({
-   className = '',
+   className = "",
    quantity = 100,
    staticity = 50,
    ease = 50,
    size = 0.4,
    refresh = false,
-   color = '#ffffff',
+   color = "#ffffff",
    vx = 0,
    vy = 0,
 }) => {
@@ -73,20 +74,20 @@ const Particles: React.FC<ParticlesProps> = ({
    const context = useRef<CanvasRenderingContext2D | null>(null)
    const circles = useRef<any[]>([])
    const mousePosition = MousePosition()
-   const mouse = useRef<{ x: number, y: number }>({ x: 0, y: 0 })
-   const canvasSize = useRef<{ w: number, h: number }>({ w: 0, h: 0 })
-   const dpr = typeof window !== 'undefined' ? window.devicePixelRatio : 1
+   const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 })
+   const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 })
+   const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1
 
    useEffect(() => {
       if (canvasRef.current)
-         context.current = canvasRef.current.getContext('2d')
+         context.current = canvasRef.current.getContext("2d")
 
       initCanvas()
       animate()
-      window.addEventListener('resize', initCanvas)
+      window.addEventListener("resize", initCanvas)
 
       return () => {
-         window.removeEventListener('resize', initCanvas)
+         window.removeEventListener("resize", initCanvas)
       }
    }, [color])
 
@@ -178,12 +179,11 @@ const Particles: React.FC<ParticlesProps> = ({
          context.current.translate(translateX, translateY)
          context.current.beginPath()
          context.current.arc(x, y, size, 0, 2 * Math.PI)
-         context.current.fillStyle = `rgba(${rgb.join(', ')}, ${alpha})`
+         context.current.fillStyle = `rgba(${rgb.join(", ")}, ${alpha})`
          context.current.fill()
          context.current.setTransform(dpr, 0, 0, dpr, 0, 0)
 
-         if (!update)
-            circles.current.push(circle)
+         if (!update) circles.current.push(circle)
       }
    }
 
@@ -214,15 +214,15 @@ const Particles: React.FC<ParticlesProps> = ({
       start2: number,
       end2: number,
    ): number => {
-      const remapped
-      = ((value - start1) * (end2 - start2)) / (end1 - start1) + start2
+      const remapped =
+         ((value - start1) * (end2 - start2)) / (end1 - start1) + start2
       return remapped > 0 ? remapped : 0
    }
 
    const animate = () => {
       clearContext()
       circles.current.forEach((circle: Circle, i: number) => {
-      // Handle the alpha value
+         // Handle the alpha value
          const edge = [
             circle.x + circle.translateX - circle.size, // distance from left edge
             canvasSize.current.w - circle.x - circle.translateX - circle.size, // distance from right edge
@@ -237,27 +237,28 @@ const Particles: React.FC<ParticlesProps> = ({
             circle.alpha += 0.02
             if (circle.alpha > circle.targetAlpha)
                circle.alpha = circle.targetAlpha
-         }
-         else {
+         } else {
             circle.alpha = circle.targetAlpha * remapClosestEdge
          }
          circle.x += circle.dx + vx
          circle.y += circle.dy + vy
-         circle.translateX
-        += (mouse.current.x / (staticity / circle.magnetism) - circle.translateX)
-        / ease
-         circle.translateY
-        += (mouse.current.y / (staticity / circle.magnetism) - circle.translateY)
-        / ease
+         circle.translateX +=
+            (mouse.current.x / (staticity / circle.magnetism) -
+               circle.translateX) /
+            ease
+         circle.translateY +=
+            (mouse.current.y / (staticity / circle.magnetism) -
+               circle.translateY) /
+            ease
 
          drawCircle(circle, true)
 
          // circle gets out of the canvas
          if (
-            circle.x < -circle.size
-            || circle.x > canvasSize.current.w + circle.size
-            || circle.y < -circle.size
-            || circle.y > canvasSize.current.h + circle.size
+            circle.x < -circle.size ||
+            circle.x > canvasSize.current.w + circle.size ||
+            circle.y < -circle.size ||
+            circle.y > canvasSize.current.h + circle.size
          ) {
             // remove the circle from the array
             circles.current.splice(i, 1)

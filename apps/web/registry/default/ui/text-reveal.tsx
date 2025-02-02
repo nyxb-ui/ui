@@ -1,9 +1,9 @@
-'use client'
+"use client"
 
-import { motion, useScroll, useTransform } from 'framer-motion'
-import type { FC, ReactNode } from 'react'
-import { useRef } from 'react'
-import { ny } from '~/lib/utils'
+import { motion, useScroll, useTransform } from "framer-motion"
+import type { FC, ReactNode } from "react"
+import { useRef } from "react"
+import { ny } from "~/lib/utils"
 
 interface TextRevealByWordProps {
    text: string
@@ -19,10 +19,10 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
    const { scrollYProgress } = useScroll({
       target: targetRef,
    })
-   const words = text.split(' ')
+   const words = text.split(" ")
 
    return (
-      <div ref={targetRef} className={ny('relative z-0 h-[200vh]', className)}>
+      <div ref={targetRef} className={ny("relative z-0 h-[200vh]", className)}>
          <div className="sticky top-0 mx-auto flex h-1/2 max-w-4xl items-center bg-transparent px-4 py-20">
             <p
                ref={targetRef}
@@ -32,7 +32,11 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
                   const start = i / words.length
                   const end = start + 1 / words.length
                   return (
-                     <Word key={i} progress={scrollYProgress} range={[start, end]}>
+                     <Word
+                        key={i}
+                        progress={scrollYProgress}
+                        range={[start, end]}
+                     >
                         {word}
                      </Word>
                   )
@@ -54,7 +58,10 @@ const Word: FC<WordProps> = ({ children, progress, range }) => {
    return (
       <span className="xl:lg-3 relative mx-1 lg:mx-2.5">
          <span className="absolute opacity-30">{children}</span>
-         <motion.span style={{ opacity }} className="text-black dark:text-white">
+         <motion.span
+            style={{ opacity }}
+            className="text-black dark:text-white"
+         >
             {children}
          </motion.span>
       </span>

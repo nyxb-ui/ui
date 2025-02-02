@@ -1,5 +1,5 @@
-import { useId } from 'react'
-import { ny } from '~/lib/utils'
+import { useId } from "react"
+import { ny } from "~/lib/utils"
 
 interface GridPatternProps {
    width?: any
@@ -28,7 +28,7 @@ export function GridPattern({
       <svg
          aria-hidden="true"
          className={ny(
-            'pointer-events-none absolute inset-0 size-full fill-gray-400/30 stroke-gray-400/30',
+            "pointer-events-none absolute inset-0 size-full fill-gray-400/30 stroke-gray-400/30",
             className,
          )}
          {...props}
@@ -49,7 +49,12 @@ export function GridPattern({
                />
             </pattern>
          </defs>
-         <rect width="100%" height="100%" strokeWidth={0} fill={`url(#${id})`} />
+         <rect
+            width="100%"
+            height="100%"
+            strokeWidth={0}
+            fill={`url(#${id})`}
+         />
          {squares && (
             <svg x={x} y={y} className="overflow-visible">
                {squares.map(([x, y]) => (

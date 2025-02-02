@@ -1,10 +1,10 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import * as MenubarPrimitive from '@radix-ui/react-menubar'
-import { Check, ChevronRight, Circle } from 'lucide-react'
+import * as MenubarPrimitive from "@radix-ui/react-menubar"
+import { Check, ChevronRight, Circle } from "lucide-react"
+import * as React from "react"
 
-import { ny } from '~/lib/utils'
+import { ny } from "~/lib/utils"
 
 const MenubarMenu = MenubarPrimitive.Menu
 
@@ -23,7 +23,7 @@ const Menubar = React.forwardRef<
    <MenubarPrimitive.Root
       ref={ref}
       className={ny(
-         'bg-background flex h-10 items-center space-x-1 rounded-md border p-1',
+         "bg-background flex h-10 items-center space-x-1 rounded-md border p-1",
          className,
       )}
       {...props}
@@ -38,7 +38,7 @@ const MenubarTrigger = React.forwardRef<
    <MenubarPrimitive.Trigger
       ref={ref}
       className={ny(
-         'focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none',
+         "focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none",
          className,
       )}
       {...props}
@@ -55,8 +55,8 @@ const MenubarSubTrigger = React.forwardRef<
    <MenubarPrimitive.SubTrigger
       ref={ref}
       className={ny(
-         'focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none',
-         inset && 'pl-8',
+         "focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none",
+         inset && "pl-8",
          className,
       )}
       {...props}
@@ -74,7 +74,7 @@ const MenubarSubContent = React.forwardRef<
    <MenubarPrimitive.SubContent
       ref={ref}
       className={ny(
-         'bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 min-w-32 overflow-hidden rounded-md border p-1',
+         "bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 min-w-32 overflow-hidden rounded-md border p-1",
          className,
       )}
       {...props}
@@ -87,7 +87,13 @@ const MenubarContent = React.forwardRef<
    React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Content>
 >(
    (
-      { className, align = 'start', alignOffset = -4, sideOffset = 8, ...props },
+      {
+         className,
+         align = "start",
+         alignOffset = -4,
+         sideOffset = 8,
+         ...props
+      },
       ref,
    ) => (
       <MenubarPrimitive.Portal>
@@ -97,7 +103,7 @@ const MenubarContent = React.forwardRef<
             alignOffset={alignOffset}
             sideOffset={sideOffset}
             className={ny(
-               'bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 min-w-48 overflow-hidden rounded-md border p-1 shadow-md',
+               "bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 min-w-48 overflow-hidden rounded-md border p-1 shadow-md",
                className,
             )}
             {...props}
@@ -116,8 +122,8 @@ const MenubarItem = React.forwardRef<
    <MenubarPrimitive.Item
       ref={ref}
       className={ny(
-         'focus:bg-accent focus:text-accent-foreground relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
-         inset && 'pl-8',
+         "focus:bg-accent focus:text-accent-foreground relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+         inset && "pl-8",
          className,
       )}
       {...props}
@@ -132,7 +138,7 @@ const MenubarCheckboxItem = React.forwardRef<
    <MenubarPrimitive.CheckboxItem
       ref={ref}
       className={ny(
-         'focus:bg-accent focus:text-accent-foreground relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+         "focus:bg-accent focus:text-accent-foreground relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
          className,
       )}
       checked={checked}
@@ -155,7 +161,7 @@ const MenubarRadioItem = React.forwardRef<
    <MenubarPrimitive.RadioItem
       ref={ref}
       className={ny(
-         'focus:bg-accent focus:text-accent-foreground relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+         "focus:bg-accent focus:text-accent-foreground relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
          className,
       )}
       {...props}
@@ -179,8 +185,8 @@ const MenubarLabel = React.forwardRef<
    <MenubarPrimitive.Label
       ref={ref}
       className={ny(
-         'px-2 py-1.5 text-sm font-semibold',
-         inset && 'pl-8',
+         "px-2 py-1.5 text-sm font-semibold",
+         inset && "pl-8",
          className,
       )}
       {...props}
@@ -194,7 +200,7 @@ const MenubarSeparator = React.forwardRef<
 >(({ className, ...props }, ref) => (
    <MenubarPrimitive.Separator
       ref={ref}
-      className={ny('bg-muted -mx-1 my-1 h-px', className)}
+      className={ny("bg-muted -mx-1 my-1 h-px", className)}
       {...props}
    />
 ))
@@ -207,14 +213,14 @@ function MenubarShortcut({
    return (
       <span
          className={ny(
-            'text-muted-foreground ml-auto text-xs tracking-widest',
+            "text-muted-foreground ml-auto text-xs tracking-widest",
             className,
          )}
          {...props}
       />
    )
 }
-MenubarShortcut.displayname = 'MenubarShortcut'
+MenubarShortcut.displayname = "MenubarShortcut"
 
 export {
    Menubar,

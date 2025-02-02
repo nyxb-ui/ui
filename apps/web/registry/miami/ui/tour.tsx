@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-'use client'
+"use client"
 import React, {
    createContext,
    useContext,
@@ -7,10 +7,10 @@ import React, {
    useMemo,
    useRef,
    useState,
-} from 'react'
-import { createPortal } from 'react-dom'
+} from "react"
+import { createPortal } from "react-dom"
 
-import { ny } from '~/lib/utils'
+import { ny } from "~/lib/utils"
 
 export interface TourContext<T extends string> {
    nodes: Map<
@@ -45,16 +45,16 @@ export function TourFactory<T extends string>(order: T[]) {
       show: false,
       current: 0,
       next: () => {
-         console.log('empty')
+         console.log("empty")
       },
       previous: () => {
-         console.log('empty')
+         console.log("empty")
       },
       close: () => {
-         console.log('empty')
+         console.log("empty")
       },
       open: () => {
-         console.log('empty')
+         console.log("empty")
       },
    })
 
@@ -65,7 +65,7 @@ export function TourFactory<T extends string>(order: T[]) {
       const [, forceUpdate] = React.useState({})
 
       const currentElement = useMemo(
-         () => ctx.nodes.get(order[ctx.current] ?? ''),
+         () => ctx.nodes.get(order[ctx.current] ?? ""),
          [ctx],
       )
 
@@ -74,12 +74,12 @@ export function TourFactory<T extends string>(order: T[]) {
             forceUpdate({})
          }
 
-         window.addEventListener('resize', handleResize)
-         window.addEventListener('scroll', handleResize)
+         window.addEventListener("resize", handleResize)
+         window.addEventListener("scroll", handleResize)
 
          return () => {
-            window.removeEventListener('resize', handleResize)
-            window.removeEventListener('scroll', handleResize)
+            window.removeEventListener("resize", handleResize)
+            window.removeEventListener("scroll", handleResize)
          }
       }, [])
 
@@ -101,14 +101,16 @@ export function TourFactory<T extends string>(order: T[]) {
       const closest = (): React.CSSProperties => {
          const isCloseToTop = currentElementRect.top < height
          const isCloseToLeft = currentElementRect.left < width
-         const isCloseToRight
-         = currentElementRect.right > window.innerWidth - width
+         const isCloseToRight =
+            currentElementRect.right > window.innerWidth - width
 
          if (isCloseToLeft) {
             return {
                left: currentElementRect.x + currentElementRect.width,
                top:
-             currentElementRect.y - height / 2 + currentElementRect.height / 2,
+                  currentElementRect.y -
+                  height / 2 +
+                  currentElementRect.height / 2,
             }
          }
 
@@ -116,19 +118,25 @@ export function TourFactory<T extends string>(order: T[]) {
             return {
                left: currentElementRect.x - width,
                top:
-             currentElementRect.y - height / 2 + currentElementRect.height / 2,
+                  currentElementRect.y -
+                  height / 2 +
+                  currentElementRect.height / 2,
             }
          }
 
          if (isCloseToTop) {
             return {
-               left: currentElementRect.x - width / 2 + currentElementRect.width / 2,
+               left:
+                  currentElementRect.x -
+                  width / 2 +
+                  currentElementRect.width / 2,
                top: currentElementRect.y + currentElementRect.height,
             }
          }
 
          return {
-            left: currentElementRect.x - width / 2 + currentElementRect.width / 2,
+            left:
+               currentElementRect.x - width / 2 + currentElementRect.width / 2,
             top: currentElementRect.y - height,
          }
       }
@@ -137,14 +145,14 @@ export function TourFactory<T extends string>(order: T[]) {
          <div
             id="tour"
             className={ny(
-               'pointer-events-auto fixed left-0 top-0 h-screen w-screen transition-none',
-               !ctx.show ? 'invisible' : 'visible',
+               "pointer-events-auto fixed left-0 top-0 h-screen w-screen transition-none",
+               !ctx.show ? "invisible" : "visible",
             )}
          >
             <div
                ref={ref}
                className={ny(
-             `absolute z-50 transition-all duration-500 ease-in-out`,
+                  `absolute z-50 transition-all duration-500 ease-in-out`,
                )}
                style={{
                   ...closest(),
@@ -168,7 +176,7 @@ export function TourFactory<T extends string>(order: T[]) {
 
    return {
       TourProvider: function TourProvider(props: TourProps) {
-         const nodes = useRef<TourContext<T>['nodes']>(new Map())
+         const nodes = useRef<TourContext<T>["nodes"]>(new Map())
 
          const [show, setShow] = useState(false)
          const [current, setCurrent] = useState(0)
@@ -191,12 +199,12 @@ export function TourFactory<T extends string>(order: T[]) {
                   current,
                   show,
                   next: () => {
-                     setCurrent(state =>
+                     setCurrent((state) =>
                         Math.min(getNextIndex(state, 1), order.length - 1),
                      )
                   },
                   previous: () => {
-                     setCurrent(state => Math.max(getNextIndex(state, -1), 0))
+                     setCurrent((state) => Math.max(getNextIndex(state, -1), 0))
                   },
                   close: () => {
                      setShow(false)

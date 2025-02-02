@@ -1,9 +1,9 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import * as ScrollAreaPrimitive from '@radix-ui/react-scroll-area'
+import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area"
+import * as React from "react"
 
-import { ny } from '~/lib/utils'
+import { ny } from "~/lib/utils"
 
 const ScrollArea = React.forwardRef<
    React.ElementRef<typeof ScrollAreaPrimitive.Root>,
@@ -11,7 +11,7 @@ const ScrollArea = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
    <ScrollAreaPrimitive.Root
       ref={ref}
-      className={ny('relative overflow-hidden', className)}
+      className={ny("relative overflow-hidden", className)}
       {...props}
    >
       <ScrollAreaPrimitive.Viewport className="size-full rounded-[inherit]">
@@ -25,17 +25,19 @@ ScrollArea.displayName = ScrollAreaPrimitive.Root.displayName
 
 const ScrollBar = React.forwardRef<
    React.ElementRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>,
-   React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>
->(({ className, orientation = 'vertical', ...props }, ref) => (
+   React.ComponentPropsWithoutRef<
+      typeof ScrollAreaPrimitive.ScrollAreaScrollbar
+   >
+>(({ className, orientation = "vertical", ...props }, ref) => (
    <ScrollAreaPrimitive.ScrollAreaScrollbar
       ref={ref}
       orientation={orientation}
       className={ny(
-         'flex touch-none select-none transition-colors',
-         orientation === 'vertical'
-         && 'h-full w-2.5 border-l border-l-transparent p-px',
-         orientation === 'horizontal'
-         && 'h-2.5 flex-col border-t border-t-transparent p-px',
+         "flex touch-none select-none transition-colors",
+         orientation === "vertical" &&
+            "h-full w-2.5 border-l border-l-transparent p-px",
+         orientation === "horizontal" &&
+            "h-2.5 flex-col border-t border-t-transparent p-px",
          className,
       )}
       {...props}

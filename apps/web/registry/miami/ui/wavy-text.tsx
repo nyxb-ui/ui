@@ -1,8 +1,8 @@
-'use client'
+"use client"
 
-import { AnimatePresence, motion } from 'framer-motion'
-import { useMemo } from 'react'
-import { ny } from '~/lib/utils'
+import { AnimatePresence, motion } from "framer-motion"
+import { useMemo } from "react"
+import { ny } from "~/lib/utils"
 
 interface WavyTextProps {
    word: string
@@ -26,7 +26,7 @@ function WavyText({
       visible: { y: -10 },
    }
    const combinedVariants = variant || defaultVariants
-   const characters = useMemo(() => word.split(''), [word])
+   const characters = useMemo(() => word.split(""), [word])
    return (
       <div className="flex justify-center space-x-2 overflow-hidden p-3">
          <AnimatePresence>
@@ -38,13 +38,13 @@ function WavyText({
                   exit="hidden"
                   variants={combinedVariants}
                   transition={{
-                     yoyo: Infinity,
+                     yoyo: Number.POSITIVE_INFINITY,
                      duration,
                      delay: i * delay,
                   }}
                   className={ny(
                      className,
-                     'font-display text-center text-4xl font-bold tracking-[-0.15em] md:text-7xl',
+                     "font-display text-center text-4xl font-bold tracking-[-0.15em] md:text-7xl",
                   )}
                >
                   {char}

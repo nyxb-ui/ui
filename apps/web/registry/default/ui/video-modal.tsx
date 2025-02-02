@@ -1,8 +1,8 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import * as DialogPrimitive from '@radix-ui/react-dialog'
-import { ny } from '~/lib/utils'
+import * as DialogPrimitive from "@radix-ui/react-dialog"
+import * as React from "react"
+import { ny } from "~/lib/utils"
 
 const VideoModal = DialogPrimitive.Root
 
@@ -19,7 +19,7 @@ const VideoModalOverlay = React.forwardRef<
    <DialogPrimitive.Overlay
       ref={ref}
       className={ny(
-         'data-[state=closed]:animate-modal-fade-out data-[state=open]:animate-modal-fade-in fixed inset-0 z-50 backdrop-blur-xl',
+         "data-[state=closed]:animate-modal-fade-out data-[state=open]:animate-modal-fade-in fixed inset-0 z-50 backdrop-blur-xl",
          className,
       )}
       {...props}
@@ -36,8 +36,8 @@ const VideoModalContent = React.forwardRef<
       <DialogPrimitive.Content
          ref={ref}
          className={ny(
-            'fixed left-1/2 top-1/2 z-50 flex h-screen w-screen -translate-x-1/2 -translate-y-1/2 items-center justify-center p-3',
-            'data-[state=closed]:animate-modal-fade-out data-[state=open]:animate-modal-fade-in data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[50%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[50%] transition-all',
+            "fixed left-1/2 top-1/2 z-50 flex h-screen w-screen -translate-x-1/2 -translate-y-1/2 items-center justify-center p-3",
+            "data-[state=closed]:animate-modal-fade-out data-[state=open]:animate-modal-fade-in data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[50%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[50%] transition-all",
             className,
          )}
          {...props}
@@ -67,7 +67,7 @@ const VideoModalTitle = React.forwardRef<
    <DialogPrimitive.Title
       ref={ref}
       className={ny(
-         'mb-4 text-4xl font-bold text-gray-950 dark:text-gray-50',
+         "mb-4 text-4xl font-bold text-gray-950 dark:text-gray-50",
          className,
       )}
       {...props}
@@ -82,7 +82,7 @@ const VideoModalDescription = React.forwardRef<
    <DialogPrimitive.Description
       ref={ref}
       className={ny(
-         'mb-6 text-xl text-gray-950/80 dark:text-gray-50/70',
+         "mb-6 text-xl text-gray-950/80 dark:text-gray-50/70",
          className,
       )}
       {...props}
@@ -97,7 +97,7 @@ const VideoPreview = React.forwardRef<
    <div
       ref={ref}
       className={ny(
-         'absolute inset-0 z-10 transition-opacity duration-500 group-[.playing]:pointer-events-none group-[.playing]:opacity-0',
+         "absolute inset-0 z-10 transition-opacity duration-500 group-[.playing]:pointer-events-none group-[.playing]:opacity-0",
          className,
       )}
       {...props}
@@ -105,7 +105,7 @@ const VideoPreview = React.forwardRef<
       {children}
    </div>
 ))
-VideoPreview.displayName = 'VideoPreview'
+VideoPreview.displayName = "VideoPreview"
 
 const VideoPlayButton = React.forwardRef<
    HTMLDivElement,
@@ -114,7 +114,7 @@ const VideoPlayButton = React.forwardRef<
    <div
       ref={ref}
       className={ny(
-         'absolute inset-0 z-20 flex items-center justify-center transition-opacity duration-300 group-[.playing]:pointer-events-none group-[.playing]:opacity-0',
+         "absolute inset-0 z-20 flex items-center justify-center transition-opacity duration-300 group-[.playing]:pointer-events-none group-[.playing]:opacity-0",
          className,
       )}
       {...props}
@@ -122,7 +122,7 @@ const VideoPlayButton = React.forwardRef<
       {children}
    </div>
 ))
-VideoPlayButton.displayName = 'VideoPlayButton'
+VideoPlayButton.displayName = "VideoPlayButton"
 
 const VideoPlayer = React.forwardRef<
    HTMLDivElement,
@@ -134,8 +134,8 @@ const VideoPlayer = React.forwardRef<
       <div
          ref={ref}
          className={ny(
-            'group relative aspect-video max-w-4xl overflow-hidden rounded-xl border border-gray-950/[.1] object-cover dark:border-gray-50/[.1]',
-            isPlaying && 'playing',
+            "group relative aspect-video max-w-4xl overflow-hidden rounded-xl border border-gray-950/[.1] object-cover dark:border-gray-50/[.1]",
+            isPlaying && "playing",
             className,
          )}
          onClick={() => setIsPlaying(true)}
@@ -145,7 +145,7 @@ const VideoPlayer = React.forwardRef<
       </div>
    )
 })
-VideoPlayer.displayName = 'VideoPlayer'
+VideoPlayer.displayName = "VideoPlayer"
 
 const VideoModalVideo = React.forwardRef<
    HTMLDivElement,
@@ -154,7 +154,7 @@ const VideoModalVideo = React.forwardRef<
    <div
       ref={ref}
       className={ny(
-         'aspect-video max-w-4xl overflow-hidden rounded-xl border border-gray-950/[.1] object-cover shadow-xl dark:border-gray-50/[.1]',
+         "aspect-video max-w-4xl overflow-hidden rounded-xl border border-gray-950/[.1] object-cover shadow-xl dark:border-gray-50/[.1]",
          className,
       )}
       {...props}
@@ -162,7 +162,7 @@ const VideoModalVideo = React.forwardRef<
       {children}
    </div>
 ))
-VideoModalVideo.displayName = 'VideoModalVideo'
+VideoModalVideo.displayName = "VideoModalVideo"
 
 const CloseIcon = React.forwardRef<
    React.ElementRef<typeof VideoModalClose>,
@@ -173,10 +173,10 @@ const CloseIcon = React.forwardRef<
    <VideoModalClose
       ref={ref}
       className={ny(
-         'rounded-full border border-gray-950/[.1] bg-gray-950/[.01] p-2 transition duration-300 hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]',
+         "rounded-full border border-gray-950/[.1] bg-gray-950/[.01] p-2 transition duration-300 hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
          isMobile
-            ? 'absolute right-4 top-4 lg:hidden'
-            : 'hidden self-start lg:block',
+            ? "absolute right-4 top-4 lg:hidden"
+            : "hidden self-start lg:block",
          className,
       )}
       {...props}
@@ -194,14 +194,13 @@ const CloseIcon = React.forwardRef<
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="1.5"
-         >
-         </path>
+         ></path>
       </svg>
       <span className="sr-only">Close</span>
    </VideoModalClose>
 ))
 
-CloseIcon.displayName = 'CloseIcon'
+CloseIcon.displayName = "CloseIcon"
 
 export {
    VideoModal,

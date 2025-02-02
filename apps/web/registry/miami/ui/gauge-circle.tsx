@@ -1,4 +1,4 @@
-import { ny } from '~/lib/utils'
+import { ny } from "~/lib/utils"
 
 interface Props {
    max: number
@@ -23,19 +23,19 @@ export default function GaugeCircle({
 
    return (
       <div
-         className={ny('relative size-40 text-2xl font-semibold', className)}
+         className={ny("relative size-40 text-2xl font-semibold", className)}
          style={
             {
-               '--circle-size': '100px',
-               '--circumference': `${circumference}px`,
-               '--percent-to-px': `${percentPx}px`,
-               '--gap-percent': '5',
-               '--offset-factor': '0',
-               '--transition-length': '1s',
-               '--transition-step': '200ms',
-               '--delay': '0s',
-               '--percent-to-deg': '3.6deg',
-               'transform': 'translateZ(0)',
+               "--circle-size": "100px",
+               "--circumference": `${circumference}px`,
+               "--percent-to-px": `${percentPx}px`,
+               "--gap-percent": "5",
+               "--offset-factor": "0",
+               "--transition-length": "1s",
+               "--transition-step": "200ms",
+               "--delay": "0s",
+               "--percent-to-deg": "3.6deg",
+               transform: "translateZ(0)",
             } as React.CSSProperties
          }
       >
@@ -59,8 +59,8 @@ export default function GaugeCircle({
                      stroke: gaugeSecondaryColor,
                      strokeDasharray: `${(90 - currentPercent) * percentPx}px ${circumference}px`,
                      transform: `rotate(calc(1turn - 90deg - (5 * 3.6deg * (1 - 0)))) scaleY(-1)`,
-                     transition: 'all 1s ease 0s',
-                     transformOrigin: '50px 50px',
+                     transition: "all 1s ease 0s",
+                     transformOrigin: "50px 50px",
                   }}
                />
             )}
@@ -76,18 +76,18 @@ export default function GaugeCircle({
                style={{
                   stroke: gaugePrimaryColor,
                   strokeDasharray: `${currentPercent * percentPx}px ${circumference}px`,
-                  transition: '1s ease 0s, stroke 1s ease 0s',
-                  transitionProperty: 'stroke-dasharray,transform',
-                  transform: 'rotate(calc(-90deg + 5 * 0 * 3.6deg))',
-                  transformOrigin: '50px 50px',
+                  transition: "1s ease 0s, stroke 1s ease 0s",
+                  transitionProperty: "stroke-dasharray,transform",
+                  transform: "rotate(calc(-90deg + 5 * 0 * 3.6deg))",
+                  transformOrigin: "50px 50px",
                }}
             />
          </svg>
          <span
             className="animate-in fade-in absolute inset-0 m-auto size-fit"
             style={{
-               animationDelay: '0s',
-               transitionDuration: '1s',
+               animationDelay: "0s",
+               transitionDuration: "1s",
             }}
          >
             {Math.round(currentPercent)}

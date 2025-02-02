@@ -1,10 +1,10 @@
-'use client'
+"use client"
 
-import { useEffect, useRef, useState } from 'react'
-import type { Variants } from 'framer-motion'
-import { AnimatePresence, motion } from 'framer-motion'
+import type { Variants } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
+import { useEffect, useRef, useState } from "react"
 
-import { ny } from '~/lib/utils'
+import { ny } from "~/lib/utils"
 
 interface HyperTextProps {
    text: string
@@ -14,7 +14,7 @@ interface HyperTextProps {
    animateOnLoad?: boolean
 }
 
-const alphabets = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
 
 const getRandomInt = (max: number) => Math.floor(Math.random() * max)
 
@@ -29,7 +29,7 @@ export default function HyperText({
    className,
    animateOnLoad = true,
 }: HyperTextProps) {
-   const [displayText, setDisplayText] = useState(text.split(''))
+   const [displayText, setDisplayText] = useState(text.split(""))
    const [trigger, setTrigger] = useState(false)
    const interations = useRef(0)
    const isFirstRender = useRef(true)
@@ -48,18 +48,17 @@ export default function HyperText({
                return
             }
             if (interations.current < text.length) {
-               setDisplayText(t =>
+               setDisplayText((t) =>
                   t.map((l, i) =>
-                     l === ' '
+                     l === " "
                         ? l
                         : i <= interations.current
-                           ? text[i]
-                           : alphabets[getRandomInt(26)],
+                          ? text[i]
+                          : alphabets[getRandomInt(26)],
                   ),
                )
                interations.current = interations.current + 0.1
-            }
-            else {
+            } else {
                setTrigger(false)
                clearInterval(interval)
             }
@@ -79,7 +78,11 @@ export default function HyperText({
             {displayText.map((letter, i) => (
                <motion.h1
                   key={i}
-                  className={ny('font-mono', letter === ' ' ? 'w-3' : '', className)}
+                  className={ny(
+                     "font-mono",
+                     letter === " " ? "w-3" : "",
+                     className,
+                  )}
                   {...framerProps}
                >
                   {letter.toUpperCase()}
