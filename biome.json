@@ -43,7 +43,8 @@
             "noArrayIndexKey": "off",
             "noShadowRestrictedNames": "off",
             "noExplicitAny": "off",
-            "noRedeclare": "off"
+            "noRedeclare": "off",
+            "noSuspiciousSemicolonInJsx": "off"
          },
          "complexity": {
             "noForEach": "off",
