@@ -124,7 +124,7 @@ Use `@version` to specify the version of your registry item.
 
 Used for registry dependencies. Can be names or URLs.
 
-- For `shadcn/ui` registry items such as `button`, `input`, `select`, etc use the name eg. `['button', 'input', 'select']`.
+- For `nyxb/ui` registry items such as `button`, `input`, `select`, etc use the name eg. `['button', 'input', 'select']`.
 - For custom registry items use the URL of the registry item eg. `['https://example.com/r/hello-world.json']`.
 
 ```json title="registry-item.json" showLineNumbers
@@ -183,7 +183,7 @@ The `type` property is used to specify the type of the file. See the [type](#typ
 
 The `target` property is used to indicate where the file should be placed in a project. This is optional and only required for `registry:page` and `registry:file` types.
 
-By default, the `shadcn` cli will read a project's `components.json` file to determine the target path. For some files, such as routes or config you can specify the target path manually.
+By default, the `nyxb` cli will read a project's `components.json` file to determine the target path. For some files, such as routes or config you can specify the target path manually.
 
 Use `~` to refer to the root of the project e.g `~/foo.config.js`.
 

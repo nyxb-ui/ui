@@ -68,11 +68,11 @@ export const docsConfig: DocsConfig = {
                href: "/docs/installation",
                items: [],
             },
-            {
-               title: "Story",
-               href: "/docs/story",
-               items: [],
-            },
+            // {
+            //    title: "Story",
+            //    href: "/docs/story",
+            //    items: [],
+            // },
             {
                title: "nyxbui.json",
                href: "/docs/nyxbui-json",
