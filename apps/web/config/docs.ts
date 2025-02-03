@@ -125,6 +125,38 @@ export const docsConfig: DocsConfig = {
             },
          ],
       },
+      {
+         title: "Registry",
+         href: "/docs/registry",
+         label: [{ text: "New", variant: "new" }],
+         items: [
+            {
+               title: "Getting Started",
+               href: "/docs/registry/getting-started",
+               items: [],
+            },
+            {
+               title: "Registry JSON",
+               href: "/docs/registry/registry-json",
+               items: [],
+            },
+            {
+               title: "Registry Item JSON",
+               href: "/docs/registry/registry-item-json",
+               items: [],
+            },
+            {
+               title: "Open in v0",
+               href: "/docs/registry/open-in-v0",
+               items: [],
+            },
+            {
+               title: "FAQ",
+               href: "/docs/registry/faq",
+               items: [],
+            },
+         ],
+      },
       // {
       //    title: 'Templates',
       //    items: [
@@ -778,11 +810,11 @@ export const docsConfig: DocsConfig = {
             },
          ],
       },
-      {
-         title: "Experimental Feature",
-         href: "/docs/experimental",
-         items: [],
-      },
+      // {
+      //    title: "Experimental Feature",
+      //    href: "/docs/experimental",
+      //    items: [],
+      // },
    ],
    chartsNav: [
       {
