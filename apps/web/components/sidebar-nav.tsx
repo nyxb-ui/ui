@@ -48,7 +48,7 @@ export function DocsSidebarNav({ items }: DocsSidebarNavProps) {
                               {item.title}
                            </span>
                            {item.label && (
-                              <div className="flex items-center gap-1.5 ml-[-56px] min-h-[24px]">
+                              <div className="flex items-center gap-1.5 ml-[-56px] mt-[-5px] min-h-[24px]">
                                  {Array.isArray(item.label) ? (
                                     item.label.map((label: NavLabel, i) => (
                                        <NavLabelComponent
@@ -184,7 +184,7 @@ export function DocsSidebarNavItems({
                >
                   {item.title}
                   {item.label && (
-                     <div className="flex items-center gap-1.5 ml-2 -mt-1.5">
+                     <div className="flex items-center gap-1.5 ml-2">
                         {Array.isArray(item.label) ? (
                            item.label.map((label: NavLabel, i) => (
                               <NavLabelComponent

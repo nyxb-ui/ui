@@ -4,7 +4,7 @@ import { ny } from "~/lib/utils"
 import type { NavLabel as NavLabelType } from "~/types/nav"
 
 const labelVariants = cva(
-   "inline-flex items-center rounded-md px-4 py-1 text-xs font-semibold",
+   "inline-flex items-center rounded-md px-4 py-1 text-xs font-semibold -translate-y-1",
    {
       variants: {
          variant: {

@@ -1,9 +1,9 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import { allDocs } from 'content-collections'
+import { allDocs } from "content-collections"
+import type * as React from "react"
 
-import { Mdx } from './mdx-components'
+import { Mdx } from "./mdx-components"
 
 interface FrameworkDocsProps extends React.HTMLAttributes<HTMLDivElement> {
    data: string
@@ -11,11 +11,10 @@ interface FrameworkDocsProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export function FrameworkDocs({ ...props }: FrameworkDocsProps) {
    const frameworkDoc = allDocs.find(
-      doc => doc.slug === `/docs/installation/${props.data}`,
+      (doc) => doc.slug === `/docs/installation/${props.data}`,
    )
 
-   if (!frameworkDoc)
-      return null
+   if (!frameworkDoc) return null
 
    return <Mdx code={frameworkDoc.body.code} />
 }

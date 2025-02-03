@@ -1754,4 +1754,15 @@ export const ui: Registry["items"] = [
          },
       },
    },
+   {
+      name: "terminal",
+      type: "registry:ui",
+      dependencies: ["motion"],
+      files: [
+         {
+            path: "ui/terminal.tsx",
+            type: "registry:ui",
+         },
+      ],
+   },
 ]

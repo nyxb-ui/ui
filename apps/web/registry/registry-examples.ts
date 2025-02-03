@@ -3166,4 +3166,14 @@ export const examples: Registry["items"] = [
          },
       ],
    },
+   {
+      name: "terminal-demo",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/terminal-demo.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
 ]

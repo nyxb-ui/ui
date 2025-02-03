@@ -7,6 +7,7 @@
       "build": "content-collections build && pnpm build:registry && next build",
       "build:registry": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-registry.mts && biome format --write ./__registry__ --log-level=error --config-path ../../biome.json",
       "build:v0-registry": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-v0-registry.mts && biome format --write ./__registry__ --log-level=error --config-path ../../biome.json",
+      "build:all-registry": "pnpm build:registry && pnpm build:v0-registry",
       "registry:capture": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/capture-registry.mts",
       "build:docs": "content-collections build",
       "seed:tasks": "tsx --tsconfig ./tsconfig.scripts.json ./app/(app)/examples/tasks/data/seed.ts",

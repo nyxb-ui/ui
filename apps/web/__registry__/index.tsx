@@ -2185,6 +2185,25 @@ export const Index: Record<string, any> = {
          source: "",
          meta: undefined,
       },
+      terminal: {
+         name: "terminal",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/ui/terminal.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/ui/terminal.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
       "sidebar-01": {
          name: "sidebar-01",
          description: "A simple sidebar with navigation grouped by section.",
@@ -11294,6 +11313,25 @@ export const Index: Record<string, any> = {
          source: "",
          meta: undefined,
       },
+      "terminal-demo": {
+         name: "terminal-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/terminal-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/terminal-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
    },
    default: {
       accordion: {
@@ -13516,6 +13554,25 @@ export const Index: Record<string, any> = {
          categories: undefined,
          component: React.lazy(
             () => import("~/registry/default/ui/nyx-toc.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      terminal: {
+         name: "terminal",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/ui/terminal.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/ui/terminal.tsx"),
          ),
          source: "",
          meta: undefined,
@@ -22715,6 +22772,25 @@ export const Index: Record<string, any> = {
          categories: undefined,
          component: React.lazy(
             () => import("~/registry/default/examples/typography-p.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "terminal-demo": {
+         name: "terminal-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/terminal-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/terminal-demo.tsx"),
          ),
          source: "",
          meta: undefined,
