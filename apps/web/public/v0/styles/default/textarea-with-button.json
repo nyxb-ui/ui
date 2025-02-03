@@ -1,0 +1,14 @@
+{
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "textarea-with-button",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/textarea-with-button.tsx",
+      "content": "import { Button } from \"@/components/ui/button\"\nimport { Textarea } from \"@/components/ui/textarea\"\n\nexport default function TextareaWithButton() {\n   return (\n      <div className=\"grid w-full gap-2\">\n         <Textarea placeholder=\"Type your message here.\" />\n         <Button>Send message</Button>\n      </div>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

@@ -12,7 +12,7 @@ import {
    SidebarMenuItem,
    SidebarMenuSkeleton,
    SidebarProvider,
-} from "~/registry/default/ui/sidebar"
+} from "~/registry/miami/ui/sidebar"
 
 const projects = [
    {

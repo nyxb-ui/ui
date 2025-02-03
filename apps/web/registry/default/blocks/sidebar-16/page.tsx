@@ -1,6 +1,6 @@
-import { AppSidebar } from "~/registry/default/blocks/sidebar-16/components/app-sidebar"
-import { SiteHeader } from "~/registry/default/blocks/sidebar-16/components/site-header"
-import { SidebarInset, SidebarProvider } from "~/registry/default/ui/sidebar"
+import { AppSidebar } from "~/registry/miami/blocks/sidebar-16/components/app-sidebar"
+import { SiteHeader } from "~/registry/miami/blocks/sidebar-16/components/site-header"
+import { SidebarInset, SidebarProvider } from "~/registry/miami/ui/sidebar"
 
 export const iframeHeight = "800px"
 

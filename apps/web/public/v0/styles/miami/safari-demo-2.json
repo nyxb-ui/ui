@@ -1,0 +1,14 @@
+{
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "safari-demo-2",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/safari-demo-2.tsx",
+      "content": "import Safari from \"@/components/ui/safari\"\n\nexport default function SafariDemo() {\n   return (\n      <div className=\"relative\">\n         <Safari\n            url=\"nyxbui.design\"\n            className=\"size-full\"\n            src=\"https://via.placeholder.com/1200x750\"\n         />\n      </div>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

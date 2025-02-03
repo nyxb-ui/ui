@@ -1,0 +1,14 @@
+{
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "grid-pattern-linear-gradient",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/grid-pattern-linear-gradient.tsx",
+      "content": "\"use client\"\n\nimport { cn } from \"@/lib/utils\"\nimport GridPattern from \"@/components/ui/grid-pattern\"\n\nfunction GridPatternLinearGradient() {\n   return (\n      <div className=\"bg-background relative flex size-full items-center justify-center overflow-hidden rounded-lg border p-20 md:shadow-xl\">\n         <p className=\"z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-black dark:text-white\">\n            Grid Pattern\n         </p>\n         <GridPattern\n            width={20}\n            height={20}\n            x={-1}\n            y={-1}\n            className={cn(\n               \"[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] \",\n            )}\n         />\n      </div>\n   )\n}\n\nexport default GridPatternLinearGradient\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

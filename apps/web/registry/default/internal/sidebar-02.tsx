@@ -16,20 +16,20 @@ import {
    BreadcrumbList,
    BreadcrumbPage,
    BreadcrumbSeparator,
-} from "~/registry/default/ui/breadcrumb"
+} from "~/registry/miami/ui/breadcrumb"
 import {
    Collapsible,
    CollapsibleContent,
    CollapsibleTrigger,
-} from "~/registry/default/ui/collapsible"
+} from "~/registry/miami/ui/collapsible"
 import {
    DropdownMenu,
    DropdownMenuContent,
    DropdownMenuItem,
    DropdownMenuTrigger,
-} from "~/registry/default/ui/dropdown-menu"
-import { Label } from "~/registry/default/ui/label"
-import { Separator } from "~/registry/default/ui/separator"
+} from "~/registry/miami/ui/dropdown-menu"
+import { Label } from "~/registry/miami/ui/label"
+import { Separator } from "~/registry/miami/ui/separator"
 import {
    Sidebar,
    SidebarContent,
@@ -45,7 +45,7 @@ import {
    SidebarProvider,
    SidebarRail,
    SidebarTrigger,
-} from "~/registry/default/ui/sidebar"
+} from "~/registry/miami/ui/sidebar"
 
 export const iframeHeight = "800px"
 

@@ -1,11 +1,11 @@
-import { Button } from "~/registry/default/ui/button"
-import { Input } from "~/registry/default/ui/input"
-import { Label } from "~/registry/default/ui/label"
+import { Button } from "~/registry/miami/ui/button"
+import { Input } from "~/registry/miami/ui/input"
+import { Label } from "~/registry/miami/ui/label"
 import {
    Popover,
    PopoverContent,
    PopoverTrigger,
-} from "~/registry/default/ui/popover"
+} from "~/registry/miami/ui/popover"
 
 export function PopoverDemo() {
    return (

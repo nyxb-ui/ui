@@ -1,0 +1,14 @@
+{
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "textarea",
+  "type": "registry:ui",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "ui/textarea.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nexport interface TextareaProps\n   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}\n\nconst Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(\n   ({ className, ...props }, ref) => {\n      return (\n         <textarea\n            className={cn(\n               \"border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex min-h-[80px] w-full rounded-md border px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\",\n               className,\n            )}\n            ref={ref}\n            {...props}\n         />\n      )\n   },\n)\nTextarea.displayName = \"Textarea\"\n\nexport { Textarea }\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}

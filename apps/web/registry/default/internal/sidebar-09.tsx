@@ -16,7 +16,7 @@ import {
 } from "lucide-react"
 import * as React from "react"
 
-import { Avatar, AvatarFallback, AvatarImage } from "~/registry/default/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "~/registry/miami/ui/avatar"
 import {
    Breadcrumb,
    BreadcrumbItem,
@@ -24,7 +24,7 @@ import {
    BreadcrumbList,
    BreadcrumbPage,
    BreadcrumbSeparator,
-} from "~/registry/default/ui/breadcrumb"
+} from "~/registry/miami/ui/breadcrumb"
 import {
    DropdownMenu,
    DropdownMenuContent,
@@ -33,9 +33,9 @@ import {
    DropdownMenuLabel,
    DropdownMenuSeparator,
    DropdownMenuTrigger,
-} from "~/registry/default/ui/dropdown-menu"
-import { Label } from "~/registry/default/ui/label"
-import { Separator } from "~/registry/default/ui/separator"
+} from "~/registry/miami/ui/dropdown-menu"
+import { Label } from "~/registry/miami/ui/label"
+import { Separator } from "~/registry/miami/ui/separator"
 import {
    Sidebar,
    SidebarContent,
@@ -51,8 +51,8 @@ import {
    SidebarProvider,
    SidebarTrigger,
    useSidebar,
-} from "~/registry/default/ui/sidebar"
-import { Switch } from "~/registry/default/ui/switch"
+} from "~/registry/miami/ui/sidebar"
+import { Switch } from "~/registry/miami/ui/switch"
 
 // This is sample data
 const data = {

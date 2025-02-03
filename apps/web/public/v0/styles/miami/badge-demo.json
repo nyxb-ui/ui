@@ -1,0 +1,17 @@
+{
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "badge-demo",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "registryDependencies": [
+    "badge"
+  ],
+  "files": [
+    {
+      "path": "examples/badge-demo.tsx",
+      "content": "import { Badge } from \"@/components/ui/badge\"\n\nexport default function BadgeDemo() {\n   return <Badge>Badge</Badge>\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

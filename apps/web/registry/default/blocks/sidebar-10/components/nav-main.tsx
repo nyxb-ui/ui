@@ -6,7 +6,7 @@ import {
    SidebarMenu,
    SidebarMenuButton,
    SidebarMenuItem,
-} from "~/registry/default/ui/sidebar"
+} from "~/registry/miami/ui/sidebar"
 
 export function NavMain({
    items,

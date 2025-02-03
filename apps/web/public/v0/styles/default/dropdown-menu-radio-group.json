@@ -1,0 +1,18 @@
+{
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "dropdown-menu-radio-group",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "registryDependencies": [
+    "dropdown-menu",
+    "radio-group"
+  ],
+  "files": [
+    {
+      "path": "examples/dropdown-menu-radio-group.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport {\n   DropdownMenu,\n   DropdownMenuContent,\n   DropdownMenuLabel,\n   DropdownMenuRadioGroup,\n   DropdownMenuRadioItem,\n   DropdownMenuSeparator,\n   DropdownMenuTrigger,\n} from \"@/components/ui/dropdown-menu\"\n\nexport default function DropdownMenuRadioGroupDemo() {\n   const [position, setPosition] = React.useState(\"bottom\")\n\n   return (\n      <DropdownMenu>\n         <DropdownMenuTrigger asChild>\n            <Button variant=\"outline\">Open</Button>\n         </DropdownMenuTrigger>\n         <DropdownMenuContent className=\"w-56\">\n            <DropdownMenuLabel>Panel Position</DropdownMenuLabel>\n            <DropdownMenuSeparator />\n            <DropdownMenuRadioGroup\n               value={position}\n               onValueChange={setPosition}\n            >\n               <DropdownMenuRadioItem value=\"top\">Top</DropdownMenuRadioItem>\n               <DropdownMenuRadioItem value=\"bottom\">\n                  Bottom\n               </DropdownMenuRadioItem>\n               <DropdownMenuRadioItem value=\"right\">\n                  Right\n               </DropdownMenuRadioItem>\n            </DropdownMenuRadioGroup>\n         </DropdownMenuContent>\n      </DropdownMenu>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

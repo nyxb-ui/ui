@@ -1,13 +1,13 @@
 import * as React from "react"
 
-import { Card, CardContent } from "~/registry/default/ui/card"
+import { Card, CardContent } from "~/registry/miami/ui/card"
 import {
    Carousel,
    CarouselContent,
    CarouselItem,
    CarouselNext,
    CarouselPrevious,
-} from "~/registry/default/ui/carousel"
+} from "~/registry/miami/ui/carousel"
 
 export function CarouselDemo() {
    return (

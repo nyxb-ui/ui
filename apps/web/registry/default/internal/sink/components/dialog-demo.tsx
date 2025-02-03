@@ -1,4 +1,4 @@
-import { Button } from "~/registry/default/ui/button"
+import { Button } from "~/registry/miami/ui/button"
 import {
    Dialog,
    DialogContent,
@@ -7,9 +7,9 @@ import {
    DialogHeader,
    DialogTitle,
    DialogTrigger,
-} from "~/registry/default/ui/dialog"
-import { Input } from "~/registry/default/ui/input"
-import { Label } from "~/registry/default/ui/label"
+} from "~/registry/miami/ui/dialog"
+import { Input } from "~/registry/miami/ui/input"
+import { Label } from "~/registry/miami/ui/label"
 
 export function DialogDemo() {
    return (

@@ -1,4 +1,4 @@
-import { Button } from "~/registry/default/ui/button"
+import { Button } from "~/registry/miami/ui/button"
 import {
    DropdownMenu,
    DropdownMenuContent,
@@ -12,7 +12,7 @@ import {
    DropdownMenuSubContent,
    DropdownMenuSubTrigger,
    DropdownMenuTrigger,
-} from "~/registry/default/ui/dropdown-menu"
+} from "~/registry/miami/ui/dropdown-menu"
 
 export function DropdownMenuDemo() {
    return (

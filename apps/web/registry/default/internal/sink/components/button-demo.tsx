@@ -1,4 +1,4 @@
-import { Button } from "~/registry/default/ui/button"
+import { Button } from "~/registry/miami/ui/button"
 
 export function ButtonDemo() {
    return <Button>Button</Button>

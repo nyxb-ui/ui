@@ -1,0 +1,14 @@
+{
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "slider-tick-marks-full",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/slider-tick-marks-full.tsx",
+      "content": "import { cn } from \"@/lib/utils\"\nimport { Slider } from \"@/components/ui/slider\"\n\ntype SliderProps = React.ComponentProps<typeof Slider>\n\nexport default function SliderTickMarksFull({\n   className,\n   ...props\n}: SliderProps) {\n   return (\n      <Slider\n         defaultValue={[2]}\n         max={5}\n         step={1}\n         className={cn(\"w-3/5\", className)}\n         showSteps=\"full\"\n         {...props}\n      />\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

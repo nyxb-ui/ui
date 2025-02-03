@@ -1,0 +1,17 @@
+{
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "select-form",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "registryDependencies": [
+    "select"
+  ],
+  "files": [
+    {
+      "path": "examples/select-form.tsx",
+      "content": "\"use client\"\n\nimport { zodResolver } from \"@hookform/resolvers/zod\"\nimport Link from \"next/link\"\nimport { useForm } from \"react-hook-form\"\nimport { z } from \"zod\"\n\nimport { Button } from \"@/components/ui/button\"\nimport {\n   Form,\n   FormControl,\n   FormDescription,\n   FormField,\n   FormItem,\n   FormLabel,\n   FormMessage,\n} from \"@/components/ui/form\"\nimport {\n   Select,\n   SelectContent,\n   SelectItem,\n   SelectTrigger,\n   SelectValue,\n} from \"@/components/ui/select\"\nimport { toast } from \"@/components/ui/use-toast\"\n\nconst FormSchema = z.object({\n   email: z\n      .string({\n         required_error: \"Please select an email to display.\",\n      })\n      .email(),\n})\n\nexport default function SelectForm() {\n   const form = useForm<z.infer<typeof FormSchema>>({\n      resolver: zodResolver(FormSchema),\n   })\n\n   function onSubmit(data: z.infer<typeof FormSchema>) {\n      toast({\n         title: \"You submitted the following values:\",\n         description: (\n            <pre className=\"mt-2 w-[340px] rounded-md bg-slate-950 p-4\">\n               <code className=\"text-white\">\n                  {JSON.stringify(data, null, 2)}\n               </code>\n            </pre>\n         ),\n      })\n   }\n\n   return (\n      <Form {...form}>\n         <form\n            onSubmit={form.handleSubmit(onSubmit)}\n            className=\"w-2/3 space-y-6\"\n         >\n            <FormField\n               control={form.control}\n               name=\"email\"\n               render={({ field }) => (\n                  <FormItem>\n                     <FormLabel>Email</FormLabel>\n                     <Select\n                        onValueChange={field.onChange}\n                        defaultValue={field.value}\n                     >\n                        <FormControl>\n                           <SelectTrigger>\n                              <SelectValue placeholder=\"Select a verified email to display\" />\n                           </SelectTrigger>\n                        </FormControl>\n                        <SelectContent>\n                           <SelectItem value=\"m@example.com\">\n                              m@example.com\n                           </SelectItem>\n                           <SelectItem value=\"m@google.com\">\n                              m@google.com\n                           </SelectItem>\n                           <SelectItem value=\"m@support.com\">\n                              m@support.com\n                           </SelectItem>\n                        </SelectContent>\n                     </Select>\n                     <FormDescription>\n                        You can manage email addresses in your{\" \"}\n                        <Link href=\"/examples/forms\">email settings</Link>.\n                     </FormDescription>\n                     <FormMessage />\n                  </FormItem>\n               )}\n            />\n            <Button type=\"submit\">Submit</Button>\n         </form>\n      </Form>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

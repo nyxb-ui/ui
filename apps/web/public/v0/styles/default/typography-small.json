@@ -1,0 +1,14 @@
+{
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "typography-small",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/typography-small.tsx",
+      "content": "export default function TypographySmall() {\n   return (\n      <small className=\"text-sm font-medium leading-none\">Email address</small>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

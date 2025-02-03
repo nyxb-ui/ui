@@ -1,0 +1,14 @@
+{
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "hyper-text-demo",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/hyper-text-demo.tsx",
+      "content": "import HyperText from \"@/components/ui/hyper-text\"\n\nexport default function HyperTextDemo() {\n   return (\n      <HyperText\n         className=\"text-4xl font-bold text-black dark:text-white\"\n         text=\"Hyper Text\"\n      />\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

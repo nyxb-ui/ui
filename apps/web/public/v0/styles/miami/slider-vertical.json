@@ -1,0 +1,14 @@
+{
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "slider-vertical",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/slider-vertical.tsx",
+      "content": "import { Slider } from \"@/components/ui/slider\"\n\ntype SliderProps = React.ComponentProps<typeof Slider>\n\nexport default function SliderVertical({ className, ...props }: SliderProps) {\n   return (\n      <>\n         {/* Vertical slider needs its parent container to define the height */}\n         <div className=\"h-64\">\n            <Slider\n               defaultValue={[50]}\n               max={100}\n               step={1}\n               orientation=\"vertical\"\n               className={className}\n               {...props}\n            />\n         </div>\n      </>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

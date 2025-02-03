@@ -1,0 +1,14 @@
+{
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "flickering-grid-demo",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/flickering-grid-demo.tsx",
+      "content": "import FlickeringGrid from \"@/components/ui/flickering-grid\"\n\nexport default function FlickeringGridDemo() {\n   return (\n      <div className=\"bg-background relative h-[500px] w-full overflow-hidden rounded-lg border\">\n         <FlickeringGrid\n            className=\"absolute inset-0 z-0 size-full\"\n            squareSize={4}\n            gridGap={6}\n            color=\"#6B7280\"\n            maxOpacity={0.5}\n            flickerChance={0.1}\n            height={800}\n            width={800}\n         />\n      </div>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

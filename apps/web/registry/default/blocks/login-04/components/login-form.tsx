@@ -1,8 +1,8 @@
-import { ny } from "~/registry/default/lib/utils"
-import { Button } from "~/registry/default/ui/button"
-import { Card, CardContent } from "~/registry/default/ui/card"
-import { Input } from "~/registry/default/ui/input"
-import { Label } from "~/registry/default/ui/label"
+import { ny } from "~/registry/miami/lib/utils"
+import { Button } from "~/registry/miami/ui/button"
+import { Card, CardContent } from "~/registry/miami/ui/card"
+import { Input } from "~/registry/miami/ui/input"
+import { Label } from "~/registry/miami/ui/label"
 
 export function LoginForm({
    className,

@@ -14,10 +14,10 @@ import {
 } from "lucide-react"
 import type * as React from "react"
 
-import { NavMain } from "~/registry/default/blocks/sidebar-08/components/nav-main"
-import { NavProjects } from "~/registry/default/blocks/sidebar-08/components/nav-projects"
-import { NavSecondary } from "~/registry/default/blocks/sidebar-08/components/nav-secondary"
-import { NavUser } from "~/registry/default/blocks/sidebar-08/components/nav-user"
+import { NavMain } from "~/registry/miami/blocks/sidebar-08/components/nav-main"
+import { NavProjects } from "~/registry/miami/blocks/sidebar-08/components/nav-projects"
+import { NavSecondary } from "~/registry/miami/blocks/sidebar-08/components/nav-secondary"
+import { NavUser } from "~/registry/miami/blocks/sidebar-08/components/nav-user"
 import {
    Sidebar,
    SidebarContent,
@@ -26,7 +26,7 @@ import {
    SidebarMenu,
    SidebarMenuButton,
    SidebarMenuItem,
-} from "~/registry/default/ui/sidebar"
+} from "~/registry/miami/ui/sidebar"
 
 const data = {
    user: {

@@ -1,4 +1,4 @@
-import { AppSidebar } from "~/registry/default/blocks/sidebar-01/components/app-sidebar"
+import { AppSidebar } from "~/registry/miami/blocks/sidebar-01/components/app-sidebar"
 import {
    Breadcrumb,
    BreadcrumbItem,
@@ -6,13 +6,13 @@ import {
    BreadcrumbList,
    BreadcrumbPage,
    BreadcrumbSeparator,
-} from "~/registry/default/ui/breadcrumb"
-import { Separator } from "~/registry/default/ui/separator"
+} from "~/registry/miami/ui/breadcrumb"
+import { Separator } from "~/registry/miami/ui/separator"
 import {
    SidebarInset,
    SidebarProvider,
    SidebarTrigger,
-} from "~/registry/default/ui/sidebar"
+} from "~/registry/miami/ui/sidebar"
 
 export default function Page() {
    return (

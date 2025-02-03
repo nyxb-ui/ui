@@ -19,12 +19,12 @@ import {
 } from "lucide-react"
 import * as React from "react"
 
-import { Button } from "~/registry/default/ui/button"
+import { Button } from "~/registry/miami/ui/button"
 import {
    Popover,
    PopoverContent,
    PopoverTrigger,
-} from "~/registry/default/ui/popover"
+} from "~/registry/miami/ui/popover"
 import {
    Sidebar,
    SidebarContent,
@@ -33,7 +33,7 @@ import {
    SidebarMenu,
    SidebarMenuButton,
    SidebarMenuItem,
-} from "~/registry/default/ui/sidebar"
+} from "~/registry/miami/ui/sidebar"
 
 const data = [
    [

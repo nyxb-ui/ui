@@ -12,7 +12,7 @@ import {
    MenubarSubContent,
    MenubarSubTrigger,
    MenubarTrigger,
-} from "~/registry/default/ui/menubar"
+} from "~/registry/miami/ui/menubar"
 
 export function MenubarDemo() {
    return (

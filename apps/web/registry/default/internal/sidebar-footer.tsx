@@ -7,7 +7,7 @@ import {
    DropdownMenuContent,
    DropdownMenuItem,
    DropdownMenuTrigger,
-} from "~/registry/default/ui/dropdown-menu"
+} from "~/registry/miami/ui/dropdown-menu"
 import {
    Sidebar,
    SidebarContent,
@@ -19,7 +19,7 @@ import {
    SidebarMenuItem,
    SidebarProvider,
    SidebarTrigger,
-} from "~/registry/default/ui/sidebar"
+} from "~/registry/miami/ui/sidebar"
 
 export default function AppSidebar() {
    return (

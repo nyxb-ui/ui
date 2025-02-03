@@ -1,5 +1,5 @@
-import { Label } from "~/registry/default/ui/label"
-import { Switch } from "~/registry/default/ui/switch"
+import { Label } from "~/registry/miami/ui/label"
+import { Switch } from "~/registry/miami/ui/switch"
 
 export function SwitchDemo() {
    return (

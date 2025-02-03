@@ -23,15 +23,15 @@ import {
    BreadcrumbList,
    BreadcrumbPage,
    BreadcrumbSeparator,
-} from "~/registry/default/ui/breadcrumb"
-import { Button } from "~/registry/default/ui/button"
+} from "~/registry/miami/ui/breadcrumb"
+import { Button } from "~/registry/miami/ui/button"
 import {
    Dialog,
    DialogContent,
    DialogDescription,
    DialogTitle,
    DialogTrigger,
-} from "~/registry/default/ui/dialog"
+} from "~/registry/miami/ui/dialog"
 import {
    Sidebar,
    SidebarContent,
@@ -41,7 +41,7 @@ import {
    SidebarMenuButton,
    SidebarMenuItem,
    SidebarProvider,
-} from "~/registry/default/ui/sidebar"
+} from "~/registry/miami/ui/sidebar"
 
 const data = {
    nav: [
