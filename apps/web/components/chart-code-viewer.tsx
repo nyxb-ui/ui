@@ -2,6 +2,7 @@ import * as React from "react"
 
 import { ChartCopyButton } from "~/components/chart-copy-button"
 import type { Chart } from "~/components/chart-display"
+import { V0Button } from "~/components/v0-button"
 import { useMediaQuery } from "~/hooks/use-media-query"
 import { useThemesConfig } from "~/hooks/use-themes-config"
 import { ny } from "~/lib/utils"
@@ -90,6 +91,11 @@ ${Object.entries(themesConfig?.activeTheme.cssVars.dark || {})
                         event="copy_chart_code"
                         name={chart.name}
                         code={chart.files?.[0]?.content ?? ""}
+                     />
+                     <V0Button
+                        id={`v0-button-${chart.name}`}
+                        name={chart.name}
+                        className="h-7"
                      />
                   </div>
                )}

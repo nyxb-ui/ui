@@ -5,9 +5,9 @@ import { ChevronDown } from "lucide-react"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
-import { ny } from "@/lib/utils"
-import { toast } from "@/registry/new-york/hooks/use-toast"
-import { Button, buttonVariants } from "@/registry/new-york/ui/button"
+import { ny } from "~/lib/utils"
+import { toast } from "~/registry/miami/hooks/use-toast"
+import { Button, buttonVariants } from "~/registry/miami/ui/button"
 import {
    Form,
    FormControl,
@@ -16,8 +16,8 @@ import {
    FormItem,
    FormLabel,
    FormMessage,
-} from "@/registry/new-york/ui/form"
-import { RadioGroup, RadioGroupItem } from "@/registry/new-york/ui/radio-group"
+} from "~/registry/miami/ui/form"
+import { RadioGroup, RadioGroupItem } from "~/registry/miami/ui/radio-group"
 
 const appearanceFormSchema = z.object({
    theme: z.enum(["light", "dark"], {

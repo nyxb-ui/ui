@@ -113,6 +113,12 @@ export const docsConfig: DocsConfig = {
                items: [],
             },
             {
+               title: "Blocks",
+               href: "/docs/blocks",
+               items: [],
+               label: [{ text: "New", variant: "new" }],
+            },
+            {
                title: "Changelog",
                href: "/docs/changelog",
                items: [],

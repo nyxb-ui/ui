@@ -19,6 +19,7 @@ import * as React from "react"
 import type { ImperativePanelHandle } from "react-resizable-panels"
 import type { z } from "zod"
 
+import { V0Button } from "~/components/v0-button"
 import { useCopyToClipboard } from "~/hooks/use-copy-to-clipboard"
 import { trackEvent } from "~/lib/events"
 import type {
@@ -236,6 +237,11 @@ function BlockViewerToolbar() {
             <Separator
                orientation="vertical"
                className="mx-1 hidden h-4 xl:flex"
+            />
+            <V0Button
+               className="hidden shadow-none sm:flex"
+               id={`v0-button-${item.name}`}
+               name={`${item.name}`}
             />
          </div>
       </div>
