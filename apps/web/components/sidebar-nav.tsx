@@ -3,9 +3,15 @@
 import { ExternalLinkIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import type { SidebarNavItem } from "~/types"
+import type { SidebarNavItem } from "~/types/nav"
 
+import { Minus, Plus } from "lucide-react"
 import { motion } from "motion/react"
+import {
+   Collapsible,
+   CollapsibleContent,
+   CollapsibleTrigger,
+} from "~/components/ui/collapsible"
 import { NavLabel as NavLabelComponent } from "~/components/ui/nav-label"
 import { ny } from "~/lib/utils"
 import type { NavLabel } from "~/types/nav"
@@ -18,48 +24,81 @@ export function DocsSidebarNav({ items }: DocsSidebarNavProps) {
    const pathname = usePathname()
 
    return items.length ? (
-      <div className="w-full pb-20">
-         {items.map((item, index) => (
-            <div key={index} className={"pb-4"}>
-               <h4 className="mb-1 rounded-md px-2 py-1 text-sm font-semibold flex items-center">
-                  <span className="flex items-center min-h-[24px]">
-                     {item.title}
-                  </span>
-                  {item.label && (
-                     <div className="flex items-center gap-1.5 ml-2 min-h-[24px] -mt-2.5">
-                        {Array.isArray(item.label) ? (
-                           item.label.map((label: NavLabel, i) => (
-                              <NavLabelComponent
-                                 key={i}
-                                 text={label.text}
-                                 variant={label.variant ?? "default"}
+      <div className="w-full">
+         {items.map((item, index) => {
+            const isCurrentCategory = item.items?.some(
+               (subItem) => subItem.href === pathname,
+            )
+
+            return (
+               <Collapsible
+                  key={index}
+                  defaultOpen
+                  className="group/collapsible"
+               >
+                  <div className="pb-3">
+                     <CollapsibleTrigger asChild>
+                        <h4
+                           className={ny(
+                              "rounded-md px-2 py-1.5 text-sm font-semibold flex items-center justify-between hover:cursor-pointer hover:bg-secondary/50 transition-colors border-l-[3px] border-transparent",
+                              isCurrentCategory && "border-emerald-500",
+                           )}
+                        >
+                           <span className="flex items-center min-h-[24px]">
+                              {item.title}
+                           </span>
+                           {item.label && (
+                              <div className="flex items-center gap-1.5 ml-[-56px] min-h-[24px]">
+                                 {Array.isArray(item.label) ? (
+                                    item.label.map((label: NavLabel, i) => (
+                                       <NavLabelComponent
+                                          key={i}
+                                          text={label.text}
+                                          variant={label.variant ?? "default"}
+                                       />
+                                    ))
+                                 ) : typeof item.label === "string" ? (
+                                    <NavLabelComponent
+                                       text={item.label}
+                                       variant="default"
+                                    />
+                                 ) : (
+                                    <NavLabelComponent
+                                       text={(item.label as NavLabel).text}
+                                       variant={
+                                          (item.label as NavLabel).variant ??
+                                          "default"
+                                       }
+                                    />
+                                 )}
+                              </div>
+                           )}
+                           <div className="flex h-6 w-6 items-center justify-center">
+                              <Plus className="h-4 w-4 group-data-[state=open]/collapsible:hidden" />
+                              <Minus className="h-4 w-4 group-data-[state=closed]/collapsible:hidden" />
+                           </div>
+                        </h4>
+                     </CollapsibleTrigger>
+                     <CollapsibleContent>
+                        {item?.items && (
+                           <div
+                              className={ny(
+                                 "mt-1 border-l border-border/40",
+                                 isCurrentCategory && "border-primary/20",
+                              )}
+                           >
+                              <DocsSidebarNavItems
+                                 items={item.items}
+                                 pathname={pathname}
+                                 groupId={`group-${index}`}
                               />
-                           ))
-                        ) : typeof item.label === "string" ? (
-                           <NavLabelComponent
-                              text={item.label}
-                              variant="default"
-                           />
-                        ) : (
-                           <NavLabelComponent
-                              text={(item.label as NavLabel).text}
-                              variant={
-                                 (item.label as NavLabel).variant ?? "default"
-                              }
-                           />
+                           </div>
                         )}
-                     </div>
-                  )}
-               </h4>
-               {item?.items && (
-                  <DocsSidebarNavItems
-                     items={item.items}
-                     pathname={pathname}
-                     groupId={`group-${index}`}
-                  />
-               )}
-            </div>
-         ))}
+                     </CollapsibleContent>
+                  </div>
+               </Collapsible>
+            )
+         })}
       </div>
    ) : null
 }
@@ -83,7 +122,8 @@ export function DocsSidebarNavItems({
                   key={index}
                   href={item.href}
                   className={ny(
-                     "group relative flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:text-foreground",
+                     "group relative flex w-full items-center rounded-md border border-transparent px-2 py-1.5 transition-colors",
+                     "hover:bg-secondary/50 hover:text-foreground",
                      item.disabled && "cursor-not-allowed opacity-60",
                      pathname === item.href
                         ? "font-medium text-foreground"
@@ -95,20 +135,18 @@ export function DocsSidebarNavItems({
                   {pathname === item.href && (
                      <motion.div
                         layoutId={groupId}
-                        className="absolute inset-0 rounded-r-md border-l-2 border-primary/70 bg-secondary"
+                        className="absolute inset-0 rounded-md border-l-2 border-primary bg-secondary/40"
                         initial={false}
                         transition={{
                            type: "spring",
                            stiffness: 350,
                            damping: 30,
-                           mass: 1,
-                           velocity: 200,
                         }}
                      />
                   )}
-                  <span className="relative z-10 shrink-0">{item.title}</span>
+                  <span className="relative z-10 truncate">{item.title}</span>
                   {item.label && (
-                     <div className="flex items-center gap-1.5 ml-2 -mt-1.5">
+                     <div className="relative z-10 flex items-center gap-1.5 ml-2">
                         {Array.isArray(item.label) ? (
                            item.label.map((label: NavLabel, i) => (
                               <NavLabelComponent
