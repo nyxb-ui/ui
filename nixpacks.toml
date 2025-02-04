@@ -19,9 +19,10 @@ nixPkgs = [
 
 [phases.install]
 cmds = [
-    "mkdir -p /root/.npm-global",
-    "npm config set prefix '/root/.npm-global'",
-    "npm install -g pnpm@9.4.0 && export PATH=/root/.npm-global/bin:$PATH && pnpm install"
+    "npm config set prefix ~/.npm-global",
+    "export PATH=~/.npm-global/bin:$PATH",
+    "npm i -g pnpm@9.4.0",
+    "pnpm install"
 ]
 
 [phases.build]
@@ -35,7 +36,7 @@ NIXPACKS_TURBO_APP_NAME = "web"
 NODE_ENV = "production"
 NODE_OPTIONS = "--max-old-space-size=8192"
 NEXT_PUBLIC_APP_URL = "https://your-production-url.com"
-PATH = "/root/.npm-global/bin:${PATH}"
+PATH = "~/.npm-global/bin:${PATH}"
 
 [start]
 cmd = "cd apps/web && pnpm start"
