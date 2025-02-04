@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "nyx-toc-demo",
-   "type": "registry:example",
-   "author": "nyxb (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/nyx-toc-demo.tsx",
-         "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { NyxTOCItems } from \"@/components/ui/nyx-toc\"\n\nconst demoItems = [\n   {\n      title: \"Introduction\",\n      url: \"#introduction\",\n      depth: 1,\n   },\n   {\n      title: \"Getting Started\",\n      url: \"#getting-started\",\n      depth: 2,\n   },\n   {\n      title: \"Installation\",\n      url: \"#installation\",\n      depth: 3,\n   },\n   {\n      title: \"Basic Usage\",\n      url: \"#basic-usage\",\n      depth: 3,\n   },\n   {\n      title: \"Advanced Features\",\n      url: \"#advanced-features\",\n      depth: 2,\n   },\n   {\n      title: \"API Reference\",\n      url: \"#api-reference\",\n      depth: 2,\n   },\n]\n\nexport default function NyxTOCDemo() {\n   return (\n      <div className=\"flex gap-10\">\n         <div className=\"flex-1\">\n            <NyxTOCItems items={demoItems} label=\"On This Page\" />\n         </div>\n      </div>\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "nyx-toc-demo",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/nyx-toc-demo.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { NyxTOCItems } from \"@/components/ui/nyx-toc\"\n\nconst demoItems = [\n   {\n      title: \"Introduction\",\n      url: \"#introduction\",\n      depth: 1,\n   },\n   {\n      title: \"Getting Started\",\n      url: \"#getting-started\",\n      depth: 2,\n   },\n   {\n      title: \"Installation\",\n      url: \"#installation\",\n      depth: 3,\n   },\n   {\n      title: \"Basic Usage\",\n      url: \"#basic-usage\",\n      depth: 3,\n   },\n   {\n      title: \"Advanced Features\",\n      url: \"#advanced-features\",\n      depth: 2,\n   },\n   {\n      title: \"API Reference\",\n      url: \"#api-reference\",\n      depth: 2,\n   },\n]\n\nexport default function NyxTOCDemo() {\n   return (\n      <div className=\"flex gap-10\">\n         <div className=\"flex-1\">\n            <NyxTOCItems items={demoItems} label=\"On This Page\" />\n         </div>\n      </div>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

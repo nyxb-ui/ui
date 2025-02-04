@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "skeleton",
-   "type": "registry:ui",
-   "author": "nyxb (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "ui/skeleton.tsx",
-         "content": "import { cn } from \"@/lib/utils\"\n\nfunction Skeleton({\n   className,\n   ...props\n}: React.HTMLAttributes<HTMLDivElement>) {\n   return (\n      <div\n         className={cn(\"bg-primary/10 animate-pulse rounded-md\", className)}\n         {...props}\n      />\n   )\n}\n\nexport { Skeleton }\n",
-         "type": "registry:ui",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "skeleton",
+  "type": "registry:ui",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "ui/skeleton.tsx",
+      "content": "import { cn } from \"@/lib/utils\"\n\nfunction Skeleton({\n   className,\n   ...props\n}: React.HTMLAttributes<HTMLDivElement>) {\n   return (\n      <div\n         className={cn(\"bg-primary/10 animate-pulse rounded-md\", className)}\n         {...props}\n      />\n   )\n}\n\nexport { Skeleton }\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
 }

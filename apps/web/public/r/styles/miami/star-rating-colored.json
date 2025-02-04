@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "star-rating-colored",
-   "type": "registry:example",
-   "author": "nyxbui (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/star-rating-colored.tsx",
-         "content": "import * as React from \"react\"\nimport { StarRating } from \"~/registry/miami/ui/star-rating\"\n\nexport default function StarRatingColored() {\n   const [value, setValue] = React.useState<number>(3)\n   return (\n      <StarRating\n         value={value}\n         setValue={setValue}\n         iconProps={{ className: \"fill-yellow-500 stroke-yellow-500\" }}\n      />\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "star-rating-colored",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/star-rating-colored.tsx",
+      "content": "import * as React from \"react\"\nimport { StarRating } from \"~/registry/miami/ui/star-rating\"\n\nexport default function StarRatingColored() {\n   const [value, setValue] = React.useState<number>(3)\n   return (\n      <StarRating\n         value={value}\n         setValue={setValue}\n         iconProps={{ className: \"fill-yellow-500 stroke-yellow-500\" }}\n      />\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

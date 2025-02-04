@@ -1,15 +1,17 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "scroll-progress",
-   "type": "registry:ui",
-   "author": "nyxb (https://nyxbui.design)",
-   "dependencies": ["framer-motion"],
-   "files": [
-      {
-         "path": "ui/scroll-progress.tsx",
-         "content": "import { motion, useScroll, useSpring } from \"framer-motion\"\nimport { cn } from \"@/lib/utils\"\n\ninterface ScrollProgressProps {\n   className?: string\n}\n\nexport default function ScrollProgress({ className }: ScrollProgressProps) {\n   const { scrollYProgress } = useScroll()\n\n   const scaleX = useSpring(scrollYProgress, {\n      stiffness: 200,\n      damping: 50,\n      restDelta: 0.001,\n   })\n\n   return (\n      <motion.div\n         className={cn(\n            \"fixed inset-x-0 top-0 z-[1000] h-1 origin-left bg-gradient-to-r from-[#A97CF8] via-[#F38CB8] to-[#FDCC92]\",\n            className,\n         )}\n         style={{\n            scaleX,\n         }}\n      />\n   )\n}\n",
-         "type": "registry:ui",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "scroll-progress",
+  "type": "registry:ui",
+  "author": "nyxb (https://nyxbui.design)",
+  "dependencies": [
+    "framer-motion"
+  ],
+  "files": [
+    {
+      "path": "ui/scroll-progress.tsx",
+      "content": "import { motion, useScroll, useSpring } from \"framer-motion\"\nimport { cn } from \"@/lib/utils\"\n\ninterface ScrollProgressProps {\n   className?: string\n}\n\nexport default function ScrollProgress({ className }: ScrollProgressProps) {\n   const { scrollYProgress } = useScroll()\n\n   const scaleX = useSpring(scrollYProgress, {\n      stiffness: 200,\n      damping: 50,\n      restDelta: 0.001,\n   })\n\n   return (\n      <motion.div\n         className={cn(\n            \"fixed inset-x-0 top-0 z-[1000] h-1 origin-left bg-gradient-to-r from-[#A97CF8] via-[#F38CB8] to-[#FDCC92]\",\n            className,\n         )}\n         style={{\n            scaleX,\n         }}\n      />\n   )\n}\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
 }

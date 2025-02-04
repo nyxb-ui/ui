@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "scratch-to-reveal-demo",
-   "type": "registry:example",
-   "author": "nyxb (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/scratch-to-reveal-demo.tsx",
-         "content": "import React from \"react\"\nimport ScratchToReveal from \"@/components/ui/scratch-to-reveal\"\n\nfunction ScratchToRevealDemo() {\n   const handleComplete = () => {\n      // Do Something\n   }\n\n   return (\n      <div>\n         <ScratchToReveal\n            width={250}\n            height={250}\n            minScratchPercentage={70}\n            className=\"flex items-center justify-center overflow-hidden rounded-2xl border-2 bg-gray-100\"\n            onComplete={handleComplete}\n         >\n            <p className=\"text-9xl\">😎</p>\n         </ScratchToReveal>\n      </div>\n   )\n}\n\nexport default ScratchToRevealDemo\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "scratch-to-reveal-demo",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/scratch-to-reveal-demo.tsx",
+      "content": "import React from \"react\"\nimport ScratchToReveal from \"@/components/ui/scratch-to-reveal\"\n\nfunction ScratchToRevealDemo() {\n   const handleComplete = () => {\n      // Do Something\n   }\n\n   return (\n      <div>\n         <ScratchToReveal\n            width={250}\n            height={250}\n            minScratchPercentage={70}\n            className=\"flex items-center justify-center overflow-hidden rounded-2xl border-2 bg-gray-100\"\n            onComplete={handleComplete}\n         >\n            <p className=\"text-9xl\">😎</p>\n         </ScratchToReveal>\n      </div>\n   )\n}\n\nexport default ScratchToRevealDemo\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

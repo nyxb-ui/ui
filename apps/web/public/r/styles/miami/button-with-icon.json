@@ -1,15 +1,17 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "button-with-icon",
-   "type": "registry:example",
-   "author": "nyxbui (https://nyxbui.design)",
-   "registryDependencies": ["button"],
-   "files": [
-      {
-         "path": "examples/button-with-icon.tsx",
-         "content": "import { EnvelopeOpenIcon } from \"@radix-ui/react-icons\"\n\nimport { Button } from \"~/registry/miami/ui/button\"\n\nexport default function ButtonWithIcon() {\n   return (\n      <Button>\n         <EnvelopeOpenIcon className=\"mr-2 size-4\" /> Login with Email\n      </Button>\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "button-with-icon",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "examples/button-with-icon.tsx",
+      "content": "import { EnvelopeOpenIcon } from \"@radix-ui/react-icons\"\n\nimport { Button } from \"~/registry/miami/ui/button\"\n\nexport default function ButtonWithIcon() {\n   return (\n      <Button>\n         <EnvelopeOpenIcon className=\"mr-2 size-4\" /> Login with Email\n      </Button>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

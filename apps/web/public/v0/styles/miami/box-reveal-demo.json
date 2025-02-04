@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "box-reveal-demo",
-   "type": "registry:example",
-   "author": "nyxb (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/box-reveal-demo.tsx",
-         "content": "import BoxReveal from \"@/components/ui/box-reveal\"\n\nimport { Button } from \"@/components/ui/button\"\n\nexport default async function BoxRevealDemo() {\n   return (\n      <div className=\"size-full max-w-lg items-center justify-center overflow-hidden pt-8\">\n         <BoxReveal boxColor=\"#5046e6\" duration={0.5}>\n            <p className=\"text-[3.5rem] font-semibold\">\n               Nyxb UI\n               <span className=\"text-[#5046e6]\">.</span>\n            </p>\n         </BoxReveal>\n\n         <BoxReveal boxColor=\"#5046e6\" duration={0.5}>\n            <h2 className=\"mt-[.5rem] text-[1rem]\">\n               UI library for{\" \"}\n               <span className=\"text-[#5046e6]\">Design Engineers</span>\n            </h2>\n         </BoxReveal>\n\n         <BoxReveal boxColor=\"#5046e6\" duration={0.5}>\n            <div className=\"mt-6\">\n               <p>\n                  -&gt; 20+ free and open-source animated components built with\n                  <span className=\"font-semibold text-[#5046e6]\"> React</span>,\n                  <span className=\"font-semibold text-[#5046e6]\">\n                     {\" \"}\n                     Typescript\n                  </span>\n                  ,\n                  <span className=\"font-semibold text-[#5046e6]\">\n                     {\" \"}\n                     Tailwind CSS\n                  </span>\n                  , and\n                  <span className=\"font-semibold text-[#5046e6]\">\n                     {\" \"}\n                     Framer Motion\n                  </span>\n                  . <br />\n                  -&gt; 100% open-source, and customizable. <br />\n               </p>\n            </div>\n         </BoxReveal>\n\n         <BoxReveal boxColor=\"#5046e6\" duration={0.5}>\n            <Button className=\"mt-[1.6rem] bg-[#5046e6]\">Explore</Button>\n         </BoxReveal>\n      </div>\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "box-reveal-demo",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/box-reveal-demo.tsx",
+      "content": "import BoxReveal from \"@/components/ui/box-reveal\"\n\nimport { Button } from \"@/components/ui/button\"\n\nexport default async function BoxRevealDemo() {\n   return (\n      <div className=\"size-full max-w-lg items-center justify-center overflow-hidden pt-8\">\n         <BoxReveal boxColor=\"#5046e6\" duration={0.5}>\n            <p className=\"text-[3.5rem] font-semibold\">\n               Nyxb UI\n               <span className=\"text-[#5046e6]\">.</span>\n            </p>\n         </BoxReveal>\n\n         <BoxReveal boxColor=\"#5046e6\" duration={0.5}>\n            <h2 className=\"mt-[.5rem] text-[1rem]\">\n               UI library for{\" \"}\n               <span className=\"text-[#5046e6]\">Design Engineers</span>\n            </h2>\n         </BoxReveal>\n\n         <BoxReveal boxColor=\"#5046e6\" duration={0.5}>\n            <div className=\"mt-6\">\n               <p>\n                  -&gt; 20+ free and open-source animated components built with\n                  <span className=\"font-semibold text-[#5046e6]\"> React</span>,\n                  <span className=\"font-semibold text-[#5046e6]\">\n                     {\" \"}\n                     Typescript\n                  </span>\n                  ,\n                  <span className=\"font-semibold text-[#5046e6]\">\n                     {\" \"}\n                     Tailwind CSS\n                  </span>\n                  , and\n                  <span className=\"font-semibold text-[#5046e6]\">\n                     {\" \"}\n                     Framer Motion\n                  </span>\n                  . <br />\n                  -&gt; 100% open-source, and customizable. <br />\n               </p>\n            </div>\n         </BoxReveal>\n\n         <BoxReveal boxColor=\"#5046e6\" duration={0.5}>\n            <Button className=\"mt-[1.6rem] bg-[#5046e6]\">Explore</Button>\n         </BoxReveal>\n      </div>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

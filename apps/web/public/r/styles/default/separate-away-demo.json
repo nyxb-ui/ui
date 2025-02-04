@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "separate-away-demo",
-   "type": "registry:example",
-   "author": "nyxbui (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/separate-away-demo.tsx",
-         "content": "import { SeparateAway } from \"~/registry/default/ui/separate-away\"\n\nexport default async function SeparateAwayDemo() {\n   return (\n      <SeparateAway\n         upper_text=\"Separate\"\n         lower_text=\"Away\"\n         duration={1.5}\n         hidden_opacity={0}\n         visible_opacity={1}\n         className=\"font-display text-center text-4xl font-bold tracking-[-0.02em] text-black md:text-7xl md:leading-[5rem] dark:text-white\"\n      />\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "separate-away-demo",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/separate-away-demo.tsx",
+      "content": "import { SeparateAway } from \"~/registry/default/ui/separate-away\"\n\nexport default async function SeparateAwayDemo() {\n   return (\n      <SeparateAway\n         upper_text=\"Separate\"\n         lower_text=\"Away\"\n         duration={1.5}\n         hidden_opacity={0}\n         visible_opacity={1}\n         className=\"font-display text-center text-4xl font-bold tracking-[-0.02em] text-black md:text-7xl md:leading-[5rem] dark:text-white\"\n      />\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

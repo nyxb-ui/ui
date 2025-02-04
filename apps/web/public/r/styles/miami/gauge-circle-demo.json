@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "gauge-circle-demo",
-   "type": "registry:example",
-   "author": "nyxbui (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/gauge-circle-demo.tsx",
-         "content": "\"use client\"\n\nimport { useEffect, useState } from \"react\"\nimport GaugeCircle from \"~/registry/miami/ui/gauge-circle\"\n\nexport default function GaugeCircleDemo() {\n   const [value, setValue] = useState(0)\n\n   useEffect(() => {\n      const handleIncrement = (prev: number) => {\n         if (prev === 100) return 0\n\n         return prev + 10\n      }\n      setValue(handleIncrement)\n      const interval = setInterval(() => setValue(handleIncrement), 2000)\n      return () => clearInterval(interval)\n   }, [])\n\n   return (\n      <GaugeCircle\n         max={100}\n         min={0}\n         value={value}\n         gaugePrimaryColor=\"rgb(79 70 229)\"\n         gaugeSecondaryColor=\"rgba(0, 0, 0, 0.1)\"\n      />\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "gauge-circle-demo",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/gauge-circle-demo.tsx",
+      "content": "\"use client\"\n\nimport { useEffect, useState } from \"react\"\nimport GaugeCircle from \"~/registry/miami/ui/gauge-circle\"\n\nexport default function GaugeCircleDemo() {\n   const [value, setValue] = useState(0)\n\n   useEffect(() => {\n      const handleIncrement = (prev: number) => {\n         if (prev === 100) return 0\n\n         return prev + 10\n      }\n      setValue(handleIncrement)\n      const interval = setInterval(() => setValue(handleIncrement), 2000)\n      return () => clearInterval(interval)\n   }, [])\n\n   return (\n      <GaugeCircle\n         max={100}\n         min={0}\n         value={value}\n         gaugePrimaryColor=\"rgb(79 70 229)\"\n         gaugeSecondaryColor=\"rgba(0, 0, 0, 0.1)\"\n      />\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

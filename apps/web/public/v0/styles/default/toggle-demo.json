@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "toggle-demo",
-   "type": "registry:example",
-   "author": "nyxb (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/toggle-demo.tsx",
-         "content": "import { Bold } from \"lucide-react\"\n\nimport { Toggle } from \"@/components/ui/toggle\"\n\nexport default function ToggleDemo() {\n   return (\n      <Toggle aria-label=\"Toggle bold\">\n         <Bold className=\"size-4\" />\n      </Toggle>\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "toggle-demo",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/toggle-demo.tsx",
+      "content": "import { Bold } from \"lucide-react\"\n\nimport { Toggle } from \"@/components/ui/toggle\"\n\nexport default function ToggleDemo() {\n   return (\n      <Toggle aria-label=\"Toggle bold\">\n         <Bold className=\"size-4\" />\n      </Toggle>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

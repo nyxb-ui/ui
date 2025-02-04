@@ -1,15 +1,17 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "multi-select-limit-display-length",
-   "type": "registry:example",
-   "author": "nyxbui (https://nyxbui.design)",
-   "registryDependencies": ["multi-select"],
-   "files": [
-      {
-         "path": "examples/multi-select-limit-display-length.tsx",
-         "content": "\"use client\"\n\nimport {\n   MultiSelect,\n   MultiSelectContent,\n   MultiSelectGroup,\n   MultiSelectItem,\n   MultiSelectList,\n   MultiSelectTrigger,\n   MultiSelectValue,\n} from \"~/registry/miami/ui/multi-select\"\n\nexport default function MultiSelectLimitDisplayLengthDemo() {\n   return (\n      <MultiSelect defaultValue={[\"long\", \"react\", \"angular\", \"vue\", \"remix\"]}>\n         <MultiSelectTrigger className=\"w-96\">\n            <MultiSelectValue\n               placeholder=\"Select stack\"\n               maxDisplay={3}\n               maxItemLength={5}\n            />\n         </MultiSelectTrigger>\n         <MultiSelectContent>\n            <MultiSelectList>\n               <MultiSelectGroup heading=\"React\">\n                  <MultiSelectItem value=\"react\">React</MultiSelectItem>\n                  <MultiSelectItem value=\"next\">Next.js</MultiSelectItem>\n                  <MultiSelectItem value=\"remix\">Remix</MultiSelectItem>\n               </MultiSelectGroup>\n               <MultiSelectGroup heading=\"Vue\">\n                  <MultiSelectItem value=\"vue\">Vue</MultiSelectItem>\n                  <MultiSelectItem value=\"nuxt\">Nuxt</MultiSelectItem>\n               </MultiSelectGroup>\n               <MultiSelectGroup heading=\"Others\">\n                  <MultiSelectItem value=\"angular\">Angular</MultiSelectItem>\n                  <MultiSelectItem value=\"svelte\">Svelte</MultiSelectItem>\n                  <MultiSelectItem value=\"long\">\n                     VeryVeryLongItem\n                  </MultiSelectItem>\n               </MultiSelectGroup>\n            </MultiSelectList>\n         </MultiSelectContent>\n      </MultiSelect>\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "multi-select-limit-display-length",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "registryDependencies": [
+    "multi-select"
+  ],
+  "files": [
+    {
+      "path": "examples/multi-select-limit-display-length.tsx",
+      "content": "\"use client\"\n\nimport {\n   MultiSelect,\n   MultiSelectContent,\n   MultiSelectGroup,\n   MultiSelectItem,\n   MultiSelectList,\n   MultiSelectTrigger,\n   MultiSelectValue,\n} from \"~/registry/miami/ui/multi-select\"\n\nexport default function MultiSelectLimitDisplayLengthDemo() {\n   return (\n      <MultiSelect defaultValue={[\"long\", \"react\", \"angular\", \"vue\", \"remix\"]}>\n         <MultiSelectTrigger className=\"w-96\">\n            <MultiSelectValue\n               placeholder=\"Select stack\"\n               maxDisplay={3}\n               maxItemLength={5}\n            />\n         </MultiSelectTrigger>\n         <MultiSelectContent>\n            <MultiSelectList>\n               <MultiSelectGroup heading=\"React\">\n                  <MultiSelectItem value=\"react\">React</MultiSelectItem>\n                  <MultiSelectItem value=\"next\">Next.js</MultiSelectItem>\n                  <MultiSelectItem value=\"remix\">Remix</MultiSelectItem>\n               </MultiSelectGroup>\n               <MultiSelectGroup heading=\"Vue\">\n                  <MultiSelectItem value=\"vue\">Vue</MultiSelectItem>\n                  <MultiSelectItem value=\"nuxt\">Nuxt</MultiSelectItem>\n               </MultiSelectGroup>\n               <MultiSelectGroup heading=\"Others\">\n                  <MultiSelectItem value=\"angular\">Angular</MultiSelectItem>\n                  <MultiSelectItem value=\"svelte\">Svelte</MultiSelectItem>\n                  <MultiSelectItem value=\"long\">\n                     VeryVeryLongItem\n                  </MultiSelectItem>\n               </MultiSelectGroup>\n            </MultiSelectList>\n         </MultiSelectContent>\n      </MultiSelect>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

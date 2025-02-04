@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "slider-inverted",
-   "type": "registry:example",
-   "author": "nyxb (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/slider-inverted.tsx",
-         "content": "import { cn } from \"@/lib/utils\"\nimport { Slider } from \"@/components/ui/slider\"\n\ntype SliderProps = React.ComponentProps<typeof Slider>\n\nexport default function SliderInverted({ className, ...props }: SliderProps) {\n   return (\n      <Slider\n         defaultValue={[50]}\n         max={100}\n         step={1}\n         className={cn(\"w-3/5\", className)}\n         inverted\n         {...props}\n      />\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "slider-inverted",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/slider-inverted.tsx",
+      "content": "import { cn } from \"@/lib/utils\"\nimport { Slider } from \"@/components/ui/slider\"\n\ntype SliderProps = React.ComponentProps<typeof Slider>\n\nexport default function SliderInverted({ className, ...props }: SliderProps) {\n   return (\n      <Slider\n         defaultValue={[50]}\n         max={100}\n         step={1}\n         className={cn(\"w-3/5\", className)}\n         inverted\n         {...props}\n      />\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

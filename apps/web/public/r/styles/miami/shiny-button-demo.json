@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "shiny-button-demo",
-   "type": "registry:example",
-   "author": "nyxbui (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/shiny-button-demo.tsx",
-         "content": "import ShinyButton from \"~/registry/miami/ui/shiny-button\"\n\nexport default function ShinyButtonDemo() {\n   return <ShinyButton text=\"Shiny Button\" />\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "shiny-button-demo",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/shiny-button-demo.tsx",
+      "content": "import ShinyButton from \"~/registry/miami/ui/shiny-button\"\n\nexport default function ShinyButtonDemo() {\n   return <ShinyButton text=\"Shiny Button\" />\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "scroll-progress-demo",
-   "type": "registry:example",
-   "author": "nyxb (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/scroll-progress-demo.tsx",
-         "content": "import ScrollProgress from \"@/components/ui/scroll-progress\"\n\nconst dummyContent = Array.from({ length: 10 }, (_, i) => (\n   <p key={i}>\n      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam\n      lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra\n      nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam\n      eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue\n      enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu\n      vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur\n      adipiscing elit.\n   </p>\n))\n\nfunction ScrollProgressDemo() {\n   return (\n      <div>\n         <ScrollProgress className=\"top-[65px]\" />\n         <strong>\n            Note: The scroll progress is shown below the navbar of the page.\n         </strong>\n         {dummyContent}\n      </div>\n   )\n}\n\nexport default ScrollProgressDemo\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "scroll-progress-demo",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/scroll-progress-demo.tsx",
+      "content": "import ScrollProgress from \"@/components/ui/scroll-progress\"\n\nconst dummyContent = Array.from({ length: 10 }, (_, i) => (\n   <p key={i}>\n      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam\n      lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra\n      nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam\n      eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue\n      enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu\n      vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur\n      adipiscing elit.\n   </p>\n))\n\nfunction ScrollProgressDemo() {\n   return (\n      <div>\n         <ScrollProgress className=\"top-[65px]\" />\n         <strong>\n            Note: The scroll progress is shown below the navbar of the page.\n         </strong>\n         {dummyContent}\n      </div>\n   )\n}\n\nexport default ScrollProgressDemo\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

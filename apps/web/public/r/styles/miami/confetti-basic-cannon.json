@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "confetti-basic-cannon",
-   "type": "registry:example",
-   "author": "nyxbui (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/confetti-basic-cannon.tsx",
-         "content": "import { ConfettiButton } from \"~/registry/miami/ui/confetti\"\n\nexport default function ConfettiButtonDemo() {\n   return (\n      <div className=\"relative\">\n         <ConfettiButton>Confetti 🎉</ConfettiButton>\n      </div>\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "confetti-basic-cannon",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/confetti-basic-cannon.tsx",
+      "content": "import { ConfettiButton } from \"~/registry/miami/ui/confetti\"\n\nexport default function ConfettiButtonDemo() {\n   return (\n      <div className=\"relative\">\n         <ConfettiButton>Confetti 🎉</ConfettiButton>\n      </div>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

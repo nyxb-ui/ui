@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "particles-demo",
-   "type": "registry:example",
-   "author": "nyxbui (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/particles-demo.tsx",
-         "content": "\"use client\"\n\nimport { useTheme } from \"next-themes\"\nimport { useEffect, useState } from \"react\"\nimport Particles from \"~/registry/miami/ui/particles\"\n\nfunction ParticlesDemo() {\n   const { theme } = useTheme()\n   const [color, setColor] = useState(\"#ffffff\")\n\n   useEffect(() => {\n      setColor(theme === \"dark\" ? \"#ffffff\" : \"#000000\")\n   }, [theme])\n\n   return (\n      <div className=\"bg-background relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border md:shadow-xl\">\n         <span className=\"pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10\">\n            Particles\n         </span>\n         <Particles\n            className=\"absolute inset-0\"\n            quantity={100}\n            ease={80}\n            color={color}\n            refresh\n         />\n      </div>\n   )\n}\n\nexport default ParticlesDemo\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "particles-demo",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/particles-demo.tsx",
+      "content": "\"use client\"\n\nimport { useTheme } from \"next-themes\"\nimport { useEffect, useState } from \"react\"\nimport Particles from \"~/registry/miami/ui/particles\"\n\nfunction ParticlesDemo() {\n   const { theme } = useTheme()\n   const [color, setColor] = useState(\"#ffffff\")\n\n   useEffect(() => {\n      setColor(theme === \"dark\" ? \"#ffffff\" : \"#000000\")\n   }, [theme])\n\n   return (\n      <div className=\"bg-background relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border md:shadow-xl\">\n         <span className=\"pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10\">\n            Particles\n         </span>\n         <Particles\n            className=\"absolute inset-0\"\n            quantity={100}\n            ease={80}\n            color={color}\n            refresh\n         />\n      </div>\n   )\n}\n\nexport default ParticlesDemo\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

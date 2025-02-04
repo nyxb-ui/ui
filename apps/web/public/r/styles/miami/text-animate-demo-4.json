@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "text-animate-demo-4",
-   "type": "registry:example",
-   "author": "nyxbui (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/text-animate-demo-4.tsx",
-         "content": "import { TextAnimate } from \"~/registry/miami/ui/text-animate\"\n\nexport default function TextAnimateDemo4() {\n   return (\n      <TextAnimate animation=\"scaleUp\" by=\"text\">\n         Scale up by text\n      </TextAnimate>\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "text-animate-demo-4",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/text-animate-demo-4.tsx",
+      "content": "import { TextAnimate } from \"~/registry/miami/ui/text-animate\"\n\nexport default function TextAnimateDemo4() {\n   return (\n      <TextAnimate animation=\"scaleUp\" by=\"text\">\n         Scale up by text\n      </TextAnimate>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

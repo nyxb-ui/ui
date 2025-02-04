@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "textarea-with-label",
-   "type": "registry:example",
-   "author": "nyxb (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/textarea-with-label.tsx",
-         "content": "import { Label } from \"@/components/ui/label\"\nimport { Textarea } from \"@/components/ui/textarea\"\n\nexport default function TextareaWithLabel() {\n   return (\n      <div className=\"grid w-full gap-1.5\">\n         <Label htmlFor=\"message\">Your message</Label>\n         <Textarea placeholder=\"Type your message here.\" id=\"message\" />\n      </div>\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "textarea-with-label",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/textarea-with-label.tsx",
+      "content": "import { Label } from \"@/components/ui/label\"\nimport { Textarea } from \"@/components/ui/textarea\"\n\nexport default function TextareaWithLabel() {\n   return (\n      <div className=\"grid w-full gap-1.5\">\n         <Label htmlFor=\"message\">Your message</Label>\n         <Textarea placeholder=\"Type your message here.\" id=\"message\" />\n      </div>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

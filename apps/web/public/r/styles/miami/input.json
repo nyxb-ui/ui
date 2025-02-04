@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "input",
-   "type": "registry:ui",
-   "author": "nyxbui (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "ui/input.tsx",
-         "content": "import * as React from \"react\"\n\nimport { ny } from \"~/lib/utils\"\n\nexport interface InputProps\n   extends React.InputHTMLAttributes<HTMLInputElement> {}\n\nconst Input = React.forwardRef<HTMLInputElement, InputProps>(\n   ({ className, type, ...props }, ref) => {\n      return (\n         <input\n            type={type}\n            className={ny(\n               \"border-input placeholder:text-muted-foreground focus-visible:ring-ring flex h-9 w-full rounded-md border bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50\",\n               className,\n            )}\n            ref={ref}\n            {...props}\n         />\n      )\n   },\n)\nInput.displayName = \"Input\"\n\nexport { Input }\n",
-         "type": "registry:ui",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "input",
+  "type": "registry:ui",
+  "author": "nyxbui (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "ui/input.tsx",
+      "content": "import * as React from \"react\"\n\nimport { ny } from \"~/lib/utils\"\n\nexport interface InputProps\n   extends React.InputHTMLAttributes<HTMLInputElement> {}\n\nconst Input = React.forwardRef<HTMLInputElement, InputProps>(\n   ({ className, type, ...props }, ref) => {\n      return (\n         <input\n            type={type}\n            className={ny(\n               \"border-input placeholder:text-muted-foreground focus-visible:ring-ring flex h-9 w-full rounded-md border bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50\",\n               className,\n            )}\n            ref={ref}\n            {...props}\n         />\n      )\n   },\n)\nInput.displayName = \"Input\"\n\nexport { Input }\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
 }

@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "tooltip-secondary",
-   "type": "registry:example",
-   "author": "nyxbui (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/tooltip-secondary.tsx",
-         "content": "import { Button } from \"~/registry/default/ui/button\"\nimport {\n   Tooltip,\n   TooltipContent,\n   TooltipProvider,\n   TooltipTrigger,\n} from \"~/registry/default/ui/tooltip\"\n\nexport default function TooltipSecondary() {\n   return (\n      <TooltipProvider>\n         <Tooltip>\n            <TooltipTrigger asChild>\n               <Button variant=\"outline\">Hover</Button>\n            </TooltipTrigger>\n            <TooltipContent variant=\"secondary\">\n               <p>Add to library</p>\n            </TooltipContent>\n         </Tooltip>\n      </TooltipProvider>\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "tooltip-secondary",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/tooltip-secondary.tsx",
+      "content": "import { Button } from \"~/registry/default/ui/button\"\nimport {\n   Tooltip,\n   TooltipContent,\n   TooltipProvider,\n   TooltipTrigger,\n} from \"~/registry/default/ui/tooltip\"\n\nexport default function TooltipSecondary() {\n   return (\n      <TooltipProvider>\n         <Tooltip>\n            <TooltipTrigger asChild>\n               <Button variant=\"outline\">Hover</Button>\n            </TooltipTrigger>\n            <TooltipContent variant=\"secondary\">\n               <p>Add to library</p>\n            </TooltipContent>\n         </Tooltip>\n      </TooltipProvider>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

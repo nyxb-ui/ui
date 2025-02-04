@@ -1,15 +1,17 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "grid-layout-variants-demo",
-   "type": "registry:example",
-   "author": "nyxbui (https://nyxbui.design)",
-   "registryDependencies": ["grid-layout"],
-   "files": [
-      {
-         "path": "examples/grid-layout-variants-demo.tsx",
-         "content": "\"use client\"\n\nimport GridLayout from \"~/registry/default/ui/grid-layout\"\n\nexport default function GridLayoutVariantsDemo() {\n   return (\n      <div className=\"space-y-8\">\n         <GridLayout\n            lineVariant=\"center\"\n            className=\"min-h-[150px]\"\n            crosshairs={{\n               topLeft: true,\n               bottomRight: true,\n            }}\n         >\n            <div className=\"flex h-full items-center justify-center\">\n               <div className=\"text-center\">\n                  <h3 className=\"text-xl font-medium\">Center Line</h3>\n                  <p className=\"text-muted-foreground mt-1\">\n                     Minimal and focused\n                  </p>\n               </div>\n            </div>\n         </GridLayout>\n\n         <GridLayout\n            lineVariant=\"vertical\"\n            className=\"min-h-[150px]\"\n            crosshairs={{\n               topLeft: true,\n               bottomRight: true,\n            }}\n         >\n            <div className=\"flex h-full items-center justify-center\">\n               <div className=\"text-center\">\n                  <h3 className=\"text-xl font-medium\">Vertical Lines</h3>\n                  <p className=\"text-muted-foreground mt-1\">\n                     Column-focused layout\n                  </p>\n               </div>\n            </div>\n         </GridLayout>\n\n         <GridLayout\n            lineVariant=\"horizontal\"\n            className=\"min-h-[150px]\"\n            crosshairs={{\n               topLeft: true,\n               bottomRight: true,\n            }}\n         >\n            <div className=\"flex h-full items-center justify-center\">\n               <div className=\"text-center\">\n                  <h3 className=\"text-xl font-medium\">Horizontal Lines</h3>\n                  <p className=\"text-muted-foreground mt-1\">\n                     Row-based organization\n                  </p>\n               </div>\n            </div>\n         </GridLayout>\n      </div>\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "grid-layout-variants-demo",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "registryDependencies": [
+    "grid-layout"
+  ],
+  "files": [
+    {
+      "path": "examples/grid-layout-variants-demo.tsx",
+      "content": "\"use client\"\n\nimport GridLayout from \"~/registry/default/ui/grid-layout\"\n\nexport default function GridLayoutVariantsDemo() {\n   return (\n      <div className=\"space-y-8\">\n         <GridLayout\n            lineVariant=\"center\"\n            className=\"min-h-[150px]\"\n            crosshairs={{\n               topLeft: true,\n               bottomRight: true,\n            }}\n         >\n            <div className=\"flex h-full items-center justify-center\">\n               <div className=\"text-center\">\n                  <h3 className=\"text-xl font-medium\">Center Line</h3>\n                  <p className=\"text-muted-foreground mt-1\">\n                     Minimal and focused\n                  </p>\n               </div>\n            </div>\n         </GridLayout>\n\n         <GridLayout\n            lineVariant=\"vertical\"\n            className=\"min-h-[150px]\"\n            crosshairs={{\n               topLeft: true,\n               bottomRight: true,\n            }}\n         >\n            <div className=\"flex h-full items-center justify-center\">\n               <div className=\"text-center\">\n                  <h3 className=\"text-xl font-medium\">Vertical Lines</h3>\n                  <p className=\"text-muted-foreground mt-1\">\n                     Column-focused layout\n                  </p>\n               </div>\n            </div>\n         </GridLayout>\n\n         <GridLayout\n            lineVariant=\"horizontal\"\n            className=\"min-h-[150px]\"\n            crosshairs={{\n               topLeft: true,\n               bottomRight: true,\n            }}\n         >\n            <div className=\"flex h-full items-center justify-center\">\n               <div className=\"text-center\">\n                  <h3 className=\"text-xl font-medium\">Horizontal Lines</h3>\n                  <p className=\"text-muted-foreground mt-1\">\n                     Row-based organization\n                  </p>\n               </div>\n            </div>\n         </GridLayout>\n      </div>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "scroll-based-velocity-demo",
-   "type": "registry:example",
-   "author": "nyxbui (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/scroll-based-velocity-demo.tsx",
-         "content": "import { VelocityScroll } from \"~/registry/miami/ui/scroll-based-velocity\"\n\nexport default function ScrollBasedVelocityDemo() {\n   return (\n      <VelocityScroll\n         text=\"Velocity Scroll\"\n         default_velocity={5}\n         className=\"font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm md:text-7xl md:leading-[5rem] dark:text-white\"\n      />\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "scroll-based-velocity-demo",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/scroll-based-velocity-demo.tsx",
+      "content": "import { VelocityScroll } from \"~/registry/miami/ui/scroll-based-velocity\"\n\nexport default function ScrollBasedVelocityDemo() {\n   return (\n      <VelocityScroll\n         text=\"Velocity Scroll\"\n         default_velocity={5}\n         className=\"font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm md:text-7xl md:leading-[5rem] dark:text-white\"\n      />\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

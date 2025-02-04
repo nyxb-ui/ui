@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "nyx-toc-popover-demo",
-   "type": "registry:example",
-   "author": "nyxbui (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/nyx-toc-popover-demo.tsx",
-         "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n   NyxTOCItems,\n   TocPopover,\n   TocPopoverContent,\n   TocPopoverTrigger,\n} from \"~/registry/default/ui/nyx-toc\"\n\nexport default function NyxTOCPopoverDemo() {\n   // Example TOC items\n   const items = [\n      { title: \"Introduction\", url: \"#introduction\", depth: 1 },\n      { title: \"Getting Started\", url: \"#getting-started\", depth: 2 },\n      { title: \"Installation\", url: \"#installation\", depth: 2 },\n      { title: \"Basic Usage\", url: \"#basic-usage\", depth: 3 },\n      { title: \"Advanced Features\", url: \"#advanced-features\", depth: 2 },\n      { title: \"Configuration\", url: \"#configuration\", depth: 3 },\n      { title: \"Customization\", url: \"#customization\", depth: 2 },\n   ]\n\n   return (\n      <div className=\"flex h-[300px] w-full items-start justify-center p-6\">\n         <TocPopover>\n            <TocPopoverTrigger\n               items={items}\n               className=\"hover:bg-accent rounded-md border\"\n            />\n            <TocPopoverContent>\n               <NyxTOCItems items={items} isMenu label=\"On This Page\" />\n            </TocPopoverContent>\n         </TocPopover>\n      </div>\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "nyx-toc-popover-demo",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/nyx-toc-popover-demo.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n   NyxTOCItems,\n   TocPopover,\n   TocPopoverContent,\n   TocPopoverTrigger,\n} from \"~/registry/default/ui/nyx-toc\"\n\nexport default function NyxTOCPopoverDemo() {\n   // Example TOC items\n   const items = [\n      { title: \"Introduction\", url: \"#introduction\", depth: 1 },\n      { title: \"Getting Started\", url: \"#getting-started\", depth: 2 },\n      { title: \"Installation\", url: \"#installation\", depth: 2 },\n      { title: \"Basic Usage\", url: \"#basic-usage\", depth: 3 },\n      { title: \"Advanced Features\", url: \"#advanced-features\", depth: 2 },\n      { title: \"Configuration\", url: \"#configuration\", depth: 3 },\n      { title: \"Customization\", url: \"#customization\", depth: 2 },\n   ]\n\n   return (\n      <div className=\"flex h-[300px] w-full items-start justify-center p-6\">\n         <TocPopover>\n            <TocPopoverTrigger\n               items={items}\n               className=\"hover:bg-accent rounded-md border\"\n            />\n            <TocPopoverContent>\n               <NyxTOCItems items={items} isMenu label=\"On This Page\" />\n            </TocPopoverContent>\n         </TocPopover>\n      </div>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

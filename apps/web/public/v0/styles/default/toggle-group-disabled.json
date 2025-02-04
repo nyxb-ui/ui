@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "toggle-group-disabled",
-   "type": "registry:example",
-   "author": "nyxb (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/toggle-group-disabled.tsx",
-         "content": "import { Bold, Italic, Underline } from \"lucide-react\"\n\nimport {\n   ToggleGroup,\n   ToggleGroupItem,\n} from \"@/components/ui/toggle-group\"\n\nexport default function ToggleGroupDemo() {\n   return (\n      <ToggleGroup disabled type=\"single\">\n         <ToggleGroupItem value=\"bold\" aria-label=\"Toggle bold\">\n            <Bold className=\"size-4\" />\n         </ToggleGroupItem>\n         <ToggleGroupItem value=\"italic\" aria-label=\"Toggle italic\">\n            <Italic className=\"size-4\" />\n         </ToggleGroupItem>\n         <ToggleGroupItem value=\"underline\" aria-label=\"Toggle underline\">\n            <Underline className=\"size-4\" />\n         </ToggleGroupItem>\n      </ToggleGroup>\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "toggle-group-disabled",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/toggle-group-disabled.tsx",
+      "content": "import { Bold, Italic, Underline } from \"lucide-react\"\n\nimport {\n   ToggleGroup,\n   ToggleGroupItem,\n} from \"@/components/ui/toggle-group\"\n\nexport default function ToggleGroupDemo() {\n   return (\n      <ToggleGroup disabled type=\"single\">\n         <ToggleGroupItem value=\"bold\" aria-label=\"Toggle bold\">\n            <Bold className=\"size-4\" />\n         </ToggleGroupItem>\n         <ToggleGroupItem value=\"italic\" aria-label=\"Toggle italic\">\n            <Italic className=\"size-4\" />\n         </ToggleGroupItem>\n         <ToggleGroupItem value=\"underline\" aria-label=\"Toggle underline\">\n            <Underline className=\"size-4\" />\n         </ToggleGroupItem>\n      </ToggleGroup>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

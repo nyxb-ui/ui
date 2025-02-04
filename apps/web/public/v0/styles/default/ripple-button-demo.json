@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "ripple-button-demo",
-   "type": "registry:example",
-   "author": "nyxb (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/ripple-button-demo.tsx",
-         "content": "import { RippleButton } from \"@/components/ui/ripple-button\"\n\nexport default function RippleButtonDemo() {\n   return <RippleButton rippleColor=\"#ADD8E6\">Click me</RippleButton>\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "ripple-button-demo",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/ripple-button-demo.tsx",
+      "content": "import { RippleButton } from \"@/components/ui/ripple-button\"\n\nexport default function RippleButtonDemo() {\n   return <RippleButton rippleColor=\"#ADD8E6\">Click me</RippleButton>\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

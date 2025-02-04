@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "word-pull-up-demo",
-   "type": "registry:example",
-   "author": "nyxbui (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/word-pull-up-demo.tsx",
-         "content": "import WordPullUp from \"~/registry/miami/ui/word-pull-up\"\n\nexport default async function WordPullUpDemo() {\n   return (\n      <WordPullUp\n         className=\"text-4xl font-bold tracking-[-0.02em] text-black md:text-7xl md:leading-[5rem] dark:text-white\"\n         words=\"Word Pull Up\"\n      />\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "word-pull-up-demo",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/word-pull-up-demo.tsx",
+      "content": "import WordPullUp from \"~/registry/miami/ui/word-pull-up\"\n\nexport default async function WordPullUpDemo() {\n   return (\n      <WordPullUp\n         className=\"text-4xl font-bold tracking-[-0.02em] text-black md:text-7xl md:leading-[5rem] dark:text-white\"\n         words=\"Word Pull Up\"\n      />\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

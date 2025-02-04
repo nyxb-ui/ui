@@ -1,15 +1,17 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "carousel-demo",
-   "type": "registry:example",
-   "author": "nyxbui (https://nyxbui.design)",
-   "registryDependencies": ["carousel"],
-   "files": [
-      {
-         "path": "examples/carousel-demo.tsx",
-         "content": "import * as React from \"react\"\n\nimport { Card, CardContent } from \"~/registry/miami/ui/card\"\nimport {\n   Carousel,\n   CarouselContent,\n   CarouselItem,\n   CarouselNext,\n   CarouselPrevious,\n} from \"~/registry/miami/ui/carousel\"\n\nexport default function CarouselDemo() {\n   return (\n      <Carousel className=\"w-full max-w-xs\">\n         <CarouselContent>\n            {Array.from({ length: 5 }).map((_, index) => (\n               <CarouselItem key={index}>\n                  <div className=\"p-1\">\n                     <Card>\n                        <CardContent className=\"flex aspect-square items-center justify-center p-6\">\n                           <span className=\"text-4xl font-semibold\">\n                              {index + 1}\n                           </span>\n                        </CardContent>\n                     </Card>\n                  </div>\n               </CarouselItem>\n            ))}\n         </CarouselContent>\n         <CarouselPrevious />\n         <CarouselNext />\n      </Carousel>\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "carousel-demo",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "registryDependencies": [
+    "carousel"
+  ],
+  "files": [
+    {
+      "path": "examples/carousel-demo.tsx",
+      "content": "import * as React from \"react\"\n\nimport { Card, CardContent } from \"~/registry/miami/ui/card\"\nimport {\n   Carousel,\n   CarouselContent,\n   CarouselItem,\n   CarouselNext,\n   CarouselPrevious,\n} from \"~/registry/miami/ui/carousel\"\n\nexport default function CarouselDemo() {\n   return (\n      <Carousel className=\"w-full max-w-xs\">\n         <CarouselContent>\n            {Array.from({ length: 5 }).map((_, index) => (\n               <CarouselItem key={index}>\n                  <div className=\"p-1\">\n                     <Card>\n                        <CardContent className=\"flex aspect-square items-center justify-center p-6\">\n                           <span className=\"text-4xl font-semibold\">\n                              {index + 1}\n                           </span>\n                        </CardContent>\n                     </Card>\n                  </div>\n               </CarouselItem>\n            ))}\n         </CarouselContent>\n         <CarouselPrevious />\n         <CarouselNext />\n      </Carousel>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

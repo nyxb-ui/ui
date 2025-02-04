@@ -1,15 +1,19 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "input-phone-default",
-   "type": "registry:example",
-   "author": "nyxb (https://nyxbui.design)",
-   "registryDependencies": ["button", "input", "popover"],
-   "files": [
-      {
-         "path": "examples/input-phone-default.tsx",
-         "content": "import * as React from \"react\"\n\nimport { InputPhone } from \"@/components/ui/input-phone\"\n\nexport default function InputPhoneDefault() {\n   const [value, setValue] = React.useState(\"\")\n\n   return <InputPhone value={value} onChange={setValue} defaultCountry=\"US\" />\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "input-phone-default",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "registryDependencies": [
+    "button",
+    "input",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "examples/input-phone-default.tsx",
+      "content": "import * as React from \"react\"\n\nimport { InputPhone } from \"@/components/ui/input-phone\"\n\nexport default function InputPhoneDefault() {\n   const [value, setValue] = React.useState(\"\")\n\n   return <InputPhone value={value} onChange={setValue} defaultCountry=\"US\" />\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

@@ -1,15 +1,17 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "button-demo",
-   "type": "registry:example",
-   "author": "nyxbui (https://nyxbui.design)",
-   "registryDependencies": ["button"],
-   "files": [
-      {
-         "path": "examples/button-demo.tsx",
-         "content": "import { Button } from \"~/registry/miami/ui/button\"\n\nexport default function ButtonDemo() {\n   return <Button>Button</Button>\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "button-demo",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "examples/button-demo.tsx",
+      "content": "import { Button } from \"~/registry/miami/ui/button\"\n\nexport default function ButtonDemo() {\n   return <Button>Button</Button>\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

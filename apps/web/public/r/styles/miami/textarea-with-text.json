@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "textarea-with-text",
-   "type": "registry:example",
-   "author": "nyxbui (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/textarea-with-text.tsx",
-         "content": "import { Label } from \"~/registry/miami/ui/label\"\nimport { Textarea } from \"~/registry/miami/ui/textarea\"\n\nexport default function TextareaWithText() {\n   return (\n      <div className=\"grid w-full gap-1.5\">\n         <Label htmlFor=\"message-2\">Your Message</Label>\n         <Textarea placeholder=\"Type your message here.\" id=\"message-2\" />\n         <p className=\"text-muted-foreground text-sm\">\n            Your message will be copied to the support team.\n         </p>\n      </div>\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "textarea-with-text",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/textarea-with-text.tsx",
+      "content": "import { Label } from \"~/registry/miami/ui/label\"\nimport { Textarea } from \"~/registry/miami/ui/textarea\"\n\nexport default function TextareaWithText() {\n   return (\n      <div className=\"grid w-full gap-1.5\">\n         <Label htmlFor=\"message-2\">Your Message</Label>\n         <Textarea placeholder=\"Type your message here.\" id=\"message-2\" />\n         <p className=\"text-muted-foreground text-sm\">\n            Your message will be copied to the support team.\n         </p>\n      </div>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

@@ -13,8 +13,7 @@
          "./.next",
          "./.turbo",
          "./node_modules",
-         "./dist",
-         "./__registry__"
+         "./dist"
       ]
    },
    "formatter": {

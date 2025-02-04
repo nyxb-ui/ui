@@ -1,15 +1,17 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "button-loading",
-   "type": "registry:example",
-   "author": "nyxbui (https://nyxbui.design)",
-   "registryDependencies": ["button"],
-   "files": [
-      {
-         "path": "examples/button-loading.tsx",
-         "content": "import { ReloadIcon } from \"@radix-ui/react-icons\"\n\nimport { Button } from \"~/registry/miami/ui/button\"\n\nexport default function ButtonLoading() {\n   return (\n      <Button disabled>\n         <ReloadIcon className=\"mr-2 size-4 animate-spin\" />\n         Please wait\n      </Button>\n   )\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "button-loading",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "examples/button-loading.tsx",
+      "content": "import { ReloadIcon } from \"@radix-ui/react-icons\"\n\nimport { Button } from \"~/registry/miami/ui/button\"\n\nexport default function ButtonLoading() {\n   return (\n      <Button disabled>\n         <ReloadIcon className=\"mr-2 size-4 animate-spin\" />\n         Please wait\n      </Button>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }

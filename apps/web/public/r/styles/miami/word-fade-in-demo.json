@@ -1,14 +1,14 @@
 {
-   "$schema": "https://nyxbui.design/schema/registry-item.json",
-   "name": "word-fade-in-demo",
-   "type": "registry:example",
-   "author": "nyxbui (https://nyxbui.design)",
-   "files": [
-      {
-         "path": "examples/word-fade-in-demo.tsx",
-         "content": "import WordFadeIn from \"~/registry/miami/ui/word-fade-in\"\n\nexport default async function WordFadeInDemo() {\n   return <WordFadeIn words=\"Word Fade In\" />\n}\n",
-         "type": "registry:example",
-         "target": ""
-      }
-   ]
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "word-fade-in-demo",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/word-fade-in-demo.tsx",
+      "content": "import WordFadeIn from \"~/registry/miami/ui/word-fade-in\"\n\nexport default async function WordFadeInDemo() {\n   return <WordFadeIn words=\"Word Fade In\" />\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
 }
