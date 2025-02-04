@@ -5,7 +5,18 @@ nixPkgs = [
     "gnused",
     "chromium",
     "pkg-config",
-    "gcc"
+    "gcc",
+    "libnss3",
+    "libatk1.0-0",
+    "libatk-bridge2.0-0",
+    "libcups2",
+    "libgbm1",
+    "libasound2",
+    "libpangocairo-1.0-0",
+    "libxss1",
+    "libgtk-3-0",
+    "libxshmfence1",
+    "libglu1"
 ]
 
 [variables]
@@ -20,11 +31,12 @@ PUPPETEER_EXECUTABLE_PATH = "/usr/bin/chromium"
 
 [phases.install]
 cmds = [
-   "mkdir -p /root/.npm-global",
-   "npm config set prefix '/root/.npm-global'",
-   "npm install -g pnpm@9.4.0",
-   "export PATH=/root/.npm-global/bin:$PATH",
-   "pnpm install --no-optional"
+    "mkdir -p /root/.npm-global",
+    "npm config set prefix '/root/.npm-global'",
+    "npm install -g pnpm@9.4.0",
+    "export PATH=/root/.npm-global/bin:$PATH",
+    "pnpm install --no-optional --ignore-scripts",
+    "pnpm rebuild"
 ]
 
 [phases.build]
