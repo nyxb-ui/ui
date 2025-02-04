@@ -1,28 +1,12 @@
 [phases.setup]
-aptPkgs = [
-    "libnss3",
-    "libatk1.0-0",
-    "libatk-bridge2.0-0",
-    "libcups2",
-    "libgbm1",
-    "libasound2",
-    "libpangocairo-1.0-0",
-    "libxss1",
-    "libgtk-3-0",
-    "libxshmfence1",
-    "libglu1"
-]
-
 nixPkgs = [
     "nodejs_20"
 ]
 
 [phases.install]
 cmds = [
-    "npm config set prefix ~/.npm-global",
-    "export PATH=~/.npm-global/bin:$PATH",
-    "npm i -g pnpm@9.4.0",
-    "pnpm install"
+    "corepack enable",
+    "pnpm install --prod"
 ]
 
 [phases.build]
@@ -36,7 +20,6 @@ NIXPACKS_TURBO_APP_NAME = "web"
 NODE_ENV = "production"
 NODE_OPTIONS = "--max-old-space-size=8192"
 NEXT_PUBLIC_APP_URL = "https://your-production-url.com"
-PATH = "~/.npm-global/bin:${PATH}"
 
 [start]
 cmd = "cd apps/web && pnpm start"
