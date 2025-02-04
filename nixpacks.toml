@@ -3,7 +3,7 @@ nixPkgs = [ "nodejs_20" ]
 
 [phases.install]
 cmds = [
-   "corepack enable",
+   "npm install -g pnpm@9.4.0",
    "pnpm install"
 ]
 
@@ -17,6 +17,7 @@ cmds = [
 NIXPACKS_TURBO_APP_NAME = "web"
 NODE_ENV = "production"
 NEXT_PUBLIC_APP_URL = "https://nyxbui.design"
+NODE_VERSION = "20.11.0"
 
 [start]
 cmd = "cd apps/web && pnpm start"
