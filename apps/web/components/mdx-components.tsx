@@ -18,6 +18,7 @@ import { CopyButton, CopyNpmCommandButton } from "~/components/copy-button"
 import { FrameworkDocs } from "~/components/framework-docs"
 import { PropsTable } from "~/components/props-table"
 import RepoDownload from "~/components/repo-download"
+import { SimpleComponentPreview } from "~/components/simple-component-preview"
 import { StyleWrapper } from "~/components/style-wrapper"
 import TechStack from "~/components/tech-stack"
 import TemplatePreview from "~/components/template-preview"
@@ -256,6 +257,7 @@ const components = {
    Image,
    Callout,
    ComponentPreview,
+   SimpleComponentPreview,
    ComponentExample,
    ComponentSource,
    AspectRatio,
