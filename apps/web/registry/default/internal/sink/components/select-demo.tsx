@@ -8,7 +8,7 @@ import {
    SelectLabel,
    SelectTrigger,
    SelectValue,
-} from "~/registry/default/ui/select"
+} from "~/registry/miami/ui/select"
 
 export function SelectDemo() {
    return (

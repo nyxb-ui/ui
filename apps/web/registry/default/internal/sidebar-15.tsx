@@ -29,19 +29,19 @@ import {
 } from "lucide-react"
 import * as React from "react"
 
-import { Avatar, AvatarFallback, AvatarImage } from "~/registry/default/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "~/registry/miami/ui/avatar"
 import {
    Breadcrumb,
    BreadcrumbItem,
    BreadcrumbList,
    BreadcrumbPage,
-} from "~/registry/default/ui/breadcrumb"
-import { Calendar } from "~/registry/default/ui/calendar"
+} from "~/registry/miami/ui/breadcrumb"
+import { Calendar } from "~/registry/miami/ui/calendar"
 import {
    Collapsible,
    CollapsibleContent,
    CollapsibleTrigger,
-} from "~/registry/default/ui/collapsible"
+} from "~/registry/miami/ui/collapsible"
 import {
    DropdownMenu,
    DropdownMenuContent,
@@ -51,8 +51,8 @@ import {
    DropdownMenuSeparator,
    DropdownMenuShortcut,
    DropdownMenuTrigger,
-} from "~/registry/default/ui/dropdown-menu"
-import { Separator } from "~/registry/default/ui/separator"
+} from "~/registry/miami/ui/dropdown-menu"
+import { Separator } from "~/registry/miami/ui/separator"
 import {
    Sidebar,
    SidebarContent,
@@ -75,7 +75,7 @@ import {
    SidebarSeparator,
    SidebarTrigger,
    useSidebar,
-} from "~/registry/default/ui/sidebar"
+} from "~/registry/miami/ui/sidebar"
 
 export const iframeHeight = "800px"
 

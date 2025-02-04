@@ -1,12 +1,12 @@
 import { GalleryVerticalEnd, Minus, Plus } from "lucide-react"
 import type * as React from "react"
 
-import { SearchForm } from "~/registry/default/blocks/sidebar-05/components/search-form"
+import { SearchForm } from "~/registry/miami/blocks/sidebar-05/components/search-form"
 import {
    Collapsible,
    CollapsibleContent,
    CollapsibleTrigger,
-} from "~/registry/default/ui/collapsible"
+} from "~/registry/miami/ui/collapsible"
 import {
    Sidebar,
    SidebarContent,
@@ -19,7 +19,7 @@ import {
    SidebarMenuSubButton,
    SidebarMenuSubItem,
    SidebarRail,
-} from "~/registry/default/ui/sidebar"
+} from "~/registry/miami/ui/sidebar"
 
 // This is sample data.
 const data = {

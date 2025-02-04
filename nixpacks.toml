@@ -1,35 +1,22 @@
 [phases.setup]
-nixPkgs = [
-    "nodejs_20",
-    "coreutils",
-    "gnused",
-    "pkg-config",
-    "gcc"
-]
-aptPkgs = []
-
-[variables]
-NIXPACKS_TURBO_APP_NAME = "web"
-NODE_ENV = "production"
-NODE_OPTIONS = "--max-old-space-size=8192"
-NEXT_PUBLIC_APP_URL = "https://your-production-url.com"
-PATH = "/root/.npm-global/bin:/app/node_modules/.bin:${PATH}"
-NODE_VERSION = "20.14.0"
+nixPkgs = [ "nodejs_20" ]
 
 [phases.install]
 cmds = [
-    "mkdir -p /root/.npm-global",
-    "npm config set prefix '/root/.npm-global'",
-    "npm install -g pnpm@9.4.0",
-    "pnpm install --no-optional --frozen-lockfile"
+   "corepack enable",
+   "pnpm install"
 ]
 
 [phases.build]
 cmds = [
-    "pnpm turbo run build --filter=nyxb...",
-    "cd apps/web && tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-registry.mts",
-    "pnpm --filter=web build"
+   "pnpm --filter=nyxb build",
+   "pnpm --filter=web build"
 ]
+
+[variables]
+NIXPACKS_TURBO_APP_NAME = "web"
+NODE_ENV = "production"
+NEXT_PUBLIC_APP_URL = "https://nyxbui.design"
 
 [start]
 cmd = "cd apps/web && pnpm start"

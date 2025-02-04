@@ -8,7 +8,7 @@ import {
    SidebarMenuBadge,
    SidebarMenuButton,
    SidebarMenuItem,
-} from "~/registry/default/ui/sidebar"
+} from "~/registry/miami/ui/sidebar"
 
 export function NavSecondary({
    items,

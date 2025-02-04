@@ -8,13 +8,13 @@ import {
    CardDescription,
    CardHeader,
    CardTitle,
-} from "~/registry/default/ui/card"
+} from "~/registry/miami/ui/card"
 import {
    type ChartConfig,
    ChartContainer,
    ChartLegend,
    ChartLegendContent,
-} from "~/registry/default/ui/chart"
+} from "~/registry/miami/ui/chart"
 
 export const description = "A pie chart with a legend"
 

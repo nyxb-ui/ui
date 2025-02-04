@@ -4,7 +4,7 @@
    "private": true,
    "scripts": {
       "dev": "next dev -p 3333",
-      "build": "content-collections build && pnpm build:registry && next build",
+      "build": "content-collections build && pnpm build:all-registry && next build",
       "build:registry": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-registry.mts && biome format --write ./__registry__ --log-level=error --config-path ../../biome.json",
       "build:v0-registry": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-v0-registry.mts && biome format --write ./__registry__ --log-level=error --config-path ../../biome.json",
       "build:all-registry": "pnpm build:registry && pnpm build:v0-registry",

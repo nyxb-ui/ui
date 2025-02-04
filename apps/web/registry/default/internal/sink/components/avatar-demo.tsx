@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from "~/registry/default/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "~/registry/miami/ui/avatar"
 
 export function AvatarDemo() {
    return (

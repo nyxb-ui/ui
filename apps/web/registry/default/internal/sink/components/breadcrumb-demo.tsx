@@ -6,13 +6,13 @@ import {
    BreadcrumbList,
    BreadcrumbPage,
    BreadcrumbSeparator,
-} from "~/registry/default/ui/breadcrumb"
+} from "~/registry/miami/ui/breadcrumb"
 import {
    DropdownMenu,
    DropdownMenuContent,
    DropdownMenuItem,
    DropdownMenuTrigger,
-} from "~/registry/default/ui/dropdown-menu"
+} from "~/registry/miami/ui/dropdown-menu"
 
 export function BreadcrumbDemo() {
    return (
