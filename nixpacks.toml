@@ -1,6 +1,5 @@
 [phases.setup]
-nixPkgs = [
-    "nodejs_20",
+aptPkgs = [
     "libnss3",
     "libatk1.0-0",
     "libatk-bridge2.0-0",
@@ -12,6 +11,10 @@ nixPkgs = [
     "libgtk-3-0",
     "libxshmfence1",
     "libglu1"
+]
+
+nixPkgs = [
+    "nodejs_20"
 ]
 
 [phases.install]
