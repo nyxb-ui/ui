@@ -11,12 +11,12 @@ import {
    DropdownMenuSeparator,
    DropdownMenuShortcut,
    DropdownMenuTrigger,
-} from "~/registry/miami/ui/dropdown-menu"
+} from "~/registry/default/ui/dropdown-menu"
 import {
    SidebarMenu,
    SidebarMenuButton,
    SidebarMenuItem,
-} from "~/registry/miami/ui/sidebar"
+} from "~/registry/default/ui/sidebar"
 
 export function TeamSwitcher({
    teams,

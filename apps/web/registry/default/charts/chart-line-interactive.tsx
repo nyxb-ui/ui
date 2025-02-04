@@ -9,13 +9,13 @@ import {
    CardDescription,
    CardHeader,
    CardTitle,
-} from "~/registry/miami/ui/card"
+} from "~/registry/default/ui/card"
 import {
    type ChartConfig,
    ChartContainer,
    ChartTooltip,
    ChartTooltipContent,
-} from "~/registry/miami/ui/chart"
+} from "~/registry/default/ui/chart"
 
 export const description = "An interactive line chart"
 

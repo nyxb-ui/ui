@@ -12,7 +12,7 @@ import {
    SidebarMenuSub,
    SidebarMenuSubButton,
    SidebarMenuSubItem,
-} from "~/registry/miami/ui/sidebar"
+} from "~/registry/default/ui/sidebar"
 
 // This is sample data.
 const data = {

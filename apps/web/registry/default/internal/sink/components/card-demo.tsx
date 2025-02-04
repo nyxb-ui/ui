@@ -1,7 +1,7 @@
 import { BellRing, Check } from "lucide-react"
 
 import { ny } from "~/lib/utils"
-import { Button } from "~/registry/miami/ui/button"
+import { Button } from "~/registry/default/ui/button"
 import {
    Card,
    CardContent,
@@ -9,8 +9,8 @@ import {
    CardFooter,
    CardHeader,
    CardTitle,
-} from "~/registry/miami/ui/card"
-import { Switch } from "~/registry/miami/ui/switch"
+} from "~/registry/default/ui/card"
+import { Switch } from "~/registry/default/ui/switch"
 
 const notifications = [
    {

@@ -5,7 +5,7 @@ import {
    Collapsible,
    CollapsibleContent,
    CollapsibleTrigger,
-} from "~/registry/miami/ui/collapsible"
+} from "~/registry/default/ui/collapsible"
 import {
    SidebarGroup,
    SidebarGroupContent,
@@ -14,7 +14,7 @@ import {
    SidebarMenuButton,
    SidebarMenuItem,
    SidebarSeparator,
-} from "~/registry/miami/ui/sidebar"
+} from "~/registry/default/ui/sidebar"
 
 export function Calendars({
    calendars,

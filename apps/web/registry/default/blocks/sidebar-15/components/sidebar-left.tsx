@@ -15,17 +15,17 @@ import {
 } from "lucide-react"
 import type * as React from "react"
 
-import { NavFavorites } from "~/registry/miami/blocks/sidebar-15/components/nav-favorites"
-import { NavMain } from "~/registry/miami/blocks/sidebar-15/components/nav-main"
-import { NavSecondary } from "~/registry/miami/blocks/sidebar-15/components/nav-secondary"
-import { NavWorkspaces } from "~/registry/miami/blocks/sidebar-15/components/nav-workspaces"
-import { TeamSwitcher } from "~/registry/miami/blocks/sidebar-15/components/team-switcher"
+import { NavFavorites } from "~/registry/default/blocks/sidebar-15/components/nav-favorites"
+import { NavMain } from "~/registry/default/blocks/sidebar-15/components/nav-main"
+import { NavSecondary } from "~/registry/default/blocks/sidebar-15/components/nav-secondary"
+import { NavWorkspaces } from "~/registry/default/blocks/sidebar-15/components/nav-workspaces"
+import { TeamSwitcher } from "~/registry/default/blocks/sidebar-15/components/team-switcher"
 import {
    Sidebar,
    SidebarContent,
    SidebarHeader,
    SidebarRail,
-} from "~/registry/miami/ui/sidebar"
+} from "~/registry/default/ui/sidebar"
 
 // This is sample data.
 const data = {

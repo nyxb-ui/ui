@@ -4,7 +4,7 @@ import { Check, ChevronsUpDown } from "lucide-react"
 import * as React from "react"
 
 import { ny } from "~/lib/utils"
-import { Button } from "~/registry/miami/ui/button"
+import { Button } from "~/registry/default/ui/button"
 import {
    Command,
    CommandEmpty,
@@ -12,12 +12,12 @@ import {
    CommandInput,
    CommandItem,
    CommandList,
-} from "~/registry/miami/ui/command"
+} from "~/registry/default/ui/command"
 import {
    Popover,
    PopoverContent,
    PopoverTrigger,
-} from "~/registry/miami/ui/popover"
+} from "~/registry/default/ui/popover"
 
 const frameworks = [
    {

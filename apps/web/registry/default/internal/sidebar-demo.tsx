@@ -14,7 +14,7 @@ import {
    SidebarMenuItem,
    SidebarProvider,
    SidebarTrigger,
-} from "~/registry/miami/ui/sidebar"
+} from "~/registry/default/ui/sidebar"
 
 // Menu items.
 const items = [

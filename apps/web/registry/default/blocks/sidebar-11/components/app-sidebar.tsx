@@ -5,7 +5,7 @@ import {
    Collapsible,
    CollapsibleContent,
    CollapsibleTrigger,
-} from "~/registry/miami/ui/collapsible"
+} from "~/registry/default/ui/collapsible"
 import {
    Sidebar,
    SidebarContent,
@@ -18,7 +18,7 @@ import {
    SidebarMenuItem,
    SidebarMenuSub,
    SidebarRail,
-} from "~/registry/miami/ui/sidebar"
+} from "~/registry/default/ui/sidebar"
 
 // This is sample data.
 const data = {

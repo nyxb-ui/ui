@@ -16,8 +16,8 @@ import {
    CardFooter,
    CardHeader,
    CardTitle,
-} from "~/registry/miami/ui/card"
-import { type ChartConfig, ChartContainer } from "~/registry/miami/ui/chart"
+} from "~/registry/default/ui/card"
+import { type ChartConfig, ChartContainer } from "~/registry/default/ui/chart"
 
 export const description = "A radial chart with text"
 

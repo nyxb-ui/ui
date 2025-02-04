@@ -1,4 +1,4 @@
-import { ny } from "~/registry/miami/lib/utils"
+import { ny } from "~/registry/default/lib/utils"
 
 export function ComponentWrapper({
    className,

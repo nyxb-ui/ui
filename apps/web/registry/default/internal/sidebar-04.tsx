@@ -10,8 +10,8 @@ import {
    BreadcrumbList,
    BreadcrumbPage,
    BreadcrumbSeparator,
-} from "~/registry/miami/ui/breadcrumb"
-import { Separator } from "~/registry/miami/ui/separator"
+} from "~/registry/default/ui/breadcrumb"
+import { Separator } from "~/registry/default/ui/separator"
 import {
    Sidebar,
    SidebarContent,
@@ -26,7 +26,7 @@ import {
    SidebarMenuSubItem,
    SidebarProvider,
    SidebarTrigger,
-} from "~/registry/miami/ui/sidebar"
+} from "~/registry/default/ui/sidebar"
 
 export const iframeHeight = "800px"
 

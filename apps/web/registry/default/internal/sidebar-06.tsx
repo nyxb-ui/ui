@@ -9,22 +9,22 @@ import {
    BreadcrumbList,
    BreadcrumbPage,
    BreadcrumbSeparator,
-} from "~/registry/miami/ui/breadcrumb"
-import { Button } from "~/registry/miami/ui/button"
+} from "~/registry/default/ui/breadcrumb"
+import { Button } from "~/registry/default/ui/button"
 import {
    Card,
    CardContent,
    CardDescription,
    CardHeader,
    CardTitle,
-} from "~/registry/miami/ui/card"
+} from "~/registry/default/ui/card"
 import {
    DropdownMenu,
    DropdownMenuContent,
    DropdownMenuItem,
    DropdownMenuTrigger,
-} from "~/registry/miami/ui/dropdown-menu"
-import { Separator } from "~/registry/miami/ui/separator"
+} from "~/registry/default/ui/dropdown-menu"
+import { Separator } from "~/registry/default/ui/separator"
 import {
    Sidebar,
    SidebarContent,
@@ -40,7 +40,7 @@ import {
    SidebarRail,
    SidebarTrigger,
    useSidebar,
-} from "~/registry/miami/ui/sidebar"
+} from "~/registry/default/ui/sidebar"
 
 export const iframeHeight = "800px"
 

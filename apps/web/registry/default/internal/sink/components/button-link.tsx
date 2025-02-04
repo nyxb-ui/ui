@@ -1,4 +1,4 @@
-import { Button } from "~/registry/miami/ui/button"
+import { Button } from "~/registry/default/ui/button"
 
 export function ButtonLink() {
    return <Button variant="link">Link</Button>

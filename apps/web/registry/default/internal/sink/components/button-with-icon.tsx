@@ -1,6 +1,6 @@
 import { MailOpen } from "lucide-react"
 
-import { Button } from "~/registry/miami/ui/button"
+import { Button } from "~/registry/default/ui/button"
 
 export function ButtonWithIcon() {
    return (

@@ -7,14 +7,14 @@ import {
    BreadcrumbList,
    BreadcrumbPage,
    BreadcrumbSeparator,
-} from "~/registry/miami/ui/breadcrumb"
+} from "~/registry/default/ui/breadcrumb"
 import {
    Collapsible,
    CollapsibleContent,
    CollapsibleTrigger,
-} from "~/registry/miami/ui/collapsible"
-import { Label } from "~/registry/miami/ui/label"
-import { Separator } from "~/registry/miami/ui/separator"
+} from "~/registry/default/ui/collapsible"
+import { Label } from "~/registry/default/ui/label"
+import { Separator } from "~/registry/default/ui/separator"
 import {
    Sidebar,
    SidebarContent,
@@ -32,7 +32,7 @@ import {
    SidebarProvider,
    SidebarRail,
    SidebarTrigger,
-} from "~/registry/miami/ui/sidebar"
+} from "~/registry/default/ui/sidebar"
 
 export const iframeHeight = "800px"
 

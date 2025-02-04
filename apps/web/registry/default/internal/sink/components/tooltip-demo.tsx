@@ -1,10 +1,10 @@
-import { Button } from "~/registry/miami/ui/button"
+import { Button } from "~/registry/default/ui/button"
 import {
    Tooltip,
    TooltipContent,
    TooltipProvider,
    TooltipTrigger,
-} from "~/registry/miami/ui/tooltip"
+} from "~/registry/default/ui/tooltip"
 
 export function TooltipDemo() {
    return (

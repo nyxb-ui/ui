@@ -1,8 +1,8 @@
 import { GalleryVerticalEnd } from "lucide-react"
 import type * as React from "react"
 
-import { NavMain } from "~/registry/miami/blocks/sidebar-06/components/nav-main"
-import { SidebarOptInForm } from "~/registry/miami/blocks/sidebar-06/components/sidebar-opt-in-form"
+import { NavMain } from "~/registry/default/blocks/sidebar-06/components/nav-main"
+import { SidebarOptInForm } from "~/registry/default/blocks/sidebar-06/components/sidebar-opt-in-form"
 import {
    Sidebar,
    SidebarContent,
@@ -12,7 +12,7 @@ import {
    SidebarMenuButton,
    SidebarMenuItem,
    SidebarRail,
-} from "~/registry/miami/ui/sidebar"
+} from "~/registry/default/ui/sidebar"
 
 // This is sample data.
 const data = {

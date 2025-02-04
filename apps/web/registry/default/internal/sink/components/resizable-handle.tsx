@@ -2,7 +2,7 @@ import {
    ResizableHandle,
    ResizablePanel,
    ResizablePanelGroup,
-} from "~/registry/miami/ui/resizable"
+} from "~/registry/default/ui/resizable"
 
 export function ResizableHandleDemo() {
    return (

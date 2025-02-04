@@ -6,7 +6,7 @@ import {
    Collapsible,
    CollapsibleContent,
    CollapsibleTrigger,
-} from "~/registry/miami/ui/collapsible"
+} from "~/registry/default/ui/collapsible"
 import {
    SidebarGroup,
    SidebarGroupLabel,
@@ -16,7 +16,7 @@ import {
    SidebarMenuSub,
    SidebarMenuSubButton,
    SidebarMenuSubItem,
-} from "~/registry/miami/ui/sidebar"
+} from "~/registry/default/ui/sidebar"
 
 export function NavMain({
    items,

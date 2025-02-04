@@ -10,21 +10,21 @@ import {
    CardDescription,
    CardHeader,
    CardTitle,
-} from "~/registry/miami/ui/card"
+} from "~/registry/default/ui/card"
 import {
    type ChartConfig,
    ChartContainer,
    ChartStyle,
    ChartTooltip,
    ChartTooltipContent,
-} from "~/registry/miami/ui/chart"
+} from "~/registry/default/ui/chart"
 import {
    Select,
    SelectContent,
    SelectItem,
    SelectTrigger,
    SelectValue,
-} from "~/registry/miami/ui/select"
+} from "~/registry/default/ui/select"
 
 export const description = "An interactive pie chart"
 

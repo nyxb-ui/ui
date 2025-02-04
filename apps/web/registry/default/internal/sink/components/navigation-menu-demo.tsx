@@ -12,7 +12,7 @@ import {
    NavigationMenuList,
    NavigationMenuTrigger,
    navigationMenuTriggerStyle,
-} from "~/registry/miami/ui/navigation-menu"
+} from "~/registry/default/ui/navigation-menu"
 
 const components: { title: string; href: string; description: string }[] = [
    {

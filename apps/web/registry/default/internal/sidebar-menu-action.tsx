@@ -14,7 +14,7 @@ import {
    DropdownMenuContent,
    DropdownMenuItem,
    DropdownMenuTrigger,
-} from "~/registry/miami/ui/dropdown-menu"
+} from "~/registry/default/ui/dropdown-menu"
 import {
    Sidebar,
    SidebarContent,
@@ -26,7 +26,7 @@ import {
    SidebarMenuButton,
    SidebarMenuItem,
    SidebarProvider,
-} from "~/registry/miami/ui/sidebar"
+} from "~/registry/default/ui/sidebar"
 
 const projects = [
    {

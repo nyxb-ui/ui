@@ -9,7 +9,7 @@ import {
    Sparkles,
 } from "lucide-react"
 
-import { Avatar, AvatarFallback, AvatarImage } from "~/registry/miami/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "~/registry/default/ui/avatar"
 import {
    DropdownMenu,
    DropdownMenuContent,
@@ -18,13 +18,13 @@ import {
    DropdownMenuLabel,
    DropdownMenuSeparator,
    DropdownMenuTrigger,
-} from "~/registry/miami/ui/dropdown-menu"
+} from "~/registry/default/ui/dropdown-menu"
 import {
    SidebarMenu,
    SidebarMenuButton,
    SidebarMenuItem,
    useSidebar,
-} from "~/registry/miami/ui/sidebar"
+} from "~/registry/default/ui/sidebar"
 
 export function NavUser({
    user,

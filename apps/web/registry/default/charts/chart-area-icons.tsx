@@ -10,7 +10,7 @@ import {
    CardFooter,
    CardHeader,
    CardTitle,
-} from "~/registry/miami/ui/card"
+} from "~/registry/default/ui/card"
 import {
    type ChartConfig,
    ChartContainer,
@@ -18,7 +18,7 @@ import {
    ChartLegendContent,
    ChartTooltip,
    ChartTooltipContent,
-} from "~/registry/miami/ui/chart"
+} from "~/registry/default/ui/chart"
 
 export const description = "An area chart with icons"
 

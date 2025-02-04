@@ -8,13 +8,13 @@ import {
    BreadcrumbList,
    BreadcrumbPage,
    BreadcrumbSeparator,
-} from "~/registry/miami/ui/breadcrumb"
+} from "~/registry/default/ui/breadcrumb"
 import {
    Collapsible,
    CollapsibleContent,
    CollapsibleTrigger,
-} from "~/registry/miami/ui/collapsible"
-import { Separator } from "~/registry/miami/ui/separator"
+} from "~/registry/default/ui/collapsible"
+import { Separator } from "~/registry/default/ui/separator"
 import {
    Sidebar,
    SidebarContent,
@@ -30,7 +30,7 @@ import {
    SidebarProvider,
    SidebarRail,
    SidebarTrigger,
-} from "~/registry/miami/ui/sidebar"
+} from "~/registry/default/ui/sidebar"
 
 // This is sample data.
 const data = {

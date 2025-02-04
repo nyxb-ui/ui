@@ -1,12 +1,12 @@
-import { Button } from "~/registry/miami/ui/button"
+import { Button } from "~/registry/default/ui/button"
 import {
    Card,
    CardContent,
    CardDescription,
    CardHeader,
    CardTitle,
-} from "~/registry/miami/ui/card"
-import { SidebarInput } from "~/registry/miami/ui/sidebar"
+} from "~/registry/default/ui/card"
+import { SidebarInput } from "~/registry/default/ui/sidebar"
 
 export function SidebarOptInForm() {
    return (
