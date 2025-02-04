@@ -3,8 +3,10 @@ nixPkgs = [ "nodejs_20" ]
 
 [phases.install]
 cmds = [
-   "npm install -g pnpm@9.4.0",
-   "pnpm install"
+    "npm install -g corepack",
+    "corepack enable",
+    "corepack prepare pnpm@9.4.0 --activate",
+    "pnpm install"
 ]
 
 [phases.build]
