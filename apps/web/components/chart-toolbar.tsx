@@ -1,5 +1,10 @@
-'use client'
+"use client"
 
+import { ChartCodeViewer } from "~/components/chart-code-viewer"
+import { ny } from "~/lib/utils"
+import { Separator } from "~/registry/miami/ui/separator"
+
+import "~/styles/mdx.css"
 import {
    AreaChart,
    BarChartBig,
@@ -8,15 +13,10 @@ import {
    MousePointer2,
    PieChart,
    Radar,
-} from 'lucide-react'
-import { ny } from '~/lib/utils'
-import { ChartCodeViewer } from '~/components/chart-code-viewer'
-import { Separator } from '~/registry/miami/ui/separator'
+} from "lucide-react"
 
-import '~/styles/mdx.css'
-
-import { ChartCopyButton } from '~/components/chart-copy-button'
-import type { Chart } from '~/components/chart-display'
+import { ChartCopyButton } from "~/components/chart-copy-button"
+import type { Chart } from "~/components/chart-display"
 
 export function ChartToolbar({
    chart,
@@ -24,20 +24,23 @@ export function ChartToolbar({
    children,
 }: {
    chart: Chart
-} & React.ComponentProps<'div'>) {
+} & React.ComponentProps<"div">) {
    return (
-      <div className={ny('flex items-center gap-2', className)}>
-         <div className="text-muted-foreground flex items-center gap-1.5 pl-1 text-[13px] [&>svg]:size-[0.9rem]">
+      <div className={ny("flex items-center gap-2", className)}>
+         <div className="flex items-center gap-1.5 pl-1 text-[13px] text-muted-foreground [&>svg]:h-[0.9rem] [&>svg]:w-[0.9rem]">
             <ChartTitle chart={chart} />
          </div>
          <div className="ml-auto flex items-center gap-2 [&>form]:flex">
             <ChartCopyButton
                event="copy_chart_code"
                name={chart.name}
-               code={chart.files?.[0]?.content ?? ''}
-               className="[&_svg]-h-3 text-foreground hover:bg-muted dark:text-foreground size-6 rounded-[6px] bg-transparent shadow-none [&_svg]:w-3"
+               code={chart.files?.[0]?.content ?? ""}
+               className="[&_svg]-h-3 h-6 w-6 rounded-[6px] bg-transparent text-foreground shadow-none hover:bg-muted dark:text-foreground [&_svg]:w-3"
             />
-            <Separator orientation="vertical" className="mx-0 hidden h-4 md:flex" />
+            <Separator
+               orientation="vertical"
+               className="mx-0 hidden h-4 md:flex"
+            />
             <ChartCodeViewer chart={chart}>{children}</ChartCodeViewer>
          </div>
       </div>
@@ -45,73 +48,61 @@ export function ChartToolbar({
 }
 
 function ChartTitle({ chart }: { chart: Chart }) {
-   const { subcategory } = chart
+   const { categories } = chart
 
-   if (!subcategory) {
+   if (!categories?.length) {
       return null
    }
 
-   if (subcategory === 'Line') {
+   if (categories.includes("charts-line")) {
       return (
          <>
-            <LineChart />
-            {' '}
-            Chart
+            <LineChart /> Chart
          </>
       )
    }
 
-   if (subcategory === 'Bar') {
+   if (categories.includes("charts-bar")) {
       return (
          <>
-            <BarChartBig />
-            {' '}
-            Chart
+            <BarChartBig /> Chart
          </>
       )
    }
 
-   if (subcategory === 'Pie') {
+   if (categories.includes("charts-pie")) {
       return (
          <>
-            <PieChart />
-            {' '}
-            Chart
+            <PieChart /> Chart
          </>
       )
    }
 
-   if (subcategory === 'Area') {
+   if (categories.includes("charts-area")) {
       return (
          <>
-            <AreaChart />
-            {' '}
-            Chart
+            <AreaChart /> Chart
          </>
       )
    }
 
-   if (subcategory === 'Radar') {
+   if (categories.includes("charts-radar")) {
       return (
          <>
-            <Hexagon />
-            {' '}
-            Chart
+            <Hexagon /> Chart
          </>
       )
    }
 
-   if (subcategory === 'Radial') {
+   if (categories.includes("charts-radial")) {
       return (
          <>
-            <Radar />
-            {' '}
-            Chart
+            <Radar /> Chart
          </>
       )
    }
 
-   if (subcategory === 'Tooltip') {
+   if (categories.includes("charts-tooltip")) {
       return (
          <>
             <MousePointer2 />
@@ -120,5 +111,5 @@ function ChartTitle({ chart }: { chart: Chart }) {
       )
    }
 
-   return subcategory
+   return categories[0]
 }
