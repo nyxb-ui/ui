@@ -1,17 +1,15 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "star-rating",
-  "type": "registry:ui",
-  "author": "nyxb (https://nyxbui.design)",
-  "dependencies": [
-    "lucide-react"
-  ],
-  "files": [
-    {
-      "path": "ui/star-rating.tsx",
-      "content": "import type { LucideIcon, LucideProps } from \"lucide-react\"\nimport { StarIcon } from \"lucide-react\"\nimport type { Dispatch, SetStateAction } from \"react\"\nimport type React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\ninterface StarWrapperProps {\n   value?: number\n   setValue?: Dispatch<SetStateAction<number>>\n   numStars?: number\n   icon?: LucideIcon\n   disabled?: boolean\n   wrapperProps?: React.HTMLAttributes<HTMLDivElement>\n   iconProps?: LucideProps\n   showcase?: boolean\n}\n\nfunction StarRating({\n   numStars = 5,\n   icon,\n   setValue,\n   value,\n   disabled,\n   showcase,\n   iconProps = {},\n   wrapperProps = {},\n}: StarWrapperProps) {\n   const { className: wrapperClassName, ...restWrapperProps } = wrapperProps\n   const { className: iconClassName, ...restIconProps } = iconProps\n   const IconComponent = icon\n\n   return (\n      <div\n         className={cn(\"flex items-center gap-1\", wrapperClassName)}\n         {...restWrapperProps}\n      >\n         {Array.from({ length: numStars }, (_, i) => {\n            const isRated = i < value!\n            const styledIconProps: LucideProps = {\n               onMouseEnter: () => !showcase && !disabled && setValue!(i + 1),\n               className: cn(\n                  \"fill-primary stroke-primary size-5\",\n                  {\n                     \"opacity-50 pointer-events-none\": disabled,\n                     \"transition-transform duration-300 hover:scale-110\":\n                        !disabled && !showcase,\n                     \"!fill-muted !stroke-muted\": !isRated,\n                  },\n                  iconClassName,\n               ),\n               ...restIconProps,\n            }\n            return (\n               <div key={i}>\n                  {IconComponent ? (\n                     <IconComponent {...styledIconProps} />\n                  ) : (\n                     <StarIcon {...styledIconProps} />\n                  )}\n               </div>\n            )\n         })}\n      </div>\n   )\n}\n\nexport { StarRating }\n",
-      "type": "registry:ui",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "star-rating",
+   "type": "registry:ui",
+   "author": "nyxb (https://nyxbui.design)",
+   "dependencies": ["lucide-react"],
+   "files": [
+      {
+         "path": "ui/star-rating.tsx",
+         "content": "import type { LucideIcon, LucideProps } from \"lucide-react\"\nimport { StarIcon } from \"lucide-react\"\nimport type { Dispatch, SetStateAction } from \"react\"\nimport type React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\ninterface StarWrapperProps {\n   value?: number\n   setValue?: Dispatch<SetStateAction<number>>\n   numStars?: number\n   icon?: LucideIcon\n   disabled?: boolean\n   wrapperProps?: React.HTMLAttributes<HTMLDivElement>\n   iconProps?: LucideProps\n   showcase?: boolean\n}\n\nfunction StarRating({\n   numStars = 5,\n   icon,\n   setValue,\n   value,\n   disabled,\n   showcase,\n   iconProps = {},\n   wrapperProps = {},\n}: StarWrapperProps) {\n   const { className: wrapperClassName, ...restWrapperProps } = wrapperProps\n   const { className: iconClassName, ...restIconProps } = iconProps\n   const IconComponent = icon\n\n   return (\n      <div\n         className={cn(\"flex items-center gap-1\", wrapperClassName)}\n         {...restWrapperProps}\n      >\n         {Array.from({ length: numStars }, (_, i) => {\n            const isRated = i < value!\n            const styledIconProps: LucideProps = {\n               onMouseEnter: () => !showcase && !disabled && setValue!(i + 1),\n               className: cn(\n                  \"fill-primary stroke-primary size-5\",\n                  {\n                     \"opacity-50 pointer-events-none\": disabled,\n                     \"transition-transform duration-300 hover:scale-110\":\n                        !disabled && !showcase,\n                     \"!fill-muted !stroke-muted\": !isRated,\n                  },\n                  iconClassName,\n               ),\n               ...restIconProps,\n            }\n            return (\n               <div key={i}>\n                  {IconComponent ? (\n                     <IconComponent {...styledIconProps} />\n                  ) : (\n                     <StarIcon {...styledIconProps} />\n                  )}\n               </div>\n            )\n         })}\n      </div>\n   )\n}\n\nexport { StarRating }\n",
+         "type": "registry:ui",
+         "target": ""
+      }
+   ]
 }

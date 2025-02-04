@@ -1,14 +1,14 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "sparkles-text-demo",
-  "type": "registry:example",
-  "author": "nyxb (https://nyxbui.design)",
-  "files": [
-    {
-      "path": "examples/sparkles-text-demo.tsx",
-      "content": "import SparklesText from \"@/components/ui/sparkles-text\"\n\nexport default async function SparklesTextDemo() {\n   return <SparklesText text=\"Nyxb UI\" />\n}\n",
-      "type": "registry:example",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "sparkles-text-demo",
+   "type": "registry:example",
+   "author": "nyxb (https://nyxbui.design)",
+   "files": [
+      {
+         "path": "examples/sparkles-text-demo.tsx",
+         "content": "import SparklesText from \"@/components/ui/sparkles-text\"\n\nexport default async function SparklesTextDemo() {\n   return <SparklesText text=\"Nyxb UI\" />\n}\n",
+         "type": "registry:example",
+         "target": ""
+      }
+   ]
 }

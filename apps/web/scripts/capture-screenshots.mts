@@ -1,36 +1,36 @@
 /* eslint-disable no-console */
-import puppeteer from 'puppeteer'
+import puppeteer from "puppeteer"
 
 const BLOCKS = [
-   'login-01',
-   'sidebar-01',
-   'sidebar-02',
-   'sidebar-03',
-   'sidebar-04',
-   'sidebar-05',
-   'sidebar-06',
-   'sidebar-07',
-   'sidebar-08',
-   'sidebar-09',
-   'sidebar-10',
-   'sidebar-11',
-   'sidebar-12',
-   'sidebar-13',
-   'sidebar-14',
-   'sidebar-15',
-   'demo-sidebar',
-   'demo-sidebar-header',
-   'demo-sidebar-footer',
-   'demo-sidebar-group',
-   'demo-sidebar-group-collapsible',
-   'demo-sidebar-group-action',
-   'demo-sidebar-menu',
-   'demo-sidebar-menu-action',
-   'demo-sidebar-menu-sub',
-   'demo-sidebar-menu-collapsible',
-   'demo-sidebar-menu-badge',
-   'demo-sidebar-rsc',
-   'demo-sidebar-controlled',
+   "login-01",
+   "sidebar-01",
+   "sidebar-02",
+   "sidebar-03",
+   "sidebar-04",
+   "sidebar-05",
+   "sidebar-06",
+   "sidebar-07",
+   "sidebar-08",
+   "sidebar-09",
+   "sidebar-10",
+   "sidebar-11",
+   "sidebar-12",
+   "sidebar-13",
+   "sidebar-14",
+   "sidebar-15",
+   "demo-sidebar",
+   "demo-sidebar-header",
+   "demo-sidebar-footer",
+   "demo-sidebar-group",
+   "demo-sidebar-group-collapsible",
+   "demo-sidebar-group-action",
+   "demo-sidebar-menu",
+   "demo-sidebar-menu-action",
+   "demo-sidebar-menu-sub",
+   "demo-sidebar-menu-collapsible",
+   "demo-sidebar-menu-badge",
+   "demo-sidebar-rsc",
+   "demo-sidebar-controlled",
 ]
 
 try {
@@ -42,19 +42,19 @@ try {
       },
    })
 
-   console.log('☀️ Capturing screenshots for light theme')
+   console.log("☀️ Capturing screenshots for light theme")
    for (const block of BLOCKS) {
       const pageUrl = `http://localhost:3333/blocks/miami/${block}`
       console.log(`- ${block}`)
 
       const page = await browser.newPage()
       await page.goto(pageUrl, {
-         waitUntil: 'networkidle2',
+         waitUntil: "networkidle2",
       })
 
       // Hide Tailwind indicator
       await page.evaluate(() => {
-         const indicator = document.querySelector('[data-tailwind-indicator]')
+         const indicator = document.querySelector("[data-tailwind-indicator]")
          if (indicator) {
             indicator.remove()
          }
@@ -65,19 +65,19 @@ try {
       })
    }
 
-   console.log('🌙 Capturing screenshots for dark theme')
+   console.log("🌙 Capturing screenshots for dark theme")
    for (const block of BLOCKS) {
       const pageUrl = `http://localhost:3333/blocks/miami/${block}`
       console.log(`- ${block}`)
 
       const page = await browser.newPage()
       await page.goto(pageUrl, {
-         waitUntil: 'networkidle2',
+         waitUntil: "networkidle2",
       })
 
       // Hide Tailwind indicator
       await page.evaluate(() => {
-         const indicator = document.querySelector('[data-tailwind-indicator]')
+         const indicator = document.querySelector("[data-tailwind-indicator]")
          if (indicator) {
             indicator.remove()
          }
@@ -85,7 +85,7 @@ try {
 
       // Set theme to dark
       await page.evaluate(() => {
-         localStorage.setItem('theme', 'dark')
+         localStorage.setItem("theme", "dark")
       })
 
       await page.screenshot({
@@ -94,9 +94,8 @@ try {
    }
 
    await browser.close()
-   console.log('✅ Done!')
-}
-catch (error) {
+   console.log("✅ Done!")
+} catch (error) {
    console.error(error)
    process.exit(1)
 }

@@ -1,11 +1,15 @@
-import * as React from 'react'
+import * as React from "react"
 
-export function useMutationObserver(ref: React.MutableRefObject<HTMLElement | null>, callback: MutationCallback, options = {
-   attributes: true,
-   characterData: true,
-   childList: true,
-   subtree: true,
-}) {
+export function useMutationObserver(
+   ref: React.MutableRefObject<HTMLElement | null>,
+   callback: MutationCallback,
+   options = {
+      attributes: true,
+      characterData: true,
+      childList: true,
+      subtree: true,
+   },
+) {
    React.useEffect(() => {
       if (ref.current) {
          const observer = new MutationObserver(callback)

@@ -1,14 +1,14 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "toc",
-  "type": "registry:ui",
-  "author": "nyxb (https://nyxbui.design)",
-  "files": [
-    {
-      "path": "ui/toc.tsx",
-      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\ninterface TableOfContentsListProps\n   extends React.ComponentPropsWithoutRef<\"ul\"> {\n   indent?: boolean\n}\n\nconst TableOfContentsList = React.forwardRef<\n   React.ElementRef<\"ul\">,\n   TableOfContentsListProps\n>(({ className, indent, ...props }, ref) => (\n   <ul\n      ref={ref}\n      className={cn(\"m-0 list-none\", indent && \"pl-4\", className)}\n      {...props}\n   />\n))\nTableOfContentsList.displayName = \"TableOfContentsList\"\n\ninterface TableOfContentsTitleProps\n   extends React.ComponentPropsWithoutRef<\"li\"> {}\n\nconst TableOfContentsTitle = React.forwardRef<\n   React.ElementRef<\"li\">,\n   TableOfContentsTitleProps\n>(({ className, ...props }, ref) => (\n   <li\n      ref={ref}\n      className={cn(\"mb-2 text-sm font-medium\", className)}\n      {...props}\n   />\n))\nTableOfContentsTitle.displayName = \"TableOfContentsTitle\"\n\ninterface TableOfContentsItemProps\n   extends React.ComponentPropsWithoutRef<\"li\"> {\n   indent?: boolean\n}\n\nconst TableOfContentsItem = React.forwardRef<\n   React.ElementRef<\"li\">,\n   TableOfContentsItemProps\n>(({ className, indent, ...props }, ref) => (\n   <li\n      ref={ref}\n      className={cn(\"mt-0 pt-2\", indent && \"ml-4\", className)}\n      {...props}\n   />\n))\nTableOfContentsItem.displayName = \"TableOfContentsItem\"\n\ninterface TableOfContentsLinkProps extends React.ComponentPropsWithoutRef<\"a\"> {\n   isActive?: boolean\n}\n\nconst TableOfContentsLink = React.forwardRef<\n   React.ElementRef<\"a\">,\n   TableOfContentsLinkProps\n>(({ className, isActive, ...props }, ref) => (\n   <a\n      ref={ref}\n      className={cn(\n         \"text-foreground hover:text-primary text-sm font-medium transition-colors\",\n         isActive ? \"text-foreground font-medium\" : \"text-muted-foreground\",\n         className,\n      )}\n      {...props}\n   />\n))\nTableOfContentsLink.displayName = \"TableOfContentsLink\"\n\nexport {\n   TableOfContentsList,\n   TableOfContentsTitle,\n   TableOfContentsItem,\n   TableOfContentsLink,\n}\n",
-      "type": "registry:ui",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "toc",
+   "type": "registry:ui",
+   "author": "nyxb (https://nyxbui.design)",
+   "files": [
+      {
+         "path": "ui/toc.tsx",
+         "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\ninterface TableOfContentsListProps\n   extends React.ComponentPropsWithoutRef<\"ul\"> {\n   indent?: boolean\n}\n\nconst TableOfContentsList = React.forwardRef<\n   React.ElementRef<\"ul\">,\n   TableOfContentsListProps\n>(({ className, indent, ...props }, ref) => (\n   <ul\n      ref={ref}\n      className={cn(\"m-0 list-none\", indent && \"pl-4\", className)}\n      {...props}\n   />\n))\nTableOfContentsList.displayName = \"TableOfContentsList\"\n\ninterface TableOfContentsTitleProps\n   extends React.ComponentPropsWithoutRef<\"li\"> {}\n\nconst TableOfContentsTitle = React.forwardRef<\n   React.ElementRef<\"li\">,\n   TableOfContentsTitleProps\n>(({ className, ...props }, ref) => (\n   <li\n      ref={ref}\n      className={cn(\"mb-2 text-sm font-medium\", className)}\n      {...props}\n   />\n))\nTableOfContentsTitle.displayName = \"TableOfContentsTitle\"\n\ninterface TableOfContentsItemProps\n   extends React.ComponentPropsWithoutRef<\"li\"> {\n   indent?: boolean\n}\n\nconst TableOfContentsItem = React.forwardRef<\n   React.ElementRef<\"li\">,\n   TableOfContentsItemProps\n>(({ className, indent, ...props }, ref) => (\n   <li\n      ref={ref}\n      className={cn(\"mt-0 pt-2\", indent && \"ml-4\", className)}\n      {...props}\n   />\n))\nTableOfContentsItem.displayName = \"TableOfContentsItem\"\n\ninterface TableOfContentsLinkProps extends React.ComponentPropsWithoutRef<\"a\"> {\n   isActive?: boolean\n}\n\nconst TableOfContentsLink = React.forwardRef<\n   React.ElementRef<\"a\">,\n   TableOfContentsLinkProps\n>(({ className, isActive, ...props }, ref) => (\n   <a\n      ref={ref}\n      className={cn(\n         \"text-foreground hover:text-primary text-sm font-medium transition-colors\",\n         isActive ? \"text-foreground font-medium\" : \"text-muted-foreground\",\n         className,\n      )}\n      {...props}\n   />\n))\nTableOfContentsLink.displayName = \"TableOfContentsLink\"\n\nexport {\n   TableOfContentsList,\n   TableOfContentsTitle,\n   TableOfContentsItem,\n   TableOfContentsLink,\n}\n",
+         "type": "registry:ui",
+         "target": ""
+      }
+   ]
 }

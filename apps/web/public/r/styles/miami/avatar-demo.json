@@ -1,17 +1,15 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "avatar-demo",
-  "type": "registry:example",
-  "author": "nyxbui (https://nyxbui.design)",
-  "registryDependencies": [
-    "avatar"
-  ],
-  "files": [
-    {
-      "path": "examples/avatar-demo.tsx",
-      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"~/registry/miami/ui/avatar\"\n\nexport default function AvatarDemo() {\n   return (\n      <Avatar>\n         <AvatarImage src=\"https://github.com/nyxb.png\" alt=\"@nyxb\" />\n         <AvatarFallback>NY</AvatarFallback>\n      </Avatar>\n   )\n}\n",
-      "type": "registry:example",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "avatar-demo",
+   "type": "registry:example",
+   "author": "nyxbui (https://nyxbui.design)",
+   "registryDependencies": ["avatar"],
+   "files": [
+      {
+         "path": "examples/avatar-demo.tsx",
+         "content": "import { Avatar, AvatarFallback, AvatarImage } from \"~/registry/miami/ui/avatar\"\n\nexport default function AvatarDemo() {\n   return (\n      <Avatar>\n         <AvatarImage src=\"https://github.com/nyxb.png\" alt=\"@nyxb\" />\n         <AvatarFallback>NY</AvatarFallback>\n      </Avatar>\n   )\n}\n",
+         "type": "registry:example",
+         "target": ""
+      }
+   ]
 }

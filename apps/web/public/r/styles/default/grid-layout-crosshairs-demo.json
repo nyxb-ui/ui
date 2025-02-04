@@ -1,14 +1,14 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "grid-layout-crosshairs-demo",
-  "type": "registry:example",
-  "author": "nyxbui (https://nyxbui.design)",
-  "files": [
-    {
-      "path": "examples/grid-layout-crosshairs-demo.tsx",
-      "content": "\"use client\"\n\nimport GridLayout from \"~/registry/default/ui/grid-layout\"\n\nexport default function GridLayoutCrosshairsDemo() {\n   return (\n      <GridLayout\n         crosshairs={{\n            topLeft: true,\n            topRight: true,\n            bottomLeft: true,\n            bottomRight: true,\n         }}\n         lineVariant=\"none\"\n         className=\"min-h-[350px] p-6\"\n      >\n         <div className=\"flex h-full flex-col items-center justify-center space-y-4\">\n            <div className=\"text-center\">\n               <h3 className=\"text-2xl font-medium\">Corner Markers</h3>\n               <p className=\"text-muted-foreground mt-2\">\n                  Use crosshairs to highlight key areas or create visual anchors\n               </p>\n            </div>\n            <div className=\"grid w-full max-w-xl grid-cols-2 gap-8 pt-8\">\n               <div className=\"bg-card rounded-lg border p-4 text-center\">\n                  Top Left\n               </div>\n               <div className=\"bg-card rounded-lg border p-4 text-center\">\n                  Top Right\n               </div>\n               <div className=\"bg-card rounded-lg border p-4 text-center\">\n                  Bottom Left\n               </div>\n               <div className=\"bg-card rounded-lg border p-4 text-center\">\n                  Bottom Right\n               </div>\n            </div>\n         </div>\n      </GridLayout>\n   )\n}\n",
-      "type": "registry:example",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "grid-layout-crosshairs-demo",
+   "type": "registry:example",
+   "author": "nyxbui (https://nyxbui.design)",
+   "files": [
+      {
+         "path": "examples/grid-layout-crosshairs-demo.tsx",
+         "content": "\"use client\"\n\nimport GridLayout from \"~/registry/default/ui/grid-layout\"\n\nexport default function GridLayoutCrosshairsDemo() {\n   return (\n      <GridLayout\n         crosshairs={{\n            topLeft: true,\n            topRight: true,\n            bottomLeft: true,\n            bottomRight: true,\n         }}\n         lineVariant=\"none\"\n         className=\"min-h-[350px] p-6\"\n      >\n         <div className=\"flex h-full flex-col items-center justify-center space-y-4\">\n            <div className=\"text-center\">\n               <h3 className=\"text-2xl font-medium\">Corner Markers</h3>\n               <p className=\"text-muted-foreground mt-2\">\n                  Use crosshairs to highlight key areas or create visual anchors\n               </p>\n            </div>\n            <div className=\"grid w-full max-w-xl grid-cols-2 gap-8 pt-8\">\n               <div className=\"bg-card rounded-lg border p-4 text-center\">\n                  Top Left\n               </div>\n               <div className=\"bg-card rounded-lg border p-4 text-center\">\n                  Top Right\n               </div>\n               <div className=\"bg-card rounded-lg border p-4 text-center\">\n                  Bottom Left\n               </div>\n               <div className=\"bg-card rounded-lg border p-4 text-center\">\n                  Bottom Right\n               </div>\n            </div>\n         </div>\n      </GridLayout>\n   )\n}\n",
+         "type": "registry:example",
+         "target": ""
+      }
+   ]
 }

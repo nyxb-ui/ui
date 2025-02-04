@@ -1,8 +1,4 @@
-import {
-   Alert,
-   AlertDescription,
-   AlertTitle,
-} from '~/registry/miami/ui/alert'
+import { Alert, AlertDescription, AlertTitle } from "~/registry/miami/ui/alert"
 
 interface CalloutProps {
    icon?: string

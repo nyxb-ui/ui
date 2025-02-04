@@ -1,6 +1,6 @@
-import { type ClassValue, clsx } from 'clsx'
-import type { Metadata } from 'next'
-import { twMerge } from 'tailwind-merge'
+import { type ClassValue, clsx } from "clsx"
+import type { Metadata } from "next"
+import { twMerge } from "tailwind-merge"
 
 // Funktion zum Kombinieren von Klassennamen
 export function ny(...inputs: ClassValue[]) {
@@ -10,10 +10,10 @@ export function ny(...inputs: ClassValue[]) {
 // Funktion zum Formatieren von Datum
 export function formatDate(input: string | number): string {
    const date = new Date(input)
-   return date.toLocaleDateString('en-US', {
-      month: 'long',
-      day: 'numeric',
-      year: 'numeric',
+   return date.toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
    })
 }
 
@@ -24,14 +24,13 @@ export function absoluteUrl(path: string) {
 
 // Funktion zum Kürzen eines Strings
 export function truncate(str: string | null, length: number) {
-   if (!str || str.length <= length)
-      return str
+   if (!str || str.length <= length) return str
    return `${str.slice(0, length - 3)}...`
 }
 
 // Fetch-Wrapper zum Abrufen von JSON-Daten
 export function fetcher(...args: Parameters<typeof fetch>) {
-   return fetch(...args).then(res => res.json())
+   return fetch(...args).then((res) => res.json())
 }
 
 /**
@@ -41,15 +40,17 @@ export function fetcher(...args: Parameters<typeof fetch>) {
  * @return {string}
  */
 export function capitalize(str: string, lower = false) {
-   return (lower ? str.toLowerCase() : str).replace(/(?:^|[\s"'([{])+\S/g, match =>
-      match.toUpperCase())
+   return (lower ? str.toLowerCase() : str).replace(
+      /(?:^|[\s"'([{])+\S/g,
+      (match) => match.toUpperCase(),
+   )
 }
 
 // Funktion zum Konstruieren von Metadaten
 export function constructMetadata({
-   title = 'Nyxb UI - Modern React + Tailwind CSS components & Templates',
-   description = 'Nyxb UI is a curated collection of the best landing page components built using React + Tailwind CSS + Framer Motion',
-   image = absoluteUrl('/api/og'),
+   title = "Nyxb UI - Modern React + Tailwind CSS components & Templates",
+   description = "Nyxb UI is a curated collection of the best landing page components built using React + Tailwind CSS + Framer Motion",
+   image = absoluteUrl("/api/og"),
    ...props
 }: {
    title?: string
@@ -61,17 +62,17 @@ export function constructMetadata({
       title,
       description,
       keywords: [
-         'React',
-         'Tailwind CSS',
-         'Framer Motion',
-         'Landing Page',
-         'Components',
-         'Next.js',
+         "React",
+         "Tailwind CSS",
+         "Framer Motion",
+         "Landing Page",
+         "Components",
+         "Next.js",
       ],
       openGraph: {
          title,
          description,
-         type: 'website',
+         type: "website",
          images: [
             {
                url: image,
@@ -82,21 +83,21 @@ export function constructMetadata({
          ],
       },
       twitter: {
-         card: 'summary_large_image',
+         card: "summary_large_image",
          title,
          description,
          images: [image],
-         creator: '@nyxb0',
+         creator: "@nyxb0",
       },
-      icons: '/favicon.ico',
-      metadataBase: new URL('https://nyxbui.design'),
+      icons: "/favicon.ico",
+      metadataBase: new URL("https://nyxbui.design"),
       authors: [
          {
-            name: 'nyxb',
-            url: 'https://twitter.com/nyxb0',
+            name: "nyxb",
+            url: "https://twitter.com/nyxb0",
          },
       ],
-      creator: 'nyxb',
+      creator: "nyxb",
       ...props,
    }
 }

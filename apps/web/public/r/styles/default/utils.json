@@ -1,18 +1,15 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "utils",
-  "type": "registry:lib",
-  "author": "nyxbui (https://nyxbui.design)",
-  "dependencies": [
-    "clsx",
-    "tailwind-merge"
-  ],
-  "files": [
-    {
-      "path": "lib/utils.ts",
-      "content": "import { type ClassValue, clsx } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function ny(...inputs: ClassValue[]) {\n   return twMerge(clsx(inputs))\n}\n",
-      "type": "registry:lib",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "utils",
+   "type": "registry:lib",
+   "author": "nyxbui (https://nyxbui.design)",
+   "dependencies": ["clsx", "tailwind-merge"],
+   "files": [
+      {
+         "path": "lib/utils.ts",
+         "content": "import { type ClassValue, clsx } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function ny(...inputs: ClassValue[]) {\n   return twMerge(clsx(inputs))\n}\n",
+         "type": "registry:lib",
+         "target": ""
+      }
+   ]
 }

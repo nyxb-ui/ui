@@ -1,13 +1,13 @@
-'use client'
+"use client"
 
-import { useState } from 'react'
-import Link from 'next/link'
-import { ArrowRightIcon, Download } from 'lucide-react'
-import { toast } from 'sonner'
+import { ArrowRightIcon, Download } from "lucide-react"
+import Link from "next/link"
+import { useState } from "react"
+import { toast } from "sonner"
 
-import { ny } from '~/lib/utils'
-import { Button, buttonVariants } from '~/components/ui/button'
-import { Icons } from '~/components/icons'
+import { Icons } from "~/components/icons"
+import { Button, buttonVariants } from "~/components/ui/button"
+import { ny } from "~/lib/utils"
 
 interface RepoDownloadProps {
    repo: string
@@ -27,13 +27,16 @@ export default function RepoDownload({
 
       try {
          // eslint-disable-next-line no-console
-         console.log('Fetching from:', `${process.env.NEXT_PUBLIC_APP_URL}/api/repo/download`)
+         console.log(
+            "Fetching from:",
+            `${process.env.NEXT_PUBLIC_APP_URL}/api/repo/download`,
+         )
          const response = await fetch(
             `${process.env.NEXT_PUBLIC_APP_URL}/api/repo/download`,
             {
-               method: 'POST',
+               method: "POST",
                headers: {
-                  'Content-Type': 'application/json',
+                  "Content-Type": "application/json",
                },
                body: JSON.stringify({ repo, owner }),
             },
@@ -44,12 +47,10 @@ export default function RepoDownload({
          const data = await response.json()
          const downloadUrl = data.downloadUrl
          window.location.href = downloadUrl
-      }
-      catch (error) {
-         toast.error('Error occured while downloading. Please try again.')
-         console.error('Download Error:', error)
-      }
-      finally {
+      } catch (error) {
+         toast.error("Error occured while downloading. Please try again.")
+         console.error("Download Error:", error)
+      } finally {
          setLoading(false)
       }
    }
@@ -61,7 +62,7 @@ export default function RepoDownload({
             disabled={loading}
             className="not-prose group relative w-full gap-2"
          >
-            {loading ? 'Downloading' : 'Free Download'}
+            {loading ? "Downloading" : "Free Download"}
             {!loading && <Download className="size-4" />}
             {loading && <Icons.spinner className="size-4 animate-spin" />}
          </Button>
@@ -75,9 +76,9 @@ export default function RepoDownload({
          rel="noopener noreferrer"
          className={ny(
             buttonVariants({
-               variant: 'default',
+               variant: "default",
             }),
-            'not-prose group relative w-full gap-1',
+            "not-prose group relative w-full gap-1",
          )}
       >
          Donate Now

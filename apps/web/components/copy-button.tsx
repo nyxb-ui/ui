@@ -1,39 +1,38 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import type { DropdownMenuTriggerProps } from '@radix-ui/react-dropdown-menu'
-import { CheckIcon, ClipboardIcon } from 'lucide-react'
-import type { NpmCommands } from 'types/unist'
+import type { DropdownMenuTriggerProps } from "@radix-ui/react-dropdown-menu"
+import { CheckIcon, ClipboardIcon } from "lucide-react"
+import * as React from "react"
+import type { NpmCommands } from "types/unist"
 
-import type { Event } from '~/lib/events'
-import { trackEvent } from '~/lib/events'
-import { ny } from '~/lib/utils'
-import type { ButtonProps } from '~/registry/miami/ui/button'
-import { Button } from '~/registry/miami/ui/button'
+import type { Event } from "~/lib/events"
+import { trackEvent } from "~/lib/events"
+import { ny } from "~/lib/utils"
+import type { ButtonProps } from "~/registry/miami/ui/button"
+import { Button } from "~/registry/miami/ui/button"
 import {
    DropdownMenu,
    DropdownMenuContent,
    DropdownMenuItem,
    DropdownMenuTrigger,
-} from '~/registry/miami/ui/dropdown-menu'
+} from "~/registry/miami/ui/dropdown-menu"
 
 interface CopyButtonProps extends ButtonProps {
    value: string
    src?: string
-   event?: Event['name']
+   event?: Event["name"]
 }
 
 export async function copyToClipboardWithMeta(value: string, event?: Event) {
    navigator.clipboard.writeText(value)
-   if (event)
-      trackEvent(event)
+   if (event) trackEvent(event)
 }
 
 export function CopyButton({
    value,
    className,
    src,
-   variant = 'ghost',
+   variant = "ghost",
    event,
    ...props
 }: CopyButtonProps) {
@@ -50,7 +49,7 @@ export function CopyButton({
          size="icon"
          variant={variant}
          className={ny(
-            'relative z-10 size-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50 [&_svg]:size-3',
+            "relative z-10 size-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50 [&_svg]:size-3",
             className,
          )}
          onClick={() => {
@@ -58,11 +57,11 @@ export function CopyButton({
                value,
                event
                   ? {
-                        name: event,
-                        properties: {
-                           code: value,
-                        },
-                     }
+                       name: event,
+                       properties: {
+                          code: value,
+                       },
+                    }
                   : undefined,
             )
             setHasCopied(true)
@@ -107,17 +106,15 @@ export function CopyWithClassNames({
                size="icon"
                variant="ghost"
                className={ny(
-                  'relative z-10 size-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50',
+                  "relative z-10 size-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50",
                   className,
                )}
             >
-               {hasCopied
-                  ? (
-                        <CheckIcon className="size-3" />
-                     )
-                  : (
-                        <ClipboardIcon className="size-3" />
-                     )}
+               {hasCopied ? (
+                  <CheckIcon className="size-3" />
+               ) : (
+                  <ClipboardIcon className="size-3" />
+               )}
                <span className="sr-only">Copy</span>
             </Button>
          </DropdownMenuTrigger>
@@ -151,9 +148,9 @@ export function CopyNpmCommandButton({
    }, [hasCopied])
 
    const copyCommand = React.useCallback(
-      (value: string, pm: 'npm' | 'pnpm' | 'yarn' | 'bun') => {
+      (value: string, pm: "npm" | "pnpm" | "yarn" | "bun") => {
          copyToClipboardWithMeta(value, {
-            name: 'copy_npm_command',
+            name: "copy_npm_command",
             properties: {
                command: value,
                pm,
@@ -171,38 +168,36 @@ export function CopyNpmCommandButton({
                size="icon"
                variant="ghost"
                className={ny(
-                  'relative z-10 size-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50',
+                  "relative z-10 size-6 text-zinc-50 hover:bg-zinc-700 hover:text-zinc-50",
                   className,
                )}
             >
-               {hasCopied
-                  ? (
-                        <CheckIcon className="size-3" />
-                     )
-                  : (
-                        <ClipboardIcon className="size-3" />
-                     )}
+               {hasCopied ? (
+                  <CheckIcon className="size-3" />
+               ) : (
+                  <ClipboardIcon className="size-3" />
+               )}
                <span className="sr-only">Copy</span>
             </Button>
          </DropdownMenuTrigger>
          <DropdownMenuContent align="end">
             <DropdownMenuItem
-               onClick={() => copyCommand(commands.__npmCommand__, 'npm')}
+               onClick={() => copyCommand(commands.__npmCommand__, "npm")}
             >
                npm
             </DropdownMenuItem>
             <DropdownMenuItem
-               onClick={() => copyCommand(commands.__yarnCommand__, 'yarn')}
+               onClick={() => copyCommand(commands.__yarnCommand__, "yarn")}
             >
                yarn
             </DropdownMenuItem>
             <DropdownMenuItem
-               onClick={() => copyCommand(commands.__pnpmCommand__, 'pnpm')}
+               onClick={() => copyCommand(commands.__pnpmCommand__, "pnpm")}
             >
                pnpm
             </DropdownMenuItem>
             <DropdownMenuItem
-               onClick={() => copyCommand(commands.__bunCommand__, 'bun')}
+               onClick={() => copyCommand(commands.__bunCommand__, "bun")}
             >
                bun
             </DropdownMenuItem>

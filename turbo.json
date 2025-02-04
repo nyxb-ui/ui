@@ -28,10 +28,10 @@
       },
       "typecheck": {},
       "check": {
-         "dependsOn": ["^lint"]
+         "dependsOn": ["^check"]
       },
       "check:fix": {
-         "dependsOn": ["^lint:fix"]
+         "dependsOn": ["^check:fix"]
       },
       "test": {
          "cache": false,

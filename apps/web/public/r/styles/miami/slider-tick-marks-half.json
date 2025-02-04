@@ -1,14 +1,14 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "slider-tick-marks-half",
-  "type": "registry:example",
-  "author": "nyxbui (https://nyxbui.design)",
-  "files": [
-    {
-      "path": "examples/slider-tick-marks-half.tsx",
-      "content": "import { ny } from \"~/lib/utils\"\nimport { Slider } from \"~/registry/miami/ui/slider\"\n\ntype SliderProps = React.ComponentProps<typeof Slider>\n\nexport default function SliderTickMarksHalf({\n   className,\n   ...props\n}: SliderProps) {\n   return (\n      <Slider\n         defaultValue={[2]}\n         max={5}\n         step={1}\n         className={ny(\"w-3/5\", className)}\n         showSteps=\"half\"\n         {...props}\n      />\n   )\n}\n",
-      "type": "registry:example",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "slider-tick-marks-half",
+   "type": "registry:example",
+   "author": "nyxbui (https://nyxbui.design)",
+   "files": [
+      {
+         "path": "examples/slider-tick-marks-half.tsx",
+         "content": "import { ny } from \"~/lib/utils\"\nimport { Slider } from \"~/registry/miami/ui/slider\"\n\ntype SliderProps = React.ComponentProps<typeof Slider>\n\nexport default function SliderTickMarksHalf({\n   className,\n   ...props\n}: SliderProps) {\n   return (\n      <Slider\n         defaultValue={[2]}\n         max={5}\n         step={1}\n         className={ny(\"w-3/5\", className)}\n         showSteps=\"half\"\n         {...props}\n      />\n   )\n}\n",
+         "type": "registry:example",
+         "target": ""
+      }
+   ]
 }

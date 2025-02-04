@@ -1,14 +1,14 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "textarea-demo",
-  "type": "registry:example",
-  "author": "nyxbui (https://nyxbui.design)",
-  "files": [
-    {
-      "path": "examples/textarea-demo.tsx",
-      "content": "import { Textarea } from \"~/registry/miami/ui/textarea\"\n\nexport default function TextareaDemo() {\n   return <Textarea placeholder=\"Type your message here.\" />\n}\n",
-      "type": "registry:example",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "textarea-demo",
+   "type": "registry:example",
+   "author": "nyxbui (https://nyxbui.design)",
+   "files": [
+      {
+         "path": "examples/textarea-demo.tsx",
+         "content": "import { Textarea } from \"~/registry/miami/ui/textarea\"\n\nexport default function TextareaDemo() {\n   return <Textarea placeholder=\"Type your message here.\" />\n}\n",
+         "type": "registry:example",
+         "target": ""
+      }
+   ]
 }

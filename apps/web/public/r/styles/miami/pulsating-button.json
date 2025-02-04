@@ -1,35 +1,35 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "pulsating-button",
-  "type": "registry:ui",
-  "author": "nyxbui (https://nyxbui.design)",
-  "files": [
-    {
-      "path": "ui/pulsating-button.tsx",
-      "content": "\"use client\"\n\nimport type React from \"react\"\n\ninterface PulsatingButtonProps {\n   text: string\n   pulseColor: string\n   backgroundColor: string\n   textColor: string\n   animationDuration: string\n   buttonWidth: string\n   buttonHeight: string\n}\n\nexport const PulsatingButton: React.FC<PulsatingButtonProps> = ({\n   text,\n   pulseColor,\n   backgroundColor,\n   textColor,\n   animationDuration,\n   buttonWidth,\n   buttonHeight,\n}) => {\n   const pulseKeyframes = {\n      \"--tw-pulse-color\": pulseColor,\n      animation: `pulse ${animationDuration} linear infinite`,\n   }\n\n   return (\n      <div className=\"flex items-center justify-center\">\n         <button\n            className=\"relative block flex cursor-pointer items-center justify-center text-center\"\n            style={{\n               color: textColor,\n               backgroundColor,\n               width: buttonWidth,\n               height: buttonHeight,\n               borderRadius: \"12px\",\n               ...pulseKeyframes,\n            }}\n         >\n            <div>{text}</div>\n            <style jsx>\n               {`\n          @keyframes pulse {\n            0% {\n              box-shadow: 0 0 0 0 rgba(var(--tw-pulse-color), 0);\n            }\n            50% {\n              box-shadow: 0 0 0 8px rgba(var(--tw-pulse-color), 0.5);\n            }\n            100% {\n              box-shadow: 0 0 0 0 rgba(var(--tw-pulse-color), 0);\n            }\n          }\n          button::before {\n            content: '';\n            position: absolute;\n            top: 50%;\n            left: 50%;\n            width: 100%;\n            height: 100%;\n            border-radius: 20px;\n            background: inherit;\n            animation: inherit;\n            transform: translate(-50%, -50%);\n            z-index: -1;\n          }\n        `}\n            </style>\n         </button>\n      </div>\n   )\n}\n\nexport default PulsatingButton\n",
-      "type": "registry:ui",
-      "target": ""
-    }
-  ],
-  "tailwind": {
-    "config": {
-      "theme": {
-        "extend": {
-          "animation": {
-            "pulse": "pulse var(--duration) ease-out infinite"
-          },
-          "keyframes": {
-            "pulse": {
-              "0%, 100%": {
-                "boxShadow": "0 0 0 0 var(--pulse-color)"
-              },
-              "50%": {
-                "boxShadow": "0 0 0 8px var(--pulse-color)"
-              }
-            }
-          }
-        }
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "pulsating-button",
+   "type": "registry:ui",
+   "author": "nyxbui (https://nyxbui.design)",
+   "files": [
+      {
+         "path": "ui/pulsating-button.tsx",
+         "content": "\"use client\"\n\nimport type React from \"react\"\n\ninterface PulsatingButtonProps {\n   text: string\n   pulseColor: string\n   backgroundColor: string\n   textColor: string\n   animationDuration: string\n   buttonWidth: string\n   buttonHeight: string\n}\n\nexport const PulsatingButton: React.FC<PulsatingButtonProps> = ({\n   text,\n   pulseColor,\n   backgroundColor,\n   textColor,\n   animationDuration,\n   buttonWidth,\n   buttonHeight,\n}) => {\n   const pulseKeyframes = {\n      \"--tw-pulse-color\": pulseColor,\n      animation: `pulse ${animationDuration} linear infinite`,\n   }\n\n   return (\n      <div className=\"flex items-center justify-center\">\n         <button\n            className=\"relative block flex cursor-pointer items-center justify-center text-center\"\n            style={{\n               color: textColor,\n               backgroundColor,\n               width: buttonWidth,\n               height: buttonHeight,\n               borderRadius: \"12px\",\n               ...pulseKeyframes,\n            }}\n         >\n            <div>{text}</div>\n            <style jsx>\n               {`\n          @keyframes pulse {\n            0% {\n              box-shadow: 0 0 0 0 rgba(var(--tw-pulse-color), 0);\n            }\n            50% {\n              box-shadow: 0 0 0 8px rgba(var(--tw-pulse-color), 0.5);\n            }\n            100% {\n              box-shadow: 0 0 0 0 rgba(var(--tw-pulse-color), 0);\n            }\n          }\n          button::before {\n            content: '';\n            position: absolute;\n            top: 50%;\n            left: 50%;\n            width: 100%;\n            height: 100%;\n            border-radius: 20px;\n            background: inherit;\n            animation: inherit;\n            transform: translate(-50%, -50%);\n            z-index: -1;\n          }\n        `}\n            </style>\n         </button>\n      </div>\n   )\n}\n\nexport default PulsatingButton\n",
+         "type": "registry:ui",
+         "target": ""
       }
-    }
-  }
+   ],
+   "tailwind": {
+      "config": {
+         "theme": {
+            "extend": {
+               "animation": {
+                  "pulse": "pulse var(--duration) ease-out infinite"
+               },
+               "keyframes": {
+                  "pulse": {
+                     "0%, 100%": {
+                        "boxShadow": "0 0 0 0 var(--pulse-color)"
+                     },
+                     "50%": {
+                        "boxShadow": "0 0 0 8px var(--pulse-color)"
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
 }

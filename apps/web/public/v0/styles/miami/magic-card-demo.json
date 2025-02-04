@@ -1,14 +1,14 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "magic-card-demo",
-  "type": "registry:example",
-  "author": "nyxb (https://nyxbui.design)",
-  "files": [
-    {
-      "path": "examples/magic-card-demo.tsx",
-      "content": "import { MagicCard, MagicContainer } from \"@/components/ui/magic-card\"\n\nexport default function MagicCardDemo() {\n   return (\n      <MagicContainer className=\"flex h-[500px] w-full flex-col gap-4 lg:h-[250px] lg:flex-row\">\n         <MagicCard className=\"flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden p-20 shadow-2xl\">\n            <p className=\"z-10 whitespace-nowrap text-4xl font-medium text-gray-800 dark:text-gray-200\">\n               Magic\n            </p>\n            <div className=\"pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]\" />\n         </MagicCard>\n         <MagicCard className=\"flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden p-20 shadow-2xl\">\n            <p className=\"z-10 whitespace-nowrap text-4xl font-medium text-gray-800 dark:text-gray-200\">\n               Card\n            </p>\n            <div className=\"pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]\" />\n         </MagicCard>\n         <MagicCard className=\"flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden p-20 shadow-2xl\">\n            <p className=\"z-10 whitespace-nowrap text-4xl font-medium text-gray-800 dark:text-gray-200\">\n               Demo\n            </p>\n            <div className=\"pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]\" />\n         </MagicCard>\n      </MagicContainer>\n   )\n}\n",
-      "type": "registry:example",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "magic-card-demo",
+   "type": "registry:example",
+   "author": "nyxb (https://nyxbui.design)",
+   "files": [
+      {
+         "path": "examples/magic-card-demo.tsx",
+         "content": "import { MagicCard, MagicContainer } from \"@/components/ui/magic-card\"\n\nexport default function MagicCardDemo() {\n   return (\n      <MagicContainer className=\"flex h-[500px] w-full flex-col gap-4 lg:h-[250px] lg:flex-row\">\n         <MagicCard className=\"flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden p-20 shadow-2xl\">\n            <p className=\"z-10 whitespace-nowrap text-4xl font-medium text-gray-800 dark:text-gray-200\">\n               Magic\n            </p>\n            <div className=\"pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]\" />\n         </MagicCard>\n         <MagicCard className=\"flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden p-20 shadow-2xl\">\n            <p className=\"z-10 whitespace-nowrap text-4xl font-medium text-gray-800 dark:text-gray-200\">\n               Card\n            </p>\n            <div className=\"pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]\" />\n         </MagicCard>\n         <MagicCard className=\"flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden p-20 shadow-2xl\">\n            <p className=\"z-10 whitespace-nowrap text-4xl font-medium text-gray-800 dark:text-gray-200\">\n               Demo\n            </p>\n            <div className=\"pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]\" />\n         </MagicCard>\n      </MagicContainer>\n   )\n}\n",
+         "type": "registry:example",
+         "target": ""
+      }
+   ]
 }

@@ -1,17 +1,15 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "carousel-orientation",
-  "type": "registry:example",
-  "author": "nyxb (https://nyxbui.design)",
-  "registryDependencies": [
-    "carousel"
-  ],
-  "files": [
-    {
-      "path": "examples/carousel-orientation.tsx",
-      "content": "import * as React from \"react\"\n\nimport { Card, CardContent } from \"@/components/ui/card\"\nimport {\n   Carousel,\n   CarouselContent,\n   CarouselItem,\n   CarouselNext,\n   CarouselPrevious,\n} from \"@/components/ui/carousel\"\n\nexport default function CarouselOrientation() {\n   return (\n      <Carousel\n         opts={{\n            align: \"start\",\n         }}\n         orientation=\"vertical\"\n         className=\"w-full max-w-xs\"\n      >\n         <CarouselContent className=\"-mt-1 h-[200px]\">\n            {Array.from({ length: 5 }).map((_, index) => (\n               <CarouselItem key={index} className=\"pt-1 md:basis-1/2\">\n                  <div className=\"p-1\">\n                     <Card>\n                        <CardContent className=\"flex items-center justify-center p-6\">\n                           <span className=\"text-3xl font-semibold\">\n                              {index + 1}\n                           </span>\n                        </CardContent>\n                     </Card>\n                  </div>\n               </CarouselItem>\n            ))}\n         </CarouselContent>\n         <CarouselPrevious />\n         <CarouselNext />\n      </Carousel>\n   )\n}\n",
-      "type": "registry:example",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "carousel-orientation",
+   "type": "registry:example",
+   "author": "nyxb (https://nyxbui.design)",
+   "registryDependencies": ["carousel"],
+   "files": [
+      {
+         "path": "examples/carousel-orientation.tsx",
+         "content": "import * as React from \"react\"\n\nimport { Card, CardContent } from \"@/components/ui/card\"\nimport {\n   Carousel,\n   CarouselContent,\n   CarouselItem,\n   CarouselNext,\n   CarouselPrevious,\n} from \"@/components/ui/carousel\"\n\nexport default function CarouselOrientation() {\n   return (\n      <Carousel\n         opts={{\n            align: \"start\",\n         }}\n         orientation=\"vertical\"\n         className=\"w-full max-w-xs\"\n      >\n         <CarouselContent className=\"-mt-1 h-[200px]\">\n            {Array.from({ length: 5 }).map((_, index) => (\n               <CarouselItem key={index} className=\"pt-1 md:basis-1/2\">\n                  <div className=\"p-1\">\n                     <Card>\n                        <CardContent className=\"flex items-center justify-center p-6\">\n                           <span className=\"text-3xl font-semibold\">\n                              {index + 1}\n                           </span>\n                        </CardContent>\n                     </Card>\n                  </div>\n               </CarouselItem>\n            ))}\n         </CarouselContent>\n         <CarouselPrevious />\n         <CarouselNext />\n      </Carousel>\n   )\n}\n",
+         "type": "registry:example",
+         "target": ""
+      }
+   ]
 }

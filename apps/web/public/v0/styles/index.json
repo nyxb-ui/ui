@@ -1,10 +1,10 @@
 [
-  {
-    "name": "miami",
-    "label": "Miami"
-  },
-  {
-    "name": "default",
-    "label": "Default"
-  }
+   {
+      "name": "miami",
+      "label": "Miami"
+   },
+   {
+      "name": "default",
+      "label": "Default"
+   }
 ]

@@ -1,14 +1,14 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "typography-h1",
-  "type": "registry:example",
-  "author": "nyxbui (https://nyxbui.design)",
-  "files": [
-    {
-      "path": "examples/typography-h1.tsx",
-      "content": "export default function TypographyH1() {\n   return (\n      <h1 className=\"scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl\">\n         Taxing Laughter: The Joke Tax Chronicles\n      </h1>\n   )\n}\n",
-      "type": "registry:example",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "typography-h1",
+   "type": "registry:example",
+   "author": "nyxbui (https://nyxbui.design)",
+   "files": [
+      {
+         "path": "examples/typography-h1.tsx",
+         "content": "export default function TypographyH1() {\n   return (\n      <h1 className=\"scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl\">\n         Taxing Laughter: The Joke Tax Chronicles\n      </h1>\n   )\n}\n",
+         "type": "registry:example",
+         "target": ""
+      }
+   ]
 }

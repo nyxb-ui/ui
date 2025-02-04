@@ -1,38 +1,36 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "line-shadow-text",
-  "type": "registry:ui",
-  "author": "nyxbui (https://nyxbui.design)",
-  "dependencies": [
-    "motion"
-  ],
-  "files": [
-    {
-      "path": "ui/line-shadow-text.tsx",
-      "content": "import { type MotionProps, motion } from \"motion/react\"\nimport { ny } from \"~/registry/default/lib/utils\"\n\ninterface LineShadowTextProps\n   extends Omit<React.HTMLAttributes<HTMLElement>, keyof MotionProps>,\n      MotionProps {\n   shadowColor?: string\n   as?: React.ElementType\n}\n\nexport function LineShadowText({\n   children,\n   shadowColor = \"black\",\n   className,\n   as: Component = \"span\",\n   ...props\n}: LineShadowTextProps) {\n   const MotionComponent = motion.create(Component)\n   const content = typeof children === \"string\" ? children : null\n\n   if (!content) {\n      throw new Error(\"LineShadowText only accepts string content\")\n   }\n\n   return (\n      <MotionComponent\n         style={{ \"--shadow-color\": shadowColor } as React.CSSProperties}\n         className={ny(\n            \"relative z-0 inline-flex\",\n            \"after:absolute after:left-[0.04em] after:top-[0.04em] after:content-[attr(data-text)]\",\n            \"after:bg-[linear-gradient(45deg,transparent_45%,var(--shadow-color)_45%,var(--shadow-color)_55%,transparent_0)]\",\n            \"after:-z-10 after:bg-[length:0.06em_0.06em] after:bg-clip-text after:text-transparent\",\n            \"after:animate-line-shadow\",\n            className,\n         )}\n         data-text={content}\n         {...props}\n      >\n         {content}\n      </MotionComponent>\n   )\n}\n",
-      "type": "registry:ui",
-      "target": ""
-    }
-  ],
-  "tailwind": {
-    "config": {
-      "theme": {
-        "extend": {
-          "animation": {
-            "line-shadow": "line-shadow 15s linear infinite"
-          },
-          "keyframes": {
-            "line-shadow": {
-              "0%": {
-                "background-position": "0 0"
-              },
-              "100%": {
-                "background-position": "100% -100%"
-              }
-            }
-          }
-        }
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "line-shadow-text",
+   "type": "registry:ui",
+   "author": "nyxbui (https://nyxbui.design)",
+   "dependencies": ["motion"],
+   "files": [
+      {
+         "path": "ui/line-shadow-text.tsx",
+         "content": "import { type MotionProps, motion } from \"motion/react\"\nimport { ny } from \"~/registry/default/lib/utils\"\n\ninterface LineShadowTextProps\n   extends Omit<React.HTMLAttributes<HTMLElement>, keyof MotionProps>,\n      MotionProps {\n   shadowColor?: string\n   as?: React.ElementType\n}\n\nexport function LineShadowText({\n   children,\n   shadowColor = \"black\",\n   className,\n   as: Component = \"span\",\n   ...props\n}: LineShadowTextProps) {\n   const MotionComponent = motion.create(Component)\n   const content = typeof children === \"string\" ? children : null\n\n   if (!content) {\n      throw new Error(\"LineShadowText only accepts string content\")\n   }\n\n   return (\n      <MotionComponent\n         style={{ \"--shadow-color\": shadowColor } as React.CSSProperties}\n         className={ny(\n            \"relative z-0 inline-flex\",\n            \"after:absolute after:left-[0.04em] after:top-[0.04em] after:content-[attr(data-text)]\",\n            \"after:bg-[linear-gradient(45deg,transparent_45%,var(--shadow-color)_45%,var(--shadow-color)_55%,transparent_0)]\",\n            \"after:-z-10 after:bg-[length:0.06em_0.06em] after:bg-clip-text after:text-transparent\",\n            \"after:animate-line-shadow\",\n            className,\n         )}\n         data-text={content}\n         {...props}\n      >\n         {content}\n      </MotionComponent>\n   )\n}\n",
+         "type": "registry:ui",
+         "target": ""
       }
-    }
-  }
+   ],
+   "tailwind": {
+      "config": {
+         "theme": {
+            "extend": {
+               "animation": {
+                  "line-shadow": "line-shadow 15s linear infinite"
+               },
+               "keyframes": {
+                  "line-shadow": {
+                     "0%": {
+                        "background-position": "0 0"
+                     },
+                     "100%": {
+                        "background-position": "100% -100%"
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
 }

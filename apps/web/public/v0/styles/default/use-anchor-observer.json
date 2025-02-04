@@ -1,14 +1,14 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "use-anchor-observer",
-  "type": "registry:hook",
-  "author": "nyxb (https://nyxbui.design)",
-  "files": [
-    {
-      "path": "hooks/use-anchor-observer.ts",
-      "content": "\"use client\"\n\nimport { useEffect, useState } from \"react\"\n\n/**\n * Find the active heading of page\n *\n * It selects the top heading by default, and the last item when reached the bottom of page.\n *\n * @param watch - An array of element ids to watch\n * @param single - only one active item at most\n * @returns Active anchor\n */\nexport function useAnchorObserver(watch: string[], single: boolean): string[] {\n   const [activeAnchor, setActiveAnchor] = useState<string[]>([])\n\n   useEffect(() => {\n      let visible: string[] = []\n      const observer = new IntersectionObserver(\n         (entries) => {\n            for (const entry of entries) {\n               if (entry.isIntersecting && !visible.includes(entry.target.id)) {\n                  visible = [...visible, entry.target.id]\n               } else if (\n                  !entry.isIntersecting &&\n                  visible.includes(entry.target.id)\n               ) {\n                  visible = visible.filter((v) => v !== entry.target.id)\n               }\n            }\n\n            if (visible.length > 0) setActiveAnchor(visible)\n         },\n         {\n            rootMargin: single ? \"-80px 0% -70% 0%\" : `-20px 0% -40% 0%`,\n            threshold: 1,\n         },\n      )\n\n      function onScroll(): void {\n         const element = document.scrollingElement\n         if (!element) return\n\n         if (element.scrollTop === 0 && single) {\n            setActiveAnchor(watch.slice(0, 1))\n         } else if (\n            element.scrollTop + element.clientHeight >=\n            element.scrollHeight - 6\n         ) {\n            setActiveAnchor((active) => {\n               return active.length > 0 && !single\n                  ? watch.slice(watch.indexOf(active[0]))\n                  : watch.slice(-1)\n            })\n         }\n      }\n\n      for (const heading of watch) {\n         const element = document.getElementById(heading)\n\n         if (element) observer.observe(element)\n      }\n\n      onScroll()\n      window.addEventListener(\"scroll\", onScroll)\n      return () => {\n         window.removeEventListener(\"scroll\", onScroll)\n         observer.disconnect()\n      }\n   }, [single, watch])\n\n   return single ? activeAnchor.slice(0, 1) : activeAnchor\n}\n",
-      "type": "registry:hook",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "use-anchor-observer",
+   "type": "registry:hook",
+   "author": "nyxb (https://nyxbui.design)",
+   "files": [
+      {
+         "path": "hooks/use-anchor-observer.ts",
+         "content": "\"use client\"\n\nimport { useEffect, useState } from \"react\"\n\n/**\n * Find the active heading of page\n *\n * It selects the top heading by default, and the last item when reached the bottom of page.\n *\n * @param watch - An array of element ids to watch\n * @param single - only one active item at most\n * @returns Active anchor\n */\nexport function useAnchorObserver(watch: string[], single: boolean): string[] {\n   const [activeAnchor, setActiveAnchor] = useState<string[]>([])\n\n   useEffect(() => {\n      let visible: string[] = []\n      const observer = new IntersectionObserver(\n         (entries) => {\n            for (const entry of entries) {\n               if (entry.isIntersecting && !visible.includes(entry.target.id)) {\n                  visible = [...visible, entry.target.id]\n               } else if (\n                  !entry.isIntersecting &&\n                  visible.includes(entry.target.id)\n               ) {\n                  visible = visible.filter((v) => v !== entry.target.id)\n               }\n            }\n\n            if (visible.length > 0) setActiveAnchor(visible)\n         },\n         {\n            rootMargin: single ? \"-80px 0% -70% 0%\" : `-20px 0% -40% 0%`,\n            threshold: 1,\n         },\n      )\n\n      function onScroll(): void {\n         const element = document.scrollingElement\n         if (!element) return\n\n         if (element.scrollTop === 0 && single) {\n            setActiveAnchor(watch.slice(0, 1))\n         } else if (\n            element.scrollTop + element.clientHeight >=\n            element.scrollHeight - 6\n         ) {\n            setActiveAnchor((active) => {\n               return active.length > 0 && !single\n                  ? watch.slice(watch.indexOf(active[0]))\n                  : watch.slice(-1)\n            })\n         }\n      }\n\n      for (const heading of watch) {\n         const element = document.getElementById(heading)\n\n         if (element) observer.observe(element)\n      }\n\n      onScroll()\n      window.addEventListener(\"scroll\", onScroll)\n      return () => {\n         window.removeEventListener(\"scroll\", onScroll)\n         observer.disconnect()\n      }\n   }, [single, watch])\n\n   return single ? activeAnchor.slice(0, 1) : activeAnchor\n}\n",
+         "type": "registry:hook",
+         "target": ""
+      }
+   ]
 }

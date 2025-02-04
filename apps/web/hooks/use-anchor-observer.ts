@@ -1,6 +1,6 @@
-'use client'
+"use client"
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react"
 
 /**
  * Find the active heading of page
@@ -21,35 +21,31 @@ export function useAnchorObserver(watch: string[], single: boolean): string[] {
             for (const entry of entries) {
                if (entry.isIntersecting && !visible.includes(entry.target.id)) {
                   visible = [...visible, entry.target.id]
-               }
-               else if (
-                  !entry.isIntersecting
-                  && visible.includes(entry.target.id)
+               } else if (
+                  !entry.isIntersecting &&
+                  visible.includes(entry.target.id)
                ) {
-                  visible = visible.filter(v => v !== entry.target.id)
+                  visible = visible.filter((v) => v !== entry.target.id)
                }
             }
 
-            if (visible.length > 0)
-               setActiveAnchor(visible)
+            if (visible.length > 0) setActiveAnchor(visible)
          },
          {
-            rootMargin: single ? '-80px 0% -70% 0%' : `-20px 0% -40% 0%`,
+            rootMargin: single ? "-80px 0% -70% 0%" : `-20px 0% -40% 0%`,
             threshold: 1,
          },
       )
 
       function onScroll(): void {
          const element = document.scrollingElement
-         if (!element)
-            return
+         if (!element) return
 
          if (element.scrollTop === 0 && single) {
             setActiveAnchor(watch.slice(0, 1))
-         }
-         else if (
-            element.scrollTop + element.clientHeight
-            >= element.scrollHeight - 6
+         } else if (
+            element.scrollTop + element.clientHeight >=
+            element.scrollHeight - 6
          ) {
             setActiveAnchor((active) => {
                return active.length > 0 && !single
@@ -62,14 +58,13 @@ export function useAnchorObserver(watch: string[], single: boolean): string[] {
       for (const heading of watch) {
          const element = document.getElementById(heading)
 
-         if (element)
-            observer.observe(element)
+         if (element) observer.observe(element)
       }
 
       onScroll()
-      window.addEventListener('scroll', onScroll)
+      window.addEventListener("scroll", onScroll)
       return () => {
-         window.removeEventListener('scroll', onScroll)
+         window.removeEventListener("scroll", onScroll)
          observer.disconnect()
       }
    }, [single, watch])

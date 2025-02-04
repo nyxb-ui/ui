@@ -1,7 +1,7 @@
-'use client'
+"use client"
 
-import { useEffect, useRef } from 'react'
-import { ny } from '~/lib/utils'
+import { useEffect, useRef } from "react"
+import { ny } from "~/lib/utils"
 
 interface GlobeGridProps {
    className?: string
@@ -11,14 +11,17 @@ interface GlobeGridProps {
 export default function GlobeGrid({ className, children }: GlobeGridProps) {
    return (
       <section
-         className={ny('relative overflow-hidden', className)}
-         style={{
-            '--sm-grid-rows': 7,
-            '--md-grid-rows': 6,
-            '--sm-grid-columns': 8,
-            '--md-grid-columns': 12,
-            '--sm-height': 'calc(var(--width) / var(--grid-columns) * var(--grid-rows))',
-         } as React.CSSProperties}
+         className={ny("relative overflow-hidden", className)}
+         style={
+            {
+               "--sm-grid-rows": 7,
+               "--md-grid-rows": 6,
+               "--sm-grid-columns": 8,
+               "--md-grid-columns": 12,
+               "--sm-height":
+                  "calc(var(--width) / var(--grid-columns) * var(--grid-rows))",
+            } as React.CSSProperties
+         }
       >
          {/* Mobile Background Overlay */}
          <div className="bg-background-200 absolute inset-0 right-px z-[3] md:hidden" />
@@ -31,7 +34,7 @@ export default function GlobeGrid({ className, children }: GlobeGridProps) {
                width="100%"
                viewBox="-1 -1 802 402"
                style={{
-                  transform: 'translateY(0px) scale(1.002)',
+                  transform: "translateY(0px) scale(1.002)",
                }}
             >
                <GlobeWireframe />
@@ -41,9 +44,7 @@ export default function GlobeGrid({ className, children }: GlobeGridProps) {
          </div>
 
          {/* Content */}
-         <div className="relative z-10">
-            {children}
-         </div>
+         <div className="relative z-10">{children}</div>
       </section>
    )
 }
@@ -51,12 +52,7 @@ export default function GlobeGrid({ className, children }: GlobeGridProps) {
 function GlobeWireframe() {
    return (
       <g data-testid="globe-wireframe">
-         <circle
-            cx="400"
-            cy="400"
-            r="400"
-            fill="var(--ds-background-200)"
-         />
+         <circle cx="400" cy="400" r="400" fill="var(--ds-background-200)" />
 
          {/* Vertical curved lines */}
          {[-400, -266.667, -133.333, 0, 133.333, 266.667, 400].map((x, i) => (

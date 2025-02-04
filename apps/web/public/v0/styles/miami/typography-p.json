@@ -1,14 +1,14 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "typography-p",
-  "type": "registry:example",
-  "author": "nyxb (https://nyxbui.design)",
-  "files": [
-    {
-      "path": "examples/typography-p.tsx",
-      "content": "export default function TypographyP() {\n   return (\n      <p className=\"leading-7 [&:not(:first-child)]:mt-6\">\n         The king, seeing how much happier his subjects were, realized the error\n         of his ways and repealed the joke tax.\n      </p>\n   )\n}\n",
-      "type": "registry:example",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "typography-p",
+   "type": "registry:example",
+   "author": "nyxb (https://nyxbui.design)",
+   "files": [
+      {
+         "path": "examples/typography-p.tsx",
+         "content": "export default function TypographyP() {\n   return (\n      <p className=\"leading-7 [&:not(:first-child)]:mt-6\">\n         The king, seeing how much happier his subjects were, realized the error\n         of his ways and repealed the joke tax.\n      </p>\n   )\n}\n",
+         "type": "registry:example",
+         "target": ""
+      }
+   ]
 }

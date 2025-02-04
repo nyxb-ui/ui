@@ -1,14 +1,14 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "typography-blockquote",
-  "type": "registry:example",
-  "author": "nyxbui (https://nyxbui.design)",
-  "files": [
-    {
-      "path": "examples/typography-blockquote.tsx",
-      "content": "export default function TypographyBlockquote() {\n   return (\n      <blockquote className=\"mt-6 border-l-2 pl-6 italic\">\n         \"After all,\" he said, \"everyone enjoys a good joke, so it's only fair\n         that they should pay for the privilege.\"\n      </blockquote>\n   )\n}\n",
-      "type": "registry:example",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "typography-blockquote",
+   "type": "registry:example",
+   "author": "nyxbui (https://nyxbui.design)",
+   "files": [
+      {
+         "path": "examples/typography-blockquote.tsx",
+         "content": "export default function TypographyBlockquote() {\n   return (\n      <blockquote className=\"mt-6 border-l-2 pl-6 italic\">\n         \"After all,\" he said, \"everyone enjoys a good joke, so it's only fair\n         that they should pay for the privilege.\"\n      </blockquote>\n   )\n}\n",
+         "type": "registry:example",
+         "target": ""
+      }
+   ]
 }

@@ -1,14 +1,14 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "globe-grid-full-demo",
-  "type": "registry:example",
-  "author": "nyxbui (https://nyxbui.design)",
-  "files": [
-    {
-      "path": "examples/globe-grid-full-demo.tsx",
-      "content": "import { GlobeGrid } from \"~/registry/miami/ui/globe-grid\"\n\nexport function GlobeGridDemo() {\n   return <GlobeGrid fullGlobe />\n}\n\nexport default GlobeGridDemo\n",
-      "type": "registry:example",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "globe-grid-full-demo",
+   "type": "registry:example",
+   "author": "nyxbui (https://nyxbui.design)",
+   "files": [
+      {
+         "path": "examples/globe-grid-full-demo.tsx",
+         "content": "import { GlobeGrid } from \"~/registry/miami/ui/globe-grid\"\n\nexport function GlobeGridDemo() {\n   return <GlobeGrid fullGlobe />\n}\n\nexport default GlobeGridDemo\n",
+         "type": "registry:example",
+         "target": ""
+      }
+   ]
 }

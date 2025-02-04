@@ -1,14 +1,14 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "toc-nested",
-  "type": "registry:example",
-  "author": "nyxb (https://nyxbui.design)",
-  "files": [
-    {
-      "path": "examples/toc-nested.tsx",
-      "content": "import {\n   TableOfContentsItem,\n   TableOfContentsLink,\n   TableOfContentsList,\n   TableOfContentsTitle,\n} from \"@/components/ui/toc\"\n\nexport default function TOCDNested() {\n   return (\n      <TableOfContentsList>\n         <TableOfContentsTitle>Nested Table of Contents</TableOfContentsTitle>\n         <TableOfContentsItem>\n            <TableOfContentsLink href=\"#first-section-nested\">\n               First Section\n            </TableOfContentsLink>\n         </TableOfContentsItem>\n         <TableOfContentsItem indent>\n            <TableOfContentsList>\n               <TableOfContentsLink href=\"#first-nested-section-nested\">\n                  First Nested Section\n               </TableOfContentsLink>\n               <TableOfContentsItem indent>\n                  <TableOfContentsLink href=\"#second-nested-section-nested\">\n                     Second Nested Section\n                  </TableOfContentsLink>\n               </TableOfContentsItem>\n            </TableOfContentsList>\n         </TableOfContentsItem>\n         <TableOfContentsItem>\n            <TableOfContentsLink href=\"#third-section-nested\">\n               Third Section\n            </TableOfContentsLink>\n         </TableOfContentsItem>\n      </TableOfContentsList>\n   )\n}\n",
-      "type": "registry:example",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "toc-nested",
+   "type": "registry:example",
+   "author": "nyxb (https://nyxbui.design)",
+   "files": [
+      {
+         "path": "examples/toc-nested.tsx",
+         "content": "import {\n   TableOfContentsItem,\n   TableOfContentsLink,\n   TableOfContentsList,\n   TableOfContentsTitle,\n} from \"@/components/ui/toc\"\n\nexport default function TOCDNested() {\n   return (\n      <TableOfContentsList>\n         <TableOfContentsTitle>Nested Table of Contents</TableOfContentsTitle>\n         <TableOfContentsItem>\n            <TableOfContentsLink href=\"#first-section-nested\">\n               First Section\n            </TableOfContentsLink>\n         </TableOfContentsItem>\n         <TableOfContentsItem indent>\n            <TableOfContentsList>\n               <TableOfContentsLink href=\"#first-nested-section-nested\">\n                  First Nested Section\n               </TableOfContentsLink>\n               <TableOfContentsItem indent>\n                  <TableOfContentsLink href=\"#second-nested-section-nested\">\n                     Second Nested Section\n                  </TableOfContentsLink>\n               </TableOfContentsItem>\n            </TableOfContentsList>\n         </TableOfContentsItem>\n         <TableOfContentsItem>\n            <TableOfContentsLink href=\"#third-section-nested\">\n               Third Section\n            </TableOfContentsLink>\n         </TableOfContentsItem>\n      </TableOfContentsList>\n   )\n}\n",
+         "type": "registry:example",
+         "target": ""
+      }
+   ]
 }

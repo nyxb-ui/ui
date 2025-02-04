@@ -1,14 +1,14 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "script-copy-btn-demo",
-  "type": "registry:example",
-  "author": "nyxb (https://nyxbui.design)",
-  "files": [
-    {
-      "path": "examples/script-copy-btn-demo.tsx",
-      "content": "import { ScriptCopyBtn } from \"@/components/ui/script-copy-btn\"\n\nexport default function ScriptCopyBtnDemo() {\n   const customCommandMap = {\n      npm: \"npm run nyxb add button\",\n      yarn: \"yarn nyxb add button\",\n      pnpm: \"pnpm dlx nyxb@latest add button\",\n      bun: \"bun x nyxb@latest add button\",\n   }\n   return (\n      <ScriptCopyBtn\n         showMultiplePackageOptions={true}\n         codeLanguage=\"shell\"\n         lightTheme=\"nord\"\n         darkTheme=\"vitesse-dark\"\n         commandMap={customCommandMap}\n      />\n   )\n}\n",
-      "type": "registry:example",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "script-copy-btn-demo",
+   "type": "registry:example",
+   "author": "nyxb (https://nyxbui.design)",
+   "files": [
+      {
+         "path": "examples/script-copy-btn-demo.tsx",
+         "content": "import { ScriptCopyBtn } from \"@/components/ui/script-copy-btn\"\n\nexport default function ScriptCopyBtnDemo() {\n   const customCommandMap = {\n      npm: \"npm run nyxb add button\",\n      yarn: \"yarn nyxb add button\",\n      pnpm: \"pnpm dlx nyxb@latest add button\",\n      bun: \"bun x nyxb@latest add button\",\n   }\n   return (\n      <ScriptCopyBtn\n         showMultiplePackageOptions={true}\n         codeLanguage=\"shell\"\n         lightTheme=\"nord\"\n         darkTheme=\"vitesse-dark\"\n         commandMap={customCommandMap}\n      />\n   )\n}\n",
+         "type": "registry:example",
+         "target": ""
+      }
+   ]
 }

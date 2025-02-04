@@ -1,38 +1,38 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "grid-layout",
-  "type": "registry:ui",
-  "author": "nyxb (https://nyxbui.design)",
-  "files": [
-    {
-      "path": "ui/grid-layout.tsx",
-      "content": "\"use client\"\n\nimport type * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\ninterface CrosshairConfig {\n   topLeft?: boolean\n   topRight?: boolean\n   bottomLeft?: boolean\n   bottomRight?: boolean\n}\n\ninterface GridLayoutProps extends React.HTMLAttributes<HTMLDivElement> {\n   children: React.ReactNode\n   crosshairs?: CrosshairConfig\n   gridLines?: boolean\n   columns?: 8 | 12 | 16\n   lineVariant?: \"all\" | \"vertical\" | \"horizontal\" | \"center\" | \"none\"\n}\n\nfunction CrosshairIcon({ className }: { className?: string }) {\n   return (\n      <svg\n         width=\"16\"\n         height=\"16\"\n         viewBox=\"0 0 16 16\"\n         fill=\"none\"\n         className={className}\n         xmlns=\"http://www.w3.org/2000/svg\"\n      >\n         <path\n            d=\"M8 1V15M1 8H15\"\n            stroke=\"currentColor\"\n            strokeWidth=\"1\"\n            strokeLinecap=\"round\"\n         />\n      </svg>\n   )\n}\n\nexport function GridLayout({\n   children,\n   crosshairs,\n   gridLines = true,\n   columns = 16,\n   lineVariant = \"all\",\n   className,\n   ...props\n}: GridLayoutProps) {\n   return (\n      <div\n         className={cn(\n            \"relative grid w-full gap-0\",\n            gridLines && \"border-grid-line border\",\n            columns === 16 && \"grid-cols-grid-16\",\n            columns === 12 && \"grid-cols-grid-12\",\n            columns === 8 && \"grid-cols-grid-8\",\n            className,\n         )}\n         {...props}\n      >\n         {gridLines && (\n            <div className=\"absolute inset-0 z-0\">\n               {/* Vertikale Linien */}\n               {(lineVariant === \"all\" ||\n                  lineVariant === \"vertical\" ||\n                  lineVariant === \"center\") && (\n                  <div className=\"absolute inset-0 flex justify-center\">\n                     {lineVariant === \"center\" ? (\n                        <div className=\"border-grid-line h-full w-px border-r\" />\n                     ) : (\n                        <div\n                           className={cn(\n                              \"grid size-full\",\n                              columns === 16 && \"grid-cols-grid-16\",\n                              columns === 12 && \"grid-cols-grid-12\",\n                              columns === 8 && \"grid-cols-grid-8\",\n                           )}\n                        >\n                           {Array.from({ length: columns }).map((_, i) => (\n                              <div\n                                 key={i}\n                                 className={cn(\n                                    \"border-grid-line border-r\",\n                                    i === 0 && \"border-l\",\n                                 )}\n                              />\n                           ))}\n                        </div>\n                     )}\n                  </div>\n               )}\n\n               {/* Horizontale Linien */}\n               {(lineVariant === \"all\" || lineVariant === \"horizontal\") && (\n                  <div className=\"absolute inset-0 grid grid-rows-[repeat(16,1fr)]\">\n                     {Array.from({ length: 17 }).map((_, i) => (\n                        <div\n                           key={i}\n                           className={cn(\n                              \"border-grid-line border-t\",\n                              i === 16 && \"border-b\",\n                           )}\n                        />\n                     ))}\n                  </div>\n               )}\n            </div>\n         )}\n\n         {/* Crosshairs */}\n         {crosshairs?.topLeft && (\n            <CrosshairIcon className=\"text-grid-line absolute -left-2 -top-2\" />\n         )}\n         {crosshairs?.topRight && (\n            <CrosshairIcon className=\"text-grid-line absolute -right-2 -top-2\" />\n         )}\n         {crosshairs?.bottomLeft && (\n            <CrosshairIcon className=\"text-grid-line absolute -bottom-2 -left-2\" />\n         )}\n         {crosshairs?.bottomRight && (\n            <CrosshairIcon className=\"text-grid-line absolute -bottom-2 -right-2\" />\n         )}\n\n         <div className=\"relative z-10 col-span-full\">{children}</div>\n      </div>\n   )\n}\n\nexport default GridLayout\n",
-      "type": "registry:ui",
-      "target": ""
-    }
-  ],
-  "tailwind": {
-    "config": {
-      "theme": {
-        "extend": {
-          "borderColor": {
-            "grid-line": "hsl(var(--border) / var(--grid-line-opacity))"
-          },
-          "gridTemplateColumns": {
-            "grid-16": "repeat(16, minmax(0, 1fr))",
-            "grid-12": "repeat(12, minmax(0, 1fr))",
-            "grid-8": "repeat(8, minmax(0, 1fr))"
-          }
-        }
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "grid-layout",
+   "type": "registry:ui",
+   "author": "nyxb (https://nyxbui.design)",
+   "files": [
+      {
+         "path": "ui/grid-layout.tsx",
+         "content": "\"use client\"\n\nimport type * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\ninterface CrosshairConfig {\n   topLeft?: boolean\n   topRight?: boolean\n   bottomLeft?: boolean\n   bottomRight?: boolean\n}\n\ninterface GridLayoutProps extends React.HTMLAttributes<HTMLDivElement> {\n   children: React.ReactNode\n   crosshairs?: CrosshairConfig\n   gridLines?: boolean\n   columns?: 8 | 12 | 16\n   lineVariant?: \"all\" | \"vertical\" | \"horizontal\" | \"center\" | \"none\"\n}\n\nfunction CrosshairIcon({ className }: { className?: string }) {\n   return (\n      <svg\n         width=\"16\"\n         height=\"16\"\n         viewBox=\"0 0 16 16\"\n         fill=\"none\"\n         className={className}\n         xmlns=\"http://www.w3.org/2000/svg\"\n      >\n         <path\n            d=\"M8 1V15M1 8H15\"\n            stroke=\"currentColor\"\n            strokeWidth=\"1\"\n            strokeLinecap=\"round\"\n         />\n      </svg>\n   )\n}\n\nexport function GridLayout({\n   children,\n   crosshairs,\n   gridLines = true,\n   columns = 16,\n   lineVariant = \"all\",\n   className,\n   ...props\n}: GridLayoutProps) {\n   return (\n      <div\n         className={cn(\n            \"relative grid w-full gap-0\",\n            gridLines && \"border-grid-line border\",\n            columns === 16 && \"grid-cols-grid-16\",\n            columns === 12 && \"grid-cols-grid-12\",\n            columns === 8 && \"grid-cols-grid-8\",\n            className,\n         )}\n         {...props}\n      >\n         {gridLines && (\n            <div className=\"absolute inset-0 z-0\">\n               {/* Vertikale Linien */}\n               {(lineVariant === \"all\" ||\n                  lineVariant === \"vertical\" ||\n                  lineVariant === \"center\") && (\n                  <div className=\"absolute inset-0 flex justify-center\">\n                     {lineVariant === \"center\" ? (\n                        <div className=\"border-grid-line h-full w-px border-r\" />\n                     ) : (\n                        <div\n                           className={cn(\n                              \"grid size-full\",\n                              columns === 16 && \"grid-cols-grid-16\",\n                              columns === 12 && \"grid-cols-grid-12\",\n                              columns === 8 && \"grid-cols-grid-8\",\n                           )}\n                        >\n                           {Array.from({ length: columns }).map((_, i) => (\n                              <div\n                                 key={i}\n                                 className={cn(\n                                    \"border-grid-line border-r\",\n                                    i === 0 && \"border-l\",\n                                 )}\n                              />\n                           ))}\n                        </div>\n                     )}\n                  </div>\n               )}\n\n               {/* Horizontale Linien */}\n               {(lineVariant === \"all\" || lineVariant === \"horizontal\") && (\n                  <div className=\"absolute inset-0 grid grid-rows-[repeat(16,1fr)]\">\n                     {Array.from({ length: 17 }).map((_, i) => (\n                        <div\n                           key={i}\n                           className={cn(\n                              \"border-grid-line border-t\",\n                              i === 16 && \"border-b\",\n                           )}\n                        />\n                     ))}\n                  </div>\n               )}\n            </div>\n         )}\n\n         {/* Crosshairs */}\n         {crosshairs?.topLeft && (\n            <CrosshairIcon className=\"text-grid-line absolute -left-2 -top-2\" />\n         )}\n         {crosshairs?.topRight && (\n            <CrosshairIcon className=\"text-grid-line absolute -right-2 -top-2\" />\n         )}\n         {crosshairs?.bottomLeft && (\n            <CrosshairIcon className=\"text-grid-line absolute -bottom-2 -left-2\" />\n         )}\n         {crosshairs?.bottomRight && (\n            <CrosshairIcon className=\"text-grid-line absolute -bottom-2 -right-2\" />\n         )}\n\n         <div className=\"relative z-10 col-span-full\">{children}</div>\n      </div>\n   )\n}\n\nexport default GridLayout\n",
+         "type": "registry:ui",
+         "target": ""
       }
-    }
-  },
-  "cssVars": {
-    "light": {
-      "--grid-line-opacity": "0.5"
-    },
-    "dark": {
-      "--grid-line-opacity": "0.5"
-    }
-  }
+   ],
+   "tailwind": {
+      "config": {
+         "theme": {
+            "extend": {
+               "borderColor": {
+                  "grid-line": "hsl(var(--border) / var(--grid-line-opacity))"
+               },
+               "gridTemplateColumns": {
+                  "grid-16": "repeat(16, minmax(0, 1fr))",
+                  "grid-12": "repeat(12, minmax(0, 1fr))",
+                  "grid-8": "repeat(8, minmax(0, 1fr))"
+               }
+            }
+         }
+      }
+   },
+   "cssVars": {
+      "light": {
+         "--grid-line-opacity": "0.5"
+      },
+      "dark": {
+         "--grid-line-opacity": "0.5"
+      }
+   }
 }

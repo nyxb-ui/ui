@@ -1,14 +1,14 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "video-modal-demo",
-  "type": "registry:example",
-  "author": "nyxb (https://nyxbui.design)",
-  "files": [
-    {
-      "path": "examples/video-modal-demo.tsx",
-      "content": "import { PlayIcon } from \"@radix-ui/react-icons\"\nimport { Button } from \"@/components/ui/button\"\nimport {\n   VideoModal,\n   VideoModalContent,\n   VideoModalDescription,\n   VideoModalTitle,\n   VideoModalTrigger,\n   VideoModalVideo,\n   VideoPlayButton,\n   VideoPlayer,\n   VideoPreview,\n} from \"@/components/ui/video-modal\"\n\nfunction VideoModalDemo() {\n   return (\n      <div className=\"relative justify-center\">\n         <VideoModal>\n            <VideoModalTrigger>\n               <Button>Open modal</Button>\n            </VideoModalTrigger>\n            <VideoModalContent>\n               <VideoModalTitle>Modal Video Demo</VideoModalTitle>\n               <VideoModalDescription>\n                  Your subtitle or description here\n               </VideoModalDescription>\n               <VideoModalVideo>\n                  <VideoPlayer>\n                     <VideoPreview>\n                        <img\n                           src=\"https://cdn.dribbble.com/userupload/4145843/file/original-c7a2c9a768450460259f232259d103d2.png?resize=1600x1200\"\n                           alt=\"Video preview\"\n                        />\n                     </VideoPreview>\n                     <VideoPlayButton>\n                        <button className=\"absolute inset-0 m-auto flex size-32 items-center justify-center rounded-full border border-white border-white/10 bg-white/50 transition duration-300 hover:bg-white/75\">\n                           <PlayIcon className=\"size-20 stroke-1 text-white\" />\n                        </button>\n                     </VideoPlayButton>\n                     <iframe\n                        className=\"size-full\"\n                        src=\"https://cdn.magicui.design/globe.mp4\"\n                        allow=\"accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;\"\n                        allowFullScreen\n                     />\n                  </VideoPlayer>\n               </VideoModalVideo>\n            </VideoModalContent>\n         </VideoModal>\n      </div>\n   )\n}\n\nexport default VideoModalDemo\n",
-      "type": "registry:example",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "video-modal-demo",
+   "type": "registry:example",
+   "author": "nyxb (https://nyxbui.design)",
+   "files": [
+      {
+         "path": "examples/video-modal-demo.tsx",
+         "content": "import { PlayIcon } from \"@radix-ui/react-icons\"\nimport { Button } from \"@/components/ui/button\"\nimport {\n   VideoModal,\n   VideoModalContent,\n   VideoModalDescription,\n   VideoModalTitle,\n   VideoModalTrigger,\n   VideoModalVideo,\n   VideoPlayButton,\n   VideoPlayer,\n   VideoPreview,\n} from \"@/components/ui/video-modal\"\n\nfunction VideoModalDemo() {\n   return (\n      <div className=\"relative justify-center\">\n         <VideoModal>\n            <VideoModalTrigger>\n               <Button>Open modal</Button>\n            </VideoModalTrigger>\n            <VideoModalContent>\n               <VideoModalTitle>Modal Video Demo</VideoModalTitle>\n               <VideoModalDescription>\n                  Your subtitle or description here\n               </VideoModalDescription>\n               <VideoModalVideo>\n                  <VideoPlayer>\n                     <VideoPreview>\n                        <img\n                           src=\"https://cdn.dribbble.com/userupload/4145843/file/original-c7a2c9a768450460259f232259d103d2.png?resize=1600x1200\"\n                           alt=\"Video preview\"\n                        />\n                     </VideoPreview>\n                     <VideoPlayButton>\n                        <button className=\"absolute inset-0 m-auto flex size-32 items-center justify-center rounded-full border border-white border-white/10 bg-white/50 transition duration-300 hover:bg-white/75\">\n                           <PlayIcon className=\"size-20 stroke-1 text-white\" />\n                        </button>\n                     </VideoPlayButton>\n                     <iframe\n                        className=\"size-full\"\n                        src=\"https://cdn.magicui.design/globe.mp4\"\n                        allow=\"accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;\"\n                        allowFullScreen\n                     />\n                  </VideoPlayer>\n               </VideoModalVideo>\n            </VideoModalContent>\n         </VideoModal>\n      </div>\n   )\n}\n\nexport default VideoModalDemo\n",
+         "type": "registry:example",
+         "target": ""
+      }
+   ]
 }

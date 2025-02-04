@@ -1,17 +1,15 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "button-ghost",
-  "type": "registry:example",
-  "author": "nyxbui (https://nyxbui.design)",
-  "registryDependencies": [
-    "button"
-  ],
-  "files": [
-    {
-      "path": "examples/button-ghost.tsx",
-      "content": "import { Button } from \"~/registry/default/ui/button\"\n\nexport default function ButtonGhost() {\n   return <Button variant=\"ghost\">Ghost</Button>\n}\n",
-      "type": "registry:example",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "button-ghost",
+   "type": "registry:example",
+   "author": "nyxbui (https://nyxbui.design)",
+   "registryDependencies": ["button"],
+   "files": [
+      {
+         "path": "examples/button-ghost.tsx",
+         "content": "import { Button } from \"~/registry/default/ui/button\"\n\nexport default function ButtonGhost() {\n   return <Button variant=\"ghost\">Ghost</Button>\n}\n",
+         "type": "registry:example",
+         "target": ""
+      }
+   ]
 }

@@ -1,17 +1,15 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "input-demo",
-  "type": "registry:example",
-  "author": "nyxb (https://nyxbui.design)",
-  "registryDependencies": [
-    "input"
-  ],
-  "files": [
-    {
-      "path": "examples/input-demo.tsx",
-      "content": "import { Input } from \"@/components/ui/input\"\n\nexport default function InputDemo() {\n   return <Input type=\"email\" placeholder=\"Email\" />\n}\n",
-      "type": "registry:example",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "input-demo",
+   "type": "registry:example",
+   "author": "nyxb (https://nyxbui.design)",
+   "registryDependencies": ["input"],
+   "files": [
+      {
+         "path": "examples/input-demo.tsx",
+         "content": "import { Input } from \"@/components/ui/input\"\n\nexport default function InputDemo() {\n   return <Input type=\"email\" placeholder=\"Email\" />\n}\n",
+         "type": "registry:example",
+         "target": ""
+      }
+   ]
 }

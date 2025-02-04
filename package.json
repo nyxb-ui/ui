@@ -21,8 +21,8 @@
       "typecheck": "turbo run typecheck",
       "pub:beta": "cd packages/cli && pnpm pub:beta",
       "pub:release": "cd packages/cli && pnpm pub:release",
-      "lint": "turbo run lint",
-      "lint:fix": "turbo run lint:fix",
+      "check": "turbo run check",
+      "check:fix": "turbo run check:fix",
       "test": "turbo run test --force"
    },
    "dependencies": {

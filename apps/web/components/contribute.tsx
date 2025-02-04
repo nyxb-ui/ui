@@ -1,35 +1,35 @@
-import type { Doc } from 'content-collections'
-import { BugIcon, LightbulbIcon, PencilIcon } from 'lucide-react'
-import Link from 'next/link'
+import type { Doc } from "content-collections"
+import { BugIcon, LightbulbIcon, PencilIcon } from "lucide-react"
+import Link from "next/link"
 
-import { getGitHubIssueUrl, getGithubFileUrl } from '~/lib/github'
+import { getGitHubIssueUrl, getGithubFileUrl } from "~/lib/github"
 
 export function Contribute({ doc }: { doc: Doc }) {
    const contributeLinks = [
       {
-         text: 'Report an issue',
+         text: "Report an issue",
          icon: BugIcon,
          href: getGitHubIssueUrl({
-            owner: 'nyxb-ui',
-            repo: 'ui',
+            owner: "nyxb-ui",
+            repo: "ui",
             title: `[bug]: ${doc.slug}`,
-            labels: ['bug', 'documentation'],
-            template: 'bug_report.md',
+            labels: ["bug", "documentation"],
+            template: "bug_report.md",
          }),
       },
       {
-         text: 'Request a feature',
+         text: "Request a feature",
          icon: LightbulbIcon,
          href: getGitHubIssueUrl({
-            owner: 'nyxb-ui',
-            repo: 'ui',
+            owner: "nyxb-ui",
+            repo: "ui",
             title: `[feat]: ${doc.slug}`,
-            labels: ['enhancement'],
-            template: 'feature_request.md',
+            labels: ["enhancement"],
+            template: "feature_request.md",
          }),
       },
       {
-         text: 'Edit this page',
+         text: "Edit this page",
          icon: PencilIcon,
          href: getGithubFileUrl(doc.slug),
       },

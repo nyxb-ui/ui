@@ -1,17 +1,15 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "stepper-optional-steps",
-  "type": "registry:example",
-  "author": "nyxbui (https://nyxbui.design)",
-  "registryDependencies": [
-    "stepper"
-  ],
-  "files": [
-    {
-      "path": "examples/stepper-optional-steps.tsx",
-      "content": "import { Button } from \"~/registry/miami/ui/button\"\nimport type { StepItem } from \"~/registry/miami/ui/stepper\"\nimport { Step, Stepper, useStepper } from \"~/registry/miami/ui/stepper\"\n\nconst steps = [\n   { label: \"Step 1\" },\n   { label: \"Step 2\", optional: true },\n   { label: \"Step 3\" },\n] satisfies StepItem[]\n\nexport default function StepperDemo() {\n   return (\n      <div className=\"flex w-full flex-col gap-4\">\n         <Stepper initialStep={0} steps={steps}>\n            {steps.map((stepProps, index) => {\n               return (\n                  <Step key={stepProps.label} {...stepProps}>\n                     <div className=\"bg-secondary text-primary my-2 flex h-40 items-center justify-center rounded-md border\">\n                        <h1 className=\"text-xl\">\n                           Step\n                           {index + 1}\n                        </h1>\n                     </div>\n                  </Step>\n               )\n            })}\n            <Footer />\n         </Stepper>\n      </div>\n   )\n}\n\nfunction Footer() {\n   const {\n      nextStep,\n      prevStep,\n      resetSteps,\n      isDisabledStep,\n      hasCompletedAllSteps,\n      isLastStep,\n      isOptionalStep,\n   } = useStepper()\n   return (\n      <>\n         {hasCompletedAllSteps && (\n            <div className=\"bg-secondary text-primary my-2 flex h-40 items-center justify-center rounded-md border\">\n               <h1 className=\"text-xl\">Woohoo! All steps completed! 🎉</h1>\n            </div>\n         )}\n         <div className=\"flex w-full justify-end gap-2\">\n            {hasCompletedAllSteps ? (\n               <Button size=\"sm\" onClick={resetSteps}>\n                  Reset\n               </Button>\n            ) : (\n               <>\n                  <Button\n                     disabled={isDisabledStep}\n                     onClick={prevStep}\n                     size=\"sm\"\n                     variant=\"secondary\"\n                  >\n                     Prev\n                  </Button>\n                  <Button size=\"sm\" onClick={nextStep}>\n                     {isLastStep ? \"Finish\" : isOptionalStep ? \"Skip\" : \"Next\"}\n                  </Button>\n               </>\n            )}\n         </div>\n      </>\n   )\n}\n",
-      "type": "registry:example",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "stepper-optional-steps",
+   "type": "registry:example",
+   "author": "nyxbui (https://nyxbui.design)",
+   "registryDependencies": ["stepper"],
+   "files": [
+      {
+         "path": "examples/stepper-optional-steps.tsx",
+         "content": "import { Button } from \"~/registry/miami/ui/button\"\nimport type { StepItem } from \"~/registry/miami/ui/stepper\"\nimport { Step, Stepper, useStepper } from \"~/registry/miami/ui/stepper\"\n\nconst steps = [\n   { label: \"Step 1\" },\n   { label: \"Step 2\", optional: true },\n   { label: \"Step 3\" },\n] satisfies StepItem[]\n\nexport default function StepperDemo() {\n   return (\n      <div className=\"flex w-full flex-col gap-4\">\n         <Stepper initialStep={0} steps={steps}>\n            {steps.map((stepProps, index) => {\n               return (\n                  <Step key={stepProps.label} {...stepProps}>\n                     <div className=\"bg-secondary text-primary my-2 flex h-40 items-center justify-center rounded-md border\">\n                        <h1 className=\"text-xl\">\n                           Step\n                           {index + 1}\n                        </h1>\n                     </div>\n                  </Step>\n               )\n            })}\n            <Footer />\n         </Stepper>\n      </div>\n   )\n}\n\nfunction Footer() {\n   const {\n      nextStep,\n      prevStep,\n      resetSteps,\n      isDisabledStep,\n      hasCompletedAllSteps,\n      isLastStep,\n      isOptionalStep,\n   } = useStepper()\n   return (\n      <>\n         {hasCompletedAllSteps && (\n            <div className=\"bg-secondary text-primary my-2 flex h-40 items-center justify-center rounded-md border\">\n               <h1 className=\"text-xl\">Woohoo! All steps completed! 🎉</h1>\n            </div>\n         )}\n         <div className=\"flex w-full justify-end gap-2\">\n            {hasCompletedAllSteps ? (\n               <Button size=\"sm\" onClick={resetSteps}>\n                  Reset\n               </Button>\n            ) : (\n               <>\n                  <Button\n                     disabled={isDisabledStep}\n                     onClick={prevStep}\n                     size=\"sm\"\n                     variant=\"secondary\"\n                  >\n                     Prev\n                  </Button>\n                  <Button size=\"sm\" onClick={nextStep}>\n                     {isLastStep ? \"Finish\" : isOptionalStep ? \"Skip\" : \"Next\"}\n                  </Button>\n               </>\n            )}\n         </div>\n      </>\n   )\n}\n",
+         "type": "registry:example",
+         "target": ""
+      }
+   ]
 }

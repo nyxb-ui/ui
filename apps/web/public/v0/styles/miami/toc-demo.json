@@ -1,14 +1,14 @@
 {
-  "$schema": "https://nyxbui.design/schema/registry-item.json",
-  "name": "toc-demo",
-  "type": "registry:example",
-  "author": "nyxb (https://nyxbui.design)",
-  "files": [
-    {
-      "path": "examples/toc-demo.tsx",
-      "content": "import {\n   TableOfContentsItem,\n   TableOfContentsLink,\n   TableOfContentsList,\n   TableOfContentsTitle,\n} from \"@/components/ui/toc\"\n\nexport default function TOCDemo() {\n   return (\n      <TableOfContentsList>\n         <TableOfContentsTitle>Table of Contents</TableOfContentsTitle>\n         <TableOfContentsItem>\n            <TableOfContentsLink href=\"#first-section\">\n               First Section\n            </TableOfContentsLink>\n         </TableOfContentsItem>\n         <TableOfContentsItem>\n            <TableOfContentsLink href=\"#second-section\">\n               Second Section\n            </TableOfContentsLink>\n         </TableOfContentsItem>\n         <TableOfContentsItem>\n            <TableOfContentsLink href=\"#third-section\">\n               Third Section\n            </TableOfContentsLink>\n         </TableOfContentsItem>\n      </TableOfContentsList>\n   )\n}\n",
-      "type": "registry:example",
-      "target": ""
-    }
-  ]
+   "$schema": "https://nyxbui.design/schema/registry-item.json",
+   "name": "toc-demo",
+   "type": "registry:example",
+   "author": "nyxb (https://nyxbui.design)",
+   "files": [
+      {
+         "path": "examples/toc-demo.tsx",
+         "content": "import {\n   TableOfContentsItem,\n   TableOfContentsLink,\n   TableOfContentsList,\n   TableOfContentsTitle,\n} from \"@/components/ui/toc\"\n\nexport default function TOCDemo() {\n   return (\n      <TableOfContentsList>\n         <TableOfContentsTitle>Table of Contents</TableOfContentsTitle>\n         <TableOfContentsItem>\n            <TableOfContentsLink href=\"#first-section\">\n               First Section\n            </TableOfContentsLink>\n         </TableOfContentsItem>\n         <TableOfContentsItem>\n            <TableOfContentsLink href=\"#second-section\">\n               Second Section\n            </TableOfContentsLink>\n         </TableOfContentsItem>\n         <TableOfContentsItem>\n            <TableOfContentsLink href=\"#third-section\">\n               Third Section\n            </TableOfContentsLink>\n         </TableOfContentsItem>\n      </TableOfContentsList>\n   )\n}\n",
+         "type": "registry:example",
+         "target": ""
+      }
+   ]
 }

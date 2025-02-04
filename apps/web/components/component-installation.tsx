@@ -1,6 +1,6 @@
-'use client'
+"use client"
 
-import * as React from 'react'
+import type * as React from "react"
 
 interface ComponentInstallationProps
    extends React.HTMLAttributes<HTMLDivElement> {}
