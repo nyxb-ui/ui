@@ -4,6 +4,7 @@ nixPkgs = [ "nodejs_20" ]
 [phases.install]
 cmds = [
    "npm install -g pnpm",
+   "export PATH=\"/root/.npm-global/bin:$PATH\"",
    "pnpm install"
 ]
 
