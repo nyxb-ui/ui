@@ -1,26 +1,34 @@
 "use client"
 
-import { ny } from "~/lib/utils"
-import AnimatedGridPattern from "~/registry/default/ui/animated-grid-pattern"
+import { ny } from "~/registry/default/lib/utils"
+import { GridPattern } from "~/registry/default/ui/grid-pattern"
 
-function AnimatedGridPatternDemo() {
+export default function GridPatternDemo() {
    return (
-      <div className="bg-background relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg border p-20 md:shadow-xl">
+      <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
          <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-black dark:text-white">
-            Animated Grid Pattern
+            Grid Pattern
          </p>
-         <AnimatedGridPattern
-            numSquares={30}
-            maxOpacity={0.5}
-            duration={3}
-            repeatDelay={1}
+         <GridPattern
+            squares={[
+               [4, 4],
+               [5, 1],
+               [8, 2],
+               [5, 3],
+               [5, 5],
+               [10, 10],
+               [12, 15],
+               [15, 10],
+               [10, 15],
+               [15, 10],
+               [10, 15],
+               [15, 10],
+            ]}
             className={ny(
-               "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]",
+               "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
                "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
             )}
          />
       </div>
    )
 }
-
-export default AnimatedGridPatternDemo

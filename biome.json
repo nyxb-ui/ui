@@ -49,7 +49,8 @@
          "complexity": {
             "noForEach": "off",
             "useLiteralKeys": "off",
-            "useOptionalChain": "off"
+            "useOptionalChain": "off",
+            "noUselessSwitchCase": "off"
          },
          "correctness": {
             "useJsxKeyInIterable": "off",

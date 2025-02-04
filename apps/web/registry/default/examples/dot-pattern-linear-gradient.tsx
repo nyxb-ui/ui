@@ -1,11 +1,11 @@
 "use client"
 
-import { ny } from "~/lib/utils"
-import DotPattern from "~/registry/default/ui/dot-pattern"
+import { ny } from "~/registry/default/lib/utils"
+import { DotPattern } from "~/registry/default/ui/dot-pattern"
 
-function DotPatternDemo2() {
+export default function DotPatternLinearGradient() {
    return (
-      <div className="bg-background relative flex size-full items-center justify-center overflow-hidden rounded-lg border p-20 md:shadow-xl">
+      <div className="relative flex size-full items-center justify-center overflow-hidden rounded-lg border bg-background p-20 md:shadow-xl">
          <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-black dark:text-white">
             Dot Pattern
          </p>
@@ -22,5 +22,3 @@ function DotPatternDemo2() {
       </div>
    )
 }
-
-export default DotPatternDemo2

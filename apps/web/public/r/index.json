@@ -1662,19 +1662,6 @@
     }
   },
   {
-    "name": "wavy-dot-pattern",
-    "type": "registry:ui",
-    "dependencies": [
-      "react-anime"
-    ],
-    "files": [
-      {
-        "path": "ui/wavy-dot-pattern.tsx",
-        "type": "registry:ui"
-      }
-    ]
-  },
-  {
     "name": "wavy-text",
     "type": "registry:ui",
     "dependencies": [
@@ -1973,6 +1960,242 @@
     "files": [
       {
         "path": "ui/terminal.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "script-copy-btn",
+    "type": "registry:ui",
+    "dependencies": [
+      "motion",
+      "shiki",
+      "next-themes"
+    ],
+    "files": [
+      {
+        "path": "ui/script-copy-btn.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "text-animate",
+    "type": "registry:ui",
+    "dependencies": [
+      "motion"
+    ],
+    "files": [
+      {
+        "path": "ui/text-animate.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "line-shadow-text",
+    "type": "registry:ui",
+    "dependencies": [
+      "motion"
+    ],
+    "files": [
+      {
+        "path": "ui/line-shadow-text.tsx",
+        "type": "registry:ui"
+      }
+    ],
+    "tailwind": {
+      "config": {
+        "theme": {
+          "extend": {
+            "animation": {
+              "line-shadow": "line-shadow 15s linear infinite"
+            },
+            "keyframes": {
+              "line-shadow": {
+                "0%": {
+                  "background-position": "0 0"
+                },
+                "100%": {
+                  "background-position": "100% -100%"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "aurora-text",
+    "type": "registry:ui",
+    "dependencies": [
+      "motion"
+    ],
+    "files": [
+      {
+        "path": "ui/aurora-text.tsx",
+        "type": "registry:ui"
+      }
+    ],
+    "tailwind": {
+      "config": {
+        "theme": {
+          "extend": {
+            "keyframes": {
+              "aurora-border": {
+                "0%, 100%": {
+                  "borderRadius": "37% 29% 27% 27% / 28% 25% 41% 37%"
+                },
+                "25%": {
+                  "borderRadius": "47% 29% 39% 49% / 61% 19% 66% 26%"
+                },
+                "50%": {
+                  "borderRadius": "57% 23% 47% 72% / 63% 17% 66% 33%"
+                },
+                "75%": {
+                  "borderRadius": "28% 49% 29% 100% / 93% 20% 64% 25%"
+                }
+              },
+              "aurora-1": {
+                "0%, 100%": {
+                  "top": "0",
+                  "right": "0"
+                },
+                "50%": {
+                  "top": "50%",
+                  "right": "25%"
+                },
+                "75%": {
+                  "top": "25%",
+                  "right": "50%"
+                }
+              },
+              "aurora-2": {
+                "0%, 100%": {
+                  "top": "0",
+                  "left": "0"
+                },
+                "60%": {
+                  "top": "75%",
+                  "left": "25%"
+                },
+                "85%": {
+                  "top": "50%",
+                  "left": "50%"
+                }
+              },
+              "aurora-3": {
+                "0%, 100%": {
+                  "bottom": "0",
+                  "left": "0"
+                },
+                "40%": {
+                  "bottom": "50%",
+                  "left": "25%"
+                },
+                "65%": {
+                  "bottom": "25%",
+                  "left": "50%"
+                }
+              },
+              "aurora-4": {
+                "0%, 100%": {
+                  "bottom": "0",
+                  "right": "0"
+                },
+                "50%": {
+                  "bottom": "25%",
+                  "right": "40%"
+                },
+                "90%": {
+                  "bottom": "50%",
+                  "right": "25%"
+                }
+              }
+            },
+            "animation": {
+              "aurora-border": "aurora-border 10s ease-in-out infinite",
+              "aurora-1": "aurora-1 15s ease-in-out infinite",
+              "aurora-2": "aurora-2 15s ease-in-out infinite",
+              "aurora-3": "aurora-3 15s ease-in-out infinite",
+              "aurora-4": "aurora-4 15s ease-in-out infinite"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "morphing-text",
+    "type": "registry:ui",
+    "dependencies": [
+      "motion"
+    ],
+    "files": [
+      {
+        "path": "ui/morphing-text.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "ripple-button",
+    "type": "registry:ui",
+    "dependencies": [
+      "motion"
+    ],
+    "files": [
+      {
+        "path": "ui/ripple-button.tsx",
+        "type": "registry:ui"
+      }
+    ],
+    "tailwind": {
+      "config": {
+        "theme": {
+          "extend": {
+            "animation": {
+              "rippling": "rippling var(--duration) ease-out"
+            },
+            "keyframes": {
+              "rippling": {
+                "0%": {
+                  "opacity": "1"
+                },
+                "100%": {
+                  "transform": "scale(2)",
+                  "opacity": "0"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "warp-background",
+    "type": "registry:ui",
+    "dependencies": [
+      "motion"
+    ],
+    "files": [
+      {
+        "path": "ui/warp-background.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "interactive-grid-pattern",
+    "type": "registry:ui",
+    "dependencies": [
+      "motion"
+    ],
+    "files": [
+      {
+        "path": "ui/interactive-grid-pattern.tsx",
         "type": "registry:ui"
       }
     ]

@@ -1,8 +1,8 @@
-import FlickeringGrid from "~/registry/miami/ui/flickering-grid"
+import { FlickeringGrid } from "~/registry/miami/ui/flickering-grid"
 
 export default function FlickeringGridDemo() {
    return (
-      <div className="bg-background relative h-[500px] w-full overflow-hidden rounded-lg border">
+      <div className="relative h-[500px] w-full overflow-hidden rounded-lg border bg-background">
          <FlickeringGrid
             className="absolute inset-0 z-0 size-full"
             squareSize={4}

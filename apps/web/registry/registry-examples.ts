@@ -1713,16 +1713,6 @@ export const examples: Registry["items"] = [
       ],
    },
    {
-      name: "wavy-dot-pattern-demo",
-      type: "registry:example",
-      files: [
-         {
-            path: "examples/wavy-dot-pattern-demo.tsx",
-            type: "registry:example",
-         },
-      ],
-   },
-   {
       name: "gradual-spacing-demo",
       type: "registry:example",
       files: [
@@ -3172,6 +3162,146 @@ export const examples: Registry["items"] = [
       files: [
          {
             path: "examples/terminal-demo.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "script-copy-btn-demo",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/script-copy-btn-demo.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "text-animate-demo",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/text-animate-demo.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "text-animate-demo-2",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/text-animate-demo-2.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "text-animate-demo-3",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/text-animate-demo-3.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "text-animate-demo-4",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/text-animate-demo-4.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "text-animate-demo-5",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/text-animate-demo-5.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "text-animate-demo-6",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/text-animate-demo-6.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "line-shadow-text-demo",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/line-shadow-text-demo.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "aurora-text-demo",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/aurora-text-demo.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "morphing-text-demo",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/morphing-text-demo.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "ripple-button-demo",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/ripple-button-demo.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "warp-background-demo",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/warp-background-demo.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "interactive-grid-pattern-demo",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/interactive-grid-pattern-demo.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "interactive-grid-pattern-demo-2",
+      type: "registry:example",
+      files: [
+         {
+            path: "examples/interactive-grid-pattern-demo-2.tsx",
             type: "registry:example",
          },
       ],

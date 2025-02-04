@@ -1912,25 +1912,6 @@ export const Index: Record<string, any> = {
          source: "",
          meta: undefined,
       },
-      "wavy-dot-pattern": {
-         name: "wavy-dot-pattern",
-         description: "",
-         type: "registry:ui",
-         registryDependencies: undefined,
-         files: [
-            {
-               path: "registry/miami/ui/wavy-dot-pattern.tsx",
-               type: "registry:ui",
-               target: "",
-            },
-         ],
-         categories: undefined,
-         component: React.lazy(
-            () => import("~/registry/miami/ui/wavy-dot-pattern.tsx"),
-         ),
-         source: "",
-         meta: undefined,
-      },
       "wavy-text": {
          name: "wavy-text",
          description: "",
@@ -2200,6 +2181,158 @@ export const Index: Record<string, any> = {
          categories: undefined,
          component: React.lazy(
             () => import("~/registry/miami/ui/terminal.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "script-copy-btn": {
+         name: "script-copy-btn",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/ui/script-copy-btn.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/ui/script-copy-btn.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "text-animate": {
+         name: "text-animate",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/ui/text-animate.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/ui/text-animate.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "line-shadow-text": {
+         name: "line-shadow-text",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/ui/line-shadow-text.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/ui/line-shadow-text.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "aurora-text": {
+         name: "aurora-text",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/ui/aurora-text.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/ui/aurora-text.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "morphing-text": {
+         name: "morphing-text",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/ui/morphing-text.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/ui/morphing-text.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "ripple-button": {
+         name: "ripple-button",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/ui/ripple-button.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/ui/ripple-button.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "warp-background": {
+         name: "warp-background",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/ui/warp-background.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/ui/warp-background.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "interactive-grid-pattern": {
+         name: "interactive-grid-pattern",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/ui/interactive-grid-pattern.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/ui/interactive-grid-pattern.tsx"),
          ),
          source: "",
          meta: undefined,
@@ -8572,25 +8705,6 @@ export const Index: Record<string, any> = {
          source: "",
          meta: undefined,
       },
-      "wavy-dot-pattern-demo": {
-         name: "wavy-dot-pattern-demo",
-         description: "",
-         type: "registry:example",
-         registryDependencies: undefined,
-         files: [
-            {
-               path: "registry/miami/examples/wavy-dot-pattern-demo.tsx",
-               type: "registry:example",
-               target: "",
-            },
-         ],
-         categories: undefined,
-         component: React.lazy(
-            () => import("~/registry/miami/examples/wavy-dot-pattern-demo.tsx"),
-         ),
-         source: "",
-         meta: undefined,
-      },
       "gradual-spacing-demo": {
          name: "gradual-spacing-demo",
          description: "",
@@ -11332,6 +11446,278 @@ export const Index: Record<string, any> = {
          source: "",
          meta: undefined,
       },
+      "script-copy-btn-demo": {
+         name: "script-copy-btn-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/script-copy-btn-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/script-copy-btn-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "text-animate-demo": {
+         name: "text-animate-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/text-animate-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/text-animate-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "text-animate-demo-2": {
+         name: "text-animate-demo-2",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/text-animate-demo-2.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/text-animate-demo-2.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "text-animate-demo-3": {
+         name: "text-animate-demo-3",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/text-animate-demo-3.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/text-animate-demo-3.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "text-animate-demo-4": {
+         name: "text-animate-demo-4",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/text-animate-demo-4.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/text-animate-demo-4.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "text-animate-demo-5": {
+         name: "text-animate-demo-5",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/text-animate-demo-5.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/text-animate-demo-5.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "text-animate-demo-6": {
+         name: "text-animate-demo-6",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/text-animate-demo-6.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/text-animate-demo-6.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "line-shadow-text-demo": {
+         name: "line-shadow-text-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/line-shadow-text-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/line-shadow-text-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "aurora-text-demo": {
+         name: "aurora-text-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/aurora-text-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/aurora-text-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "morphing-text-demo": {
+         name: "morphing-text-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/morphing-text-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/morphing-text-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "ripple-button-demo": {
+         name: "ripple-button-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/ripple-button-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/ripple-button-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "warp-background-demo": {
+         name: "warp-background-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/warp-background-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/warp-background-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "interactive-grid-pattern-demo": {
+         name: "interactive-grid-pattern-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/interactive-grid-pattern-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () =>
+               import(
+                  "~/registry/miami/examples/interactive-grid-pattern-demo.tsx"
+               ),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "interactive-grid-pattern-demo-2": {
+         name: "interactive-grid-pattern-demo-2",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/examples/interactive-grid-pattern-demo-2.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () =>
+               import(
+                  "~/registry/miami/examples/interactive-grid-pattern-demo-2.tsx"
+               ),
+         ),
+         source: "",
+         meta: undefined,
+      },
    },
    default: {
       accordion: {
@@ -13279,25 +13665,6 @@ export const Index: Record<string, any> = {
          source: "",
          meta: undefined,
       },
-      "wavy-dot-pattern": {
-         name: "wavy-dot-pattern",
-         description: "",
-         type: "registry:ui",
-         registryDependencies: undefined,
-         files: [
-            {
-               path: "registry/default/ui/wavy-dot-pattern.tsx",
-               type: "registry:ui",
-               target: "",
-            },
-         ],
-         categories: undefined,
-         component: React.lazy(
-            () => import("~/registry/default/ui/wavy-dot-pattern.tsx"),
-         ),
-         source: "",
-         meta: undefined,
-      },
       "wavy-text": {
          name: "wavy-text",
          description: "",
@@ -13573,6 +13940,158 @@ export const Index: Record<string, any> = {
          categories: undefined,
          component: React.lazy(
             () => import("~/registry/default/ui/terminal.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "script-copy-btn": {
+         name: "script-copy-btn",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/ui/script-copy-btn.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/ui/script-copy-btn.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "text-animate": {
+         name: "text-animate",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/ui/text-animate.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/ui/text-animate.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "line-shadow-text": {
+         name: "line-shadow-text",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/ui/line-shadow-text.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/ui/line-shadow-text.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "aurora-text": {
+         name: "aurora-text",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/ui/aurora-text.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/ui/aurora-text.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "morphing-text": {
+         name: "morphing-text",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/ui/morphing-text.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/ui/morphing-text.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "ripple-button": {
+         name: "ripple-button",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/ui/ripple-button.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/ui/ripple-button.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "warp-background": {
+         name: "warp-background",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/ui/warp-background.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/ui/warp-background.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "interactive-grid-pattern": {
+         name: "interactive-grid-pattern",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/ui/interactive-grid-pattern.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/ui/interactive-grid-pattern.tsx"),
          ),
          source: "",
          meta: undefined,
@@ -20007,26 +20526,6 @@ export const Index: Record<string, any> = {
          source: "",
          meta: undefined,
       },
-      "wavy-dot-pattern-demo": {
-         name: "wavy-dot-pattern-demo",
-         description: "",
-         type: "registry:example",
-         registryDependencies: undefined,
-         files: [
-            {
-               path: "registry/default/examples/wavy-dot-pattern-demo.tsx",
-               type: "registry:example",
-               target: "",
-            },
-         ],
-         categories: undefined,
-         component: React.lazy(
-            () =>
-               import("~/registry/default/examples/wavy-dot-pattern-demo.tsx"),
-         ),
-         source: "",
-         meta: undefined,
-      },
       "gradual-spacing-demo": {
          name: "gradual-spacing-demo",
          description: "",
@@ -22791,6 +23290,281 @@ export const Index: Record<string, any> = {
          categories: undefined,
          component: React.lazy(
             () => import("~/registry/default/examples/terminal-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "script-copy-btn-demo": {
+         name: "script-copy-btn-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/script-copy-btn-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () =>
+               import("~/registry/default/examples/script-copy-btn-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "text-animate-demo": {
+         name: "text-animate-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/text-animate-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/text-animate-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "text-animate-demo-2": {
+         name: "text-animate-demo-2",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/text-animate-demo-2.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/text-animate-demo-2.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "text-animate-demo-3": {
+         name: "text-animate-demo-3",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/text-animate-demo-3.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/text-animate-demo-3.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "text-animate-demo-4": {
+         name: "text-animate-demo-4",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/text-animate-demo-4.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/text-animate-demo-4.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "text-animate-demo-5": {
+         name: "text-animate-demo-5",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/text-animate-demo-5.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/text-animate-demo-5.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "text-animate-demo-6": {
+         name: "text-animate-demo-6",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/text-animate-demo-6.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/text-animate-demo-6.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "line-shadow-text-demo": {
+         name: "line-shadow-text-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/line-shadow-text-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () =>
+               import("~/registry/default/examples/line-shadow-text-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "aurora-text-demo": {
+         name: "aurora-text-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/aurora-text-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/aurora-text-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "morphing-text-demo": {
+         name: "morphing-text-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/morphing-text-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/morphing-text-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "ripple-button-demo": {
+         name: "ripple-button-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/ripple-button-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/ripple-button-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "warp-background-demo": {
+         name: "warp-background-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/warp-background-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () =>
+               import("~/registry/default/examples/warp-background-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "interactive-grid-pattern-demo": {
+         name: "interactive-grid-pattern-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/interactive-grid-pattern-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () =>
+               import(
+                  "~/registry/default/examples/interactive-grid-pattern-demo.tsx"
+               ),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "interactive-grid-pattern-demo-2": {
+         name: "interactive-grid-pattern-demo-2",
+         description: "",
+         type: "registry:example",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/examples/interactive-grid-pattern-demo-2.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () =>
+               import(
+                  "~/registry/default/examples/interactive-grid-pattern-demo-2.tsx"
+               ),
          ),
          source: "",
          meta: undefined,

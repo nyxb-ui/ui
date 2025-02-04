@@ -1,0 +1,14 @@
+{
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "warp-background-demo",
+  "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/warp-background-demo.tsx",
+      "content": "import {\n   Card,\n   CardContent,\n   CardDescription,\n   CardTitle,\n} from \"~/registry/default/ui/card\"\nimport { WarpBackground } from \"~/registry/default/ui/warp-background\"\n\nexport default function ExampleComponentDemo() {\n   return (\n      <WarpBackground>\n         <Card className=\"w-80\">\n            <CardContent className=\"flex flex-col gap-2 p-4\">\n               <CardTitle>Congratulations on Your Promotion!</CardTitle>\n               <CardDescription>\n                  Your hard work and dedication have paid off. We&apos;re\n                  thrilled to see you take this next step in your career. Keep\n                  up the fantastic work!\n               </CardDescription>\n            </CardContent>\n         </Card>\n      </WarpBackground>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

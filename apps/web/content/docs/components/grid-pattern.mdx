@@ -7,10 +7,12 @@ published: true
 video: https://cdn.nyxbui.design/grid-pattern.mp4
 ---
 
-<ComponentPreview name="grid-pattern-demo" />
+<ComponentPreview 
+name="grid-pattern-demo"
+description="A background grid pattern made with SVGs, fully customizable using Tailwind CSS."
+ />
 
-
-### Installation
+## Installation
 
 <Tabs defaultValue="cli">
 
@@ -30,13 +32,11 @@ npx nyxb@latest add grid-pattern
 
 <Steps>
 
-Copy and paste the following code into your project.
-
-```text
-components/ui/grid-pattern.tsx
-```
+<Step>Copy and paste the following code into your project.</Step>
 
 <ComponentSource name="grid-pattern" />
+
+<Step>Update the import paths to match your project setup.</Step>
 
 </Steps>
 
@@ -58,11 +58,11 @@ components/ui/grid-pattern.tsx
 
 ### GridPattern
 
-| Prop            | Type   | Description                                   | Default |
-| --------------- | ------ | --------------------------------------------- | ------- |
-| width           | number | Width of the pattern                          | 40      |
-| height          | number | Height of the pattern                         | 40      |
-| x               | number | X offset of the pattern                       | -1      |
-| y               | number | Y offset of the pattern                       | -1      |
-| squares         | number | X Y coordinates of filled squares as 2D array | []      |
-| strokeDasharray | string | Stroke dash array for the pattern             | 0       |
+| Prop              | Type     | Default | Description                                   |
+| ----------------- | -------- | ------- | --------------------------------------------- |
+| `width`           | `number` | `40`    | Width of the pattern                          |
+| `height`          | `number` | `40`    | Height of the pattern                         |
+| `x`               | `number` | `-1`    | X offset of the pattern                       |
+| `y`               | `number` | `-1`    | Y offset of the pattern                       |
+| `squares`         | `number` | `[]`    | X Y coordinates of filled squares as 2D array |
+| `strokeDasharray` | `string` | `0`     | Stroke dash array for the pattern             |

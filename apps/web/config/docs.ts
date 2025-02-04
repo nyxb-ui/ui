@@ -424,16 +424,6 @@ export const docsConfig: DocsConfig = {
                items: [],
             },
             {
-               title: "Scroll Progress",
-               href: `/docs/components/scroll-progress`,
-               items: [],
-            },
-            {
-               title: "Scratch To Reveal",
-               href: `/docs/components/scratch-to-reveal`,
-               items: [],
-            },
-            {
                title: "Select",
                href: "/docs/components/select",
                items: [],
@@ -472,6 +462,12 @@ export const docsConfig: DocsConfig = {
                title: "Stepper",
                href: "/docs/components/stepper",
                items: [],
+            },
+            {
+               title: "Script Copy Button",
+               href: "/docs/components/script-copy-btn",
+               items: [],
+               label: [{ text: "New", variant: "new" }],
             },
             {
                title: "Switch",
@@ -551,11 +547,6 @@ export const docsConfig: DocsConfig = {
             },
          ],
       },
-      // {
-      //    title: 'Page Sections',
-      //    items: [
-      //    ],
-      // },
       {
          title: "Device Mockups",
          items: [
@@ -587,6 +578,16 @@ export const docsConfig: DocsConfig = {
             {
                title: "Shine Border",
                href: `/docs/components/shine-border`,
+               items: [],
+            },
+            {
+               title: "Scratch To Reveal",
+               href: `/docs/components/scratch-to-reveal`,
+               items: [],
+            },
+            {
+               title: "Scroll Progress",
+               href: `/docs/components/scroll-progress`,
                items: [],
             },
             {
@@ -639,6 +640,24 @@ export const docsConfig: DocsConfig = {
       {
          title: "Text Animations",
          items: [
+            {
+               title: "Text Animate",
+               href: `/docs/components/text-animate`,
+               items: [],
+               label: [{ text: "New", variant: "new" }],
+            },
+            {
+               title: "Line Shadow Text",
+               href: `/docs/components/line-shadow-text`,
+               items: [],
+               label: [{ text: "New", variant: "new" }],
+            },
+            {
+               title: "Aurora Text",
+               href: `/docs/components/aurora-text`,
+               items: [],
+               label: [{ text: "New", variant: "new" }],
+            },
             {
                title: "Animated Shiny Text",
                href: `/docs/components/animated-shiny-text`,
@@ -734,6 +753,12 @@ export const docsConfig: DocsConfig = {
                href: `/docs/components/sparkles-text`,
                items: [],
             },
+            {
+               title: "Morphing Text",
+               href: `/docs/components/morphing-text`,
+               items: [],
+               label: [{ text: "New", variant: "new" }],
+            },
          ],
       },
       {
@@ -769,19 +794,31 @@ export const docsConfig: DocsConfig = {
                href: `/docs/components/pulsating-button`,
                items: [],
             },
+            {
+               title: "Ripple Button",
+               href: `/docs/components/ripple-button`,
+               items: [],
+               label: [{ text: "New", variant: "new" }],
+            },
          ],
       },
       {
          title: "Backgrounds",
          items: [
             {
-               title: "Animated Grid Pattern",
-               href: `/docs/components/animated-grid-pattern`,
+               title: "Warp Background",
+               href: `/docs/components/warp-background`,
                items: [],
+               label: [{ text: "New", variant: "new" }],
             },
             {
                title: "Flickering Grid",
                href: `/docs/components/flickering-grid`,
+               items: [],
+            },
+            {
+               title: "Animated Grid Pattern",
+               href: `/docs/components/animated-grid-pattern`,
                items: [],
             },
             {
@@ -810,9 +847,10 @@ export const docsConfig: DocsConfig = {
                items: [],
             },
             {
-               title: "Wavy Dot Pattern",
-               href: `/docs/components/wavy-dot-pattern`,
+               title: "Interactive Grid Pattern",
+               href: `/docs/components/interactive-grid-pattern`,
                items: [],
+               label: [{ text: "New", variant: "new" }],
             },
          ],
       },

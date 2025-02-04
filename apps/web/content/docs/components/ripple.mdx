@@ -9,8 +9,7 @@ video: https://cdn.nyxbui.design/ripple.mp4
 
 <ComponentPreview name="ripple-demo" />
 
-
-### Installation
+## Installation
 
 <Tabs defaultValue="cli">
 
@@ -21,7 +20,7 @@ video: https://cdn.nyxbui.design/ripple.mp4
 <TabsContent value="cli">
 
 ```bash
-npx nyxb@latest add ripple
+npx nyx@latest add ripple
 ```
 
 </TabsContent>
@@ -30,15 +29,23 @@ npx nyxb@latest add ripple
 
 <Steps>
 
-Copy and paste the following code into your project.
+<Step>Copy and paste the following code into your project.</Step>
 
-```ts
-// tailwind.config.ts
+<ComponentSource name="ripple" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+<Step>Update `tailwind.config.js`</Step>
+
+Add the following animations to your `tailwind.config.js` file:
+
+```js title="tailwind.config.js" {5-17}
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   theme: {
     extend: {
       animation: {
-        ripple: "ripple 3400ms ease infinite",
+        ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
       },
       keyframes: {
         ripple: {
@@ -55,14 +62,17 @@ module.exports = {
 };
 ```
 
-```text
-components/ui/ripple.tsx
-```
-
-<ComponentSource name="ripple" />
-
 </Steps>
 
 </TabsContent>
 
 </Tabs>
+
+## Props
+
+| Prop                | Type     | Default | Description                            |
+| ------------------- | -------- | ------- | -------------------------------------- |
+| `mainCircleSize`    | `number` | `210`   | The size of the main circle in pixels  |
+| `mainCircleOpacity` | `number` | `0.24`  | The opacity of the main circle         |
+| `numCircles`        | `number` | `8`     | The number of ripple circles to render |
+

@@ -1,11 +1,11 @@
 "use client"
 
-import { ny } from "~/lib/utils"
-import GridPattern from "~/registry/default/ui/grid-pattern"
+import { ny } from "~/registry/default/lib/utils"
+import { GridPattern } from "~/registry/default/ui/grid-pattern"
 
-function GridPatternLinearGradient() {
+export default function GridPatternLinearGradient() {
    return (
-      <div className="bg-background relative flex size-full items-center justify-center overflow-hidden rounded-lg border p-20 md:shadow-xl">
+      <div className="relative flex size-full items-center justify-center overflow-hidden rounded-lg border bg-background p-20 md:shadow-xl">
          <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-black dark:text-white">
             Grid Pattern
          </p>
@@ -21,5 +21,3 @@ function GridPatternLinearGradient() {
       </div>
    )
 }
-
-export default GridPatternLinearGradient

@@ -1,8 +1,8 @@
-import Ripple from "~/registry/miami/ui/ripple"
+import { Ripple } from "~/registry/miami/ui/ripple"
 
-function RippleDemo() {
+export default function RippleDemo() {
    return (
-      <div className="bg-background relative flex size-full max-w-lg items-center justify-center overflow-hidden rounded-lg border p-20 md:shadow-xl">
+      <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
          <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-white">
             Ripple
          </p>
@@ -10,5 +10,3 @@ function RippleDemo() {
       </div>
    )
 }
-
-export default RippleDemo

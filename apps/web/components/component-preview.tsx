@@ -37,6 +37,7 @@ export function ComponentPreview({
    ...props
 }: ComponentPreviewProps) {
    const [config] = useConfig()
+   const [key, setKey] = React.useState(0)
    const index = styles.findIndex((style) => style.name === config.style)
 
    const Codes = React.Children.toArray(children) as React.ReactElement[]
@@ -130,6 +131,13 @@ export function ComponentPreview({
                   <StyleSwitcher />
                   <div className="flex items-center gap-2">
                      {description ? <V0Button name={name} /> : null}
+                     <button
+                        onClick={() => setKey((k) => k + 1)}
+                        className="inline-flex h-7 w-7 items-center justify-center rounded-md border border-input bg-transparent text-sm font-medium ring-offset-background transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        title="Reload component"
+                     >
+                        <Icons.refresh className="h-3.5 w-3.5" />
+                     </button>
                      <CopyButton
                         value={codeString}
                         variant="outline"
@@ -139,6 +147,7 @@ export function ComponentPreview({
                </div>
                <ThemeWrapper defaultTheme="zinc">
                   <div
+                     key={key}
                      className={ny(
                         "preview flex min-h-[350px] w-full justify-center p-10",
                         {
