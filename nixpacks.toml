@@ -1,18 +1,16 @@
 [phases.setup]
-nixPkgs = [
-    "nodejs_20"
-]
+nixPkgs = [ "nodejs_20" ]
 
 [phases.install]
 cmds = [
-    "corepack enable",
-    "pnpm install --prod"
+   "corepack enable",
+   "pnpm install"
 ]
 
 [phases.build]
 cmds = [
-    "cd apps/web && pnpm build:registry",
-    "pnpm --filter=web build"
+   "cd apps/web && pnpm build:registry",
+   "pnpm --filter=web build"
 ]
 
 [variables]
