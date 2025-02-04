@@ -30,6 +30,7 @@ PATH = "/root/.npm-global/bin:/app/node_modules/.bin:${PATH}"
 NODE_VERSION = "20.14.0"
 PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
 PUPPETEER_EXECUTABLE_PATH = "/usr/bin/chromium"
+NIXPACKS_DOCKER_OPTS = "--debug"
 
 [phases.install]
 cmds = [
@@ -37,7 +38,7 @@ cmds = [
     "npm config set prefix '/root/.npm-global'",
     "npm install -g pnpm@9.4.0",
     "export PATH=/root/.npm-global/bin:$PATH",
-    "pnpm install --no-optional --frozen-lockfile"
+    "pnpm install --no-optional --frozen-lockfile --verbose"
 ]
 
 [phases.build]
