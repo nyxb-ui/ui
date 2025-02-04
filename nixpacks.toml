@@ -1,16 +1,29 @@
 [phases.setup]
-nixPkgs = [ "nodejs_20" ]
+nixPkgs = [
+    "nodejs_20",
+    "libnss3",
+    "libatk1.0-0",
+    "libatk-bridge2.0-0",
+    "libcups2",
+    "libgbm1",
+    "libasound2",
+    "libpangocairo-1.0-0",
+    "libxss1",
+    "libgtk-3-0",
+    "libxshmfence1",
+    "libglu1"
+]
 
 [phases.install]
 cmds = [
-   "corepack enable",
-   "pnpm install"
+    "npm install -g pnpm@9.4.0",
+    "pnpm install"
 ]
 
 [phases.build]
 cmds = [
-   "cd apps/web && pnpm build:registry",
-   "pnpm --filter=web build"
+    "cd apps/web && pnpm build:registry",
+    "pnpm --filter=web build"
 ]
 
 [variables]
