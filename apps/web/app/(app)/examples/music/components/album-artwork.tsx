@@ -1,9 +1,7 @@
-import Image from 'next/image'
-import { PlusCircle } from 'lucide-react'
+import { PlusCircle } from "lucide-react"
+import Image from "next/image"
 
-import type { Album } from '../data/albums'
-import { playlists } from '../data/playlists'
-import { ny } from '~/lib/utils'
+import { ny } from "~/lib/utils"
 import {
    ContextMenu,
    ContextMenuContent,
@@ -13,25 +11,28 @@ import {
    ContextMenuSubContent,
    ContextMenuSubTrigger,
    ContextMenuTrigger,
-} from '~/registry/miami/ui/context-menu'
+} from "~/registry/miami/ui/context-menu"
+
+import type { Album } from "../data/albums"
+import { playlists } from "../data/playlists"
 
 interface AlbumArtworkProps extends React.HTMLAttributes<HTMLDivElement> {
    album: Album
-   aspectRatio?: 'portrait' | 'square'
+   aspectRatio?: "portrait" | "square"
    width?: number
    height?: number
 }
 
 export function AlbumArtwork({
    album,
-   aspectRatio = 'portrait',
+   aspectRatio = "portrait",
    width,
    height,
    className,
    ...props
 }: AlbumArtworkProps) {
    return (
-      <div className={ny('space-y-3', className)} {...props}>
+      <div className={ny("space-y-3", className)} {...props}>
          <ContextMenu>
             <ContextMenuTrigger>
                <div className="overflow-hidden rounded-md">
@@ -41,8 +42,10 @@ export function AlbumArtwork({
                      width={width}
                      height={height}
                      className={ny(
-                        'size-auto object-cover transition-all hover:scale-105',
-                        aspectRatio === 'portrait' ? 'aspect-[3/4]' : 'aspect-square',
+                        "h-auto w-auto object-cover transition-all hover:scale-105",
+                        aspectRatio === "portrait"
+                           ? "aspect-[3/4]"
+                           : "aspect-square",
                      )}
                   />
                </div>
@@ -53,11 +56,11 @@ export function AlbumArtwork({
                   <ContextMenuSubTrigger>Add to Playlist</ContextMenuSubTrigger>
                   <ContextMenuSubContent className="w-48">
                      <ContextMenuItem>
-                        <PlusCircle className="mr-2 size-4" />
+                        <PlusCircle className="mr-2 h-4 w-4" />
                         New Playlist
                      </ContextMenuItem>
                      <ContextMenuSeparator />
-                     {playlists.map(playlist => (
+                     {playlists.map((playlist) => (
                         <ContextMenuItem key={playlist}>
                            <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +69,7 @@ export function AlbumArtwork({
                               strokeLinecap="round"
                               strokeLinejoin="round"
                               strokeWidth="2"
-                              className="mr-2 size-4"
+                              className="mr-2 h-4 w-4"
                               viewBox="0 0 24 24"
                            >
                               <path d="M21 15V6M18.5 18a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM12 12H3M16 6H3M12 18H3" />
@@ -87,7 +90,7 @@ export function AlbumArtwork({
          </ContextMenu>
          <div className="space-y-1 text-sm">
             <h3 className="font-medium leading-none">{album.name}</h3>
-            <p className="text-muted-foreground text-xs">{album.artist}</p>
+            <p className="text-xs text-muted-foreground">{album.artist}</p>
          </div>
       </div>
    )

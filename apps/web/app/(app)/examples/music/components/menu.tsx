@@ -13,7 +13,7 @@ import {
    MenubarSubContent,
    MenubarSubTrigger,
    MenubarTrigger,
-} from '~/registry/miami/ui/menubar'
+} from "~/registry/miami/ui/menubar"
 
 export function Menu() {
    return (
@@ -24,26 +24,18 @@ export function Menu() {
                <MenubarItem>About Music</MenubarItem>
                <MenubarSeparator />
                <MenubarItem>
-                  Preferences...
-                  {' '}
-                  <MenubarShortcut>⌘,</MenubarShortcut>
+                  Preferences... <MenubarShortcut>⌘,</MenubarShortcut>
                </MenubarItem>
                <MenubarSeparator />
                <MenubarItem>
-                  Hide Music...
-                  {' '}
-                  <MenubarShortcut>⌘H</MenubarShortcut>
+                  Hide Music... <MenubarShortcut>⌘H</MenubarShortcut>
                </MenubarItem>
                <MenubarItem>
-                  Hide Others...
-                  {' '}
-                  <MenubarShortcut>⇧⌘H</MenubarShortcut>
+                  Hide Others... <MenubarShortcut>⇧⌘H</MenubarShortcut>
                </MenubarItem>
                <MenubarShortcut />
                <MenubarItem>
-                  Quit Music
-                  {' '}
-                  <MenubarShortcut>⌘Q</MenubarShortcut>
+                  Quit Music <MenubarShortcut>⌘Q</MenubarShortcut>
                </MenubarItem>
             </MenubarContent>
          </MenubarMenu>
@@ -54,33 +46,24 @@ export function Menu() {
                   <MenubarSubTrigger>New</MenubarSubTrigger>
                   <MenubarSubContent className="w-[230px]">
                      <MenubarItem>
-                        Playlist
-                        {' '}
-                        <MenubarShortcut>⌘N</MenubarShortcut>
+                        Playlist <MenubarShortcut>⌘N</MenubarShortcut>
                      </MenubarItem>
                      <MenubarItem disabled>
-                        Playlist from Selection
-                        {' '}
+                        Playlist from Selection{" "}
                         <MenubarShortcut>⇧⌘N</MenubarShortcut>
                      </MenubarItem>
                      <MenubarItem>
-                        Smart Playlist...
-                        {' '}
-                        <MenubarShortcut>⌥⌘N</MenubarShortcut>
+                        Smart Playlist... <MenubarShortcut>⌥⌘N</MenubarShortcut>
                      </MenubarItem>
                      <MenubarItem>Playlist Folder</MenubarItem>
                      <MenubarItem disabled>Genius Playlist</MenubarItem>
                   </MenubarSubContent>
                </MenubarSub>
                <MenubarItem>
-                  Open Stream URL...
-                  {' '}
-                  <MenubarShortcut>⌘U</MenubarShortcut>
+                  Open Stream URL... <MenubarShortcut>⌘U</MenubarShortcut>
                </MenubarItem>
                <MenubarItem>
-                  Close Window
-                  {' '}
-                  <MenubarShortcut>⌘W</MenubarShortcut>
+                  Close Window <MenubarShortcut>⌘W</MenubarShortcut>
                </MenubarItem>
                <MenubarSeparator />
                <MenubarSub>
@@ -101,25 +84,18 @@ export function Menu() {
                   </MenubarSubContent>
                </MenubarSub>
                <MenubarItem>
-                  Import...
-                  {' '}
-                  <MenubarShortcut>⌘O</MenubarShortcut>
+                  Import... <MenubarShortcut>⌘O</MenubarShortcut>
                </MenubarItem>
                <MenubarItem disabled>Burn Playlist to Disc...</MenubarItem>
                <MenubarSeparator />
                <MenubarItem>
-                  Show in Finder
-                  {' '}
-                  <MenubarShortcut>⇧⌘R</MenubarShortcut>
-                  {' '}
+                  Show in Finder <MenubarShortcut>⇧⌘R</MenubarShortcut>{" "}
                </MenubarItem>
                <MenubarItem>Convert</MenubarItem>
                <MenubarSeparator />
                <MenubarItem>Page Setup...</MenubarItem>
                <MenubarItem disabled>
-                  Print...
-                  {' '}
-                  <MenubarShortcut>⌘P</MenubarShortcut>
+                  Print... <MenubarShortcut>⌘P</MenubarShortcut>
                </MenubarItem>
             </MenubarContent>
          </MenubarMenu>
@@ -127,46 +103,31 @@ export function Menu() {
             <MenubarTrigger>Edit</MenubarTrigger>
             <MenubarContent>
                <MenubarItem disabled>
-                  Undo
-                  {' '}
-                  <MenubarShortcut>⌘Z</MenubarShortcut>
+                  Undo <MenubarShortcut>⌘Z</MenubarShortcut>
                </MenubarItem>
                <MenubarItem disabled>
-                  Redo
-                  {' '}
-                  <MenubarShortcut>⇧⌘Z</MenubarShortcut>
+                  Redo <MenubarShortcut>⇧⌘Z</MenubarShortcut>
                </MenubarItem>
                <MenubarSeparator />
                <MenubarItem disabled>
-                  Cut
-                  {' '}
-                  <MenubarShortcut>⌘X</MenubarShortcut>
+                  Cut <MenubarShortcut>⌘X</MenubarShortcut>
                </MenubarItem>
                <MenubarItem disabled>
-                  Copy
-                  {' '}
-                  <MenubarShortcut>⌘C</MenubarShortcut>
+                  Copy <MenubarShortcut>⌘C</MenubarShortcut>
                </MenubarItem>
                <MenubarItem disabled>
-                  Paste
-                  {' '}
-                  <MenubarShortcut>⌘V</MenubarShortcut>
+                  Paste <MenubarShortcut>⌘V</MenubarShortcut>
                </MenubarItem>
                <MenubarSeparator />
                <MenubarItem>
-                  Select All
-                  {' '}
-                  <MenubarShortcut>⌘A</MenubarShortcut>
+                  Select All <MenubarShortcut>⌘A</MenubarShortcut>
                </MenubarItem>
                <MenubarItem disabled>
-                  Deselect All
-                  {' '}
-                  <MenubarShortcut>⇧⌘A</MenubarShortcut>
+                  Deselect All <MenubarShortcut>⇧⌘A</MenubarShortcut>
                </MenubarItem>
                <MenubarSeparator />
                <MenubarItem>
-                  Smart Dictation...
-                  {' '}
+                  Smart Dictation...{" "}
                   <MenubarShortcut>
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +136,7 @@ export function Menu() {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
-                        className="size-4"
+                        className="h-4 w-4"
                         viewBox="0 0 24 24"
                      >
                         <path d="m12 8-9.04 9.06a2.82 2.82 0 1 0 3.98 3.98L16 12" />
@@ -184,8 +145,7 @@ export function Menu() {
                   </MenubarShortcut>
                </MenubarItem>
                <MenubarItem>
-                  Emoji & Symbols
-                  {' '}
+                  Emoji & Symbols{" "}
                   <MenubarShortcut>
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -194,7 +154,7 @@ export function Menu() {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
-                        className="size-4"
+                        className="h-4 w-4"
                         viewBox="0 0 24 24"
                      >
                         <circle cx="12" cy="12" r="10" />

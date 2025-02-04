@@ -1,8 +1,8 @@
-'use client'
+"use client"
 
-import type { Variants } from 'framer-motion'
-import { AnimatePresence, motion } from 'framer-motion'
-import { ny } from '~/lib/utils'
+import type { Variants } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
+import { ny } from "~/lib/utils"
 
 interface SlightFlipProps {
    word: string
@@ -25,7 +25,7 @@ export default function SlightFlip({
    return (
       <div className="flex justify-center space-x-2">
          <AnimatePresence mode="wait">
-            {word.split('').map((char, i) => (
+            {word.split("").map((char, i) => (
                <motion.span
                   key={i}
                   initial="hidden"
@@ -33,7 +33,7 @@ export default function SlightFlip({
                   exit="hidden"
                   variants={framerProps}
                   transition={{ duration, delay: i * delayMultiple }}
-                  className={ny('origin-center drop-shadow-sm', className)}
+                  className={ny("origin-center drop-shadow-sm", className)}
                >
                   {char}
                </motion.span>

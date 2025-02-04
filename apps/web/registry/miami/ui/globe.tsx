@@ -1,10 +1,10 @@
-'use client'
+"use client"
 
-import type { COBEOptions } from 'cobe'
-import createGlobe from 'cobe'
-import { useCallback, useEffect, useRef } from 'react'
-import { useSpring } from 'react-spring'
-import { ny } from '~/lib/utils'
+import type { COBEOptions } from "cobe"
+import createGlobe from "cobe"
+import { useCallback, useEffect, useRef } from "react"
+import { useSpring } from "react-spring"
+import { ny } from "~/lib/utils"
 
 const GLOBE_CONFIG: COBEOptions = {
    width: 800,
@@ -58,7 +58,7 @@ export default function Globe({
 
    const updatePointerInteraction = (value: any) => {
       pointerInteracting.current = value
-      canvasRef.current!.style.cursor = value ? 'grabbing' : 'grab'
+      canvasRef.current!.style.cursor = value ? "grabbing" : "grab"
    }
 
    const updateMovement = (clientX: any) => {
@@ -71,8 +71,7 @@ export default function Globe({
 
    const onRender = useCallback(
       (state: Record<string, any>) => {
-         if (!pointerInteracting.current)
-            phi += 0.005
+         if (!pointerInteracting.current) phi += 0.005
          state.phi = phi + r.get()
          state.width = width * 2
          state.height = width * 2
@@ -81,12 +80,11 @@ export default function Globe({
    )
 
    const onResize = () => {
-      if (canvasRef.current)
-         width = canvasRef.current.offsetWidth
+      if (canvasRef.current) width = canvasRef.current.offsetWidth
    }
 
    useEffect(() => {
-      window.addEventListener('resize', onResize)
+      window.addEventListener("resize", onResize)
       onResize()
 
       const globe = createGlobe(canvasRef.current!, {
@@ -96,29 +94,33 @@ export default function Globe({
          onRender,
       })
 
-      setTimeout(() => (canvasRef.current!.style.opacity = '1'))
+      setTimeout(() => (canvasRef.current!.style.opacity = "1"))
       return () => globe.destroy()
    }, [])
 
    return (
       <div
          className={ny(
-            'absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]',
+            "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]",
             className,
          )}
       >
          <canvas
             className={ny(
-               'size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]',
+               "size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]",
             )}
             ref={canvasRef}
-            onPointerDown={e =>
-               updatePointerInteraction(e.clientX - pointerInteractionMovement.current)}
+            onPointerDown={(e) =>
+               updatePointerInteraction(
+                  e.clientX - pointerInteractionMovement.current,
+               )
+            }
             onPointerUp={() => updatePointerInteraction(null)}
             onPointerOut={() => updatePointerInteraction(null)}
-            onMouseMove={e => updateMovement(e.clientX)}
-            onTouchMove={e =>
-               e.touches[0] && updateMovement(e.touches[0].clientX)}
+            onMouseMove={(e) => updateMovement(e.clientX)}
+            onTouchMove={(e) =>
+               e.touches[0] && updateMovement(e.touches[0].clientX)
+            }
          />
       </div>
    )

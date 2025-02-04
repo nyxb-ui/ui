@@ -1,10 +1,10 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import { CheckIcon } from '@radix-ui/react-icons'
-import * as RadioGroupPrimitive from '@radix-ui/react-radio-group'
+import { CheckIcon } from "@radix-ui/react-icons"
+import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
+import * as React from "react"
 
-import { ny } from '~/lib/utils'
+import { ny } from "~/lib/utils"
 
 const RadioGroup = React.forwardRef<
    React.ElementRef<typeof RadioGroupPrimitive.Root>,
@@ -12,7 +12,7 @@ const RadioGroup = React.forwardRef<
 >(({ className, ...props }, ref) => {
    return (
       <RadioGroupPrimitive.Root
-         className={ny('grid gap-2', className)}
+         className={ny("grid gap-2", className)}
          {...props}
          ref={ref}
       />
@@ -28,7 +28,7 @@ const RadioGroupItem = React.forwardRef<
       <RadioGroupPrimitive.Item
          ref={ref}
          className={ny(
-            'border-primary text-primary focus-visible:ring-ring aspect-square size-4 shrink-0 rounded-full border shadow focus:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50',
+            "border-primary text-primary focus-visible:ring-ring aspect-square size-4 shrink-0 rounded-full border shadow focus:outline-none focus-visible:ring-1 disabled:cursor-not-allowed disabled:opacity-50",
             className,
          )}
          {...props}

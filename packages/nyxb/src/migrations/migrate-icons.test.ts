@@ -1,9 +1,9 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it } from "vitest"
 
-import { migrateIconsFile } from './migrate-icons'
+import { migrateIconsFile } from "./migrate-icons"
 
-describe('migrateIconsFile', () => {
-   it('should replace radix icons with lucide icons', async () => {
+describe("migrateIconsFile", () => {
+   it("should replace radix icons with lucide icons", async () => {
       const input = `
       import { CheckIcon, CloseIcon } from "@radix-ui/react-icons"
       import { Something } from "other-package"
@@ -18,14 +18,14 @@ describe('migrateIconsFile', () => {
       }`
 
       expect(
-         await migrateIconsFile(input, 'radix', 'lucide', {
+         await migrateIconsFile(input, "radix", "lucide", {
             Check: {
-               lucide: 'Check',
-               radix: 'CheckIcon',
+               lucide: "Check",
+               radix: "CheckIcon",
             },
             X: {
-               lucide: 'X',
-               radix: 'CloseIcon',
+               lucide: "X",
+               radix: "CloseIcon",
             },
          }),
       ).toMatchInlineSnapshot(`
@@ -43,7 +43,7 @@ describe('migrateIconsFile', () => {
     `)
    })
 
-   it('should return null if no radix icons are found', async () => {
+   it("should return null if no radix icons are found", async () => {
       const input = `
       import { Something } from "other-package"
 
@@ -51,8 +51,9 @@ describe('migrateIconsFile', () => {
         return <div>No icons here</div>
       }`
 
-      expect(await migrateIconsFile(input, 'lucide', 'radix', {}))
-         .toMatchInlineSnapshot(`
+      expect(
+         await migrateIconsFile(input, "lucide", "radix", {}),
+      ).toMatchInlineSnapshot(`
       "import { Something } from "other-package"
 
             export function Component() {
@@ -61,7 +62,7 @@ describe('migrateIconsFile', () => {
     `)
    })
 
-   it('should handle mixed icon imports from different packages', async () => {
+   it("should handle mixed icon imports from different packages", async () => {
       const input = `
       import { CheckIcon } from "@radix-ui/react-icons"
       import { AlertCircle } from "lucide-react"
@@ -79,14 +80,14 @@ describe('migrateIconsFile', () => {
       }`
 
       expect(
-         await migrateIconsFile(input, 'radix', 'lucide', {
+         await migrateIconsFile(input, "radix", "lucide", {
             Check: {
-               lucide: 'Check',
-               radix: 'CheckIcon',
+               lucide: "Check",
+               radix: "CheckIcon",
             },
             X: {
-               lucide: 'X',
-               radix: 'Cross2Icon',
+               lucide: "X",
+               radix: "Cross2Icon",
             },
          }),
       ).toMatchInlineSnapshot(`
@@ -106,7 +107,7 @@ describe('migrateIconsFile', () => {
     `)
    })
 
-   it('should preserve all props and children on icons', async () => {
+   it("should preserve all props and children on icons", async () => {
       const input = `
       import { CheckIcon, Cross2Icon } from "@radix-ui/react-icons"
 
@@ -126,14 +127,14 @@ describe('migrateIconsFile', () => {
       }`
 
       expect(
-         await migrateIconsFile(input, 'radix', 'lucide', {
+         await migrateIconsFile(input, "radix", "lucide", {
             Check: {
-               lucide: 'Check',
-               radix: 'CheckIcon',
+               lucide: "Check",
+               radix: "CheckIcon",
             },
             X: {
-               lucide: 'X',
-               radix: 'Cross2Icon',
+               lucide: "X",
+               radix: "Cross2Icon",
             },
          }),
       ).toMatchInlineSnapshot(`

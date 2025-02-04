@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image"
+import Link from "next/link"
 import {
    File,
    Home,
@@ -14,9 +14,9 @@ import {
    Settings,
    ShoppingCart,
    Users2,
-} from 'lucide-react'
+} from "lucide-react"
 
-import { Badge } from '~/registry/miami/ui/badge'
+import { Badge } from "~/registry/miami/ui/badge"
 import {
    Breadcrumb,
    BreadcrumbItem,
@@ -24,8 +24,8 @@ import {
    BreadcrumbList,
    BreadcrumbPage,
    BreadcrumbSeparator,
-} from '~/registry/miami/ui/breadcrumb'
-import { Button } from '~/registry/miami/ui/button'
+} from "~/registry/miami/ui/breadcrumb"
+import { Button } from "~/registry/miami/ui/button"
 import {
    Card,
    CardContent,
@@ -33,7 +33,7 @@ import {
    CardFooter,
    CardHeader,
    CardTitle,
-} from '~/registry/miami/ui/card'
+} from "~/registry/miami/ui/card"
 import {
    DropdownMenu,
    DropdownMenuCheckboxItem,
@@ -42,9 +42,9 @@ import {
    DropdownMenuLabel,
    DropdownMenuSeparator,
    DropdownMenuTrigger,
-} from '~/registry/miami/ui/dropdown-menu'
-import { Input } from '~/registry/miami/ui/input'
-import { Sheet, SheetContent, SheetTrigger } from '~/registry/miami/ui/sheet'
+} from "~/registry/miami/ui/dropdown-menu"
+import { Input } from "~/registry/miami/ui/input"
+import { Sheet, SheetContent, SheetTrigger } from "~/registry/miami/ui/sheet"
 import {
    Table,
    TableBody,
@@ -52,25 +52,25 @@ import {
    TableHead,
    TableHeader,
    TableRow,
-} from '~/registry/miami/ui/table'
+} from "~/registry/miami/ui/table"
 import {
    Tabs,
    TabsContent,
    TabsList,
    TabsTrigger,
-} from '~/registry/miami/ui/tabs'
+} from "~/registry/miami/ui/tabs"
 import {
    Tooltip,
    TooltipContent,
    TooltipTrigger,
-} from '~/registry/miami/ui/tooltip'
+} from "~/registry/miami/ui/tooltip"
 
-export const description
-  = 'An products dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. It displays a list of products in a table with actions.'
+export const description =
+   "An products dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. It displays a list of products in a table with actions."
 
-export const iframeHeight = '820px'
+export const iframeHeight = "820px"
 
-export const containerClassName = 'w-full h-full'
+export const containerClassName = "w-full h-full"
 
 export default function Dashboard() {
    return (
@@ -164,7 +164,11 @@ export default function Dashboard() {
             <header className="bg-background sticky top-0 z-30 flex h-14 items-center gap-4 border-b px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
                <Sheet>
                   <SheetTrigger asChild>
-                     <Button size="icon" variant="outline" className="sm:hidden">
+                     <Button
+                        size="icon"
+                        variant="outline"
+                        className="sm:hidden"
+                     >
                         <PanelLeft className="size-5" />
                         <span className="sr-only">Toggle Menu</span>
                      </Button>
@@ -276,14 +280,21 @@ export default function Dashboard() {
                         <TabsTrigger value="all">All</TabsTrigger>
                         <TabsTrigger value="active">Active</TabsTrigger>
                         <TabsTrigger value="draft">Draft</TabsTrigger>
-                        <TabsTrigger value="archived" className="hidden sm:flex">
+                        <TabsTrigger
+                           value="archived"
+                           className="hidden sm:flex"
+                        >
                            Archived
                         </TabsTrigger>
                      </TabsList>
                      <div className="ml-auto flex items-center gap-2">
                         <DropdownMenu>
                            <DropdownMenuTrigger asChild>
-                              <Button variant="outline" size="sm" className="h-7 gap-1">
+                              <Button
+                                 variant="outline"
+                                 size="sm"
+                                 className="h-7 gap-1"
+                              >
                                  <ListFilter className="size-3.5" />
                                  <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
                                     Filter
@@ -296,13 +307,19 @@ export default function Dashboard() {
                               <DropdownMenuCheckboxItem checked>
                                  Active
                               </DropdownMenuCheckboxItem>
-                              <DropdownMenuCheckboxItem>Draft</DropdownMenuCheckboxItem>
+                              <DropdownMenuCheckboxItem>
+                                 Draft
+                              </DropdownMenuCheckboxItem>
                               <DropdownMenuCheckboxItem>
                                  Archived
                               </DropdownMenuCheckboxItem>
                            </DropdownMenuContent>
                         </DropdownMenu>
-                        <Button size="sm" variant="outline" className="h-7 gap-1">
+                        <Button
+                           size="sm"
+                           variant="outline"
+                           className="h-7 gap-1"
+                        >
                            <File className="size-3.5" />
                            <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
                               Export
@@ -321,7 +338,8 @@ export default function Dashboard() {
                         <CardHeader>
                            <CardTitle>Products</CardTitle>
                            <CardDescription>
-                              Manage your products and view their sales performance.
+                              Manage your products and view their sales
+                              performance.
                            </CardDescription>
                         </CardHeader>
                         <CardContent>
@@ -378,13 +396,21 @@ export default function Dashboard() {
                                                 variant="ghost"
                                              >
                                                 <MoreHorizontal className="size-4" />
-                                                <span className="sr-only">Toggle menu</span>
+                                                <span className="sr-only">
+                                                   Toggle menu
+                                                </span>
                                              </Button>
                                           </DropdownMenuTrigger>
                                           <DropdownMenuContent align="end">
-                                             <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                                             <DropdownMenuItem>Edit</DropdownMenuItem>
-                                             <DropdownMenuItem>Delete</DropdownMenuItem>
+                                             <DropdownMenuLabel>
+                                                Actions
+                                             </DropdownMenuLabel>
+                                             <DropdownMenuItem>
+                                                Edit
+                                             </DropdownMenuItem>
+                                             <DropdownMenuItem>
+                                                Delete
+                                             </DropdownMenuItem>
                                           </DropdownMenuContent>
                                        </DropdownMenu>
                                     </TableCell>
@@ -421,13 +447,21 @@ export default function Dashboard() {
                                                 variant="ghost"
                                              >
                                                 <MoreHorizontal className="size-4" />
-                                                <span className="sr-only">Toggle menu</span>
+                                                <span className="sr-only">
+                                                   Toggle menu
+                                                </span>
                                              </Button>
                                           </DropdownMenuTrigger>
                                           <DropdownMenuContent align="end">
-                                             <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                                             <DropdownMenuItem>Edit</DropdownMenuItem>
-                                             <DropdownMenuItem>Delete</DropdownMenuItem>
+                                             <DropdownMenuLabel>
+                                                Actions
+                                             </DropdownMenuLabel>
+                                             <DropdownMenuItem>
+                                                Edit
+                                             </DropdownMenuItem>
+                                             <DropdownMenuItem>
+                                                Delete
+                                             </DropdownMenuItem>
                                           </DropdownMenuContent>
                                        </DropdownMenu>
                                     </TableCell>
@@ -464,13 +498,21 @@ export default function Dashboard() {
                                                 variant="ghost"
                                              >
                                                 <MoreHorizontal className="size-4" />
-                                                <span className="sr-only">Toggle menu</span>
+                                                <span className="sr-only">
+                                                   Toggle menu
+                                                </span>
                                              </Button>
                                           </DropdownMenuTrigger>
                                           <DropdownMenuContent align="end">
-                                             <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                                             <DropdownMenuItem>Edit</DropdownMenuItem>
-                                             <DropdownMenuItem>Delete</DropdownMenuItem>
+                                             <DropdownMenuLabel>
+                                                Actions
+                                             </DropdownMenuLabel>
+                                             <DropdownMenuItem>
+                                                Edit
+                                             </DropdownMenuItem>
+                                             <DropdownMenuItem>
+                                                Delete
+                                             </DropdownMenuItem>
                                           </DropdownMenuContent>
                                        </DropdownMenu>
                                     </TableCell>
@@ -507,13 +549,21 @@ export default function Dashboard() {
                                                 variant="ghost"
                                              >
                                                 <MoreHorizontal className="size-4" />
-                                                <span className="sr-only">Toggle menu</span>
+                                                <span className="sr-only">
+                                                   Toggle menu
+                                                </span>
                                              </Button>
                                           </DropdownMenuTrigger>
                                           <DropdownMenuContent align="end">
-                                             <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                                             <DropdownMenuItem>Edit</DropdownMenuItem>
-                                             <DropdownMenuItem>Delete</DropdownMenuItem>
+                                             <DropdownMenuLabel>
+                                                Actions
+                                             </DropdownMenuLabel>
+                                             <DropdownMenuItem>
+                                                Edit
+                                             </DropdownMenuItem>
+                                             <DropdownMenuItem>
+                                                Delete
+                                             </DropdownMenuItem>
                                           </DropdownMenuContent>
                                        </DropdownMenu>
                                     </TableCell>
@@ -550,13 +600,21 @@ export default function Dashboard() {
                                                 variant="ghost"
                                              >
                                                 <MoreHorizontal className="size-4" />
-                                                <span className="sr-only">Toggle menu</span>
+                                                <span className="sr-only">
+                                                   Toggle menu
+                                                </span>
                                              </Button>
                                           </DropdownMenuTrigger>
                                           <DropdownMenuContent align="end">
-                                             <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                                             <DropdownMenuItem>Edit</DropdownMenuItem>
-                                             <DropdownMenuItem>Delete</DropdownMenuItem>
+                                             <DropdownMenuLabel>
+                                                Actions
+                                             </DropdownMenuLabel>
+                                             <DropdownMenuItem>
+                                                Edit
+                                             </DropdownMenuItem>
+                                             <DropdownMenuItem>
+                                                Delete
+                                             </DropdownMenuItem>
                                           </DropdownMenuContent>
                                        </DropdownMenu>
                                     </TableCell>
@@ -593,13 +651,21 @@ export default function Dashboard() {
                                                 variant="ghost"
                                              >
                                                 <MoreHorizontal className="size-4" />
-                                                <span className="sr-only">Toggle menu</span>
+                                                <span className="sr-only">
+                                                   Toggle menu
+                                                </span>
                                              </Button>
                                           </DropdownMenuTrigger>
                                           <DropdownMenuContent align="end">
-                                             <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                                             <DropdownMenuItem>Edit</DropdownMenuItem>
-                                             <DropdownMenuItem>Delete</DropdownMenuItem>
+                                             <DropdownMenuLabel>
+                                                Actions
+                                             </DropdownMenuLabel>
+                                             <DropdownMenuItem>
+                                                Edit
+                                             </DropdownMenuItem>
+                                             <DropdownMenuItem>
+                                                Delete
+                                             </DropdownMenuItem>
                                           </DropdownMenuContent>
                                        </DropdownMenu>
                                     </TableCell>
@@ -609,14 +675,8 @@ export default function Dashboard() {
                         </CardContent>
                         <CardFooter>
                            <div className="text-muted-foreground text-xs">
-                              Showing
-                              {' '}
-                              <strong>1-10</strong>
-                              {' '}
-                              of
-                              <strong>32</strong>
-                              {' '}
-                              products
+                              Showing <strong>1-10</strong> of
+                              <strong>32</strong> products
                            </div>
                         </CardFooter>
                      </Card>

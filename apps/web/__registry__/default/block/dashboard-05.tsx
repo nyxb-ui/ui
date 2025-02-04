@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image"
+import Link from "next/link"
 import {
    ChevronLeft,
    ChevronRight,
@@ -18,9 +18,9 @@ import {
    ShoppingCart,
    Truck,
    Users2,
-} from 'lucide-react'
+} from "lucide-react"
 
-import { Badge } from '~/registry/default/ui/badge'
+import { Badge } from "~/registry/default/ui/badge"
 import {
    Breadcrumb,
    BreadcrumbItem,
@@ -28,8 +28,8 @@ import {
    BreadcrumbList,
    BreadcrumbPage,
    BreadcrumbSeparator,
-} from '~/registry/default/ui/breadcrumb'
-import { Button } from '~/registry/default/ui/button'
+} from "~/registry/default/ui/breadcrumb"
+import { Button } from "~/registry/default/ui/button"
 import {
    Card,
    CardContent,
@@ -37,7 +37,7 @@ import {
    CardFooter,
    CardHeader,
    CardTitle,
-} from '~/registry/default/ui/card'
+} from "~/registry/default/ui/card"
 import {
    DropdownMenu,
    DropdownMenuCheckboxItem,
@@ -46,16 +46,16 @@ import {
    DropdownMenuLabel,
    DropdownMenuSeparator,
    DropdownMenuTrigger,
-} from '~/registry/default/ui/dropdown-menu'
-import { Input } from '~/registry/default/ui/input'
+} from "~/registry/default/ui/dropdown-menu"
+import { Input } from "~/registry/default/ui/input"
 import {
    Pagination,
    PaginationContent,
    PaginationItem,
-} from '~/registry/default/ui/pagination'
-import { Progress } from '~/registry/default/ui/progress'
-import { Separator } from '~/registry/default/ui/separator'
-import { Sheet, SheetContent, SheetTrigger } from '~/registry/default/ui/sheet'
+} from "~/registry/default/ui/pagination"
+import { Progress } from "~/registry/default/ui/progress"
+import { Separator } from "~/registry/default/ui/separator"
+import { Sheet, SheetContent, SheetTrigger } from "~/registry/default/ui/sheet"
 import {
    Table,
    TableBody,
@@ -63,25 +63,25 @@ import {
    TableHead,
    TableHeader,
    TableRow,
-} from '~/registry/default/ui/table'
+} from "~/registry/default/ui/table"
 import {
    Tabs,
    TabsContent,
    TabsList,
    TabsTrigger,
-} from '~/registry/default/ui/tabs'
+} from "~/registry/default/ui/tabs"
 import {
    Tooltip,
    TooltipContent,
    TooltipTrigger,
-} from '~/registry/default/ui/tooltip'
+} from "~/registry/default/ui/tooltip"
 
-export const description
-  = 'An orders dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. The main area has a list of recent orders with a filter and export button. The main area also has a detailed view of a single order with order details, shipping information, billing information, customer information, and payment information.'
+export const description =
+   "An orders dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. The main area has a list of recent orders with a filter and export button. The main area also has a detailed view of a single order with order details, shipping information, billing information, customer information, and payment information."
 
-export const iframeHeight = '1112px'
+export const iframeHeight = "1112px"
 
-export const containerClassName = 'w-full h-full'
+export const containerClassName = "w-full h-full"
 
 export default function Dashboard() {
    return (
@@ -175,7 +175,11 @@ export default function Dashboard() {
             <header className="bg-background sticky top-0 z-30 flex h-14 items-center gap-4 border-b px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
                <Sheet>
                   <SheetTrigger asChild>
-                     <Button size="icon" variant="outline" className="sm:hidden">
+                     <Button
+                        size="icon"
+                        variant="outline"
+                        className="sm:hidden"
+                     >
                         <PanelLeft className="size-5" />
                         <span className="sr-only">Toggle Menu</span>
                      </Button>
@@ -284,13 +288,14 @@ export default function Dashboard() {
                <div className="grid auto-rows-max items-start gap-4 md:gap-8 lg:col-span-2">
                   <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
                      <Card
-                        className="sm:col-span-2" x-chunk="dashboard-05-chunk-0"
+                        className="sm:col-span-2"
+                        x-chunk="dashboard-05-chunk-0"
                      >
                         <CardHeader className="pb-3">
                            <CardTitle>Your Orders</CardTitle>
                            <CardDescription className="max-w-lg text-balance leading-relaxed">
-                              Introducing Our Dynamic Orders Dashboard for Seamless
-                              Management and Insightful Analysis.
+                              Introducing Our Dynamic Orders Dashboard for
+                              Seamless Management and Insightful Analysis.
                            </CardDescription>
                         </CardHeader>
                         <CardFooter>
@@ -342,11 +347,15 @@ export default function Dashboard() {
                                     className="h-7 gap-1 text-sm"
                                  >
                                     <ListFilter className="size-3.5" />
-                                    <span className="sr-only sm:not-sr-only">Filter</span>
+                                    <span className="sr-only sm:not-sr-only">
+                                       Filter
+                                    </span>
                                  </Button>
                               </DropdownMenuTrigger>
                               <DropdownMenuContent align="end">
-                                 <DropdownMenuLabel>Filter by</DropdownMenuLabel>
+                                 <DropdownMenuLabel>
+                                    Filter by
+                                 </DropdownMenuLabel>
                                  <DropdownMenuSeparator />
                                  <DropdownMenuCheckboxItem checked>
                                     Fulfilled
@@ -365,7 +374,9 @@ export default function Dashboard() {
                               className="h-7 gap-1 text-sm"
                            >
                               <File className="size-3.5" />
-                              <span className="sr-only sm:not-sr-only">Export</span>
+                              <span className="sr-only sm:not-sr-only">
+                                 Export
+                              </span>
                            </Button>
                         </div>
                      </div>
@@ -391,13 +402,17 @@ export default function Dashboard() {
                                        <TableHead className="hidden md:table-cell">
                                           Date
                                        </TableHead>
-                                       <TableHead className="text-right">Amount</TableHead>
+                                       <TableHead className="text-right">
+                                          Amount
+                                       </TableHead>
                                     </TableRow>
                                  </TableHeader>
                                  <TableBody>
                                     <TableRow className="bg-accent">
                                        <TableCell>
-                                          <div className="font-medium">Liam Johnson</div>
+                                          <div className="font-medium">
+                                             Liam Johnson
+                                          </div>
                                           <div className="text-muted-foreground hidden text-sm md:inline">
                                              liam@example.com
                                           </div>
@@ -406,18 +421,25 @@ export default function Dashboard() {
                                           Sale
                                        </TableCell>
                                        <TableCell className="hidden sm:table-cell">
-                                          <Badge className="text-xs" variant="secondary">
+                                          <Badge
+                                             className="text-xs"
+                                             variant="secondary"
+                                          >
                                              Fulfilled
                                           </Badge>
                                        </TableCell>
                                        <TableCell className="hidden md:table-cell">
                                           2023-06-23
                                        </TableCell>
-                                       <TableCell className="text-right">$250.00</TableCell>
+                                       <TableCell className="text-right">
+                                          $250.00
+                                       </TableCell>
                                     </TableRow>
                                     <TableRow>
                                        <TableCell>
-                                          <div className="font-medium">Olivia Smith</div>
+                                          <div className="font-medium">
+                                             Olivia Smith
+                                          </div>
                                           <div className="text-muted-foreground hidden text-sm md:inline">
                                              olivia@example.com
                                           </div>
@@ -426,18 +448,25 @@ export default function Dashboard() {
                                           Refund
                                        </TableCell>
                                        <TableCell className="hidden sm:table-cell">
-                                          <Badge className="text-xs" variant="outline">
+                                          <Badge
+                                             className="text-xs"
+                                             variant="outline"
+                                          >
                                              Declined
                                           </Badge>
                                        </TableCell>
                                        <TableCell className="hidden md:table-cell">
                                           2023-06-24
                                        </TableCell>
-                                       <TableCell className="text-right">$150.00</TableCell>
+                                       <TableCell className="text-right">
+                                          $150.00
+                                       </TableCell>
                                     </TableRow>
                                     <TableRow>
                                        <TableCell>
-                                          <div className="font-medium">Noah Williams</div>
+                                          <div className="font-medium">
+                                             Noah Williams
+                                          </div>
                                           <div className="text-muted-foreground hidden text-sm md:inline">
                                              noah@example.com
                                           </div>
@@ -446,18 +475,25 @@ export default function Dashboard() {
                                           Subscription
                                        </TableCell>
                                        <TableCell className="hidden sm:table-cell">
-                                          <Badge className="text-xs" variant="secondary">
+                                          <Badge
+                                             className="text-xs"
+                                             variant="secondary"
+                                          >
                                              Fulfilled
                                           </Badge>
                                        </TableCell>
                                        <TableCell className="hidden md:table-cell">
                                           2023-06-25
                                        </TableCell>
-                                       <TableCell className="text-right">$350.00</TableCell>
+                                       <TableCell className="text-right">
+                                          $350.00
+                                       </TableCell>
                                     </TableRow>
                                     <TableRow>
                                        <TableCell>
-                                          <div className="font-medium">Emma Brown</div>
+                                          <div className="font-medium">
+                                             Emma Brown
+                                          </div>
                                           <div className="text-muted-foreground hidden text-sm md:inline">
                                              emma@example.com
                                           </div>
@@ -466,18 +502,25 @@ export default function Dashboard() {
                                           Sale
                                        </TableCell>
                                        <TableCell className="hidden sm:table-cell">
-                                          <Badge className="text-xs" variant="secondary">
+                                          <Badge
+                                             className="text-xs"
+                                             variant="secondary"
+                                          >
                                              Fulfilled
                                           </Badge>
                                        </TableCell>
                                        <TableCell className="hidden md:table-cell">
                                           2023-06-26
                                        </TableCell>
-                                       <TableCell className="text-right">$450.00</TableCell>
+                                       <TableCell className="text-right">
+                                          $450.00
+                                       </TableCell>
                                     </TableRow>
                                     <TableRow>
                                        <TableCell>
-                                          <div className="font-medium">Liam Johnson</div>
+                                          <div className="font-medium">
+                                             Liam Johnson
+                                          </div>
                                           <div className="text-muted-foreground hidden text-sm md:inline">
                                              liam@example.com
                                           </div>
@@ -486,18 +529,25 @@ export default function Dashboard() {
                                           Sale
                                        </TableCell>
                                        <TableCell className="hidden sm:table-cell">
-                                          <Badge className="text-xs" variant="secondary">
+                                          <Badge
+                                             className="text-xs"
+                                             variant="secondary"
+                                          >
                                              Fulfilled
                                           </Badge>
                                        </TableCell>
                                        <TableCell className="hidden md:table-cell">
                                           2023-06-23
                                        </TableCell>
-                                       <TableCell className="text-right">$250.00</TableCell>
+                                       <TableCell className="text-right">
+                                          $250.00
+                                       </TableCell>
                                     </TableRow>
                                     <TableRow>
                                        <TableCell>
-                                          <div className="font-medium">Liam Johnson</div>
+                                          <div className="font-medium">
+                                             Liam Johnson
+                                          </div>
                                           <div className="text-muted-foreground hidden text-sm md:inline">
                                              liam@example.com
                                           </div>
@@ -506,18 +556,25 @@ export default function Dashboard() {
                                           Sale
                                        </TableCell>
                                        <TableCell className="hidden sm:table-cell">
-                                          <Badge className="text-xs" variant="secondary">
+                                          <Badge
+                                             className="text-xs"
+                                             variant="secondary"
+                                          >
                                              Fulfilled
                                           </Badge>
                                        </TableCell>
                                        <TableCell className="hidden md:table-cell">
                                           2023-06-23
                                        </TableCell>
-                                       <TableCell className="text-right">$250.00</TableCell>
+                                       <TableCell className="text-right">
+                                          $250.00
+                                       </TableCell>
                                     </TableRow>
                                     <TableRow>
                                        <TableCell>
-                                          <div className="font-medium">Olivia Smith</div>
+                                          <div className="font-medium">
+                                             Olivia Smith
+                                          </div>
                                           <div className="text-muted-foreground hidden text-sm md:inline">
                                              olivia@example.com
                                           </div>
@@ -526,18 +583,25 @@ export default function Dashboard() {
                                           Refund
                                        </TableCell>
                                        <TableCell className="hidden sm:table-cell">
-                                          <Badge className="text-xs" variant="outline">
+                                          <Badge
+                                             className="text-xs"
+                                             variant="outline"
+                                          >
                                              Declined
                                           </Badge>
                                        </TableCell>
                                        <TableCell className="hidden md:table-cell">
                                           2023-06-24
                                        </TableCell>
-                                       <TableCell className="text-right">$150.00</TableCell>
+                                       <TableCell className="text-right">
+                                          $150.00
+                                       </TableCell>
                                     </TableRow>
                                     <TableRow>
                                        <TableCell>
-                                          <div className="font-medium">Emma Brown</div>
+                                          <div className="font-medium">
+                                             Emma Brown
+                                          </div>
                                           <div className="text-muted-foreground hidden text-sm md:inline">
                                              emma@example.com
                                           </div>
@@ -546,14 +610,19 @@ export default function Dashboard() {
                                           Sale
                                        </TableCell>
                                        <TableCell className="hidden sm:table-cell">
-                                          <Badge className="text-xs" variant="secondary">
+                                          <Badge
+                                             className="text-xs"
+                                             variant="secondary"
+                                          >
                                              Fulfilled
                                           </Badge>
                                        </TableCell>
                                        <TableCell className="hidden md:table-cell">
                                           2023-06-26
                                        </TableCell>
-                                       <TableCell className="text-right">$450.00</TableCell>
+                                       <TableCell className="text-right">
+                                          $450.00
+                                       </TableCell>
                                     </TableRow>
                                  </TableBody>
                               </Table>
@@ -564,7 +633,8 @@ export default function Dashboard() {
                </div>
                <div>
                   <Card
-                     className="overflow-hidden" x-chunk="dashboard-05-chunk-4"
+                     className="overflow-hidden"
+                     x-chunk="dashboard-05-chunk-4"
                   >
                      <CardHeader className="bg-muted/50 flex flex-row items-start">
                         <div className="grid gap-0.5">
@@ -579,10 +649,16 @@ export default function Dashboard() {
                                  <span className="sr-only">Copy Order ID</span>
                               </Button>
                            </CardTitle>
-                           <CardDescription>Date: November 23, 2023</CardDescription>
+                           <CardDescription>
+                              Date: November 23, 2023
+                           </CardDescription>
                         </div>
                         <div className="ml-auto flex items-center gap-1">
-                           <Button size="sm" variant="outline" className="h-8 gap-1">
+                           <Button
+                              size="sm"
+                              variant="outline"
+                              className="h-8 gap-1"
+                           >
                               <Truck className="size-3.5" />
                               <span className="lg:sr-only xl:not-sr-only xl:whitespace-nowrap">
                                  Track Order
@@ -590,7 +666,11 @@ export default function Dashboard() {
                            </Button>
                            <DropdownMenu>
                               <DropdownMenuTrigger asChild>
-                                 <Button size="icon" variant="outline" className="size-8">
+                                 <Button
+                                    size="icon"
+                                    variant="outline"
+                                    className="size-8"
+                                 >
                                     <MoreVertical className="size-3.5" />
                                     <span className="sr-only">More</span>
                                  </Button>
@@ -610,17 +690,13 @@ export default function Dashboard() {
                            <ul className="grid gap-3">
                               <li className="flex items-center justify-between">
                                  <span className="text-muted-foreground">
-                                    Glimmer Lamps x
-                                    {' '}
-                                    <span>2</span>
+                                    Glimmer Lamps x <span>2</span>
                                  </span>
                                  <span>$250.00</span>
                               </li>
                               <li className="flex items-center justify-between">
                                  <span className="text-muted-foreground">
-                                    Aqua Filters x
-                                    {' '}
-                                    <span>1</span>
+                                    Aqua Filters x <span>1</span>
                                  </span>
                                  <span>$49.00</span>
                               </li>
@@ -628,19 +704,27 @@ export default function Dashboard() {
                            <Separator className="my-2" />
                            <ul className="grid gap-3">
                               <li className="flex items-center justify-between">
-                                 <span className="text-muted-foreground">Subtotal</span>
+                                 <span className="text-muted-foreground">
+                                    Subtotal
+                                 </span>
                                  <span>$299.00</span>
                               </li>
                               <li className="flex items-center justify-between">
-                                 <span className="text-muted-foreground">Shipping</span>
+                                 <span className="text-muted-foreground">
+                                    Shipping
+                                 </span>
                                  <span>$5.00</span>
                               </li>
                               <li className="flex items-center justify-between">
-                                 <span className="text-muted-foreground">Tax</span>
+                                 <span className="text-muted-foreground">
+                                    Tax
+                                 </span>
                                  <span>$25.00</span>
                               </li>
                               <li className="flex items-center justify-between font-semibold">
-                                 <span className="text-muted-foreground">Total</span>
+                                 <span className="text-muted-foreground">
+                                    Total
+                                 </span>
                                  <span>$329.00</span>
                               </li>
                            </ul>
@@ -648,7 +732,9 @@ export default function Dashboard() {
                         <Separator className="my-4" />
                         <div className="grid grid-cols-2 gap-4">
                            <div className="grid gap-3">
-                              <div className="font-semibold">Shipping Information</div>
+                              <div className="font-semibold">
+                                 Shipping Information
+                              </div>
                               <address className="text-muted-foreground grid gap-0.5 not-italic">
                                  <span>Liam Johnson</span>
                                  <span>1234 Main St.</span>
@@ -656,7 +742,9 @@ export default function Dashboard() {
                               </address>
                            </div>
                            <div className="grid auto-rows-max gap-3">
-                              <div className="font-semibold">Billing Information</div>
+                              <div className="font-semibold">
+                                 Billing Information
+                              </div>
                               <div className="text-muted-foreground">
                                  Same as shipping address
                               </div>
@@ -664,20 +752,28 @@ export default function Dashboard() {
                         </div>
                         <Separator className="my-4" />
                         <div className="grid gap-3">
-                           <div className="font-semibold">Customer Information</div>
+                           <div className="font-semibold">
+                              Customer Information
+                           </div>
                            <dl className="grid gap-3">
                               <div className="flex items-center justify-between">
-                                 <dt className="text-muted-foreground">Customer</dt>
+                                 <dt className="text-muted-foreground">
+                                    Customer
+                                 </dt>
                                  <dd>Liam Johnson</dd>
                               </div>
                               <div className="flex items-center justify-between">
-                                 <dt className="text-muted-foreground">Email</dt>
+                                 <dt className="text-muted-foreground">
+                                    Email
+                                 </dt>
                                  <dd>
                                     <a href="mailto:">liam@acme.com</a>
                                  </dd>
                               </div>
                               <div className="flex items-center justify-between">
-                                 <dt className="text-muted-foreground">Phone</dt>
+                                 <dt className="text-muted-foreground">
+                                    Phone
+                                 </dt>
                                  <dd>
                                     <a href="tel:">+1 234 567 890</a>
                                  </dd>
@@ -686,7 +782,9 @@ export default function Dashboard() {
                         </div>
                         <Separator className="my-4" />
                         <div className="grid gap-3">
-                           <div className="font-semibold">Payment Information</div>
+                           <div className="font-semibold">
+                              Payment Information
+                           </div>
                            <dl className="grid gap-3">
                               <div className="flex items-center justify-between">
                                  <dt className="text-muted-foreground flex items-center gap-1">
@@ -700,20 +798,29 @@ export default function Dashboard() {
                      </CardContent>
                      <CardFooter className="bg-muted/50 flex flex-row items-center border-t px-6 py-3">
                         <div className="text-muted-foreground text-xs">
-                           Updated
-                           {' '}
+                           Updated{" "}
                            <time dateTime="2023-11-23">November 23, 2023</time>
                         </div>
                         <Pagination className="ml-auto mr-0 w-auto">
                            <PaginationContent>
                               <PaginationItem>
-                                 <Button size="icon" variant="outline" className="size-6">
+                                 <Button
+                                    size="icon"
+                                    variant="outline"
+                                    className="size-6"
+                                 >
                                     <ChevronLeft className="size-3.5" />
-                                    <span className="sr-only">Previous Order</span>
+                                    <span className="sr-only">
+                                       Previous Order
+                                    </span>
                                  </Button>
                               </PaginationItem>
                               <PaginationItem>
-                                 <Button size="icon" variant="outline" className="size-6">
+                                 <Button
+                                    size="icon"
+                                    variant="outline"
+                                    className="size-6"
+                                 >
                                     <ChevronRight className="size-3.5" />
                                     <span className="sr-only">Next Order</span>
                                  </Button>

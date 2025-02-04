@@ -1,27 +1,24 @@
-import * as React from 'react'
+import * as React from "react"
 
-import { ny } from '~/lib/utils'
-import { useMediaQuery } from '~/hooks/use-media-query'
-import { useThemesConfig } from '~/hooks/use-themes-config'
-import { ChartCopyButton } from '~/components/chart-copy-button'
-import type { Chart } from '~/components/chart-display'
-import { Button } from '~/registry/miami/ui/button'
+import { ChartCopyButton } from "~/components/chart-copy-button"
+import type { Chart } from "~/components/chart-display"
+import { V0Button } from "~/components/v0-button"
+import { useMediaQuery } from "~/hooks/use-media-query"
+import { useThemesConfig } from "~/hooks/use-themes-config"
+import { ny } from "~/lib/utils"
+import { Button } from "~/registry/miami/ui/button"
 import {
    Drawer,
    DrawerContent,
    DrawerTrigger,
-} from '~/registry/miami/ui/drawer'
-import {
-   Sheet,
-   SheetContent,
-   SheetTrigger,
-} from '~/registry/miami/ui/sheet'
+} from "~/registry/miami/ui/drawer"
+import { Sheet, SheetContent, SheetTrigger } from "~/registry/miami/ui/sheet"
 import {
    Tabs,
    TabsContent,
    TabsList,
    TabsTrigger,
-} from '~/registry/miami/ui/tabs'
+} from "~/registry/miami/ui/tabs"
 
 export function ChartCodeViewer({
    chart,
@@ -29,24 +26,24 @@ export function ChartCodeViewer({
    children,
 }: {
    chart: Chart
-} & React.ComponentProps<'div'>) {
-   const [tab, setTab] = React.useState('code')
+} & React.ComponentProps<"div">) {
+   const [tab, setTab] = React.useState("code")
    const { themesConfig } = useThemesConfig()
-   const isDesktop = useMediaQuery('(min-width: 768px)')
+   const isDesktop = useMediaQuery("(min-width: 768px)")
 
    const themeCode = React.useMemo(() => {
       return `\
 @layer base {
   :root {
 ${Object.entries(themesConfig?.activeTheme.cssVars.light || {})
-  .map(([key, value]) => `    ${key}: ${value};`)
-  .join('\n')}
+   .map(([key, value]) => `    ${key}: ${value};`)
+   .join("\n")}
   }
 
   .dark {
 ${Object.entries(themesConfig?.activeTheme.cssVars.dark || {})
-  .map(([key, value]) => `    ${key}: ${value};`)
-  .join('\n')}
+   .map(([key, value]) => `    ${key}: ${value};`)
+   .join("\n")}
     }
 }
 `
@@ -56,7 +53,7 @@ ${Object.entries(themesConfig?.activeTheme.cssVars.dark || {})
       <Button
          size="sm"
          variant="outline"
-         className="text-foreground hover:bg-muted dark:text-foreground h-6 rounded-[6px] border bg-transparent px-2 text-xs shadow-none"
+         className="h-6 rounded-[6px] border bg-transparent px-2 text-xs text-foreground shadow-none hover:bg-muted dark:text-foreground"
       >
          View Code
       </Button>
@@ -88,16 +85,21 @@ ${Object.entries(themesConfig?.activeTheme.cssVars.dark || {})
                      Theme
                   </TabsTrigger>
                </TabsList>
-               {tab === 'code' && (
+               {tab === "code" && (
                   <div className="ml-auto flex items-center justify-center gap-2">
                      <ChartCopyButton
                         event="copy_chart_code"
                         name={chart.name}
-                        code={chart.files?.[0]?.content ?? ''}
+                        code={chart.files?.[0]?.content ?? ""}
+                     />
+                     <V0Button
+                        id={`v0-button-${chart.name}`}
+                        name={chart.name}
+                        className="h-7"
                      />
                   </div>
                )}
-               {tab === 'theme' && (
+               {tab === "theme" && (
                   <ChartCopyButton
                      event="copy_chart_theme"
                      name={chart.name}
@@ -128,11 +130,11 @@ ${Object.entries(themesConfig?.activeTheme.cssVars.dark || {})
                   data-rehype-pretty-code-fragment
                   className="relative overflow-auto rounded-lg bg-black py-6"
                >
-                  <pre className="bg-black font-mono text-sm leading-relaxed">
-                     <code data-line-numbers="">
-                        <span className="line text-zinc-700">{`/* ${themesConfig?.activeTheme.name} */`}</span>
-                        {themeCode.split('\n').map((line, index) => (
-                           <span key={index} className="line">
+                  <pre className="bg-black font-mono text-sm leading-relaxed whitespace-pre-wrap break-all">
+                     <code data-line-numbers className="block">
+                        <span className="line text-zinc-700 block">{`/* ${themesConfig?.activeTheme.name} */`}</span>
+                        {themeCode.split("\n").map((line, index) => (
+                           <span key={index} className="line block">
                               {line}
                            </span>
                         ))}
@@ -150,11 +152,13 @@ ${Object.entries(themesConfig?.activeTheme.cssVars.dark || {})
             <DrawerTrigger asChild>{button}</DrawerTrigger>
             <DrawerContent
                className={ny(
-                  'flex max-h-[80vh] flex-col sm:max-h-[90vh] [&>div.bg-muted]:shrink-0',
+                  "flex max-h-[80vh] flex-col sm:max-h-[90vh] [&>div.bg-muted]:shrink-0",
                   className,
                )}
             >
-               <div className="flex h-full flex-col overflow-auto">{content}</div>
+               <div className="flex h-full flex-col overflow-auto">
+                  {content}
+               </div>
             </DrawerContent>
          </Drawer>
       )
@@ -166,7 +170,7 @@ ${Object.entries(themesConfig?.activeTheme.cssVars.dark || {})
          <SheetContent
             side="right"
             className={ny(
-               'flex flex-col gap-0 border-l-0 p-0 sm:max-w-sm md:w-[700px] md:max-w-[700px] dark:border-l',
+               "flex flex-col gap-0 border-l-0 p-0 dark:border-l sm:max-w-sm md:w-[700px] md:max-w-[700px]",
                className,
             )}
          >

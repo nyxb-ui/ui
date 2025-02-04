@@ -1,20 +1,18 @@
-import { THEMES } from '~/lib/themes'
-import { ChartDisplay } from '~/components/chart-display'
-import { ChartsNav } from '~/components/charts-nav'
-import { ThemesSwitcher } from '~/components/themes-selector'
-import { ThemesStyle } from '~/components/themes-styles'
-import { Separator } from '~/registry/miami/ui/separator'
-import * as Charts from '~/app/(app)/charts/charts'
+import * as Charts from "~/app/(app)/charts/charts"
+import { ChartDisplay } from "~/components/chart-display"
+import { ThemesSwitcher } from "~/components/themes-selector"
+import { ThemesStyle } from "~/components/themes-styles"
+import { THEMES } from "~/lib/themes"
+import { Separator } from "~/registry/miami/ui/separator"
 
 export default function ChartsPage() {
    return (
       <div className="grid gap-4">
-         <ChartsNav className="[&>a:first-child]:bg-muted [&>a:first-child]:text-primary [&>a:first-child]:font-medium" />
          <ThemesStyle />
          <div className="gap-6 md:flex md:flex-row-reverse md:items-start">
             <ThemesSwitcher
                themes={THEMES}
-               className="bg-background/95 supports-[backdrop-filter]:bg-background/60 fixed inset-x-0 bottom-0 z-40 flex backdrop-blur lg:sticky lg:bottom-auto lg:top-20"
+               className="fixed inset-x-0 bottom-0 z-40 flex bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 lg:sticky lg:bottom-auto lg:top-20"
             />
             <div className="grid flex-1 gap-12">
                <h2 className="sr-only">Examples</h2>

@@ -1,12 +1,12 @@
-'use client'
+"use client"
 
-import * as React from 'react'
+import * as React from "react"
 
-import { ny } from '~/lib/utils'
-import { Icons } from '~/components/icons'
-import { Button } from '~/registry/miami/ui/button'
-import { Input } from '~/registry/miami/ui/input'
-import { Label } from '~/registry/miami/ui/label'
+import { Icons } from "~/components/icons"
+import { ny } from "~/lib/utils"
+import { Button } from "~/registry/miami/ui/button"
+import { Input } from "~/registry/miami/ui/input"
+import { Label } from "~/registry/miami/ui/label"
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -23,7 +23,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
    }
 
    return (
-      <div className={ny('grid gap-6', className)} {...props}>
+      <div className={ny("grid gap-6", className)} {...props}>
          <form onSubmit={onSubmit}>
             <div className="grid gap-2">
                <div className="grid gap-1">
@@ -42,7 +42,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
                </div>
                <Button disabled={isLoading}>
                   {isLoading && (
-                     <Icons.spinner className="mr-2 size-4 animate-spin" />
+                     <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
                   )}
                   Sign In with Email
                </Button>
@@ -53,20 +53,17 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
                <span className="w-full border-t" />
             </div>
             <div className="relative flex justify-center text-xs uppercase">
-               <span className="bg-background text-muted-foreground px-2">
+               <span className="bg-background px-2 text-muted-foreground">
                   Or continue with
                </span>
             </div>
          </div>
          <Button variant="outline" type="button" disabled={isLoading}>
-            {isLoading
-               ? (
-                     <Icons.spinner className="mr-2 size-4 animate-spin" />
-                  )
-               : (
-                     <Icons.gitHub className="mr-2 size-4" />
-                  )}
-            {' '}
+            {isLoading ? (
+               <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+            ) : (
+               <Icons.gitHub className="mr-2 h-4 w-4" />
+            )}{" "}
             GitHub
          </Button>
       </div>

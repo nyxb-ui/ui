@@ -1,0 +1,14 @@
+{
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "toggle-group-single",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/toggle-group-single.tsx",
+      "content": "import {\n   FontBoldIcon,\n   FontItalicIcon,\n   UnderlineIcon,\n} from \"@radix-ui/react-icons\"\n\nimport { ToggleGroup, ToggleGroupItem } from \"@/components/ui/toggle-group\"\n\nexport default function ToggleGroupDemo() {\n   return (\n      <ToggleGroup type=\"single\">\n         <ToggleGroupItem value=\"bold\" aria-label=\"Toggle bold\">\n            <FontBoldIcon className=\"size-4\" />\n         </ToggleGroupItem>\n         <ToggleGroupItem value=\"italic\" aria-label=\"Toggle italic\">\n            <FontItalicIcon className=\"size-4\" />\n         </ToggleGroupItem>\n         <ToggleGroupItem\n            value=\"strikethrough\"\n            aria-label=\"Toggle strikethrough\"\n         >\n            <UnderlineIcon className=\"size-4\" />\n         </ToggleGroupItem>\n      </ToggleGroup>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

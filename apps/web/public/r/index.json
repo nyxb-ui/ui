@@ -8,7 +8,7 @@
     "files": [
       {
         "path": "ui/accordion.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ],
     "tailwind": {
@@ -48,7 +48,7 @@
     "files": [
       {
         "path": "ui/alert.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -64,7 +64,7 @@
     "files": [
       {
         "path": "ui/alert-dialog.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -77,7 +77,7 @@
     "files": [
       {
         "path": "ui/animated-beam.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -90,7 +90,7 @@
     "files": [
       {
         "path": "ui/animated-grid-pattern.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -103,7 +103,7 @@
     "files": [
       {
         "path": "ui/animated-list.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -113,7 +113,7 @@
     "files": [
       {
         "path": "ui/animated-shiny-text.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ],
     "tailwind": {
@@ -147,7 +147,7 @@
     "files": [
       {
         "path": "ui/animated-subscribe-button.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -157,7 +157,7 @@
     "files": [
       {
         "path": "ui/animated-gradient-text.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ],
     "tailwind": {
@@ -188,7 +188,7 @@
     "files": [
       {
         "path": "ui/aspect-ratio.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -201,7 +201,7 @@
     "files": [
       {
         "path": "ui/avatar.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -211,7 +211,7 @@
     "files": [
       {
         "path": "ui/avatar-circles.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -221,7 +221,7 @@
     "files": [
       {
         "path": "ui/badge.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -234,7 +234,7 @@
     "files": [
       {
         "path": "ui/bento-grid.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -247,7 +247,7 @@
     "files": [
       {
         "path": "ui/blur-in.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -257,7 +257,7 @@
     "files": [
       {
         "path": "ui/border-beam.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ],
     "tailwind": {
@@ -288,7 +288,7 @@
     "files": [
       {
         "path": "ui/box-reveal.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -301,7 +301,7 @@
     "files": [
       {
         "path": "ui/breadcrumb.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -314,7 +314,7 @@
     "files": [
       {
         "path": "ui/blur-fade.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -327,7 +327,7 @@
     "files": [
       {
         "path": "ui/button.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -344,7 +344,7 @@
     "files": [
       {
         "path": "ui/calendar.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -354,7 +354,7 @@
     "files": [
       {
         "path": "ui/card.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -370,7 +370,7 @@
     "files": [
       {
         "path": "ui/carousel.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -387,7 +387,7 @@
     "files": [
       {
         "path": "ui/chart.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -400,7 +400,7 @@
     "files": [
       {
         "path": "ui/checkbox.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -413,7 +413,7 @@
     "files": [
       {
         "path": "ui/client-tweet-card.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -426,7 +426,7 @@
     "files": [
       {
         "path": "ui/collapsible.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -442,7 +442,7 @@
     "files": [
       {
         "path": "ui/command.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -456,7 +456,7 @@
     "files": [
       {
         "path": "ui/confetti.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -469,7 +469,7 @@
     "files": [
       {
         "path": "ui/context-menu.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -479,7 +479,7 @@
     "files": [
       {
         "path": "ui/cool-mode.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -492,7 +492,7 @@
     "files": [
       {
         "path": "ui/dialog.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -505,7 +505,7 @@
     "files": [
       {
         "path": "ui/dock.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -515,7 +515,7 @@
     "files": [
       {
         "path": "ui/dot-pattern.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -529,7 +529,7 @@
     "files": [
       {
         "path": "ui/drawer.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -542,7 +542,7 @@
     "files": [
       {
         "path": "ui/dropdown-menu.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -555,7 +555,7 @@
     "files": [
       {
         "path": "ui/fade-text.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -565,7 +565,7 @@
     "files": [
       {
         "path": "ui/file-tree.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -578,7 +578,7 @@
     "files": [
       {
         "path": "ui/flip-text.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -599,7 +599,7 @@
     "files": [
       {
         "path": "ui/form.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -613,7 +613,7 @@
     "files": [
       {
         "path": "ui/globe.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -626,7 +626,7 @@
     "files": [
       {
         "path": "ui/gradual-spacing.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -636,7 +636,7 @@
     "files": [
       {
         "path": "ui/grid-pattern.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -646,7 +646,7 @@
     "files": [
       {
         "path": "ui/gauge-circle.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -659,7 +659,7 @@
     "files": [
       {
         "path": "ui/hero-video-dialog.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -672,7 +672,7 @@
     "files": [
       {
         "path": "ui/hover-card.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -686,7 +686,7 @@
     "files": [
       {
         "path": "ui/icon-cloud.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -696,7 +696,7 @@
     "files": [
       {
         "path": "ui/input.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -709,7 +709,7 @@
     "files": [
       {
         "path": "ui/input-otp.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -729,7 +729,7 @@
     "files": [
       {
         "path": "ui/input-phone.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -742,7 +742,7 @@
     "files": [
       {
         "path": "ui/label.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -755,7 +755,7 @@
     "files": [
       {
         "path": "ui/letter-pullup.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -768,7 +768,7 @@
     "files": [
       {
         "path": "ui/magic-card.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -778,7 +778,7 @@
     "files": [
       {
         "path": "ui/marquee.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ],
     "tailwind": {
@@ -821,7 +821,7 @@
     "files": [
       {
         "path": "ui/menubar.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -831,7 +831,7 @@
     "files": [
       {
         "path": "ui/meteors.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -841,7 +841,7 @@
     "files": [
       {
         "path": "ui/multi-select.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -854,7 +854,7 @@
     "files": [
       {
         "path": "ui/navigation-menu.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -864,7 +864,7 @@
     "files": [
       {
         "path": "ui/neon-gradient-card.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ],
     "tailwind": {
@@ -898,7 +898,7 @@
     "files": [
       {
         "path": "ui/number-ticker.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -908,7 +908,7 @@
     "files": [
       {
         "path": "ui/orbiting-circles.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ],
     "tailwind": {
@@ -942,7 +942,7 @@
     "files": [
       {
         "path": "ui/pagination.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -952,7 +952,7 @@
     "files": [
       {
         "path": "ui/particles.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -965,7 +965,7 @@
     "files": [
       {
         "path": "ui/popover.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -978,7 +978,7 @@
     "files": [
       {
         "path": "ui/progress.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -988,7 +988,7 @@
     "files": [
       {
         "path": "ui/pulsating-button.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ],
     "tailwind": {
@@ -1022,7 +1022,7 @@
     "files": [
       {
         "path": "ui/radio-group.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1035,7 +1035,7 @@
     "files": [
       {
         "path": "ui/resizable.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1045,7 +1045,7 @@
     "files": [
       {
         "path": "ui/retro-grid.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ],
     "tailwind": {
@@ -1076,7 +1076,7 @@
     "files": [
       {
         "path": "ui/ripple.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ],
     "tailwind": {
@@ -1110,7 +1110,7 @@
     "files": [
       {
         "path": "ui/scroll-area.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1123,7 +1123,7 @@
     "files": [
       {
         "path": "ui/scroll-based-velocity.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1136,7 +1136,7 @@
     "files": [
       {
         "path": "ui/scroll-progress.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1149,7 +1149,7 @@
     "files": [
       {
         "path": "ui/select.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1162,7 +1162,7 @@
     "files": [
       {
         "path": "ui/separate-away.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1175,7 +1175,7 @@
     "files": [
       {
         "path": "ui/separator.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1188,7 +1188,7 @@
     "files": [
       {
         "path": "ui/sheet.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1198,7 +1198,7 @@
     "files": [
       {
         "path": "ui/shimmer-button.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ],
     "tailwind": {
@@ -1241,7 +1241,7 @@
     "files": [
       {
         "path": "ui/shine-border.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ],
     "tailwind": {
@@ -1278,7 +1278,7 @@
     "files": [
       {
         "path": "ui/shiny-button.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1302,7 +1302,7 @@
     "files": [
       {
         "path": "ui/sidebar.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ],
     "tailwind": {
@@ -1354,7 +1354,7 @@
     "files": [
       {
         "path": "ui/skeleton.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1367,7 +1367,7 @@
     "files": [
       {
         "path": "ui/slider.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1381,7 +1381,7 @@
     "files": [
       {
         "path": "ui/sonner.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1394,7 +1394,7 @@
     "files": [
       {
         "path": "ui/sparkles-text.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1407,7 +1407,7 @@
     "files": [
       {
         "path": "ui/star-rating.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1420,7 +1420,7 @@
     "files": [
       {
         "path": "ui/switch.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1436,7 +1436,7 @@
     "files": [
       {
         "path": "ui/stepper.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1449,7 +1449,7 @@
     "files": [
       {
         "path": "ui/scratch-to-reveal.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1459,7 +1459,7 @@
     "files": [
       {
         "path": "ui/table.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1472,7 +1472,7 @@
     "files": [
       {
         "path": "ui/tabs.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1482,7 +1482,7 @@
     "files": [
       {
         "path": "ui/textarea.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1495,7 +1495,7 @@
     "files": [
       {
         "path": "ui/text-reveal.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1508,7 +1508,7 @@
     "files": [
       {
         "path": "ui/timeline.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1518,7 +1518,7 @@
     "files": [
       {
         "path": "ui/toc.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1552,7 +1552,7 @@
     "files": [
       {
         "path": "ui/toggle.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1568,7 +1568,7 @@
     "files": [
       {
         "path": "ui/toggle-group.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1581,7 +1581,7 @@
     "files": [
       {
         "path": "ui/tooltip.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1591,7 +1591,7 @@
     "files": [
       {
         "path": "ui/tour.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1601,7 +1601,7 @@
     "files": [
       {
         "path": "ui/typing-animation.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1614,7 +1614,7 @@
     "files": [
       {
         "path": "ui/tweet-card.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1627,7 +1627,7 @@
     "files": [
       {
         "path": "ui/video-modal.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ],
     "tailwind": {
@@ -1662,19 +1662,6 @@
     }
   },
   {
-    "name": "wavy-dot-pattern",
-    "type": "registry:ui",
-    "dependencies": [
-      "react-anime"
-    ],
-    "files": [
-      {
-        "path": "ui/wavy-dot-pattern.tsx",
-        "type": "registry:component"
-      }
-    ]
-  },
-  {
     "name": "wavy-text",
     "type": "registry:ui",
     "dependencies": [
@@ -1683,7 +1670,7 @@
     "files": [
       {
         "path": "ui/wavy-text.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1696,7 +1683,7 @@
     "files": [
       {
         "path": "ui/word-fade-in.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1709,7 +1696,7 @@
     "files": [
       {
         "path": "ui/word-pull-up.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1722,7 +1709,7 @@
     "files": [
       {
         "path": "ui/word-rotate.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1732,7 +1719,7 @@
     "files": [
       {
         "path": "ui/rainbow-button.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ],
     "tailwind": {
@@ -1789,7 +1776,7 @@
     "files": [
       {
         "path": "ui/flickering-grid.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1802,7 +1789,7 @@
     "files": [
       {
         "path": "ui/hyper-text.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1812,7 +1799,7 @@
     "files": [
       {
         "path": "ui/safari.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1822,7 +1809,7 @@
     "files": [
       {
         "path": "ui/iphone-15-pro.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1832,7 +1819,7 @@
     "files": [
       {
         "path": "ui/animated-circular-progress-bar.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ]
   },
@@ -1842,7 +1829,7 @@
     "files": [
       {
         "path": "ui/grid-layout.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ],
     "tailwind": {
@@ -1877,7 +1864,7 @@
     "files": [
       {
         "path": "ui/globe-grid.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       }
     ],
     "tailwind": {
@@ -1928,7 +1915,7 @@
     "files": [
       {
         "path": "ui/nyx-toc.tsx",
-        "type": "registry:component"
+        "type": "registry:ui"
       },
       {
         "path": "hooks/use-anchor-observer.ts",
@@ -1963,5 +1950,254 @@
         }
       }
     }
+  },
+  {
+    "name": "terminal",
+    "type": "registry:ui",
+    "dependencies": [
+      "motion"
+    ],
+    "files": [
+      {
+        "path": "ui/terminal.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "script-copy-btn",
+    "type": "registry:ui",
+    "dependencies": [
+      "motion",
+      "shiki",
+      "next-themes"
+    ],
+    "files": [
+      {
+        "path": "ui/script-copy-btn.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "text-animate",
+    "type": "registry:ui",
+    "dependencies": [
+      "motion"
+    ],
+    "files": [
+      {
+        "path": "ui/text-animate.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "line-shadow-text",
+    "type": "registry:ui",
+    "dependencies": [
+      "motion"
+    ],
+    "files": [
+      {
+        "path": "ui/line-shadow-text.tsx",
+        "type": "registry:ui"
+      }
+    ],
+    "tailwind": {
+      "config": {
+        "theme": {
+          "extend": {
+            "animation": {
+              "line-shadow": "line-shadow 15s linear infinite"
+            },
+            "keyframes": {
+              "line-shadow": {
+                "0%": {
+                  "background-position": "0 0"
+                },
+                "100%": {
+                  "background-position": "100% -100%"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "aurora-text",
+    "type": "registry:ui",
+    "dependencies": [
+      "motion"
+    ],
+    "files": [
+      {
+        "path": "ui/aurora-text.tsx",
+        "type": "registry:ui"
+      }
+    ],
+    "tailwind": {
+      "config": {
+        "theme": {
+          "extend": {
+            "keyframes": {
+              "aurora-border": {
+                "0%, 100%": {
+                  "borderRadius": "37% 29% 27% 27% / 28% 25% 41% 37%"
+                },
+                "25%": {
+                  "borderRadius": "47% 29% 39% 49% / 61% 19% 66% 26%"
+                },
+                "50%": {
+                  "borderRadius": "57% 23% 47% 72% / 63% 17% 66% 33%"
+                },
+                "75%": {
+                  "borderRadius": "28% 49% 29% 100% / 93% 20% 64% 25%"
+                }
+              },
+              "aurora-1": {
+                "0%, 100%": {
+                  "top": "0",
+                  "right": "0"
+                },
+                "50%": {
+                  "top": "50%",
+                  "right": "25%"
+                },
+                "75%": {
+                  "top": "25%",
+                  "right": "50%"
+                }
+              },
+              "aurora-2": {
+                "0%, 100%": {
+                  "top": "0",
+                  "left": "0"
+                },
+                "60%": {
+                  "top": "75%",
+                  "left": "25%"
+                },
+                "85%": {
+                  "top": "50%",
+                  "left": "50%"
+                }
+              },
+              "aurora-3": {
+                "0%, 100%": {
+                  "bottom": "0",
+                  "left": "0"
+                },
+                "40%": {
+                  "bottom": "50%",
+                  "left": "25%"
+                },
+                "65%": {
+                  "bottom": "25%",
+                  "left": "50%"
+                }
+              },
+              "aurora-4": {
+                "0%, 100%": {
+                  "bottom": "0",
+                  "right": "0"
+                },
+                "50%": {
+                  "bottom": "25%",
+                  "right": "40%"
+                },
+                "90%": {
+                  "bottom": "50%",
+                  "right": "25%"
+                }
+              }
+            },
+            "animation": {
+              "aurora-border": "aurora-border 10s ease-in-out infinite",
+              "aurora-1": "aurora-1 15s ease-in-out infinite",
+              "aurora-2": "aurora-2 15s ease-in-out infinite",
+              "aurora-3": "aurora-3 15s ease-in-out infinite",
+              "aurora-4": "aurora-4 15s ease-in-out infinite"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "morphing-text",
+    "type": "registry:ui",
+    "dependencies": [
+      "motion"
+    ],
+    "files": [
+      {
+        "path": "ui/morphing-text.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "ripple-button",
+    "type": "registry:ui",
+    "dependencies": [
+      "motion"
+    ],
+    "files": [
+      {
+        "path": "ui/ripple-button.tsx",
+        "type": "registry:ui"
+      }
+    ],
+    "tailwind": {
+      "config": {
+        "theme": {
+          "extend": {
+            "animation": {
+              "rippling": "rippling var(--duration) ease-out"
+            },
+            "keyframes": {
+              "rippling": {
+                "0%": {
+                  "opacity": "1"
+                },
+                "100%": {
+                  "transform": "scale(2)",
+                  "opacity": "0"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "warp-background",
+    "type": "registry:ui",
+    "dependencies": [
+      "motion"
+    ],
+    "files": [
+      {
+        "path": "ui/warp-background.tsx",
+        "type": "registry:ui"
+      }
+    ]
+  },
+  {
+    "name": "interactive-grid-pattern",
+    "type": "registry:ui",
+    "dependencies": [
+      "motion"
+    ],
+    "files": [
+      {
+        "path": "ui/interactive-grid-pattern.tsx",
+        "type": "registry:ui"
+      }
+    ]
   }
 ]

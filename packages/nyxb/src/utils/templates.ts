@@ -180,7 +180,7 @@ const config = {
     './components/**/*.{<%- extension %>,<%- extension %>x}',
     './app/**/*.{<%- extension %>,<%- extension %>x}',
     './src/**/*.{<%- extension %>,<%- extension %>x}',
-   ],
+	],
   prefix: "<%- prefix %>",
   theme: {
     container: {

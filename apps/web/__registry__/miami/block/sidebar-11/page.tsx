@@ -1,4 +1,4 @@
-import { AppSidebar } from '~/registry/miami/block/sidebar-11/components/app-sidebar'
+import { AppSidebar } from "~/registry/miami/block/sidebar-11/components/app-sidebar"
 import {
    Breadcrumb,
    BreadcrumbItem,
@@ -6,17 +6,17 @@ import {
    BreadcrumbList,
    BreadcrumbPage,
    BreadcrumbSeparator,
-} from '~/registry/miami/ui/breadcrumb'
-import { Separator } from '~/registry/miami/ui/separator'
+} from "~/registry/miami/ui/breadcrumb"
+import { Separator } from "~/registry/miami/ui/separator"
 import {
    SidebarInset,
    SidebarProvider,
    SidebarTrigger,
-} from '~/registry/miami/ui/sidebar'
+} from "~/registry/miami/ui/sidebar"
 
-export const iframeHeight = '800px'
+export const iframeHeight = "800px"
 
-export const description = 'A sidebar with a collapsible file tree.'
+export const description = "A sidebar with a collapsible file tree."
 
 export default function Page() {
    return (

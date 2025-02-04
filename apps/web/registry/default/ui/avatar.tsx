@@ -1,9 +1,9 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import * as AvatarPrimitive from '@radix-ui/react-avatar'
+import * as AvatarPrimitive from "@radix-ui/react-avatar"
+import * as React from "react"
 
-import { ny } from '~/lib/utils'
+import { ny } from "~/lib/utils"
 
 const Avatar = React.forwardRef<
    React.ElementRef<typeof AvatarPrimitive.Root>,
@@ -12,7 +12,7 @@ const Avatar = React.forwardRef<
    <AvatarPrimitive.Root
       ref={ref}
       className={ny(
-         'relative flex size-10 shrink-0 overflow-hidden rounded-full',
+         "relative flex size-10 shrink-0 overflow-hidden rounded-full",
          className,
       )}
       {...props}
@@ -26,7 +26,7 @@ const AvatarImage = React.forwardRef<
 >(({ className, ...props }, ref) => (
    <AvatarPrimitive.Image
       ref={ref}
-      className={ny('aspect-square size-full', className)}
+      className={ny("aspect-square size-full", className)}
       {...props}
    />
 ))
@@ -39,7 +39,7 @@ const AvatarFallback = React.forwardRef<
    <AvatarPrimitive.Fallback
       ref={ref}
       className={ny(
-         'bg-muted flex size-full items-center justify-center rounded-full',
+         "bg-muted flex size-full items-center justify-center rounded-full",
          className,
       )}
       {...props}

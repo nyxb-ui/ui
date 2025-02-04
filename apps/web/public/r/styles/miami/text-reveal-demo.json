@@ -1,11 +1,13 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "text-reveal-demo",
   "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
   "files": [
     {
-      "path": "example/text-reveal-demo.tsx",
-      "content": "import TextReveal from '~/registry/miami/ui/text-reveal'\n\nexport default async function TextRevealDemo() {\n   return (\n      <div className=\"z-10 flex min-h-64 items-center justify-center rounded-lg border bg-white dark:bg-black\">\n         <TextReveal text=\"Nyxb UI will change the way you design.\" />\n      </div>\n   )\n}\n",
-      "type": "registry:component",
+      "path": "examples/text-reveal-demo.tsx",
+      "content": "import TextReveal from \"~/registry/miami/ui/text-reveal\"\n\nexport default async function TextRevealDemo() {\n   return (\n      <div className=\"z-10 flex min-h-64 items-center justify-center rounded-lg border bg-white dark:bg-black\">\n         <TextReveal text=\"Nyxb UI will change the way you design.\" />\n      </div>\n   )\n}\n",
+      "type": "registry:example",
       "target": ""
     }
   ]

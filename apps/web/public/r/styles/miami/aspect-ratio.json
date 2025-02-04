@@ -1,14 +1,16 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "aspect-ratio",
   "type": "registry:ui",
+  "author": "nyxbui (https://nyxbui.design)",
   "dependencies": [
     "@radix-ui/react-aspect-ratio"
   ],
   "files": [
     {
       "path": "ui/aspect-ratio.tsx",
-      "content": "'use client'\n\nimport * as AspectRatioPrimitive from '@radix-ui/react-aspect-ratio'\n\nconst AspectRatio = AspectRatioPrimitive.Root\n\nexport { AspectRatio }\n",
-      "type": "registry:component",
+      "content": "\"use client\"\n\nimport * as AspectRatioPrimitive from \"@radix-ui/react-aspect-ratio\"\n\nconst AspectRatio = AspectRatioPrimitive.Root\n\nexport { AspectRatio }\n",
+      "type": "registry:ui",
       "target": ""
     }
   ]

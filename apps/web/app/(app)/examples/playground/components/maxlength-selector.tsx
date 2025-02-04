@@ -1,18 +1,18 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import type { SliderProps } from '@radix-ui/react-slider'
+import type { SliderProps } from "@radix-ui/react-slider"
+import * as React from "react"
 
 import {
    HoverCard,
    HoverCardContent,
    HoverCardTrigger,
-} from '~/registry/miami/ui/hover-card'
-import { Label } from '~/registry/miami/ui/label'
-import { Slider } from '~/registry/miami/ui/slider'
+} from "~/registry/miami/ui/hover-card"
+import { Label } from "~/registry/miami/ui/label"
+import { Slider } from "~/registry/miami/ui/slider"
 
 interface MaxLengthSelectorProps {
-   defaultValue: SliderProps['defaultValue']
+   defaultValue: SliderProps["defaultValue"]
 }
 
 export function MaxLengthSelector({ defaultValue }: MaxLengthSelectorProps) {
@@ -25,7 +25,7 @@ export function MaxLengthSelector({ defaultValue }: MaxLengthSelectorProps) {
                <div className="grid gap-4">
                   <div className="flex items-center justify-between">
                      <Label htmlFor="maxlength">Maximum Length</Label>
-                     <span className="text-muted-foreground hover:border-border w-12 rounded-md border border-transparent px-2 py-0.5 text-right text-sm">
+                     <span className="w-12 rounded-md border border-transparent px-2 py-0.5 text-right text-sm text-muted-foreground hover:border-border">
                         {value}
                      </span>
                   </div>
@@ -35,7 +35,7 @@ export function MaxLengthSelector({ defaultValue }: MaxLengthSelectorProps) {
                      defaultValue={value}
                      step={10}
                      onValueChange={setValue}
-                     className="[&_[role=slider]]:size-4"
+                     className="[&_[role=slider]]:h-4 [&_[role=slider]]:w-4"
                      aria-label="Maximum Length"
                   />
                </div>
@@ -45,9 +45,9 @@ export function MaxLengthSelector({ defaultValue }: MaxLengthSelectorProps) {
                className="w-[260px] text-sm"
                side="left"
             >
-               The maximum number of tokens to generate. Requests can use up to 2,048
-               or 4,000 tokens, shared between prompt and completion. The exact limit
-               varies by model.
+               The maximum number of tokens to generate. Requests can use up to
+               2,048 or 4,000 tokens, shared between prompt and completion. The
+               exact limit varies by model.
             </HoverCardContent>
          </HoverCard>
       </div>

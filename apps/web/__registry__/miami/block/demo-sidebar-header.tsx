@@ -1,13 +1,13 @@
-'use client'
+"use client"
 
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown } from "lucide-react"
 
 import {
    DropdownMenu,
    DropdownMenuContent,
    DropdownMenuItem,
    DropdownMenuTrigger,
-} from '~/registry/miami/ui/dropdown-menu'
+} from "~/registry/miami/ui/dropdown-menu"
 import {
    Sidebar,
    SidebarHeader,
@@ -17,7 +17,7 @@ import {
    SidebarMenuItem,
    SidebarProvider,
    SidebarTrigger,
-} from '~/registry/miami/ui/sidebar'
+} from "~/registry/miami/ui/sidebar"
 
 export default function AppSidebar() {
    return (

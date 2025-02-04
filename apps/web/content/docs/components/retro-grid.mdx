@@ -9,8 +9,7 @@ video: https://cdn.nyxbui.design/retro-grid.mp4
 
 <ComponentPreview name="retro-grid-demo" />
 
-
-### Installation
+## Installation
 
 <Tabs defaultValue="cli">
 
@@ -21,28 +20,7 @@ video: https://cdn.nyxbui.design/retro-grid.mp4
 <TabsContent value="cli">
 
 ```bash
-npx nyxb@latest add retro-grid
-```
-
-Add the following animations to your tailwind.config.ts file:
-
-```ts
-// tailwind.config.ts
-module.exports = {
-  theme: {
-    extend: {
-      animation: {
-        grid: "grid 15s linear infinite",
-      },
-      keyframes: {
-        grid: {
-          "0%": { transform: "translateY(-50%)" },
-          "100%": { transform: "translateY(0)" },
-        },
-      },
-    },
-  },
-};
+npx nyx@latest add retro-grid
 ```
 
 </TabsContent>
@@ -51,10 +29,18 @@ module.exports = {
 
 <Steps>
 
-Copy and paste the following code into your project.
+<Step>Copy and paste the following code into your project.</Step>
 
-```ts
-// tailwind.config.ts
+<ComponentSource name="retro-grid" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+<Step>Update `tailwind.config.js`</Step>
+
+Add the following animations to your `tailwind.config.js` file:
+
+```js title="tailwind.config.js" {5-13}
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   theme: {
     extend: {
@@ -71,12 +57,6 @@ module.exports = {
   },
 };
 ```
-
-```text
-components/ui/retro-grid.tsx
-```
-
-<ComponentSource name="retro-grid" />
 
 </Steps>
 
@@ -86,6 +66,11 @@ components/ui/retro-grid.tsx
 
 ## Props
 
-| Prop      | Type   | Description                      | Default |
-| --------- | ------ | -------------------------------- | ------- |
-| className | string | The class name for the component | ""      |
+| Prop             | Type     | Default  | Description                                   |
+| ---------------- | -------- | -------- | --------------------------------------------- |
+| `className`      | `string` | `-`      | Additional CSS classes for the grid container |
+| `angle`          | `number` | `65`     | Rotation angle of the grid in degrees         |
+| `cellSize`       | `number` | `60`     | Grid cell size in pixels                      |
+| `opacity`        | `number` | `0.5`    | Grid opacity value between 0 and 1            |
+| `lightLineColor` | `string` | `"gray"` | Grid line color in light mode                 |
+| `darkLineColor`  | `string` | `"gray"` | Grid line color in dark mode                  |

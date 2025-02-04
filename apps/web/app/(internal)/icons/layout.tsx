@@ -1,15 +1,15 @@
-import type { Metadata } from 'next'
+import type { Metadata } from "next"
 
-import { Announcement } from '~/components/announcement'
+import { Announcement } from "~/components/announcement"
 import {
    PageHeader,
    PageHeaderDescription,
    PageHeaderHeading,
-} from '~/components/page-header'
+} from "~/components/page-header"
 
 export const metadata: Metadata = {
-   title: 'Icons',
-   description: 'All icons in all libraries.',
+   title: "Icons",
+   description: "All icons in all libraries.",
 }
 
 export default function IconsLayout({

@@ -1,6 +1,6 @@
-'use client'
+"use client"
 
-import { Frame, LifeBuoy, Map, PieChart, Send } from 'lucide-react'
+import { Frame, LifeBuoy, Map, PieChart, Send } from "lucide-react"
 
 import {
    Sidebar,
@@ -13,38 +13,38 @@ import {
    SidebarMenuButton,
    SidebarMenuItem,
    SidebarProvider,
-} from '~/registry/default/ui/sidebar'
+} from "~/registry/default/ui/sidebar"
 
 const projects = [
    {
-      name: 'Design Engineering',
-      url: '#',
+      name: "Design Engineering",
+      url: "#",
       icon: Frame,
-      badge: '24',
+      badge: "24",
    },
    {
-      name: 'Sales & Marketing',
-      url: '#',
+      name: "Sales & Marketing",
+      url: "#",
       icon: PieChart,
-      badge: '12',
+      badge: "12",
    },
    {
-      name: 'Travel',
-      url: '#',
+      name: "Travel",
+      url: "#",
       icon: Map,
-      badge: '3',
+      badge: "3",
    },
    {
-      name: 'Support',
-      url: '#',
+      name: "Support",
+      url: "#",
       icon: LifeBuoy,
-      badge: '21',
+      badge: "21",
    },
    {
-      name: 'Feedback',
-      url: '#',
+      name: "Feedback",
+      url: "#",
       icon: Send,
-      badge: '8',
+      badge: "8",
    },
 ]
 
@@ -57,7 +57,7 @@ export default function AppSidebar() {
                   <SidebarGroupLabel>Projects</SidebarGroupLabel>
                   <SidebarGroupContent>
                      <SidebarMenu>
-                        {projects.map(project => (
+                        {projects.map((project) => (
                            <SidebarMenuItem key={project.name}>
                               <SidebarMenuButton
                                  asChild
@@ -68,7 +68,9 @@ export default function AppSidebar() {
                                     <span>{project.name}</span>
                                  </a>
                               </SidebarMenuButton>
-                              <SidebarMenuBadge>{project.badge}</SidebarMenuBadge>
+                              <SidebarMenuBadge>
+                                 {project.badge}
+                              </SidebarMenuBadge>
                            </SidebarMenuItem>
                         ))}
                      </SidebarMenu>

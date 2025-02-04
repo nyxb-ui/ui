@@ -1,26 +1,27 @@
-import type { Metadata } from 'next'
-import Image from 'next/image'
-import { PlusCircle } from 'lucide-react'
+import { PlusCircle } from "lucide-react"
+import type { Metadata } from "next"
+import Image from "next/image"
 
-import { AlbumArtwork } from './components/album-artwork'
-import { Menu } from './components/menu'
-import { PodcastEmptyPlaceholder } from './components/podcast-empty-placeholder'
-import { Sidebar } from './components/sidebar'
-import { listenNowAlbums, madeForYouAlbums } from './data/albums'
-import { playlists } from './data/playlists'
+import { Button } from "~/registry/miami/ui/button"
+import { ScrollArea, ScrollBar } from "~/registry/miami/ui/scroll-area"
+import { Separator } from "~/registry/miami/ui/separator"
 import {
    Tabs,
    TabsContent,
    TabsList,
    TabsTrigger,
-} from '~/registry/miami/ui/tabs'
-import { Separator } from '~/registry/miami/ui/separator'
-import { ScrollArea, ScrollBar } from '~/registry/miami/ui/scroll-area'
-import { Button } from '~/registry/miami/ui/button'
+} from "~/registry/miami/ui/tabs"
+
+import { AlbumArtwork } from "./components/album-artwork"
+import { Menu } from "./components/menu"
+import { PodcastEmptyPlaceholder } from "./components/podcast-empty-placeholder"
+import { Sidebar } from "./components/sidebar"
+import { listenNowAlbums, madeForYouAlbums } from "./data/albums"
+import { playlists } from "./data/playlists"
 
 export const metadata: Metadata = {
-   title: 'Music App',
-   description: 'Example music app using the components.',
+   title: "Music App",
+   description: "Example music app using the components.",
 }
 
 export default function MusicPage() {
@@ -47,16 +48,27 @@ export default function MusicPage() {
             <div className="border-t">
                <div className="bg-background">
                   <div className="grid lg:grid-cols-5">
-                     <Sidebar playlists={playlists} className="hidden lg:block" />
+                     <Sidebar
+                        playlists={playlists}
+                        className="hidden lg:block"
+                     />
                      <div className="col-span-3 lg:col-span-4 lg:border-l">
                         <div className="h-full px-4 py-6 lg:px-8">
-                           <Tabs defaultValue="music" className="h-full space-y-6">
+                           <Tabs
+                              defaultValue="music"
+                              className="h-full space-y-6"
+                           >
                               <div className="space-between flex items-center">
                                  <TabsList>
-                                    <TabsTrigger value="music" className="relative">
+                                    <TabsTrigger
+                                       value="music"
+                                       className="relative"
+                                    >
                                        Music
                                     </TabsTrigger>
-                                    <TabsTrigger value="podcasts">Podcasts</TabsTrigger>
+                                    <TabsTrigger value="podcasts">
+                                       Podcasts
+                                    </TabsTrigger>
                                     <TabsTrigger value="live" disabled>
                                        Live
                                     </TabsTrigger>
@@ -77,7 +89,7 @@ export default function MusicPage() {
                                        <h2 className="text-2xl font-semibold tracking-tight">
                                           Listen Now
                                        </h2>
-                                       <p className="text-muted-foreground text-sm">
+                                       <p className="text-sm text-muted-foreground">
                                           Top picks for you. Updated daily.
                                        </p>
                                     </div>
@@ -86,7 +98,7 @@ export default function MusicPage() {
                                  <div className="relative">
                                     <ScrollArea>
                                        <div className="flex space-x-4 pb-4">
-                                          {listenNowAlbums.map(album => (
+                                          {listenNowAlbums.map((album) => (
                                              <AlbumArtwork
                                                 key={album.name}
                                                 album={album}
@@ -104,7 +116,7 @@ export default function MusicPage() {
                                     <h2 className="text-2xl font-semibold tracking-tight">
                                        Made for You
                                     </h2>
-                                    <p className="text-muted-foreground text-sm">
+                                    <p className="text-sm text-muted-foreground">
                                        Your personal playlists. Updated daily.
                                     </p>
                                  </div>
@@ -112,7 +124,7 @@ export default function MusicPage() {
                                  <div className="relative">
                                     <ScrollArea>
                                        <div className="flex space-x-4 pb-4">
-                                          {madeForYouAlbums.map(album => (
+                                          {madeForYouAlbums.map((album) => (
                                              <AlbumArtwork
                                                 key={album.name}
                                                 album={album}
@@ -136,7 +148,7 @@ export default function MusicPage() {
                                        <h2 className="text-2xl font-semibold tracking-tight">
                                           New Episodes
                                        </h2>
-                                       <p className="text-muted-foreground text-sm">
+                                       <p className="text-sm text-muted-foreground">
                                           Your favorite podcasts. Updated daily.
                                        </p>
                                     </div>

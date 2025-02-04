@@ -1,3 +1,3 @@
-import SinkPage from '~/registry/miami/block/_sink/page'
+import SinkPage from "~/registry/miami/internal/sink/page"
 
 export default SinkPage

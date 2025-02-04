@@ -1,7 +1,7 @@
-'use client'
+"use client"
 
-import { useEffect, useState } from 'react'
-import { ny } from '~/lib/utils'
+import { useEffect, useState } from "react"
+import { ny } from "~/lib/utils"
 
 interface TypingAnimationProps {
    text: string
@@ -14,7 +14,7 @@ export default function TypingAnimation({
    duration = 200,
    className,
 }: TypingAnimationProps) {
-   const [displayedText, setDisplayedText] = useState<string>('')
+   const [displayedText, setDisplayedText] = useState<string>("")
    const [i, setI] = useState<number>(0)
 
    useEffect(() => {
@@ -22,8 +22,7 @@ export default function TypingAnimation({
          if (i < text.length) {
             setDisplayedText(text.substring(0, i + 1))
             setI(i + 1)
-         }
-         else {
+         } else {
             clearInterval(typingEffect)
          }
       }, duration)
@@ -36,7 +35,7 @@ export default function TypingAnimation({
    return (
       <h1
          className={ny(
-            'font-display text-center text-4xl font-bold leading-[5rem] tracking-[-0.02em] drop-shadow-sm',
+            "font-display text-center text-4xl font-bold leading-[5rem] tracking-[-0.02em] drop-shadow-sm",
             className,
          )}
       >

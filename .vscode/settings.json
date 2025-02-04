@@ -1,54 +1,43 @@
 {
+   // Biome as default formatter for different file types
+   "[javascript]": {
+      "editor.defaultFormatter": "biomejs.biome"
+   },
+   "[typescript]": {
+      "editor.defaultFormatter": "biomejs.biome"
+   },
+   "[javascriptreact]": {
+      "editor.defaultFormatter": "biomejs.biome"
+   },
+   "[typescriptreact]": {
+      "editor.defaultFormatter": "biomejs.biome"
+   },
+   "[json]": {
+      "editor.defaultFormatter": "biomejs.biome"
+   },
+   "[jsonc]": {
+      "editor.defaultFormatter": "biomejs.biome"
+   },
 
-  // Disable the default formatter, use eslint instead
-  "prettier.enable": false,
-  "editor.formatOnSave": false,
+   // Automatic formatting on save
+   "editor.formatOnSave": true,
 
-  // Auto fix
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never"
-  },
+   // Automatic fixes on save
+   "editor.codeActionsOnSave": {
+      "quickfix.biome": "explicit",
+      "source.organizeImports.biome": "explicit"
+   },
 
-  // Silent the stylistic rules in you IDE, but still auto fix them
-  "eslint.rules.customizations": [
-    { "rule": "style/*", "severity": "warn" },
-    { "rule": "format/*", "severity": "warn" },
-    { "rule": "*-indent", "severity": "warn" },
-    { "rule": "*-spacing", "severity": "warn" },
-    { "rule": "*-spaces", "severity": "warn" },
-    { "rule": "*-order", "severity": "warn" },
-    { "rule": "*-dangle", "severity": "warn" },
-    { "rule": "*-newline", "severity": "warn" },
-    { "rule": "*quotes", "severity": "warn" },
-    { "rule": "*semi", "severity": "warn" }
-  ],
+   // Optional: Experimental feature for renaming
+   "biome.rename": true,
 
-  // Enable eslint for all supported languages
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "vue",
-    "html",
-    "markdown",
-    "json",
-    "jsonc",
-    "yaml",
-    "toml",
-    "xml",
-    "gql",
-    "graphql",
-    "astro"
-  ],
-  "search.useIgnoreFiles": true,
-  "cSpell.words": [
-   "customizer",
-   "dracula",
-   "occured",
-   "pullup",
-   "saas",
-   "shadcn"
-]
+   "search.useIgnoreFiles": true,
+   "cSpell.words": [
+      "customizer",
+      "dracula",
+      "occured",
+      "pullup",
+      "saas",
+      "shadcn"
+   ]
 }

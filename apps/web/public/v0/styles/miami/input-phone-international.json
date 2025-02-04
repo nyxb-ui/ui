@@ -1,0 +1,19 @@
+{
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "input-phone-international",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "registryDependencies": [
+    "button",
+    "input",
+    "popover"
+  ],
+  "files": [
+    {
+      "path": "examples/input-phone-international.tsx",
+      "content": "import * as React from \"react\"\n\nimport { InputPhone } from \"@/components/ui/input-phone\"\n\nexport default function InputPhoneInternational() {\n   const [value, setValue] = React.useState(\"\")\n\n   return (\n      <InputPhone\n         value={value}\n         onChange={setValue}\n         international\n         defaultCountry=\"US\"\n      />\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

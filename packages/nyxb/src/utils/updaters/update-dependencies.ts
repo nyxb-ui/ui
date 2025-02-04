@@ -1,14 +1,14 @@
-import { execa } from 'execa'
-import prompts from 'prompts'
-import type { Config } from '~/src/utils/get-config'
-import { getPackageInfo } from '~/src/utils/get-package-info'
-import { getPackageManager } from '~/src/utils/get-package-manager'
-import { logger } from '~/src/utils/logger'
-import type { RegistryItem } from '~/src/utils/registry/schema'
-import { spinner } from '~/src/utils/spinner'
+import { execa } from "execa"
+import prompts from "prompts"
+import type { RegistryItem } from "~/src/registry/schema"
+import type { Config } from "~/src/utils/get-config"
+import { getPackageInfo } from "~/src/utils/get-package-info"
+import { getPackageManager } from "~/src/utils/get-package-manager"
+import { logger } from "~/src/utils/logger"
+import { spinner } from "~/src/utils/spinner"
 
 export async function updateDependencies(
-   dependencies: RegistryItem['dependencies'],
+   dependencies: RegistryItem["dependencies"],
    config: Config,
    options: {
       silent?: boolean
@@ -30,20 +30,20 @@ export async function updateDependencies(
    const packageManager = await getPackageManager(config.resolvedPaths.cwd)
 
    // Offer to use --force or --legacy-peer-deps if using React 19 with npm.
-   let flag = ''
-   if (isUsingReact19(config) && packageManager === 'npm') {
+   let flag = ""
+   if (isUsingReact19(config) && packageManager === "npm") {
       dependenciesSpinner.stopAndPersist()
       logger.warn(
-         '\nIt looks like you are using React 19. \nSome packages may fail to install due to peer dependency issues in npm (see https://nyxbui.design/react-19).\n',
+         "\nIt looks like you are using React 19. \nSome packages may fail to install due to peer dependency issues in npm (see https://nyxbui.design/react-19).\n",
       )
       const confirmation = await prompts([
          {
-            type: 'select',
-            name: 'flag',
-            message: 'How would you like to proceed?',
+            type: "select",
+            name: "flag",
+            message: "How would you like to proceed?",
             choices: [
-               { title: 'Use --force', value: 'force' },
-               { title: 'Use --legacy-peer-deps', value: 'legacy-peer-deps' },
+               { title: "Use --force", value: "force" },
+               { title: "Use --legacy-peer-deps", value: "legacy-peer-deps" },
             ],
          },
       ])
@@ -58,14 +58,15 @@ export async function updateDependencies(
    await execa(
       packageManager,
       [
-         packageManager === 'npm' ? 'install' : 'add',
-         ...(packageManager === 'npm' && flag ? [`--${flag}`] : []),
+         packageManager === "npm" ? "install" : "add",
+         ...(packageManager === "npm" && flag ? [`--${flag}`] : []),
          ...dependencies,
       ],
       {
          cwd: config.resolvedPaths.cwd,
       },
    )
+
    dependenciesSpinner?.succeed()
 }
 

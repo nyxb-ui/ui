@@ -1,7 +1,7 @@
-'use client'
+"use client"
 
-import { TrendingUp } from 'lucide-react'
-import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from 'recharts'
+import { TrendingUp } from "lucide-react"
+import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from "recharts"
 
 import {
    Card,
@@ -10,31 +10,29 @@ import {
    CardFooter,
    CardHeader,
    CardTitle,
-} from '~/registry/miami/ui/card'
-import type {
-   ChartConfig,
-} from '~/registry/miami/ui/chart'
+} from "~/registry/miami/ui/card"
+import type { ChartConfig } from "~/registry/miami/ui/chart"
 import {
    ChartContainer,
    ChartTooltip,
    ChartTooltipContent,
-} from '~/registry/miami/ui/chart'
+} from "~/registry/miami/ui/chart"
 
-export const description = 'A radar chart with a grid filled'
+export const description = "A radar chart with a grid filled"
 
 const chartData = [
-   { month: 'January', desktop: 186 },
-   { month: 'February', desktop: 285 },
-   { month: 'March', desktop: 237 },
-   { month: 'April', desktop: 203 },
-   { month: 'May', desktop: 209 },
-   { month: 'June', desktop: 264 },
+   { month: "January", desktop: 186 },
+   { month: "February", desktop: 285 },
+   { month: "March", desktop: 237 },
+   { month: "April", desktop: 203 },
+   { month: "May", desktop: 209 },
+   { month: "June", desktop: 264 },
 ]
 
 const chartConfig = {
    desktop: {
-      label: 'Desktop',
-      color: 'hsl(var(--chart-1))',
+      label: "Desktop",
+      color: "hsl(var(--chart-1))",
    },
 } satisfies ChartConfig
 
@@ -69,9 +67,7 @@ export default function Component() {
          </CardContent>
          <CardFooter className="flex-col gap-2 text-sm">
             <div className="flex items-center gap-2 font-medium leading-none">
-               Trending up by 5.2% this month
-               {' '}
-               <TrendingUp className="size-4" />
+               Trending up by 5.2% this month <TrendingUp className="size-4" />
             </div>
             <div className="text-muted-foreground flex items-center gap-2 leading-none">
                January - June 2024

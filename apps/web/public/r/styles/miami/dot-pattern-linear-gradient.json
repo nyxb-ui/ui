@@ -1,11 +1,13 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "dot-pattern-linear-gradient",
   "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
   "files": [
     {
-      "path": "example/dot-pattern-linear-gradient.tsx",
-      "content": "'use client'\n\nimport DotPattern from '~/registry/miami/ui/dot-pattern'\nimport { ny } from '~/lib/utils'\n\nfunction DotPatternDemo2() {\n   return (\n      <div className=\"bg-background relative flex size-full items-center justify-center overflow-hidden rounded-lg border p-20 md:shadow-xl\">\n         <p className=\"z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-black dark:text-white\">\n            Dot Pattern\n         </p>\n         <DotPattern\n            width={20}\n            height={20}\n            cx={1}\n            cy={1}\n            cr={1}\n            className={ny(\n               '[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] ',\n            )}\n         />\n      </div>\n   )\n}\n\nexport default DotPatternDemo2\n",
-      "type": "registry:component",
+      "path": "examples/dot-pattern-linear-gradient.tsx",
+      "content": "\"use client\"\n\nimport { ny } from \"~/registry/miami/lib/utils\"\nimport { DotPattern } from \"~/registry/miami/ui/dot-pattern\"\n\nexport default function DotPatternLinearGradient() {\n   return (\n      <div className=\"relative flex size-full items-center justify-center overflow-hidden rounded-lg border bg-background p-20 md:shadow-xl\">\n         <p className=\"z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-black dark:text-white\">\n            Dot Pattern\n         </p>\n         <DotPattern\n            width={20}\n            height={20}\n            cx={1}\n            cy={1}\n            cr={1}\n            className={ny(\n               \"[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] \",\n            )}\n         />\n      </div>\n   )\n}\n",
+      "type": "registry:example",
       "target": ""
     }
   ]

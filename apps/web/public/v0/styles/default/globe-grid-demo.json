@@ -1,0 +1,14 @@
+{
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "globe-grid-demo",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/globe-grid-demo.tsx",
+      "content": "import { GlobeGrid } from \"@/components/ui/globe-grid\"\n\nexport function GlobeGridDemo() {\n   return <GlobeGrid />\n}\n\nexport default GlobeGridDemo\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

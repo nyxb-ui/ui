@@ -1,14 +1,16 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "button-secondary",
   "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
   "registryDependencies": [
     "button"
   ],
   "files": [
     {
-      "path": "example/button-secondary.tsx",
-      "content": "import { Button } from '~/registry/miami/ui/button'\n\nexport default function ButtonSecondary() {\n   return <Button variant=\"secondary\">Secondary</Button>\n}\n",
-      "type": "registry:component",
+      "path": "examples/button-secondary.tsx",
+      "content": "import { Button } from \"~/registry/miami/ui/button\"\n\nexport default function ButtonSecondary() {\n   return <Button variant=\"secondary\">Secondary</Button>\n}\n",
+      "type": "registry:example",
       "target": ""
     }
   ]

@@ -1,15 +1,11 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import { Check, ChevronsUpDown, PlusCircle } from 'lucide-react'
+import { Check, ChevronsUpDown, PlusCircle } from "lucide-react"
+import * as React from "react"
 
-import { ny } from '~/lib/utils'
-import {
-   Avatar,
-   AvatarFallback,
-   AvatarImage,
-} from '~/registry/miami/ui/avatar'
-import { Button } from '~/registry/miami/ui/button'
+import { ny } from "~/lib/utils"
+import { Avatar, AvatarFallback, AvatarImage } from "~/registry/miami/ui/avatar"
+import { Button } from "~/registry/miami/ui/button"
 import {
    Command,
    CommandEmpty,
@@ -18,7 +14,7 @@ import {
    CommandItem,
    CommandList,
    CommandSeparator,
-} from '~/registry/miami/ui/command'
+} from "~/registry/miami/ui/command"
 import {
    Dialog,
    DialogContent,
@@ -27,48 +23,48 @@ import {
    DialogHeader,
    DialogTitle,
    DialogTrigger,
-} from '~/registry/miami/ui/dialog'
-import { Input } from '~/registry/miami/ui/input'
-import { Label } from '~/registry/miami/ui/label'
+} from "~/registry/miami/ui/dialog"
+import { Input } from "~/registry/miami/ui/input"
+import { Label } from "~/registry/miami/ui/label"
 import {
    Popover,
    PopoverContent,
    PopoverTrigger,
-} from '~/registry/miami/ui/popover'
+} from "~/registry/miami/ui/popover"
 import {
    Select,
    SelectContent,
    SelectItem,
    SelectTrigger,
    SelectValue,
-} from '~/registry/miami/ui/select'
+} from "~/registry/miami/ui/select"
 
 const groups = [
    {
-      label: 'Personal Account',
+      label: "Personal Account",
       teams: [
          {
-            label: 'Alicia Koch',
-            value: 'personal',
+            label: "Alicia Koch",
+            value: "personal",
          },
       ],
    },
    {
-      label: 'Teams',
+      label: "Teams",
       teams: [
          {
-            label: 'Acme Inc.',
-            value: 'acme-inc',
+            label: "Acme Inc.",
+            value: "acme-inc",
          },
          {
-            label: 'Monsters Inc.',
-            value: 'monsters',
+            label: "Monsters Inc.",
+            value: "monsters",
          },
       ],
    },
 ]
 
-type Team = (typeof groups)[number]['teams'][number]
+type Team = (typeof groups)[number]["teams"][number]
 
 type PopoverTriggerProps = React.ComponentPropsWithoutRef<typeof PopoverTrigger>
 
@@ -90,9 +86,9 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
                   role="combobox"
                   aria-expanded={open}
                   aria-label="Select a team"
-                  className={ny('w-[200px] justify-between', className)}
+                  className={ny("w-[200px] justify-between", className)}
                >
-                  <Avatar className="mr-2 size-5">
+                  <Avatar className="mr-2 h-5 w-5">
                      <AvatarImage
                         src={`https://avatar.vercel.sh/${selectedTeam.value}.png`}
                         alt={selectedTeam.label}
@@ -109,9 +105,9 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
                   <CommandInput placeholder="Search team..." />
                   <CommandList>
                      <CommandEmpty>No team found.</CommandEmpty>
-                     {groups.map(group => (
+                     {groups.map((group) => (
                         <CommandGroup key={group.label} heading={group.label}>
-                           {group.teams.map(team => (
+                           {group.teams.map((team) => (
                               <CommandItem
                                  key={team.value}
                                  onSelect={() => {
@@ -120,7 +116,7 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
                                  }}
                                  className="text-sm"
                               >
-                                 <Avatar className="mr-2 size-5">
+                                 <Avatar className="mr-2 h-5 w-5">
                                     <AvatarImage
                                        src={`https://avatar.vercel.sh/${team.value}.png`}
                                        alt={team.label}
@@ -131,10 +127,10 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
                                  {team.label}
                                  <Check
                                     className={ny(
-                                       'ml-auto',
+                                       "ml-auto",
                                        selectedTeam.value === team.value
-                                          ? 'opacity-100'
-                                          : 'opacity-0',
+                                          ? "opacity-100"
+                                          : "opacity-0",
                                     )}
                                  />
                               </CommandItem>
@@ -152,7 +148,7 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
                                  setShowNewTeamDialog(true)
                               }}
                            >
-                              <PlusCircle className="size-5" />
+                              <PlusCircle className="h-5 w-5" />
                               Create Team
                            </CommandItem>
                         </DialogTrigger>
@@ -182,19 +178,13 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
                         </SelectTrigger>
                         <SelectContent>
                            <SelectItem value="free">
-                              <span className="font-medium">Free</span>
-                              {' '}
-                              -
-                              {' '}
+                              <span className="font-medium">Free</span> -{" "}
                               <span className="text-muted-foreground">
                                  Trial for two weeks
                               </span>
                            </SelectItem>
                            <SelectItem value="pro">
-                              <span className="font-medium">Pro</span>
-                              {' '}
-                              -
-                              {' '}
+                              <span className="font-medium">Pro</span> -{" "}
                               <span className="text-muted-foreground">
                                  $9/month per user
                               </span>
@@ -205,7 +195,10 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
                </div>
             </div>
             <DialogFooter>
-               <Button variant="outline" onClick={() => setShowNewTeamDialog(false)}>
+               <Button
+                  variant="outline"
+                  onClick={() => setShowNewTeamDialog(false)}
+               >
                   Cancel
                </Button>
                <Button type="submit">Continue</Button>

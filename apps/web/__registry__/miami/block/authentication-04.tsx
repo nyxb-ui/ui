@@ -1,16 +1,16 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image"
+import Link from "next/link"
 
-import { Button } from '~/registry/miami/ui/button'
-import { Input } from '~/registry/miami/ui/input'
-import { Label } from '~/registry/miami/ui/label'
+import { Button } from "~/registry/miami/ui/button"
+import { Input } from "~/registry/miami/ui/input"
+import { Label } from "~/registry/miami/ui/label"
 
-export const description
-  = 'A login page with two columns. The first column has the login form with email and password. There\'s a Forgot your passwork link and a link to sign up if you do not have an account. The second column has a cover image.'
+export const description =
+   "A login page with two columns. The first column has the login form with email and password. There's a Forgot your passwork link and a link to sign up if you do not have an account. The second column has a cover image."
 
-export const iframeHeight = '800px'
+export const iframeHeight = "800px"
 
-export const containerClassName = 'w-full h-full p-4 lg:p-0'
+export const containerClassName = "w-full h-full p-4 lg:p-0"
 
 export default function Dashboard() {
    return (
@@ -53,8 +53,7 @@ export default function Dashboard() {
                   </Button>
                </div>
                <div className="mt-4 text-center text-sm">
-                  Don&apos;t have an account?
-                  {' '}
+                  Don&apos;t have an account?{" "}
                   <Link href="#" className="underline">
                      Sign up
                   </Link>

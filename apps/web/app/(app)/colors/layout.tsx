@@ -1,27 +1,27 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
+import type { Metadata } from "next"
+import Link from "next/link"
 
-import { Announcement } from '~/components/announcement'
+import { Announcement } from "~/components/announcement"
 import {
    PageActions,
    PageHeader,
    PageHeaderDescription,
    PageHeaderHeading,
-} from '~/components/page-header'
-import { Button } from '~/registry/miami/ui/button'
+} from "~/components/page-header"
+import { Button } from "~/registry/miami/ui/button"
 
 export const metadata: Metadata = {
-   title: 'Tailwind Colors',
-   description: 'All colors in all formats.',
+   title: "Tailwind Colors",
+   description: "All colors in all formats.",
 }
 
-export default function ChartsLayout({
+export default function ColorsLayout({
    children,
 }: {
    children: React.ReactNode
 }) {
    return (
-      <div className="container relative">
+      <>
          <PageHeader>
             <Announcement />
             <PageHeaderHeading>Tailwind Colors</PageHeaderHeading>
@@ -37,9 +37,13 @@ export default function ChartsLayout({
                </Button>
             </PageActions>
          </PageHeader>
-         <section id="charts" className="scroll-mt-20">
-            {children}
-         </section>
-      </div>
+         <div className="container-wrapper">
+            <div className="container py-6">
+               <section id="colors" className="scroll-mt-20">
+                  {children}
+               </section>
+            </div>
+         </div>
+      </>
    )
 }

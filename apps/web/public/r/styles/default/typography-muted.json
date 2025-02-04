@@ -1,9 +1,11 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "typography-muted",
   "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
   "files": [
     {
-      "path": "example/typography-muted.tsx",
+      "path": "examples/typography-muted.tsx",
       "content": "export default function TypographyMuted() {\n   return (\n      <p className=\"text-muted-foreground text-sm\">Enter your email address.</p>\n   )\n}\n",
       "type": "registry:example",
       "target": ""

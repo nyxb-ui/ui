@@ -1,0 +1,4 @@
+{
+  "extends": "@workspace/typescript/base.json"
+}
+

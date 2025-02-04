@@ -1,4 +1,4 @@
-import { Button } from '~/registry/miami/ui/button'
+import { Button } from "~/registry/miami/ui/button"
 import {
    Dialog,
    DialogContent,
@@ -6,7 +6,7 @@ import {
    DialogHeader,
    DialogTitle,
    DialogTrigger,
-} from '~/registry/miami/ui/dialog'
+} from "~/registry/miami/ui/dialog"
 
 export function CodeViewer() {
    return (
@@ -18,23 +18,19 @@ export function CodeViewer() {
             <DialogHeader>
                <DialogTitle>View code</DialogTitle>
                <DialogDescription>
-                  You can use the following code to start integrating your current
-                  prompt and settings into your application.
+                  You can use the following code to start integrating your
+                  current prompt and settings into your application.
                </DialogDescription>
             </DialogHeader>
             <div className="grid gap-4">
                <div className="rounded-md bg-black p-6">
                   <pre>
-                     <code className="text-muted-foreground grid gap-1 text-sm [&_span]:h-4">
+                     <code className="grid gap-1 text-sm text-muted-foreground [&_span]:h-4">
                         <span>
-                           <span className="text-sky-300">import</span>
-                           {' '}
-                           os
+                           <span className="text-sky-300">import</span> os
                         </span>
                         <span>
-                           <span className="text-sky-300">import</span>
-                           {' '}
-                           openai
+                           <span className="text-sky-300">import</span> openai
                         </span>
                         <span />
                         <span>
@@ -47,56 +43,50 @@ export function CodeViewer() {
                         <span />
                         <span>response = openai.Completion.create(</span>
                         <span>
-                           {' '}
+                           {" "}
                            model=
-                           <span className="text-green-300">&quot;davinci&quot;</span>
+                           <span className="text-green-300">
+                              &quot;davinci&quot;
+                           </span>
                            ,
                         </span>
                         <span>
-                           {' '}
+                           {" "}
                            prompt=
-                           <span className="text-amber-300">&quot;&quot;</span>
-                           ,
+                           <span className="text-amber-300">&quot;&quot;</span>,
                         </span>
                         <span>
-                           {' '}
+                           {" "}
                            temperature=
-                           <span className="text-amber-300">0.9</span>
-                           ,
+                           <span className="text-amber-300">0.9</span>,
                         </span>
                         <span>
-                           {' '}
-                           max_tokens=
-                           <span className="text-amber-300">5</span>
-                           ,
+                           {" "}
+                           max_tokens=<span className="text-amber-300">5</span>,
                         </span>
                         <span>
-                           {' '}
-                           top_p=
-                           <span className="text-amber-300">1</span>
-                           ,
+                           {" "}
+                           top_p=<span className="text-amber-300">1</span>,
                         </span>
                         <span>
-                           {' '}
+                           {" "}
                            frequency_penalty=
-                           <span className="text-amber-300">0</span>
-                           ,
+                           <span className="text-amber-300">0</span>,
                         </span>
                         <span>
-                           {' '}
+                           {" "}
                            presence_penalty=
-                           <span className="text-green-300">0</span>
-                           ,
+                           <span className="text-green-300">0</span>,
                         </span>
                         <span>)</span>
                      </code>
                   </pre>
                </div>
                <div>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-sm text-muted-foreground">
                      Your API Key can be found here. You should use environment
-                     variables or a secret management tool to expose your key to your
-                     applications.
+                     variables or a secret management tool to expose your key to
+                     your applications.
                   </p>
                </div>
             </div>

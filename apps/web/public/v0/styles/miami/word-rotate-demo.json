@@ -1,0 +1,14 @@
+{
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "word-rotate-demo",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/word-rotate-demo.tsx",
+      "content": "import WordRotate from \"@/components/ui/word-rotate\"\n\nexport default async function WordRotateDemo() {\n   return (\n      <WordRotate\n         className=\"text-4xl font-bold text-black dark:text-white\"\n         words={[\"Word\", \"Rotate\"]}\n      />\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

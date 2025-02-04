@@ -1,4 +1,4 @@
-import { Button } from '~/registry/miami/ui/button'
+import { Button } from "~/registry/miami/ui/button"
 import {
    Dialog,
    DialogContent,
@@ -7,9 +7,9 @@ import {
    DialogHeader,
    DialogTitle,
    DialogTrigger,
-} from '~/registry/miami/ui/dialog'
-import { Input } from '~/registry/miami/ui/input'
-import { Label } from '~/registry/miami/ui/label'
+} from "~/registry/miami/ui/dialog"
+import { Input } from "~/registry/miami/ui/input"
+import { Label } from "~/registry/miami/ui/label"
 
 export function PresetSave() {
    return (
@@ -21,8 +21,8 @@ export function PresetSave() {
             <DialogHeader>
                <DialogTitle>Save preset</DialogTitle>
                <DialogDescription>
-                  This will save the current playground state as a preset which you
-                  can access later or share with others.
+                  This will save the current playground state as a preset which
+                  you can access later or share with others.
                </DialogDescription>
             </DialogHeader>
             <div className="grid gap-4 py-4">

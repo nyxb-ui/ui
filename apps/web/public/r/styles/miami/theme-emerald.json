@@ -1,6 +1,8 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "theme-emerald",
   "type": "registry:theme",
+  "author": "nyxbui (https://nyxbui.design)",
   "cssVars": {
     "light": {
       "background": "0 0% 100%",

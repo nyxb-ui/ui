@@ -1,12 +1,12 @@
-'use client'
+"use client"
 
-import { ChevronDown, LifeBuoy, Send } from 'lucide-react'
+import { ChevronDown, LifeBuoy, Send } from "lucide-react"
 
 import {
    Collapsible,
    CollapsibleContent,
    CollapsibleTrigger,
-} from '~/registry/miami/ui/collapsible'
+} from "~/registry/miami/ui/collapsible"
 import {
    Sidebar,
    SidebarContent,
@@ -17,7 +17,7 @@ import {
    SidebarMenuButton,
    SidebarMenuItem,
    SidebarProvider,
-} from '~/registry/miami/ui/sidebar'
+} from "~/registry/miami/ui/sidebar"
 
 export default function AppSidebar() {
    return (

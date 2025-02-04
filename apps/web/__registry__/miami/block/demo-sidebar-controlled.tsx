@@ -1,6 +1,6 @@
-'use client'
+"use client"
 
-import * as React from 'react'
+import * as React from "react"
 import {
    Frame,
    LifeBuoy,
@@ -9,9 +9,9 @@ import {
    PanelLeftOpen,
    PieChart,
    Send,
-} from 'lucide-react'
+} from "lucide-react"
 
-import { Button } from '~/registry/miami/ui/button'
+import { Button } from "~/registry/miami/ui/button"
 import {
    Sidebar,
    SidebarContent,
@@ -23,32 +23,32 @@ import {
    SidebarMenuButton,
    SidebarMenuItem,
    SidebarProvider,
-} from '~/registry/miami/ui/sidebar'
+} from "~/registry/miami/ui/sidebar"
 
 const projects = [
    {
-      name: 'Design Engineering',
-      url: '#',
+      name: "Design Engineering",
+      url: "#",
       icon: Frame,
    },
    {
-      name: 'Sales & Marketing',
-      url: '#',
+      name: "Sales & Marketing",
+      url: "#",
       icon: PieChart,
    },
    {
-      name: 'Travel',
-      url: '#',
+      name: "Travel",
+      url: "#",
       icon: Map,
    },
    {
-      name: 'Support',
-      url: '#',
+      name: "Support",
+      url: "#",
       icon: LifeBuoy,
    },
    {
-      name: 'Feedback',
-      url: '#',
+      name: "Feedback",
+      url: "#",
       icon: Send,
    },
 ]
@@ -64,7 +64,7 @@ export default function AppSidebar() {
                   <SidebarGroupLabel>Projects</SidebarGroupLabel>
                   <SidebarGroupContent>
                      <SidebarMenu>
-                        {projects.map(project => (
+                        {projects.map((project) => (
                            <SidebarMenuItem key={project.name}>
                               <SidebarMenuButton asChild>
                                  <a href={project.url}>
@@ -82,16 +82,12 @@ export default function AppSidebar() {
          <SidebarInset>
             <header className="flex h-12 items-center justify-between px-4">
                <Button
-                  onClick={() => setOpen(open => !open)}
+                  onClick={() => setOpen((open) => !open)}
                   size="sm"
                   variant="ghost"
                >
                   {open ? <PanelLeftClose /> : <PanelLeftOpen />}
-                  <span>
-                     {open ? 'Open' : 'Close'}
-                     {' '}
-                     Sidebar
-                  </span>
+                  <span>{open ? "Open" : "Close"} Sidebar</span>
                </Button>
             </header>
          </SidebarInset>

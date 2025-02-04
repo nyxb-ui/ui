@@ -1,23 +1,30 @@
-'use client'
+"use client"
 
-import { motion } from 'framer-motion'
-import { useEffect, useId, useRef, useState } from 'react'
-import { ny } from '~/lib/utils'
+import { motion } from "motion/react"
+import {
+   type ComponentPropsWithoutRef,
+   useEffect,
+   useId,
+   useRef,
+   useState,
+} from "react"
 
-interface GridPatternProps {
+import { ny } from "~/registry/miami/lib/utils"
+
+export interface AnimatedGridPatternProps
+   extends ComponentPropsWithoutRef<"svg"> {
    width?: number
    height?: number
    x?: number
    y?: number
    strokeDasharray?: any
    numSquares?: number
-   className?: string
    maxOpacity?: number
    duration?: number
    repeatDelay?: number
 }
 
-export function GridPattern({
+export function AnimatedGridPattern({
    width = 40,
    height = 40,
    x = -1,
@@ -29,7 +36,7 @@ export function GridPattern({
    duration = 4,
    repeatDelay = 0.5,
    ...props
-}: GridPatternProps) {
+}: AnimatedGridPatternProps) {
    const id = useId()
    const containerRef = useRef(null)
    const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
@@ -52,13 +59,13 @@ export function GridPattern({
 
    // Function to update a single square's position
    const updateSquarePosition = (id: number) => {
-      setSquares(currentSquares =>
-         currentSquares.map(sq =>
+      setSquares((currentSquares) =>
+         currentSquares.map((sq) =>
             sq.id === id
                ? {
-                     ...sq,
-                     pos: getPos(),
-                  }
+                    ...sq,
+                    pos: getPos(),
+                 }
                : sq,
          ),
       )
@@ -66,8 +73,9 @@ export function GridPattern({
 
    // Update squares to animate in
    useEffect(() => {
-      if (dimensions.width && dimensions.height)
+      if (dimensions.width && dimensions.height) {
          setSquares(generateSquares(numSquares))
+      }
    }, [dimensions, numSquares])
 
    // Resize observer to update container dimensions
@@ -81,12 +89,14 @@ export function GridPattern({
          }
       })
 
-      if (containerRef.current)
+      if (containerRef.current) {
          resizeObserver.observe(containerRef.current)
+      }
 
       return () => {
-         if (containerRef.current)
+         if (containerRef.current) {
             resizeObserver.unobserve(containerRef.current)
+         }
       }
    }, [containerRef])
 
@@ -95,7 +105,7 @@ export function GridPattern({
          ref={containerRef}
          aria-hidden="true"
          className={ny(
-            'pointer-events-none absolute inset-0 size-full fill-gray-400/30 stroke-gray-400/30',
+            "pointer-events-none absolute inset-0 h-full w-full fill-gray-400/30 stroke-gray-400/30",
             className,
          )}
          {...props}
@@ -126,7 +136,7 @@ export function GridPattern({
                      duration,
                      repeat: 1,
                      delay: index * 0.1,
-                     repeatType: 'reverse',
+                     repeatType: "reverse",
                   }}
                   onAnimationComplete={() => updateSquarePosition(id)}
                   key={`${x}-${y}-${index}`}
@@ -142,5 +152,3 @@ export function GridPattern({
       </svg>
    )
 }
-
-export default GridPattern

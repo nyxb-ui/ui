@@ -1,21 +1,21 @@
-import { SidebarLeft } from '~/registry/default/block/sidebar-15/components/sidebar-left'
-import { SidebarRight } from '~/registry/default/block/sidebar-15/components/sidebar-right'
+import { SidebarLeft } from "~/registry/default/block/sidebar-15/components/sidebar-left"
+import { SidebarRight } from "~/registry/default/block/sidebar-15/components/sidebar-right"
 import {
    Breadcrumb,
    BreadcrumbItem,
    BreadcrumbList,
    BreadcrumbPage,
-} from '~/registry/default/ui/breadcrumb'
-import { Separator } from '~/registry/default/ui/separator'
+} from "~/registry/default/ui/breadcrumb"
+import { Separator } from "~/registry/default/ui/separator"
 import {
    SidebarInset,
    SidebarProvider,
    SidebarTrigger,
-} from '~/registry/default/ui/sidebar'
+} from "~/registry/default/ui/sidebar"
 
-export const iframeHeight = '800px'
+export const iframeHeight = "800px"
 
-export const description = 'A left and right sidebar.'
+export const description = "A left and right sidebar."
 
 export default function Page() {
    return (

@@ -1,11 +1,13 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "dot-pattern",
   "type": "registry:ui",
+  "author": "nyxbui (https://nyxbui.design)",
   "files": [
     {
       "path": "ui/dot-pattern.tsx",
-      "content": "import { useId } from 'react'\nimport { ny } from '~/lib/utils'\n\ninterface DotPatternProps {\n   width?: any\n   height?: any\n   x?: any\n   y?: any\n   cx?: any\n   cy?: any\n   cr?: any\n   className?: string\n   [key: string]: any\n}\nexport function DotPattern({\n   width = 16,\n   height = 16,\n   x = 0,\n   y = 0,\n   cx = 1,\n   cy = 1,\n   cr = 1,\n   className,\n   ...props\n}: DotPatternProps) {\n   const id = useId()\n\n   return (\n      <svg\n         aria-hidden=\"true\"\n         className={ny(\n            'pointer-events-none absolute inset-0 size-full fill-neutral-400/80',\n            className,\n         )}\n         {...props}\n      >\n         <defs>\n            <pattern\n               id={id}\n               width={width}\n               height={height}\n               patternUnits=\"userSpaceOnUse\"\n               patternContentUnits=\"userSpaceOnUse\"\n               x={x}\n               y={y}\n            >\n               <circle id=\"pattern-circle\" cx={cx} cy={cy} r={cr} />\n            </pattern>\n         </defs>\n         <rect width=\"100%\" height=\"100%\" strokeWidth={0} fill={`url(#${id})`} />\n      </svg>\n   )\n}\n\nexport default DotPattern\n",
-      "type": "registry:component",
+      "content": "import { useId } from \"react\"\n\nimport { ny } from \"~/registry/default/lib/utils\"\n\ninterface DotPatternProps extends React.SVGProps<SVGSVGElement> {\n   width?: number\n   height?: number\n   x?: number\n   y?: number\n   cx?: number\n   cy?: number\n   cr?: number\n   className?: string\n   [key: string]: unknown\n}\nexport function DotPattern({\n   width = 16,\n   height = 16,\n   x = 0,\n   y = 0,\n   cx = 1,\n   cy = 1,\n   cr = 1,\n   className,\n   ...props\n}: DotPatternProps) {\n   const id = useId()\n\n   return (\n      <svg\n         aria-hidden=\"true\"\n         className={ny(\n            \"pointer-events-none absolute inset-0 h-full w-full fill-neutral-400/80\",\n            className,\n         )}\n         {...props}\n      >\n         <defs>\n            <pattern\n               id={id}\n               width={width}\n               height={height}\n               patternUnits=\"userSpaceOnUse\"\n               patternContentUnits=\"userSpaceOnUse\"\n               x={x}\n               y={y}\n            >\n               <circle id=\"pattern-circle\" cx={cx} cy={cy} r={cr} />\n            </pattern>\n         </defs>\n         <rect\n            width=\"100%\"\n            height=\"100%\"\n            strokeWidth={0}\n            fill={`url(#${id})`}\n         />\n      </svg>\n   )\n}\n",
+      "type": "registry:ui",
       "target": ""
     }
   ]

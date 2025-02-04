@@ -1,11 +1,11 @@
-import path from 'path'
-import fs from 'fs-extra'
-import type { z } from 'zod'
-import type { addOptionsSchema } from '~/src/commands/add'
-import * as ERRORS from '~/src/utils/errors'
-import { getConfig } from '~/src/utils/get-config'
-import { highlighter } from '~/src/utils/highlighter'
-import { logger } from '~/src/utils/logger'
+import path from "path"
+import fs from "fs-extra"
+import type { z } from "zod"
+import type { addOptionsSchema } from "~/src/commands/add"
+import * as ERRORS from "~/src/utils/errors"
+import { getConfig } from "~/src/utils/get-config"
+import { highlighter } from "~/src/utils/highlighter"
+import { logger } from "~/src/utils/logger"
 
 export async function preFlightAdd(options: z.infer<typeof addOptionsSchema>) {
    const errors: Record<string, boolean> = {}
@@ -13,8 +13,8 @@ export async function preFlightAdd(options: z.infer<typeof addOptionsSchema>) {
    // Ensure target directory exists.
    // Check for empty project. We assume if no package.json exists, the project is empty.
    if (
-      !fs.existsSync(options.cwd)
-      || !fs.existsSync(path.resolve(options.cwd, 'package.json'))
+      !fs.existsSync(options.cwd) ||
+      !fs.existsSync(path.resolve(options.cwd, "package.json"))
    ) {
       errors[ERRORS.MISSING_DIR_OR_EMPTY_PROJECT] = true
       return {
@@ -23,8 +23,8 @@ export async function preFlightAdd(options: z.infer<typeof addOptionsSchema>) {
       }
    }
 
-   // Check for existing nyxbui.json file.
-   if (!fs.existsSync(path.resolve(options.cwd, 'nyxbui.json'))) {
+   // Check for existing components.json file.
+   if (!fs.existsSync(path.resolve(options.cwd, "nyxbui.json"))) {
       errors[ERRORS.MISSING_CONFIG] = true
       return {
          errors,
@@ -39,21 +39,20 @@ export async function preFlightAdd(options: z.infer<typeof addOptionsSchema>) {
          errors,
          config: config!,
       }
-   }
-   catch (error) {
+   } catch (error) {
       logger.break()
       logger.error(
-      `An invalid ${highlighter.info(
-        'nyxbui.json',
-      )} file was found at ${highlighter.info(
-        options.cwd,
-      )}.\nBefore you can add components, you must create a valid ${highlighter.info(
-        'nyxbui.json',
-      )} file by running the ${highlighter.info('init')} command.`,
+         `An invalid ${highlighter.info(
+            "nyxbui.json",
+         )} file was found at ${highlighter.info(
+            options.cwd,
+         )}.\nBefore you can add components, you must create a valid ${highlighter.info(
+            "nyxbui.json",
+         )} file by running the ${highlighter.info("init")} command.`,
       )
       logger.error(
          `Learn more at ${highlighter.info(
-            'https://nyxbui.design/docs/nyxbui-json',
+            "https://nyxbui.design/docs/nyxbui-json",
          )}.`,
       )
       logger.break()

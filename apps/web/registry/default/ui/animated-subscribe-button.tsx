@@ -1,7 +1,8 @@
-'use client'
+"use client"
 
-import { AnimatePresence, motion } from 'framer-motion'
-import React, { useState } from 'react'
+import { AnimatePresence, motion } from "framer-motion"
+import type React from "react"
+import { useState } from "react"
 
 interface AnimatedSubscribeButtonProps {
    buttonColor: string
@@ -24,45 +25,43 @@ export const AnimatedSubscribeButton: React.FC<
 
    return (
       <AnimatePresence mode="wait">
-         {isSubscribed
-            ? (
-                  <motion.button
-                     className="relative flex h-[46px] w-[200px] items-center justify-center overflow-hidden rounded-md bg-white p-[10px] outline outline-1 outline-black"
-                     onClick={() => setIsSubscribed(false)}
-                     initial={{ opacity: 0 }}
-                     animate={{ opacity: 1 }}
-                     exit={{ opacity: 0 }}
-                  >
-                     <motion.span
-                        key="action"
-                        className="relative block size-full font-semibold"
-                        initial={{ y: -50 }}
-                        animate={{ y: 0 }}
-                        style={{ color: buttonColor }}
-                     >
-                        {changeText}
-                     </motion.span>
-                  </motion.button>
-               )
-            : (
-                  <motion.button
-                     className="relative flex w-[200px] cursor-pointer items-center justify-center rounded-md border-none p-[10px]"
-                     style={{ backgroundColor: buttonColor, color: buttonTextColor }}
-                     onClick={() => setIsSubscribed(true)}
-                     initial={{ opacity: 0 }}
-                     animate={{ opacity: 1 }}
-                     exit={{ opacity: 0 }}
-                  >
-                     <motion.span
-                        key="reaction"
-                        className="relative block font-semibold"
-                        initial={{ x: 0 }}
-                        exit={{ x: 50, transition: { duration: 0.1 } }}
-                     >
-                        {initialText}
-                     </motion.span>
-                  </motion.button>
-               )}
+         {isSubscribed ? (
+            <motion.button
+               className="relative flex h-[46px] w-[200px] items-center justify-center overflow-hidden rounded-md bg-white p-[10px] outline outline-1 outline-black"
+               onClick={() => setIsSubscribed(false)}
+               initial={{ opacity: 0 }}
+               animate={{ opacity: 1 }}
+               exit={{ opacity: 0 }}
+            >
+               <motion.span
+                  key="action"
+                  className="relative block size-full font-semibold"
+                  initial={{ y: -50 }}
+                  animate={{ y: 0 }}
+                  style={{ color: buttonColor }}
+               >
+                  {changeText}
+               </motion.span>
+            </motion.button>
+         ) : (
+            <motion.button
+               className="relative flex w-[200px] cursor-pointer items-center justify-center rounded-md border-none p-[10px]"
+               style={{ backgroundColor: buttonColor, color: buttonTextColor }}
+               onClick={() => setIsSubscribed(true)}
+               initial={{ opacity: 0 }}
+               animate={{ opacity: 1 }}
+               exit={{ opacity: 0 }}
+            >
+               <motion.span
+                  key="reaction"
+                  className="relative block font-semibold"
+                  initial={{ x: 0 }}
+                  exit={{ x: 50, transition: { duration: 0.1 } }}
+               >
+                  {initialText}
+               </motion.span>
+            </motion.button>
+         )}
       </AnimatePresence>
    )
 }

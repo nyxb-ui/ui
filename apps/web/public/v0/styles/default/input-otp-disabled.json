@@ -1,0 +1,18 @@
+{
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "input-otp-disabled",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "registryDependencies": [
+    "input-otp",
+    "form"
+  ],
+  "files": [
+    {
+      "path": "examples/input-otp-disabled.tsx",
+      "content": "import {\n   InputOTP,\n   InputOTPGroup,\n   InputOTPSeparator,\n   InputOTPSlot,\n} from \"@/components/ui/input-otp\"\n\nexport default function InputOTPDemo() {\n   return (\n      <InputOTP maxLength={6} disabled>\n         <InputOTPGroup>\n            <InputOTPSlot index={0} />\n            <InputOTPSlot index={1} />\n            <InputOTPSlot index={2} />\n         </InputOTPGroup>\n         <InputOTPSeparator />\n         <InputOTPGroup>\n            <InputOTPSlot index={3} />\n            <InputOTPSlot index={4} />\n            <InputOTPSlot index={5} />\n         </InputOTPGroup>\n      </InputOTP>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

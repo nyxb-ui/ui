@@ -1,7 +1,7 @@
-'use client'
+"use client"
 
-import { TrendingUp } from 'lucide-react'
-import { Area, AreaChart, CartesianGrid, XAxis } from 'recharts'
+import { TrendingUp } from "lucide-react"
+import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
 
 import {
    Card,
@@ -10,35 +10,33 @@ import {
    CardFooter,
    CardHeader,
    CardTitle,
-} from '~/registry/miami/ui/card'
-import type {
-   ChartConfig,
-} from '~/registry/miami/ui/chart'
+} from "~/registry/miami/ui/card"
+import type { ChartConfig } from "~/registry/miami/ui/chart"
 import {
    ChartContainer,
    ChartTooltip,
    ChartTooltipContent,
-} from '~/registry/miami/ui/chart'
+} from "~/registry/miami/ui/chart"
 
-export const description = 'A stacked area chart'
+export const description = "A stacked area chart"
 
 const chartData = [
-   { month: 'January', desktop: 186, mobile: 80 },
-   { month: 'February', desktop: 305, mobile: 200 },
-   { month: 'March', desktop: 237, mobile: 120 },
-   { month: 'April', desktop: 73, mobile: 190 },
-   { month: 'May', desktop: 209, mobile: 130 },
-   { month: 'June', desktop: 214, mobile: 140 },
+   { month: "January", desktop: 186, mobile: 80 },
+   { month: "February", desktop: 305, mobile: 200 },
+   { month: "March", desktop: 237, mobile: 120 },
+   { month: "April", desktop: 73, mobile: 190 },
+   { month: "May", desktop: 209, mobile: 130 },
+   { month: "June", desktop: 214, mobile: 140 },
 ]
 
 const chartConfig = {
    desktop: {
-      label: 'Desktop',
-      color: 'hsl(var(--chart-1))',
+      label: "Desktop",
+      color: "hsl(var(--chart-1))",
    },
    mobile: {
-      label: 'Mobile',
-      color: 'hsl(var(--chart-2))',
+      label: "Mobile",
+      color: "hsl(var(--chart-2))",
    },
 } satisfies ChartConfig
 
@@ -67,7 +65,7 @@ export default function Component() {
                      tickLine={false}
                      axisLine={false}
                      tickMargin={8}
-                     tickFormatter={value => value.slice(0, 3)}
+                     tickFormatter={(value) => value.slice(0, 3)}
                   />
                   <ChartTooltip
                      cursor={false}
@@ -96,8 +94,7 @@ export default function Component() {
             <div className="flex w-full items-start gap-2 text-sm">
                <div className="grid gap-2">
                   <div className="flex items-center gap-2 font-medium leading-none">
-                     Trending up by 5.2% this month
-                     {' '}
+                     Trending up by 5.2% this month{" "}
                      <TrendingUp className="size-4" />
                   </div>
                   <div className="text-muted-foreground flex items-center gap-2 leading-none">

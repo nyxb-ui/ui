@@ -1,0 +1,14 @@
+{
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
+  "name": "shine-border-demo-2",
+  "type": "registry:example",
+  "author": "nyxb (https://nyxbui.design)",
+  "files": [
+    {
+      "path": "examples/shine-border-demo-2.tsx",
+      "content": "import ShineBorder from \"@/components/ui/shine-border\"\n\nexport default function ShineBorderDemo() {\n   return (\n      <ShineBorder className=\"text-center text-2xl font-bold capitalize\">\n         Shine Border\n      </ShineBorder>\n   )\n}\n",
+      "type": "registry:example",
+      "target": ""
+    }
+  ]
+}

@@ -1,9 +1,9 @@
-import type { Dispatch, SetStateAction } from 'react'
-import React from 'react'
-import type { LucideIcon, LucideProps } from 'lucide-react'
-import { StarIcon } from 'lucide-react'
+import type { LucideIcon, LucideProps } from "lucide-react"
+import { StarIcon } from "lucide-react"
+import type { Dispatch, SetStateAction } from "react"
+import type React from "react"
 
-import { ny } from '~/lib/utils'
+import { ny } from "~/lib/utils"
 
 interface StarWrapperProps {
    value?: number
@@ -31,27 +31,33 @@ function StarRating({
    const IconComponent = icon
 
    return (
-      <div className={ny('flex items-center gap-1', wrapperClassName)} {...restWrapperProps}>
+      <div
+         className={ny("flex items-center gap-1", wrapperClassName)}
+         {...restWrapperProps}
+      >
          {Array.from({ length: numStars }, (_, i) => {
             const isRated = i < value!
             const styledIconProps: LucideProps = {
                onMouseEnter: () => !showcase && !disabled && setValue!(i + 1),
-               className: ny('fill-primary stroke-primary size-6', {
-                  'opacity-50 pointer-events-none': disabled,
-                  'transition-transform duration-300 hover:scale-110': !disabled && !showcase,
-                  '!fill-muted !stroke-muted': !isRated,
-               }, iconClassName),
+               className: ny(
+                  "fill-primary stroke-primary size-6",
+                  {
+                     "opacity-50 pointer-events-none": disabled,
+                     "transition-transform duration-300 hover:scale-110":
+                        !disabled && !showcase,
+                     "!fill-muted !stroke-muted": !isRated,
+                  },
+                  iconClassName,
+               ),
                ...restIconProps,
             }
             return (
                <div key={i}>
-                  {IconComponent
-                     ? (
-                           <IconComponent {...styledIconProps} />
-                        )
-                     : (
-                           <StarIcon {...styledIconProps} />
-                        )}
+                  {IconComponent ? (
+                     <IconComponent {...styledIconProps} />
+                  ) : (
+                     <StarIcon {...styledIconProps} />
+                  )}
                </div>
             )
          })}

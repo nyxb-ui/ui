@@ -1,6 +1,8 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "theme-daylight",
   "type": "registry:theme",
+  "author": "nyxbui (https://nyxbui.design)",
   "cssVars": {
     "light": {
       "background": "36 39% 88%",

@@ -1,9 +1,9 @@
-'use client'
+"use client"
 
-import { Dialog, Transition } from '@headlessui/react'
-import { X } from 'lucide-react'
-import React, { Fragment, useContext, useState } from 'react'
-import { ny } from '~/lib/utils'
+import { Dialog, Transition } from "@headlessui/react"
+import { X } from "lucide-react"
+import React, { Fragment, useContext, useState } from "react"
+import { ny } from "~/lib/utils"
 
 interface HeroVideoProps {
    children?: React.ReactNode
@@ -29,7 +29,7 @@ export function HeroVideoAction({
    const context = useContext(HeroVideoContext)
 
    if (!context)
-      throw new Error('HeroVideoAction must be used within a HeroVideo')
+      throw new Error("HeroVideoAction must be used within a HeroVideo")
 
    const { openModal } = context
 
@@ -45,7 +45,7 @@ export function HeroVideoAction({
    )
 }
 
-function HeroVideo({ children, image, title = 'Demo' }: HeroVideoProps) {
+function HeroVideo({ children, image, title = "Demo" }: HeroVideoProps) {
    const [isOpen, setIsOpen] = useState(false)
 
    function closeModal() {
@@ -62,8 +62,7 @@ function HeroVideo({ children, image, title = 'Demo' }: HeroVideoProps) {
 
    React.Children.forEach(children, (child) => {
       if (React.isValidElement(child)) {
-         if (child.type === HeroVideoAction)
-            actionChild = child
+         if (child.type === HeroVideoAction) actionChild = child
          else otherChildren.push(child)
       }
    })
@@ -71,7 +70,7 @@ function HeroVideo({ children, image, title = 'Demo' }: HeroVideoProps) {
    return (
       <HeroVideoContext.Provider value={{ openModal, closeModal }}>
          <div
-            className={ny('absolute inset-px flex overflow-hidden rounded-2xl')}
+            className={ny("absolute inset-px flex overflow-hidden rounded-2xl")}
          >
             {actionChild}
             <img

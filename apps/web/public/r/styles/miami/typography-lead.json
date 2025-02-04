@@ -1,10 +1,12 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "typography-lead",
   "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
   "files": [
     {
-      "path": "example/typography-lead.tsx",
-      "content": "export default function TypographyLead() {\n   return (\n      <p className=\"text-muted-foreground text-xl\">\n         A modal dialog that interrupts the user with important content and expects\n         a response.\n      </p>\n   )\n}\n",
+      "path": "examples/typography-lead.tsx",
+      "content": "export default function TypographyLead() {\n   return (\n      <p className=\"text-muted-foreground text-xl\">\n         A modal dialog that interrupts the user with important content and\n         expects a response.\n      </p>\n   )\n}\n",
       "type": "registry:example",
       "target": ""
     }

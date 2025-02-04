@@ -1,64 +1,64 @@
-import { AccordionDemo } from '~/registry/miami/block/_sink/components/accordion-demo'
-import { AlertDemo } from '~/registry/miami/block/_sink/components/alert-demo'
-import { AlertDialogDemo } from '~/registry/miami/block/_sink/components/alert-dialog-demo'
-import { AppSidebar } from '~/registry/miami/block/_sink/components/app-sidebar'
-import { AspectRatioDemo } from '~/registry/miami/block/_sink/components/aspect-ratio-demo'
-import { AvatarDemo } from '~/registry/miami/block/_sink/components/avatar-demo'
-import { BadgeDemo } from '~/registry/miami/block/_sink/components/badge-demo'
-import { BadgeDestructive } from '~/registry/miami/block/_sink/components/badge-destructive'
-import { BadgeOutline } from '~/registry/miami/block/_sink/components/badge-outline'
-import { BadgeSecondary } from '~/registry/miami/block/_sink/components/badge-secondary'
-import { BreadcrumbDemo } from '~/registry/miami/block/_sink/components/breadcrumb-demo'
-import { ButtonDemo } from '~/registry/miami/block/_sink/components/button-demo'
-import { ButtonDestructive } from '~/registry/miami/block/_sink/components/button-destructive'
-import { ButtonGhost } from '~/registry/miami/block/_sink/components/button-ghost'
-import { ButtonLink } from '~/registry/miami/block/_sink/components/button-link'
-import { ButtonLoading } from '~/registry/miami/block/_sink/components/button-loading'
-import { ButtonOutline } from '~/registry/miami/block/_sink/components/button-outline'
-import { ButtonSecondary } from '~/registry/miami/block/_sink/components/button-secondary'
-import { ButtonWithIcon } from '~/registry/miami/block/_sink/components/button-with-icon'
-import { CalendarDemo } from '~/registry/miami/block/_sink/components/calendar-demo'
-import { CardDemo } from '~/registry/miami/block/_sink/components/card-demo'
-import { CarouselDemo } from '~/registry/miami/block/_sink/components/carousel-demo'
-import { CheckboxDemo } from '~/registry/miami/block/_sink/components/checkbox-demo'
-import { CollapsibleDemo } from '~/registry/miami/block/_sink/components/collapsible-demo'
-import { ComboboxDemo } from '~/registry/miami/block/_sink/components/combobox-demo'
-import { CommandDemo } from '~/registry/miami/block/_sink/components/command-demo'
-import { ComponentWrapper } from '~/registry/miami/block/_sink/components/component-wrapper'
-import { ContextMenuDemo } from '~/registry/miami/block/_sink/components/context-menu-demo'
-import { DatePickerDemo } from '~/registry/miami/block/_sink/components/date-picker-demo'
-import { DialogDemo } from '~/registry/miami/block/_sink/components/dialog-demo'
-import { DrawerDemo } from '~/registry/miami/block/_sink/components/drawer-demo'
-import { DropdownMenuDemo } from '~/registry/miami/block/_sink/components/dropdown-menu-demo'
-import { HoverCardDemo } from '~/registry/miami/block/_sink/components/hover-card-demo'
-import { InputDemo } from '~/registry/miami/block/_sink/components/input-demo'
-import { InputOTPDemo } from '~/registry/miami/block/_sink/components/input-otp-demo'
-import { LabelDemo } from '~/registry/miami/block/_sink/components/label-demo'
-import { MenubarDemo } from '~/registry/miami/block/_sink/components/menubar-demo'
-import { NavigationMenuDemo } from '~/registry/miami/block/_sink/components/navigation-menu-demo'
-import { PaginationDemo } from '~/registry/miami/block/_sink/components/pagination-demo'
-import { PopoverDemo } from '~/registry/miami/block/_sink/components/popover-demo'
-import { ProgressDemo } from '~/registry/miami/block/_sink/components/progress-demo'
-import { RadioGroupDemo } from '~/registry/miami/block/_sink/components/radio-group-demo'
-import { ResizableHandleDemo } from '~/registry/miami/block/_sink/components/resizable-handle'
-import { ScrollAreaDemo } from '~/registry/miami/block/_sink/components/scroll-area-demo'
-import { SelectDemo } from '~/registry/miami/block/_sink/components/select-demo'
-import { SeparatorDemo } from '~/registry/miami/block/_sink/components/separator-demo'
-import { SheetDemo } from '~/registry/miami/block/_sink/components/sheet-demo'
-import { SkeletonDemo } from '~/registry/miami/block/_sink/components/skeleton-demo'
-import { SliderDemo } from '~/registry/miami/block/_sink/components/slider-demo'
-import { SonnerDemo } from '~/registry/miami/block/_sink/components/sonner-demo'
-import { SwitchDemo } from '~/registry/miami/block/_sink/components/switch-demo'
-import { TableDemo } from '~/registry/miami/block/_sink/components/table-demo'
-import { TabsDemo } from '~/registry/miami/block/_sink/components/tabs-demo'
-import { TextareaDemo } from '~/registry/miami/block/_sink/components/textarea-demo'
-import { ToastDemo } from '~/registry/miami/block/_sink/components/toast-demo'
-import { ToggleDemo } from '~/registry/miami/block/_sink/components/toggle-demo'
-import { ToggleDisabled } from '~/registry/miami/block/_sink/components/toggle-disabled'
-import { ToggleGroupDemo } from '~/registry/miami/block/_sink/components/toggle-group-demo'
-import { ToggleOutline } from '~/registry/miami/block/_sink/components/toggle-outline'
-import { ToggleWithText } from '~/registry/miami/block/_sink/components/toggle-with-text'
-import { TooltipDemo } from '~/registry/miami/block/_sink/components/tooltip-demo'
+import { AccordionDemo } from "~/registry/miami/block/_sink/components/accordion-demo"
+import { AlertDemo } from "~/registry/miami/block/_sink/components/alert-demo"
+import { AlertDialogDemo } from "~/registry/miami/block/_sink/components/alert-dialog-demo"
+import { AppSidebar } from "~/registry/miami/block/_sink/components/app-sidebar"
+import { AspectRatioDemo } from "~/registry/miami/block/_sink/components/aspect-ratio-demo"
+import { AvatarDemo } from "~/registry/miami/block/_sink/components/avatar-demo"
+import { BadgeDemo } from "~/registry/miami/block/_sink/components/badge-demo"
+import { BadgeDestructive } from "~/registry/miami/block/_sink/components/badge-destructive"
+import { BadgeOutline } from "~/registry/miami/block/_sink/components/badge-outline"
+import { BadgeSecondary } from "~/registry/miami/block/_sink/components/badge-secondary"
+import { BreadcrumbDemo } from "~/registry/miami/block/_sink/components/breadcrumb-demo"
+import { ButtonDemo } from "~/registry/miami/block/_sink/components/button-demo"
+import { ButtonDestructive } from "~/registry/miami/block/_sink/components/button-destructive"
+import { ButtonGhost } from "~/registry/miami/block/_sink/components/button-ghost"
+import { ButtonLink } from "~/registry/miami/block/_sink/components/button-link"
+import { ButtonLoading } from "~/registry/miami/block/_sink/components/button-loading"
+import { ButtonOutline } from "~/registry/miami/block/_sink/components/button-outline"
+import { ButtonSecondary } from "~/registry/miami/block/_sink/components/button-secondary"
+import { ButtonWithIcon } from "~/registry/miami/block/_sink/components/button-with-icon"
+import { CalendarDemo } from "~/registry/miami/block/_sink/components/calendar-demo"
+import { CardDemo } from "~/registry/miami/block/_sink/components/card-demo"
+import { CarouselDemo } from "~/registry/miami/block/_sink/components/carousel-demo"
+import { CheckboxDemo } from "~/registry/miami/block/_sink/components/checkbox-demo"
+import { CollapsibleDemo } from "~/registry/miami/block/_sink/components/collapsible-demo"
+import { ComboboxDemo } from "~/registry/miami/block/_sink/components/combobox-demo"
+import { CommandDemo } from "~/registry/miami/block/_sink/components/command-demo"
+import { ComponentWrapper } from "~/registry/miami/block/_sink/components/component-wrapper"
+import { ContextMenuDemo } from "~/registry/miami/block/_sink/components/context-menu-demo"
+import { DatePickerDemo } from "~/registry/miami/block/_sink/components/date-picker-demo"
+import { DialogDemo } from "~/registry/miami/block/_sink/components/dialog-demo"
+import { DrawerDemo } from "~/registry/miami/block/_sink/components/drawer-demo"
+import { DropdownMenuDemo } from "~/registry/miami/block/_sink/components/dropdown-menu-demo"
+import { HoverCardDemo } from "~/registry/miami/block/_sink/components/hover-card-demo"
+import { InputDemo } from "~/registry/miami/block/_sink/components/input-demo"
+import { InputOTPDemo } from "~/registry/miami/block/_sink/components/input-otp-demo"
+import { LabelDemo } from "~/registry/miami/block/_sink/components/label-demo"
+import { MenubarDemo } from "~/registry/miami/block/_sink/components/menubar-demo"
+import { NavigationMenuDemo } from "~/registry/miami/block/_sink/components/navigation-menu-demo"
+import { PaginationDemo } from "~/registry/miami/block/_sink/components/pagination-demo"
+import { PopoverDemo } from "~/registry/miami/block/_sink/components/popover-demo"
+import { ProgressDemo } from "~/registry/miami/block/_sink/components/progress-demo"
+import { RadioGroupDemo } from "~/registry/miami/block/_sink/components/radio-group-demo"
+import { ResizableHandleDemo } from "~/registry/miami/block/_sink/components/resizable-handle"
+import { ScrollAreaDemo } from "~/registry/miami/block/_sink/components/scroll-area-demo"
+import { SelectDemo } from "~/registry/miami/block/_sink/components/select-demo"
+import { SeparatorDemo } from "~/registry/miami/block/_sink/components/separator-demo"
+import { SheetDemo } from "~/registry/miami/block/_sink/components/sheet-demo"
+import { SkeletonDemo } from "~/registry/miami/block/_sink/components/skeleton-demo"
+import { SliderDemo } from "~/registry/miami/block/_sink/components/slider-demo"
+import { SonnerDemo } from "~/registry/miami/block/_sink/components/sonner-demo"
+import { SwitchDemo } from "~/registry/miami/block/_sink/components/switch-demo"
+import { TableDemo } from "~/registry/miami/block/_sink/components/table-demo"
+import { TabsDemo } from "~/registry/miami/block/_sink/components/tabs-demo"
+import { TextareaDemo } from "~/registry/miami/block/_sink/components/textarea-demo"
+import { ToastDemo } from "~/registry/miami/block/_sink/components/toast-demo"
+import { ToggleDemo } from "~/registry/miami/block/_sink/components/toggle-demo"
+import { ToggleDisabled } from "~/registry/miami/block/_sink/components/toggle-disabled"
+import { ToggleGroupDemo } from "~/registry/miami/block/_sink/components/toggle-group-demo"
+import { ToggleOutline } from "~/registry/miami/block/_sink/components/toggle-outline"
+import { ToggleWithText } from "~/registry/miami/block/_sink/components/toggle-with-text"
+import { TooltipDemo } from "~/registry/miami/block/_sink/components/tooltip-demo"
 import {
    Breadcrumb,
    BreadcrumbItem,
@@ -66,13 +66,13 @@ import {
    BreadcrumbList,
    BreadcrumbPage,
    BreadcrumbSeparator,
-} from '~/registry/miami/ui/breadcrumb'
-import { Separator } from '~/registry/miami/ui/separator'
+} from "~/registry/miami/ui/breadcrumb"
+import { Separator } from "~/registry/miami/ui/separator"
 import {
    SidebarInset,
    SidebarProvider,
    SidebarTrigger,
-} from '~/registry/miami/ui/sidebar'
+} from "~/registry/miami/ui/sidebar"
 
 export default function SinkPage() {
    return (
@@ -197,7 +197,10 @@ export default function SinkPage() {
                   <ComponentWrapper name="Menubar">
                      <MenubarDemo />
                   </ComponentWrapper>
-                  <ComponentWrapper name="NavigationMenu" className="col-span-2">
+                  <ComponentWrapper
+                     name="NavigationMenu"
+                     className="col-span-2"
+                  >
                      <NavigationMenuDemo />
                   </ComponentWrapper>
                   <ComponentWrapper name="Pagination">

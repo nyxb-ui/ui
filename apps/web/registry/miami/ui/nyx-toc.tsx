@@ -1,16 +1,36 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import type { AnchorHTMLAttributes, HTMLAttributes, ReactNode, RefObject } from 'react'
-import { createContext, forwardRef, useContext, useEffect, useMemo, useRef, useState } from 'react'
-import type { PopoverContentProps, PopoverTriggerProps } from '@radix-ui/react-popover'
-import { AlignLeft, ChevronRight } from 'lucide-react'
-import scrollIntoView from 'scroll-into-view-if-needed'
-import * as ScrollAreaPrimitive from '@radix-ui/react-scroll-area'
-import { Popover, PopoverContent, PopoverTrigger } from '~/registry/miami/ui/popover'
-import { ny } from '~/lib/utils'
-import { useAnchorObserver } from '~/hooks/use-anchor-observer'
-import { useOnChange } from '~/hooks/use-on-change'
+import type {
+   PopoverContentProps,
+   PopoverTriggerProps,
+} from "@radix-ui/react-popover"
+import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area"
+import { AlignLeft, ChevronRight } from "lucide-react"
+import * as React from "react"
+import type {
+   AnchorHTMLAttributes,
+   HTMLAttributes,
+   ReactNode,
+   RefObject,
+} from "react"
+import {
+   createContext,
+   forwardRef,
+   useContext,
+   useEffect,
+   useMemo,
+   useRef,
+   useState,
+} from "react"
+import scrollIntoView from "scroll-into-view-if-needed"
+import { useAnchorObserver } from "~/hooks/use-anchor-observer"
+import { useOnChange } from "~/hooks/use-on-change"
+import { ny } from "~/lib/utils"
+import {
+   Popover,
+   PopoverContent,
+   PopoverTrigger,
+} from "~/registry/miami/ui/popover"
 
 // #region Types
 export interface TOCItemType {
@@ -36,7 +56,7 @@ export interface PageStyles {
 }
 
 export interface TOCItemProps
-   extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> {
+   extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> {
    href: string
 
    onActiveChange?: (v: boolean) => void
@@ -49,7 +69,7 @@ const ScrollArea = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
    <ScrollAreaPrimitive.Root
       ref={ref}
-      className={ny('overflow-hidden', className)}
+      className={ny("overflow-hidden", className)}
       {...props}
    >
       {children}
@@ -66,7 +86,7 @@ const ScrollViewport = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
    <ScrollAreaPrimitive.Viewport
       ref={ref}
-      className={ny('size-full rounded-[inherit]', className)}
+      className={ny("size-full rounded-[inherit]", className)}
       {...props}
    >
       {children}
@@ -78,14 +98,14 @@ ScrollViewport.displayName = ScrollAreaPrimitive.Viewport.displayName
 const ScrollBar = React.forwardRef<
    React.ComponentRef<typeof ScrollAreaPrimitive.Scrollbar>,
    React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Scrollbar>
->(({ className, orientation = 'vertical', ...props }, ref) => (
+>(({ className, orientation = "vertical", ...props }, ref) => (
    <ScrollAreaPrimitive.Scrollbar
       ref={ref}
       orientation={orientation}
       className={ny(
-         'data-[state=hidden]:animate-fd-fade-out flex select-none',
-         orientation === 'vertical' && 'h-full w-1.5',
-         orientation === 'horizontal' && 'h-1.5 flex-col',
+         "data-[state=hidden]:animate-fd-fade-out flex select-none",
+         orientation === "vertical" && "h-full w-1.5",
+         orientation === "horizontal" && "h-1.5 flex-col",
          className,
       )}
       {...props}
@@ -99,10 +119,12 @@ export { ScrollArea, ScrollBar, ScrollViewport }
 
 // #region Contexts
 const ActiveAnchorContext = createContext<string[]>([])
-const ScrollContext = createContext<RefObject<HTMLElement | null>>({ current: null })
+const ScrollContext = createContext<RefObject<HTMLElement | null>>({
+   current: null,
+})
 const StylesContext = createContext<PageStyles>({
-   tocNav: 'xl:hidden',
-   toc: 'max-xl:hidden',
+   tocNav: "xl:hidden",
+   toc: "max-xl:hidden",
 })
 
 // #region Hooks
@@ -128,19 +150,16 @@ function isDifferent(a: unknown, b: unknown): boolean {
 function mergeRefs<T>(...refs: React.Ref<T>[]): React.RefCallback<T> {
    return (value) => {
       refs.forEach((ref) => {
-         if (typeof ref === 'function')
-            ref(value)
-         else if (ref !== null && typeof ref === 'object')
+         if (typeof ref === "function") ref(value)
+         else if (ref !== null && typeof ref === "object")
             (ref as React.MutableRefObject<T | null>).current = value
       })
    }
 }
 
 function getItemOffset(depth: number): number {
-   if (depth <= 2)
-      return 14
-   if (depth === 3)
-      return 26
+   if (depth <= 2) return 14
+   if (depth === 3) return 26
    return 36
 }
 
@@ -173,7 +192,7 @@ export function AnchorProvider({
    children?: ReactNode
 }): React.ReactElement {
    const headings = useMemo(() => {
-      return toc.map(item => item.url.split('#')[1])
+      return toc.map((item) => item.url.split("#")[1])
    }, [toc])
 
    return (
@@ -194,15 +213,14 @@ export const TOCItem = forwardRef<HTMLAnchorElement, TOCItemProps>(
 
       useOnChange(isActive, (v) => {
          const element = anchorRef.current
-         if (!element)
-            return
+         if (!element) return
 
          if (v && containerRef.current) {
             scrollIntoView(element, {
-               behavior: 'smooth',
-               block: 'center',
-               inline: 'center',
-               scrollMode: 'always',
+               behavior: "smooth",
+               block: "center",
+               inline: "center",
+               scrollMode: "always",
                boundary: containerRef.current,
             })
          }
@@ -218,7 +236,7 @@ export const TOCItem = forwardRef<HTMLAnchorElement, TOCItemProps>(
    },
 )
 
-TOCItem.displayName = 'TOCItem'
+TOCItem.displayName = "TOCItem"
 
 export function TocThumb({
    containerRef,
@@ -232,24 +250,27 @@ export function TocThumb({
    activeRef.current = active
 
    function calc(container: HTMLElement, active: string[]): TOCThumb {
-      if (active.length === 0 || container.clientHeight === 0)
-         return [0, 0]
+      if (active.length === 0 || container.clientHeight === 0) return [0, 0]
 
       let upper = Number.MAX_VALUE
       let lower = 0
 
       for (const item of active) {
-         const element = container.querySelector<HTMLElement>(`a[href="#${item}"]`)
-         if (!element)
-            continue
+         const element = container.querySelector<HTMLElement>(
+            `a[href="#${item}"]`,
+         )
+         if (!element) continue
 
          const styles = getComputedStyle(element)
-         upper = Math.min(upper, element.offsetTop + Number.parseFloat(styles.paddingTop))
+         upper = Math.min(
+            upper,
+            element.offsetTop + Number.parseFloat(styles.paddingTop),
+         )
          lower = Math.max(
             lower,
-            element.offsetTop
-            + element.clientHeight
-            - Number.parseFloat(styles.paddingBottom),
+            element.offsetTop +
+               element.clientHeight -
+               Number.parseFloat(styles.paddingBottom),
          )
       }
 
@@ -257,18 +278,16 @@ export function TocThumb({
    }
 
    function update(element: HTMLElement, info: TOCThumb): void {
-      element.style.setProperty('--nyx-top', `${info[0]}px`)
-      element.style.setProperty('--nyx-height', `${info[1]}px`)
+      element.style.setProperty("--nyx-top", `${info[0]}px`)
+      element.style.setProperty("--nyx-height", `${info[1]}px`)
    }
 
    useEffect(() => {
-      if (!containerRef.current)
-         return
+      if (!containerRef.current) return
       const container = containerRef.current
 
       const onResize = (): void => {
-         if (!thumbRef.current)
-            return
+         if (!thumbRef.current) return
          update(thumbRef.current, calc(container, activeRef.current))
       }
 
@@ -282,8 +301,7 @@ export function TocThumb({
    }, [containerRef])
 
    useOnChange(active, () => {
-      if (!containerRef.current || !thumbRef.current)
-         return
+      if (!containerRef.current || !thumbRef.current) return
 
       update(thumbRef.current, calc(containerRef.current, active))
    })
@@ -307,14 +325,17 @@ export function Toc(props: HTMLAttributes<HTMLDivElement>) {
          id="nyx-toc"
          {...props}
          className={ny(
-            'top-nyx-layout-top sticky h-[var(--nyx-toc-height)] pb-2 pt-12',
+            "top-nyx-layout-top sticky h-[var(--nyx-toc-height)] pb-2 pt-12",
             toc,
             props.className,
          )}
-         style={{
-            ...props.style,
-            '--nyx-toc-height': 'calc(100dvh - var(--nyx-banner-height) - var(--nyx-nav-height))',
-         } as any}
+         style={
+            {
+               ...props.style,
+               "--nyx-toc-height":
+                  "calc(100dvh - var(--nyx-banner-height) - var(--nyx-nav-height))",
+            } as any
+         }
       >
          <div className="flex h-full w-[var(--nyx-width)] max-w-full flex-col gap-3 pe-4">
             {props.children}
@@ -343,13 +364,11 @@ export function NyxTOCItems({
    }>()
 
    useEffect(() => {
-      if (!containerRef.current)
-         return
+      if (!containerRef.current) return
       const container = containerRef.current
 
       function onResize(): void {
-         if (container.clientHeight === 0)
-            return
+         if (container.clientHeight === 0) return
          let w = 0
          let h = 0
          const d: string[] = []
@@ -357,23 +376,25 @@ export function NyxTOCItems({
             const element: HTMLElement | null = container.querySelector(
                `a[href="#${items[i].url.slice(1)}"]`,
             )
-            if (!element)
-               continue
+            if (!element) continue
 
             const styles = getComputedStyle(element)
             const offset = getLineOffset(items[i].depth) + 1
             const top = element.offsetTop + Number.parseFloat(styles.paddingTop)
-            const bottom = element.offsetTop + element.clientHeight - Number.parseFloat(styles.paddingBottom)
+            const bottom =
+               element.offsetTop +
+               element.clientHeight -
+               Number.parseFloat(styles.paddingBottom)
 
             w = Math.max(offset, w)
             h = Math.max(h, bottom)
 
-            d.push(`${i === 0 ? 'M' : 'L'}${offset} ${top}`)
+            d.push(`${i === 0 ? "M" : "L"}${offset} ${top}`)
             d.push(`L${offset} ${bottom}`)
          }
 
          setSvg({
-            path: d.join(' '),
+            path: d.join(" "),
             width: w + 1,
             height: h,
          })
@@ -385,8 +406,7 @@ export function NyxTOCItems({
       return () => observer.disconnect()
    }, [items])
 
-   if (items.length === 0)
-      return <TocItemsEmpty />
+   if (items.length === 0) return <TocItemsEmpty />
 
    return (
       <>
@@ -396,30 +416,28 @@ export function NyxTOCItems({
                {label}
             </h3>
          )}
-         <ScrollArea className={ny('flex flex-col', isMenu && '-ms-3')}>
+         <ScrollArea className={ny("flex flex-col", isMenu && "-ms-3")}>
             <ScrollViewport className="relative min-h-0" ref={viewRef}>
-               {svg
-                  ? (
-                        <div
-                           className="absolute start-0 top-0 rtl:-scale-x-100"
-                           style={{
-                              width: svg.width,
-                              height: svg.height,
-                              maskImage: `url("data:image/svg+xml,${
-                             // Inline SVG
-                             encodeURIComponent(
-                               `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${svg.width} ${svg.height}"><path d="${svg.path}" stroke="black" stroke-width="1" fill="none" /></svg>`,
-                             )
-                           }")`,
-                           }}
-                        >
-                           <TocThumb
-                              containerRef={containerRef}
-                              className="bg-primary mt-[var(--nyx-top)] h-[var(--nyx-height)] transition-all"
-                           />
-                        </div>
-                     )
-                  : null}
+               {svg ? (
+                  <div
+                     className="absolute start-0 top-0 rtl:-scale-x-100"
+                     style={{
+                        width: svg.width,
+                        height: svg.height,
+                        maskImage: `url("data:image/svg+xml,${
+                           // Inline SVG
+                           encodeURIComponent(
+                              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${svg.width} ${svg.height}"><path d="${svg.path}" stroke="black" stroke-width="1" fill="none" /></svg>`,
+                           )
+                        }")`,
+                     }}
+                  >
+                     <TocThumb
+                        containerRef={containerRef}
+                        className="bg-primary mt-[var(--nyx-top)] h-[var(--nyx-height)] transition-all"
+                     />
+                  </div>
+               ) : null}
                <ScrollProvider containerRef={viewRef}>
                   <div className="flex flex-col" ref={containerRef}>
                      {items.map((item, i) => (
@@ -447,14 +465,14 @@ export function TocPopoverTrigger({
 }: PopoverTriggerProps & { items: TOCItemType[] }) {
    const active = useActiveAnchor()
    const current = useMemo(() => {
-      return items.find(item => active === item.url.slice(1))?.title
+      return items.find((item) => active === item.url.slice(1))?.title
    }, [items, active])
 
    return (
       <PopoverTrigger
          {...props}
          className={ny(
-            'inline-flex items-center gap-2 text-nowrap px-4 py-2 text-start',
+            "inline-flex items-center gap-2 text-nowrap px-4 py-2 text-start",
             props.className,
          )}
       >
@@ -480,7 +498,7 @@ export function TocPopoverContent(props: PopoverContentProps) {
          data-toc-popover=""
          {...props}
          className={ny(
-            'flex max-h-[var(--radix-popover-content-available-height)] w-[260px] flex-col gap-4 p-3',
+            "flex max-h-[var(--radix-popover-content-available-height)] w-[260px] flex-col gap-4 p-3",
             props.className,
          )}
       >
@@ -510,29 +528,27 @@ function LocalTOCItem({
          }}
          className="prose text-muted-foreground data-[active=true]:text-primary relative py-1.5 text-sm transition-colors [overflow-wrap:anywhere] first:pt-0 last:pb-0"
       >
-         {offset !== upperOffset
-            ? (
-                  <svg
-                     xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 16 16"
-                     className="absolute -top-1.5 start-0 size-4 rtl:-scale-x-100"
-                  >
-                     <line
-                        x1={upperOffset}
-                        y1="0"
-                        x2={offset}
-                        y2="12"
-                        className="stroke-foreground/10"
-                        strokeWidth="1"
-                     />
-                  </svg>
-               )
-            : null}
+         {offset !== upperOffset ? (
+            <svg
+               xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 16 16"
+               className="absolute -top-1.5 start-0 size-4 rtl:-scale-x-100"
+            >
+               <line
+                  x1={upperOffset}
+                  y1="0"
+                  x2={offset}
+                  y2="12"
+                  className="stroke-foreground/10"
+                  strokeWidth="1"
+               />
+            </svg>
+         ) : null}
          <div
             className={ny(
-               'bg-foreground/10 absolute inset-y-0 w-px',
-               offset !== upperOffset && 'top-1.5',
-               offset !== lowerOffset && 'bottom-1.5',
+               "bg-foreground/10 absolute inset-y-0 w-px",
+               offset !== upperOffset && "top-1.5",
+               offset !== lowerOffset && "bottom-1.5",
             )}
             style={{
                insetInlineStart: offset,

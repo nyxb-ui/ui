@@ -1,27 +1,27 @@
-import { StarIcon } from '@heroicons/react/24/solid'
-import Link from 'next/link'
-import { CommandMenu } from '~/components/command-menu'
-import { Icons } from '~/components/icons'
-import { MainNav } from '~/components/main-nav'
-import { MobileNav } from '~/components/mobile-nav'
-import { ModeToggle } from '~/components/mode-toggle'
-import { buttonVariants } from '~/components/ui/button'
-import { siteConfig } from '~/config/site'
-import { ny } from '~/lib/utils'
-import NumberTicker from '~/registry/miami/ui/number-ticker'
+import { StarIcon } from "@heroicons/react/24/solid"
+import Link from "next/link"
+import { CommandMenu } from "~/components/command-menu"
+import { Icons } from "~/components/icons"
+import { MainNav } from "~/components/main-nav"
+import { MobileNav } from "~/components/mobile-nav"
+import { ModeToggle } from "~/components/mode-toggle"
+import { buttonVariants } from "~/components/ui/button"
+import { siteConfig } from "~/config/site"
+import { ny } from "~/lib/utils"
+import NumberTicker from "~/registry/miami/ui/number-ticker"
 
 export async function SiteHeader() {
    let stars = 300 // Default value
 
    try {
       const response = await fetch(
-         'https://api.github.com/repos/nyxb/nyxb-ui',
+         "https://api.github.com/repos/nyxb/nyxb-ui",
          {
             headers: process.env.GITHUB_OAUTH_TOKEN
                ? {
-                     'Authorization': `Bearer ${process.env.GITHUB_OAUTH_TOKEN}`,
-                     'Content-Type': 'application/json',
-                  }
+                    Authorization: `Bearer ${process.env.GITHUB_OAUTH_TOKEN}`,
+                    "Content-Type": "application/json",
+                 }
                : {},
             next: {
                revalidate: 3600,
@@ -33,15 +33,14 @@ export async function SiteHeader() {
          const data = await response.json()
          stars = data.stargazers_count || stars // Update stars if API response is valid
       }
-   }
-   catch (error) {
-      console.error('Error fetching GitHub stars:', error)
+   } catch (error) {
+      console.error("Error fetching GitHub stars:", error)
    }
 
    return (
       <header
          className={ny(
-            'supports-backdrop-blur:bg-background/90 bg-background/40 sticky top-0 z-40 w-full backdrop-blur-lg',
+            "supports-backdrop-blur:bg-background/90 bg-background/40 sticky top-0 z-40 w-full backdrop-blur-lg",
          )}
       >
          <div className="container flex h-16 items-center">
@@ -51,9 +50,9 @@ export async function SiteHeader() {
                <Link
                   className={ny(
                      buttonVariants({
-                        variant: 'rainbow',
+                        variant: "rainbow-outline",
                      }),
-                     'hidden md:inline-flex',
+                     "hidden md:inline-flex",
                   )}
                   target="_blank"
                   href={siteConfig.links.github}
@@ -61,14 +60,15 @@ export async function SiteHeader() {
                   <div className="flex items-center">
                      <Icons.gitHub className="size-4" />
                      <span className="ml-1 lg:hidden">Star</span>
-                     <span className="ml-1 hidden lg:inline">Star on GitHub</span>
-                     {' '}
+                     <span className="ml-1 hidden lg:inline">
+                        Star on GitHub
+                     </span>{" "}
                   </div>
                   <div className="ml-2 flex items-center gap-1 text-sm md:flex">
                      <StarIcon className="size-4 text-gray-500 transition-all duration-300 group-hover:text-yellow-300" />
                      <NumberTicker
                         value={stars}
-                        className="font-display font-medium text-white dark:text-black"
+                        className="font-display font-medium text-white dark:text-white"
                      />
                   </div>
                </Link>
@@ -85,9 +85,9 @@ export async function SiteHeader() {
                      <div
                         className={ny(
                            buttonVariants({
-                              variant: 'ghost',
+                              variant: "ghost",
                            }),
-                           'w-9 px-0',
+                           "w-9 px-0",
                         )}
                      >
                         <Icons.discord className="size-4" />
@@ -102,9 +102,9 @@ export async function SiteHeader() {
                      <div
                         className={ny(
                            buttonVariants({
-                              variant: 'ghost',
+                              variant: "ghost",
                            }),
-                           'w-9 px-0',
+                           "w-9 px-0",
                         )}
                      >
                         <Icons.gitHub className="size-4" />
@@ -119,9 +119,9 @@ export async function SiteHeader() {
                      <div
                         className={ny(
                            buttonVariants({
-                              variant: 'ghost',
+                              variant: "ghost",
                            }),
-                           'w-9 px-0',
+                           "w-9 px-0",
                         )}
                      >
                         <Icons.twitter className="size-4 fill-current" />

@@ -15,10 +15,10 @@ import {
    SquareUser,
    Triangle,
    Turtle,
-} from 'lucide-react'
+} from "lucide-react"
 
-import { Badge } from '~/registry/miami/ui/badge'
-import { Button } from '~/registry/miami/ui/button'
+import { Badge } from "~/registry/miami/ui/badge"
+import { Button } from "~/registry/miami/ui/button"
 import {
    Drawer,
    DrawerContent,
@@ -26,29 +26,29 @@ import {
    DrawerHeader,
    DrawerTitle,
    DrawerTrigger,
-} from '~/registry/miami/ui/drawer'
-import { Input } from '~/registry/miami/ui/input'
-import { Label } from '~/registry/miami/ui/label'
+} from "~/registry/miami/ui/drawer"
+import { Input } from "~/registry/miami/ui/input"
+import { Label } from "~/registry/miami/ui/label"
 import {
    Select,
    SelectContent,
    SelectItem,
    SelectTrigger,
    SelectValue,
-} from '~/registry/miami/ui/select'
-import { Textarea } from '~/registry/miami/ui/textarea'
+} from "~/registry/miami/ui/select"
+import { Textarea } from "~/registry/miami/ui/textarea"
 import {
    Tooltip,
    TooltipContent,
    TooltipTrigger,
-} from '~/registry/miami/ui/tooltip'
+} from "~/registry/miami/ui/tooltip"
 
-export const description
-  = 'An AI playground with a sidebar navigation and a main content area. The playground has a header with a settings drawer and a share button. The sidebar has navigation links and a user menu. The main content area shows a form to configure the model and messages.'
+export const description =
+   "An AI playground with a sidebar navigation and a main content area. The playground has a header with a settings drawer and a share button. The sidebar has navigation links and a user menu. The main content area shows a form to configure the model and messages."
 
-export const iframeHeight = '720px'
+export const iframeHeight = "720px"
 
-export const containerClassName = 'w-full h-full'
+export const containerClassName = "w-full h-full"
 
 export default function Dashboard() {
    return (
@@ -206,14 +206,17 @@ export default function Dashboard() {
                                           <Rabbit className="size-5" />
                                           <div className="grid gap-0.5">
                                              <p>
-                                                Neural
-                                                {' '}
+                                                Neural{" "}
                                                 <span className="text-foreground font-medium">
                                                    Genesis
                                                 </span>
                                              </p>
-                                             <p className="text-xs" data-description>
-                                                Our fastest model for general use cases.
+                                             <p
+                                                className="text-xs"
+                                                data-description
+                                             >
+                                                Our fastest model for general
+                                                use cases.
                                              </p>
                                           </div>
                                        </div>
@@ -223,14 +226,17 @@ export default function Dashboard() {
                                           <Bird className="size-5" />
                                           <div className="grid gap-0.5">
                                              <p>
-                                                Neural
-                                                {' '}
+                                                Neural{" "}
                                                 <span className="text-foreground font-medium">
                                                    Explorer
                                                 </span>
                                              </p>
-                                             <p className="text-xs" data-description>
-                                                Performance and speed for efficiency.
+                                             <p
+                                                className="text-xs"
+                                                data-description
+                                             >
+                                                Performance and speed for
+                                                efficiency.
                                              </p>
                                           </div>
                                        </div>
@@ -240,15 +246,17 @@ export default function Dashboard() {
                                           <Turtle className="size-5" />
                                           <div className="grid gap-0.5">
                                              <p>
-                                                Neural
-                                                {' '}
+                                                Neural{" "}
                                                 <span className="text-foreground font-medium">
                                                    Quantum
                                                 </span>
                                              </p>
-                                             <p className="text-xs" data-description>
-                                                The most powerful model for complex
-                                                computations.
+                                             <p
+                                                className="text-xs"
+                                                data-description
+                                             >
+                                                The most powerful model for
+                                                complex computations.
                                              </p>
                                           </div>
                                        </div>
@@ -258,15 +266,27 @@ export default function Dashboard() {
                            </div>
                            <div className="grid gap-3">
                               <Label htmlFor="temperature">Temperature</Label>
-                              <Input id="temperature" type="number" placeholder="0.4" />
+                              <Input
+                                 id="temperature"
+                                 type="number"
+                                 placeholder="0.4"
+                              />
                            </div>
                            <div className="grid gap-3">
                               <Label htmlFor="top-p">Top P</Label>
-                              <Input id="top-p" type="number" placeholder="0.7" />
+                              <Input
+                                 id="top-p"
+                                 type="number"
+                                 placeholder="0.7"
+                              />
                            </div>
                            <div className="grid gap-3">
                               <Label htmlFor="top-k">Top K</Label>
-                              <Input id="top-k" type="number" placeholder="0.0" />
+                              <Input
+                                 id="top-k"
+                                 type="number"
+                                 placeholder="0.0"
+                              />
                            </div>
                         </fieldset>
                         <fieldset className="grid gap-6 rounded-lg border p-4">
@@ -280,15 +300,22 @@ export default function Dashboard() {
                                     <SelectValue placeholder="Select a role" />
                                  </SelectTrigger>
                                  <SelectContent>
-                                    <SelectItem value="system">System</SelectItem>
+                                    <SelectItem value="system">
+                                       System
+                                    </SelectItem>
                                     <SelectItem value="user">User</SelectItem>
-                                    <SelectItem value="assistant">Assistant</SelectItem>
+                                    <SelectItem value="assistant">
+                                       Assistant
+                                    </SelectItem>
                                  </SelectContent>
                               </Select>
                            </div>
                            <div className="grid gap-3">
                               <Label htmlFor="content">Content</Label>
-                              <Textarea id="content" placeholder="You are a..." />
+                              <Textarea
+                                 id="content"
+                                 placeholder="You are a..."
+                              />
                            </div>
                         </fieldset>
                      </form>
@@ -305,7 +332,8 @@ export default function Dashboard() {
             </header>
             <main className="grid flex-1 gap-4 overflow-auto p-4 md:grid-cols-2 lg:grid-cols-3">
                <div
-                  className="relative hidden flex-col items-start gap-8 md:flex" x-chunk="dashboard-03-chunk-0"
+                  className="relative hidden flex-col items-start gap-8 md:flex"
+                  x-chunk="dashboard-03-chunk-0"
                >
                   <form className="grid w-full items-start gap-6">
                      <fieldset className="grid gap-6 rounded-lg border p-4">
@@ -327,14 +355,17 @@ export default function Dashboard() {
                                        <Rabbit className="size-5" />
                                        <div className="grid gap-0.5">
                                           <p>
-                                             Neural
-                                             {' '}
+                                             Neural{" "}
                                              <span className="text-foreground font-medium">
                                                 Genesis
                                              </span>
                                           </p>
-                                          <p className="text-xs" data-description>
-                                             Our fastest model for general use cases.
+                                          <p
+                                             className="text-xs"
+                                             data-description
+                                          >
+                                             Our fastest model for general use
+                                             cases.
                                           </p>
                                        </div>
                                     </div>
@@ -344,14 +375,17 @@ export default function Dashboard() {
                                        <Bird className="size-5" />
                                        <div className="grid gap-0.5">
                                           <p>
-                                             Neural
-                                             {' '}
+                                             Neural{" "}
                                              <span className="text-foreground font-medium">
                                                 Explorer
                                              </span>
                                           </p>
-                                          <p className="text-xs" data-description>
-                                             Performance and speed for efficiency.
+                                          <p
+                                             className="text-xs"
+                                             data-description
+                                          >
+                                             Performance and speed for
+                                             efficiency.
                                           </p>
                                        </div>
                                     </div>
@@ -361,14 +395,17 @@ export default function Dashboard() {
                                        <Turtle className="size-5" />
                                        <div className="grid gap-0.5">
                                           <p>
-                                             Neural
-                                             {' '}
+                                             Neural{" "}
                                              <span className="text-foreground font-medium">
                                                 Quantum
                                              </span>
                                           </p>
-                                          <p className="text-xs" data-description>
-                                             The most powerful model for complex computations.
+                                          <p
+                                             className="text-xs"
+                                             data-description
+                                          >
+                                             The most powerful model for complex
+                                             computations.
                                           </p>
                                        </div>
                                     </div>
@@ -378,16 +415,28 @@ export default function Dashboard() {
                         </div>
                         <div className="grid gap-3">
                            <Label htmlFor="temperature">Temperature</Label>
-                           <Input id="temperature" type="number" placeholder="0.4" />
+                           <Input
+                              id="temperature"
+                              type="number"
+                              placeholder="0.4"
+                           />
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                            <div className="grid gap-3">
                               <Label htmlFor="top-p">Top P</Label>
-                              <Input id="top-p" type="number" placeholder="0.7" />
+                              <Input
+                                 id="top-p"
+                                 type="number"
+                                 placeholder="0.7"
+                              />
                            </div>
                            <div className="grid gap-3">
                               <Label htmlFor="top-k">Top K</Label>
-                              <Input id="top-k" type="number" placeholder="0.0" />
+                              <Input
+                                 id="top-k"
+                                 type="number"
+                                 placeholder="0.0"
+                              />
                            </div>
                         </div>
                      </fieldset>
@@ -404,7 +453,9 @@ export default function Dashboard() {
                               <SelectContent>
                                  <SelectItem value="system">System</SelectItem>
                                  <SelectItem value="user">User</SelectItem>
-                                 <SelectItem value="assistant">Assistant</SelectItem>
+                                 <SelectItem value="assistant">
+                                    Assistant
+                                 </SelectItem>
                               </SelectContent>
                            </Select>
                         </div>
@@ -425,7 +476,8 @@ export default function Dashboard() {
                   </Badge>
                   <div className="flex-1" />
                   <form
-                     className="bg-background focus-within:ring-ring relative overflow-hidden rounded-lg border focus-within:ring-1" x-chunk="dashboard-03-chunk-1"
+                     className="bg-background focus-within:ring-ring relative overflow-hidden rounded-lg border focus-within:ring-1"
+                     x-chunk="dashboard-03-chunk-1"
                   >
                      <Label htmlFor="message" className="sr-only">
                         Message
@@ -443,7 +495,9 @@ export default function Dashboard() {
                                  <span className="sr-only">Attach file</span>
                               </Button>
                            </TooltipTrigger>
-                           <TooltipContent side="top">Attach File</TooltipContent>
+                           <TooltipContent side="top">
+                              Attach File
+                           </TooltipContent>
                         </Tooltip>
                         <Tooltip>
                            <TooltipTrigger asChild>
@@ -452,9 +506,15 @@ export default function Dashboard() {
                                  <span className="sr-only">Use Microphone</span>
                               </Button>
                            </TooltipTrigger>
-                           <TooltipContent side="top">Use Microphone</TooltipContent>
+                           <TooltipContent side="top">
+                              Use Microphone
+                           </TooltipContent>
                         </Tooltip>
-                        <Button type="submit" size="sm" className="ml-auto gap-1.5">
+                        <Button
+                           type="submit"
+                           size="sm"
+                           className="ml-auto gap-1.5"
+                        >
                            Send Message
                            <CornerDownLeft className="size-3.5" />
                         </Button>

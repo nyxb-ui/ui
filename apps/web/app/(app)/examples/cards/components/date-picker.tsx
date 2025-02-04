@@ -1,6 +1,6 @@
-import DatePickerWithRange from '~/registry/default/example/date-picker-with-range'
-import { Card, CardContent } from '~/registry/miami/ui/card'
-import { Label } from '~/registry/miami/ui/label'
+import DatePickerWithRange from "~/registry/default/examples/date-picker-with-range"
+import { Card, CardContent } from "~/registry/miami/ui/card"
+import { Label } from "~/registry/miami/ui/label"
 
 export function DemoDatePicker() {
    return (

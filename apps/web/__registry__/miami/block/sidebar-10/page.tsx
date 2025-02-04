@@ -1,21 +1,21 @@
-import { AppSidebar } from '~/registry/miami/block/sidebar-10/components/app-sidebar'
-import { NavActions } from '~/registry/miami/block/sidebar-10/components/nav-actions'
+import { AppSidebar } from "~/registry/miami/block/sidebar-10/components/app-sidebar"
+import { NavActions } from "~/registry/miami/block/sidebar-10/components/nav-actions"
 import {
    Breadcrumb,
    BreadcrumbItem,
    BreadcrumbList,
    BreadcrumbPage,
-} from '~/registry/miami/ui/breadcrumb'
-import { Separator } from '~/registry/miami/ui/separator'
+} from "~/registry/miami/ui/breadcrumb"
+import { Separator } from "~/registry/miami/ui/separator"
 import {
    SidebarInset,
    SidebarProvider,
    SidebarTrigger,
-} from '~/registry/miami/ui/sidebar'
+} from "~/registry/miami/ui/sidebar"
 
-export const iframeHeight = '800px'
+export const iframeHeight = "800px"
 
-export const description = 'A sidebar in a popover.'
+export const description = "A sidebar in a popover."
 
 export default function Page() {
    return (

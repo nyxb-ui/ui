@@ -1,6 +1,6 @@
-'use client'
+"use client"
 
-import { Button } from '~/registry/miami/ui/button'
+import { Button } from "~/registry/miami/ui/button"
 import {
    Card,
    CardContent,
@@ -8,17 +8,17 @@ import {
    CardFooter,
    CardHeader,
    CardTitle,
-} from '~/registry/miami/ui/card'
-import { Input } from '~/registry/miami/ui/input'
-import { Label } from '~/registry/miami/ui/label'
+} from "~/registry/miami/ui/card"
+import { Input } from "~/registry/miami/ui/input"
+import { Label } from "~/registry/miami/ui/label"
 import {
    Select,
    SelectContent,
    SelectItem,
    SelectTrigger,
    SelectValue,
-} from '~/registry/miami/ui/select'
-import { Textarea } from '~/registry/miami/ui/textarea'
+} from "~/registry/miami/ui/select"
+import { Textarea } from "~/registry/miami/ui/textarea"
 
 export function DemoReportAnIssue() {
    return (

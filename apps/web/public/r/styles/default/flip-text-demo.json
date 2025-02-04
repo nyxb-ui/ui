@@ -1,11 +1,13 @@
 {
+  "$schema": "https://nyxbui.design/schema/registry-item.json",
   "name": "flip-text-demo",
   "type": "registry:example",
+  "author": "nyxbui (https://nyxbui.design)",
   "files": [
     {
-      "path": "example/flip-text-demo.tsx",
-      "content": "import FlipText from '~/registry/default/ui/flip-text'\n\nexport default async function FlipTextDemo() {\n   return (\n      <FlipText\n         className=\"text-4xl font-bold -tracking-widest text-black md:text-7xl md:leading-[5rem] dark:text-white\"\n         word=\"Flip Text\"\n      />\n   )\n}\n",
-      "type": "registry:component",
+      "path": "examples/flip-text-demo.tsx",
+      "content": "import FlipText from \"~/registry/default/ui/flip-text\"\n\nexport default async function FlipTextDemo() {\n   return (\n      <FlipText\n         className=\"text-4xl font-bold -tracking-widest text-black md:text-7xl md:leading-[5rem] dark:text-white\"\n         word=\"Flip Text\"\n      />\n   )\n}\n",
+      "type": "registry:example",
       "target": ""
     }
   ]

@@ -1,14 +1,14 @@
-import type { Registry } from '~/registry/schema'
+import type { Registry } from "nyxb/registry"
 
-export const lib: Registry = [
+export const lib: Registry["items"] = [
    {
-      name: 'utils',
-      type: 'registry:lib',
-      dependencies: ['clsx', 'tailwind-merge'],
+      name: "utils",
+      type: "registry:lib",
+      dependencies: ["clsx", "tailwind-merge"],
       files: [
          {
-            path: 'lib/utils.ts',
-            type: 'registry:lib',
+            path: "lib/utils.ts",
+            type: "registry:lib",
          },
       ],
    },

@@ -1,4 +1,4 @@
-import type { Icons } from '~/components/icons'
+import type { Icons } from "~/components/icons"
 
 export interface NavItem {
    title: string
@@ -6,8 +6,21 @@ export interface NavItem {
    disabled?: boolean
    external?: boolean
    icon?: keyof typeof Icons
-   label?: string
+   label?: NavLabel | NavLabel[]
    items?: NavItem[] // Added for dropdown menus
+}
+
+// Neue NavLabel Interface
+export interface NavLabel {
+   text: string
+   variant?:
+      | "default"
+      | "new"
+      | "beta"
+      | "canary"
+      | "experimental"
+      | "deprecated"
+   color?: string
 }
 
 export interface NavItemWithChildren extends NavItem {

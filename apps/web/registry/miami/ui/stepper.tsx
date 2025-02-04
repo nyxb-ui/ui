@@ -1,16 +1,16 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import { cva } from 'class-variance-authority'
-import type { LucideIcon } from 'lucide-react'
-import { CheckIcon, Loader2, X } from 'lucide-react'
+import { cva } from "class-variance-authority"
+import type { LucideIcon } from "lucide-react"
+import { CheckIcon, Loader2, X } from "lucide-react"
+import * as React from "react"
 
-import { ny } from '~/lib/utils'
-import { Button } from '~/registry/miami/ui/button'
+import { ny } from "~/lib/utils"
+import { Button } from "~/registry/miami/ui/button"
 import {
    Collapsible,
    CollapsibleContent,
-} from '~/registry/miami/ui/collapsible'
+} from "~/registry/miami/ui/collapsible"
 
 // <---------- CONTEXT ---------->
 
@@ -33,32 +33,32 @@ const StepperContext = React.createContext<
       setStep: (step: number) => void
    }
 >({
-            steps: [],
-            activeStep: 0,
-            initialStep: 0,
-            nextStep: () => {},
-            prevStep: () => {},
-            resetSteps: () => {},
-            setStep: () => {},
-         })
+   steps: [],
+   activeStep: 0,
+   initialStep: 0,
+   nextStep: () => {},
+   prevStep: () => {},
+   resetSteps: () => {},
+   setStep: () => {},
+})
 
 interface StepperContextProviderProps {
-   value: Omit<StepperContextValue, 'activeStep'>
+   value: Omit<StepperContextValue, "activeStep">
    children: React.ReactNode
 }
 
 function StepperProvider({ value, children }: StepperContextProviderProps) {
-   const isError = value.state === 'error'
-   const isLoading = value.state === 'loading'
+   const isError = value.state === "error"
+   const isLoading = value.state === "loading"
 
    const [activeStep, setActiveStep] = React.useState(value.initialStep)
 
    const nextStep = () => {
-      setActiveStep(prev => prev + 1)
+      setActiveStep((prev) => prev + 1)
    }
 
    const prevStep = () => {
-      setActiveStep(prev => prev - 1)
+      setActiveStep((prev) => prev - 1)
    }
 
    const resetSteps = () => {
@@ -103,7 +103,7 @@ function useStepper() {
    const context = React.useContext(StepperContext)
 
    if (context === undefined)
-      throw new Error('useStepper must be used within a StepperProvider')
+      throw new Error("useStepper must be used within a StepperProvider")
 
    const { children, className, ...rest } = context
 
@@ -137,10 +137,10 @@ function useMediaQuery(query: string) {
       }
 
       const result = matchMedia(query)
-      result.addEventListener('change', onChange)
+      result.addEventListener("change", onChange)
       setValue(result.matches)
 
-      return () => result.removeEventListener('change', onChange)
+      return () => result.removeEventListener("change", onChange)
    }, [query])
 
    return value
@@ -157,41 +157,41 @@ interface StepItem {
 }
 
 interface StepOptions {
-   orientation?: 'vertical' | 'horizontal'
-   state?: 'loading' | 'error'
+   orientation?: "vertical" | "horizontal"
+   state?: "loading" | "error"
    responsive?: boolean
    checkIcon?: IconType
    errorIcon?: IconType
    onClickStep?: (step: number, setStep: (step: number) => void) => void
    mobileBreakpoint?: string
-   variant?: 'circle' | 'circle-alt' | 'line'
+   variant?: "circle" | "circle-alt" | "line"
    expandVerticalSteps?: boolean
-   size?: 'sm' | 'md' | 'lg'
+   size?: "sm" | "md" | "lg"
    styles?: {
       /** Styles for the main container */
-      'main-container'?: string
+      "main-container"?: string
       /** Styles for the horizontal step */
-      'horizontal-step'?: string
+      "horizontal-step"?: string
       /** Styles for the horizontal step container (button and labels) */
-      'horizontal-step-container'?: string
+      "horizontal-step-container"?: string
       /** Styles for the vertical step */
-      'vertical-step'?: string
+      "vertical-step"?: string
       /** Styles for the vertical step container (button and labels) */
-      'vertical-step-container'?: string
+      "vertical-step-container"?: string
       /** Styles for the vertical step content */
-      'vertical-step-content'?: string
+      "vertical-step-content"?: string
       /** Styles for the step button container */
-      'step-button-container'?: string
+      "step-button-container"?: string
       /** Styles for the label and description container */
-      'step-label-container'?: string
+      "step-label-container"?: string
       /** Styles for the step label */
-      'step-label'?: string
+      "step-label"?: string
       /** Styles for the step description */
-      'step-description'?: string
+      "step-description"?: string
    }
    variables?: {
-      '--step-icon-size'?: string
-      '--step-gap'?: string
+      "--step-icon-size"?: string
+      "--step-gap"?: string
    }
    scrollTracking?: boolean
 }
@@ -203,9 +203,9 @@ interface StepperProps extends StepOptions {
 }
 
 const VARIABLE_SIZES = {
-   sm: '32px',
-   md: '36px',
-   lg: '40px',
+   sm: "32px",
+   md: "36px",
+   lg: "40px",
 }
 
 const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
@@ -237,7 +237,7 @@ const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
 
       const footer = childArr.map((child, _index) => {
          if (!React.isValidElement(child))
-            throw new Error('Stepper children must be valid React elements.')
+            throw new Error("Stepper children must be valid React elements.")
 
          if (child.type === Step) {
             items.push(child)
@@ -250,14 +250,14 @@ const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
       const stepCount = items.length
 
       const isMobile = useMediaQuery(
-      `(max-width: ${mobileBreakpoint || '768px'})`,
+         `(max-width: ${mobileBreakpoint || "768px"})`,
       )
 
       const clickable = !!onClickStep
 
-      const orientation = isMobile && responsive ? 'vertical' : orientationProp
+      const orientation = isMobile && responsive ? "vertical" : orientationProp
 
-      const isVertical = orientation === 'vertical'
+      const isVertical = orientation === "vertical"
 
       return (
          <StepperProvider
@@ -273,7 +273,7 @@ const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
                clickable,
                stepCount,
                isVertical,
-               variant: variant || 'circle',
+               variant: variant || "circle",
                expandVerticalSteps,
                steps,
                scrollTracking,
@@ -283,27 +283,27 @@ const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
             <div
                ref={ref}
                className={ny(
-                  'stepper__main-container',
-                  'flex w-full flex-wrap',
-                  stepCount === 1 ? 'justify-end' : 'justify-between',
-                  orientation === 'vertical' ? 'flex-col' : 'flex-row',
-                  variant === 'line' && orientation === 'horizontal' && 'gap-4',
+                  "stepper__main-container",
+                  "flex w-full flex-wrap",
+                  stepCount === 1 ? "justify-end" : "justify-between",
+                  orientation === "vertical" ? "flex-col" : "flex-row",
+                  variant === "line" && orientation === "horizontal" && "gap-4",
                   className,
-                  styles?.['main-container'],
+                  styles?.["main-container"],
                )}
                style={
                   {
-                     '--step-icon-size':
-                variables?.['--step-icon-size']
-                || `${VARIABLE_SIZES[size || 'md']}`,
-                     '--step-gap': variables?.['--step-gap'] || '8px',
+                     "--step-icon-size":
+                        variables?.["--step-icon-size"] ||
+                        `${VARIABLE_SIZES[size || "md"]}`,
+                     "--step-gap": variables?.["--step-gap"] || "8px",
                   } as React.CSSProperties
                }
                {...rest}
             >
                <VerticalContent>{items}</VerticalContent>
             </div>
-            {orientation === 'horizontal' && (
+            {orientation === "horizontal" && (
                <HorizontalContent>{items}</HorizontalContent>
             )}
             {footer}
@@ -313,8 +313,8 @@ const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
 )
 
 Stepper.defaultProps = {
-   size: 'md',
-   orientation: 'horizontal',
+   size: "md",
+   orientation: "horizontal",
    responsive: true,
 }
 
@@ -327,10 +327,10 @@ function VerticalContent({ children }: { children: React.ReactNode }) {
    return (
       <>
          {React.Children.map(children, (child, i) => {
-            const isCompletedStep
-          = (React.isValidElement(child)
-          && (child.props as any).isCompletedStep)
-          ?? i < activeStep
+            const isCompletedStep =
+               (React.isValidElement(child) &&
+                  (child.props as any).isCompletedStep) ??
+               i < activeStep
             const isLastStep = i === stepCount - 1
             const isCurrentStep = i === activeStep
 
@@ -354,16 +354,17 @@ function HorizontalContent({ children }: { children: React.ReactNode }) {
    const { activeStep } = useStepper()
    const childArr = React.Children.toArray(children)
 
-   if (activeStep > childArr.length)
-      return null
+   if (activeStep > childArr.length) return null
 
    return (
       <>
          {React.Children.map(childArr[activeStep], (node) => {
-            if (!React.isValidElement(node))
-               return null
+            if (!React.isValidElement(node)) return null
 
-            return React.Children.map(node.props.children, childNode => childNode)
+            return React.Children.map(
+               node.props.children,
+               (childNode) => childNode,
+            )
          })}
       </>
    )
@@ -375,7 +376,7 @@ interface StepProps extends React.HTMLAttributes<HTMLLIElement> {
    label?: string | React.ReactNode
    description?: string
    icon?: IconType
-   state?: 'loading' | 'error'
+   state?: "loading" | "error"
    checkIcon?: IconType
    errorIcon?: IconType
    isCompletedStep?: boolean
@@ -468,23 +469,23 @@ type VerticalStepProps = StepSharedProps & {
 
 const verticalStepVariants = cva(
    [
-      'flex flex-col relative transition-all duration-200',
-      'data-[completed=true]:[&:not(:last-child)]:after:bg-primary',
-      'data-[invalid=true]:[&:not(:last-child)]:after:bg-destructive',
+      "flex flex-col relative transition-all duration-200",
+      "data-[completed=true]:[&:not(:last-child)]:after:bg-primary",
+      "data-[invalid=true]:[&:not(:last-child)]:after:bg-destructive",
    ],
    {
       variants: {
          variant: {
             circle: ny(
-               '[&:not(:last-child)]:gap-[var(--step-gap)] [&:not(:last-child)]:pb-[var(--step-gap)]',
-               '[&:not(:last-child)]:after:bg-border [&:not(:last-child)]:after:w-[2px] [&:not(:last-child)]:after:content-[\'\']',
-               '[&:not(:last-child)]:after:inset-x-[calc(var(--step-icon-size)/2)]',
-               '[&:not(:last-child)]:after:absolute',
-               '[&:not(:last-child)]:after:top-[calc(var(--step-icon-size)+var(--step-gap))]',
-               '[&:not(:last-child)]:after:bottom-[var(--step-gap)]',
-               '[&:not(:last-child)]:after:transition-all [&:not(:last-child)]:after:duration-200',
+               "[&:not(:last-child)]:gap-[var(--step-gap)] [&:not(:last-child)]:pb-[var(--step-gap)]",
+               "[&:not(:last-child)]:after:bg-border [&:not(:last-child)]:after:w-[2px] [&:not(:last-child)]:after:content-['']",
+               "[&:not(:last-child)]:after:inset-x-[calc(var(--step-icon-size)/2)]",
+               "[&:not(:last-child)]:after:absolute",
+               "[&:not(:last-child)]:after:top-[calc(var(--step-icon-size)+var(--step-gap))]",
+               "[&:not(:last-child)]:after:bottom-[var(--step-gap)]",
+               "[&:not(:last-child)]:after:transition-all [&:not(:last-child)]:after:duration-200",
             ),
-            line: 'flex-1 border-t-0 mb-4',
+            line: "flex-1 border-t-0 mb-4",
          },
       },
    },
@@ -526,13 +527,13 @@ const VerticalStep = React.forwardRef<HTMLDivElement, VerticalStepProps>(
       } = useStepper()
 
       const opacity = hasVisited ? 1 : 0.8
-      const localIsLoading = isLoading || state === 'loading'
-      const localIsError = isError || state === 'error'
+      const localIsLoading = isLoading || state === "loading"
+      const localIsError = isError || state === "error"
 
       const isLastStep = index === steps.length - 1
 
-      const active
-      = variant === 'line' ? isCompletedStep || isCurrentStep : isCompletedStep
+      const active =
+         variant === "line" ? isCompletedStep || isCurrentStep : isCompletedStep
       const checkIcon = checkIconProp || checkIconContext
       const errorIcon = errorIconProp || errorIconContext
 
@@ -543,19 +544,19 @@ const VerticalStep = React.forwardRef<HTMLDivElement, VerticalStepProps>(
                   <CollapsibleContent
                      ref={(node) => {
                         if (
-                        // If the step is the first step and the previous step
-                        // was the last step or if the step is not the first step
-                        // This prevents initial scrolling when the stepper
-                        // is located anywhere other than the top of the view.
-                           scrollTracking
-                           && ((index === 0
-                           && previousActiveStep
-                           && previousActiveStep === steps.length)
-                           || (index && index > 0))
+                           // If the step is the first step and the previous step
+                           // was the last step or if the step is not the first step
+                           // This prevents initial scrolling when the stepper
+                           // is located anywhere other than the top of the view.
+                           scrollTracking &&
+                           ((index === 0 &&
+                              previousActiveStep &&
+                              previousActiveStep === steps.length) ||
+                              (index && index > 0))
                         ) {
                            node?.scrollIntoView({
-                              behavior: 'smooth',
-                              block: 'center',
+                              behavior: "smooth",
+                              block: "center",
                            })
                         }
                      }}
@@ -573,12 +574,12 @@ const VerticalStep = React.forwardRef<HTMLDivElement, VerticalStepProps>(
          <div
             ref={ref}
             className={ny(
-               'stepper__vertical-step',
+               "stepper__vertical-step",
                verticalStepVariants({
-                  variant: variant?.includes('circle') ? 'circle' : 'line',
+                  variant: variant?.includes("circle") ? "circle" : "line",
                }),
-               isLastStepCurrentStep && 'gap-[var(--step-gap)]',
-               styles?.['vertical-step'],
+               isLastStepCurrentStep && "gap-[var(--step-gap)]",
+               styles?.["vertical-step"],
             )}
             data-optional={steps[index || 0]?.optional}
             data-completed={isCompletedStep}
@@ -586,25 +587,27 @@ const VerticalStep = React.forwardRef<HTMLDivElement, VerticalStepProps>(
             data-clickable={clickable || !!onClickStep}
             data-invalid={localIsError}
             onClick={() => {
-               if (onClickStep)
-                  onClickStep(index || 0, setStep)
-               else
-                  onClickStepGeneral?.(index || 0, setStep)
+               if (onClickStep) onClickStep(index || 0, setStep)
+               else onClickStepGeneral?.(index || 0, setStep)
             }}
          >
             <div
                data-vertical
                data-active={active}
                className={ny(
-                  'stepper__vertical-step-container',
-                  'flex items-center',
-                  variant === 'line'
-                  && 'data-[active=true]:border-primary border-s-[3px] py-2 ps-3',
-                  styles?.['vertical-step-container'],
+                  "stepper__vertical-step-container",
+                  "flex items-center",
+                  variant === "line" &&
+                     "data-[active=true]:border-primary border-s-[3px] py-2 ps-3",
+                  styles?.["vertical-step-container"],
                )}
             >
                <StepButtonContainer
-                  {...{ isLoading: localIsLoading, isError: localIsError, ...props }}
+                  {...{
+                     isLoading: localIsLoading,
+                     isError: localIsError,
+                     ...props,
+                  }}
                >
                   <StepIcon
                      {...{
@@ -627,11 +630,11 @@ const VerticalStep = React.forwardRef<HTMLDivElement, VerticalStepProps>(
             </div>
             <div
                className={ny(
-                  'stepper__vertical-step-content',
-                  !isLastStep && 'min-h-4',
-                  variant !== 'line' && 'ps-[--step-icon-size]',
-                  variant === 'line' && orientation === 'vertical' && 'min-h-0',
-                  styles?.['vertical-step-content'],
+                  "stepper__vertical-step-content",
+                  !isLastStep && "min-h-4",
+                  variant !== "line" && "ps-[--step-icon-size]",
+                  variant === "line" && orientation === "vertical" && "min-h-0",
+                  styles?.["vertical-step-content"],
                )}
             >
                {renderChildren()}
@@ -672,13 +675,13 @@ const HorizontalStep = React.forwardRef<HTMLDivElement, StepSharedProps>(
          errorIcon: errorIconProp,
       } = props
 
-      const localIsLoading = isLoading || state === 'loading'
-      const localIsError = isError || state === 'error'
+      const localIsLoading = isLoading || state === "loading"
+      const localIsError = isError || state === "error"
 
       const opacity = hasVisited ? 1 : 0.8
 
-      const active
-      = variant === 'line' ? isCompletedStep || isCurrentStep : isCompletedStep
+      const active =
+         variant === "line" ? isCompletedStep || isCurrentStep : isCompletedStep
 
       const checkIcon = checkIconProp || checkIconContext
       const errorIcon = errorIconProp || errorIconContext
@@ -687,20 +690,20 @@ const HorizontalStep = React.forwardRef<HTMLDivElement, StepSharedProps>(
          <div
             aria-disabled={!hasVisited}
             className={ny(
-               'stepper__horizontal-step',
-               'relative flex items-center transition-all duration-200',
-               '[&:not(:last-child)]:flex-1',
-               '[&:not(:last-child)]:after:transition-all [&:not(:last-child)]:after:duration-200',
-               '[&:not(:last-child)]:after:bg-border [&:not(:last-child)]:after:h-[2px] [&:not(:last-child)]:after:content-[\'\']',
-               'data-[completed=true]:[&:not(:last-child)]:after:bg-primary',
-               'data-[invalid=true]:[&:not(:last-child)]:after:bg-destructive',
-               variant === 'circle-alt'
-               && 'flex-1 flex-col justify-start [&:not(:last-child)]:after:relative [&:not(:last-child)]:after:end-[50%] [&:not(:last-child)]:after:start-[50%] [&:not(:last-child)]:after:top-[calc(var(--step-icon-size)/2)] [&:not(:last-child)]:after:-order-1 [&:not(:last-child)]:after:w-[calc((100%-var(--step-icon-size))-(var(--step-gap)))]',
-               variant === 'circle'
-               && '[&:not(:last-child)]:after:me-[var(--step-gap)] [&:not(:last-child)]:after:ms-[var(--step-gap)] [&:not(:last-child)]:after:flex-1',
-               variant === 'line'
-               && 'data-[active=true]:border-primary flex-1 flex-col border-t-[3px]',
-               styles?.['horizontal-step'],
+               "stepper__horizontal-step",
+               "relative flex items-center transition-all duration-200",
+               "[&:not(:last-child)]:flex-1",
+               "[&:not(:last-child)]:after:transition-all [&:not(:last-child)]:after:duration-200",
+               "[&:not(:last-child)]:after:bg-border [&:not(:last-child)]:after:h-[2px] [&:not(:last-child)]:after:content-['']",
+               "data-[completed=true]:[&:not(:last-child)]:after:bg-primary",
+               "data-[invalid=true]:[&:not(:last-child)]:after:bg-destructive",
+               variant === "circle-alt" &&
+                  "flex-1 flex-col justify-start [&:not(:last-child)]:after:relative [&:not(:last-child)]:after:end-[50%] [&:not(:last-child)]:after:start-[50%] [&:not(:last-child)]:after:top-[calc(var(--step-icon-size)/2)] [&:not(:last-child)]:after:-order-1 [&:not(:last-child)]:after:w-[calc((100%-var(--step-icon-size))-(var(--step-gap)))]",
+               variant === "circle" &&
+                  "[&:not(:last-child)]:after:me-[var(--step-gap)] [&:not(:last-child)]:after:ms-[var(--step-gap)] [&:not(:last-child)]:after:flex-1",
+               variant === "line" &&
+                  "data-[active=true]:border-primary flex-1 flex-col border-t-[3px]",
+               styles?.["horizontal-step"],
             )}
             data-optional={steps[index || 0]?.optional}
             data-completed={isCompletedStep}
@@ -712,15 +715,19 @@ const HorizontalStep = React.forwardRef<HTMLDivElement, StepSharedProps>(
          >
             <div
                className={ny(
-                  'stepper__horizontal-step-container',
-                  'flex items-center',
-                  variant === 'circle-alt' && 'flex-col justify-center gap-1',
-                  variant === 'line' && 'w-full',
-                  styles?.['horizontal-step-container'],
+                  "stepper__horizontal-step-container",
+                  "flex items-center",
+                  variant === "circle-alt" && "flex-col justify-center gap-1",
+                  variant === "line" && "w-full",
+                  styles?.["horizontal-step-container"],
                )}
             >
                <StepButtonContainer
-                  {...{ ...props, isError: localIsError, isLoading: localIsLoading }}
+                  {...{
+                     ...props,
+                     isError: localIsError,
+                     isLoading: localIsLoading,
+                  }}
                >
                   <StepIcon
                      {...{
@@ -772,25 +779,24 @@ function StepButtonContainer({
 
    const isLoading = isLoadingProp || isLoadingContext
 
-   if (variant === 'line')
-      return null
+   if (variant === "line") return null
 
    return (
       <Button
          variant="ghost"
          tabIndex={currentStepClickable ? 0 : -1}
          className={ny(
-            'stepper__step-button-container',
-            'pointer-events-none rounded-full p-0',
-            'size-[var(--step-icon-size)]',
-            'flex items-center justify-center rounded-full border-2',
-            'data-[clickable=true]:pointer-events-auto',
-            'data-[active=true]:bg-primary data-[active=true]:border-primary data-[active=true]:text-primary-foreground',
-            'data-[current=true]:border-primary data-[current=true]:bg-secondary',
-            'data-[invalid=true]:bg-destructive data-[invalid=true]:border-destructive data-[invalid=true]:text-destructive-foreground',
-            styles?.['step-button-container'],
+            "stepper__step-button-container",
+            "pointer-events-none rounded-full p-0",
+            "size-[var(--step-icon-size)]",
+            "flex items-center justify-center rounded-full border-2",
+            "data-[clickable=true]:pointer-events-auto",
+            "data-[active=true]:bg-primary data-[active=true]:border-primary data-[active=true]:text-primary-foreground",
+            "data-[current=true]:border-primary data-[current=true]:bg-secondary",
+            "data-[invalid=true]:bg-destructive data-[invalid=true]:border-destructive data-[invalid=true]:text-destructive-foreground",
+            styles?.["step-button-container"],
          )}
-         aria-current={isCurrentStep ? 'step' : undefined}
+         aria-current={isCurrentStep ? "step" : undefined}
          data-current={isCurrentStep}
          data-invalid={isError && (isCurrentStep || isCompletedStep)}
          data-active={isCompletedStep}
@@ -806,16 +812,16 @@ function StepButtonContainer({
 
 type IconType = LucideIcon | React.ComponentType<any> | undefined
 
-const iconVariants = cva('', {
+const iconVariants = cva("", {
    variants: {
       size: {
-         sm: 'size-4',
-         md: 'size-4',
-         lg: 'size-5',
+         sm: "size-4",
+         md: "size-4",
+         lg: "size-5",
       },
    },
    defaultVariants: {
-      size: 'md',
+      size: "md",
    },
 })
 
@@ -847,18 +853,15 @@ const StepIcon = React.forwardRef<HTMLDivElement, StepIconProps>(
          errorIcon: CustomErrorIcon,
       } = props
 
-      const Icon = React.useMemo(
-         () => (CustomIcon || null),
-         [CustomIcon],
-      )
+      const Icon = React.useMemo(() => CustomIcon || null, [CustomIcon])
 
       const ErrorIcon = React.useMemo(
-         () => (CustomErrorIcon || null),
+         () => CustomErrorIcon || null,
          [CustomErrorIcon],
       )
 
       const Check = React.useMemo(
-         () => (CustomCheckIcon || CheckIcon),
+         () => CustomCheckIcon || CheckIcon,
          [CustomCheckIcon],
       )
 
@@ -894,7 +897,9 @@ const StepIcon = React.forwardRef<HTMLDivElement, StepIconProps>(
             }
             if (isLoading) {
                return (
-                  <Loader2 className={ny(iconVariants({ size }), 'animate-spin')} />
+                  <Loader2
+                     className={ny(iconVariants({ size }), "animate-spin")}
+                  />
                )
             }
          }
@@ -909,7 +914,7 @@ const StepIcon = React.forwardRef<HTMLDivElement, StepIconProps>(
             <span
                ref={ref}
                key="label"
-               className={ny('text-md text-center font-medium')}
+               className={ny("text-md text-center font-medium")}
             >
                {(index || 0) + 1}
             </span>
@@ -939,29 +944,29 @@ interface StepLabelProps {
    description?: string | null
 }
 
-const labelVariants = cva('', {
+const labelVariants = cva("", {
    variants: {
       size: {
-         sm: 'text-sm',
-         md: 'text-sm',
-         lg: 'text-base',
+         sm: "text-sm",
+         md: "text-sm",
+         lg: "text-base",
       },
    },
    defaultVariants: {
-      size: 'md',
+      size: "md",
    },
 })
 
-const descriptionVariants = cva('', {
+const descriptionVariants = cva("", {
    variants: {
       size: {
-         sm: 'text-xs',
-         md: 'text-xs',
-         lg: 'text-sm',
+         sm: "text-xs",
+         md: "text-xs",
+         lg: "text-sm",
       },
    },
    defaultVariants: {
-      size: 'md',
+      size: "md",
    },
 })
 
@@ -974,49 +979,51 @@ function StepLabel({
    const { variant, styles, size, orientation } = useStepper()
    const shouldRender = !!label || !!description
 
-   return shouldRender
-      ? (
-            <div
-               aria-current={isCurrentStep ? 'step' : undefined}
+   return shouldRender ? (
+      <div
+         aria-current={isCurrentStep ? "step" : undefined}
+         className={ny(
+            "stepper__step-label-container",
+            "flex flex-col",
+            variant !== "line"
+               ? "ms-2"
+               : orientation === "horizontal" && "my-2",
+            variant === "circle-alt" && "text-center",
+            variant === "circle-alt" && orientation === "horizontal" && "ms-0",
+            variant === "circle-alt" &&
+               orientation === "vertical" &&
+               "text-start",
+            styles?.["step-label-container"],
+         )}
+         style={{
+            opacity,
+         }}
+      >
+         {!!label && (
+            <span
                className={ny(
-                  'stepper__step-label-container',
-                  'flex flex-col',
-                  variant !== 'line' ? 'ms-2' : orientation === 'horizontal' && 'my-2',
-                  variant === 'circle-alt' && 'text-center',
-                  variant === 'circle-alt' && orientation === 'horizontal' && 'ms-0',
-                  variant === 'circle-alt' && orientation === 'vertical' && 'text-start',
-                  styles?.['step-label-container'],
+                  "stepper__step-label",
+                  labelVariants({ size }),
+                  styles?.["step-label"],
                )}
-               style={{
-                  opacity,
-               }}
             >
-               {!!label && (
-                  <span
-                     className={ny(
-                        'stepper__step-label',
-                        labelVariants({ size }),
-                        styles?.['step-label'],
-                     )}
-                  >
-                     {label}
-                  </span>
+               {label}
+            </span>
+         )}
+         {!!description && (
+            <span
+               className={ny(
+                  "stepper__step-description",
+                  "text-muted-foreground",
+                  descriptionVariants({ size }),
+                  styles?.["step-description"],
                )}
-               {!!description && (
-                  <span
-                     className={ny(
-                        'stepper__step-description',
-                        'text-muted-foreground',
-                        descriptionVariants({ size }),
-                        styles?.['step-description'],
-                     )}
-                  >
-                     {description}
-                  </span>
-               )}
-            </div>
-         )
-      : null
+            >
+               {description}
+            </span>
+         )}
+      </div>
+   ) : null
 }
 
 export { Stepper, Step, useStepper }

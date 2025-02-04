@@ -1,12 +1,12 @@
-'use client'
+"use client"
 
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import { z } from "zod"
 
-import { toast } from '~/registry/miami/hooks/use-toast'
-import { Button } from '~/registry/miami/ui/button'
-import { Checkbox } from '~/registry/miami/ui/checkbox'
+import { toast } from "~/registry/miami/hooks/use-toast"
+import { Button } from "~/registry/miami/ui/button"
+import { Checkbox } from "~/registry/miami/ui/checkbox"
 import {
    Form,
    FormControl,
@@ -15,38 +15,38 @@ import {
    FormItem,
    FormLabel,
    FormMessage,
-} from '~/registry/miami/ui/form'
+} from "~/registry/miami/ui/form"
 
 const items = [
    {
-      id: 'recents',
-      label: 'Recents',
+      id: "recents",
+      label: "Recents",
    },
    {
-      id: 'home',
-      label: 'Home',
+      id: "home",
+      label: "Home",
    },
    {
-      id: 'applications',
-      label: 'Applications',
+      id: "applications",
+      label: "Applications",
    },
    {
-      id: 'desktop',
-      label: 'Desktop',
+      id: "desktop",
+      label: "Desktop",
    },
    {
-      id: 'downloads',
-      label: 'Downloads',
+      id: "downloads",
+      label: "Downloads",
    },
    {
-      id: 'documents',
-      label: 'Documents',
+      id: "documents",
+      label: "Documents",
    },
 ] as const
 
 const displayFormSchema = z.object({
-   items: z.array(z.string()).refine(value => value.some(item => item), {
-      message: 'You have to select at least one item.',
+   items: z.array(z.string()).refine((value) => value.some((item) => item), {
+      message: "You have to select at least one item.",
    }),
 })
 
@@ -54,7 +54,7 @@ type DisplayFormValues = z.infer<typeof displayFormSchema>
 
 // This can come from your database or API.
 const defaultValues: Partial<DisplayFormValues> = {
-   items: ['recents', 'home'],
+   items: ["recents", "home"],
 }
 
 export function DisplayForm() {
@@ -65,10 +65,12 @@ export function DisplayForm() {
 
    function onSubmit(data: DisplayFormValues) {
       toast({
-         title: 'You submitted the following values:',
+         title: "You submitted the following values:",
          description: (
             <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-               <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+               <code className="text-white">
+                  {JSON.stringify(data, null, 2)}
+               </code>
             </pre>
          ),
       })
@@ -88,7 +90,7 @@ export function DisplayForm() {
                            Select the items you want to display in the sidebar.
                         </FormDescription>
                      </div>
-                     {items.map(item => (
+                     {items.map((item) => (
                         <FormField
                            key={item.id}
                            control={form.control}
@@ -101,15 +103,21 @@ export function DisplayForm() {
                                  >
                                     <FormControl>
                                        <Checkbox
-                                          checked={field.value?.includes(item.id)}
+                                          checked={field.value?.includes(
+                                             item.id,
+                                          )}
                                           onCheckedChange={(checked) => {
                                              return checked
-                                                ? field.onChange([...field.value, item.id])
+                                                ? field.onChange([
+                                                     ...field.value,
+                                                     item.id,
+                                                  ])
                                                 : field.onChange(
-                                                   field.value?.filter(
-                                                      value => value !== item.id,
-                                                   ),
-                                                )
+                                                     field.value?.filter(
+                                                        (value) =>
+                                                           value !== item.id,
+                                                     ),
+                                                  )
                                           }}
                                        />
                                     </FormControl>

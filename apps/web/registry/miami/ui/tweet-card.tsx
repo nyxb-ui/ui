@@ -1,12 +1,12 @@
-import { Suspense } from 'react'
+import { Suspense } from "react"
 import {
    type EnrichedTweet,
    type TweetProps,
    type TwitterComponents,
    enrichTweet,
-} from 'react-tweet'
-import { type Tweet, getTweet } from 'react-tweet/api'
-import { ny } from '~/lib/utils'
+} from "react-tweet"
+import { type Tweet, getTweet } from "react-tweet/api"
+import { ny } from "~/lib/utils"
 
 interface TwitterIconProps {
    className?: string
@@ -49,8 +49,7 @@ function Verified({ className, ...props }: TwitterIconProps) {
 }
 
 export function truncate(str: string | null, length: number) {
-   if (!str || str.length <= length)
-      return str
+   if (!str || str.length <= length) return str
    return `${str.slice(0, length - 3)}...`
 }
 
@@ -60,7 +59,7 @@ function Skeleton({
 }: React.HTMLAttributes<HTMLDivElement>) {
    return (
       <div
-         className={ny('bg-primary/10 animate-pulse rounded-md', className)}
+         className={ny("bg-primary/10 animate-pulse rounded-md", className)}
          {...props}
       />
    )
@@ -76,7 +75,7 @@ export function TweetSkeleton({
    return (
       <div
          className={ny(
-            'flex size-full max-h-max min-w-72 flex-col gap-2 rounded-lg border p-4',
+            "flex size-full max-h-max min-w-72 flex-col gap-2 rounded-lg border p-4",
             className,
          )}
          {...props}
@@ -100,7 +99,7 @@ export function TweetNotFound({
    return (
       <div
          className={ny(
-            'flex size-full flex-col items-center justify-center gap-2 rounded-lg border p-4',
+            "flex size-full flex-col items-center justify-center gap-2 rounded-lg border p-4",
             className,
          )}
          {...props}
@@ -132,10 +131,10 @@ export function TweetHeader({ tweet }: { tweet: EnrichedTweet }) {
                   className="flex items-center whitespace-nowrap font-semibold"
                >
                   {truncate(tweet.user.name, 20)}
-                  {tweet.user.verified
-                  || (tweet.user.is_blue_verified && (
-                     <Verified className="ml-1 inline size-4 text-blue-500" />
-                  ))}
+                  {tweet.user.verified ||
+                     (tweet.user.is_blue_verified && (
+                        <Verified className="ml-1 inline size-4 text-blue-500" />
+                     ))}
                </a>
                <div className="flex items-center space-x-1">
                   <a
@@ -144,8 +143,7 @@ export function TweetHeader({ tweet }: { tweet: EnrichedTweet }) {
                      rel="noreferrer"
                      className="text-sm text-gray-500 transition-all duration-75"
                   >
-                     @
-                     {truncate(tweet.user.screen_name, 16)}
+                     @{truncate(tweet.user.screen_name, 16)}
                   </a>
                </div>
             </div>
@@ -163,10 +161,10 @@ export function TweetBody({ tweet }: { tweet: EnrichedTweet }) {
       <div className="break-words leading-normal tracking-tighter">
          {tweet.entities.map((entity, idx) => {
             switch (entity.type) {
-               case 'url':
-               case 'symbol':
-               case 'hashtag':
-               case 'mention':
+               case "url":
+               case "symbol":
+               case "hashtag":
+               case "mention":
                   return (
                      <a
                         key={idx}
@@ -178,7 +176,7 @@ export function TweetBody({ tweet }: { tweet: EnrichedTweet }) {
                         <span>{entity.text}</span>
                      </a>
                   )
-               case 'text':
+               case "text":
                   return (
                      <span
                         key={idx}
@@ -211,7 +209,7 @@ export function TweetMedia({ tweet }: { tweet: EnrichedTweet }) {
          {tweet.photos && (
             <div className="relative flex transform-gpu snap-x snap-mandatory gap-4 overflow-x-auto">
                <div className="shrink-0 snap-center sm:w-2" />
-               {tweet.photos.map(photo => (
+               {tweet.photos.map((photo) => (
                   <img
                      key={photo.url}
                      src={photo.url}
@@ -223,18 +221,20 @@ export function TweetMedia({ tweet }: { tweet: EnrichedTweet }) {
                <div className="shrink-0 snap-center sm:w-2" />
             </div>
          )}
-         {!tweet.video
-         && !tweet.photos
-         // @ts-expect-error is fine
-         && tweet?.card?.binding_values?.thumbnail_image_large?.image_value.url && (
-            <img
-               src={
-                  // @ts-expect-error is fine
-                  tweet.card.binding_values.thumbnail_image_large.image_value.url
-               }
-               className="h-64 rounded-xl border object-cover shadow-sm"
-            />
-         )}
+         {!tweet.video &&
+            !tweet.photos &&
+            // @ts-expect-error is fine
+            tweet?.card?.binding_values?.thumbnail_image_large?.image_value
+               .url && (
+               <img
+                  src={
+                     // @ts-expect-error is fine
+                     tweet.card.binding_values.thumbnail_image_large.image_value
+                        .url
+                  }
+                  className="h-64 rounded-xl border object-cover shadow-sm"
+               />
+            )}
       </div>
    )
 }
@@ -253,7 +253,7 @@ export function MagicTweet({
    return (
       <div
          className={ny(
-            'relative flex size-full max-w-lg flex-col gap-2 overflow-hidden rounded-lg border p-4 backdrop-blur-md',
+            "relative flex size-full max-w-lg flex-col gap-2 overflow-hidden rounded-lg border p-4 backdrop-blur-md",
             className,
          )}
          {...props}
@@ -279,10 +279,9 @@ export async function TweetCard({
 }) {
    const tweet = id
       ? await getTweet(id).catch((err) => {
-         if (onError)
-            onError(err)
-         else console.error(err)
-      })
+           if (onError) onError(err)
+           else console.error(err)
+        })
       : undefined
 
    if (!tweet) {

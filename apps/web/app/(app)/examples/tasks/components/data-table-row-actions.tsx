@@ -1,11 +1,9 @@
-'use client'
+"use client"
 
-import type { Row } from '@tanstack/react-table'
-import { MoreHorizontal } from 'lucide-react'
+import type { Row } from "@tanstack/react-table"
+import { MoreHorizontal } from "lucide-react"
 
-import { labels } from '../data/data'
-import { taskSchema } from '../data/schema'
-import { Button } from '~/registry/miami/ui/button'
+import { Button } from "~/registry/miami/ui/button"
 import {
    DropdownMenu,
    DropdownMenuContent,
@@ -18,7 +16,10 @@ import {
    DropdownMenuSubContent,
    DropdownMenuSubTrigger,
    DropdownMenuTrigger,
-} from '~/registry/miami/ui/dropdown-menu'
+} from "~/registry/miami/ui/dropdown-menu"
+
+import { labels } from "../data/data"
+import { taskSchema } from "../data/schema"
 
 interface DataTableRowActionsProps<TData> {
    row: Row<TData>
@@ -34,7 +35,7 @@ export function DataTableRowActions<TData>({
          <DropdownMenuTrigger asChild>
             <Button
                variant="ghost"
-               className="data-[state=open]:bg-muted flex size-8 p-0"
+               className="flex h-8 w-8 p-0 data-[state=open]:bg-muted"
             >
                <MoreHorizontal />
                <span className="sr-only">Open menu</span>
@@ -49,8 +50,11 @@ export function DataTableRowActions<TData>({
                <DropdownMenuSubTrigger>Labels</DropdownMenuSubTrigger>
                <DropdownMenuSubContent>
                   <DropdownMenuRadioGroup value={task.label}>
-                     {labels.map(label => (
-                        <DropdownMenuRadioItem key={label.value} value={label.value}>
+                     {labels.map((label) => (
+                        <DropdownMenuRadioItem
+                           key={label.value}
+                           value={label.value}
+                        >
                            {label.label}
                         </DropdownMenuRadioItem>
                      ))}

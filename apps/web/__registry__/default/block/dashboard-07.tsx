@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image"
+import Link from "next/link"
 import {
    ChevronLeft,
    Home,
@@ -13,9 +13,9 @@ import {
    ShoppingCart,
    Upload,
    Users2,
-} from 'lucide-react'
+} from "lucide-react"
 
-import { Badge } from '~/registry/default/ui/badge'
+import { Badge } from "~/registry/default/ui/badge"
 import {
    Breadcrumb,
    BreadcrumbItem,
@@ -23,8 +23,8 @@ import {
    BreadcrumbList,
    BreadcrumbPage,
    BreadcrumbSeparator,
-} from '~/registry/default/ui/breadcrumb'
-import { Button } from '~/registry/default/ui/button'
+} from "~/registry/default/ui/breadcrumb"
+import { Button } from "~/registry/default/ui/button"
 import {
    Card,
    CardContent,
@@ -32,7 +32,7 @@ import {
    CardFooter,
    CardHeader,
    CardTitle,
-} from '~/registry/default/ui/card'
+} from "~/registry/default/ui/card"
 import {
    DropdownMenu,
    DropdownMenuContent,
@@ -40,17 +40,17 @@ import {
    DropdownMenuLabel,
    DropdownMenuSeparator,
    DropdownMenuTrigger,
-} from '~/registry/default/ui/dropdown-menu'
-import { Input } from '~/registry/default/ui/input'
-import { Label } from '~/registry/default/ui/label'
+} from "~/registry/default/ui/dropdown-menu"
+import { Input } from "~/registry/default/ui/input"
+import { Label } from "~/registry/default/ui/label"
 import {
    Select,
    SelectContent,
    SelectItem,
    SelectTrigger,
    SelectValue,
-} from '~/registry/default/ui/select'
-import { Sheet, SheetContent, SheetTrigger } from '~/registry/default/ui/sheet'
+} from "~/registry/default/ui/select"
+import { Sheet, SheetContent, SheetTrigger } from "~/registry/default/ui/sheet"
 import {
    Table,
    TableBody,
@@ -58,24 +58,24 @@ import {
    TableHead,
    TableHeader,
    TableRow,
-} from '~/registry/default/ui/table'
-import { Textarea } from '~/registry/default/ui/textarea'
+} from "~/registry/default/ui/table"
+import { Textarea } from "~/registry/default/ui/textarea"
 import {
    ToggleGroup,
    ToggleGroupItem,
-} from '~/registry/default/ui/toggle-group'
+} from "~/registry/default/ui/toggle-group"
 import {
    Tooltip,
    TooltipContent,
    TooltipTrigger,
-} from '~/registry/default/ui/tooltip'
+} from "~/registry/default/ui/tooltip"
 
-export const description
-  = 'A product edit page. The product edit page has a form to edit the product details, stock, product category, product status, and product images. The product edit page has a sidebar navigation and a main content area. The main content area has a form to edit the product details, stock, product category, product status, and product images. The sidebar navigation has links to product details, stock, product category, product status, and product images.'
+export const description =
+   "A product edit page. The product edit page has a form to edit the product details, stock, product category, product status, and product images. The product edit page has a sidebar navigation and a main content area. The main content area has a form to edit the product details, stock, product category, product status, and product images. The sidebar navigation has links to product details, stock, product category, product status, and product images."
 
-export const iframeHeight = '1200px'
+export const iframeHeight = "1200px"
 
-export const containerClassName = 'w-full h-full'
+export const containerClassName = "w-full h-full"
 
 export default function Dashboard() {
    return (
@@ -169,7 +169,11 @@ export default function Dashboard() {
             <header className="bg-background sticky top-0 z-30 flex h-14 items-center gap-4 border-b px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
                <Sheet>
                   <SheetTrigger asChild>
-                     <Button size="icon" variant="outline" className="sm:hidden">
+                     <Button
+                        size="icon"
+                        variant="outline"
+                        className="sm:hidden"
+                     >
                         <PanelLeft className="size-5" />
                         <span className="sr-only">Toggle Menu</span>
                      </Button>
@@ -300,7 +304,8 @@ export default function Dashboard() {
                            <CardHeader>
                               <CardTitle>Product Details</CardTitle>
                               <CardDescription>
-                                 Lipsum dolor sit amet, consectetur adipiscing elit
+                                 Lipsum dolor sit amet, consectetur adipiscing
+                                 elit
                               </CardDescription>
                            </CardHeader>
                            <CardContent>
@@ -315,7 +320,9 @@ export default function Dashboard() {
                                     />
                                  </div>
                                  <div className="grid gap-3">
-                                    <Label htmlFor="description">Description</Label>
+                                    <Label htmlFor="description">
+                                       Description
+                                    </Label>
                                     <Textarea
                                        id="description"
                                        defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec ultricies ultricies, nunc nisl ultricies nunc, nec ultricies nunc nisl nec nunc."
@@ -329,17 +336,22 @@ export default function Dashboard() {
                            <CardHeader>
                               <CardTitle>Stock</CardTitle>
                               <CardDescription>
-                                 Lipsum dolor sit amet, consectetur adipiscing elit
+                                 Lipsum dolor sit amet, consectetur adipiscing
+                                 elit
                               </CardDescription>
                            </CardHeader>
                            <CardContent>
                               <Table>
                                  <TableHeader>
                                     <TableRow>
-                                       <TableHead className="w-[100px]">SKU</TableHead>
+                                       <TableHead className="w-[100px]">
+                                          SKU
+                                       </TableHead>
                                        <TableHead>Stock</TableHead>
                                        <TableHead>Price</TableHead>
-                                       <TableHead className="w-[100px]">Size</TableHead>
+                                       <TableHead className="w-[100px]">
+                                          Size
+                                       </TableHead>
                                     </TableRow>
                                  </TableHeader>
                                  <TableBody>
@@ -348,7 +360,10 @@ export default function Dashboard() {
                                           GGPC-001
                                        </TableCell>
                                        <TableCell>
-                                          <Label htmlFor="stock-1" className="sr-only">
+                                          <Label
+                                             htmlFor="stock-1"
+                                             className="sr-only"
+                                          >
                                              Stock
                                           </Label>
                                           <Input
@@ -358,7 +373,10 @@ export default function Dashboard() {
                                           />
                                        </TableCell>
                                        <TableCell>
-                                          <Label htmlFor="price-1" className="sr-only">
+                                          <Label
+                                             htmlFor="price-1"
+                                             className="sr-only"
+                                          >
                                              Price
                                           </Label>
                                           <Input
@@ -373,9 +391,15 @@ export default function Dashboard() {
                                              defaultValue="s"
                                              variant="outline"
                                           >
-                                             <ToggleGroupItem value="s">S</ToggleGroupItem>
-                                             <ToggleGroupItem value="m">M</ToggleGroupItem>
-                                             <ToggleGroupItem value="l">L</ToggleGroupItem>
+                                             <ToggleGroupItem value="s">
+                                                S
+                                             </ToggleGroupItem>
+                                             <ToggleGroupItem value="m">
+                                                M
+                                             </ToggleGroupItem>
+                                             <ToggleGroupItem value="l">
+                                                L
+                                             </ToggleGroupItem>
                                           </ToggleGroup>
                                        </TableCell>
                                     </TableRow>
@@ -384,7 +408,10 @@ export default function Dashboard() {
                                           GGPC-002
                                        </TableCell>
                                        <TableCell>
-                                          <Label htmlFor="stock-2" className="sr-only">
+                                          <Label
+                                             htmlFor="stock-2"
+                                             className="sr-only"
+                                          >
                                              Stock
                                           </Label>
                                           <Input
@@ -394,7 +421,10 @@ export default function Dashboard() {
                                           />
                                        </TableCell>
                                        <TableCell>
-                                          <Label htmlFor="price-2" className="sr-only">
+                                          <Label
+                                             htmlFor="price-2"
+                                             className="sr-only"
+                                          >
                                              Price
                                           </Label>
                                           <Input
@@ -409,9 +439,15 @@ export default function Dashboard() {
                                              defaultValue="m"
                                              variant="outline"
                                           >
-                                             <ToggleGroupItem value="s">S</ToggleGroupItem>
-                                             <ToggleGroupItem value="m">M</ToggleGroupItem>
-                                             <ToggleGroupItem value="l">L</ToggleGroupItem>
+                                             <ToggleGroupItem value="s">
+                                                S
+                                             </ToggleGroupItem>
+                                             <ToggleGroupItem value="m">
+                                                M
+                                             </ToggleGroupItem>
+                                             <ToggleGroupItem value="l">
+                                                L
+                                             </ToggleGroupItem>
                                           </ToggleGroup>
                                        </TableCell>
                                     </TableRow>
@@ -420,7 +456,10 @@ export default function Dashboard() {
                                           GGPC-003
                                        </TableCell>
                                        <TableCell>
-                                          <Label htmlFor="stock-3" className="sr-only">
+                                          <Label
+                                             htmlFor="stock-3"
+                                             className="sr-only"
+                                          >
                                              Stock
                                           </Label>
                                           <Input
@@ -430,7 +469,10 @@ export default function Dashboard() {
                                           />
                                        </TableCell>
                                        <TableCell>
-                                          <Label htmlFor="price-3" className="sr-only">
+                                          <Label
+                                             htmlFor="price-3"
+                                             className="sr-only"
+                                          >
                                              Stock
                                           </Label>
                                           <Input
@@ -445,9 +487,15 @@ export default function Dashboard() {
                                              defaultValue="s"
                                              variant="outline"
                                           >
-                                             <ToggleGroupItem value="s">S</ToggleGroupItem>
-                                             <ToggleGroupItem value="m">M</ToggleGroupItem>
-                                             <ToggleGroupItem value="l">L</ToggleGroupItem>
+                                             <ToggleGroupItem value="s">
+                                                S
+                                             </ToggleGroupItem>
+                                             <ToggleGroupItem value="m">
+                                                M
+                                             </ToggleGroupItem>
+                                             <ToggleGroupItem value="l">
+                                                L
+                                             </ToggleGroupItem>
                                           </ToggleGroup>
                                        </TableCell>
                                     </TableRow>
@@ -455,7 +503,11 @@ export default function Dashboard() {
                               </Table>
                            </CardContent>
                            <CardFooter className="justify-center border-t p-4">
-                              <Button size="sm" variant="ghost" className="gap-1">
+                              <Button
+                                 size="sm"
+                                 variant="ghost"
+                                 className="gap-1"
+                              >
                                  <PlusCircle className="size-3.5" />
                                  Add Variant
                               </Button>
@@ -477,7 +529,9 @@ export default function Dashboard() {
                                           <SelectValue placeholder="Select category" />
                                        </SelectTrigger>
                                        <SelectContent>
-                                          <SelectItem value="clothing">Clothing</SelectItem>
+                                          <SelectItem value="clothing">
+                                             Clothing
+                                          </SelectItem>
                                           <SelectItem value="electronics">
                                              Electronics
                                           </SelectItem>
@@ -499,8 +553,12 @@ export default function Dashboard() {
                                           <SelectValue placeholder="Select subcategory" />
                                        </SelectTrigger>
                                        <SelectContent>
-                                          <SelectItem value="t-shirts">T-Shirts</SelectItem>
-                                          <SelectItem value="hoodies">Hoodies</SelectItem>
+                                          <SelectItem value="t-shirts">
+                                             T-Shirts
+                                          </SelectItem>
+                                          <SelectItem value="hoodies">
+                                             Hoodies
+                                          </SelectItem>
                                           <SelectItem value="sweatshirts">
                                              Sweatshirts
                                           </SelectItem>
@@ -521,13 +579,22 @@ export default function Dashboard() {
                                  <div className="grid gap-3">
                                     <Label htmlFor="status">Status</Label>
                                     <Select>
-                                       <SelectTrigger id="status" aria-label="Select status">
+                                       <SelectTrigger
+                                          id="status"
+                                          aria-label="Select status"
+                                       >
                                           <SelectValue placeholder="Select status" />
                                        </SelectTrigger>
                                        <SelectContent>
-                                          <SelectItem value="draft">Draft</SelectItem>
-                                          <SelectItem value="published">Active</SelectItem>
-                                          <SelectItem value="archived">Archived</SelectItem>
+                                          <SelectItem value="draft">
+                                             Draft
+                                          </SelectItem>
+                                          <SelectItem value="published">
+                                             Active
+                                          </SelectItem>
+                                          <SelectItem value="archived">
+                                             Archived
+                                          </SelectItem>
                                        </SelectContent>
                                     </Select>
                                  </div>
@@ -535,12 +602,14 @@ export default function Dashboard() {
                            </CardContent>
                         </Card>
                         <Card
-                           className="overflow-hidden" x-chunk="dashboard-07-chunk-4"
+                           className="overflow-hidden"
+                           x-chunk="dashboard-07-chunk-4"
                         >
                            <CardHeader>
                               <CardTitle>Product Images</CardTitle>
                               <CardDescription>
-                                 Lipsum dolor sit amet, consectetur adipiscing elit
+                                 Lipsum dolor sit amet, consectetur adipiscing
+                                 elit
                               </CardDescription>
                            </CardHeader>
                            <CardContent>
@@ -583,7 +652,8 @@ export default function Dashboard() {
                            <CardHeader>
                               <CardTitle>Archive Product</CardTitle>
                               <CardDescription>
-                                 Lipsum dolor sit amet, consectetur adipiscing elit.
+                                 Lipsum dolor sit amet, consectetur adipiscing
+                                 elit.
                               </CardDescription>
                            </CardHeader>
                            <CardContent>

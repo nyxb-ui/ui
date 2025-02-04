@@ -1,9 +1,5 @@
-import {
-   Avatar,
-   AvatarFallback,
-   AvatarImage,
-} from '~/registry/miami/ui/avatar'
-import { Button } from '~/registry/miami/ui/button'
+import { Avatar, AvatarFallback, AvatarImage } from "~/registry/miami/ui/avatar"
+import { Button } from "~/registry/miami/ui/button"
 import {
    DropdownMenu,
    DropdownMenuContent,
@@ -13,15 +9,15 @@ import {
    DropdownMenuSeparator,
    DropdownMenuShortcut,
    DropdownMenuTrigger,
-} from '~/registry/miami/ui/dropdown-menu'
+} from "~/registry/miami/ui/dropdown-menu"
 
 export function UserNav() {
    return (
       <DropdownMenu>
          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="relative size-8 rounded-full">
-               <Avatar className="size-9">
-                  <AvatarImage src="/avatars/03.png" alt="@shadcn" />
+            <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+               <Avatar className="h-9 w-9">
+                  <AvatarImage src="/avatars/03.png" alt="@nyxb" />
                   <AvatarFallback>SC</AvatarFallback>
                </Avatar>
             </Button>
@@ -29,8 +25,8 @@ export function UserNav() {
          <DropdownMenuContent className="w-56" align="end" forceMount>
             <DropdownMenuLabel className="font-normal">
                <div className="flex flex-col space-y-1">
-                  <p className="text-sm font-medium leading-none">shadcn</p>
-                  <p className="text-muted-foreground text-xs leading-none">
+                  <p className="text-sm font-medium leading-none">nyxb</p>
+                  <p className="text-xs leading-none text-muted-foreground">
                      m@example.com
                   </p>
                </div>

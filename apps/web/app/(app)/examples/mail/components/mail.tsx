@@ -1,6 +1,5 @@
-'use client'
+"use client"
 
-import * as React from 'react'
 import {
    AlertCircle,
    Archive,
@@ -13,29 +12,30 @@ import {
    ShoppingCart,
    Trash2,
    Users2,
-} from 'lucide-react'
+} from "lucide-react"
+import * as React from "react"
 
-import { ny } from '~/lib/utils'
-import { Input } from '~/registry/miami/ui/input'
+import { AccountSwitcher } from "~/app/(app)/examples/mail/components/account-switcher"
+import { MailDisplay } from "~/app/(app)/examples/mail/components/mail-display"
+import { MailList } from "~/app/(app)/examples/mail/components/mail-list"
+import { Nav } from "~/app/(app)/examples/mail/components/nav"
+import type { Mail } from "~/app/(app)/examples/mail/data"
+import { useMail } from "~/app/(app)/examples/mail/use-mail"
+import { ny } from "~/lib/utils"
+import { Input } from "~/registry/miami/ui/input"
 import {
    ResizableHandle,
    ResizablePanel,
    ResizablePanelGroup,
-} from '~/registry/miami/ui/resizable'
-import { Separator } from '~/registry/miami/ui/separator'
+} from "~/registry/miami/ui/resizable"
+import { Separator } from "~/registry/miami/ui/separator"
 import {
    Tabs,
    TabsContent,
    TabsList,
    TabsTrigger,
-} from '~/registry/miami/ui/tabs'
-import { TooltipProvider } from '~/registry/miami/ui/tooltip'
-import { AccountSwitcher } from '~/app/(app)/examples/mail/components/account-switcher'
-import { MailDisplay } from '~/app/(app)/examples/mail/components/mail-display'
-import { MailList } from '~/app/(app)/examples/mail/components/mail-list'
-import { Nav } from '~/app/(app)/examples/mail/components/nav'
-import type { Mail } from '~/app/(app)/examples/mail/data'
-import { useMail } from '~/app/(app)/examples/mail/use-mail'
+} from "~/registry/miami/ui/tabs"
+import { TooltipProvider } from "~/registry/miami/ui/tooltip"
 
 interface MailProps {
    accounts: {
@@ -65,81 +65,84 @@ export function Mail({
             direction="horizontal"
             onLayout={(sizes: number[]) => {
                document.cookie = `react-resizable-panels:layout:mail=${JSON.stringify(
-            sizes,
-          )}`
+                  sizes,
+               )}`
             }}
             className="h-full max-h-[800px] items-stretch"
          >
             <ResizablePanel
                defaultSize={defaultLayout[0]}
                collapsedSize={navCollapsedSize}
-               collapsible
+               collapsible={true}
                minSize={15}
                maxSize={20}
                onCollapse={() => {
                   setIsCollapsed(true)
                   document.cookie = `react-resizable-panels:collapsed=${JSON.stringify(
-              true,
-            )}`
+                     true,
+                  )}`
                }}
                onResize={() => {
                   setIsCollapsed(false)
                   document.cookie = `react-resizable-panels:collapsed=${JSON.stringify(
-              false,
-            )}`
+                     false,
+                  )}`
                }}
                className={ny(
-                  isCollapsed
-                  && 'min-w-[50px] transition-all duration-300 ease-in-out',
+                  isCollapsed &&
+                     "min-w-[50px] transition-all duration-300 ease-in-out",
                )}
             >
                <div
                   className={ny(
-                     'flex h-[52px] items-center justify-center',
-                     isCollapsed ? 'h-[52px]' : 'px-2',
+                     "flex h-[52px] items-center justify-center",
+                     isCollapsed ? "h-[52px]" : "px-2",
                   )}
                >
-                  <AccountSwitcher isCollapsed={isCollapsed} accounts={accounts} />
+                  <AccountSwitcher
+                     isCollapsed={isCollapsed}
+                     accounts={accounts}
+                  />
                </div>
                <Separator />
                <Nav
                   isCollapsed={isCollapsed}
                   links={[
                      {
-                        title: 'Inbox',
-                        label: '128',
+                        title: "Inbox",
+                        label: "128",
                         icon: Inbox,
-                        variant: 'default',
+                        variant: "default",
                      },
                      {
-                        title: 'Drafts',
-                        label: '9',
+                        title: "Drafts",
+                        label: "9",
                         icon: File,
-                        variant: 'ghost',
+                        variant: "ghost",
                      },
                      {
-                        title: 'Sent',
-                        label: '',
+                        title: "Sent",
+                        label: "",
                         icon: Send,
-                        variant: 'ghost',
+                        variant: "ghost",
                      },
                      {
-                        title: 'Junk',
-                        label: '23',
+                        title: "Junk",
+                        label: "23",
                         icon: ArchiveX,
-                        variant: 'ghost',
+                        variant: "ghost",
                      },
                      {
-                        title: 'Trash',
-                        label: '',
+                        title: "Trash",
+                        label: "",
                         icon: Trash2,
-                        variant: 'ghost',
+                        variant: "ghost",
                      },
                      {
-                        title: 'Archive',
-                        label: '',
+                        title: "Archive",
+                        label: "",
                         icon: Archive,
-                        variant: 'ghost',
+                        variant: "ghost",
                      },
                   ]}
                />
@@ -148,34 +151,34 @@ export function Mail({
                   isCollapsed={isCollapsed}
                   links={[
                      {
-                        title: 'Social',
-                        label: '972',
+                        title: "Social",
+                        label: "972",
                         icon: Users2,
-                        variant: 'ghost',
+                        variant: "ghost",
                      },
                      {
-                        title: 'Updates',
-                        label: '342',
+                        title: "Updates",
+                        label: "342",
                         icon: AlertCircle,
-                        variant: 'ghost',
+                        variant: "ghost",
                      },
                      {
-                        title: 'Forums',
-                        label: '128',
+                        title: "Forums",
+                        label: "128",
                         icon: MessagesSquare,
-                        variant: 'ghost',
+                        variant: "ghost",
                      },
                      {
-                        title: 'Shopping',
-                        label: '8',
+                        title: "Shopping",
+                        label: "8",
                         icon: ShoppingCart,
-                        variant: 'ghost',
+                        variant: "ghost",
                      },
                      {
-                        title: 'Promotions',
-                        label: '21',
+                        title: "Promotions",
+                        label: "21",
                         icon: Archive,
-                        variant: 'ghost',
+                        variant: "ghost",
                      },
                   ]}
                />
@@ -201,10 +204,10 @@ export function Mail({
                      </TabsList>
                   </div>
                   <Separator />
-                  <div className="bg-background/95 supports-[backdrop-filter]:bg-background/60 p-4 backdrop-blur">
+                  <div className="bg-background/95 p-4 backdrop-blur supports-[backdrop-filter]:bg-background/60">
                      <form>
                         <div className="relative">
-                           <Search className="text-muted-foreground absolute left-2 top-2.5 size-4" />
+                           <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
                            <Input placeholder="Search" className="pl-8" />
                         </div>
                      </form>
@@ -213,14 +216,14 @@ export function Mail({
                      <MailList items={mails} />
                   </TabsContent>
                   <TabsContent value="unread" className="m-0">
-                     <MailList items={mails.filter(item => !item.read)} />
+                     <MailList items={mails.filter((item) => !item.read)} />
                   </TabsContent>
                </Tabs>
             </ResizablePanel>
             <ResizableHandle withHandle />
             <ResizablePanel defaultSize={defaultLayout[2]} minSize={30}>
                <MailDisplay
-                  mail={mails.find(item => item.id === mail.selected) || null}
+                  mail={mails.find((item) => item.id === mail.selected) || null}
                />
             </ResizablePanel>
          </ResizablePanelGroup>

@@ -1,4 +1,4 @@
-import { ny } from '~/lib/utils'
+import { ny } from "~/lib/utils"
 
 export default function OrbitingCircles({
    className,
@@ -39,14 +39,14 @@ export default function OrbitingCircles({
          <div
             style={
                {
-                  '--duration': duration,
-                  '--radius': radius,
-                  '--delay': -delay,
+                  "--duration": duration,
+                  "--radius": radius,
+                  "--delay": -delay,
                } as React.CSSProperties
             }
             className={ny(
-               'animate-orbit absolute flex size-full transform-gpu items-center justify-center rounded-full border bg-black/10 [animation-delay:calc(var(--delay)*1000ms)] dark:bg-white/10',
-               { '[animation-direction:reverse]': reverse },
+               "animate-orbit absolute flex size-full transform-gpu items-center justify-center rounded-full border bg-black/10 [animation-delay:calc(var(--delay)*1000ms)] dark:bg-white/10",
+               { "[animation-direction:reverse]": reverse },
                className,
             )}
          >

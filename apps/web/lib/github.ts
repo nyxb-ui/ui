@@ -33,9 +33,8 @@ export function getGitHubIssueUrl(params: GitHubIssueUrlParams): string {
 
    Object.entries(issueParams).forEach(([key, value]) => {
       if (Array.isArray(value)) {
-         value.forEach(item => urlParams.append(key, item))
-      }
-      else if (value !== undefined) {
+         value.forEach((item) => urlParams.append(key, item))
+      } else if (value !== undefined) {
          urlParams.append(key, value.toString())
       }
    })
@@ -44,5 +43,5 @@ export function getGitHubIssueUrl(params: GitHubIssueUrlParams): string {
 }
 
 export function getGithubFileUrl(slug: string) {
-   return `https://github.com/magicuidesign/magicui/blob/main/content${slug === '/docs' ? '/docs/index' : slug}.mdx`
+   return `https://github.com/nyxb-ui/ui/blob/main/content${slug === "/docs" ? "/docs/index" : slug}.mdx`
 }
