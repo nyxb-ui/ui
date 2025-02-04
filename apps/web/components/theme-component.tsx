@@ -1,17 +1,17 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import { Index } from '~/__registry__'
+import * as React from "react"
+import { Index } from "~/__registry__"
 
-import { ny } from '~/lib/utils'
-import { useConfig } from '~/hooks/use-config'
-import { Icons } from '~/components/icons'
+import { Icons } from "~/components/icons"
+import { useConfig } from "~/hooks/use-config"
+import { ny } from "~/lib/utils"
 
 interface ThemeComponentProps extends React.HTMLAttributes<HTMLDivElement> {
    name: string
    extractClassname?: boolean
    extractedClassNames?: string
-   align?: 'center' | 'start' | 'end'
+   align?: "center" | "start" | "end"
 }
 
 export function ThemeComponent({ name, ...props }: ThemeComponentProps) {
@@ -23,12 +23,10 @@ export function ThemeComponent({ name, ...props }: ThemeComponentProps) {
       if (!Component) {
          return (
             <p className="text-muted-foreground text-sm">
-               Component
-               {' '}
+               Component{" "}
                <code className="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm">
                   {name}
-               </code>
-               {' '}
+               </code>{" "}
                not found in registry.
             </p>
          )
@@ -38,14 +36,14 @@ export function ThemeComponent({ name, ...props }: ThemeComponentProps) {
    }, [name, config.style])
 
    return (
-      <div className={ny('relative')} {...props}>
+      <div className={ny("relative")} {...props}>
          <React.Suspense
-            fallback={(
+            fallback={
                <div className="text-muted-foreground flex items-center text-sm">
                   <Icons.spinner className="mr-2 size-4 animate-spin" />
                   Loading...
                </div>
-            )}
+            }
          >
             {Preview}
          </React.Suspense>

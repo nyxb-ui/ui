@@ -1,9 +1,9 @@
-'use client'
+"use client"
 
-import { ny } from '~/lib/utils'
-import { useConfig } from '~/hooks/use-config'
+import { useConfig } from "~/hooks/use-config"
+import { ny } from "~/lib/utils"
 
-interface ThemeWrapperProps extends React.ComponentProps<'div'> {
+interface ThemeWrapperProps extends React.ComponentProps<"div"> {
    defaultTheme?: string
 }
 
@@ -17,13 +17,13 @@ export function ThemeWrapper({
    return (
       <div
          className={ny(
-        `theme-${defaultTheme || config.theme}`,
-        'w-full',
-        className,
+            `theme-${defaultTheme || config.theme}`,
+            "w-full",
+            className,
          )}
          style={
             {
-               '--radius': `${defaultTheme ? 0.5 : config.radius}rem`,
+               "--radius": `${defaultTheme ? 0.5 : config.radius}rem`,
             } as React.CSSProperties
          }
       >

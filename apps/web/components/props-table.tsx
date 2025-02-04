@@ -1,22 +1,22 @@
-'use client'
+"use client"
 
-import React from 'react'
-import { DividerHorizontalIcon, InfoCircledIcon } from '@radix-ui/react-icons'
+import { DividerHorizontalIcon, InfoCircledIcon } from "@radix-ui/react-icons"
+import type React from "react"
 
-import { Button } from '~/registry/miami/ui/button'
+import { Button } from "~/registry/miami/ui/button"
 import {
    Popover,
    PopoverContent,
    PopoverTrigger,
-} from '~/registry/miami/ui/popover'
-import { ScrollArea } from '~/registry/miami/ui/scroll-area'
+} from "~/registry/miami/ui/popover"
+import { ScrollArea } from "~/registry/miami/ui/scroll-area"
 import {
    TableBody,
    TableCell,
    TableHead,
    TableHeader,
    TableRow,
-} from '~/registry/miami/ui/table'
+} from "~/registry/miami/ui/table"
 
 export interface PropDef {
    name: string
@@ -39,7 +39,9 @@ export function PropsTable({
          <table className="w-full caption-bottom text-sm">
             <TableHeader className="bg-gray-100 dark:bg-gray-800">
                <TableRow>
-                  <TableHead style={{ width: propHeaderFixedWidth ? '37%' : 'auto' }}>
+                  <TableHead
+                     style={{ width: propHeaderFixedWidth ? "37%" : "auto" }}
+                  >
                      Prop
                   </TableHead>
                   <TableHead>Type</TableHead>
@@ -60,12 +62,15 @@ export function PropsTable({
                      i,
                   ) => {
                      return (
-                        <TableRow key={`${name}-${i}`} style={{ whiteSpace: 'nowrap' }}>
+                        <TableRow
+                           key={`${name}-${i}`}
+                           style={{ whiteSpace: "nowrap" }}
+                        >
                            <TableCell>
                               <div className="inline-flex items-center gap-2">
                                  <code className="bg-blue-50 px-1 text-blue-700 dark:bg-gray-800 dark:text-blue-300">
                                     {name}
-                                    {required ? '*' : null}
+                                    {required ? "*" : null}
                                  </code>
                                  {description && (
                                     <Popover>
@@ -84,10 +89,14 @@ export function PropsTable({
                                           className="radix-themes-custom-fonts"
                                           onOpenAutoFocus={(event) => {
                                              event.preventDefault()
-                                             ;(event.currentTarget as HTMLElement)?.focus()
+                                             ;(
+                                                event.currentTarget as HTMLElement
+                                             )?.focus()
                                           }}
                                        >
-                                          <p className="text-sm">{description}</p>
+                                          <p className="text-sm">
+                                             {description}
+                                          </p>
                                        </PopoverContent>
                                     </Popover>
                                  )}
@@ -111,14 +120,16 @@ export function PropsTable({
                                        <PopoverContent
                                           side="top"
                                           align="center"
-                                          style={{ maxWidth: 'min(1240px, 95vw)' }}
+                                          style={{
+                                             maxWidth: "min(1240px, 95vw)",
+                                          }}
                                        >
                                           <ScrollArea type="auto">
                                              <div>
                                                 <code
                                                    style={{
-                                                      whiteSpace: 'pre',
-                                                      display: 'block',
+                                                      whiteSpace: "pre",
+                                                      display: "block",
                                                    }}
                                                 >
                                                    {type}
@@ -132,17 +143,15 @@ export function PropsTable({
                            </TableCell>
 
                            <TableCell>
-                              {defaultValue
-                                 ? (
-                                       <code className="bg-gray-100 px-1 dark:bg-gray-700">
-                                          {defaultValue}
-                                       </code>
-                                    )
-                                 : (
-                                       <DividerHorizontalIcon
-                                          style={{ color: 'var(--gray-8)' }}
-                                       />
-                                    )}
+                              {defaultValue ? (
+                                 <code className="bg-gray-100 px-1 dark:bg-gray-700">
+                                    {defaultValue}
+                                 </code>
+                              ) : (
+                                 <DividerHorizontalIcon
+                                    style={{ color: "var(--gray-8)" }}
+                                 />
+                              )}
                            </TableCell>
                         </TableRow>
                      )

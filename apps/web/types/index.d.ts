@@ -1,4 +1,4 @@
-import type { Icons } from '~/components/icons'
+import type { Icons } from "~/components/icons"
 
 declare global {
    interface Window {
@@ -35,7 +35,7 @@ export interface SubscriptionPlan {
 }
 
 export type UserSubscriptionPlan = SubscriptionPlan &
-   Pick<User, 'stripeCustomerId' | 'stripeSubscriptionId'> & {
+   Pick<User, "stripeCustomerId" | "stripeSubscriptionId"> & {
       stripeCurrentPeriodEnd: number
       isPro: boolean
    }

@@ -1,7 +1,7 @@
-import { useAtom } from 'jotai'
-import { atomWithStorage } from 'jotai/utils'
+import { useAtom } from "jotai"
+import { atomWithStorage } from "jotai/utils"
 
-const configAtom = atomWithStorage<string[]>('lift-mode', [])
+const configAtom = atomWithStorage<string[]>("lift-mode", [])
 
 export function useLiftMode(name: string) {
    const [chunks, setChunks] = useAtom(configAtom)
@@ -9,7 +9,7 @@ export function useLiftMode(name: string) {
    function toggleLiftMode(name: string) {
       setChunks((prev) => {
          return prev.includes(name)
-            ? prev.filter(n => n !== name)
+            ? prev.filter((n) => n !== name)
             : [...prev, name]
       })
    }

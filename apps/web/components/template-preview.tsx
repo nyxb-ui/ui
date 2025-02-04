@@ -1,9 +1,9 @@
-import type { ReactNode } from 'react'
-import Link from 'next/link'
-import { ExternalLinkIcon } from '@radix-ui/react-icons'
+import { ExternalLinkIcon } from "@radix-ui/react-icons"
+import Link from "next/link"
+import type { ReactNode } from "react"
 
-import { ny } from '~/lib/utils'
-import { buttonVariants } from '~/components/ui/button'
+import { buttonVariants } from "~/components/ui/button"
+import { ny } from "~/lib/utils"
 
 export default function TemplatePreview({
    href,
@@ -16,9 +16,9 @@ export default function TemplatePreview({
       <Link
          className={ny(
             buttonVariants({
-               variant: 'outline',
+               variant: "outline",
             }),
-            'not-prose group relative w-full gap-2',
+            "not-prose group relative w-full gap-2",
          )}
          href={href}
          target="_blank"

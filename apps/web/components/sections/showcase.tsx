@@ -1,9 +1,9 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { ChevronRightIcon } from '@radix-ui/react-icons'
-import { allShowcases } from 'content-collections'
+import { ChevronRightIcon } from "@radix-ui/react-icons"
+import { allShowcases } from "content-collections"
+import Image from "next/image"
+import Link from "next/link"
 
-import Marquee from '~/registry/miami/ui/marquee'
+import Marquee from "~/registry/miami/ui/marquee"
 
 export interface ShowcaseCardProps {
    title: string

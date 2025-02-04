@@ -1,6 +1,6 @@
-import { ChevronRight, HeartHandshake } from 'lucide-react'
-import { buttonVariants } from '~/components/ui/button'
-import { ny } from '~/lib/utils'
+import { ChevronRight, HeartHandshake } from "lucide-react"
+import { buttonVariants } from "~/components/ui/button"
+import { ny } from "~/lib/utils"
 
 export default function CTASection() {
    return (
@@ -14,17 +14,19 @@ export default function CTASection() {
                   <h1 className="text-3xl font-bold lg:text-4xl">
                      Love what you see?
                   </h1>
-                  <p className="mt-2">Fuel my creativity with a virtual coffee!</p>
+                  <p className="mt-2">
+                     Fuel my creativity with a virtual coffee!
+                  </p>
                   <a
                      href="https://nyxb.gives"
                      target="_blank"
                      rel="noreferrer"
                      className={ny(
                         buttonVariants({
-                           size: 'lg',
-                           variant: 'outline',
+                           size: "lg",
+                           variant: "outline",
                         }),
-                        'group mt-4 rounded-[2rem] px-6',
+                        "group mt-4 rounded-[2rem] px-6",
                      )}
                   >
                      Buy Me a Coffee

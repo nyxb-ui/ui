@@ -1,11 +1,11 @@
-import { allPages } from 'content-collections'
-import { notFound } from 'next/navigation'
-import { Mdx } from '~/components/mdx-components'
+import { allPages } from "content-collections"
+import { notFound } from "next/navigation"
+import { Mdx } from "~/components/mdx-components"
 
-const PAGE = 'home'
+const PAGE = "home"
 
 export default function ComponentDemos() {
-   const page = allPages.find(page => page.slugAsParams === PAGE)
+   const page = allPages.find((page) => page.slugAsParams === PAGE)
 
    if (!page) {
       notFound()
@@ -17,8 +17,8 @@ export default function ComponentDemos() {
             Component Demos
          </h2>
          <h3 className="text-foreground/80 mx-auto mb-8 text-balance text-center text-lg font-medium tracking-tight">
-            Here are some of the components that you can use to build your landing
-            pages.
+            Here are some of the components that you can use to build your
+            landing pages.
          </h3>
          <Mdx code={page.body.code} />
       </section>

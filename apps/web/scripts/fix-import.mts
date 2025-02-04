@@ -8,16 +8,13 @@ export function fixImport(content: string) {
       type: string,
       component: string,
    ) => {
-      if (type.endsWith('components')) {
+      if (type.endsWith("components")) {
          return `~/components/${component}`
-      }
-      else if (type.endsWith('ui')) {
+      } else if (type.endsWith("ui")) {
          return `~/components/ui/${component}`
-      }
-      else if (type.endsWith('hooks')) {
+      } else if (type.endsWith("hooks")) {
          return `~/hooks/${component}`
-      }
-      else if (type.endsWith('lib')) {
+      } else if (type.endsWith("lib")) {
          return `~/lib/${component}`
       }
 

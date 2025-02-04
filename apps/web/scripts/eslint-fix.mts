@@ -1,21 +1,20 @@
-import { exec } from 'node:child_process'
-import path from 'node:path'
-import cliProgress from 'cli-progress'
+import { exec } from "node:child_process"
+import path from "node:path"
+import cliProgress from "cli-progress"
 
 const REGISTRY_PATHS = [
-   path.join(process.cwd(), 'public/registry'),
-   path.join(process.cwd(), '__registry__'),
-   path.join(process.cwd(), 'registry/miami/block'),
-   path.join(process.cwd(), 'registry/default/block'),
+   path.join(process.cwd(), "public/registry"),
+   path.join(process.cwd(), "__registry__"),
+   path.join(process.cwd(), "registry/miami/block"),
+   path.join(process.cwd(), "registry/default/block"),
 ]
 
 function runEslintFix() {
    return new Promise<void>((resolve, reject) => {
-      exec(`eslint ${REGISTRY_PATHS.join(' ')} --fix`, (error) => {
+      exec(`eslint ${REGISTRY_PATHS.join(" ")} --fix`, (error) => {
          if (error) {
             // need empty
-         }
-         else {
+         } else {
             // need empty
          }
          resolve()
@@ -25,7 +24,7 @@ function runEslintFix() {
 
 async function main() {
    const progressBar = new cliProgress.SingleBar({
-      format: 'progress [{bar}] {percentage}% | {value}/{total}',
+      format: "progress [{bar}] {percentage}% | {value}/{total}",
    })
 
    progressBar.start(2, 0)
@@ -38,7 +37,7 @@ async function main() {
 
    progressBar.stop()
    // eslint-disable-next-line no-console
-   console.log('\n ✔︎ All runs completed')
+   console.log("\n ✔︎ All runs completed")
 }
 
 main().catch((error) => {

@@ -1,7 +1,7 @@
-import { allShowcases } from 'content-collections'
+import { allShowcases } from "content-collections"
 
-import { ShowcaseCard } from '~/components/sections/showcase'
-import BlurFade from '~/registry/miami/ui/blur-fade'
+import { ShowcaseCard } from "~/components/sections/showcase"
+import BlurFade from "~/registry/miami/ui/blur-fade"
 
 export default async function Page() {
    return (

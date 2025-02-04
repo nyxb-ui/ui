@@ -1,9 +1,9 @@
-'use client'
+"use client"
 
-import { ChevronRight } from 'lucide-react'
-import { Link } from 'next-view-transitions'
-import AnimatedShinyText from '~/registry/default/ui/animated-shiny-text'
-import WordPullUp from '~/registry/default/ui/word-pull-up'
+import { ChevronRight } from "lucide-react"
+import { Link } from "next-view-transitions"
+import AnimatedShinyText from "~/registry/default/ui/animated-shiny-text"
+import WordPullUp from "~/registry/default/ui/word-pull-up"
 
 export default function SidebarCTA() {
    return (

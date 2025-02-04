@@ -1,16 +1,19 @@
-import Link from 'next/link'
-import { ChevronRight } from 'lucide-react'
-import type { FC } from 'react'
-import { Separator } from '~/components/ui/separator'
-import { ny } from '~/lib/utils'
-import AnimatedGradientText from '~/registry/default/ui/animated-gradient-text'
+import { ChevronRight } from "lucide-react"
+import Link from "next/link"
+import type { FC } from "react"
+import { Separator } from "~/components/ui/separator"
+import { ny } from "~/lib/utils"
+import AnimatedGradientText from "~/registry/default/ui/animated-gradient-text"
 
 interface SuperAnnouncementProps {
    href: string
    text: string
 }
 
-export const SuperAnnouncement: FC<SuperAnnouncementProps> = ({ href, text }) => {
+export const SuperAnnouncement: FC<SuperAnnouncementProps> = ({
+   href,
+   text,
+}) => {
    return (
       <Link href={href} className="relative inline-flex items-center">
          <AnimatedGradientText>

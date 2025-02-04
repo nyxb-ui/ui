@@ -1,20 +1,20 @@
-'use client'
+"use client"
 
-import * as React from 'react'
+import * as React from "react"
 
-import { ny } from '~/lib/utils'
-import { CopyButton, CopyWithClassNames } from '~/components/copy-button'
+import { CopyButton, CopyWithClassNames } from "~/components/copy-button"
+import { ny } from "~/lib/utils"
 import {
    Tabs,
    TabsContent,
    TabsList,
    TabsTrigger,
-} from '~/registry/miami/ui/tabs'
+} from "~/registry/miami/ui/tabs"
 
 interface ComponentExampleProps extends React.HTMLAttributes<HTMLDivElement> {
    extractClassname?: boolean
    extractedClassNames?: string
-   align?: 'center' | 'start' | 'end'
+   align?: "center" | "start" | "end"
    src?: string
 }
 
@@ -23,7 +23,7 @@ export function ComponentExample({
    className,
    extractClassname,
    extractedClassNames,
-   align = 'center',
+   align = "center",
    src: _,
    ...props
 }: ComponentExampleProps) {
@@ -33,7 +33,7 @@ export function ComponentExample({
 
    const codeString = React.useMemo(() => {
       if (
-         typeof Code?.props['data-rehype-pretty-code-fragment'] !== 'undefined'
+         typeof Code?.props["data-rehype-pretty-code-fragment"] !== "undefined"
       ) {
          const [, Button] = React.Children.toArray(
             Code.props.children,
@@ -44,7 +44,10 @@ export function ComponentExample({
 
    return (
       <div
-         className={ny('group relative my-4 flex flex-col space-y-2', className)}
+         className={ny(
+            "group relative my-4 flex flex-col space-y-2",
+            className,
+         )}
          {...props}
       >
          <Tabs defaultValue="preview" className="relative mr-auto w-full">
@@ -63,29 +66,27 @@ export function ComponentExample({
                      Code
                   </TabsTrigger>
                </TabsList>
-               {extractedClassNames
-                  ? (
-                        <CopyWithClassNames
-                           value={codeString}
-                           classNames={extractedClassNames}
-                           className="absolute right-4 top-20"
-                        />
-                     )
-                  : (
-                        codeString && (
-                           <CopyButton
-                              value={codeString}
-                              className="absolute right-4 top-20"
-                           />
-                        )
-                     )}
+               {extractedClassNames ? (
+                  <CopyWithClassNames
+                     value={codeString}
+                     classNames={extractedClassNames}
+                     className="absolute right-4 top-20"
+                  />
+               ) : (
+                  codeString && (
+                     <CopyButton
+                        value={codeString}
+                        className="absolute right-4 top-20"
+                     />
+                  )
+               )}
             </div>
             <TabsContent value="preview" className="rounded-md border">
                <div
-                  className={ny('flex min-h-[350px] justify-center p-10', {
-                     'items-center': align === 'center',
-                     'items-start': align === 'start',
-                     'items-end': align === 'end',
+                  className={ny("flex min-h-[350px] justify-center p-10", {
+                     "items-center": align === "center",
+                     "items-start": align === "start",
+                     "items-end": align === "end",
                   })}
                >
                   {Example}
@@ -96,13 +97,11 @@ export function ComponentExample({
                   <div className="w-full rounded-md [&_button]:hidden [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
                      {Code}
                   </div>
-                  {Children?.length
-                     ? (
-                           <div className="rounded-md [&_button]:hidden [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
-                              {Children}
-                           </div>
-                        )
-                     : null}
+                  {Children?.length ? (
+                     <div className="rounded-md [&_button]:hidden [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
+                        {Children}
+                     </div>
+                  ) : null}
                </div>
             </TabsContent>
          </Tabs>

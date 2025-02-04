@@ -1,7 +1,7 @@
-'use client'
+"use client"
 
-import Link from 'next/link'
-import { ChevronRight } from 'lucide-react'
+import { ChevronRight } from "lucide-react"
+import Link from "next/link"
 
 export function SiteBanner() {
    return (
@@ -13,13 +13,12 @@ export function SiteBanner() {
                rel="noreferrer noopener"
                className="inline-flex text-xs leading-normal md:text-sm"
             >
-               ❤️
-               {' '}
+               ❤️{" "}
                <span className="ml-1 font-[580] dark:font-[550]">
-                  {' '}
-                  Support our project - Your donation helps us continue developing awesome tools!
-               </span>
-               {' '}
+                  {" "}
+                  Support our project - Your donation helps us continue
+                  developing awesome tools!
+               </span>{" "}
                <ChevronRight className="ml-1 mt-[3px] hidden size-4 transition-all duration-300 ease-out group-hover:translate-x-1 lg:inline-block" />
             </Link>
          </div>

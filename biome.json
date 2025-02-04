@@ -7,7 +7,14 @@
    },
    "files": {
       "ignoreUnknown": false,
-      "ignore": ["./styles/", "./.contentlayer"]
+      "ignore": [
+         "./styles/",
+         "./.content-collections",
+         "./.next",
+         "./.turbo",
+         "./node_modules",
+         "./dist"
+      ]
    },
    "formatter": {
       "enabled": true,
@@ -44,13 +51,16 @@
             "noShadowRestrictedNames": "off",
             "noExplicitAny": "off",
             "noRedeclare": "off",
-            "noSuspiciousSemicolonInJsx": "off"
+            "noSuspiciousSemicolonInJsx": "off",
+            "useIsArray": "off",
+            "noAssignInExpressions": "off"
          },
          "complexity": {
             "noForEach": "off",
             "useLiteralKeys": "off",
             "useOptionalChain": "off",
-            "noUselessSwitchCase": "off"
+            "noUselessSwitchCase": "off",
+            "noUselessFragments": "off"
          },
          "correctness": {
             "useJsxKeyInIterable": "off",
@@ -58,6 +68,7 @@
             "noUnnecessaryContinue": "off"
          },
          "a11y": {
+            "useKeyWithClickEvents": "off",
             "useIframeTitle": "off",
             "noSvgWithoutTitle": "off",
             "useValidAnchor": "off",
@@ -66,7 +77,9 @@
             "useSemanticElements": "off",
             "useAltText": "off",
             "useValidAriaRole": "off",
-            "noRedundantRoles": "off"
+            "noRedundantRoles": "off",
+            "useMediaCaption": "off",
+            "useFocusableInteractive": "off"
          },
          "security": {
             "noDangerouslySetInnerHtml": "off"
