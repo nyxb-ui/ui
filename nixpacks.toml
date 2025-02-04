@@ -37,14 +37,14 @@ cmds = [
     "npm config set prefix '/root/.npm-global'",
     "npm install -g pnpm@9.4.0",
     "export PATH=/root/.npm-global/bin:$PATH",
-    "pnpm install --no-optional --ignore-scripts --frozen-lockfile",
-    "cd apps/web && pnpm install --frozen-lockfile --no-optional"
+    "pnpm install --no-optional --frozen-lockfile"
 ]
 
 [phases.build]
 cmds = [
-    "export PATH=/root/.npm-global/bin:$PATH && cd apps/web && pnpm build:registry",
-    "export PATH=/root/.npm-global/bin:$PATH && pnpm --filter=web build"
+    "pnpm turbo run build --filter=nyxb...",
+    "cd apps/web && tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-registry.mts",
+    "pnpm --filter=web build"
 ]
 
 [start]
