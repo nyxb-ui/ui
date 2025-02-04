@@ -6,10 +6,12 @@ author: nyxb
 published: true
 ---
 
-<ComponentPreview name="shine-border-demo" />
+<ComponentPreview 
+name="shine-border-demo"
+description="Shine border is an animated background border effect."
+ />
 
-
-### Installation
+## Installation
 
 <Tabs defaultValue="cli">
 
@@ -29,15 +31,26 @@ npx nyxb@latest add shine-border
 
 <Steps>
 
-Copy and paste the following code into your project.
+<Step>Copy and paste the following code into your project.</Step>
 
-```ts
-// tailwind.config.ts
+<ComponentSource name="shine-border" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+<Step>Update `tailwind.config.js`</Step>
+
+Add the following animations to your `tailwind.config.js` file:
+
+```js title="tailwind.config.js" {5-14}
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   theme: {
     extend: {
+      animation: {
+        shine: "shine var(--duration) infinite linear",
+      },
       keyframes: {
-        "shine-pulse": {
+        shine: {
           "0%": {
             "background-position": "0% 0%",
           },
@@ -54,12 +67,6 @@ module.exports = {
 };
 ```
 
-```text
-components/ui/shine-border.tsx
-```
-
-<ComponentSource name="shine-border" />
-
 </Steps>
 
 </TabsContent>
@@ -68,18 +75,17 @@ components/ui/shine-border.tsx
 
 ## Examples
 
-### Silver
+### Monotone
 
 <ComponentPreview name="shine-border-demo-2" />
 
 ## Props
 
-| Prop         | Type                           | Description                                         | Default    |
-| ------------ | ------------------------------ | --------------------------------------------------- | ---------- |
-| className    | string                         | The class name to be applied to the component.       |            |
-| duration     | number                         | Defines the animation duration to be applied on the shining border. | 14 seconds |
-| color        | `#${string}` OR `#${string}`[] | A string or string array to define border color.    | #FFFFFF    |
-| borderRadius | number                         | Defines the radius of the border.                   | 8px        |
-| borderWidth  | number                         | Defines the width of the border.                    | 1px        |
-| children     | ReactNode                | Contains react node elements.                       | {}         |
-
+| Prop           | Type        | Default   | Description                                                         |
+| -------------- | ----------- | --------- | ------------------------------------------------------------------- |
+| `className`    | `string`    | `-`       | The class name to be applied to the component.                      |
+| `duration`     | `number`    | `14`      | Defines the animation duration to be applied on the shining border. |
+| `color`        | `string`    | `#FFFFFF` | Defines the color of the border.                                    |
+| `borderRadius` | `number`    | `8`       | Defines the radius of the border.                                   |
+| `borderWidth`  | `number`    | `1`       | Defines the width of the border.                                    |
+| `children`     | `ReactNode` | `{}`      | Contains react node elements.                                       |

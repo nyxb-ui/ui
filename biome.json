@@ -44,7 +44,8 @@
             "noShadowRestrictedNames": "off",
             "noExplicitAny": "off",
             "noRedeclare": "off",
-            "noSuspiciousSemicolonInJsx": "off"
+            "noSuspiciousSemicolonInJsx": "off",
+            "useIsArray": "off"
          },
          "complexity": {
             "noForEach": "off",
