@@ -1,17 +1,11 @@
 [phases.setup]
-nixPkgs = [ "nodejs_20" ]
-
-[phases.install]
-cmds = [
-   "npm install -g pnpm",
-   "export PATH=\"/root/.npm-global/bin:$PATH\"",
-   "pnpm install"
-]
-
-[phases.build]
-cmds = [
-   "cd apps/web && pnpm build:registry",
-   "pnpm --filter=web build"
+nixPkgs = [
+    "nodejs_20",
+    "coreutils",
+    "gnused",
+    "chromium",
+    "pkg-config",
+    "gcc"
 ]
 
 [variables]
@@ -19,6 +13,25 @@ NIXPACKS_TURBO_APP_NAME = "web"
 NODE_ENV = "production"
 NODE_OPTIONS = "--max-old-space-size=8192"
 NEXT_PUBLIC_APP_URL = "https://your-production-url.com"
+PATH = "/root/.npm-global/bin:/app/node_modules/.bin:${PATH}"
+NODE_VERSION = "20.14.0"
+PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
+PUPPETEER_EXECUTABLE_PATH = "/usr/bin/chromium"
+
+[phases.install]
+cmds = [
+   "mkdir -p /root/.npm-global",
+   "npm config set prefix '/root/.npm-global'",
+   "npm install -g pnpm@9.4.0",
+   "export PATH=/root/.npm-global/bin:$PATH",
+   "pnpm install --no-optional"
+]
+
+[phases.build]
+cmds = [
+   "export PATH=/root/.npm-global/bin:$PATH && cd apps/web && pnpm build:registry",
+   "export PATH=/root/.npm-global/bin:$PATH && pnpm --filter=web build"
+]
 
 [start]
-cmd = "cd apps/web && pnpm start"
+cmd = "export PATH=/root/.npm-global/bin:$PATH && cd apps/web && pnpm start"
