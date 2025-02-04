@@ -3,7 +3,7 @@ nixPkgs = [ "nodejs_20" ]
 
 [phases.install]
 cmds = [
-   "corepack enable",
+   "npm install -g pnpm",
    "pnpm install"
 ]
 
