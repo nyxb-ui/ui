@@ -1,36 +1,35 @@
-// @ts-nocheck
-import { existsSync, promises as fs } from 'fs'
-import { tmpdir } from 'os'
-import path from 'path'
-import template from 'lodash/template'
+import { promises as fs, existsSync } from "fs"
+import { tmpdir } from "os"
+import path from "path"
+import template from "lodash/template"
 import {
    type Registry,
    registryItemSchema,
    type registryItemTypeSchema,
    registrySchema,
-} from 'nyxb/registry'
-import { rimraf } from 'rimraf'
-import { Project, ScriptKind } from 'ts-morph'
-import type { z } from 'zod'
+} from "nyxb/registry"
+import { rimraf } from "rimraf"
+import { Project, ScriptKind } from "ts-morph"
+import type { z } from "zod"
 
-import { registry } from '../registry'
-import { baseColors } from '../registry/registry-base-colors'
-import { registryCategories } from '../registry/registry-categories'
-import { colorMapping, colors } from '../registry/registry-colors'
-import { iconLibraries, icons } from '../registry/registry-icons'
-import { styles } from '../registry/registry-styles'
-import { fixImport } from './fix-import.mts'
+import { registry } from "../registry"
+import { baseColors } from "../registry/registry-base-colors"
+import { registryCategories } from "../registry/registry-categories"
+import { colorMapping, colors } from "../registry/registry-colors"
+import { iconLibraries, icons } from "../registry/registry-icons"
+import { styles } from "../registry/registry-styles"
+import { fixImport } from "./fix-import.mts"
 
-const REGISTRY_PATH = path.join(process.cwd(), 'public/r')
+const REGISTRY_PATH = path.join(process.cwd(), "public/r")
 
 const REGISTRY_INDEX_WHITELIST: z.infer<typeof registryItemTypeSchema>[] = [
-   'registry:ui',
-   'registry:lib',
-   'registry:hook',
-   'registry:theme',
-   'registry:block',
-   'registry:example',
-   'registry:internal',
+   "registry:ui",
+   "registry:lib",
+   "registry:hook",
+   "registry:theme",
+   "registry:block",
+   "registry:example",
+   "registry:internal",
 ]
 
 const project = new Project({
@@ -38,7 +37,7 @@ const project = new Project({
 })
 
 async function createTempSourceFile(filename: string) {
-   const dir = await fs.mkdtemp(path.join(tmpdir(), 'nyxb-'))
+   const dir = await fs.mkdtemp(path.join(tmpdir(), "nyxb-"))
    return path.join(dir, filename)
 }
 
@@ -46,27 +45,27 @@ async function createTempSourceFile(filename: string) {
 // Sync styles
 // ----------------------------------------------------------------------------
 async function syncStyles() {
-   const sourceStyle = 'miami'
-   const targetStyle = 'default'
+   const sourceStyle = "miami"
+   const targetStyle = "default"
 
-   const syncDirectories = ['blocks', 'hooks', 'internal', 'lib', 'charts']
+   const syncDirectories = ["blocks", "hooks", "internal", "lib", "charts"]
 
    // Clean up sync directories.
    for (const dir of syncDirectories) {
-      rimraf.sync(path.join('registry', targetStyle, dir))
+      rimraf.sync(path.join("registry", targetStyle, dir))
    }
 
    for (const item of registry.items) {
       if (
-         !REGISTRY_INDEX_WHITELIST.includes(item.type)
-         && item.type !== 'registry:ui'
+         !REGISTRY_INDEX_WHITELIST.includes(item.type) &&
+         item.type !== "registry:ui"
       ) {
          continue
       }
 
       const resolveFiles = item.files?.map(
-         file =>
-            `registry/${sourceStyle}/${typeof file === 'string' ? file : file.path}`,
+         (file) =>
+            `registry/${sourceStyle}/${typeof file === "string" ? file : file.path}`,
       )
       if (!resolveFiles) {
          continue
@@ -86,12 +85,12 @@ async function syncStyles() {
             await fs.copyFile(sourcePath, targetPath)
 
             // Replace all ~/registry/miami/ with ~/registry/default/.
-            const content = await fs.readFile(targetPath, 'utf8')
+            const content = await fs.readFile(targetPath, "utf8")
             const fixedContent = content.replace(
-               new RegExp(`~/registry/${sourceStyle}/`, 'g'),
+               new RegExp(`~/registry/${sourceStyle}/`, "g"),
                `~/registry/${targetStyle}/`,
             )
-            await fs.writeFile(targetPath, fixedContent, 'utf8')
+            await fs.writeFile(targetPath, fixedContent, "utf8")
          }
       }
    }
@@ -115,9 +114,9 @@ export const Index: Record<string, any> = {
       // Build style index.
       for (const item of registry.items) {
          const resolveFiles = item.files?.map(
-            file =>
+            (file) =>
                `registry/${style.name}/${
-                  typeof file === 'string' ? file : file.path
+                  typeof file === "string" ? file : file.path
                }`,
          )
          if (!resolveFiles) {
@@ -127,8 +126,8 @@ export const Index: Record<string, any> = {
          // Validate categories.
          if (item.categories) {
             const invalidCategories = item.categories.filter(
-               category =>
-                  !registryCategories.some(c => c.slug === category),
+               (category) =>
+                  !registryCategories.some((c) => c.slug === category),
             )
 
             if (invalidCategories.length > 0) {
@@ -139,17 +138,16 @@ export const Index: Record<string, any> = {
             }
          }
 
-         const type = item.type.split(':')[1]
-         let sourceFilename = ''
+         const type = item.type.split(":")[1]
+         let sourceFilename = ""
 
-         if (item.type === 'registry:block') {
+         if (item.type === "registry:block") {
             const file = resolveFiles[0]
             const filename = path.basename(file)
             let raw: string
             try {
-               raw = await fs.readFile(file, 'utf8')
-            }
-            catch (error) {
+               raw = await fs.readFile(file, "utf8")
+            } catch (error) {
                continue
             }
             const tempFile = await createTempSourceFile(filename)
@@ -189,9 +187,9 @@ export const Index: Record<string, any> = {
             sourceFilename = `__registry__/${style.name}/${type}/${item.name}.tsx`
 
             if (item.files) {
-               const files = item.files.map(file =>
-                  typeof file === 'string'
-                     ? { type: 'registry:page', path: file }
+               const files = item.files.map((file) =>
+                  typeof file === "string"
+                     ? { type: "registry:page", path: file }
                      : file,
                )
                if (files?.length) {
@@ -211,9 +209,9 @@ export const Index: Record<string, any> = {
          let componentPath = `~/registry/${style.name}/${type}/${item.name}`
 
          if (item.files) {
-            const files = item.files.map(file =>
-               typeof file === 'string'
-                  ? { type: 'registry:page', path: file }
+            const files = item.files.map((file) =>
+               typeof file === "string"
+                  ? { type: "registry:page", path: file }
                   : file,
             )
             if (files?.length) {
@@ -224,20 +222,20 @@ export const Index: Record<string, any> = {
          index += `
     "${item.name}": {
       name: "${item.name}",
-      description: "${item.description ?? ''}",
+      description: "${item.description ?? ""}",
       type: "${item.type}",
       registryDependencies: ${JSON.stringify(item.registryDependencies)},
       files: [${item.files?.map((file) => {
          const filePath = `registry/${style.name}/${
-            typeof file === 'string' ? file : file.path
+            typeof file === "string" ? file : file.path
          }`
          const resolvedFilePath = path.resolve(filePath)
-         return typeof file === 'string'
+         return typeof file === "string"
             ? `"${resolvedFilePath}"`
             : `{
         path: "${filePath}",
         type: "${file.type}",
-        target: "${file.target ?? ''}"
+        target: "${file.target ?? ""}"
       }`
       })}],
       categories: ${JSON.stringify(item.categories)},
@@ -259,17 +257,17 @@ export const Index: Record<string, any> = {
    // Build registry/index.json.
    // ----------------------------------------------------------------------------
    const items = registry.items
-      .filter(item => ['registry:ui'].includes(item.type))
+      .filter((item) => ["registry:ui"].includes(item.type))
       .map((item) => {
          return {
             ...item,
             files: item.files?.map((_file) => {
-               const file
-                  = typeof _file === 'string'
+               const file =
+                  typeof _file === "string"
                      ? {
-                           path: _file,
-                           type: item.type,
-                        }
+                          path: _file,
+                          type: item.type,
+                       }
                      : _file
 
                return file
@@ -277,16 +275,16 @@ export const Index: Record<string, any> = {
          }
       })
    const registryJson = JSON.stringify(items, null, 2)
-   rimraf.sync(path.join(REGISTRY_PATH, 'index.json'))
+   rimraf.sync(path.join(REGISTRY_PATH, "index.json"))
    await fs.writeFile(
-      path.join(REGISTRY_PATH, 'index.json'),
+      path.join(REGISTRY_PATH, "index.json"),
       registryJson,
-      'utf8',
+      "utf8",
    )
 
    // Write style index.
-   rimraf.sync(path.join(process.cwd(), '__registry__/index.tsx'))
-   await fs.writeFile(path.join(process.cwd(), '__registry__/index.tsx'), index)
+   rimraf.sync(path.join(process.cwd(), "__registry__/index.tsx"))
+   await fs.writeFile(path.join(process.cwd(), "__registry__/index.tsx"), index)
 }
 
 // ----------------------------------------------------------------------------
@@ -294,7 +292,7 @@ export const Index: Record<string, any> = {
 // ----------------------------------------------------------------------------
 async function buildStyles(registry: Registry) {
    for (const style of styles) {
-      const targetPath = path.join(REGISTRY_PATH, 'styles', style.name)
+      const targetPath = path.join(REGISTRY_PATH, "styles", style.name)
 
       // Create directory if it doesn't exist.
       if (!existsSync(targetPath)) {
@@ -310,14 +308,14 @@ async function buildStyles(registry: Registry) {
          if (item.files) {
             files = await Promise.all(
                item.files.map(async (_file) => {
-                  const file
-                     = typeof _file === 'string'
+                  const file =
+                     typeof _file === "string"
                         ? {
-                              path: _file,
-                              type: item.type,
-                              content: '',
-                              target: '',
-                           }
+                             path: _file,
+                             type: item.type,
+                             content: "",
+                             target: "",
+                          }
                         : _file
 
                   let content: string
@@ -325,19 +323,18 @@ async function buildStyles(registry: Registry) {
                      content = await fs.readFile(
                         path.join(
                            process.cwd(),
-                           'registry',
+                           "registry",
                            style.name,
                            file.path,
                         ),
-                        'utf8',
+                        "utf8",
                      )
 
                      // Only fix imports for v0- blocks.
-                     if (item.name.startsWith('v0-')) {
+                     if (item.name.startsWith("v0-")) {
                         content = fixImport(content)
                      }
-                  }
-                  catch (error) {
+                  } catch (error) {
                      return
                   }
 
@@ -350,36 +347,36 @@ async function buildStyles(registry: Registry) {
                      },
                   )
 
-                  sourceFile.getVariableDeclaration('iframeHeight')?.remove()
+                  sourceFile.getVariableDeclaration("iframeHeight")?.remove()
                   sourceFile
-                     .getVariableDeclaration('containerClassName')
+                     .getVariableDeclaration("containerClassName")
                      ?.remove()
-                  sourceFile.getVariableDeclaration('description')?.remove()
+                  sourceFile.getVariableDeclaration("description")?.remove()
 
-                  let target = file.target || ''
+                  let target = file.target || ""
 
                   if (
-                     (!target || target === '')
-                     && item.name.startsWith('v0-')
+                     (!target || target === "") &&
+                     item.name.startsWith("v0-")
                   ) {
-                     const fileName = file.path.split('/').pop()
+                     const fileName = file.path.split("/").pop()
                      if (
-                        file.type === 'registry:block'
-                        || file.type === 'registry:component'
-                        || file.type === 'registry:example'
+                        file.type === "registry:block" ||
+                        file.type === "registry:component" ||
+                        file.type === "registry:example"
                      ) {
                         target = `components/${fileName}`
                      }
 
-                     if (file.type === 'registry:ui') {
+                     if (file.type === "registry:ui") {
                         target = `components/ui/${fileName}`
                      }
 
-                     if (file.type === 'registry:hook') {
+                     if (file.type === "registry:hook") {
                         target = `hooks/${fileName}`
                      }
 
-                     if (file.type === 'registry:lib') {
+                     if (file.type === "registry:lib") {
                         target = `lib/${fileName}`
                      }
                   }
@@ -395,8 +392,8 @@ async function buildStyles(registry: Registry) {
          }
 
          const payload = registryItemSchema.safeParse({
-            $schema: 'https://nyxbui.design/schema/registry-item.json',
-            author: 'nyxbui (https://nyxbui.design)',
+            $schema: "https://nyxbui.design/schema/registry-item.json",
+            author: "nyxbui (https://nyxbui.design)",
             ...item,
             files,
          })
@@ -405,7 +402,7 @@ async function buildStyles(registry: Registry) {
             await fs.writeFile(
                path.join(targetPath, `${item.name}.json`),
                JSON.stringify(payload.data, null, 2),
-               'utf8',
+               "utf8",
             )
          }
       }
@@ -416,9 +413,9 @@ async function buildStyles(registry: Registry) {
    // ----------------------------------------------------------------------------
    const stylesJson = JSON.stringify(styles, null, 2)
    await fs.writeFile(
-      path.join(REGISTRY_PATH, 'styles/index.json'),
+      path.join(REGISTRY_PATH, "styles/index.json"),
       stylesJson,
-      'utf8',
+      "utf8",
    )
 }
 
@@ -427,17 +424,17 @@ async function buildStyles(registry: Registry) {
 // ----------------------------------------------------------------------------
 async function buildStylesIndex() {
    for (const style of styles) {
-      const targetPath = path.join(REGISTRY_PATH, 'styles', style.name)
+      const targetPath = path.join(REGISTRY_PATH, "styles", style.name)
 
       const payload: z.infer<typeof registryItemSchema> = {
          name: style.name,
-         type: 'registry:style',
+         type: "registry:style",
          dependencies: [
-            'tailwindcss-animate',
-            'class-variance-authority',
-            'lucide-react',
+            "tailwindcss-animate",
+            "class-variance-authority",
+            "lucide-react",
          ],
-         registryDependencies: ['utils'],
+         registryDependencies: ["utils"],
          tailwind: {
             config: {
                plugins: [`require("tailwindcss-animate")`],
@@ -448,9 +445,9 @@ async function buildStylesIndex() {
       }
 
       await fs.writeFile(
-         path.join(targetPath, 'index.json'),
+         path.join(targetPath, "index.json"),
          JSON.stringify(payload, null, 2),
-         'utf8',
+         "utf8",
       )
    }
 }
@@ -459,7 +456,7 @@ async function buildStylesIndex() {
 // Build registry/colors/index.json.
 // ----------------------------------------------------------------------------
 async function buildThemes() {
-   const colorsTargetPath = path.join(REGISTRY_PATH, 'colors')
+   const colorsTargetPath = path.join(REGISTRY_PATH, "colors")
    rimraf.sync(colorsTargetPath)
    if (!existsSync(colorsTargetPath)) {
       await fs.mkdir(colorsTargetPath, { recursive: true })
@@ -467,36 +464,36 @@ async function buildThemes() {
 
    const colorsData: Record<string, any> = {}
    for (const [color, value] of Object.entries(colors)) {
-      if (typeof value === 'string') {
+      if (typeof value === "string") {
          colorsData[color] = value
          continue
       }
 
       if (Array.isArray(value)) {
-         colorsData[color] = value.map(item => ({
+         colorsData[color] = value.map((item) => ({
             ...item,
             rgbChannel: item.rgb.replace(
                /^rgb\((\d+),(\d+),(\d+)\)$/,
-               '$1 $2 $3',
+               "$1 $2 $3",
             ),
             hslChannel: item.hsl.replace(
                /^hsl\(([\d.]+),([\d.]+%),([\d.]+%)\)$/,
-               '$1 $2 $3',
+               "$1 $2 $3",
             ),
          }))
          continue
       }
 
-      if (typeof value === 'object') {
+      if (typeof value === "object") {
          colorsData[color] = {
             ...value,
             rgbChannel: value.rgb.replace(
                /^rgb\((\d+),(\d+),(\d+)\)$/,
-               '$1 $2 $3',
+               "$1 $2 $3",
             ),
             hslChannel: value.hsl.replace(
                /^hsl\(([\d.]+),([\d.]+%),([\d.]+%)\)$/,
-               '$1 $2 $3',
+               "$1 $2 $3",
             ),
          }
          continue
@@ -504,9 +501,9 @@ async function buildThemes() {
    }
 
    await fs.writeFile(
-      path.join(colorsTargetPath, 'index.json'),
+      path.join(colorsTargetPath, "index.json"),
       JSON.stringify(colorsData, null, 2),
-      'utf8',
+      "utf8",
    )
 
    // ----------------------------------------------------------------------------
@@ -588,27 +585,27 @@ async function buildThemes() {
 }`
 
    for (const baseColor of [
-      'gray',
-      'zinc',
-      'neutral',
-      'stone',
-      'red',
-      'orange',
-      'amber',
-      'yellow',
-      'lime',
-      'green',
-      'emerald',
-      'teal',
-      'cyan',
-      'sky',
-      'blue',
-      'indigo',
-      'violet',
-      'purple',
-      'fuchsia',
-      'pink',
-      'rose',
+      "gray",
+      "zinc",
+      "neutral",
+      "stone",
+      "red",
+      "orange",
+      "amber",
+      "yellow",
+      "lime",
+      "green",
+      "emerald",
+      "teal",
+      "cyan",
+      "sky",
+      "blue",
+      "indigo",
+      "violet",
+      "purple",
+      "fuchsia",
+      "pink",
+      "rose",
    ]) {
       const base: Record<string, any> = {
          inlineColors: {},
@@ -618,9 +615,9 @@ async function buildThemes() {
          base.inlineColors[mode] = {}
          base.cssVars[mode] = {}
          for (const [key, value] of Object.entries(values)) {
-            if (typeof value === 'string') {
+            if (typeof value === "string") {
                // Chart colors do not have a 1-to-1 mapping with tailwind colors.
-               if (key.startsWith('chart-')) {
+               if (key.startsWith("chart-")) {
                   base.cssVars[mode][key] = value
                   continue
                }
@@ -631,11 +628,11 @@ async function buildThemes() {
                )
                base.inlineColors[mode][key] = resolvedColor
 
-               const [resolvedBase, scale] = resolvedColor.split('-')
+               const [resolvedBase, scale] = resolvedColor.split("-")
                const color = scale
                   ? colorsData[resolvedBase].find(
-                     (item: any) => item.scale === Number.parseInt(scale),
-                  )
+                       (item: any) => item.scale === Number.parseInt(scale),
+                    )
                   : colorsData[resolvedBase]
                if (color) {
                   base.cssVars[mode][key] = color.hslChannel
@@ -653,7 +650,7 @@ async function buildThemes() {
       await fs.writeFile(
          path.join(REGISTRY_PATH, `colors/${baseColor}.json`),
          JSON.stringify(base, null, 2),
-         'utf8',
+         "utf8",
       )
 
       // ----------------------------------------------------------------------------
@@ -737,15 +734,15 @@ async function buildThemes() {
 
       await fs.writeFile(
          path.join(REGISTRY_PATH, `themes.css`),
-         themeCSS.join('\n'),
-         'utf8',
+         themeCSS.join("\n"),
+         "utf8",
       )
 
       // ----------------------------------------------------------------------------
       // Build registry/themes/[theme].json
       // ----------------------------------------------------------------------------
-      rimraf.sync(path.join(REGISTRY_PATH, 'themes'))
-      for (const baseColor of ['slate', 'gray', 'zinc', 'neutral', 'stone']) {
+      rimraf.sync(path.join(REGISTRY_PATH, "themes"))
+      for (const baseColor of ["slate", "gray", "zinc", "neutral", "stone"]) {
          const payload: Record<string, any> = {
             name: baseColor,
             label: baseColor.charAt(0).toUpperCase() + baseColor.slice(1),
@@ -754,18 +751,18 @@ async function buildThemes() {
          for (const [mode, values] of Object.entries(colorMapping)) {
             payload.cssVars[mode] = {}
             for (const [key, value] of Object.entries(values)) {
-               if (typeof value === 'string') {
+               if (typeof value === "string") {
                   const resolvedColor = value.replace(
                      /\{\{base\}\}-/g,
                      `${baseColor}-`,
                   )
                   payload.cssVars[mode][key] = resolvedColor
 
-                  const [resolvedBase, scale] = resolvedColor.split('-')
+                  const [resolvedBase, scale] = resolvedColor.split("-")
                   const color = scale
                      ? colorsData[resolvedBase].find(
-                        (item: any) => item.scale === Number.parseInt(scale),
-                     )
+                          (item: any) => item.scale === Number.parseInt(scale),
+                       )
                      : colorsData[resolvedBase]
                   if (color) {
                      payload.cssVars[mode][key] = color.hslChannel
@@ -774,7 +771,7 @@ async function buildThemes() {
             }
          }
 
-         const targetPath = path.join(REGISTRY_PATH, 'themes')
+         const targetPath = path.join(REGISTRY_PATH, "themes")
 
          // Create directory if it doesn't exist.
          if (!existsSync(targetPath)) {
@@ -784,7 +781,7 @@ async function buildThemes() {
          await fs.writeFile(
             path.join(targetPath, `${payload.name}.json`),
             JSON.stringify(payload, null, 2),
-            'utf8',
+            "utf8",
          )
       }
    }
@@ -794,7 +791,7 @@ async function buildThemes() {
 // Build registry/icons/index.json.
 // ----------------------------------------------------------------------------
 async function buildIcons() {
-   const iconsTargetPath = path.join(REGISTRY_PATH, 'icons')
+   const iconsTargetPath = path.join(REGISTRY_PATH, "icons")
    rimraf.sync(iconsTargetPath)
    if (!existsSync(iconsTargetPath)) {
       await fs.mkdir(iconsTargetPath, { recursive: true })
@@ -803,9 +800,9 @@ async function buildIcons() {
    const iconsData = icons
 
    await fs.writeFile(
-      path.join(iconsTargetPath, 'index.json'),
+      path.join(iconsTargetPath, "index.json"),
       JSON.stringify(iconsData, null, 2),
-      'utf8',
+      "utf8",
    )
 }
 
@@ -841,16 +838,16 @@ export const Icons = {
 `
 
    // Write style index.
-   rimraf.sync(path.join(process.cwd(), '__registry__/icons.tsx'))
+   rimraf.sync(path.join(process.cwd(), "__registry__/icons.tsx"))
    await fs.writeFile(
-      path.join(process.cwd(), '__registry__/icons.tsx'),
+      path.join(process.cwd(), "__registry__/icons.tsx"),
       index,
-      'utf8',
+      "utf8",
    )
 }
 
 try {
-   console.log('💽 Building registry...')
+   console.log("💽 Building registry...")
    const result = registrySchema.safeParse(registry)
 
    if (!result.success) {
@@ -867,9 +864,8 @@ try {
    await buildRegistryIcons()
    await buildIcons()
 
-   console.log('✅ Done!')
-}
-catch (error) {
+   console.log("✅ Done!")
+} catch (error) {
    console.error(error)
    process.exit(1)
 }

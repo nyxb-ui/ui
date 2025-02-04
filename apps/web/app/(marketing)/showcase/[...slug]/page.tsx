@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
-import { allShowcases } from 'content-collections'
-import { env } from '~/scripts/env.mts'
+import { allShowcases } from "content-collections"
+import type { Metadata } from "next"
+import { notFound } from "next/navigation"
+import { env } from "~/scripts/env.mjs"
 
-import { siteConfig } from '~/config/site'
-import { absoluteUrl } from '~/lib/utils'
-import { ShowcaseCard } from '~/components/sections/showcase'
+import { ShowcaseCard } from "~/components/sections/showcase"
+import { siteConfig } from "~/config/site"
+import { absoluteUrl } from "~/lib/utils"
 
 interface PageProps {
    params: {
@@ -13,9 +13,9 @@ interface PageProps {
    }
 }
 
-async function getPageFromParams(params: PageProps['params']) {
-   const slug = params?.slug?.join('/')
-   const page = allShowcases.find(page => page.slugAsParams === slug)
+async function getPageFromParams(params: PageProps["params"]) {
+   const slug = params?.slug?.join("/")
+   const page = allShowcases.find((page) => page.slugAsParams === slug)
 
    if (!page) {
       return null
@@ -36,9 +36,9 @@ export async function generateMetadata({
    const url = env.NEXT_PUBLIC_APP_URL
 
    const ogUrl = new URL(`${url}/api/og`)
-   ogUrl.searchParams.set('heading', page.title)
-   ogUrl.searchParams.set('type', siteConfig.name)
-   ogUrl.searchParams.set('mode', 'light')
+   ogUrl.searchParams.set("heading", page.title)
+   ogUrl.searchParams.set("type", siteConfig.name)
+   ogUrl.searchParams.set("mode", "light")
 
    return {
       title: page.title,
@@ -46,7 +46,7 @@ export async function generateMetadata({
       openGraph: {
          title: page.title,
          description: page.description,
-         type: 'article',
+         type: "article",
          url: absoluteUrl(page.slug),
          images: [
             {
@@ -58,7 +58,7 @@ export async function generateMetadata({
          ],
       },
       twitter: {
-         card: 'summary_large_image',
+         card: "summary_large_image",
          title: page.title,
          description: page.description,
          images: [ogUrl.toString()],
@@ -66,9 +66,9 @@ export async function generateMetadata({
    }
 }
 
-export async function generateStaticParams(): Promise<PageProps['params'][]> {
-   return allShowcases.map(page => ({
-      slug: page.slugAsParams.split('/'),
+export async function generateStaticParams(): Promise<PageProps["params"][]> {
+   return allShowcases.map((page) => ({
+      slug: page.slugAsParams.split("/"),
    }))
 }
 
@@ -85,9 +85,7 @@ export default async function PagePage({ params }: PageProps) {
             {page.title}
          </h2>
          <h3 className="text-foreground/80 mx-auto mb-8 text-balance text-center text-lg font-medium tracking-tight">
-            {page.title}
-            {' '}
-            uses Nyxb UI to build their landing page.
+            {page.title} uses Nyxb UI to build their landing page.
          </h3>
          <ShowcaseCard
             title={page.title}

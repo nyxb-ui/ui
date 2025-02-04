@@ -4,7 +4,6 @@ import { Check, Copy } from "lucide-react"
 import { motion } from "motion/react"
 import { useTheme } from "next-themes"
 import { type HTMLAttributes, useEffect, useState } from "react"
-import { codeToHtml } from "shiki"
 import { ny } from "~/registry/default/lib/utils"
 import { Button } from "~/registry/default/ui/button"
 
@@ -35,6 +34,7 @@ export function ScriptCopyBtn({
    useEffect(() => {
       async function loadHighlightedCode() {
          try {
+            const { codeToHtml } = await import("shiki")
             const highlighted = await codeToHtml(command, {
                lang: codeLanguage,
                themes: {
