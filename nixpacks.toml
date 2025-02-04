@@ -3,23 +3,10 @@ nixPkgs = [
     "nodejs_20",
     "coreutils",
     "gnused",
-    "chromium",
     "pkg-config",
     "gcc"
 ]
-aptPkgs = [
-    "libnss3",
-    "libatk1.0-0",
-    "libatk-bridge2.0-0",
-    "libcups2",
-    "libgbm1",
-    "libasound2",
-    "libpangocairo-1.0-0",
-    "libxss1",
-    "libgtk-3-0",
-    "libxshmfence1",
-    "libglu1"
-]
+aptPkgs = []
 
 [variables]
 NIXPACKS_TURBO_APP_NAME = "web"
@@ -28,17 +15,13 @@ NODE_OPTIONS = "--max-old-space-size=8192"
 NEXT_PUBLIC_APP_URL = "https://your-production-url.com"
 PATH = "/root/.npm-global/bin:/app/node_modules/.bin:${PATH}"
 NODE_VERSION = "20.14.0"
-PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
-PUPPETEER_EXECUTABLE_PATH = "/usr/bin/chromium"
-NIXPACKS_DOCKER_OPTS = "--debug"
 
 [phases.install]
 cmds = [
     "mkdir -p /root/.npm-global",
     "npm config set prefix '/root/.npm-global'",
     "npm install -g pnpm@9.4.0",
-    "export PATH=/root/.npm-global/bin:$PATH",
-    "pnpm install --no-optional --frozen-lockfile --verbose"
+    "pnpm install --no-optional --frozen-lockfile"
 ]
 
 [phases.build]
@@ -49,4 +32,4 @@ cmds = [
 ]
 
 [start]
-cmd = "export PATH=/root/.npm-global/bin:$PATH && cd apps/web && pnpm start"
+cmd = "cd apps/web && pnpm start"
