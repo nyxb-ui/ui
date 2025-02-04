@@ -7,9 +7,7 @@ nixPkgs = [
     "pkg-config",
     "gcc"
 ]
-
-[phases.setup.aptPkgs]
-pkgs = [
+aptPkgs = [
     "libnss3",
     "libatk1.0-0",
     "libatk-bridge2.0-0",
