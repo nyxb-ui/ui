@@ -38,13 +38,14 @@ cmds = [
     "npm install -g pnpm@9.4.0",
     "export PATH=/root/.npm-global/bin:$PATH",
     "pnpm install --no-optional --ignore-scripts",
-    "pnpm rebuild"
+    "pnpm install @biomejs/biome@1.9.4 --ignore-scripts",
+    "cd apps/web && pnpm install --no-optional"
 ]
 
 [phases.build]
 cmds = [
-   "export PATH=/root/.npm-global/bin:$PATH && cd apps/web && pnpm build:registry",
-   "export PATH=/root/.npm-global/bin:$PATH && pnpm --filter=web build"
+    "export PATH=/root/.npm-global/bin:$PATH && cd apps/web && pnpm build:registry",
+    "export PATH=/root/.npm-global/bin:$PATH && pnpm --filter=web build"
 ]
 
 [start]
