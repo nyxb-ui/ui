@@ -18,6 +18,7 @@ cmds = [
 [variables]
 NIXPACKS_TURBO_APP_NAME = "web"
 NODE_ENV = "production"
+NODE_OPTIONS = "--max-old-space-size=8192"
 NEXT_PUBLIC_APP_URL = "https://nyxbui.design"
 NODE_VERSION = "20.11.0"
 
