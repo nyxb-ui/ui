@@ -38,7 +38,7 @@ cmds = [
     "npm install -g pnpm@9.4.0",
     "export PATH=/root/.npm-global/bin:$PATH",
     "pnpm install --no-optional --ignore-scripts",
-    "pnpm install @biomejs/biome@1.9.4 --ignore-scripts",
+    "pnpm install @biomejs/biome@1.9.4 -w --ignore-scripts",
     "cd apps/web && pnpm install --no-optional"
 ]
 
