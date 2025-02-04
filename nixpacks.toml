@@ -19,9 +19,9 @@ nixPkgs = [
 
 [phases.install]
 cmds = [
-    "npm install -g pnpm@9.4.0",
-    "export PATH=/root/.npm-global/bin:$PATH",
-    "pnpm install"
+    "mkdir -p /root/.npm-global",
+    "npm config set prefix '/root/.npm-global'",
+    "npm install -g pnpm@9.4.0 && export PATH=/root/.npm-global/bin:$PATH && pnpm install"
 ]
 
 [phases.build]
