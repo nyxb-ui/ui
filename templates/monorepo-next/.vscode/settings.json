@@ -1,0 +1,43 @@
+{
+   // Biome as default formatter for different file types
+   "[javascript]": {
+      "editor.defaultFormatter": "biomejs.biome"
+   },
+   "[typescript]": {
+      "editor.defaultFormatter": "biomejs.biome"
+   },
+   "[javascriptreact]": {
+      "editor.defaultFormatter": "biomejs.biome"
+   },
+   "[typescriptreact]": {
+      "editor.defaultFormatter": "biomejs.biome"
+   },
+   "[json]": {
+      "editor.defaultFormatter": "biomejs.biome"
+   },
+   "[jsonc]": {
+      "editor.defaultFormatter": "biomejs.biome"
+   },
+
+   // Automatic formatting on save
+   "editor.formatOnSave": true,
+
+   // Automatic fixes on save
+   "editor.codeActionsOnSave": {
+      "quickfix.biome": "explicit",
+      "source.organizeImports.biome": "explicit"
+   },
+
+   // Optional: Experimental feature for renaming
+   "biome.rename": true,
+
+   "search.useIgnoreFiles": true,
+   "cSpell.words": [
+      "customizer",
+      "dracula",
+      "occured",
+      "pullup",
+      "saas",
+      "shadcn"
+   ]
+}

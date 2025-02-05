@@ -13,6 +13,7 @@
       "check:fix": "biome check . --write"
    },
    "devDependencies": {
+      "@biomejs/biome": "^1.9.4",
       "@workspace/typescript": "workspace:*",
       "turbo": "^2.3.0",
       "typescript": "5.5.4"
