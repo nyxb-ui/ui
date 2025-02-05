@@ -97,10 +97,7 @@ export const docsConfig: DocsConfig = {
                title: "Monorepo",
                href: "/docs/monorepo",
                items: [],
-               label: [
-                  { text: "New", variant: "new" },
-                  { text: "Canary", variant: "canary" },
-               ],
+               label: [{ text: "Canary", variant: "canary" }],
             },
             {
                title: "Next.js 15 + React 19",
