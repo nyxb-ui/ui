@@ -201,6 +201,11 @@ export const docsConfig: DocsConfig = {
                items: [],
             },
             {
+               title: "Slide Over",
+               href: "/docs/components/slide-over",
+               items: [],
+            },
+            {
                title: "Animated List",
                href: "/docs/components/animated-list",
                items: [],
