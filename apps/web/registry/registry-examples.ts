@@ -654,6 +654,28 @@ export const examples: Registry["items"] = [
       ],
    },
    {
+      name: "slide-over-demo",
+      type: "registry:example",
+      registryDependencies: ["dialog"],
+      files: [
+         {
+            path: "examples/slide-over-demo.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
+      name: "slide-over-close-button",
+      type: "registry:example",
+      registryDependencies: ["dialog", "button"],
+      files: [
+         {
+            path: "examples/slide-over-close-button.tsx",
+            type: "registry:example",
+         },
+      ],
+   },
+   {
       name: "drawer-demo",
       type: "registry:example",
       registryDependencies: ["drawer"],

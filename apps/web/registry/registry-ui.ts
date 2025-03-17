@@ -435,6 +435,17 @@ export const ui: Registry["items"] = [
       ],
    },
    {
+      name: "slide-over",
+      type: "registry:ui",
+      dependencies: ["@radix-ui/react-dialog"],
+      files: [
+         {
+            path: "ui/slide-over.tsx",
+            type: "registry:ui",
+         },
+      ],
+   },
+   {
       name: "dock",
       type: "registry:ui",
       dependencies: ["framer-motion"],
