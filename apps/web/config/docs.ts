@@ -204,6 +204,7 @@ export const docsConfig: DocsConfig = {
                title: "Slide Over",
                href: "/docs/components/slide-over",
                items: [],
+               label: [{ text: "New", variant: "new" }],
             },
             {
                title: "Animated List",
