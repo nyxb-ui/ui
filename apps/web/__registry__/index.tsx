@@ -595,6 +595,25 @@ export const Index: Record<string, any> = {
          source: "",
          meta: undefined,
       },
+      "slide-over": {
+         name: "slide-over",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/miami/ui/slide-over.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/ui/slide-over.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
       dock: {
          name: "dock",
          description: "",
@@ -6714,6 +6733,45 @@ export const Index: Record<string, any> = {
          source: "",
          meta: undefined,
       },
+      "slide-over-demo": {
+         name: "slide-over-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: ["dialog"],
+         files: [
+            {
+               path: "registry/miami/examples/slide-over-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/miami/examples/slide-over-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "slide-over-close-button": {
+         name: "slide-over-close-button",
+         description: "",
+         type: "registry:example",
+         registryDependencies: ["dialog", "button"],
+         files: [
+            {
+               path: "registry/miami/examples/slide-over-close-button.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () =>
+               import("~/registry/miami/examples/slide-over-close-button.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
       "drawer-demo": {
          name: "drawer-demo",
          description: "",
@@ -12316,6 +12374,25 @@ export const Index: Record<string, any> = {
          categories: undefined,
          component: React.lazy(
             () => import("~/registry/default/ui/dialog.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "slide-over": {
+         name: "slide-over",
+         description: "",
+         type: "registry:ui",
+         registryDependencies: undefined,
+         files: [
+            {
+               path: "registry/default/ui/slide-over.tsx",
+               type: "registry:ui",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/ui/slide-over.tsx"),
          ),
          source: "",
          meta: undefined,
@@ -18497,6 +18574,47 @@ export const Index: Record<string, any> = {
          categories: undefined,
          component: React.lazy(
             () => import("~/registry/default/examples/dialog-close-button.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "slide-over-demo": {
+         name: "slide-over-demo",
+         description: "",
+         type: "registry:example",
+         registryDependencies: ["dialog"],
+         files: [
+            {
+               path: "registry/default/examples/slide-over-demo.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () => import("~/registry/default/examples/slide-over-demo.tsx"),
+         ),
+         source: "",
+         meta: undefined,
+      },
+      "slide-over-close-button": {
+         name: "slide-over-close-button",
+         description: "",
+         type: "registry:example",
+         registryDependencies: ["dialog", "button"],
+         files: [
+            {
+               path: "registry/default/examples/slide-over-close-button.tsx",
+               type: "registry:example",
+               target: "",
+            },
+         ],
+         categories: undefined,
+         component: React.lazy(
+            () =>
+               import(
+                  "~/registry/default/examples/slide-over-close-button.tsx"
+               ),
          ),
          source: "",
          meta: undefined,
