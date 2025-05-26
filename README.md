@@ -1,3 +1,11 @@
+# ⚠️ ARCHIVED PROJECT ⚠️
+
+> **Note:** This project is no longer actively maintained. The Nyxb UI organization and all its repositories have been archived due to lack of maintainers and time constraints. The code remains available for reference, learning, and forking, but will not receive updates or support.
+>
+> If you're interested in continuing this project or any of its components, feel free to fork the repositories or contact us to discuss taking over maintenance of the original organization. The archive status can be reversed if a dedicated maintainer is found. Thank you to everyone who contributed and supported Nyxb UI.
+
+---
+
 <p align="center">
 <img src="https://raw.githubusercontent.com/nyxb/nyxb/refs/heads/main/images/light.png#gh-light-mode-only">
 <img src="https://raw.githubusercontent.com/nyxb/nyxb/refs/heads/main/images/dark.png#gh-dark-mode-only">
